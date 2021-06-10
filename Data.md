@@ -114,7 +114,7 @@
 107. [Chunkium Chestplate](#link-Chunkium-Chestplate)
 
 # Items
-###### ![link-Anvil](Assets/Texture2D/AnvilIcon.png)
+###### ![](Assets/Texture2D/AnvilIcon.png) {#link-Anvil}
 ## Anvil
 *chonky metal station*
 - Type: Station
@@ -134,7 +134,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Red-Apple](Assets/Texture2D/Apple_red.png)
+###### ![](Assets/Texture2D/Apple_red.png) {#link-Red-Apple}
 ## Red Apple
 *Red and shiny*
 - Type: Food
@@ -150,7 +150,7 @@
 - Hunger: 15
 - Stamina: 5
 
-###### ![link-Adamantite-Arrow](Assets/Texture2D/Arrow_adamantite.png)
+###### ![](Assets/Texture2D/Arrow_adamantite.png) {#link-Adamantite-Arrow}
 ## Adamantite Arrow
 *Green arrow*
 - Type: Item
@@ -171,7 +171,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Flint-Arrow](Assets/Texture2D/Arrow_flint.png)
+###### ![](Assets/Texture2D/Arrow_flint.png) {#link-Flint-Arrow}
 ## Flint Arrow
 *kinda wacky, but gets the job done ig*
 - Type: Item
@@ -192,7 +192,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Mithril-Arrow](Assets/Texture2D/Arrow_mithril_0.png)
+###### ![](Assets/Texture2D/Arrow_mithril_0.png) {#link-Mithril-Arrow}
 ## Mithril Arrow
 *Sharp arrow*
 - Type: Item
@@ -213,7 +213,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Steel-Arrow](Assets/Texture2D/Arrow_Steel.png)
+###### ![](Assets/Texture2D/Arrow_Steel.png) {#link-Steel-Arrow}
 ## Steel Arrow
 *Shiny arrow*
 - Type: Item
@@ -234,7 +234,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Adamantite-Axe](Assets/Texture2D/Axe_adamantite.png)
+###### ![](Assets/Texture2D/Axe_adamantite.png) {#link-Adamantite-Axe}
 ## Adamantite Axe
 *its axe*
 - Type: Axe
@@ -256,7 +256,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Gold-Axe](Assets/Texture2D/Axe_Gold.png)
+###### ![](Assets/Texture2D/Axe_Gold.png) {#link-Gold-Axe}
 ## Gold Axe
 *its axe*
 - Type: Axe
@@ -278,7 +278,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Mithril-Axe](Assets/Texture2D/Axe_Mihtril.png)
+###### ![](Assets/Texture2D/Axe_Mihtril.png) {#link-Mithril-Axe}
 ## Mithril Axe
 *its axe*
 - Type: Axe
@@ -300,7 +300,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Steel-Axe](Assets/Texture2D/Axe_Steel.png)
+###### ![](Assets/Texture2D/Axe_Steel.png) {#link-Steel-Axe}
 ## Steel Axe
 *its axe*
 - Type: Axe
@@ -322,7 +322,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Wood-Axe](Assets/Texture2D/Axe_wood.png)
+###### ![](Assets/Texture2D/Axe_wood.png) {#link-Wood-Axe}
 ## Wood Axe
 *its axe*
 - Type: Axe
@@ -344,7 +344,7 @@
 - Attack Range:1
 - Sharpness: 0.75
 
-###### ![link-Bark](Assets/Texture2D/BarkIcon.png)
+###### ![](Assets/Texture2D/BarkIcon.png) {#link-Bark}
 ## Bark
 *its wood but bark*
 - Type: Item
@@ -363,7 +363,7 @@
 - Attack Range:0.75
 - Sharpness: 0
 
-###### ![link-Adamantite-bar](Assets/Texture2D/AdamantiteBar.png)
+###### ![](Assets/Texture2D/AdamantiteBar.png) {#link-Adamantite-bar}
 ## Adamantite bar
 *block of adamantite*
 - Type: Item
@@ -380,7 +380,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Chunkium-bar](Assets/Texture2D/ChunkiumBar.png)
+###### ![](Assets/Texture2D/ChunkiumBar.png) {#link-Chunkium-bar}
 ## Chunkium bar
 *Looks very expensive (and chunky)*
 - Type: Item
@@ -397,7 +397,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Gold-bar](Assets/Texture2D/GoldBar.png)
+###### ![](Assets/Texture2D/GoldBar.png) {#link-Gold-bar}
 ## Gold bar
 *block of gold*
 - Type: Item
@@ -414,7 +414,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Iron-bar](Assets/Texture2D/IronBar.png)
+###### ![](Assets/Texture2D/IronBar.png) {#link-Iron-bar}
 ## Iron bar
 *block of iron*
 - Type: Item
@@ -431,7 +431,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Mithril-bar](Assets/Texture2D/MithrilBar.png)
+###### ![](Assets/Texture2D/MithrilBar.png) {#link-Mithril-bar}
 ## Mithril bar
 *block of mithril*
 - Type: Item
@@ -448,7 +448,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Bone](Assets/Texture2D/FireBall.png)
+###### ![](Assets/Texture2D/FireBall.png) {#link-Bone}
 ## Bone
 *oof owie my bones*
 - Type: Item
@@ -465,7 +465,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Adamantite-Boots](Assets/Texture2D/Boots_Adamantite.png)
+###### ![](Assets/Texture2D/Boots_Adamantite.png) {#link-Adamantite-Boots}
 ## Adamantite Boots
 *it protecc foot*
 - Type: Item
@@ -485,7 +485,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Chunkium-Boots](Assets/Texture2D/Boots_Chunky.png)
+###### ![](Assets/Texture2D/Boots_Chunky.png) {#link-Chunkium-Boots}
 ## Chunkium Boots
 *it protecc foot*
 - Type: Item
@@ -505,7 +505,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Gold-Boots](Assets/Texture2D/Boots_gold.png)
+###### ![](Assets/Texture2D/Boots_gold.png) {#link-Gold-Boots}
 ## Gold Boots
 *it protecc foot*
 - Type: Item
@@ -525,7 +525,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Mithril-Boots](Assets/Texture2D/Boots_Mithril.png)
+###### ![](Assets/Texture2D/Boots_Mithril.png) {#link-Mithril-Boots}
 ## Mithril Boots
 *it protecc foot*
 - Type: Item
@@ -545,7 +545,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Steel-Boots](Assets/Texture2D/Boots_steel.png)
+###### ![](Assets/Texture2D/Boots_steel.png) {#link-Steel-Boots}
 ## Steel Boots
 *it protecc foot*
 - Type: Item
@@ -565,7 +565,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Oak-Bow](Assets/Texture2D/Bow_icon.png)
+###### ![](Assets/Texture2D/Bow_icon.png) {#link-Oak-Bow}
 ## Oak Bow
 *This bow looks sick*
 - Type: Bow
@@ -585,7 +585,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Bowl](Assets/Texture2D/Bowl_0.png)
+###### ![](Assets/Texture2D/Bowl_0.png) {#link-Bowl}
 ## Bowl
 *its bowl*
 - Type: Food
@@ -602,7 +602,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Wood-Bow](Assets/Texture2D/Bow_normal.png)
+###### ![](Assets/Texture2D/Bow_normal.png) {#link-Wood-Bow}
 ## Wood Bow
 *Looks kinda scuffed*
 - Type: Bow
@@ -622,7 +622,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Birch-bow](Assets/Texture2D/Bow_Birch.png)
+###### ![](Assets/Texture2D/Bow_Birch.png) {#link-Birch-bow}
 ## Birch bow
 *bitch boi*
 - Type: Bow
@@ -642,7 +642,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Fir-bow](Assets/Texture2D/Bow_fir.png)
+###### ![](Assets/Texture2D/Bow_fir.png) {#link-Fir-bow}
 ## Fir bow
 *Bow*
 - Type: Bow
@@ -662,7 +662,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Bread](Assets/Texture2D/Bread_0.png)
+###### ![](Assets/Texture2D/Bread_0.png) {#link-Bread}
 ## Bread
 *lets get this bread*
 - Type: Item
@@ -680,7 +680,7 @@
 - Hunger: 25
 - Stamina: 25
 
-###### ![link-Cauldron](Assets/Texture2D/CookingIcon.png)
+###### ![](Assets/Texture2D/CookingIcon.png) {#link-Cauldron}
 ## Cauldron
 *food go brr*
 - Type: Storage
@@ -700,7 +700,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Chest](Assets/Texture2D/ChestIcon.png)
+###### ![](Assets/Texture2D/ChestIcon.png) {#link-Chest}
 ## Chest
 *store thing in it*
 - Type: Storage
@@ -720,7 +720,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Chunky-Hammer](Assets/Texture2D/ChunkyHammer.png)
+###### ![](Assets/Texture2D/ChunkyHammer.png) {#link-Chunky-Hammer}
 ## Chunky Hammer
 *its blunt and chunky*
 - Type: Sword
@@ -740,7 +740,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Coal](Assets/Texture2D/CoalIcon.png)
+###### ![](Assets/Texture2D/CoalIcon.png) {#link-Coal}
 ## Coal
 *its flamable rock*
 - Type: Item
@@ -759,7 +759,7 @@
 - Attack Range:0.8
 - Sharpness: 0
 
-###### ![link-Coin](Assets/Texture2D/CoinIcon.png)
+###### ![](Assets/Texture2D/CoinIcon.png) {#link-Coin}
 ## Coin
 *shiny*
 - Type: Item
@@ -776,7 +776,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Dough](Assets/Texture2D/Dough.png)
+###### ![](Assets/Texture2D/Dough.png) {#link-Dough}
 ## Dough
 *looks yummy*
 - Type: Item
@@ -795,7 +795,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Fireball](Assets/Texture2D/FireBall.png)
+###### ![](Assets/Texture2D/FireBall.png) {#link-Fireball}
 ## Fireball
 *Ball of fire*
 - Type: Item
@@ -813,7 +813,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Fletching-Table](Assets/Texture2D/FletchingIcon.png)
+###### ![](Assets/Texture2D/FletchingIcon.png) {#link-Fletching-Table}
 ## Fletching Table
 *fletch*
 - Type: Station
@@ -833,7 +833,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Flint](Assets/Texture2D/FlintIcon.png)
+###### ![](Assets/Texture2D/FlintIcon.png) {#link-Flint}
 ## Flint
 *its rock but make fire*
 - Type: Item
@@ -850,7 +850,7 @@
 - Attack Range:0.8
 - Sharpness: 0.7
 
-###### ![link-Blue-Flower](Assets/Texture2D/Flower_Blue.png)
+###### ![](Assets/Texture2D/Flower_Blue.png) {#link-Blue-Flower}
 ## Blue Flower
 *A pretty blue flower*
 - Type: Item
@@ -867,7 +867,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Furnace](Assets/Texture2D/FurnaceIcon.png)
+###### ![](Assets/Texture2D/FurnaceIcon.png) {#link-Furnace}
 ## Furnace
 *it go melt*
 - Type: Storage
@@ -886,7 +886,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Hammer-Shaft](Assets/Texture2D/HammerShaft.png)
+###### ![](Assets/Texture2D/HammerShaft.png) {#link-Hammer-Shaft}
 ## Hammer Shaft
 *Wild guess, but it might be used for making a hammer?*
 - Type: Item
@@ -903,7 +903,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Adamantite-Helmet](Assets/Texture2D/Helmet_adamantite.png)
+###### ![](Assets/Texture2D/Helmet_adamantite.png) {#link-Adamantite-Helmet}
 ## Adamantite Helmet
 *it protecc head*
 - Type: Item
@@ -923,7 +923,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Chunkium-Helmet](Assets/Texture2D/Helmet_Chunk.png)
+###### ![](Assets/Texture2D/Helmet_Chunk.png) {#link-Chunkium-Helmet}
 ## Chunkium Helmet
 *it protecc head*
 - Type: Item
@@ -943,7 +943,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Gold-Helmet](Assets/Texture2D/Helmet_gold.png)
+###### ![](Assets/Texture2D/Helmet_gold.png) {#link-Gold-Helmet}
 ## Gold Helmet
 *it protecc head*
 - Type: Item
@@ -963,7 +963,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Mithril-Helmet](Assets/Texture2D/Helmet_mithril.png)
+###### ![](Assets/Texture2D/Helmet_mithril.png) {#link-Mithril-Helmet}
 ## Mithril Helmet
 *it protecc head*
 - Type: Item
@@ -983,7 +983,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Steel-Helmet](Assets/Texture2D/Helmet_steel.png)
+###### ![](Assets/Texture2D/Helmet_steel.png) {#link-Steel-Helmet}
 ## Steel Helmet
 *it protecc head*
 - Type: Item
@@ -1003,7 +1003,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Adamantite-Pants](Assets/Texture2D/Pants_adamantite.png)
+###### ![](Assets/Texture2D/Pants_adamantite.png) {#link-Adamantite-Pants}
 ## Adamantite Pants
 *it protecc leg*
 - Type: Item
@@ -1023,7 +1023,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Chunkium-Pants](Assets/Texture2D/Pants_Chunk.png)
+###### ![](Assets/Texture2D/Pants_Chunk.png) {#link-Chunkium-Pants}
 ## Chunkium Pants
 *it protecc leg*
 - Type: Item
@@ -1043,7 +1043,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Gold-Pants](Assets/Texture2D/Pants_Gold.png)
+###### ![](Assets/Texture2D/Pants_Gold.png) {#link-Gold-Pants}
 ## Gold Pants
 *it protecc leg*
 - Type: Item
@@ -1063,7 +1063,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Mithril-Pants](Assets/Texture2D/Pants_Mithril.png)
+###### ![](Assets/Texture2D/Pants_Mithril.png) {#link-Mithril-Pants}
 ## Mithril Pants
 *it protecc leg*
 - Type: Item
@@ -1083,7 +1083,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Steel-Pants](Assets/Texture2D/Pants_Steel.png)
+###### ![](Assets/Texture2D/Pants_Steel.png) {#link-Steel-Pants}
 ## Steel Pants
 *it protecc leg*
 - Type: Item
@@ -1103,7 +1103,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Lightningball](Assets/Texture2D/LightningBall.png)
+###### ![](Assets/Texture2D/LightningBall.png) {#link-Lightningball}
 ## Lightningball
 *Ball of lightning*
 - Type: Item
@@ -1121,7 +1121,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Cooked-Meat](Assets/Texture2D/Meat_Cooked.png)
+###### ![](Assets/Texture2D/Meat_Cooked.png) {#link-Cooked-Meat}
 ## Cooked Meat
 *yummy*
 - Type: Food
@@ -1137,7 +1137,7 @@
 - Hunger: 50
 - Stamina: 5
 
-###### ![link-Raw-Meat](Assets/Texture2D/Meat_raw.png)
+###### ![](Assets/Texture2D/Meat_raw.png) {#link-Raw-Meat}
 ## Raw Meat
 *yummy*
 - Type: Food
@@ -1154,7 +1154,7 @@
 - Hunger: 10
 - Stamina: 0
 
-###### ![link-Adamantite-Ore](Assets/Texture2D/Ore_Adamantite.png)
+###### ![](Assets/Texture2D/Ore_Adamantite.png) {#link-Adamantite-Ore}
 ## Adamantite Ore
 *its hard rock*
 - Type: Axe
@@ -1173,7 +1173,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Chunkium-Ore](Assets/Texture2D/Ore_Chunkium_0.png)
+###### ![](Assets/Texture2D/Ore_Chunkium_0.png) {#link-Chunkium-Ore}
 ## Chunkium Ore
 *looks like your mom*
 - Type: Item
@@ -1191,7 +1191,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Gold-Ore](Assets/Texture2D/Ore_Gold.png)
+###### ![](Assets/Texture2D/Ore_Gold.png) {#link-Gold-Ore}
 ## Gold Ore
 *its hard rock*
 - Type: Axe
@@ -1210,7 +1210,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Iron-Ore](Assets/Texture2D/IronIcon.png)
+###### ![](Assets/Texture2D/IronIcon.png) {#link-Iron-Ore}
 ## Iron Ore
 *its hard rock*
 - Type: Axe
@@ -1229,7 +1229,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Mithril-Ore](Assets/Texture2D/Ore_Mithril.png)
+###### ![](Assets/Texture2D/Ore_Mithril.png) {#link-Mithril-Ore}
 ## Mithril Ore
 *its hard rock*
 - Type: Axe
@@ -1248,7 +1248,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Adamantite-Pickaxe](Assets/Texture2D/Pickaxe_Adamantite.png)
+###### ![](Assets/Texture2D/Pickaxe_Adamantite.png) {#link-Adamantite-Pickaxe}
 ## Adamantite Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1270,7 +1270,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![link-Gold-Pickaxe](Assets/Texture2D/Pickaxe_gold.png)
+###### ![](Assets/Texture2D/Pickaxe_gold.png) {#link-Gold-Pickaxe}
 ## Gold Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1292,7 +1292,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![link-Mithril-Pickaxe](Assets/Texture2D/Pickaxe_mithril.png)
+###### ![](Assets/Texture2D/Pickaxe_mithril.png) {#link-Mithril-Pickaxe}
 ## Mithril Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1314,7 +1314,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![link-Steel-Pickaxe](Assets/Texture2D/Pickaxe_Steel.png)
+###### ![](Assets/Texture2D/Pickaxe_Steel.png) {#link-Steel-Pickaxe}
 ## Steel Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1336,7 +1336,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![link-Wood-Pickaxe](Assets/Texture2D/Pickaxe_wood.png)
+###### ![](Assets/Texture2D/Pickaxe_wood.png) {#link-Wood-Pickaxe}
 ## Wood Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1358,7 +1358,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![link-Apple-Pie](Assets/Texture2D/Pie_0.png)
+###### ![](Assets/Texture2D/Pie_0.png) {#link-Apple-Pie}
 ## Apple Pie
 *pie with apple*
 - Type: Food
@@ -1374,7 +1374,7 @@
 - Hunger: 60
 - Stamina: 20
 
-###### ![link-Meat-Pie](Assets/Texture2D/Pie_0.png)
+###### ![](Assets/Texture2D/Pie_0.png) {#link-Meat-Pie}
 ## Meat Pie
 *yummy*
 - Type: Food
@@ -1390,7 +1390,7 @@
 - Hunger: 60
 - Stamina: 20
 
-###### ![link-Wood-Doorway](Assets/Texture2D/Wood_doorway.png)
+###### ![](Assets/Texture2D/Wood_doorway.png) {#link-Wood-Doorway}
 ## Wood Doorway
 *its wood*
 - Type: Item
@@ -1409,7 +1409,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Floor](Assets/Texture2D/Wood_Floor.png)
+###### ![](Assets/Texture2D/Wood_Floor.png) {#link-Wood-Floor}
 ## Wood Floor
 *its wood*
 - Type: Item
@@ -1428,7 +1428,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Pole](Assets/Texture2D/WoodPole.png)
+###### ![](Assets/Texture2D/WoodPole.png) {#link-Wood-Pole}
 ## Wood Pole
 *its wood*
 - Type: Item
@@ -1447,7 +1447,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Pole](Assets/Texture2D/WoodPoleHalf.png)
+###### ![](Assets/Texture2D/WoodPoleHalf.png) {#link-Wood-Pole}
 ## Wood Pole
 *its wood*
 - Type: Item
@@ -1466,7 +1466,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Roof](Assets/Texture2D/WoodRoof.png)
+###### ![](Assets/Texture2D/WoodRoof.png) {#link-Wood-Roof}
 ## Wood Roof
 *its wood*
 - Type: Item
@@ -1485,7 +1485,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-stairs](Assets/Texture2D/WoodStairs.png)
+###### ![](Assets/Texture2D/WoodStairs.png) {#link-Wood-stairs}
 ## Wood stairs
 *its wood*
 - Type: Item
@@ -1504,7 +1504,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-stairs-thinn](Assets/Texture2D/WoodStairsHalf.png)
+###### ![](Assets/Texture2D/WoodStairsHalf.png) {#link-Wood-stairs-thinn}
 ## Wood stairs thinn
 *its wood*
 - Type: Item
@@ -1523,7 +1523,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Wall](Assets/Texture2D/Wood_wall.png)
+###### ![](Assets/Texture2D/Wood_wall.png) {#link-Wood-Wall}
 ## Wood Wall
 *its wood*
 - Type: Item
@@ -1542,7 +1542,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Wall-Half](Assets/Texture2D/Wood_wall_half.png)
+###### ![](Assets/Texture2D/Wood_wall_half.png) {#link-Wood-Wall-Half}
 ## Wood Wall Half
 *its wood*
 - Type: Item
@@ -1561,7 +1561,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Wall-Tilted](Assets/Texture2D/Wood_tilt.png)
+###### ![](Assets/Texture2D/Wood_tilt.png) {#link-Wood-Wall-Tilted}
 ## Wood Wall Tilted
 *its wood*
 - Type: Item
@@ -1580,7 +1580,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood-Doorway](Assets/Texture2D/Wood_window.png)
+###### ![](Assets/Texture2D/Wood_window.png) {#link-Wood-Doorway}
 ## Wood Doorway
 *its wood*
 - Type: Item
@@ -1599,7 +1599,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Rock](Assets/Texture2D/RockIcon.png)
+###### ![](Assets/Texture2D/RockIcon.png) {#link-Rock}
 ## Rock
 *its rock*
 - Type: Axe
@@ -1617,7 +1617,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Rock-Projectile](Assets/Texture2D/RockIcon.png)
+###### ![](Assets/Texture2D/RockIcon.png) {#link-Rock-Projectile}
 ## Rock Projectile
 *It's a rock, but for some reason you can use this on a bow lol*
 - Type: Item
@@ -1635,7 +1635,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Rock-Projectile](Assets/Texture2D/RockIcon.png)
+###### ![](Assets/Texture2D/RockIcon.png) {#link-Rock-Projectile}
 ## Rock Projectile
 *It's a rock, but for some reason you can use this on a bow lol*
 - Type: Item
@@ -1653,7 +1653,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Rope](Assets/Texture2D/Rope.png)
+###### ![](Assets/Texture2D/Rope.png) {#link-Rope}
 ## Rope
 *how do i make a noose again?*
 - Type: Item
@@ -1673,7 +1673,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Shovel](Assets/Texture2D/ShovelIcon.png)
+###### ![](Assets/Texture2D/ShovelIcon.png) {#link-Shovel}
 ## Shovel
 *its shovel dig dig*
 - Type: Shovel
@@ -1695,7 +1695,7 @@
 - Attack Range:2
 - Sharpness: 0.5
 
-###### ![link-Gulpon-Shroom](Assets/Texture2D/Shroom_red.png)
+###### ![](Assets/Texture2D/Shroom_red.png) {#link-Gulpon-Shroom}
 ## Gulpon Shroom
 *yummy*
 - Type: Food
@@ -1711,7 +1711,7 @@
 - Hunger: 0
 - Stamina: 0
 
-###### ![link-Ligon-Shroom](Assets/Texture2D/Shroom_yellow.png)
+###### ![](Assets/Texture2D/Shroom_yellow.png) {#link-Ligon-Shroom}
 ## Ligon Shroom
 *yummy*
 - Type: Food
@@ -1727,7 +1727,7 @@
 - Hunger: 20
 - Stamina: 0
 
-###### ![link-Slurbon-Shroom](Assets/Texture2D/Shroom_sus.png)
+###### ![](Assets/Texture2D/Shroom_sus.png) {#link-Slurbon-Shroom}
 ## Slurbon Shroom
 *sus shroom*
 - Type: Food
@@ -1743,7 +1743,7 @@
 - Hunger: 15
 - Stamina: 15
 
-###### ![link-Sugon-Shroom](Assets/Texture2D/Shroom_pink.png)
+###### ![](Assets/Texture2D/Shroom_pink.png) {#link-Sugon-Shroom}
 ## Sugon Shroom
 *yummy*
 - Type: Food
@@ -1759,7 +1759,7 @@
 - Hunger: 0
 - Stamina: 20
 
-###### ![link-Meat-Soup](Assets/Texture2D/Soup.png)
+###### ![](Assets/Texture2D/Soup.png) {#link-Meat-Soup}
 ## Meat Soup
 *yummy*
 - Type: Food
@@ -1775,7 +1775,7 @@
 - Hunger: 50
 - Stamina: 10
 
-###### ![link-Adamantite-Sword](Assets/Texture2D/Sword_Adamantite.png)
+###### ![](Assets/Texture2D/Sword_Adamantite.png) {#link-Adamantite-Sword}
 ## Adamantite Sword
 *its sharp*
 - Type: Sword
@@ -1795,7 +1795,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Gold-Sword](Assets/Texture2D/Sword_Gold.png)
+###### ![](Assets/Texture2D/Sword_Gold.png) {#link-Gold-Sword}
 ## Gold Sword
 *its sharp*
 - Type: Sword
@@ -1815,7 +1815,7 @@
 - Attack Range:2
 - Sharpness: 0.9
 
-###### ![link-Mithril-Sword](Assets/Texture2D/Sword_Mithril.png)
+###### ![](Assets/Texture2D/Sword_Mithril.png) {#link-Mithril-Sword}
 ## Mithril Sword
 *its sharp*
 - Type: Sword
@@ -1835,7 +1835,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Steel-Sword](Assets/Texture2D/Sword_steel.png)
+###### ![](Assets/Texture2D/Sword_steel.png) {#link-Steel-Sword}
 ## Steel Sword
 *its sharp*
 - Type: Sword
@@ -1855,7 +1855,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Torch](Assets/Texture2D/Torch.png)
+###### ![](Assets/Texture2D/Torch.png) {#link-Torch}
 ## Torch
 *fire wosh*
 - Type: Item
@@ -1875,7 +1875,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Adamantite-Chestplate](Assets/Texture2D/Torso_adamantite.png)
+###### ![](Assets/Texture2D/Torso_adamantite.png) {#link-Adamantite-Chestplate}
 ## Adamantite Chestplate
 *it protecc chest*
 - Type: Item
@@ -1895,7 +1895,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Chunkium-Chestplate](Assets/Texture2D/Torso_Chunkium.png)
+###### ![](Assets/Texture2D/Torso_Chunkium.png) {#link-Chunkium-Chestplate}
 ## Chunkium Chestplate
 *it protecc chest*
 - Type: Item
@@ -1915,7 +1915,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Gold-Chestplate](Assets/Texture2D/Torso_Gold.png)
+###### ![](Assets/Texture2D/Torso_Gold.png) {#link-Gold-Chestplate}
 ## Gold Chestplate
 *it protecc chest*
 - Type: Item
@@ -1935,7 +1935,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Mithril-Chestplate](Assets/Texture2D/Torso_Mithril.png)
+###### ![](Assets/Texture2D/Torso_Mithril.png) {#link-Mithril-Chestplate}
 ## Mithril Chestplate
 *it protecc chest*
 - Type: Item
@@ -1955,7 +1955,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Steel-Chestplate](Assets/Texture2D/Torso_steel.png)
+###### ![](Assets/Texture2D/Torso_steel.png) {#link-Steel-Chestplate}
 ## Steel Chestplate
 *it protecc chest*
 - Type: Item
@@ -1975,7 +1975,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Waterball](Assets/Texture2D/WaterBall.png)
+###### ![](Assets/Texture2D/WaterBall.png) {#link-Waterball}
 ## Waterball
 *Ball of water*
 - Type: Item
@@ -1993,7 +1993,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Wheat](Assets/Texture2D/Wheat.png)
+###### ![](Assets/Texture2D/Wheat.png) {#link-Wheat}
 ## Wheat
 *i could totally make dough with this*
 - Type: Item
@@ -2010,7 +2010,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![link-Windball](Assets/Texture2D/FireBall.png)
+###### ![](Assets/Texture2D/FireBall.png) {#link-Windball}
 ## Windball
 *Ball of wind*
 - Type: Item
@@ -2028,7 +2028,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![link-Birch-Wood](Assets/Texture2D/Wood_Birch.png)
+###### ![](Assets/Texture2D/Wood_Birch.png) {#link-Birch-Wood}
 ## Birch Wood
 *its bitch wood*
 - Type: Item
@@ -2047,7 +2047,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Fir-Wood](Assets/Texture2D/Wood_Fir.png)
+###### ![](Assets/Texture2D/Wood_Fir.png) {#link-Fir-Wood}
 ## Fir Wood
 *its fir wood*
 - Type: Item
@@ -2066,7 +2066,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wood](Assets/Texture2D/Wood_Normal.png)
+###### ![](Assets/Texture2D/Wood_Normal.png) {#link-Wood}
 ## Wood
 *its wood*
 - Type: Item
@@ -2085,7 +2085,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Oak-Wood](Assets/Texture2D/Wood_Oak.png)
+###### ![](Assets/Texture2D/Wood_Oak.png) {#link-Oak-Wood}
 ## Oak Wood
 *its oak wood*
 - Type: Item
@@ -2104,7 +2104,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Workbench](Assets/Texture2D/WorckbenchIcon.png)
+###### ![](Assets/Texture2D/WorckbenchIcon.png) {#link-Workbench}
 ## Workbench
 *A crafting table*
 - Type: Station
@@ -2123,7 +2123,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![link-Wyvern-Claws](Assets/Texture2D/Claws.png)
+###### ![](Assets/Texture2D/Claws.png) {#link-Wyvern-Claws}
 ## Wyvern Claws
 *Extremely sharp claws*
 - Type: Item
@@ -2140,7 +2140,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![link-Wyvern-Dagger](Assets/Texture2D/WyvernDagger.png)
+###### ![](Assets/Texture2D/WyvernDagger.png) {#link-Wyvern-Dagger}
 ## Wyvern Dagger
 *An extremely sharp dagger*
 - Type: Sword
@@ -2161,102 +2161,102 @@
 - Sharpness: 1
 
 # Powerups
-###### ![link-Adrenaline](Assets/Texture2D/Adrenaline.png)
+###### ![](Assets/Texture2D/Adrenaline.png) {#link-Adrenaline}
 ## Adrenaline
 *Falling below 30% boosts your stats*
 
-###### ![link-Spooo-Bean](Assets/Texture2D/Bean.png)
+###### ![](Assets/Texture2D/Bean.png) {#link-Spooo-Bean}
 ## Spooo Bean
 *Hunger drains slower*
 
-###### ![link-Berserk](Assets/Texture2D/Berserk.png)
+###### ![](Assets/Texture2D/Berserk.png) {#link-Berserk}
 ## Berserk
 *The lower hp, the more damage*
 
-###### ![link-Broccoli](Assets/Texture2D/Broccolo.png)
+###### ![](Assets/Texture2D/Broccolo.png) {#link-Broccoli}
 ## Broccoli
 *+Health regeneration*
 
-###### ![link-Bulldozer](Assets/Texture2D/Bulldozer.png)
+###### ![](Assets/Texture2D/Bulldozer.png) {#link-Bulldozer}
 ## Bulldozer
 *Chance to knock back enemies*
 
-###### ![link-Checkered-Shirt](Assets/Texture2D/CheckeredShirt.png)
+###### ![](Assets/Texture2D/CheckeredShirt.png) {#link-Checkered-Shirt}
 ## Checkered Shirt
 *Increase damage dealt to resources*
 
-###### ![link-Dracula](Assets/Texture2D/Dracula_0.png)
+###### ![](Assets/Texture2D/Dracula_0.png) {#link-Dracula}
 ## Dracula
 *Permanently increase max hp on kill*
 
-###### ![link-Dumbbell](Assets/Texture2D/Dumbbell.png)
+###### ![](Assets/Texture2D/Dumbbell.png) {#link-Dumbbell}
 ## Dumbbell
 *+Base strength*
 
-###### ![link-Enforcer](Assets/Texture2D/Enforcer.png)
+###### ![](Assets/Texture2D/Enforcer.png) {#link-Enforcer}
 ## Enforcer
 *Deal more damage when moving faster*
 
-###### ![link-Knuts-Hammer](Assets/Texture2D/Hammer.png)
+###### ![](Assets/Texture2D/Hammer.png) {#link-Knuts-Hammer}
 ## Knuts Hammer
 *And his hammer was electric*
 
-###### ![link-Horseshoe](Assets/Texture2D/Horseshoe.png)
+###### ![](Assets/Texture2D/Horseshoe.png) {#link-Horseshoe}
 ## Horseshoe
 *Increased chance to hit a critical strike*
 
-###### ![link-Janniks-Frog](Assets/Texture2D/Frog_0.png)
+###### ![](Assets/Texture2D/Frog_0.png) {#link-Janniks-Frog}
 ## Janniks Frog
 *+1 Jump*
 
-###### ![link-Jetpack](Assets/Texture2D/Jetpack.png)
+###### ![](Assets/Texture2D/Jetpack.png) {#link-Jetpack}
 ## Jetpack
 *To the moon*
 
-###### ![link-X-Juice](Assets/Texture2D/x Juice.png)
+###### ![](Assets/Texture2D/x Juice.png) {#link-X-Juice}
 ## X Juice
 *Get juiced up when landing a crit*
 
-###### ![link-Danis-Milk](Assets/Texture2D/Milk.png)
+###### ![](Assets/Texture2D/Milk.png) {#link-Danis-Milk}
 ## Danis Milk
 *Strong bones*
 
-###### ![link-Orange-Juice](Assets/Texture2D/OrangeJuice.png)
+###### ![](Assets/Texture2D/OrangeJuice.png) {#link-Orange-Juice}
 ## Orange Juice
 *+Attack speed*
 
-###### ![link-Peanut-Butter](Assets/Texture2D/PeanutButter.png)
+###### ![](Assets/Texture2D/PeanutButter.png) {#link-Peanut-Butter}
 ## Peanut Butter
 *+Stamina*
 
-###### ![link-Piggybank](Assets/Texture2D/Piggybank.png)
+###### ![](Assets/Texture2D/Piggybank.png) {#link-Piggybank}
 ## Piggybank
 *I'm feeling lucky, time to <i>hog</i> all the loot*
 
-###### ![link-Blue-Pill](Assets/Texture2D/PillBlue.png)
+###### ![](Assets/Texture2D/PillBlue.png) {#link-Blue-Pill}
 ## Blue Pill
 *Increase shield capacity*
 
-###### ![link-Red-Pill](Assets/Texture2D/PillRed.png)
+###### ![](Assets/Texture2D/PillRed.png) {#link-Red-Pill}
 ## Red Pill
 *Increase max hp*
 
-###### ![link-Crimson-Dagger](Assets/Texture2D/Crimson Dagger.png)
+###### ![](Assets/Texture2D/Crimson Dagger.png) {#link-Crimson-Dagger}
 ## Crimson Dagger
 *Lifesteal - Dealing damage heals you*
 
-###### ![link-Robin-Hood-Hat](Assets/Texture2D/robinhood.png)
+###### ![](Assets/Texture2D/robinhood.png) {#link-Robin-Hood-Hat}
 ## Robin Hood Hat
 *Increased draw speed, arrows speed & damage*
 
-###### ![link-Sneaker](Assets/Texture2D/Sneakers.png)
+###### ![](Assets/Texture2D/Sneakers.png) {#link-Sneaker}
 ## Sneaker
 *+Movement speed*
 
-###### ![link-Sniper-Scope](Assets/Texture2D/SniperScope.png)
+###### ![](Assets/Texture2D/SniperScope.png) {#link-Sniper-Scope}
 ## Sniper Scope
 *Small chance on hit to deal chunky damage*
 
-###### ![link-Wings-of-Glory](Assets/Texture2D/Wings.png)
+###### ![](Assets/Texture2D/Wings.png) {#link-Wings-of-Glory}
 ## Wings of Glory
 *Deal bonus damage while falling*
