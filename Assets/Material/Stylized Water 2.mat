@@ -3,11 +3,12 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stylized Water 2
-  m_Shader: {fileID: 4800000, guid: 6f23127c6f2d6054aaf521af22731e75, type: 3}
+  m_Shader: {fileID: 4800000, guid: c8110ef7c96474f73b2ee5f90e026b10, type: 3}
   m_ShaderKeywords: FANCY_SHADOWS SAMPLE_SHADOWS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
