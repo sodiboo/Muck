@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e543a8211347dee4a893f087f3a21b66, type: 3}
+  m_Name: berzerk
+  m_EditorClassIdentifier:
+  name: Berserk
+  description: The lower hp, the more damage
+  id: 8
+  tier: 2
+  mesh: {fileID: 4300000, guid: f4a43859781f9ff4696f253ebc40cf60, type: 2}
+  material: {fileID: 2100000, guid: 7c53696468c86e94fa2a897e854cef82, type: 2}
+  sprite: {fileID: 21300000, guid: 061773221b3501c4c9244927462ebc50, type: 3}

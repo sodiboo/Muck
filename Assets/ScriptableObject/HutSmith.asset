@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8267c9ed763098b489f79762213a62c0, type: 3}
+  m_Name: HutSmith
+  m_EditorClassIdentifier:
+  loot:
+  - item: {fileID: 11400000, guid: 9e19a8ab116fe794bafdc07290fd6b30, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 469b9f1c1a288a14faa8fb777ffab811, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: ff9ccb809c3add043a5d3efefba982b5, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: 8952103610e8d694fbae8c4bc9d095f2, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.01
+  - item: {fileID: 11400000, guid: 599c11cbd052bc040a1eb5ab33f86961, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 78919fff6d62c6b4d82890793e50c49c, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 47998daffde5088409d01279c66b8be8, type: 2}
+    amountMin: 5
+    amountMax: 100
+    dropChance: 0.3
+  - item: {fileID: 11400000, guid: 1e030de1f2341b545b5193e2d76d6280, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: 149edece33d2c5b4e8e260c277c0142d, type: 2}
+    amountMin: 2
+    amountMax: 6
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: 599c11cbd052bc040a1eb5ab33f86961, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: b11493653f138c543b6443ce81b6a2e4, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: b9a201961ad8be34b848b1272764fa15, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.05
+  - item: {fileID: 11400000, guid: 4972a8fc1859d2546977401e8f1871c8, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: 67c04263b8098c8448605e6af533e485, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: c2e19f3c7f2d0ee4f87793af215acfd7, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: ac82ee9d94570624fbcd10840c014efa, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: 46b2c0af08a0488479ab1377aa43b6d3, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.01
+  - item: {fileID: 11400000, guid: e48b3986b6a95a64591556003442a24c, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.05
+  dropOne: 0

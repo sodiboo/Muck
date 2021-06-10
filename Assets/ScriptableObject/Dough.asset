@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db3e4e8678e5ca48a08f2caea2c073d, type: 3}
+  m_Name: Dough
+  m_EditorClassIdentifier:
+  id: 23
+  name: Dough
+  description: looks yummy
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: 0fc0ca7d38563ca4a87016347974cab9, type: 3}
+  material: {fileID: 2100000, guid: 48c6d9bd68eb636419656f1b59d02e50, type: 2}
+  mesh: {fileID: 4300000, guid: d4cff5e5574041240a29e8de0bc3170c, type: 2}
+  rotationOffset: {x: 90, y: 0, z: 0}
+  positionOffset: {x: 0, y: -0.15, z: 0}
+  scale: 0.7
+  stackable: 1
+  amount: 64
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 542a63d4730e6ce47a5ed83ad533ec10, type: 2}
+    amount: 5
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 22134bad8d8b0c44e882ae67da7ed91b, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1615178591074725, guid: 2b20aa576e6730f449422177052a1484, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 2
+  processedItem: {fileID: 11400000, guid: e6d96d8e017c9f34c9b6a7e761265149, type: 2}
+  processTime: 1
+  heal: 1
+  hunger: 5
+  stamina: 1
+  armor: 0
+  projectileSpeed: 0
+  swingFx: 0
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0

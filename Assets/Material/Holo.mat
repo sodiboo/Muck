@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Holo
+  m_Shader: {fileID: 4800000, guid: dcf5b312472c8a64d9e10dd175905b12, type: 3}
+  m_ShaderKeywords: _ENABLEDISTORTION_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Maintexture:
+        m_Texture: {fileID: 2800000, guid: 561cd624b691c3b47b2fca64ca74d020, type: 3}
+        m_Scale: {x: 200, y: 200}
+        m_Offset: {x: 0, y: 0}
+    - _Secondarytexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Bias: 0
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _Distortionscale: 0.01
+    - _Distortionspeed: 0.5
+    - _DstBlend: 0
+    - _Enabledistortion: 1
+    - _Enablenoise: 0
+    - _Enablepulsation: 0
+    - _Extraroughness: 2
+    - _Globalopacity: 0.85
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Innerfresnelintensity: 0.6
+    - _Invertmaintexture: 0
+    - _Invertsecondarytexture: 0
+    - _Maintextureintensity: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _Noisescale: 50
+    - _OcclusionStrength: 1
+    - _Outerfresnelintensity: 0.6
+    - _Parallax: 0.02
+    - _Power: 1
+    - _Pulseamplitude: 1
+    - _Pulsefrequency: 3
+    - _Pulseoffset: 0
+    - _Pulsephase: 0
+    - _Scale: 1
+    - _Secondarytextureintensity: 1
+    - _Sharpennoise: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TessMax: 75.79
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 4.4
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Edgecolor: {r: 1, g: 0.07980805, b: 0, a: 0.666}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Maincolor: {r: 1, g: 0.03997353, b: 0, a: 0.666}
+    - _Mainpanningspeed: {r: 0.1, g: 0, b: 0, a: 0}
+    - _Noisespeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Secondarycolor: {r: 0, g: 0, b: 0, a: 0}
+    - _Secondarypanningspeed: {r: 0, g: 0, b: 0, a: 0}

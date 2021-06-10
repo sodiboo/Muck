@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea83e15f22ee3d43b0be87124b1b040, type: 3}
+  m_Name: Dave_lightning
+  m_EditorClassIdentifier:
+  name:
+  mobPrefab: {fileID: 1721859675529334, guid: 84e9c22013a078c44baeb832d3e92964, type: 2}
+  behaviour: 1
+  ranged: 1
+  rangedCooldown: 6
+  startAttackDistance: 25
+  maxAttackDistance: 1
+  speed: 8
+  spawnTime: 1.5
+  minAttackAngle: 125
+  sharpDefense: 0
+  defense: 0
+  knockbackThreshold: 0.2
+  ignoreBuilds: 0
+  followPlayerDistance: 1
+  followPlayerAccuracy: 0.5
+  onlyRangedInRangedPattern: 0

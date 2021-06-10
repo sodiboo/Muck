@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Skybox Cubemap Extended Day
+  m_Shader: {fileID: 4800000, guid: 882bbf5edb4c17141b37ee98e4ff989e, type: 3}
+  m_ShaderKeywords: _ENABLEFOG_ON _ENABLEROTATION_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Tex:
+        m_Texture: {fileID: 8900000, guid: 713ca8ab108ca19408b4b21c3809c663, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Advancedd: 1
+    - _BumpScale: 1
+    - _CUBEMAPP: 1
+    - _CubemapPosition: 0
+    - _Cubemapp: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EnableFog: 1
+    - _EnableRotation: 1
+    - _Exposure: 0.3822461
+    - _Float0: 0
+    - _FogFill: 0.28
+    - _FogHeight: 0.58
+    - _FogIntensity: 1
+    - _FogMessage: 0
+    - _FogPosition: -0.06
+    - _FogSmoothness: 0.01
+    - _Fogg: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _IsStandardPipeline: 1
+    - _IsStandardRP: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Rotation: 0
+    - _RotationSpeed: 0.2
+    - _Rotationn: 1
+    - _SkyboxExtended: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Tex_HDR: {r: 1, g: 1, b: 0, a: 0}
+    - _TintColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}

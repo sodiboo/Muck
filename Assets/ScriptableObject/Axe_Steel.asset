@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db3e4e8678e5ca48a08f2caea2c073d, type: 3}
+  m_Name: Axe_Steel
+  m_EditorClassIdentifier:
+  id: 56
+  name: Steel Axe
+  description: its axe
+  type: 1
+  tier: 2
+  sprite: {fileID: 21300000, guid: de27e4a3966d58f4fa1f1019e7ac1360, type: 3}
+  material: {fileID: 2100000, guid: 4b18d9660ca203a46b52ba550eb54880, type: 2}
+  mesh: {fileID: 4300000, guid: f52ec635a611d194898ccb5d35f476d2, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 25
+  attackDamage: 20
+  attackSpeed: 0.9
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0.8
+  craftable: 1
+  unlockWithFirstRequirementOnly: 1
+  requirements:
+  - item: {fileID: 11400000, guid: 9e19a8ab116fe794bafdc07290fd6b30, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: f3a99ea6a7655d54fb54d8fd4a3151ef, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: 3cc29dd579cb45441a87949b47e0c02a, type: 2}
+    amount: 10
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 22134bad8d8b0c44e882ae67da7ed91b, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 0}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  projectileSpeed: 0
+  swingFx: 1
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
