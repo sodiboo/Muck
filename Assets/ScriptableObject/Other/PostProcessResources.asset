@@ -2,15 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4a21b4a3cf8a84e8d469c8933bc1eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 30f4b897495c7ad40b2d47143e02aaba, type: 3}
   m_Name: PostProcessResources
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   blueNoise64:
   - {fileID: 2800000, guid: 53a8f40a1666ae0488f24ce4c3e20d33, type: 3}
   - {fileID: 2800000, guid: 883172249d942884bbd9f2b54f83dcc3, type: 3}
@@ -92,15 +93,19 @@ MonoBehaviour:
     bloom: {fileID: 4800000, guid: d0756f25e06ee1e4d8211a16add980b5, type: 3}
     copy: {fileID: 4800000, guid: 9297ad801692bce4195c6436876f0e6c, type: 3}
     copyStd: {fileID: 4800000, guid: 09540b3729deb0a4ab7d867bc4242627, type: 3}
-    copyStdFromTexArray: {fileID: 4800000, guid: bf9a554fa149d374dac955a0e3ab29c4, type: 3}
-    copyStdFromDoubleWide: {fileID: 4800000, guid: 4fb5226399d43e144b5f966dda68b3e5, type: 3}
+    copyStdFromTexArray: {fileID: 4800000, guid: bf9a554fa149d374dac955a0e3ab29c4,
+      type: 3}
+    copyStdFromDoubleWide: {fileID: 4800000, guid: 4fb5226399d43e144b5f966dda68b3e5,
+      type: 3}
     discardAlpha: {fileID: 4800000, guid: 767d2e0f70df71f4288c725db3c6ec19, type: 3}
     depthOfField: {fileID: 4800000, guid: 8c65e583197baf74f8991e1d3a900907, type: 3}
     finalPass: {fileID: 4800000, guid: b04bc1126b921e845aa116c9e63315ae, type: 3}
     grainBaker: {fileID: 4800000, guid: 88027de70a87d0441ae1a249f6838de8, type: 3}
     motionBlur: {fileID: 4800000, guid: 254b0804f1e8bc54d83a2041a9340705, type: 3}
-    temporalAntialiasing: {fileID: 4800000, guid: fdc242d4b43ada94da08eba4c9551e13, type: 3}
-    subpixelMorphologicalAntialiasing: {fileID: 4800000, guid: cb95bf3851c1bc149aefd5112d39473d, type: 3}
+    temporalAntialiasing: {fileID: 4800000, guid: fdc242d4b43ada94da08eba4c9551e13,
+      type: 3}
+    subpixelMorphologicalAntialiasing: {fileID: 4800000, guid: cb95bf3851c1bc149aefd5112d39473d,
+      type: 3}
     texture2dLerp: {fileID: 4800000, guid: 55cbe5f6364b1b74181fd54714cc37f7, type: 3}
     uber: {fileID: 4800000, guid: 5cc51a76ef79b6b439ae95739f86b8ce, type: 3}
     lut2DBaker: {fileID: 4800000, guid: 07508b203f12ca74aa4a6564a8c727f5, type: 3}
@@ -112,7 +117,8 @@ MonoBehaviour:
     deferredFog: {fileID: 4800000, guid: 7720488a2da95a244b76e0c4d1c05713, type: 3}
     scalableAO: {fileID: 4800000, guid: e6a57a32dfbb78349ac464c0daa02dfd, type: 3}
     multiScaleAO: {fileID: 4800000, guid: 8c9420e6534e8154baad53ed33332935, type: 3}
-    screenSpaceReflections: {fileID: 4800000, guid: 925f465ee25ac434198b1249bed06eeb, type: 3}
+    screenSpaceReflections: {fileID: 4800000, guid: 925f465ee25ac434198b1249bed06eeb,
+      type: 3}
   computeShaders:
     autoExposure: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
     exposureHistogram: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
