@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1db3e4e8678e5ca48a08f2caea2c073d, type: 3}
   m_Name: Chunky Hammer
-  m_EditorClassIdentifier:
-  id: 97
+  m_EditorClassIdentifier: 
+  id: 98
   name: Chunky Hammer
   description: its blunt and chunky
   type: 3
@@ -41,7 +42,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 11400000, guid: 5cab59d151439c5408419e729cefcc64, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1616648451460448, guid: cd0116cf594e9744691bd2c56d805fc7, type: 2}
+  prefab: {fileID: 1616648451460448, guid: cd0116cf594e9744691bd2c56d805fc7, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
