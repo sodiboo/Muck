@@ -4,117 +4,117 @@
 - [Powerups](#Powerups)
 
 # Items by ID
-0. [Bark](#0)
-1. [Chest](#1)
-2. [Coal](#2)
-3. [Coin](#3)
-4. [Flint](#4)
-5. [Steel Boots](#5)
-6. [Steel Helmet](#6)
-7. [Steel Pants](#7)
-8. [Steel Chestplate](#8)
-9. [Wood Doorway](#9)
-10. [Wood Doorway](#10)
-11. [Wood Floor](#11)
-12. [Wood Pole](#12)
-13. [Wood Pole](#13)
-14. [Wood Roof](#14)
-15. [Wood stairs](#15)
-16. [Wood stairs thinn](#16)
-17. [Wood Wall](#17)
-18. [Wood Wall Half](#18)
-19. [Wood Wall Tilted](#19)
-20. [Torch](#20)
-21. [Red Apple](#21)
-22. [Bowl](#22)
-23. [Dough](#23)
-24. [Blue Flower](#24)
-25. [Raw Meat](#25)
-26. [Gulpon Shroom](#26)
-27. [Ligon Shroom](#27)
-28. [Slurbon Shroom](#28)
-29. [Sugon Shroom](#29)
-30. [Wheat](#30)
-31. [Bread](#31)
-32. [Cooked Meat](#32)
-33. [Meat Pie](#33)
-34. [Meat Soup](#34)
-35. [Adamantite bar](#35)
-36. [Gold bar](#36)
-37. [Iron bar](#37)
-38. [Mithril bar](#38)
-39. [Adamantite Ore](#39)
-40. [Gold Ore](#40)
-41. [Iron Ore](#41)
-42. [Mithril Ore](#42)
-43. [Rock](#43)
-44. [Birch Wood](#44)
-45. [Fir Wood](#45)
-46. [Wood](#46)
-47. [Oak Wood](#47)
-48. [Anvil](#48)
-49. [Cauldron](#49)
-50. [Fletching Table](#50)
-51. [Furnace](#51)
-52. [Workbench](#52)
-53. [Adamantite Axe](#53)
-54. [Gold Axe](#54)
-55. [Mithril Axe](#55)
-56. [Steel Axe](#56)
-57. [Wood Axe](#57)
-58. [Wood Bow](#58)
-59. [Adamantite Pickaxe](#59)
-60. [Gold Pickaxe](#60)
-61. [Mithril Pickaxe](#61)
-62. [Steel Pickaxe](#62)
-63. [Wood Pickaxe](#63)
-64. [Shovel](#64)
-65. [Adamantite Sword](#65)
-66. [Gold Sword](#66)
-67. [Mithril Sword](#67)
-68. [Steel Sword](#68)
-69. [Apple Pie](#69)
-70. [Adamantite Arrow](#70)
-71. [Flint Arrow](#71)
-72. [Mithril Arrow](#72)
-73. [Steel Arrow](#73)
-74. [Rope](#74)
-75. [Birch bow](#75)
-76. [Fir bow](#76)
-77. [Oak Bow](#77)
-78. [Adamantite Boots](#78)
-79. [Gold Boots](#79)
-80. [Mithril Boots](#80)
-81. [Adamantite Helmet](#81)
-82. [Gold Helmet](#82)
-83. [Mithril Helmet](#83)
-84. [Adamantite Pants](#84)
-85. [Gold Pants](#85)
-86. [Mithril Pants](#86)
-87. [Adamantite Chestplate](#87)
-88. [Gold Chestplate](#88)
-89. [Mithril Chestplate](#89)
-90. [Fireball](#90)
-91. [Lightningball](#91)
-92. [Waterball](#92)
-93. [Windball](#93)
-94. [Bone](#94)
-95. [Rock Projectile](#95)
-96. [Rock Projectile](#96)
-97. [Chunkium bar](#97)
-98. [Chunky Hammer](#98)
-99. [Chunkium Ore](#99)
-100. [Wyvern Claws](#101)
-101. [Wyvern Claws](#101)
-102. [Wyvern Dagger](#102)
-103. [Hammer Shaft](#103)
-104. [Chunkium Boots](#104)
-105. [Chunkium Helmet](#105)
-106. [Chunkium Pants](#106)
-107. [Chunkium Chestplate](#107)
+0. [Bark](#Bark)
+1. [Chest](#Chest)
+2. [Coal](#Coal)
+3. [Coin](#Coin)
+4. [Flint](#Flint)
+5. [Steel Boots](#Steel-Boots)
+6. [Steel Helmet](#Steel-Helmet)
+7. [Steel Pants](#Steel-Pants)
+8. [Steel Chestplate](#Steel-Chestplate)
+9. [Wood Doorway](#Wood-Doorway)
+10. [Wood Doorway](#Wood-Doorway)
+11. [Wood Floor](#Wood-Floor)
+12. [Wood Pole](#Wood-Pole)
+13. [Wood Pole](#Wood-Pole)
+14. [Wood Roof](#Wood-Roof)
+15. [Wood stairs](#Wood-stairs)
+16. [Wood stairs thinn](#Wood-stairs-thinn)
+17. [Wood Wall](#Wood-Wall)
+18. [Wood Wall Half](#Wood-Wall-Half)
+19. [Wood Wall Tilted](#Wood-Wall-Tilted)
+20. [Torch](#Torch)
+21. [Red Apple](#Red-Apple)
+22. [Bowl](#Bowl)
+23. [Dough](#Dough)
+24. [Blue Flower](#Blue-Flower)
+25. [Raw Meat](#Raw-Meat)
+26. [Gulpon Shroom](#Gulpon-Shroom)
+27. [Ligon Shroom](#Ligon-Shroom)
+28. [Slurbon Shroom](#Slurbon-Shroom)
+29. [Sugon Shroom](#Sugon-Shroom)
+30. [Wheat](#Wheat)
+31. [Bread](#Bread)
+32. [Cooked Meat](#Cooked-Meat)
+33. [Meat Pie](#Meat-Pie)
+34. [Meat Soup](#Meat-Soup)
+35. [Adamantite bar](#Adamantite-bar)
+36. [Gold bar](#Gold-bar)
+37. [Iron bar](#Iron-bar)
+38. [Mithril bar](#Mithril-bar)
+39. [Adamantite Ore](#Adamantite-Ore)
+40. [Gold Ore](#Gold-Ore)
+41. [Iron Ore](#Iron-Ore)
+42. [Mithril Ore](#Mithril-Ore)
+43. [Rock](#Rock)
+44. [Birch Wood](#Birch-Wood)
+45. [Fir Wood](#Fir-Wood)
+46. [Wood](#Wood)
+47. [Oak Wood](#Oak-Wood)
+48. [Anvil](#Anvil)
+49. [Cauldron](#Cauldron)
+50. [Fletching Table](#Fletching-Table)
+51. [Furnace](#Furnace)
+52. [Workbench](#Workbench)
+53. [Adamantite Axe](#Adamantite-Axe)
+54. [Gold Axe](#Gold-Axe)
+55. [Mithril Axe](#Mithril-Axe)
+56. [Steel Axe](#Steel-Axe)
+57. [Wood Axe](#Wood-Axe)
+58. [Wood Bow](#Wood-Bow)
+59. [Adamantite Pickaxe](#Adamantite-Pickaxe)
+60. [Gold Pickaxe](#Gold-Pickaxe)
+61. [Mithril Pickaxe](#Mithril-Pickaxe)
+62. [Steel Pickaxe](#Steel-Pickaxe)
+63. [Wood Pickaxe](#Wood-Pickaxe)
+64. [Shovel](#Shovel)
+65. [Adamantite Sword](#Adamantite-Sword)
+66. [Gold Sword](#Gold-Sword)
+67. [Mithril Sword](#Mithril-Sword)
+68. [Steel Sword](#Steel-Sword)
+69. [Apple Pie](#Apple-Pie)
+70. [Adamantite Arrow](#Adamantite-Arrow)
+71. [Flint Arrow](#Flint-Arrow)
+72. [Mithril Arrow](#Mithril-Arrow)
+73. [Steel Arrow](#Steel-Arrow)
+74. [Rope](#Rope)
+75. [Birch bow](#Birch-bow)
+76. [Fir bow](#Fir-bow)
+77. [Oak Bow](#Oak-Bow)
+78. [Adamantite Boots](#Adamantite-Boots)
+79. [Gold Boots](#Gold-Boots)
+80. [Mithril Boots](#Mithril-Boots)
+81. [Adamantite Helmet](#Adamantite-Helmet)
+82. [Gold Helmet](#Gold-Helmet)
+83. [Mithril Helmet](#Mithril-Helmet)
+84. [Adamantite Pants](#Adamantite-Pants)
+85. [Gold Pants](#Gold-Pants)
+86. [Mithril Pants](#Mithril-Pants)
+87. [Adamantite Chestplate](#Adamantite-Chestplate)
+88. [Gold Chestplate](#Gold-Chestplate)
+89. [Mithril Chestplate](#Mithril-Chestplate)
+90. [Fireball](#Fireball)
+91. [Lightningball](#Lightningball)
+92. [Waterball](#Waterball)
+93. [Windball](#Windball)
+94. [Bone](#Bone)
+95. [Rock Projectile](#Rock-Projectile)
+96. [Rock Projectile](#Rock-Projectile)
+97. [Chunkium bar](#Chunkium-bar)
+98. [Chunky Hammer](#Chunky-Hammer)
+99. [Chunkium Ore](#Chunkium-Ore)
+100. [Wyvern Claws](#Wyvern-Claws)
+101. [Wyvern Claws](#Wyvern-Claws)
+102. [Wyvern Dagger](#Wyvern-Dagger)
+103. [Hammer Shaft](#Hammer-Shaft)
+104. [Chunkium Boots](#Chunkium-Boots)
+105. [Chunkium Helmet](#Chunkium-Helmet)
+106. [Chunkium Pants](#Chunkium-Pants)
+107. [Chunkium Chestplate](#Chunkium-Chestplate)
 
 # Items
-###### ![48](Assets/Texture2D/AnvilIcon.png)
+###### ![Anvil](Assets/Texture2D/AnvilIcon.png)
 ## Anvil
 *chonky metal station*
 - Type: Station
@@ -125,8 +125,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Iron bar](#37)
-- 15 [Rock](#43)
+- 5 [Iron bar](#Iron-bar)
+- 15 [Rock](#Rock)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:10
@@ -134,7 +134,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![21](Assets/Texture2D/Apple_red.png)
+###### ![Red-Apple](Assets/Texture2D/Apple_red.png)
 ## Red Apple
 *Red and shiny*
 - Type: Food
@@ -150,7 +150,7 @@
 - Hunger: 15
 - Stamina: 5
 
-###### ![70](Assets/Texture2D/Arrow_adamantite.png)
+###### ![Adamantite-Arrow](Assets/Texture2D/Arrow_adamantite.png)
 ## Adamantite Arrow
 *Green arrow*
 - Type: Item
@@ -162,8 +162,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Oak Wood](#47)
-- 1 [Adamantite bar](#35)
+- 2 [Oak Wood](#Oak-Wood)
+- 1 [Adamantite bar](#Adamantite-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:70
@@ -171,7 +171,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![71](Assets/Texture2D/Arrow_flint.png)
+###### ![Flint-Arrow](Assets/Texture2D/Arrow_flint.png)
 ## Flint Arrow
 *kinda wacky, but gets the job done ig*
 - Type: Item
@@ -183,8 +183,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
-- 1 [Flint](#4)
+- 2 [Wood](#Wood)
+- 1 [Flint](#Flint)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:25
@@ -192,7 +192,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![72](Assets/Texture2D/Arrow_mithril_0.png)
+###### ![Mithril-Arrow](Assets/Texture2D/Arrow_mithril_0.png)
 ## Mithril Arrow
 *Sharp arrow*
 - Type: Item
@@ -204,8 +204,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Fir Wood](#45)
-- 1 [Mithril bar](#38)
+- 2 [Fir Wood](#Fir-Wood)
+- 1 [Mithril bar](#Mithril-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:45
@@ -213,7 +213,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![73](Assets/Texture2D/Arrow_Steel.png)
+###### ![Steel-Arrow](Assets/Texture2D/Arrow_Steel.png)
 ## Steel Arrow
 *Shiny arrow*
 - Type: Item
@@ -225,8 +225,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Birch Wood](#44)
-- 1 [Iron bar](#37)
+- 2 [Birch Wood](#Birch-Wood)
+- 1 [Iron bar](#Iron-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:35
@@ -234,7 +234,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![53](Assets/Texture2D/Axe_adamantite.png)
+###### ![Adamantite-Axe](Assets/Texture2D/Axe_adamantite.png)
 ## Adamantite Axe
 *its axe*
 - Type: Axe
@@ -246,9 +246,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Adamantite bar](#35)
-- 5 [Bark](#0)
-- 10 [Oak Wood](#47)
+- 5 [Adamantite bar](#Adamantite-bar)
+- 5 [Bark](#Bark)
+- 10 [Oak Wood](#Oak-Wood)
 #### Weapon Stats
 - Resource Damage:50
 - Attack Damage:40
@@ -256,7 +256,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![54](Assets/Texture2D/Axe_Gold.png)
+###### ![Gold-Axe](Assets/Texture2D/Axe_Gold.png)
 ## Gold Axe
 *its axe*
 - Type: Axe
@@ -268,9 +268,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Gold bar](#36)
-- 5 [Bark](#0)
-- 10 [Wood](#46)
+- 5 [Gold bar](#Gold-bar)
+- 5 [Bark](#Bark)
+- 10 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:22
 - Attack Damage:15
@@ -278,7 +278,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![55](Assets/Texture2D/Axe_Mihtril.png)
+###### ![Mithril-Axe](Assets/Texture2D/Axe_Mihtril.png)
 ## Mithril Axe
 *its axe*
 - Type: Axe
@@ -290,9 +290,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Mithril bar](#38)
-- 5 [Bark](#0)
-- 10 [Fir Wood](#45)
+- 5 [Mithril bar](#Mithril-bar)
+- 5 [Bark](#Bark)
+- 10 [Fir Wood](#Fir-Wood)
 #### Weapon Stats
 - Resource Damage:35
 - Attack Damage:25
@@ -300,7 +300,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![56](Assets/Texture2D/Axe_Steel.png)
+###### ![Steel-Axe](Assets/Texture2D/Axe_Steel.png)
 ## Steel Axe
 *its axe*
 - Type: Axe
@@ -312,9 +312,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Iron bar](#37)
-- 5 [Bark](#0)
-- 10 [Birch Wood](#44)
+- 5 [Iron bar](#Iron-bar)
+- 5 [Bark](#Bark)
+- 10 [Birch Wood](#Birch-Wood)
 #### Weapon Stats
 - Resource Damage:25
 - Attack Damage:20
@@ -322,7 +322,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![57](Assets/Texture2D/Axe_wood.png)
+###### ![Wood-Axe](Assets/Texture2D/Axe_wood.png)
 ## Wood Axe
 *its axe*
 - Type: Axe
@@ -335,8 +335,8 @@
 - Fuel: 1 items
 - Fuel Speed: 1x
 #### Crafting Recipe
-- 5 [Wood](#46)
-- 5 [Bark](#0)
+- 5 [Wood](#Wood)
+- 5 [Bark](#Bark)
 #### Weapon Stats
 - Resource Damage:20
 - Attack Damage:15
@@ -344,7 +344,7 @@
 - Attack Range:1
 - Sharpness: 0.75
 
-###### ![0](Assets/Texture2D/BarkIcon.png)
+###### ![Bark](Assets/Texture2D/BarkIcon.png)
 ## Bark
 *its wood but bark*
 - Type: Item
@@ -355,7 +355,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Wood](#46)
+- 5 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -363,7 +363,7 @@
 - Attack Range:0.75
 - Sharpness: 0
 
-###### ![35](Assets/Texture2D/AdamantiteBar.png)
+###### ![Adamantite-bar](Assets/Texture2D/AdamantiteBar.png)
 ## Adamantite bar
 *block of adamantite*
 - Type: Item
@@ -380,7 +380,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![97](Assets/Texture2D/ChunkiumBar.png)
+###### ![Chunkium-bar](Assets/Texture2D/ChunkiumBar.png)
 ## Chunkium bar
 *Looks very expensive (and chunky)*
 - Type: Item
@@ -397,7 +397,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![36](Assets/Texture2D/GoldBar.png)
+###### ![Gold-bar](Assets/Texture2D/GoldBar.png)
 ## Gold bar
 *block of gold*
 - Type: Item
@@ -414,7 +414,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![37](Assets/Texture2D/IronBar.png)
+###### ![Iron-bar](Assets/Texture2D/IronBar.png)
 ## Iron bar
 *block of iron*
 - Type: Item
@@ -431,7 +431,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![38](Assets/Texture2D/MithrilBar.png)
+###### ![Mithril-bar](Assets/Texture2D/MithrilBar.png)
 ## Mithril bar
 *block of mithril*
 - Type: Item
@@ -448,7 +448,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![94](Assets/Texture2D/FireBall.png)
+###### ![Bone](Assets/Texture2D/FireBall.png)
 ## Bone
 *oof owie my bones*
 - Type: Item
@@ -465,7 +465,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![78](Assets/Texture2D/Boots_Adamantite.png)
+###### ![Adamantite-Boots](Assets/Texture2D/Boots_Adamantite.png)
 ## Adamantite Boots
 *it protecc foot*
 - Type: Item
@@ -477,7 +477,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Adamantite bar](#35)
+- 5 [Adamantite bar](#Adamantite-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -485,7 +485,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![104](Assets/Texture2D/Boots_Chunky.png)
+###### ![Chunkium-Boots](Assets/Texture2D/Boots_Chunky.png)
 ## Chunkium Boots
 *it protecc foot*
 - Type: Item
@@ -497,7 +497,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Chunkium bar](#97)
+- 5 [Chunkium bar](#Chunkium-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -505,7 +505,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![79](Assets/Texture2D/Boots_gold.png)
+###### ![Gold-Boots](Assets/Texture2D/Boots_gold.png)
 ## Gold Boots
 *it protecc foot*
 - Type: Item
@@ -517,7 +517,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Gold bar](#36)
+- 5 [Gold bar](#Gold-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -525,7 +525,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![80](Assets/Texture2D/Boots_Mithril.png)
+###### ![Mithril-Boots](Assets/Texture2D/Boots_Mithril.png)
 ## Mithril Boots
 *it protecc foot*
 - Type: Item
@@ -537,7 +537,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Mithril bar](#38)
+- 5 [Mithril bar](#Mithril-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -545,7 +545,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![5](Assets/Texture2D/Boots_steel.png)
+###### ![Steel-Boots](Assets/Texture2D/Boots_steel.png)
 ## Steel Boots
 *it protecc foot*
 - Type: Item
@@ -557,7 +557,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Iron bar](#37)
+- 5 [Iron bar](#Iron-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -565,7 +565,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![77](Assets/Texture2D/Bow_icon.png)
+###### ![Oak-Bow](Assets/Texture2D/Bow_icon.png)
 ## Oak Bow
 *This bow looks sick*
 - Type: Bow
@@ -576,8 +576,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Oak Wood](#47)
-- 1 [Rope](#74)
+- 5 [Oak Wood](#Oak-Wood)
+- 1 [Rope](#Rope)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -585,7 +585,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![22](Assets/Texture2D/Bowl_0.png)
+###### ![Bowl](Assets/Texture2D/Bowl_0.png)
 ## Bowl
 *its bowl*
 - Type: Food
@@ -602,7 +602,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![58](Assets/Texture2D/Bow_normal.png)
+###### ![Wood-Bow](Assets/Texture2D/Bow_normal.png)
 ## Wood Bow
 *Looks kinda scuffed*
 - Type: Bow
@@ -613,8 +613,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 10 [Wood](#46)
-- 1 [Rope](#74)
+- 10 [Wood](#Wood)
+- 1 [Rope](#Rope)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -622,7 +622,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![75](Assets/Texture2D/Bow_Birch.png)
+###### ![Birch-bow](Assets/Texture2D/Bow_Birch.png)
 ## Birch bow
 *bitch boi*
 - Type: Bow
@@ -633,8 +633,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 10 [Birch Wood](#44)
-- 1 [Rope](#74)
+- 10 [Birch Wood](#Birch-Wood)
+- 1 [Rope](#Rope)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -642,7 +642,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![76](Assets/Texture2D/Bow_fir.png)
+###### ![Fir-bow](Assets/Texture2D/Bow_fir.png)
 ## Fir bow
 *Bow*
 - Type: Bow
@@ -653,8 +653,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 10 [Fir Wood](#45)
-- 1 [Rope](#74)
+- 10 [Fir Wood](#Fir-Wood)
+- 1 [Rope](#Rope)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -662,7 +662,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![31](Assets/Texture2D/Bread_0.png)
+###### ![Bread](Assets/Texture2D/Bread_0.png)
 ## Bread
 *lets get this bread*
 - Type: Item
@@ -674,13 +674,13 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 1 [Dough](#23)
+- 1 [Dough](#Dough)
 #### Food Stats
 - Health: 25
 - Hunger: 25
 - Stamina: 25
 
-###### ![49](Assets/Texture2D/CookingIcon.png)
+###### ![Cauldron](Assets/Texture2D/CookingIcon.png)
 ## Cauldron
 *food go brr*
 - Type: Storage
@@ -691,8 +691,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 10 [Wood](#46)
-- 10 [Rock](#43)
+- 10 [Wood](#Wood)
+- 10 [Rock](#Rock)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -700,7 +700,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![1](Assets/Texture2D/ChestIcon.png)
+###### ![Chest](Assets/Texture2D/ChestIcon.png)
 ## Chest
 *store thing in it*
 - Type: Storage
@@ -711,8 +711,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 20 [Wood](#46)
-- 10 [Rock](#43)
+- 20 [Wood](#Wood)
+- 10 [Rock](#Rock)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -720,7 +720,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![98](Assets/Texture2D/ChunkyHammer.png)
+###### ![Chunky-Hammer](Assets/Texture2D/ChunkyHammer.png)
 ## Chunky Hammer
 *its blunt and chunky*
 - Type: Sword
@@ -731,8 +731,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 1 [Hammer Shaft](#103)
-- 15 [Chunkium bar](#97)
+- 1 [Hammer Shaft](#Hammer-Shaft)
+- 15 [Chunkium bar](#Chunkium-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:100
@@ -740,7 +740,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![2](Assets/Texture2D/CoalIcon.png)
+###### ![Coal](Assets/Texture2D/CoalIcon.png)
 ## Coal
 *its flamable rock*
 - Type: Item
@@ -759,7 +759,7 @@
 - Attack Range:0.8
 - Sharpness: 0
 
-###### ![3](Assets/Texture2D/CoinIcon.png)
+###### ![Coin](Assets/Texture2D/CoinIcon.png)
 ## Coin
 *shiny*
 - Type: Item
@@ -776,7 +776,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![23](Assets/Texture2D/Dough.png)
+###### ![Dough](Assets/Texture2D/Dough.png)
 ## Dough
 *looks yummy*
 - Type: Item
@@ -787,7 +787,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Wheat](#30)
+- 5 [Wheat](#Wheat)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -795,7 +795,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![90](Assets/Texture2D/FireBall.png)
+###### ![Fireball](Assets/Texture2D/FireBall.png)
 ## Fireball
 *Ball of fire*
 - Type: Item
@@ -813,7 +813,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![50](Assets/Texture2D/FletchingIcon.png)
+###### ![Fletching-Table](Assets/Texture2D/FletchingIcon.png)
 ## Fletching Table
 *fletch*
 - Type: Station
@@ -824,8 +824,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 25 [Birch Wood](#44)
-- 10 [Flint](#4)
+- 25 [Birch Wood](#Birch-Wood)
+- 10 [Flint](#Flint)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -833,7 +833,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![4](Assets/Texture2D/FlintIcon.png)
+###### ![Flint](Assets/Texture2D/FlintIcon.png)
 ## Flint
 *its rock but make fire*
 - Type: Item
@@ -850,7 +850,7 @@
 - Attack Range:0.8
 - Sharpness: 0.7
 
-###### ![24](Assets/Texture2D/Flower_Blue.png)
+###### ![Blue-Flower](Assets/Texture2D/Flower_Blue.png)
 ## Blue Flower
 *A pretty blue flower*
 - Type: Item
@@ -867,7 +867,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![51](Assets/Texture2D/FurnaceIcon.png)
+###### ![Furnace](Assets/Texture2D/FurnaceIcon.png)
 ## Furnace
 *it go melt*
 - Type: Storage
@@ -878,7 +878,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Rock](#43)
+- 15 [Rock](#Rock)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -886,7 +886,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![103](Assets/Texture2D/HammerShaft.png)
+###### ![Hammer-Shaft](Assets/Texture2D/HammerShaft.png)
 ## Hammer Shaft
 *Wild guess, but it might be used for making a hammer?*
 - Type: Item
@@ -903,7 +903,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![81](Assets/Texture2D/Helmet_adamantite.png)
+###### ![Adamantite-Helmet](Assets/Texture2D/Helmet_adamantite.png)
 ## Adamantite Helmet
 *it protecc head*
 - Type: Item
@@ -915,7 +915,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Adamantite bar](#35)
+- 5 [Adamantite bar](#Adamantite-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -923,7 +923,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![105](Assets/Texture2D/Helmet_Chunk.png)
+###### ![Chunkium-Helmet](Assets/Texture2D/Helmet_Chunk.png)
 ## Chunkium Helmet
 *it protecc head*
 - Type: Item
@@ -935,7 +935,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Chunkium bar](#97)
+- 5 [Chunkium bar](#Chunkium-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -943,7 +943,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![82](Assets/Texture2D/Helmet_gold.png)
+###### ![Gold-Helmet](Assets/Texture2D/Helmet_gold.png)
 ## Gold Helmet
 *it protecc head*
 - Type: Item
@@ -955,7 +955,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Gold bar](#36)
+- 5 [Gold bar](#Gold-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -963,7 +963,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![83](Assets/Texture2D/Helmet_mithril.png)
+###### ![Mithril-Helmet](Assets/Texture2D/Helmet_mithril.png)
 ## Mithril Helmet
 *it protecc head*
 - Type: Item
@@ -975,7 +975,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Mithril bar](#38)
+- 5 [Mithril bar](#Mithril-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -983,7 +983,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![6](Assets/Texture2D/Helmet_steel.png)
+###### ![Steel-Helmet](Assets/Texture2D/Helmet_steel.png)
 ## Steel Helmet
 *it protecc head*
 - Type: Item
@@ -995,7 +995,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Iron bar](#37)
+- 5 [Iron bar](#Iron-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1003,7 +1003,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![84](Assets/Texture2D/Pants_adamantite.png)
+###### ![Adamantite-Pants](Assets/Texture2D/Pants_adamantite.png)
 ## Adamantite Pants
 *it protecc leg*
 - Type: Item
@@ -1015,7 +1015,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Adamantite bar](#35)
+- 15 [Adamantite bar](#Adamantite-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1023,7 +1023,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![106](Assets/Texture2D/Pants_Chunk.png)
+###### ![Chunkium-Pants](Assets/Texture2D/Pants_Chunk.png)
 ## Chunkium Pants
 *it protecc leg*
 - Type: Item
@@ -1035,7 +1035,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Chunkium bar](#97)
+- 15 [Chunkium bar](#Chunkium-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1043,7 +1043,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![85](Assets/Texture2D/Pants_Gold.png)
+###### ![Gold-Pants](Assets/Texture2D/Pants_Gold.png)
 ## Gold Pants
 *it protecc leg*
 - Type: Item
@@ -1055,7 +1055,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Gold bar](#36)
+- 15 [Gold bar](#Gold-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1063,7 +1063,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![86](Assets/Texture2D/Pants_Mithril.png)
+###### ![Mithril-Pants](Assets/Texture2D/Pants_Mithril.png)
 ## Mithril Pants
 *it protecc leg*
 - Type: Item
@@ -1075,7 +1075,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Mithril bar](#38)
+- 15 [Mithril bar](#Mithril-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1083,7 +1083,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![7](Assets/Texture2D/Pants_Steel.png)
+###### ![Steel-Pants](Assets/Texture2D/Pants_Steel.png)
 ## Steel Pants
 *it protecc leg*
 - Type: Item
@@ -1095,7 +1095,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Iron bar](#37)
+- 15 [Iron bar](#Iron-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1103,7 +1103,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![91](Assets/Texture2D/LightningBall.png)
+###### ![Lightningball](Assets/Texture2D/LightningBall.png)
 ## Lightningball
 *Ball of lightning*
 - Type: Item
@@ -1121,7 +1121,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![32](Assets/Texture2D/Meat_Cooked.png)
+###### ![Cooked-Meat](Assets/Texture2D/Meat_Cooked.png)
 ## Cooked Meat
 *yummy*
 - Type: Food
@@ -1137,7 +1137,7 @@
 - Hunger: 50
 - Stamina: 5
 
-###### ![25](Assets/Texture2D/Meat_raw.png)
+###### ![Raw-Meat](Assets/Texture2D/Meat_raw.png)
 ## Raw Meat
 *yummy*
 - Type: Food
@@ -1147,14 +1147,14 @@
 - Craftable: No
 - Buildable: No
 - Processing Time: 1
-- Processing Result: [Cooked Meat](#32)
+- Processing Result: [Cooked Meat](#Cooked-Meat)
 - Fuel: No
 #### Food Stats
 - Health: 5
 - Hunger: 10
 - Stamina: 0
 
-###### ![39](Assets/Texture2D/Ore_Adamantite.png)
+###### ![Adamantite-Ore](Assets/Texture2D/Ore_Adamantite.png)
 ## Adamantite Ore
 *its hard rock*
 - Type: Axe
@@ -1164,7 +1164,7 @@
 - Craftable: No
 - Buildable: No
 - Processing Time: 15
-- Processing Result: [Adamantite bar](#35)
+- Processing Result: [Adamantite bar](#Adamantite-bar)
 - Fuel: No
 #### Weapon Stats
 - Resource Damage:1
@@ -1173,7 +1173,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![99](Assets/Texture2D/Ore_Chunkium_0.png)
+###### ![Chunkium-Ore](Assets/Texture2D/Ore_Chunkium_0.png)
 ## Chunkium Ore
 *looks like your mom*
 - Type: Item
@@ -1182,7 +1182,7 @@
 - Craftable: No
 - Buildable: No
 - Processing Time: 23
-- Processing Result: [Chunkium bar](#97)
+- Processing Result: [Chunkium bar](#Chunkium-bar)
 - Fuel: No
 #### Weapon Stats
 - Resource Damage:1
@@ -1191,7 +1191,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![40](Assets/Texture2D/Ore_Gold.png)
+###### ![Gold-Ore](Assets/Texture2D/Ore_Gold.png)
 ## Gold Ore
 *its hard rock*
 - Type: Axe
@@ -1201,7 +1201,7 @@
 - Craftable: No
 - Buildable: No
 - Processing Time: 4
-- Processing Result: [Gold bar](#36)
+- Processing Result: [Gold bar](#Gold-bar)
 - Fuel: No
 #### Weapon Stats
 - Resource Damage:1
@@ -1210,7 +1210,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![41](Assets/Texture2D/IronIcon.png)
+###### ![Iron-Ore](Assets/Texture2D/IronIcon.png)
 ## Iron Ore
 *its hard rock*
 - Type: Axe
@@ -1220,7 +1220,7 @@
 - Craftable: No
 - Buildable: No
 - Processing Time: 6
-- Processing Result: [Iron bar](#37)
+- Processing Result: [Iron bar](#Iron-bar)
 - Fuel: No
 #### Weapon Stats
 - Resource Damage:1
@@ -1229,7 +1229,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![42](Assets/Texture2D/Ore_Mithril.png)
+###### ![Mithril-Ore](Assets/Texture2D/Ore_Mithril.png)
 ## Mithril Ore
 *its hard rock*
 - Type: Axe
@@ -1239,7 +1239,7 @@
 - Craftable: No
 - Buildable: No
 - Processing Time: 10
-- Processing Result: [Mithril bar](#38)
+- Processing Result: [Mithril bar](#Mithril-bar)
 - Fuel: No
 #### Weapon Stats
 - Resource Damage:1
@@ -1248,7 +1248,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![59](Assets/Texture2D/Pickaxe_Adamantite.png)
+###### ![Adamantite-Pickaxe](Assets/Texture2D/Pickaxe_Adamantite.png)
 ## Adamantite Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1260,9 +1260,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Adamantite bar](#35)
-- 5 [Bark](#0)
-- 10 [Oak Wood](#47)
+- 5 [Adamantite bar](#Adamantite-bar)
+- 5 [Bark](#Bark)
+- 10 [Oak Wood](#Oak-Wood)
 #### Weapon Stats
 - Resource Damage:40
 - Attack Damage:40
@@ -1270,7 +1270,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![60](Assets/Texture2D/Pickaxe_gold.png)
+###### ![Gold-Pickaxe](Assets/Texture2D/Pickaxe_gold.png)
 ## Gold Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1282,9 +1282,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Gold bar](#36)
-- 5 [Bark](#0)
-- 5 [Wood](#46)
+- 5 [Gold bar](#Gold-bar)
+- 5 [Bark](#Bark)
+- 5 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:22
 - Attack Damage:24
@@ -1292,7 +1292,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![61](Assets/Texture2D/Pickaxe_mithril.png)
+###### ![Mithril-Pickaxe](Assets/Texture2D/Pickaxe_mithril.png)
 ## Mithril Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1304,9 +1304,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Mithril bar](#38)
-- 5 [Bark](#0)
-- 10 [Fir Wood](#45)
+- 5 [Mithril bar](#Mithril-bar)
+- 5 [Bark](#Bark)
+- 10 [Fir Wood](#Fir-Wood)
 #### Weapon Stats
 - Resource Damage:32
 - Attack Damage:30
@@ -1314,7 +1314,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![62](Assets/Texture2D/Pickaxe_Steel.png)
+###### ![Steel-Pickaxe](Assets/Texture2D/Pickaxe_Steel.png)
 ## Steel Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1326,9 +1326,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Iron bar](#37)
-- 5 [Bark](#0)
-- 10 [Birch Wood](#44)
+- 5 [Iron bar](#Iron-bar)
+- 5 [Bark](#Bark)
+- 10 [Birch Wood](#Birch-Wood)
 #### Weapon Stats
 - Resource Damage:25
 - Attack Damage:27
@@ -1336,7 +1336,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![63](Assets/Texture2D/Pickaxe_wood.png)
+###### ![Wood-Pickaxe](Assets/Texture2D/Pickaxe_wood.png)
 ## Wood Pickaxe
 *its pickaxe*
 - Type: Pickaxe
@@ -1349,8 +1349,8 @@
 - Fuel: 1 items
 - Fuel Speed: 1x
 #### Crafting Recipe
-- 5 [Wood](#46)
-- 5 [Bark](#0)
+- 5 [Wood](#Wood)
+- 5 [Bark](#Bark)
 #### Weapon Stats
 - Resource Damage:18
 - Attack Damage:20
@@ -1358,7 +1358,7 @@
 - Attack Range:1.2
 - Sharpness: 0.2
 
-###### ![69](Assets/Texture2D/Pie_0.png)
+###### ![Apple-Pie](Assets/Texture2D/Pie_0.png)
 ## Apple Pie
 *pie with apple*
 - Type: Food
@@ -1374,7 +1374,7 @@
 - Hunger: 60
 - Stamina: 20
 
-###### ![33](Assets/Texture2D/Pie_0.png)
+###### ![Meat-Pie](Assets/Texture2D/Pie_0.png)
 ## Meat Pie
 *yummy*
 - Type: Food
@@ -1390,7 +1390,7 @@
 - Hunger: 60
 - Stamina: 20
 
-###### ![10](Assets/Texture2D/Wood_doorway.png)
+###### ![Wood-Doorway](Assets/Texture2D/Wood_doorway.png)
 ## Wood Doorway
 *its wood*
 - Type: Item
@@ -1401,7 +1401,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1409,7 +1409,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![11](Assets/Texture2D/Wood_Floor.png)
+###### ![Wood-Floor](Assets/Texture2D/Wood_Floor.png)
 ## Wood Floor
 *its wood*
 - Type: Item
@@ -1420,7 +1420,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1428,7 +1428,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![12](Assets/Texture2D/WoodPole.png)
+###### ![Wood-Pole](Assets/Texture2D/WoodPole.png)
 ## Wood Pole
 *its wood*
 - Type: Item
@@ -1439,7 +1439,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1447,7 +1447,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![13](Assets/Texture2D/WoodPoleHalf.png)
+###### ![Wood-Pole](Assets/Texture2D/WoodPoleHalf.png)
 ## Wood Pole
 *its wood*
 - Type: Item
@@ -1458,7 +1458,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1466,7 +1466,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![14](Assets/Texture2D/WoodRoof.png)
+###### ![Wood-Roof](Assets/Texture2D/WoodRoof.png)
 ## Wood Roof
 *its wood*
 - Type: Item
@@ -1477,7 +1477,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1485,7 +1485,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![15](Assets/Texture2D/WoodStairs.png)
+###### ![Wood-stairs](Assets/Texture2D/WoodStairs.png)
 ## Wood stairs
 *its wood*
 - Type: Item
@@ -1496,7 +1496,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1504,7 +1504,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![16](Assets/Texture2D/WoodStairsHalf.png)
+###### ![Wood-stairs-thinn](Assets/Texture2D/WoodStairsHalf.png)
 ## Wood stairs thinn
 *its wood*
 - Type: Item
@@ -1515,7 +1515,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1523,7 +1523,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![17](Assets/Texture2D/Wood_wall.png)
+###### ![Wood-Wall](Assets/Texture2D/Wood_wall.png)
 ## Wood Wall
 *its wood*
 - Type: Item
@@ -1534,7 +1534,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1542,7 +1542,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![18](Assets/Texture2D/Wood_wall_half.png)
+###### ![Wood-Wall-Half](Assets/Texture2D/Wood_wall_half.png)
 ## Wood Wall Half
 *its wood*
 - Type: Item
@@ -1553,7 +1553,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1561,7 +1561,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![19](Assets/Texture2D/Wood_tilt.png)
+###### ![Wood-Wall-Tilted](Assets/Texture2D/Wood_tilt.png)
 ## Wood Wall Tilted
 *its wood*
 - Type: Item
@@ -1572,7 +1572,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1580,7 +1580,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![9](Assets/Texture2D/Wood_window.png)
+###### ![Wood-Doorway](Assets/Texture2D/Wood_window.png)
 ## Wood Doorway
 *its wood*
 - Type: Item
@@ -1591,7 +1591,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
+- 2 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1599,7 +1599,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![43](Assets/Texture2D/RockIcon.png)
+###### ![Rock](Assets/Texture2D/RockIcon.png)
 ## Rock
 *its rock*
 - Type: Axe
@@ -1617,7 +1617,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![95](Assets/Texture2D/RockIcon.png)
+###### ![Rock-Projectile](Assets/Texture2D/RockIcon.png)
 ## Rock Projectile
 *It's a rock, but for some reason you can use this on a bow lol*
 - Type: Item
@@ -1635,7 +1635,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![96](Assets/Texture2D/RockIcon.png)
+###### ![Rock-Projectile](Assets/Texture2D/RockIcon.png)
 ## Rock Projectile
 *It's a rock, but for some reason you can use this on a bow lol*
 - Type: Item
@@ -1653,7 +1653,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![74](Assets/Texture2D/Rope.png)
+###### ![Rope](Assets/Texture2D/Rope.png)
 ## Rope
 *how do i make a noose again?*
 - Type: Item
@@ -1664,8 +1664,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 10 [Wheat](#30)
-- 10 [Bark](#0)
+- 10 [Wheat](#Wheat)
+- 10 [Bark](#Bark)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1673,7 +1673,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![64](Assets/Texture2D/ShovelIcon.png)
+###### ![Shovel](Assets/Texture2D/ShovelIcon.png)
 ## Shovel
 *its shovel dig dig*
 - Type: Shovel
@@ -1685,9 +1685,9 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Wood](#46)
-- 5 [Rock](#43)
-- 5 [Bark](#0)
+- 5 [Wood](#Wood)
+- 5 [Rock](#Rock)
+- 5 [Bark](#Bark)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:25
@@ -1695,7 +1695,7 @@
 - Attack Range:2
 - Sharpness: 0.5
 
-###### ![26](Assets/Texture2D/Shroom_red.png)
+###### ![Gulpon-Shroom](Assets/Texture2D/Shroom_red.png)
 ## Gulpon Shroom
 *yummy*
 - Type: Food
@@ -1711,7 +1711,7 @@
 - Hunger: 0
 - Stamina: 0
 
-###### ![27](Assets/Texture2D/Shroom_yellow.png)
+###### ![Ligon-Shroom](Assets/Texture2D/Shroom_yellow.png)
 ## Ligon Shroom
 *yummy*
 - Type: Food
@@ -1727,7 +1727,7 @@
 - Hunger: 20
 - Stamina: 0
 
-###### ![28](Assets/Texture2D/Shroom_sus.png)
+###### ![Slurbon-Shroom](Assets/Texture2D/Shroom_sus.png)
 ## Slurbon Shroom
 *sus shroom*
 - Type: Food
@@ -1743,7 +1743,7 @@
 - Hunger: 15
 - Stamina: 15
 
-###### ![29](Assets/Texture2D/Shroom_pink.png)
+###### ![Sugon-Shroom](Assets/Texture2D/Shroom_pink.png)
 ## Sugon Shroom
 *yummy*
 - Type: Food
@@ -1759,7 +1759,7 @@
 - Hunger: 0
 - Stamina: 20
 
-###### ![34](Assets/Texture2D/Soup.png)
+###### ![Meat-Soup](Assets/Texture2D/Soup.png)
 ## Meat Soup
 *yummy*
 - Type: Food
@@ -1775,7 +1775,7 @@
 - Hunger: 50
 - Stamina: 10
 
-###### ![65](Assets/Texture2D/Sword_Adamantite.png)
+###### ![Adamantite-Sword](Assets/Texture2D/Sword_Adamantite.png)
 ## Adamantite Sword
 *its sharp*
 - Type: Sword
@@ -1786,8 +1786,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Adamantite bar](#35)
-- 5 [Oak Wood](#47)
+- 5 [Adamantite bar](#Adamantite-bar)
+- 5 [Oak Wood](#Oak-Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:50
@@ -1795,7 +1795,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![66](Assets/Texture2D/Sword_Gold.png)
+###### ![Gold-Sword](Assets/Texture2D/Sword_Gold.png)
 ## Gold Sword
 *its sharp*
 - Type: Sword
@@ -1806,8 +1806,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Gold bar](#36)
-- 5 [Wood](#46)
+- 5 [Gold bar](#Gold-bar)
+- 5 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:15
@@ -1815,7 +1815,7 @@
 - Attack Range:2
 - Sharpness: 0.9
 
-###### ![67](Assets/Texture2D/Sword_Mithril.png)
+###### ![Mithril-Sword](Assets/Texture2D/Sword_Mithril.png)
 ## Mithril Sword
 *its sharp*
 - Type: Sword
@@ -1826,8 +1826,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 5 [Mithril bar](#38)
-- 5 [Fir Wood](#45)
+- 5 [Mithril bar](#Mithril-bar)
+- 5 [Fir Wood](#Fir-Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:35
@@ -1835,7 +1835,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![68](Assets/Texture2D/Sword_steel.png)
+###### ![Steel-Sword](Assets/Texture2D/Sword_steel.png)
 ## Steel Sword
 *its sharp*
 - Type: Sword
@@ -1846,8 +1846,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 7 [Iron bar](#37)
-- 5 [Birch Wood](#44)
+- 7 [Iron bar](#Iron-bar)
+- 5 [Birch Wood](#Birch-Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:25
@@ -1855,7 +1855,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![20](Assets/Texture2D/Torch.png)
+###### ![Torch](Assets/Texture2D/Torch.png)
 ## Torch
 *fire wosh*
 - Type: Item
@@ -1866,8 +1866,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 2 [Wood](#46)
-- 1 [Coal](#2)
+- 2 [Wood](#Wood)
+- 1 [Coal](#Coal)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1875,7 +1875,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![87](Assets/Texture2D/Torso_adamantite.png)
+###### ![Adamantite-Chestplate](Assets/Texture2D/Torso_adamantite.png)
 ## Adamantite Chestplate
 *it protecc chest*
 - Type: Item
@@ -1887,7 +1887,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Adamantite bar](#35)
+- 15 [Adamantite bar](#Adamantite-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1895,7 +1895,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![107](Assets/Texture2D/Torso_Chunkium.png)
+###### ![Chunkium-Chestplate](Assets/Texture2D/Torso_Chunkium.png)
 ## Chunkium Chestplate
 *it protecc chest*
 - Type: Item
@@ -1907,7 +1907,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Chunkium bar](#97)
+- 15 [Chunkium bar](#Chunkium-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1915,7 +1915,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![88](Assets/Texture2D/Torso_Gold.png)
+###### ![Gold-Chestplate](Assets/Texture2D/Torso_Gold.png)
 ## Gold Chestplate
 *it protecc chest*
 - Type: Item
@@ -1927,7 +1927,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 15 [Gold bar](#36)
+- 15 [Gold bar](#Gold-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1935,7 +1935,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![89](Assets/Texture2D/Torso_Mithril.png)
+###### ![Mithril-Chestplate](Assets/Texture2D/Torso_Mithril.png)
 ## Mithril Chestplate
 *it protecc chest*
 - Type: Item
@@ -1947,7 +1947,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 20 [Mithril bar](#38)
+- 20 [Mithril bar](#Mithril-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1955,7 +1955,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![8](Assets/Texture2D/Torso_steel.png)
+###### ![Steel-Chestplate](Assets/Texture2D/Torso_steel.png)
 ## Steel Chestplate
 *it protecc chest*
 - Type: Item
@@ -1967,7 +1967,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 20 [Iron bar](#37)
+- 20 [Iron bar](#Iron-bar)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -1975,7 +1975,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![92](Assets/Texture2D/WaterBall.png)
+###### ![Waterball](Assets/Texture2D/WaterBall.png)
 ## Waterball
 *Ball of water*
 - Type: Item
@@ -1993,7 +1993,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![30](Assets/Texture2D/Wheat.png)
+###### ![Wheat](Assets/Texture2D/Wheat.png)
 ## Wheat
 *i could totally make dough with this*
 - Type: Item
@@ -2010,7 +2010,7 @@
 - Attack Range:1
 - Sharpness: 0
 
-###### ![93](Assets/Texture2D/FireBall.png)
+###### ![Windball](Assets/Texture2D/FireBall.png)
 ## Windball
 *Ball of wind*
 - Type: Item
@@ -2028,7 +2028,7 @@
 - Attack Range:1
 - Sharpness: 0.8
 
-###### ![44](Assets/Texture2D/Wood_Birch.png)
+###### ![Birch-Wood](Assets/Texture2D/Wood_Birch.png)
 ## Birch Wood
 *its bitch wood*
 - Type: Item
@@ -2047,7 +2047,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![45](Assets/Texture2D/Wood_Fir.png)
+###### ![Fir-Wood](Assets/Texture2D/Wood_Fir.png)
 ## Fir Wood
 *its fir wood*
 - Type: Item
@@ -2066,7 +2066,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![46](Assets/Texture2D/Wood_Normal.png)
+###### ![Wood](Assets/Texture2D/Wood_Normal.png)
 ## Wood
 *its wood*
 - Type: Item
@@ -2085,7 +2085,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![47](Assets/Texture2D/Wood_Oak.png)
+###### ![Oak-Wood](Assets/Texture2D/Wood_Oak.png)
 ## Oak Wood
 *its oak wood*
 - Type: Item
@@ -2104,7 +2104,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![52](Assets/Texture2D/WorckbenchIcon.png)
+###### ![Workbench](Assets/Texture2D/WorckbenchIcon.png)
 ## Workbench
 *A crafting table*
 - Type: Station
@@ -2115,7 +2115,7 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 10 [Wood](#46)
+- 10 [Wood](#Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:1
@@ -2123,7 +2123,7 @@
 - Attack Range:2
 - Sharpness: 0
 
-###### ![101](Assets/Texture2D/Claws.png)
+###### ![Wyvern-Claws](Assets/Texture2D/Claws.png)
 ## Wyvern Claws
 *Extremely sharp claws*
 - Type: Item
@@ -2140,7 +2140,7 @@
 - Attack Range:2
 - Sharpness: 1
 
-###### ![102](Assets/Texture2D/WyvernDagger.png)
+###### ![Wyvern-Dagger](Assets/Texture2D/WyvernDagger.png)
 ## Wyvern Dagger
 *An extremely sharp dagger*
 - Type: Sword
@@ -2151,8 +2151,8 @@
 - Processable: No
 - Fuel: No
 #### Crafting Recipe
-- 1 [Wyvern Claws](#101)
-- 10 [Oak Wood](#47)
+- 1 [Wyvern Claws](#Wyvern-Claws)
+- 10 [Oak Wood](#Oak-Wood)
 #### Weapon Stats
 - Resource Damage:1
 - Attack Damage:45
@@ -2165,7 +2165,7 @@
 ## Adrenaline
 *Falling below 30% boosts your stats*
 
-###### ![Spooo Bean](Assets/Texture2D/Bean.png)
+###### ![Spooo-Bean](Assets/Texture2D/Bean.png)
 ## Spooo Bean
 *Hunger drains slower*
 
@@ -2181,7 +2181,7 @@
 ## Bulldozer
 *Chance to knock back enemies*
 
-###### ![Checkered Shirt](Assets/Texture2D/CheckeredShirt.png)
+###### ![Checkered-Shirt](Assets/Texture2D/CheckeredShirt.png)
 ## Checkered Shirt
 *Increase damage dealt to resources*
 
@@ -2197,7 +2197,7 @@
 ## Enforcer
 *Deal more damage when moving faster*
 
-###### ![Knuts Hammer](Assets/Texture2D/Hammer.png)
+###### ![Knuts-Hammer](Assets/Texture2D/Hammer.png)
 ## Knuts Hammer
 *And his hammer was electric*
 
@@ -2205,7 +2205,7 @@
 ## Horseshoe
 *Increased chance to hit a critical strike*
 
-###### ![Janniks Frog](Assets/Texture2D/Frog_0.png)
+###### ![Janniks-Frog](Assets/Texture2D/Frog_0.png)
 ## Janniks Frog
 *+1 Jump*
 
@@ -2213,19 +2213,19 @@
 ## Jetpack
 *To the moon*
 
-###### ![X Juice](Assets/Texture2D/x Juice.png)
+###### ![X-Juice](Assets/Texture2D/x Juice.png)
 ## X Juice
 *Get juiced up when landing a crit*
 
-###### ![Danis Milk](Assets/Texture2D/Milk.png)
+###### ![Danis-Milk](Assets/Texture2D/Milk.png)
 ## Danis Milk
 *Strong bones*
 
-###### ![Orange Juice](Assets/Texture2D/OrangeJuice.png)
+###### ![Orange-Juice](Assets/Texture2D/OrangeJuice.png)
 ## Orange Juice
 *+Attack speed*
 
-###### ![Peanut Butter](Assets/Texture2D/PeanutButter.png)
+###### ![Peanut-Butter](Assets/Texture2D/PeanutButter.png)
 ## Peanut Butter
 *+Stamina*
 
@@ -2233,19 +2233,19 @@
 ## Piggybank
 *I'm feeling lucky, time to <i>hog</i> all the loot*
 
-###### ![Blue Pill](Assets/Texture2D/PillBlue.png)
+###### ![Blue-Pill](Assets/Texture2D/PillBlue.png)
 ## Blue Pill
 *Increase shield capacity*
 
-###### ![Red Pill](Assets/Texture2D/PillRed.png)
+###### ![Red-Pill](Assets/Texture2D/PillRed.png)
 ## Red Pill
 *Increase max hp*
 
-###### ![Crimson Dagger](Assets/Texture2D/Crimson Dagger.png)
+###### ![Crimson-Dagger](Assets/Texture2D/Crimson Dagger.png)
 ## Crimson Dagger
 *Lifesteal - Dealing damage heals you*
 
-###### ![Robin Hood Hat](Assets/Texture2D/robinhood.png)
+###### ![Robin-Hood-Hat](Assets/Texture2D/robinhood.png)
 ## Robin Hood Hat
 *Increased draw speed, arrows speed & damage*
 
@@ -2253,10 +2253,10 @@
 ## Sneaker
 *+Movement speed*
 
-###### ![Sniper Scope](Assets/Texture2D/SniperScope.png)
+###### ![Sniper-Scope](Assets/Texture2D/SniperScope.png)
 ## Sniper Scope
 *Small chance on hit to deal chunky damage*
 
-###### ![Wings of Glory](Assets/Texture2D/Wings.png)
+###### ![Wings-of-Glory](Assets/Texture2D/Wings.png)
 ## Wings of Glory
 *Deal bonus damage while falling*

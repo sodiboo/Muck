@@ -28,6 +28,14 @@ async function readDir(
   return result;
 }
 
+function fragment(name: string): string {
+    return name.replace(/\s/g, "-");
+}
+
+function link(name: string): string {
+    return `[${name}](#${fragment(name)})`;
+}
+
 type Vector3 = [number, number, number];
 
 enum ItemType {
@@ -232,7 +240,7 @@ for (const [guid, file] of itemFiles) {
 
 const index = new Map<number, string>();
 for (const [, item] of items) {
-  index.set(item.id, `[${item.name}](#${item.id})`);
+  index.set(item.id, link(item.name));
 }
 index.set(100, index.get(101)!);
 
@@ -252,7 +260,7 @@ const TierTypes = new Set<ItemType>([
 function createPage(item: Item) {
   let lines = [];
   lines.push(
-    `###### ![${item.id}](Assets/Texture2D/${images.get(item.sprite)})`,
+    `###### ![${fragment(item.name)}](Assets/Texture2D/${images.get(item.sprite)})`,
   );
   lines.push(`## ${item.name}`);
   lines.push(`*${item.description}*`);
@@ -277,7 +285,7 @@ function createPage(item: Item) {
     lines.push(`- Processing Time: ${item.processTime}`);
     const processResult = items.get(item.processedItem!)!;
     lines.push(
-      `- Processing Result: [${processResult.name}](#${processResult.id})`,
+      `- Processing Result: ${link(processResult.name)}`,
     );
   }
 
@@ -291,9 +299,7 @@ function createPage(item: Item) {
     lines.push("#### Crafting Recipe");
     for (const requirement of item.requirements) {
       lines.push(
-        `- ${requirement.amount} [${items.get(requirement.item)!.name}](#${
-          items.get(requirement.item)!.id
-        })`,
+        `- ${requirement.amount} ${link(items.get(requirement.item)!.name)}`,
       );
     }
   }
@@ -348,7 +354,7 @@ for (const [guid, file] of powerupFiles) {
 
   const lines: string[] = [];
   lines.push(
-    `###### ![${powerup.name}](Assets/Texture2D/${
+    `###### ![${fragment(powerup.name)}](Assets/Texture2D/${
       images.get(powerup.sprite)
     })`,
   );
@@ -360,9 +366,7 @@ sections.push(["Powerups", powerups.join("\n\n")]);
 
 let tableOfContents = "# Table of Contents";
 for (const [header] of sections) {
-  tableOfContents += `\n- [${header}](#${
-    header.replace(/\s/g, "-")
-  })`;
+  tableOfContents += `\n- ${link(header)}`;
 }
 tableOfContents += "\n\n";
 
