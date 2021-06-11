@@ -28,12 +28,12 @@ async function readDir(
   return result;
 }
 
-function fragment(name: string, differentiate: boolean = true): string {
-  return (differentiate ? "link-" : "") + name.replace(/\s/g, "-");
+function fragment(name: string, prefix: boolean = true): string {
+  return (prefix ? "link-" : "") + name.replace(/\s/g, "-");
 }
 
-function link(name: string, differentiate: boolean = true): string {
-  return `[${name}](#${fragment(name, differentiate)})`;
+function link(name: string, prefix: boolean = true): string {
+  return `[${name}](#${fragment(name, prefix)})`;
 }
 
 type Vector3 = [number, number, number];
@@ -260,9 +260,9 @@ const TierTypes = new Set<ItemType>([
 function createPage(item: Item) {
   let lines = [];
   lines.push(
-    `###### ![](Assets/Texture2D/${
+    `###### ![${fragment(item.name)}](Assets/Texture2D/${
       images.get(item.sprite)
-    }) {#${fragment(item.name)}}`,
+    })`,
   );
   lines.push(`## ${item.name}`);
   lines.push(`*${item.description}*`);
@@ -356,9 +356,9 @@ for (const [guid, file] of powerupFiles) {
 
   const lines: string[] = [];
   lines.push(
-    `###### ![](Assets/Texture2D/${
+    `###### ![${fragment(powerup.name)}](Assets/Texture2D/${
       images.get(powerup.sprite)
-    }) {#${fragment(powerup.name)}}`,
+    })`,
   );
   lines.push(`## ${powerup.name}`);
   lines.push(`*${powerup.description}*`);
