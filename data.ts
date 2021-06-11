@@ -1,7 +1,7 @@
 const sections: [string, string][] = [];
 const decoder = new TextDecoder("utf-8");
-const itemFiles = await readDir("./Assets/ScriptableObject/Items/");
-const fuelFiles = await readDir("./Assets/ScriptableObject/Fuel/");
+const itemFiles = await readDir("./Assets/ScriptableObject/Items/", true);
+const fuelFiles = await readDir("./Assets/ScriptableObject/Fuel/", true);
 const images = await readDir("./Assets/Texture2D/", false);
 
 async function readMeta(file: string): Promise<string> {
@@ -12,7 +12,7 @@ async function readMeta(file: string): Promise<string> {
 
 async function readDir(
   dir: string,
-  contents: boolean = true,
+  contents: boolean,
 ): Promise<Map<string, string>> {
   const result = new Map<string, string>();
   for await (const file of Deno.readDir(dir)) {
@@ -28,12 +28,12 @@ async function readDir(
   return result;
 }
 
-function fragment(name: string, prefix: boolean = true): string {
-  return (prefix ? "link-" : "") + name.replace(/\s/g, "-");
+function fragment(name: string): string {
+    return name.replace(/\s/g, "-");
 }
 
-function link(name: string, prefix: boolean = true): string {
-  return `[${name}](#${fragment(name, prefix)})`;
+function link(name: string): string {
+    return `[${name}](#${fragment(name)})`;
 }
 
 type Vector3 = [number, number, number];
@@ -260,9 +260,7 @@ const TierTypes = new Set<ItemType>([
 function createPage(item: Item) {
   let lines = [];
   lines.push(
-    `###### ![${fragment(item.name)}](Assets/Texture2D/${
-      images.get(item.sprite)
-    })`,
+    `###### ![${fragment(item.name)}](Assets/Texture2D/${images.get(item.sprite)})`,
   );
   lines.push(`## ${item.name}`);
   lines.push(`*${item.description}*`);
@@ -341,7 +339,7 @@ interface Powerup {
   sprite: string;
 }
 
-const powerupFiles = await readDir("./Assets/ScriptableObject/Powerups/");
+const powerupFiles = await readDir("./Assets/ScriptableObject/Powerups/", true);
 
 const powerups: string[] = [];
 
@@ -368,7 +366,7 @@ sections.push(["Powerups", powerups.join("\n\n")]);
 
 let tableOfContents = "# Table of Contents";
 for (const [header] of sections) {
-  tableOfContents += `\n- ${link(header, false)}`;
+  tableOfContents += `\n- ${link(header)}`;
 }
 tableOfContents += "\n\n";
 
