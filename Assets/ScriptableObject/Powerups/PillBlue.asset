@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,10 +11,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e543a8211347dee4a893f087f3a21b66, type: 3}
   m_Name: PillBlue
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Blue Pill
   description: Increase shield capacity
-  id: 0
+  id: 5
   tier: 0
   mesh: {fileID: 4300000, guid: a8d1b67cc2cc8ad468de6c0caa84c59c, type: 2}
   material: {fileID: 2100000, guid: df5edb9dec354d14ba7cfce21b666861, type: 2}

@@ -1,0 +1,1 @@
+Every time you get a kill, you get additional hp. Specifically, the amount of Dracula powerups you have is how much hp you gain. There is no limit to this, other than the bounds of 32-bit integers.

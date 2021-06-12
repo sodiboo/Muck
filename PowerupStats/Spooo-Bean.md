@@ -1,0 +1,1 @@
+This powerup has not been implemented in the game yet. It does have a calculation function, which is hardcoded to just return 1 at the moment. It is directly used to multiply the amount of hunger drain, so presumably it will return a value lower than 1 when it is implemented.

@@ -1,0 +1,1 @@
+The berserk effect adds to your strength multiplier. The strength has a base value of 1, and the [Dumbbell](#Dumbbell) and this effect will add to that value. Berserk is not exponential, it is simply the fraction of health you are missing (i.e. 10/100 health = 0.9 remaining) times the total amount of berserk powerups you have.

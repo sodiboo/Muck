@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,10 +11,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e543a8211347dee4a893f087f3a21b66, type: 3}
   m_Name: berzerk
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Berserk
   description: The lower hp, the more damage
-  id: 8
+  id: 16
   tier: 2
   mesh: {fileID: 4300000, guid: f4a43859781f9ff4696f253ebc40cf60, type: 2}
   material: {fileID: 2100000, guid: 7c53696468c86e94fa2a897e854cef82, type: 2}

@@ -1,0 +1,1 @@
+Every blue pill you have gives you +10 shield. There is no limit to this, other than the bounds of 32-bit integers.

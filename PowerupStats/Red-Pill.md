@@ -1,0 +1,1 @@
+Every red pill you have gives you +10 hp. There is no limit to this, other than the bounds of 32-bit integers.

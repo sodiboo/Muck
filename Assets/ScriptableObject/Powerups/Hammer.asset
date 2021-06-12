@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,10 +11,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e543a8211347dee4a893f087f3a21b66, type: 3}
   m_Name: Hammer
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Knuts Hammer
   description: And his hammer was electric
-  id: 8
+  id: 19
   tier: 2
   mesh: {fileID: 4300000, guid: 76ccedb661fc47948a4edb8d1aea3e5e, type: 2}
   material: {fileID: 2100000, guid: f0440b810cd5b7f4eaed6615b398bd4e, type: 2}
