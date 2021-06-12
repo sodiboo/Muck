@@ -598,9 +598,9 @@ function createPowerupPage(powerup: Powerup): string {
 
   for (const match of matches) {
     references.push(
-      `[${fragment(powerup.name)}-${match.groups!.label}]: PowerupStats/${
-        match.groups!.image
-      }`,
+      `[${fragment(powerup.name)}-${match.groups!.label}]: ${
+        match.groups!.image.startsWith("Images/") ? "PowerupStats/" : ""
+      }${match.groups!.image}`,
     );
     powerup.article = powerup.article.replace(match[0], "").replaceAll(
       match.groups!.label,
