@@ -1,13 +1,13 @@
 const sections: [string, string][] = [];
 const references: string[] = [];
-const powerupFiles = await readDir("./Assets/ScriptableObject/Powerups/");
-const itemFiles = await readDir("./Assets/ScriptableObject/Items/");
-const fuelFiles = await readDir("./Assets/ScriptableObject/Fuel/");
-const prefabs = await readDir("./Assets/PrefabInstance/");
+const powerupFiles = await readDir("Assets/ScriptableObject/Powerups/");
+const itemFiles = await readDir("Assets/ScriptableObject/Items/");
+const fuelFiles = await readDir("Assets/ScriptableObject/Fuel/");
+const prefabs = await readDir("Assets/PrefabInstance/");
 const EnemyProjeticle = await readMeta(
-  "./Assets/Scripts/Assembly-CSharp/EnemyProjectile.cs",
+  "Assets/Scripts/Assembly-CSharp/EnemyProjectile.cs",
 );
-const images = await readDir("./Assets/Texture2D/", false);
+const images = await readDir("Assets/Texture2D/", false);
 
 async function readMeta(file: string): Promise<string> {
   const content = await Deno.readTextFile(file + ".meta");
@@ -19,6 +19,7 @@ async function readDir(
   dir: string,
   contents = true,
 ): Promise<Map<string, string>> {
+  dir = `../${dir}`;
   const result = new Map<string, string>();
   for await (const file of Deno.readDir(dir)) {
     if (!file.name.endsWith(".meta")) {
@@ -363,7 +364,7 @@ sections.push([
 
 for (const item of Array.from(items.values()).sort((a, b) => a.id - b.id)) {
   references.push(
-    `[item-${item.id}]: Assets/Texture2D/${
+    `[item-${item.id}]: ../Assets/Texture2D/${
       encodeURIComponent(images.get(item.sprite)!)
     }`,
   );
@@ -587,10 +588,11 @@ function createPowerupPage(powerup: Powerup): string {
   lines.push(
     `### ${powerup.name}`,
     `*${powerup.description}*`,
-    `###### ![${fragment(powerup.name)}](Assets/Texture2D/${
-      encodeURIComponent(images.get(powerup.sprite)!)
-    })`,
+    `###### ![${fragment(powerup.name)}]`,
   );
+  references.push(`[${fragment(powerup.name)}]: ../Assets/Texture2D/${
+    encodeURIComponent(images.get(powerup.sprite)!)
+  }`)
 
   const matches = Array.from(
     powerup.article.matchAll(/^\[(?<label>.*)\]: (?<image>.*)$/gm),
