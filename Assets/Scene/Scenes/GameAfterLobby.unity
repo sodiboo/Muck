@@ -18411,7 +18411,6 @@ Transform:
   - {fileID: 1000}
   - {fileID: 995}
   - {fileID: 1053}
-  - {fileID: 968309660}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36375,7 +36374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 294, y: -13.333283}
+  m_AnchoredPosition: {x: 294.00006, y: -13.333344}
   m_SizeDelta: {x: 294, y: 31.4}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &2119
@@ -80018,8 +80017,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d6e9409b0fec1104fa18f56166b18f9c, type: 3}
   boss:
   - {fileID: 8300000, guid: a98f86f0496d46f43857c02420b51b73, type: 3}
-  eurobeat:
-  - {fileID: 8300000, guid: 936624c30a584fb43bb9b6821b60755e, type: 3}
 --- !u!114 &3340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104158,47 +104155,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032d993dae6d5be4dbecad2d99c9e1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &968309659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 968309660}
-  - component: {fileID: 968309661}
-  m_Layer: 0
-  m_Name: Skidmarks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &968309660
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968309659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1012}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &968309661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968309659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e00b2bc7213f54d8e4f6fed2832b52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skidmarksMaterial: {fileID: 2100000, guid: bda217e51965bdc438fac9b83421cde3, type: 2}
