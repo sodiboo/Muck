@@ -171,7 +171,7 @@ public class ServerSend
 	// Token: 0x060004F6 RID: 1270 RVA: 0x00019A40 File Offset: 0x00017C40
 	public static void Welcome(int toClient, string msg)
 	{
-		using (Packet packet = new Packet(1))
+		using (Packet packet = new Packet((int)ServerPackets.welcome))
 		{
 			packet.Write(msg);
 			packet.Write(NetworkManager.Clock);
@@ -183,7 +183,7 @@ public class ServerSend
 	// Token: 0x060004F7 RID: 1271 RVA: 0x00019A90 File Offset: 0x00017C90
 	public static void StartGame(int playerLobbyId, GameSettings settings)
 	{
-		using (Packet packet = new Packet(12))
+		using (Packet packet = new Packet((int)ServerPackets.startGame))
 		{
 			packet.Write(playerLobbyId);
 			packet.Write(settings.Seed);
@@ -213,7 +213,7 @@ public class ServerSend
 	// Token: 0x060004F8 RID: 1272 RVA: 0x00019BC8 File Offset: 0x00017DC8
 	public static void ConnectionSuccessful(int toClient)
 	{
-		using (Packet packet = new Packet(8))
+		using (Packet packet = new Packet((int)ServerPackets.connectionSuccessful))
 		{
 			ServerSend.SendTCPData(toClient, packet);
 		}
@@ -222,7 +222,7 @@ public class ServerSend
 	// Token: 0x060004F9 RID: 1273 RVA: 0x00019C00 File Offset: 0x00017E00
 	public static void PlayerDied(int deadPlayerId, Vector3 deathPos, Vector3 gravePos)
 	{
-		using (Packet packet = new Packet(6))
+		using (Packet packet = new Packet((int)ServerPackets.playerDied))
 		{
 			Debug.Log("Player" + deadPlayerId + " has been killed, sending to players");
 			packet.Write(deadPlayerId);
@@ -233,7 +233,7 @@ public class ServerSend
 		{
 			return;
 		}
-		using (Packet packet2 = new Packet(52))
+		using (Packet packet2 = new Packet((int)ServerPackets.spawnGrave))
 		{
 			int nextId = ResourceManager.Instance.GetNextId();
 			packet2.Write(deadPlayerId);
@@ -246,7 +246,7 @@ public class ServerSend
 	// Token: 0x060004FA RID: 1274 RVA: 0x00019CB4 File Offset: 0x00017EB4
 	public static void RespawnPlayer(int respawnId)
 	{
-		using (Packet packet = new Packet(43))
+		using (Packet packet = new Packet((int)ServerPackets.respawnPlayer))
 		{
 			packet.Write(respawnId);
 			ServerSend.SendTCPDataToAll(packet);
@@ -256,7 +256,7 @@ public class ServerSend
 	// Token: 0x060004FB RID: 1275 RVA: 0x00019CF4 File Offset: 0x00017EF4
 	public static void RevivePlayer(int fromClient, int revivedId, bool shrine, int objectID)
 	{
-		using (Packet packet = new Packet(51))
+		using (Packet packet = new Packet((int)ServerPackets.revivePlayer))
 		{
 			packet.Write(fromClient);
 			packet.Write(revivedId);
@@ -269,7 +269,7 @@ public class ServerSend
 	// Token: 0x060004FC RID: 1276 RVA: 0x00019D54 File Offset: 0x00017F54
 	public static void PlayerReady(int fromClient, bool ready)
 	{
-		using (Packet packet = new Packet(15))
+		using (Packet packet = new Packet((int)ServerPackets.ready))
 		{
 			packet.Write(fromClient);
 			packet.Write(ready);
@@ -280,7 +280,7 @@ public class ServerSend
 	// Token: 0x060004FD RID: 1277 RVA: 0x00019D9C File Offset: 0x00017F9C
 	public static void PlayerReady(int fromClient, bool ready, int toClient)
 	{
-		using (Packet packet = new Packet(15))
+		using (Packet packet = new Packet((int)ServerPackets.ready))
 		{
 			packet.Write(fromClient);
 			packet.Write(ready);
@@ -291,7 +291,7 @@ public class ServerSend
 	// Token: 0x060004FE RID: 1278 RVA: 0x00019DE4 File Offset: 0x00017FE4
 	public static void DropItem(int fromClient, int itemId, int amount, int objectID)
 	{
-		using (Packet packet = new Packet(17))
+		using (Packet packet = new Packet((int)ServerPackets.dropItem))
 		{
 			packet.Write(fromClient);
 			packet.Write(itemId);
@@ -304,7 +304,7 @@ public class ServerSend
 	// Token: 0x060004FF RID: 1279 RVA: 0x00019E44 File Offset: 0x00018044
 	public static void DropItemAtPosition(int itemId, int amount, int objectID, Vector3 pos)
 	{
-		using (Packet packet = new Packet(27))
+		using (Packet packet = new Packet((int)ServerPackets.dropItemAtPosition))
 		{
 			packet.Write(itemId);
 			packet.Write(amount);
@@ -317,7 +317,7 @@ public class ServerSend
 	// Token: 0x06000500 RID: 1280 RVA: 0x00019EA4 File Offset: 0x000180A4
 	public static void DropPowerupAtPosition(int itemId, int objectID, Vector3 pos)
 	{
-		using (Packet packet = new Packet(35))
+		using (Packet packet = new Packet((int)ServerPackets.dropPowerupAtPosition))
 		{
 			packet.Write(itemId);
 			packet.Write(objectID);
@@ -329,7 +329,7 @@ public class ServerSend
 	// Token: 0x06000501 RID: 1281 RVA: 0x00019EFC File Offset: 0x000180FC
 	public static void DropResources(int fromClient, int dropTableId, int droppedItemID)
 	{
-		using (Packet packet = new Packet(21))
+		using (Packet packet = new Packet((int)ServerPackets.dropResources))
 		{
 			packet.Write(fromClient);
 			packet.Write(dropTableId);
@@ -341,7 +341,7 @@ public class ServerSend
 	// Token: 0x06000502 RID: 1282 RVA: 0x00019F48 File Offset: 0x00018148
 	public static void PickupItem(int fromClient, int objectID)
 	{
-		using (Packet packet = new Packet(18))
+		using (Packet packet = new Packet((int)ServerPackets.pickupItem))
 		{
 			packet.Write(fromClient);
 			packet.Write(objectID);
@@ -352,7 +352,7 @@ public class ServerSend
 	// Token: 0x06000503 RID: 1283 RVA: 0x00019F90 File Offset: 0x00018190
 	public static void PickupInteract(int fromClient, int objectID)
 	{
-		using (Packet packet = new Packet(26))
+		using (Packet packet = new Packet((int)ServerPackets.pickupInteract))
 		{
 			packet.Write(fromClient);
 			packet.Write(objectID);
@@ -363,7 +363,7 @@ public class ServerSend
 	// Token: 0x06000504 RID: 1284 RVA: 0x00019FE0 File Offset: 0x000181E0
 	public static void WeaponInHand(int fromClient, int objectID)
 	{
-		using (Packet packet = new Packet(19))
+		using (Packet packet = new Packet((int)ServerPackets.weaponInHand))
 		{
 			packet.Write(fromClient);
 			packet.Write(objectID);
@@ -374,7 +374,7 @@ public class ServerSend
 	// Token: 0x06000505 RID: 1285 RVA: 0x0001A028 File Offset: 0x00018228
 	public static void SendBuild(int fromClient, int itemId, int newObjectId, Vector3 pos, int yRot)
 	{
-		using (Packet packet = new Packet(23))
+		using (Packet packet = new Packet((int)ServerPackets.finalizeBuild))
 		{
 			packet.Write(fromClient);
 			packet.Write(itemId);
@@ -388,7 +388,7 @@ public class ServerSend
 	// Token: 0x06000506 RID: 1286 RVA: 0x0001A090 File Offset: 0x00018290
 	public static void AnimationUpdate(int fromClient, int animation, bool b)
 	{
-		using (Packet packet = new Packet(22))
+		using (Packet packet = new Packet((int)ServerPackets.animationUpdate))
 		{
 			packet.Write(fromClient);
 			packet.Write(animation);
@@ -407,7 +407,7 @@ public class ServerSend
 	// Token: 0x06000507 RID: 1287 RVA: 0x0001A164 File Offset: 0x00018364
 	public static void ShootArrow(Vector3 pos, Vector3 rot, float force, int arrowId, int playerId)
 	{
-		using (Packet packet = new Packet(44))
+		using (Packet packet = new Packet((int)ServerPackets.shootArrow))
 		{
 			packet.Write(pos);
 			packet.Write(rot);
@@ -421,7 +421,7 @@ public class ServerSend
 	// Token: 0x06000508 RID: 1288 RVA: 0x0001A1C4 File Offset: 0x000183C4
 	public static void OpenChest(int fromClient, int chestId, bool use)
 	{
-		using (Packet packet = new Packet(24))
+		using (Packet packet = new Packet((int)ServerPackets.openChest))
 		{
 			packet.Write(fromClient);
 			packet.Write(chestId);
@@ -433,7 +433,7 @@ public class ServerSend
 	// Token: 0x06000509 RID: 1289 RVA: 0x0001A210 File Offset: 0x00018410
 	public static void UpdateChest(int fromClient, int chestId, int cellId, int itemId, int amount)
 	{
-		using (Packet packet = new Packet(25))
+		using (Packet packet = new Packet((int)ServerPackets.updateChest))
 		{
 			packet.Write(fromClient);
 			packet.Write(chestId);
@@ -447,7 +447,7 @@ public class ServerSend
 	// Token: 0x0600050A RID: 1290 RVA: 0x0001A278 File Offset: 0x00018478
 	public static void PlayerHitObject(int fromClient, int objectID, int hp, int hitEffect, Vector3 pos)
 	{
-		using (Packet packet = new Packet(20))
+		using (Packet packet = new Packet((int)ServerPackets.playerHitObject))
 		{
 			packet.Write(fromClient);
 			packet.Write(objectID);
@@ -461,7 +461,7 @@ public class ServerSend
 	// Token: 0x0600050B RID: 1291 RVA: 0x0001A2E0 File Offset: 0x000184E0
 	public static void SpawnEffect(int effectId, Vector3 pos, int fromClient)
 	{
-		using (Packet packet = new Packet(49))
+		using (Packet packet = new Packet((int)ServerPackets.spawnEffect))
 		{
 			packet.Write(effectId);
 			packet.Write(pos);
@@ -472,7 +472,7 @@ public class ServerSend
 	// Token: 0x0600050C RID: 1292 RVA: 0x0001A328 File Offset: 0x00018528
 	public static void HitPlayer(int fromClient, int damage, float hpRatioEstimate, int hurtPlayerId, int hitEffect, Vector3 pos)
 	{
-		using (Packet packet = new Packet(28))
+		using (Packet packet = new Packet((int)ServerPackets.playerHit))
 		{
 			packet.Write(fromClient);
 			packet.Write(damage);
@@ -487,7 +487,7 @@ public class ServerSend
 	// Token: 0x0600050D RID: 1293 RVA: 0x0001A38C File Offset: 0x0001858C
 	public static void SpawnPlayer(int toClient, Player player, Vector3 pos)
 	{
-		using (Packet packet = new Packet(2))
+		using (Packet packet = new Packet((int)ServerPackets.spawnPlayer))
 		{
 			Debug.Log(string.Concat(new object[]
 			{
@@ -510,7 +510,7 @@ public class ServerSend
 	// Token: 0x0600050E RID: 1294 RVA: 0x0001A45C File Offset: 0x0001865C
 	public static void PlayerHp(int fromId, float hpRatio)
 	{
-		using (Packet packet = new Packet(42))
+		using (Packet packet = new Packet((int)ServerPackets.playerHp))
 		{
 			packet.Write(fromId);
 			packet.Write(hpRatio);
@@ -521,7 +521,7 @@ public class ServerSend
 	// Token: 0x0600050F RID: 1295 RVA: 0x0001A4A4 File Offset: 0x000186A4
 	public static void PlayerPosition(Player player, int t)
 	{
-		using (Packet packet = new Packet(3))
+		using (Packet packet = new Packet((int)ServerPackets.playerPosition))
 		{
 			packet.Write(player.id);
 			packet.Write(player.pos);
@@ -532,7 +532,7 @@ public class ServerSend
 	// Token: 0x06000510 RID: 1296 RVA: 0x0001A4F8 File Offset: 0x000186F8
 	public static void PlayerRotation(Player player)
 	{
-		using (Packet packet = new Packet(4))
+		using (Packet packet = new Packet((int)ServerPackets.playerRotation))
 		{
 			packet.Write(player.id);
 			packet.Write(player.yOrientation);
@@ -544,7 +544,7 @@ public class ServerSend
 	// Token: 0x06000511 RID: 1297 RVA: 0x0001A558 File Offset: 0x00018758
 	public static void PingPlayer(int player, string ms)
 	{
-		using (Packet packet = new Packet(7))
+		using (Packet packet = new Packet((int)ServerPackets.pingPlayer))
 		{
 			packet.Write(player);
 			packet.Write(ms);
@@ -555,7 +555,7 @@ public class ServerSend
 	// Token: 0x06000512 RID: 1298 RVA: 0x0001A5A0 File Offset: 0x000187A0
 	public static void DisconnectPlayer(int player)
 	{
-		using (Packet packet = new Packet(5))
+		using (Packet packet = new Packet((int)ServerPackets.playerDisconnect))
 		{
 			packet.Write(player);
 			ServerSend.SendTCPDataToAll(packet);
@@ -565,7 +565,7 @@ public class ServerSend
 	// Token: 0x06000513 RID: 1299 RVA: 0x0001A5E0 File Offset: 0x000187E0
 	public static void ShrineStart(int[] mobIds, int shrineId)
 	{
-		using (Packet packet = new Packet(34))
+		using (Packet packet = new Packet((int)ServerPackets.shrineCombatStart))
 		{
 			packet.Write(shrineId);
 			int num = mobIds.Length;
@@ -581,7 +581,7 @@ public class ServerSend
 	// Token: 0x06000514 RID: 1300 RVA: 0x0001A648 File Offset: 0x00018848
 	public static void MobMove(int mobId, Vector3 pos)
 	{
-		using (Packet packet = new Packet(30))
+		using (Packet packet = new Packet((int)ServerPackets.mobMove))
 		{
 			packet.Write(mobId);
 			packet.Write(pos);
@@ -592,7 +592,7 @@ public class ServerSend
 	// Token: 0x06000515 RID: 1301 RVA: 0x0001A698 File Offset: 0x00018898
 	public static void MobSetDestination(int mobId, Vector3 dest)
 	{
-		using (Packet packet = new Packet(31))
+		using (Packet packet = new Packet((int)ServerPackets.mobSetDestination))
 		{
 			packet.Write(mobId);
 			packet.Write(dest);
@@ -603,7 +603,7 @@ public class ServerSend
 	// Token: 0x06000516 RID: 1302 RVA: 0x0001A6E8 File Offset: 0x000188E8
 	public static void MobSpawn(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier)
 	{
-		using (Packet packet = new Packet(29))
+		using (Packet packet = new Packet((int)ServerPackets.mobSpawn))
 		{
 			packet.Write(pos);
 			packet.Write(mobType);
@@ -617,7 +617,7 @@ public class ServerSend
 	// Token: 0x06000517 RID: 1303 RVA: 0x0001A750 File Offset: 0x00018950
 	public static void MobAttack(int mobId, int targetPlayerId, int attackAnimationIndex)
 	{
-		using (Packet packet = new Packet(32))
+		using (Packet packet = new Packet((int)ServerPackets.mobAttack))
 		{
 			packet.Write(mobId);
 			packet.Write(targetPlayerId);
@@ -629,7 +629,7 @@ public class ServerSend
 	// Token: 0x06000518 RID: 1304 RVA: 0x0001A7A8 File Offset: 0x000189A8
 	public static void MobSpawnProjectile(Vector3 pos, Vector3 dir, float force, int itemId, int mobObjectId)
 	{
-		using (Packet packet = new Packet(46))
+		using (Packet packet = new Packet((int)ServerPackets.mobProjectile))
 		{
 			packet.Write(pos);
 			packet.Write(dir);
@@ -643,7 +643,7 @@ public class ServerSend
 	// Token: 0x06000519 RID: 1305 RVA: 0x0001A810 File Offset: 0x00018A10
 	public static void PlayerHitMob(int fromClient, int mobId, int hpLeft, int hitEffect, Vector3 pos)
 	{
-		using (Packet packet = new Packet(33))
+		using (Packet packet = new Packet((int)ServerPackets.playerDamageMob))
 		{
 			packet.Write(fromClient);
 			packet.Write(mobId);
@@ -657,7 +657,7 @@ public class ServerSend
 	// Token: 0x0600051A RID: 1306 RVA: 0x0001A878 File Offset: 0x00018A78
 	public static void KnockbackMob(int mobId, Vector3 dir)
 	{
-		using (Packet packet = new Packet(48))
+		using (Packet packet = new Packet((int)ServerPackets.knockbackMob))
 		{
 			packet.Write(mobId);
 			packet.Write(dir);
@@ -668,7 +668,7 @@ public class ServerSend
 	// Token: 0x0600051B RID: 1307 RVA: 0x0001A8C0 File Offset: 0x00018AC0
 	public static void MobZoneSpawn(Vector3 pos, int mobType, int mobId, int mobZoneId)
 	{
-		using (Packet packet = new Packet(36))
+		using (Packet packet = new Packet((int)ServerPackets.MobZoneSpawn))
 		{
 			packet.Write(pos);
 			packet.Write(mobType);
@@ -681,7 +681,7 @@ public class ServerSend
 	// Token: 0x0600051C RID: 1308 RVA: 0x0001A920 File Offset: 0x00018B20
 	public static void PickupZoneSpawn(Vector3 pos, int entityId, int mobId, int mobZoneId)
 	{
-		using (Packet packet = new Packet(38))
+		using (Packet packet = new Packet((int)ServerPackets.PickupZoneSpawn))
 		{
 			packet.Write(pos);
 			packet.Write(entityId);
@@ -694,7 +694,7 @@ public class ServerSend
 	// Token: 0x0600051D RID: 1309 RVA: 0x0001A980 File Offset: 0x00018B80
 	public static void MobZoneToggle(bool show, int objectID)
 	{
-		using (Packet packet = new Packet(37))
+		using (Packet packet = new Packet((int)ServerPackets.MobZoneToggle))
 		{
 			packet.Write(show);
 			packet.Write(objectID);
@@ -705,7 +705,7 @@ public class ServerSend
 	// Token: 0x0600051E RID: 1310 RVA: 0x0001A9C8 File Offset: 0x00018BC8
 	public static void SendChatMessage(int fromClient, string username, string msg)
 	{
-		using (Packet packet = new Packet(39))
+		using (Packet packet = new Packet((int)ServerPackets.SendMessage))
 		{
 			packet.Write(fromClient);
 			packet.Write(username);
@@ -717,7 +717,7 @@ public class ServerSend
 	// Token: 0x0600051F RID: 1311 RVA: 0x0001AA18 File Offset: 0x00018C18
 	public static void SendPing(int fromClient, Vector3 pos, string username)
 	{
-		using (Packet packet = new Packet(40))
+		using (Packet packet = new Packet((int)ServerPackets.playerPing))
 		{
 			packet.Write(pos);
 			packet.Write(username);
@@ -728,7 +728,7 @@ public class ServerSend
 	// Token: 0x06000520 RID: 1312 RVA: 0x0001AA60 File Offset: 0x00018C60
 	public static void SendArmor(int fromClient, int armorSlot, int itemId)
 	{
-		using (Packet packet = new Packet(41))
+		using (Packet packet = new Packet((int)ServerPackets.sendArmor))
 		{
 			packet.Write(fromClient);
 			packet.Write(armorSlot);
@@ -740,7 +740,7 @@ public class ServerSend
 	// Token: 0x06000521 RID: 1313 RVA: 0x0001AAB0 File Offset: 0x00018CB0
 	public static void NewDay(int day)
 	{
-		using (Packet packet = new Packet(47))
+		using (Packet packet = new Packet((int)ServerPackets.newDay))
 		{
 			packet.Write(day);
 			ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
@@ -750,7 +750,7 @@ public class ServerSend
 	// Token: 0x06000522 RID: 1314 RVA: 0x0001AAF8 File Offset: 0x00018CF8
 	public static void GameOver(int winnerId = -2)
 	{
-		using (Packet packet = new Packet(11))
+		using (Packet packet = new Packet((int)ServerPackets.gameOver))
 		{
 			packet.Write(winnerId);
 			ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
@@ -760,7 +760,7 @@ public class ServerSend
 	// Token: 0x06000523 RID: 1315 RVA: 0x0001AB40 File Offset: 0x00018D40
 	public static void PlayerFinishedLoading(int playerId)
 	{
-		using (Packet packet = new Packet(50))
+		using (Packet packet = new Packet((int)ServerPackets.playerFinishedLoading))
 		{
 			packet.Write(playerId);
 			ServerSend.SendTCPDataToAll(packet);
