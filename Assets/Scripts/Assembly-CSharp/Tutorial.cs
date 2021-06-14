@@ -1,21 +1,21 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200014D RID: 333
+
 public class Tutorial : MonoBehaviour
 {
-	// Token: 0x1700005C RID: 92
-	// (get) Token: 0x060007FB RID: 2043 RVA: 0x000073B2 File Offset: 0x000055B2
-	// (set) Token: 0x060007FC RID: 2044 RVA: 0x000073BA File Offset: 0x000055BA
+
+
+
 	public Transform target { get; set; }
 
-	// Token: 0x060007FD RID: 2045 RVA: 0x000073C3 File Offset: 0x000055C3
+
 	private void Awake()
 	{
 		Tutorial.Instance = this;
 	}
 
-	// Token: 0x060007FE RID: 2046 RVA: 0x000073CB File Offset: 0x000055CB
+
 	private void Start()
 	{
 		if (!CurrentSettings.Instance.tutorial)
@@ -24,7 +24,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007FF RID: 2047 RVA: 0x00027274 File Offset: 0x00025474
+
 	private void Update()
 	{
 		if (!this.started)
@@ -71,12 +71,12 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000800 RID: 2048 RVA: 0x00002147 File Offset: 0x00000347
+
 	private void Tree()
 	{
 	}
 
-	// Token: 0x06000801 RID: 2049 RVA: 0x0002732C File Offset: 0x0002552C
+
 	private void Workbench()
 	{
 		foreach (InventoryCell inventoryCell in InventoryUI.Instance.hotkeyCells)
@@ -89,7 +89,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000802 RID: 2050 RVA: 0x000073E4 File Offset: 0x000055E4
+
 	private void Build()
 	{
 		if (this.stationPlaced)
@@ -99,7 +99,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000803 RID: 2051 RVA: 0x00007405 File Offset: 0x00005605
+
 	private void Inventory()
 	{
 		if (InventoryUI.Instance.gameObject.activeInHierarchy)
@@ -108,7 +108,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000804 RID: 2052 RVA: 0x00027398 File Offset: 0x00025598
+
 	private void TargetFollowUI()
 	{
 		if (!this.currentStep.arrowTargetPos || !InventoryUI.Instance.gameObject.activeInHierarchy)
@@ -128,7 +128,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000805 RID: 2053 RVA: 0x00027468 File Offset: 0x00025668
+
 	private void TargetFollowItem()
 	{
 		if (UiEvents.Instance.IsHardUnlocked(this.currentStep.item.id))
@@ -171,7 +171,7 @@ public class Tutorial : MonoBehaviour
 		this.tutorialArrow.localPosition = vector2;
 	}
 
-	// Token: 0x06000806 RID: 2054 RVA: 0x0002761C File Offset: 0x0002581C
+
 	private Vector3 calculateWorldPosition(Vector3 position, Camera camera)
 	{
 		Vector3 forward = camera.transform.forward;
@@ -185,7 +185,7 @@ public class Tutorial : MonoBehaviour
 		return position;
 	}
 
-	// Token: 0x06000807 RID: 2055 RVA: 0x00027690 File Offset: 0x00025890
+
 	private void FindItem(InventoryItem item)
 	{
 		float num = float.PositiveInfinity;
@@ -209,12 +209,12 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x1700005D RID: 93
-	// (get) Token: 0x06000808 RID: 2056 RVA: 0x0000741E File Offset: 0x0000561E
-	// (set) Token: 0x06000809 RID: 2057 RVA: 0x00007426 File Offset: 0x00005626
+
+
+
 	public Tutorial.TutorialStep currentStep { get; set; }
 
-	// Token: 0x0600080A RID: 2058 RVA: 0x00027754 File Offset: 0x00025954
+
 	public void ContinueTutorial()
 	{
 		if (this.currentTaskUi)
@@ -246,7 +246,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600080B RID: 2059 RVA: 0x0002783C File Offset: 0x00025A3C
+
 	private void FindTree()
 	{
 		float num = float.PositiveInfinity;
@@ -272,68 +272,68 @@ public class Tutorial : MonoBehaviour
 		Debug.LogError("didnt find tree");
 	}
 
-	// Token: 0x0400083D RID: 2109
+
 	public Transform tutorialArrow;
 
-	// Token: 0x0400083E RID: 2110
+
 	public RectTransform canvasRect;
 
-	// Token: 0x0400083F RID: 2111
+
 	private bool started;
 
-	// Token: 0x04000840 RID: 2112
+
 	public Tutorial.TutorialStep[] steps;
 
-	// Token: 0x04000842 RID: 2114
+
 	public Transform taskParent;
 
-	// Token: 0x04000843 RID: 2115
+
 	public GameObject taskPrefab;
 
-	// Token: 0x04000844 RID: 2116
+
 	public static Tutorial Instance;
 
-	// Token: 0x04000845 RID: 2117
+
 	public bool stationPlaced;
 
-	// Token: 0x04000847 RID: 2119
+
 	private TutorialTaskUI currentTaskUi;
 
-	// Token: 0x04000848 RID: 2120
+
 	private int progress;
 
-	// Token: 0x0200014E RID: 334
+
 	[Serializable]
 	public class TutorialStep
 	{
-		// Token: 0x04000849 RID: 2121
+
 		public Tutorial.TutorialState state;
 
-		// Token: 0x0400084A RID: 2122
+
 		public string text;
 
-		// Token: 0x0400084B RID: 2123
+
 		public InventoryItem item;
 
-		// Token: 0x0400084C RID: 2124
+
 		public Transform arrowTargetPos;
 	}
 
-	// Token: 0x0200014F RID: 335
+
 	[Serializable]
 	public enum TutorialState
 	{
-		// Token: 0x0400084E RID: 2126
+
 		Unlock,
-		// Token: 0x0400084F RID: 2127
+
 		Hotbar,
-		// Token: 0x04000850 RID: 2128
+
 		Inventory,
-		// Token: 0x04000851 RID: 2129
+
 		Tree,
-		// Token: 0x04000852 RID: 2130
+
 		Workbench,
-		// Token: 0x04000853 RID: 2131
+
 		Build
 	}
 }

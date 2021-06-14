@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200002B RID: 43
+
 public class FallIfNotGrounded : MonoBehaviour
 {
-	// Token: 0x060000E7 RID: 231 RVA: 0x0000ABF0 File Offset: 0x00008DF0
+
 	private void Start()
 	{
 		this.x = base.transform.position.x;
@@ -30,7 +30,7 @@ public class FallIfNotGrounded : MonoBehaviour
 		base.InvokeRepeating(nameof(CheckFalling), 1f, 1f);
 	}
 
-	// Token: 0x060000E8 RID: 232 RVA: 0x0000ACBC File Offset: 0x00008EBC
+
 	private void CheckFalling()
 	{
 		if (this.falling)
@@ -51,7 +51,7 @@ public class FallIfNotGrounded : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000E9 RID: 233 RVA: 0x0000AD38 File Offset: 0x00008F38
+
 	private void StartFalling()
 	{
 		Hitable component = base.GetComponent<Hitable>();
@@ -62,34 +62,34 @@ public class FallIfNotGrounded : MonoBehaviour
 		this.rb.constraints = (RigidbodyConstraints)122;
 	}
 
-	// Token: 0x060000EA RID: 234 RVA: 0x00002C87 File Offset: 0x00000E87
+
 	private void Land()
 	{
 	Destroy(this.rb);
 		this.falling = false;
 	}
 
-	// Token: 0x040000EB RID: 235
+
 	private Rigidbody rb;
 
-	// Token: 0x040000EC RID: 236
+
 	public float x;
 
-	// Token: 0x040000ED RID: 237
+
 	public float z;
 
-	// Token: 0x040000EE RID: 238
+
 	private bool falling;
 
-	// Token: 0x040000EF RID: 239
+
 	private Vector3 bottomOffset;
 
-	// Token: 0x040000F0 RID: 240
+
 	public LayerMask whatIsLandable;
 
-	// Token: 0x040000F1 RID: 241
+
 	private Mesh mesh;
 
-	// Token: 0x040000F2 RID: 242
+
 	private Collider c;
 }

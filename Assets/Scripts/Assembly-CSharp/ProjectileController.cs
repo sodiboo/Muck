@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000072 RID: 114
+
 public class ProjectileController : MonoBehaviour
 {
-	// Token: 0x06000278 RID: 632 RVA: 0x00003D7E File Offset: 0x00001F7E
+
 	private void Awake()
 	{
 		ProjectileController.Instance = this;
 	}
 
-	// Token: 0x06000279 RID: 633 RVA: 0x00010FE8 File Offset: 0x0000F1E8
+
 	public void SpawnProjectileFromPlayer(Vector3 spawnPos, Vector3 direction, float force, int arrowId, int fromPlayer)
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[arrowId];
@@ -24,7 +24,7 @@ public class ProjectileController : MonoBehaviour
 		gameObject.GetComponent<Arrow>().otherPlayersArrow = true;
 	}
 
-	// Token: 0x0600027A RID: 634 RVA: 0x0001108C File Offset: 0x0000F28C
+
 	public void SpawnMobProjectile(Vector3 spawnPos, Vector3 direction, float force, int itemId, int mobObjectId)
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[itemId];
@@ -58,6 +58,6 @@ public class ProjectileController : MonoBehaviour
 		MonoBehaviour.print("setting damage to: " + (float)attackDamage * multiplier);
 	}
 
-	// Token: 0x04000288 RID: 648
+
 	public static ProjectileController Instance;
 }

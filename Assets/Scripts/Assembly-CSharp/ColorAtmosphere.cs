@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000015 RID: 21
+
 [ExecuteInEditMode]
 public class ColorAtmosphere : MonoBehaviour
 {
-	// Token: 0x0600006A RID: 106 RVA: 0x000090AC File Offset: 0x000072AC
+
 	private void Awake()
 	{
 		ConsistentRandom consistentRandom = new ConsistentRandom(GameManager.GetSeed());
@@ -24,7 +24,7 @@ public class ColorAtmosphere : MonoBehaviour
 		this.dayCycle.dayFog = color2;
 	}
 
-	// Token: 0x0600006B RID: 107 RVA: 0x00009174 File Offset: 0x00007374
+
 	public Color FindRandomBlendColor(Color[] colors, float rand)
 	{
 		rand *= (float)(colors.Length - 1);
@@ -37,32 +37,32 @@ public class ColorAtmosphere : MonoBehaviour
 		return a * num3 + a2 * b;
 	}
 
-	// Token: 0x04000068 RID: 104
+
 	[Header("Ground / Grass")]
 	public TextureData textureData;
 
-	// Token: 0x04000069 RID: 105
+
 	public Color defaultGrassColor;
 
-	// Token: 0x0400006A RID: 106
+
 	public Color[] colorRange;
 
-	// Token: 0x0400006B RID: 107
+
 	public Color[] grassColorRange;
 
-	// Token: 0x0400006C RID: 108
+
 	public Color groundColor;
 
-	// Token: 0x0400006D RID: 109
+
 	public Color grassColor;
 
-	// Token: 0x0400006E RID: 110
+
 	public Material grass;
 
-	// Token: 0x0400006F RID: 111
+
 	[Header("Fog")]
 	public DayCycle dayCycle;
 
-	// Token: 0x04000070 RID: 112
+
 	public Color[] fogColors;
 }

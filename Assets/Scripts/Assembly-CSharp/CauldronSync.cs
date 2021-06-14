@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000081 RID: 129
+
 public class CauldronSync : Chest
 {
-	// Token: 0x060002CA RID: 714 RVA: 0x000040B4 File Offset: 0x000022B4
+
 	public float ProgressRatio()
 	{
 		return this.currentProcessTime / this.timeToProcess;
 	}
 
-	// Token: 0x060002CB RID: 715 RVA: 0x000123C8 File Offset: 0x000105C8
+
 	public override void UpdateCraftables()
 	{
 		InventoryItem inventoryItem = this.CanProcess();
@@ -30,7 +30,7 @@ public class CauldronSync : Chest
 		}
 	}
 
-	// Token: 0x060002CC RID: 716 RVA: 0x00012494 File Offset: 0x00010694
+
 	private void Update()
 	{
 		if (!this.processing)
@@ -55,7 +55,7 @@ public class CauldronSync : Chest
 		}
 	}
 
-	// Token: 0x060002CD RID: 717 RVA: 0x000040C3 File Offset: 0x000022C3
+
 	private void StopProcessing()
 	{
 		this.processing = false;
@@ -65,7 +65,7 @@ public class CauldronSync : Chest
 		}
 	}
 
-	// Token: 0x060002CE RID: 718 RVA: 0x00012550 File Offset: 0x00010750
+
 	public void ProcessItem()
 	{
 		if (!LocalClient.serverOwner)
@@ -97,7 +97,7 @@ public class CauldronSync : Chest
 		}
 	}
 
-	// Token: 0x060002CF RID: 719 RVA: 0x00012644 File Offset: 0x00010844
+
 	private void UseMaterial(InventoryItem materialItem, int cellId)
 	{
 		materialItem.amount--;
@@ -110,7 +110,7 @@ public class CauldronSync : Chest
 		ClientSend.ChestUpdate(base.id, cellId, materialItem.id, materialItem.amount);
 	}
 
-	// Token: 0x060002D0 RID: 720 RVA: 0x00012694 File Offset: 0x00010894
+
 	private void UseFuel(InventoryItem fuelItem)
 	{
 		ItemFuel fuel = fuelItem.fuel;
@@ -128,7 +128,7 @@ public class CauldronSync : Chest
 		}
 	}
 
-	// Token: 0x060002D1 RID: 721 RVA: 0x0001270C File Offset: 0x0001090C
+
 	private void AddMaterial(InventoryItem item, int processedItemId)
 	{
 		if (this.cells[this.resultCellId] == null)
@@ -143,7 +143,7 @@ public class CauldronSync : Chest
 		ClientSend.ChestUpdate(base.id, this.resultCellId, processedItemId, this.cells[this.resultCellId].amount);
 	}
 
-	// Token: 0x060002D2 RID: 722 RVA: 0x000127A4 File Offset: 0x000109A4
+
 	public InventoryItem CanProcess()
 	{
 		if (this.NoIngredients() || !this.cells[this.fuelCellId])
@@ -173,7 +173,7 @@ public class CauldronSync : Chest
 		return null;
 	}
 
-	// Token: 0x060002D3 RID: 723 RVA: 0x00012860 File Offset: 0x00010A60
+
 	public InventoryItem FindItemByIngredients(int[] iCells)
 	{
 		List<InventoryItem> list = new List<InventoryItem>();
@@ -216,7 +216,7 @@ public class CauldronSync : Chest
 		return null;
 	}
 
-	// Token: 0x060002D4 RID: 724 RVA: 0x0001298C File Offset: 0x00010B8C
+
 	private bool NoIngredients()
 	{
 		foreach (int num in this.ingredientCells)
@@ -229,13 +229,13 @@ public class CauldronSync : Chest
 		return true;
 	}
 
-	// Token: 0x040002DB RID: 731
+
 	private int fuelCellId;
 
-	// Token: 0x040002DC RID: 732
+
 	private int resultCellId = 5;
 
-	// Token: 0x040002DD RID: 733
+
 	private int[] ingredientCells = new int[]
 	{
 		1,
@@ -244,15 +244,15 @@ public class CauldronSync : Chest
 		4
 	};
 
-	// Token: 0x040002DE RID: 734
+
 	private bool processing;
 
-	// Token: 0x040002DF RID: 735
+
 	private float currentProcessTime;
 
-	// Token: 0x040002E0 RID: 736
+
 	private float totalProcessTime;
 
-	// Token: 0x040002E1 RID: 737
+
 	private float timeToProcess = 1f;
 }

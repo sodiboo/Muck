@@ -1,15 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000EA RID: 234
+
 public class MoveCamera : MonoBehaviour
 {
-	// Token: 0x17000045 RID: 69
-	// (get) Token: 0x06000615 RID: 1557 RVA: 0x00005D4C File Offset: 0x00003F4C
-	// (set) Token: 0x06000616 RID: 1558 RVA: 0x00005D53 File Offset: 0x00003F53
+
+
+
 	public static MoveCamera Instance { get; private set; }
 
-	// Token: 0x06000617 RID: 1559 RVA: 0x00020130 File Offset: 0x0001E330
+
 	private void Start()
 	{
 		MoveCamera.Instance = this;
@@ -19,7 +19,7 @@ public class MoveCamera : MonoBehaviour
 		Debug.LogError("updating fov: " + CurrentSettings.Instance.fov);
 	}
 
-	// Token: 0x06000618 RID: 1560 RVA: 0x00005D5B File Offset: 0x00003F5B
+
 	private void LateUpdate()
 	{
 		if (this.state == MoveCamera.CameraState.Player)
@@ -38,12 +38,12 @@ public class MoveCamera : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000046 RID: 70
-	// (get) Token: 0x06000619 RID: 1561 RVA: 0x00005D8B File Offset: 0x00003F8B
-	// (set) Token: 0x0600061A RID: 1562 RVA: 0x00005D93 File Offset: 0x00003F93
+
+
+
 	public MoveCamera.CameraState state { get; set; }
 
-	// Token: 0x0600061B RID: 1563 RVA: 0x00005D9C File Offset: 0x00003F9C
+
 	public void PlayerRespawn(Vector3 pos)
 	{
 		base.transform.position = pos;
@@ -52,7 +52,7 @@ public class MoveCamera : MonoBehaviour
 		base.CancelInvoke(nameof(SpectateCamera));
 	}
 
-	// Token: 0x0600061C RID: 1564 RVA: 0x0002019C File Offset: 0x0001E39C
+
 	public void PlayerDied(Transform ragdoll)
 	{
 		this.target = ragdoll;
@@ -64,7 +64,7 @@ public class MoveCamera : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600061D RID: 1565 RVA: 0x00005DC8 File Offset: 0x00003FC8
+
 	private void StartSpectating()
 	{
 		if (GameManager.state == GameManager.GameState.GameOver || !PlayerStatus.Instance.IsPlayerDead())
@@ -76,7 +76,7 @@ public class MoveCamera : MonoBehaviour
 		PPController.Instance.Reset();
 	}
 
-	// Token: 0x0600061E RID: 1566 RVA: 0x000201F4 File Offset: 0x0001E3F4
+
 	private void SpectateCamera()
 	{
 		if (!this.target)
@@ -126,7 +126,7 @@ public class MoveCamera : MonoBehaviour
 		base.transform.localPosition = new Vector3(0f, 0f, -10f + num);
 	}
 
-	// Token: 0x0600061F RID: 1567 RVA: 0x00020450 File Offset: 0x0001E650
+
 	private void SpectateToggle(int dir)
 	{
 		int num = this.spectatingId;
@@ -154,7 +154,7 @@ public class MoveCamera : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000620 RID: 1568 RVA: 0x000204FC File Offset: 0x0001E6FC
+
 	private void PlayerDeathCamera()
 	{
 		if (this.target == null)
@@ -165,7 +165,7 @@ public class MoveCamera : MonoBehaviour
 		base.transform.rotation = Quaternion.Lerp(base.transform.rotation, Quaternion.LookRotation(this.target.position - base.transform.position), Time.deltaTime);
 	}
 
-	// Token: 0x06000621 RID: 1569 RVA: 0x00020584 File Offset: 0x0001E784
+
 	private void PlayerCamera()
 	{
 		this.UpdateBob();
@@ -194,7 +194,7 @@ public class MoveCamera : MonoBehaviour
 		base.transform.rotation = Quaternion.Euler(eulerAngles);
 	}
 
-	// Token: 0x06000622 RID: 1570 RVA: 0x000206E0 File Offset: 0x0001E8E0
+
 	private void MoveGun()
 	{
 		if (!this.rb)
@@ -207,110 +207,110 @@ public class MoveCamera : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000623 RID: 1571 RVA: 0x00005DF7 File Offset: 0x00003FF7
+
 	public void UpdateFov(float f)
 	{
 		this.mainCam.fieldOfView = f;
 		this.gunCamera.fieldOfView = f;
 	}
 
-	// Token: 0x06000624 RID: 1572 RVA: 0x00020734 File Offset: 0x0001E934
+
 	public void BobOnce(Vector3 bobDirection)
 	{
 		Vector3 a = this.ClampVector(bobDirection * 0.15f, -3f, 3f);
 		this.desiredBob = a * this.bobMultiplier;
 	}
 
-	// Token: 0x06000625 RID: 1573 RVA: 0x00020770 File Offset: 0x0001E970
+
 	private void UpdateBob()
 	{
 		this.desiredBob = Vector3.Lerp(this.desiredBob, Vector3.zero, Time.deltaTime * this.bobSpeed * 0.5f);
 		this.bobOffset = Vector3.Lerp(this.bobOffset, this.desiredBob, Time.deltaTime * this.bobSpeed);
 	}
 
-	// Token: 0x06000626 RID: 1574 RVA: 0x00005E11 File Offset: 0x00004011
+
 	private Vector3 ClampVector(Vector3 vec, float min, float max)
 	{
 		return new Vector3(Mathf.Clamp(vec.x, min, max), Mathf.Clamp(vec.y, min, max), Mathf.Clamp(vec.z, min, max));
 	}
 
-	// Token: 0x040005BF RID: 1471
+
 	public Transform player;
 
-	// Token: 0x040005C0 RID: 1472
+
 	public Vector3 offset;
 
-	// Token: 0x040005C1 RID: 1473
+
 	public Vector3 desyncOffset;
 
-	// Token: 0x040005C2 RID: 1474
+
 	public Vector3 vaultOffset;
 
-	// Token: 0x040005C3 RID: 1475
+
 	private Camera cam;
 
-	// Token: 0x040005C4 RID: 1476
+
 	private Rigidbody rb;
 
-	// Token: 0x040005C5 RID: 1477
+
 	public PlayerInput playerInput;
 
-	// Token: 0x040005C7 RID: 1479
+
 	public bool cinematic;
 
-	// Token: 0x040005C8 RID: 1480
+
 	private float desiredTilt;
 
-	// Token: 0x040005C9 RID: 1481
+
 	private float tilt;
 
-	// Token: 0x040005CB RID: 1483
+
 	private Vector3 desiredDeathPos;
 
-	// Token: 0x040005CC RID: 1484
+
 	private Transform target;
 
-	// Token: 0x040005CD RID: 1485
+
 	private Vector3 desiredSpectateRotation;
 
-	// Token: 0x040005CE RID: 1486
+
 	private Transform playerTarget;
 
-	// Token: 0x040005CF RID: 1487
+
 	public LayerMask whatIsGround;
 
-	// Token: 0x040005D0 RID: 1488
+
 	private int spectatingId;
 
-	// Token: 0x040005D1 RID: 1489
+
 	private Vector3 desiredBob;
 
-	// Token: 0x040005D2 RID: 1490
+
 	private Vector3 bobOffset;
 
-	// Token: 0x040005D3 RID: 1491
+
 	private float bobSpeed = 15f;
 
-	// Token: 0x040005D4 RID: 1492
+
 	private float bobMultiplier = 1f;
 
-	// Token: 0x040005D5 RID: 1493
+
 	private readonly float bobConstant = 0.2f;
 
-	// Token: 0x040005D6 RID: 1494
+
 	public Camera mainCam;
 
-	// Token: 0x040005D7 RID: 1495
+
 	public Camera gunCamera;
 
-	// Token: 0x020000EB RID: 235
+
 	public enum CameraState
 	{
-		// Token: 0x040005D9 RID: 1497
+
 		Player,
-		// Token: 0x040005DA RID: 1498
+
 		PlayerDeath,
-		// Token: 0x040005DB RID: 1499
+
 		Spectate
 	}
 }

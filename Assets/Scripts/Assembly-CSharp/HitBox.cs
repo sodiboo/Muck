@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-// Token: 0x0200003D RID: 61
+
 public class HitBox : MonoBehaviour
 {
-	// Token: 0x06000146 RID: 326 RVA: 0x0000C7C4 File Offset: 0x0000A9C4
+
 	public void UseHitbox()
 	{
 		this.alreadyHit.Clear();
@@ -136,7 +136,7 @@ public class HitBox : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000147 RID: 327 RVA: 0x0000CC14 File Offset: 0x0000AE14
+
 	private void ShovelHitGround(Collider other)
 	{
 		Vector3 vector = other.ClosestPoint(base.transform.position);
@@ -171,7 +171,7 @@ public class HitBox : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000148 RID: 328 RVA: 0x0000CCDC File Offset: 0x0000AEDC
+
 	private void OnDrawGizmos()
 	{
 		foreach (Vector3 center in this.hitPoints)
@@ -180,21 +180,21 @@ public class HitBox : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000144 RID: 324
+
 	public Transform playerCam;
 
-	// Token: 0x04000145 RID: 325
+
 	public LayerMask whatIsHittable;
 
-	// Token: 0x04000146 RID: 326
+
 	private List<Vector3> hitPoints = new List<Vector3>();
 
-	// Token: 0x04000147 RID: 327
+
 	private List<Hitable> alreadyHit = new List<Hitable>();
 
-	// Token: 0x04000148 RID: 328
+
 	public GameObject dirt;
 
-	// Token: 0x04000149 RID: 329
+
 	public GameObject sand;
 }

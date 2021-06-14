@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.SceneManagement;
 
-// Token: 0x020000D8 RID: 216
+
 public class DebugNet : MonoBehaviour
 {
-	// Token: 0x060005BF RID: 1471 RVA: 0x000058E5 File Offset: 0x00003AE5
+
 	private void Start()
 	{
 		DebugNet.Instance = this;
@@ -17,19 +17,19 @@ public class DebugNet : MonoBehaviour
 		base.InvokeRepeating(nameof(BandWidth), 1f, 1f);
 	}
 
-	// Token: 0x060005C0 RID: 1472 RVA: 0x0000590E File Offset: 0x00003B0E
+
 	public void ToggleConsole()
 	{
 		base.gameObject.SetActive(!base.gameObject.activeInHierarchy);
 	}
 
-	// Token: 0x060005C1 RID: 1473 RVA: 0x00005929 File Offset: 0x00003B29
+
 	private void Update()
 	{
 		this.Fps();
 	}
 
-	// Token: 0x060005C2 RID: 1474 RVA: 0x0001F118 File Offset: 0x0001D318
+
 	private void Fps()
 	{
 		if (this.fpsOn || this.speedOn || this.pingOn || this.bandwidthOn)
@@ -119,7 +119,7 @@ public class DebugNet : MonoBehaviour
 		this.fps.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060005C3 RID: 1475 RVA: 0x0001F590 File Offset: 0x0001D790
+
 	private void BandWidth()
 	{
 		this.byteUp = (float)ClientSend.bytesSent;
@@ -132,54 +132,54 @@ public class DebugNet : MonoBehaviour
 		LocalClient.packetsReceived = 0;
 	}
 
-	// Token: 0x060005C4 RID: 1476 RVA: 0x00005931 File Offset: 0x00003B31
+
 	private void OpenConsole()
 	{
 		this.console.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060005C5 RID: 1477 RVA: 0x00005944 File Offset: 0x00003B44
+
 	private void CloseConsole()
 	{
 		this.console.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0400050C RID: 1292
+
 	public TextMeshProUGUI fps;
 
-	// Token: 0x0400050D RID: 1293
+
 	public GameObject console;
 
-	// Token: 0x0400050E RID: 1294
+
 	private bool fpsOn = true;
 
-	// Token: 0x0400050F RID: 1295
+
 	private bool speedOn = true;
 
-	// Token: 0x04000510 RID: 1296
+
 	private bool pingOn = true;
 
-	// Token: 0x04000511 RID: 1297
+
 	private bool bandwidthOn = true;
 
-	// Token: 0x04000512 RID: 1298
+
 	private float deltaTime;
 
-	// Token: 0x04000513 RID: 1299
+
 	public static List<string> r = new List<string>();
 
-	// Token: 0x04000514 RID: 1300
+
 	public static DebugNet Instance;
 
-	// Token: 0x04000515 RID: 1301
+
 	private float byteUp;
 
-	// Token: 0x04000516 RID: 1302
+
 	private float byteDown;
 
-	// Token: 0x04000517 RID: 1303
+
 	private float pSent;
 
-	// Token: 0x04000518 RID: 1304
+
 	private float pReceived;
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020000D0 RID: 208
+
 public class LootExtra : MonoBehaviour
 {
-	// Token: 0x06000531 RID: 1329 RVA: 0x0001BB68 File Offset: 0x00019D68
+
 	public static void CheckDrop(int fromClient, HitableResource hitable)
 	{
 		if (hitable.dropTable == null)
@@ -44,7 +44,7 @@ public class LootExtra : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000532 RID: 1330 RVA: 0x0001BCEC File Offset: 0x00019EEC
+
 	public static void DropMobLoot(Transform dropTransform, LootDrop lootTable, int fromClient, float buffMultiplier)
 	{
 		Vector3 vector = dropTransform.position;
@@ -76,7 +76,7 @@ public class LootExtra : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000533 RID: 1331 RVA: 0x0001BE6C File Offset: 0x0001A06C
+
 	public static void BossLoot(Transform dropPos, Mob.BossType mobType)
 	{
 		int num = GameManager.instance.GetPlayersInLobby();
@@ -96,7 +96,7 @@ public class LootExtra : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000534 RID: 1332 RVA: 0x0001BF00 File Offset: 0x0001A100
+
 	private static Vector3 RandomCircle(Vector3 center, float radius, float angle)
 	{
 		Vector3 a = center;

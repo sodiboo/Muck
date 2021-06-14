@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Token: 0x02000093 RID: 147
+
 public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerEnterHandler, IPointerExitHandler
 {
-	// Token: 0x0600035F RID: 863 RVA: 0x000046CB File Offset: 0x000028CB
+
 	private void Start()
 	{
 		if (this.spawnItem)
@@ -18,7 +18,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		this.UpdateCell();
 	}
 
-	// Token: 0x06000360 RID: 864 RVA: 0x00013990 File Offset: 0x00011B90
+
 	public void UpdateCell()
 	{
 		if (this.currentItem == null)
@@ -36,7 +36,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		this.SetColor(this.idle);
 	}
 
-	// Token: 0x06000361 RID: 865 RVA: 0x00004707 File Offset: 0x00002907
+
 	public void ForceAddItem(InventoryItem item, int amount)
 	{
 		this.currentItem =Instantiate<InventoryItem>(item);
@@ -44,7 +44,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		this.UpdateCell();
 	}
 
-	// Token: 0x06000362 RID: 866 RVA: 0x00013A24 File Offset: 0x00011C24
+
 	public InventoryItem SetItem(InventoryItem pointerItem, PointerEventData eventData)
 	{
 		InventoryItem inventoryItem = this.currentItem;
@@ -111,13 +111,13 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		return inventoryItem3;
 	}
 
-	// Token: 0x06000363 RID: 867 RVA: 0x00004727 File Offset: 0x00002927
+
 	private void GetReady()
 	{
 		this.ready = true;
 	}
 
-	// Token: 0x06000364 RID: 868 RVA: 0x00013BB4 File Offset: 0x00011DB4
+
 	public InventoryItem PickupItem(PointerEventData eventData)
 	{
 		if (!this.currentItem)
@@ -158,7 +158,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		return inventoryItem2;
 	}
 
-	// Token: 0x06000365 RID: 869 RVA: 0x00013CAC File Offset: 0x00011EAC
+
 	public void OnPointerDown(PointerEventData eventData)
 	{
 		if (!this.ready)
@@ -200,7 +200,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x06000366 RID: 870 RVA: 0x00013D9C File Offset: 0x00011F9C
+
 	private bool IsItemCompatibleWithCell(InventoryItem item)
 	{
 		if (this.tags.Length == 0)
@@ -217,14 +217,14 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		return false;
 	}
 
-	// Token: 0x06000367 RID: 871 RVA: 0x00004730 File Offset: 0x00002930
+
 	public void RemoveItem()
 	{
 		this.currentItem = null;
 		this.UpdateCell();
 	}
 
-	// Token: 0x06000368 RID: 872 RVA: 0x00013DDC File Offset: 0x00011FDC
+
 	private void DoubleClick()
 	{
 		InventoryItem currentMouseItem = InventoryUI.Instance.currentMouseItem;
@@ -252,7 +252,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		InventoryUI.Instance.PickupItem(currentMouseItem);
 	}
 
-	// Token: 0x06000369 RID: 873 RVA: 0x00013EEC File Offset: 0x000120EC
+
 	private bool ShiftClick()
 	{
 		if (this.cellType != InventoryCell.CellType.Chest)
@@ -282,7 +282,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		return true;
 	}
 
-	// Token: 0x0600036A RID: 874 RVA: 0x00013FA4 File Offset: 0x000121A4
+
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		this.SetColor(this.hover);
@@ -324,7 +324,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		}
 	}
 
-	// Token: 0x0600036B RID: 875 RVA: 0x0000473F File Offset: 0x0000293F
+
 	public void Eat(int amount)
 	{
 		this.currentItem.amount -= amount;
@@ -335,91 +335,91 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 		this.UpdateCell();
 	}
 
-	// Token: 0x0600036C RID: 876 RVA: 0x0000476E File Offset: 0x0000296E
+
 	public void OnPointerExit(PointerEventData eventData)
 	{
 		this.SetColor(this.idle);
 		ItemInfo.Instance.Fade(0f, 0.2f);
 	}
 
-	// Token: 0x0600036D RID: 877 RVA: 0x00002147 File Offset: 0x00000347
+
 	public void SetColor(Color c)
 	{
 	}
 
-	// Token: 0x0600036E RID: 878 RVA: 0x00002147 File Offset: 0x00000347
+
 	public void AddItemToChest(InventoryItem item)
 	{
 	}
 
-	// Token: 0x0600036F RID: 879 RVA: 0x00002147 File Offset: 0x00000347
+
 	public void AddItemToCauldron()
 	{
 	}
 
-	// Token: 0x06000370 RID: 880 RVA: 0x00002147 File Offset: 0x00000347
+
 	public void AddItemToFurnace()
 	{
 	}
 
-	// Token: 0x06000371 RID: 881 RVA: 0x00004790 File Offset: 0x00002990
+
 	public void SetOverlayAlpha(float f)
 	{
 		MonoBehaviour.print("overlay set to: " + f);
 		this.overlay.color = new Color(0f, 0f, 0f, f);
 	}
 
-	// Token: 0x04000331 RID: 817
+
 	public InventoryCell.CellType cellType;
 
-	// Token: 0x04000332 RID: 818
+
 	public TextMeshProUGUI amount;
 
-	// Token: 0x04000333 RID: 819
+
 	public Image itemImage;
 
-	// Token: 0x04000334 RID: 820
+
 	public RawImage slot;
 
-	// Token: 0x04000335 RID: 821
+
 	[HideInInspector]
 	public InventoryItem currentItem;
 
-	// Token: 0x04000336 RID: 822
+
 	public InventoryItem spawnItem;
 
-	// Token: 0x04000337 RID: 823
+
 	public int cellId;
 
-	// Token: 0x04000338 RID: 824
+
 	public Color idle;
 
-	// Token: 0x04000339 RID: 825
+
 	public Color hover;
 
-	// Token: 0x0400033A RID: 826
+
 	private bool ready = true;
 
-	// Token: 0x0400033B RID: 827
+
 	private float lastClickTime;
 
-	// Token: 0x0400033C RID: 828
+
 	private float doubleClickThreshold = 0.15f;
 
-	// Token: 0x0400033D RID: 829
+
 	public InventoryItem.ItemTag[] tags;
 
-	// Token: 0x0400033E RID: 830
+
 	public RawImage overlay;
 
-	// Token: 0x02000094 RID: 148
+
 	public enum CellType
 	{
-		// Token: 0x04000340 RID: 832
+
 		Inventory,
-		// Token: 0x04000341 RID: 833
+
 		Crafting,
-		// Token: 0x04000342 RID: 834
+
 		Chest
 	}
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020000D5 RID: 213
+
 public class ServerHandle
 {
-	// Token: 0x0600055A RID: 1370 RVA: 0x0001C6B8 File Offset: 0x0001A8B8
+
 	public static void WelcomeReceived(int fromClient, Packet packet)
 	{
 		int num = packet.ReadInt(true);
@@ -24,7 +24,7 @@ public class ServerHandle
 		Server.clients[fromClient].SendIntoGame();
 	}
 
-	// Token: 0x0600055B RID: 1371 RVA: 0x0001C768 File Offset: 0x0001A968
+
 	public static void JoinRequest(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player.joined)
@@ -38,7 +38,7 @@ public class ServerHandle
 		ServerSend.Welcome(fromClient, "weclome");
 	}
 
-	// Token: 0x0600055C RID: 1372 RVA: 0x00005802 File Offset: 0x00003A02
+
 	public static void StartedLoading(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player.loading)
@@ -48,7 +48,7 @@ public class ServerHandle
 		Server.clients[fromClient].player.loading = true;
 	}
 
-	// Token: 0x0600055D RID: 1373 RVA: 0x0001C7F4 File Offset: 0x0001A9F4
+
 	public static void PlayerFinishedLoading(int fromClient, Packet packet)
 	{
 		Debug.Log("Player finished loading: " + fromClient);
@@ -93,7 +93,7 @@ public class ServerHandle
 		}
 	}
 
-	// Token: 0x0600055E RID: 1374 RVA: 0x00005832 File Offset: 0x00003A32
+
 	public static void PlayerDisconnect(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -103,7 +103,7 @@ public class ServerHandle
 		ServerHandle.DisconnectPlayer(fromClient);
 	}
 
-	// Token: 0x0600055F RID: 1375 RVA: 0x0001C910 File Offset: 0x0001AB10
+
 	public static void DisconnectPlayer(int fromClient)
 	{
 		ServerSend.DisconnectPlayer(fromClient);
@@ -119,7 +119,7 @@ public class ServerHandle
 		Server.clients[fromClient] = null;
 	}
 
-	// Token: 0x06000560 RID: 1376 RVA: 0x0000584D File Offset: 0x00003A4D
+
 	public static void SpawnPlayersRequest(int fromClient, Packet packet)
 	{
 		Debug.Log("received request to spawn players");
@@ -130,7 +130,7 @@ public class ServerHandle
 		Server.clients[fromClient].SendIntoGame();
 	}
 
-	// Token: 0x06000561 RID: 1377 RVA: 0x0001C97C File Offset: 0x0001AB7C
+
 	public static void PlayerHp(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -144,7 +144,7 @@ public class ServerHandle
 		ServerSend.PlayerHp(fromClient, hpRatio);
 	}
 
-	// Token: 0x06000562 RID: 1378 RVA: 0x0001C9D0 File Offset: 0x0001ABD0
+
 	public static void PlayerDied(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -166,7 +166,7 @@ public class ServerHandle
 		}
 	}
 
-	// Token: 0x06000563 RID: 1379 RVA: 0x0001CA9C File Offset: 0x0001AC9C
+
 	public static void RevivePlayer(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -204,7 +204,7 @@ public class ServerHandle
 		ServerSend.RevivePlayer(fromClient, num, flag, num2);
 	}
 
-	// Token: 0x06000564 RID: 1380 RVA: 0x0001CBEC File Offset: 0x0001ADEC
+
 	public static void PlayerPosition(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -216,7 +216,7 @@ public class ServerHandle
 		ServerSend.PlayerPosition(Server.clients[fromClient].player, 0);
 	}
 
-	// Token: 0x06000565 RID: 1381 RVA: 0x0001CC40 File Offset: 0x0001AE40
+
 	public static void PlayerRotation(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -230,7 +230,7 @@ public class ServerHandle
 		ServerSend.PlayerRotation(Server.clients[fromClient].player);
 	}
 
-	// Token: 0x06000566 RID: 1382 RVA: 0x0001CCB4 File Offset: 0x0001AEB4
+
 	public static void ItemDropped(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -244,7 +244,7 @@ public class ServerHandle
 		ServerSend.DropItem(fromClient, itemId, amount, nextId);
 	}
 
-	// Token: 0x06000567 RID: 1383 RVA: 0x0001CD08 File Offset: 0x0001AF08
+
 	public static void ItemDroppedAtPosition(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -259,7 +259,7 @@ public class ServerHandle
 		ServerSend.DropItemAtPosition(num, amount, nextId, pos);
 	}
 
-	// Token: 0x06000568 RID: 1384 RVA: 0x0001CD64 File Offset: 0x0001AF64
+
 	public static void ItemPickedUp(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -299,7 +299,7 @@ public class ServerHandle
 		ServerSend.PickupItem(fromClient, num);
 	}
 
-	// Token: 0x06000569 RID: 1385 RVA: 0x0001CEB8 File Offset: 0x0001B0B8
+
 	public static void ItemInteract(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -320,7 +320,7 @@ public class ServerHandle
 		}
 	}
 
-	// Token: 0x0600056A RID: 1386 RVA: 0x0001CF30 File Offset: 0x0001B130
+
 	public static void WeaponInHand(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -331,7 +331,7 @@ public class ServerHandle
 		ServerSend.WeaponInHand(fromClient, objectID);
 	}
 
-	// Token: 0x0600056B RID: 1387 RVA: 0x0001CF60 File Offset: 0x0001B160
+
 	public static void AnimationUpdate(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -347,7 +347,7 @@ public class ServerHandle
 		ServerSend.AnimationUpdate(fromClient, animation, b);
 	}
 
-	// Token: 0x0600056C RID: 1388 RVA: 0x0001CFAC File Offset: 0x0001B1AC
+
 	public static void ShootArrow(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -365,7 +365,7 @@ public class ServerHandle
 		ServerSend.ShootArrow(pos, rot, force, arrowId, fromClient);
 	}
 
-	// Token: 0x0600056D RID: 1389 RVA: 0x0001D008 File Offset: 0x0001B208
+
 	public static void RequestChest(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -394,7 +394,7 @@ public class ServerHandle
 		}
 	}
 
-	// Token: 0x0600056E RID: 1390 RVA: 0x0001D084 File Offset: 0x0001B284
+
 	public static void UpdateChest(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -411,7 +411,7 @@ public class ServerHandle
 		ServerSend.UpdateChest(fromClient, chestId, cellId, itemId, amount);
 	}
 
-	// Token: 0x0600056F RID: 1391 RVA: 0x0001D0F0 File Offset: 0x0001B2F0
+
 	public static void RequestBuild(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -434,7 +434,7 @@ public class ServerHandle
 		ServerSend.SendBuild(fromClient, num, num3, vector, num2);
 	}
 
-	// Token: 0x06000570 RID: 1392 RVA: 0x0001D174 File Offset: 0x0001B374
+
 	public static void PlayerHitObject(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -466,7 +466,7 @@ public class ServerHandle
 		ServerSend.PlayerHitObject(fromClient, num2, num3, hitEffect, pos);
 	}
 
-	// Token: 0x06000571 RID: 1393 RVA: 0x0001D248 File Offset: 0x0001B448
+
 	public static void SpawnEffect(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -478,7 +478,7 @@ public class ServerHandle
 		ServerSend.SpawnEffect(effectId, pos, fromClient);
 	}
 
-	// Token: 0x06000572 RID: 1394 RVA: 0x0001D280 File Offset: 0x0001B480
+
 	public static void PlayerHit(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -536,13 +536,13 @@ public class ServerHandle
 		ServerSend.HitPlayer(fromClient, num4, num6, num2, hitEffect, pos);
 	}
 
-	// Token: 0x06000573 RID: 1395 RVA: 0x0000587C File Offset: 0x00003A7C
+
 	public static void PlayerRequestedSpawns(int fromClient, Packet packet)
 	{
 		Debug.LogError("Player requested spawns, but method is not implemented");
 	}
 
-	// Token: 0x06000574 RID: 1396 RVA: 0x0001D454 File Offset: 0x0001B654
+
 	public static void Ready(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -555,7 +555,7 @@ public class ServerHandle
 		Server.clients[fromClient].player.ready = ready;
 	}
 
-	// Token: 0x06000575 RID: 1397 RVA: 0x0001D4B0 File Offset: 0x0001B6B0
+
 	public static void PingReceived(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -567,7 +567,7 @@ public class ServerHandle
 		ServerSend.PingPlayer(fromClient, ms);
 	}
 
-	// Token: 0x06000576 RID: 1398 RVA: 0x0001D4F4 File Offset: 0x0001B6F4
+
 	public static void ShrineCombatStartRequest(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -591,7 +591,7 @@ public class ServerHandle
 		}
 	}
 
-	// Token: 0x06000577 RID: 1399 RVA: 0x0001D574 File Offset: 0x0001B774
+
 	public static void Interact(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -616,7 +616,7 @@ public class ServerHandle
 		}
 	}
 
-	// Token: 0x06000578 RID: 1400 RVA: 0x0001D5F4 File Offset: 0x0001B7F4
+
 	public static void PlayerDamageMob(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -682,7 +682,7 @@ public class ServerHandle
 		ServerSend.PlayerHitMob(fromClient, num, num5, num3, pos);
 	}
 
-	// Token: 0x06000579 RID: 1401 RVA: 0x0001D81C File Offset: 0x0001BA1C
+
 	public static void ReceiveChatMessage(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -694,7 +694,7 @@ public class ServerHandle
 		ServerSend.SendChatMessage(fromClient, username, msg);
 	}
 
-	// Token: 0x0600057A RID: 1402 RVA: 0x0001D860 File Offset: 0x0001BA60
+
 	public static void ReceivePing(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)
@@ -706,7 +706,7 @@ public class ServerHandle
 		ServerSend.SendPing(fromClient, pos, username);
 	}
 
-	// Token: 0x0600057B RID: 1403 RVA: 0x0001D8A4 File Offset: 0x0001BAA4
+
 	public static void ReceiveArmor(int fromClient, Packet packet)
 	{
 		if (Server.clients[fromClient].player == null)

@@ -2,15 +2,15 @@
 using Steamworks;
 using UnityEngine;
 
-// Token: 0x0200002E RID: 46
+
 public class GameLoop : MonoBehaviour
 {
-	// Token: 0x17000009 RID: 9
-	// (get) Token: 0x060000F3 RID: 243 RVA: 0x00002D00 File Offset: 0x00000F00
-	// (set) Token: 0x060000F4 RID: 244 RVA: 0x00002D07 File Offset: 0x00000F07
+
+
+
 	public static int currentMobCap { get; set; } = 999;
 
-	// Token: 0x060000F5 RID: 245 RVA: 0x0000AF6C File Offset: 0x0000916C
+
 	private void ResetBossRotations()
 	{
 		this.bossRotation = new List<MobType>();
@@ -20,7 +20,7 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000F6 RID: 246 RVA: 0x00002D0F File Offset: 0x00000F0F
+
 	private void Update()
 	{
 		if (!LocalClient.serverOwner)
@@ -38,14 +38,14 @@ public class GameLoop : MonoBehaviour
 		this.DayLoop();
 	}
 
-	// Token: 0x060000F7 RID: 247 RVA: 0x00002D36 File Offset: 0x00000F36
+
 	private void Awake()
 	{
 		GameLoop.Instance = this;
 		this.ResetBossRotations();
 	}
 
-	// Token: 0x060000F8 RID: 248 RVA: 0x0000AFAC File Offset: 0x000091AC
+
 	public void StartLoop()
 	{
 		if (!LocalClient.serverOwner)
@@ -66,7 +66,7 @@ public class GameLoop : MonoBehaviour
 		base.InvokeRepeating(nameof(TimeoutPlayers), 2f, 2f);
 	}
 
-	// Token: 0x060000F9 RID: 249 RVA: 0x0000B034 File Offset: 0x00009234
+
 	private void NewDay(int day)
 	{
 		if (GameManager.instance.GetPlayersAlive() <= 0)
@@ -86,7 +86,7 @@ public class GameLoop : MonoBehaviour
 		MusicController.Instance.PlaySong(MusicController.SongType.Day, true);
 	}
 
-	// Token: 0x060000FA RID: 250 RVA: 0x0000B0D4 File Offset: 0x000092D4
+
 	private void FindMobCap()
 	{
 		int num = GameManager.instance.GetPlayersInLobby();
@@ -111,7 +111,7 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000FB RID: 251 RVA: 0x0000B194 File Offset: 0x00009394
+
 	private void DayLoop()
 	{
 		int num = Mathf.FloorToInt(DayCycle.totalTime);
@@ -127,7 +127,7 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000FC RID: 252 RVA: 0x0000B1EC File Offset: 0x000093EC
+
 	private void StartNight()
 	{
 		if (this.currentDay != 0 && this.currentDay % GameManager.gameSettings.BossDay() == 0 && GameManager.gameSettings.gameMode == GameSettings.GameMode.Survival)
@@ -153,14 +153,14 @@ public class GameLoop : MonoBehaviour
 		base.Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x, this.checkMobUpdateInterval.y));
 	}
 
-	// Token: 0x060000FD RID: 253 RVA: 0x0000B2C8 File Offset: 0x000094C8
+
 	public void StartBoss(MobType bossMob)
 	{
 		float bossMultiplier = 0.85f + 0.15f * (float)GameManager.instance.GetPlayersAlive();
 		this.SpawnMob(bossMob, this.FindBossPosition(), 1f, bossMultiplier, Mob.BossType.BossNight, true);
 	}
 
-	// Token: 0x060000FE RID: 254 RVA: 0x0000B304 File Offset: 0x00009504
+
 	private void CheckMobSpawns()
 	{
 		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative)
@@ -196,7 +196,7 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000FF RID: 255 RVA: 0x0000B3F8 File Offset: 0x000095F8
+
 	private int FindRandomAlivePlayer()
 	{
 		List<int> list = new List<int>();
@@ -214,7 +214,7 @@ public class GameLoop : MonoBehaviour
 		return list[Random.Range(0, list.Count)];
 	}
 
-	// Token: 0x06000100 RID: 256 RVA: 0x0000B488 File Offset: 0x00009688
+
 	public MobType SelectMobToSpawn(bool shrine = false)
 	{
 		float num = Random.Range(0f, 1f);
@@ -237,7 +237,7 @@ public class GameLoop : MonoBehaviour
 		return this.mobs[0].mob;
 	}
 
-	// Token: 0x06000101 RID: 257 RVA: 0x0000B528 File Offset: 0x00009728
+
 	private Vector3 FindPositionAroundPlayer(int selectedPlayerId)
 	{
 		Vector3 a;
@@ -260,13 +260,13 @@ public class GameLoop : MonoBehaviour
 		return Vector3.zero;
 	}
 
-	// Token: 0x06000102 RID: 258 RVA: 0x00002D44 File Offset: 0x00000F44
+
 	private Vector3 FindBossPosition()
 	{
 		return this.FindPositionAroundPlayer(this.FindRandomAlivePlayer());
 	}
 
-	// Token: 0x06000103 RID: 259 RVA: 0x0000B600 File Offset: 0x00009800
+
 	private int SpawnMob(MobType mob, Vector3 pos, float multiplier = 1f, float bossMultiplier = 1f, Mob.BossType bossType = Mob.BossType.None, bool bypassCap = false)
 	{
 		float num = 0.01f + Mathf.Clamp((float)this.currentDay * 0.01f, 0.05f, 0.3f);
@@ -283,7 +283,7 @@ public class GameLoop : MonoBehaviour
 		return nextId;
 	}
 
-	// Token: 0x06000104 RID: 260 RVA: 0x0000B690 File Offset: 0x00009890
+
 	private float CalculateSpawnWeights(int day)
 	{
 		float num = 0f;
@@ -308,7 +308,7 @@ public class GameLoop : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06000105 RID: 261 RVA: 0x0000B71C File Offset: 0x0000991C
+
 	public void TimeoutPlayers()
 	{
 		foreach (Client client in Server.clients.Values)
@@ -333,63 +333,63 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040000FC RID: 252
+
 	public int currentDay = -1;
 
-	// Token: 0x040000FD RID: 253
+
 	private Vector2 maxCheckMobUpdateInterval = new Vector2(3f, 10f);
 
-	// Token: 0x040000FE RID: 254
+
 	private Vector2 checkMobUpdateInterval = new Vector2(3f, 10f);
 
-	// Token: 0x040000FF RID: 255
+
 	public GameLoop.MobSpawn[] mobs;
 
-	// Token: 0x04000100 RID: 256
+
 	private int activeMobs;
 
-	// Token: 0x04000101 RID: 257
+
 	private int maxMobCap = 999;
 
-	// Token: 0x04000103 RID: 259
+
 	private float totalWeight;
 
-	// Token: 0x04000104 RID: 260
+
 	public LayerMask whatIsSpawnable;
 
-	// Token: 0x04000105 RID: 261
+
 	[Header("Boss Stuff")]
 	public MobType[] bosses;
 
-	// Token: 0x04000106 RID: 262
+
 	private List<MobType> bossRotation;
 
-	// Token: 0x04000107 RID: 263
+
 	public static GameLoop Instance;
 
-	// Token: 0x04000108 RID: 264
+
 	private bool nightStarted;
 
-	// Token: 0x04000109 RID: 265
+
 	private bool bossNight;
 
-	// Token: 0x0200002F RID: 47
+
 	[System.Serializable]
 	public class MobSpawn
 	{
-		// Token: 0x0400010A RID: 266
+
 		public MobType mob;
 
-		// Token: 0x0400010B RID: 267
+
 		public int dayStart;
 
-		// Token: 0x0400010C RID: 268
+
 		public int dayPeak;
 
-		// Token: 0x0400010D RID: 269
+
 		public float maxWeight;
 
-		// Token: 0x0400010E RID: 270
+
 		public float currentWeight;
 	}
 }

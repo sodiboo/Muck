@@ -2,16 +2,16 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000045 RID: 69
+
 public class InventoryStats : MonoBehaviour
 {
-	// Token: 0x06000163 RID: 355 RVA: 0x0000313C File Offset: 0x0000133C
+
 	private void OnEnable()
 	{
 		this.UpdateStats();
 	}
 
-	// Token: 0x06000164 RID: 356 RVA: 0x0000D634 File Offset: 0x0000B834
+
 	private void UpdateStats()
 	{
 		int maxHp = PlayerStatus.Instance.maxHp;
@@ -36,7 +36,7 @@ public class InventoryStats : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06000165 RID: 357 RVA: 0x0000D744 File Offset: 0x0000B944
+
 	private int FindMaxHit()
 	{
 		InventoryItem currentItem = Hotbar.Instance.currentItem;
@@ -52,9 +52,9 @@ public class InventoryStats : MonoBehaviour
 		return (int)((float)num * PowerupCalculations.Instance.GetMaxMultiplier().damageMultiplier);
 	}
 
-	// Token: 0x04000177 RID: 375
+
 	public TextMeshProUGUI text;
 
-	// Token: 0x04000178 RID: 376
+
 	public TextMeshProUGUI numbersText;
 }

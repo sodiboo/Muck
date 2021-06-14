@@ -2,10 +2,10 @@
 using Steamworks.Data;
 using UnityEngine;
 
-// Token: 0x020000F4 RID: 244
+
 public class SteamPacketManager : MonoBehaviour
 {
-	// Token: 0x06000678 RID: 1656 RVA: 0x00006279 File Offset: 0x00004479
+
 	private void Start()
 	{
 		DontDestroyOnLoad(base.gameObject);
@@ -13,14 +13,14 @@ public class SteamPacketManager : MonoBehaviour
 		LocalClient.InitializeClientData();
 	}
 
-	// Token: 0x06000679 RID: 1657 RVA: 0x00006290 File Offset: 0x00004490
+
 	private void Update()
 	{
 		SteamClient.RunCallbacks();
 		this.CheckForPackets();
 	}
 
-	// Token: 0x0600067A RID: 1658 RVA: 0x00021F90 File Offset: 0x00020190
+
 	private void CheckForPackets()
 	{
 		for (int i = 0; i < 2; i++)
@@ -35,7 +35,7 @@ public class SteamPacketManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600067B RID: 1659 RVA: 0x00021FC8 File Offset: 0x000201C8
+
 	private static void HandlePacket(P2Packet? p2Packet, int channel)
 	{
 		if (p2Packet == null)
@@ -70,7 +70,7 @@ public class SteamPacketManager : MonoBehaviour
 		LocalClient.packetHandlers[key](packet);
 	}
 
-	// Token: 0x0600067C RID: 1660 RVA: 0x000220C8 File Offset: 0x000202C8
+
 	public static void SendPacket(SteamId steamId, Packet p, P2PSend p2pSend, SteamPacketManager.NetworkChannel channel)
 	{
 		int length = p.Length();
@@ -87,13 +87,13 @@ public class SteamPacketManager : MonoBehaviour
 		}), (int)channel);
 	}
 
-	// Token: 0x0600067D RID: 1661 RVA: 0x0000629D File Offset: 0x0000449D
+
 	private void OnApplicationQuit()
 	{
 		SteamPacketManager.CloseConnections();
 	}
 
-	// Token: 0x0600067E RID: 1662 RVA: 0x00022140 File Offset: 0x00020340
+
 	public static void CloseConnections()
 	{
 		foreach (ulong value in SteamLobby.steamIdToClientId.Keys)
@@ -111,12 +111,12 @@ public class SteamPacketManager : MonoBehaviour
 		SteamClient.Shutdown();
 	}
 
-	// Token: 0x020000F5 RID: 245
+
 	public enum NetworkChannel
 	{
-		// Token: 0x04000668 RID: 1640
+
 		ToClient,
-		// Token: 0x04000669 RID: 1641
+
 		ToServer
 	}
 }

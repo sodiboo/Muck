@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000027 RID: 39
+
 public class EnemyHpBarsManager : MonoBehaviour
 {
-	// Token: 0x060000CF RID: 207 RVA: 0x0000A658 File Offset: 0x00008858
+
 	private void Awake()
 	{
 		this.onMobs = new List<GameObject>();
@@ -17,7 +17,7 @@ public class EnemyHpBarsManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D0 RID: 208 RVA: 0x0000A6C0 File Offset: 0x000088C0
+
 	private void Update()
 	{
 		if (!this.camera)
@@ -74,7 +74,7 @@ public class EnemyHpBarsManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D1 RID: 209 RVA: 0x0000A84C File Offset: 0x00008A4C
+
 	private MobHpBar FindAvailableHpBar(RaycastHit hit)
 	{
 		foreach (MobHpBar mobHpBar in this.hpBars)
@@ -87,24 +87,24 @@ public class EnemyHpBarsManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x040000D6 RID: 214
+
 	public GameObject hpBarPrefab;
 
-	// Token: 0x040000D7 RID: 215
+
 	private int nHpBars = 5;
 
-	// Token: 0x040000D8 RID: 216
+
 	private MobHpBar[] hpBars;
 
-	// Token: 0x040000D9 RID: 217
+
 	private float[] distances;
 
-	// Token: 0x040000DA RID: 218
+
 	private List<GameObject> onMobs;
 
-	// Token: 0x040000DB RID: 219
+
 	private Transform camera;
 
-	// Token: 0x040000DC RID: 220
+
 	public LayerMask whatIsEnemy;
 }

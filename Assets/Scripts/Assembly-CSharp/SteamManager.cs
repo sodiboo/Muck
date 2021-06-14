@@ -7,21 +7,21 @@ using Steamworks.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Token: 0x0200013B RID: 315
+
 public class SteamManager : MonoBehaviour
 {
-	// Token: 0x17000054 RID: 84
-	// (get) Token: 0x06000792 RID: 1938 RVA: 0x00007059 File Offset: 0x00005259
-	// (set) Token: 0x06000793 RID: 1939 RVA: 0x00007061 File Offset: 0x00005261
+
+
+
 	public string PlayerName { get; set; }
 
-	// Token: 0x17000055 RID: 85
-	// (get) Token: 0x06000794 RID: 1940 RVA: 0x0000706A File Offset: 0x0000526A
-	// (set) Token: 0x06000795 RID: 1941 RVA: 0x00007072 File Offset: 0x00005272
+
+
+
 	public SteamId PlayerSteamId { get; set; }
 
-	// Token: 0x17000056 RID: 86
-	// (get) Token: 0x06000796 RID: 1942 RVA: 0x0000707B File Offset: 0x0000527B
+
+
 	public string PlayerSteamIdString
 	{
 		get
@@ -30,9 +30,9 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000057 RID: 87
-	// (get) Token: 0x06000797 RID: 1943 RVA: 0x00007083 File Offset: 0x00005283
-	// (set) Token: 0x06000798 RID: 1944 RVA: 0x0000708B File Offset: 0x0000528B
+
+
+
 	public Friend LobbyPartner
 	{
 		get
@@ -45,17 +45,17 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000058 RID: 88
-	// (get) Token: 0x06000799 RID: 1945 RVA: 0x00007094 File Offset: 0x00005294
-	// (set) Token: 0x0600079A RID: 1946 RVA: 0x0000709C File Offset: 0x0000529C
+
+
+
 	public SteamId lobbyOwnerSteamId { get; set; }
 
-	// Token: 0x17000059 RID: 89
-	// (get) Token: 0x0600079B RID: 1947 RVA: 0x000070A5 File Offset: 0x000052A5
-	// (set) Token: 0x0600079C RID: 1948 RVA: 0x000070AD File Offset: 0x000052AD
+
+
+
 	public bool LobbyPartnerDisconnected { get; set; }
 
-	// Token: 0x0600079D RID: 1949 RVA: 0x00025870 File Offset: 0x00023A70
+
 	public void Awake()
 	{
 		if (SteamManager.Instance == null)
@@ -96,7 +96,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600079E RID: 1950 RVA: 0x00025984 File Offset: 0x00023B84
+
 	public bool TryToReconnectToSteam()
 	{
 		Debug.Log("Attempting to reconnect to Steam");
@@ -127,25 +127,25 @@ public class SteamManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x0600079F RID: 1951 RVA: 0x000070B6 File Offset: 0x000052B6
+
 	public bool ConnectedToSteam()
 	{
 		return this.connectedToSteam;
 	}
 
-	// Token: 0x060007A0 RID: 1952 RVA: 0x000070BE File Offset: 0x000052BE
+
 	public void StartLobby()
 	{
 		this.CreateLobby(0);
 	}
 
-	// Token: 0x060007A1 RID: 1953 RVA: 0x000070C8 File Offset: 0x000052C8
+
 	public void StopLobby()
 	{
 		this.leaveLobby();
 	}
 
-	// Token: 0x060007A2 RID: 1954 RVA: 0x00025A34 File Offset: 0x00023C34
+
 	private void Start()
 	{
 		SteamMatchmaking.OnLobbyGameCreated += this.OnLobbyGameCreatedCallback;
@@ -160,13 +160,13 @@ public class SteamManager : MonoBehaviour
 		this.UpdateRichPresenceStatus(SceneManager.GetActiveScene().name);
 	}
 
-	// Token: 0x060007A3 RID: 1955 RVA: 0x000070D0 File Offset: 0x000052D0
+
 	private void Update()
 	{
 		SteamClient.RunCallbacks();
 	}
 
-	// Token: 0x060007A4 RID: 1956 RVA: 0x000070D7 File Offset: 0x000052D7
+
 	private void OnDisable()
 	{
 		if (this.daRealOne)
@@ -175,7 +175,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007A5 RID: 1957 RVA: 0x000070D7 File Offset: 0x000052D7
+
 	private void OnDestroy()
 	{
 		if (this.daRealOne)
@@ -184,7 +184,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007A6 RID: 1958 RVA: 0x000070D7 File Offset: 0x000052D7
+
 	private void OnApplicationQuit()
 	{
 		if (this.daRealOne)
@@ -193,7 +193,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007A7 RID: 1959 RVA: 0x000070E7 File Offset: 0x000052E7
+
 	private void gameCleanup()
 	{
 		if (!this.applicationHasQuit)
@@ -204,19 +204,19 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007A8 RID: 1960 RVA: 0x00007103 File Offset: 0x00005303
+
 	private void OnLobbyMemberDisconnectedCallback(Lobby lobby, Friend friend)
 	{
 		this.OtherLobbyMemberLeft(friend);
 	}
 
-	// Token: 0x060007A9 RID: 1961 RVA: 0x00007103 File Offset: 0x00005303
+
 	private void OnLobbyMemberLeaveCallback(Lobby lobby, Friend friend)
 	{
 		this.OtherLobbyMemberLeft(friend);
 	}
 
-	// Token: 0x060007AA RID: 1962 RVA: 0x00025AF0 File Offset: 0x00023CF0
+
 	private void OtherLobbyMemberLeft(Friend friend)
 	{
 		if (friend.Id.Value == this.PlayerSteamId.Value)
@@ -253,12 +253,12 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007AB RID: 1963 RVA: 0x00002147 File Offset: 0x00000347
+
 	private void OnLobbyGameCreatedCallback(Lobby lobby, uint ip, ushort port, SteamId steamId)
 	{
 	}
 
-	// Token: 0x060007AC RID: 1964 RVA: 0x00025BE8 File Offset: 0x00023DE8
+
 	public async void JoinLobby(Lobby lobby)
 	{
 		if (lobby.Id.Value == this.currentLobby.Id.Value)
@@ -284,7 +284,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007AD RID: 1965 RVA: 0x00025C2C File Offset: 0x00023E2C
+
 	private void AcceptP2P(SteamId opponentId)
 	{
 		try
@@ -297,7 +297,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007AE RID: 1966 RVA: 0x0000710C File Offset: 0x0000530C
+
 	private void OnChatMessageCallback(Lobby lobby, Friend friend, string message)
 	{
 		if (friend.Id != this.PlayerSteamId)
@@ -308,7 +308,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007AF RID: 1967 RVA: 0x00025C60 File Offset: 0x00023E60
+
 	private void OnLobbyEnteredCallback(Lobby lobby)
 	{
 		if (lobby.MemberCount < 1)
@@ -341,7 +341,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007B0 RID: 1968 RVA: 0x00025D28 File Offset: 0x00023F28
+
 	private async void OnGameLobbyJoinRequestedCallback(Lobby joinedLobby, SteamId id)
 	{
 		Debug.LogError("trying to join lobby");
@@ -368,7 +368,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007B1 RID: 1969 RVA: 0x00025D6C File Offset: 0x00023F6C
+
 	private void OnLobbyCreatedCallback(Result result, Lobby lobby)
 	{
 		Debug.LogError("lobbyu created opkay");
@@ -384,7 +384,7 @@ public class SteamManager : MonoBehaviour
 		SteamLobby.Instance.StartLobby(this.PlayerSteamId, lobby);
 	}
 
-	// Token: 0x060007B2 RID: 1970 RVA: 0x00025DF4 File Offset: 0x00023FF4
+
 	private void OnLobbyMemberJoinedCallback(Lobby lobby, Friend friend)
 	{
 		Debug.Log("someone else joined lobby");
@@ -402,7 +402,7 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007B3 RID: 1971 RVA: 0x00025E94 File Offset: 0x00024094
+
 	public void leaveLobby()
 	{
 		try
@@ -440,7 +440,7 @@ public class SteamManager : MonoBehaviour
 		this.currentLobby = default(Lobby);
 	}
 
-	// Token: 0x060007B4 RID: 1972 RVA: 0x00025F68 File Offset: 0x00024168
+
 	public async Task<bool> CreateFriendLobby()
 	{
 		bool result;
@@ -468,7 +468,7 @@ public class SteamManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x060007B5 RID: 1973 RVA: 0x00025FB0 File Offset: 0x000241B0
+
 	public async Task<bool> CreateLobby(int lobbyParameters)
 	{
 		bool result;
@@ -499,19 +499,19 @@ public class SteamManager : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x060007B6 RID: 1974 RVA: 0x00007143 File Offset: 0x00005343
+
 	public void OpenFriendOverlayForGameInvite()
 	{
 		SteamFriends.OpenGameInviteOverlay(this.currentLobby.Id);
 	}
 
-	// Token: 0x060007B7 RID: 1975 RVA: 0x00007155 File Offset: 0x00005355
+
 	private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 	{
 		this.UpdateRichPresenceStatus(scene.name);
 	}
 
-	// Token: 0x060007B8 RID: 1976 RVA: 0x00025FF8 File Offset: 0x000241F8
+
 	public void UpdateRichPresenceStatus(string SceneName)
 	{
 		if (this.connectedToSteam)
@@ -529,39 +529,39 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040007D0 RID: 2000
+
 	public static SteamManager Instance;
 
-	// Token: 0x040007D1 RID: 2001
+
 	private static uint gameAppId = 1625450U;
 
-	// Token: 0x040007D4 RID: 2004
+
 	private string playerSteamIdString;
 
-	// Token: 0x040007D5 RID: 2005
+
 	private bool connectedToSteam;
 
-	// Token: 0x040007D6 RID: 2006
+
 	private Friend lobbyPartner;
 
-	// Token: 0x040007D9 RID: 2009
+
 	public List<Lobby> activeUnrankedLobbies;
 
-	// Token: 0x040007DA RID: 2010
+
 	public List<Lobby> activeRankedLobbies;
 
-	// Token: 0x040007DB RID: 2011
+
 	public Lobby currentLobby;
 
-	// Token: 0x040007DC RID: 2012
+
 	private Lobby hostedMultiplayerLobby;
 
-	// Token: 0x040007DD RID: 2013
+
 	private SteamId originalLobbyOwnerId;
 
-	// Token: 0x040007DE RID: 2014
+
 	private bool applicationHasQuit;
 
-	// Token: 0x040007DF RID: 2015
+
 	private bool daRealOne;
 }

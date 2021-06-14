@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000082 RID: 130
+
 public class FurnaceSync : Chest
 {
-	// Token: 0x060002D6 RID: 726 RVA: 0x00004122 File Offset: 0x00002322
+
 	public float ProgressRatio()
 	{
 		return this.currentProcessTime / this.timeToProcess;
 	}
 
-	// Token: 0x060002D7 RID: 727 RVA: 0x000129C8 File Offset: 0x00010BC8
+
 	public override void UpdateCraftables()
 	{
 		if (this.processing && this.CanProcess() && (this.currentFuel.id != this.cells[0].id || this.currentMetal.id != this.cells[1].id))
@@ -28,7 +28,7 @@ public class FurnaceSync : Chest
 		}
 	}
 
-	// Token: 0x060002D8 RID: 728 RVA: 0x00012A98 File Offset: 0x00010C98
+
 	private void StartProcessing()
 	{
 		this.currentFuel = this.cells[0];
@@ -40,7 +40,7 @@ public class FurnaceSync : Chest
 		this.processing = true;
 	}
 
-	// Token: 0x060002D9 RID: 729 RVA: 0x00012B04 File Offset: 0x00010D04
+
 	private void Update()
 	{
 		if (!this.processing)
@@ -66,7 +66,7 @@ public class FurnaceSync : Chest
 		}
 	}
 
-	// Token: 0x060002DA RID: 730 RVA: 0x00004131 File Offset: 0x00002331
+
 	private void StopProcessing()
 	{
 		this.processing = false;
@@ -76,7 +76,7 @@ public class FurnaceSync : Chest
 		}
 	}
 
-	// Token: 0x060002DB RID: 731 RVA: 0x00012BC4 File Offset: 0x00010DC4
+
 	public void ProcessItem()
 	{
 		if (!LocalClient.serverOwner)
@@ -90,7 +90,7 @@ public class FurnaceSync : Chest
 		this.UpdateCraftables();
 	}
 
-	// Token: 0x060002DC RID: 732 RVA: 0x00012C20 File Offset: 0x00010E20
+
 	private void UseMaterial(InventoryItem materialItem)
 	{
 		materialItem.amount--;
@@ -103,7 +103,7 @@ public class FurnaceSync : Chest
 		ClientSend.ChestUpdate(base.id, 1, materialItem.id, materialItem.amount);
 	}
 
-	// Token: 0x060002DD RID: 733 RVA: 0x00012694 File Offset: 0x00010894
+
 	private void UseFuel(InventoryItem fuelItem)
 	{
 		ItemFuel fuel = fuelItem.fuel;
@@ -121,7 +121,7 @@ public class FurnaceSync : Chest
 		}
 	}
 
-	// Token: 0x060002DE RID: 734 RVA: 0x00012C70 File Offset: 0x00010E70
+
 	private void AddMaterial(InventoryItem item, int processedItemId)
 	{
 		if (this.cells[2] == null)
@@ -136,7 +136,7 @@ public class FurnaceSync : Chest
 		ClientSend.ChestUpdate(base.id, 2, processedItemId, this.cells[2].amount);
 	}
 
-	// Token: 0x060002DF RID: 735 RVA: 0x00012CEC File Offset: 0x00010EEC
+
 	public bool CanProcess()
 	{
 		if (!this.cells[1] || !this.cells[0])
@@ -157,24 +157,24 @@ public class FurnaceSync : Chest
 		return this.cells[1].processable && this.cells[1].processType == this.processType && this.cells[0].tag == InventoryItem.ItemTag.Fuel;
 	}
 
-	// Token: 0x040002E2 RID: 738
+
 	public InventoryItem.ProcessType processType;
 
-	// Token: 0x040002E3 RID: 739
+
 	private bool processing;
 
-	// Token: 0x040002E4 RID: 740
+
 	private float currentProcessTime;
 
-	// Token: 0x040002E5 RID: 741
+
 	private float totalProcessTime;
 
-	// Token: 0x040002E6 RID: 742
+
 	private float timeToProcess = 1f;
 
-	// Token: 0x040002E7 RID: 743
+
 	private InventoryItem currentFuel;
 
-	// Token: 0x040002E8 RID: 744
+
 	private InventoryItem currentMetal;
 }

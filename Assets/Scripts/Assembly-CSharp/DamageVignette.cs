@@ -2,16 +2,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200001C RID: 28
+
 public class DamageVignette : MonoBehaviour
 {
-	// Token: 0x0600009F RID: 159 RVA: 0x00002981 File Offset: 0x00000B81
+
 	private void Awake()
 	{
 		DamageVignette.Instance = this;
 	}
 
-	// Token: 0x060000A0 RID: 160 RVA: 0x00009924 File Offset: 0x00007B24
+
 	private void Update()
 	{
 		if (!PlayerStatus.Instance)
@@ -47,7 +47,7 @@ public class DamageVignette : MonoBehaviour
 		this.vignette.color = Color.Lerp(this.vignette.color, color, Time.deltaTime * 12f);
 	}
 
-	// Token: 0x060000A1 RID: 161 RVA: 0x000099F8 File Offset: 0x00007BF8
+
 	public void VignetteHit()
 	{
 		Color color = this.vignette.color;
@@ -55,9 +55,9 @@ public class DamageVignette : MonoBehaviour
 		this.vignette.color = color;
 	}
 
-	// Token: 0x04000096 RID: 150
+
 	public RawImage vignette;
 
-	// Token: 0x04000097 RID: 151
+
 	public static DamageVignette Instance;
 }

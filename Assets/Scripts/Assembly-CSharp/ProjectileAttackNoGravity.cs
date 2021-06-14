@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000071 RID: 113
+
 public class ProjectileAttackNoGravity : MonoBehaviour
 {
-	// Token: 0x06000272 RID: 626 RVA: 0x00003D52 File Offset: 0x00001F52
+
 	private void Awake()
 	{
 		this.mob = base.GetComponent<Mob>();
 	}
 
-	// Token: 0x06000273 RID: 627 RVA: 0x00010B74 File Offset: 0x0000ED74
+
 	private void SpawnProjectile()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -26,7 +26,7 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position, normalized, force, id, id2);
 	}
 
-	// Token: 0x06000274 RID: 628 RVA: 0x00010C34 File Offset: 0x0000EE34
+
 	public void SpawnProjectilePredictionTrajectory()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -48,7 +48,7 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position2, normalized, force, id, id2);
 	}
 
-	// Token: 0x06000275 RID: 629 RVA: 0x00010CFC File Offset: 0x0000EEFC
+
 	public void SpawnProjectilePredictNextPosition()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -76,7 +76,7 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position3, vector2, force, id, id2);
 	}
 
-	// Token: 0x06000276 RID: 630 RVA: 0x00010E0C File Offset: 0x0000F00C
+
 	private Vector3 findLaunchVelocity(Vector3 targetPosition, GameObject newProjectile)
 	{
 		if (this.useLowestLaunchAngle)
@@ -117,30 +117,30 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		return vector2;
 	}
 
-	// Token: 0x0400027F RID: 639
+
 	public InventoryItem projectile;
 
-	// Token: 0x04000280 RID: 640
+
 	public InventoryItem predictionProjectile;
 
-	// Token: 0x04000281 RID: 641
+
 	public Transform spawnPos;
 
-	// Token: 0x04000282 RID: 642
+
 	public Transform predictionPos;
 
-	// Token: 0x04000283 RID: 643
+
 	public float attackForce = 1000f;
 
-	// Token: 0x04000284 RID: 644
+
 	public float launchAngle = 40f;
 
-	// Token: 0x04000285 RID: 645
+
 	public bool useLowestLaunchAngle;
 
-	// Token: 0x04000286 RID: 646
+
 	public Vector3 angularVel;
 
-	// Token: 0x04000287 RID: 647
+
 	private Mob mob;
 }

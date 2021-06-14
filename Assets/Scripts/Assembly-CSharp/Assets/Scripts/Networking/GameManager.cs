@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Assets.Scripts.Networking
 {
-	// Token: 0x0200015A RID: 346
+
 	public class GameManager
 	{
-		// Token: 0x06000847 RID: 2119 RVA: 0x000285D4 File Offset: 0x000267D4
+
 		public static void StartGame()
 		{
 			if (GameManager.NumPlayersLeftInServer() < 4)
@@ -30,12 +30,12 @@ namespace Assets.Scripts.Networking
 			}
 		}
 
-		// Token: 0x06000848 RID: 2120 RVA: 0x00002147 File Offset: 0x00000347
+
 		public void FindSpawnPositions()
 		{
 		}
 
-		// Token: 0x06000849 RID: 2121 RVA: 0x00028668 File Offset: 0x00026868
+
 		public static int NumPlayersLeftInGame()
 		{
 			int num = 0;
@@ -49,7 +49,7 @@ namespace Assets.Scripts.Networking
 			return num;
 		}
 
-		// Token: 0x0600084A RID: 2122 RVA: 0x000286CC File Offset: 0x000268CC
+
 		public static int NumPlayersLeftAlive()
 		{
 			int num = 0;
@@ -63,7 +63,7 @@ namespace Assets.Scripts.Networking
 			return num;
 		}
 
-		// Token: 0x0600084B RID: 2123 RVA: 0x00028740 File Offset: 0x00026940
+
 		public static int NumPlayersLeftInServer()
 		{
 			int num = 0;
@@ -80,7 +80,7 @@ namespace Assets.Scripts.Networking
 			return num;
 		}
 
-		// Token: 0x0600084C RID: 2124 RVA: 0x000287A0 File Offset: 0x000269A0
+
 		public static int NumPlayersReady()
 		{
 			int num = 0;
@@ -94,7 +94,7 @@ namespace Assets.Scripts.Networking
 			return num;
 		}
 
-		// Token: 0x0400088B RID: 2187
+
 		public static GameState state;
 	}
 }

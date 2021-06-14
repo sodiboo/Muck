@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000092 RID: 146
+
 public class Hotbar : MonoBehaviour
 {
-	// Token: 0x06000359 RID: 857 RVA: 0x00013668 File Offset: 0x00011868
+
 	private void Start()
 	{
 		Hotbar.Instance = this;
@@ -15,7 +15,7 @@ public class Hotbar : MonoBehaviour
 		base.Invoke(nameof(UpdateHotbar), 1f);
 	}
 
-	// Token: 0x0600035A RID: 858 RVA: 0x000136DC File Offset: 0x000118DC
+
 	private void Update()
 	{
 		for (int i = 1; i < 8; i++)
@@ -48,7 +48,7 @@ public class Hotbar : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600035B RID: 859 RVA: 0x0001378C File Offset: 0x0001198C
+
 	public void UpdateHotbar()
 	{
 		if (this.inventoryCells[this.currentActive].currentItem != this.currentItem)
@@ -80,7 +80,7 @@ public class Hotbar : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600035C RID: 860 RVA: 0x000138E4 File Offset: 0x00011AE4
+
 	private void SendItemToServer()
 	{
 		if (this.currentItem == null)
@@ -95,7 +95,7 @@ public class Hotbar : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600035D RID: 861 RVA: 0x00013938 File Offset: 0x00011B38
+
 	public void UseItem(int n)
 	{
 		this.currentItem.amount -= n;
@@ -107,30 +107,30 @@ public class Hotbar : MonoBehaviour
 		this.UpdateHotbar();
 	}
 
-	// Token: 0x04000328 RID: 808
+
 	private InventoryCell[] cells;
 
-	// Token: 0x04000329 RID: 809
+
 	private InventoryCell[] inventoryCells;
 
-	// Token: 0x0400032A RID: 810
+
 	public InventoryUI inventory;
 
-	// Token: 0x0400032B RID: 811
+
 	public InventoryItem currentItem;
 
-	// Token: 0x0400032C RID: 812
+
 	private int oldActive = -1;
 
-	// Token: 0x0400032D RID: 813
+
 	private int currentActive;
 
-	// Token: 0x0400032E RID: 814
+
 	private int max = 6;
 
-	// Token: 0x0400032F RID: 815
+
 	public static Hotbar Instance;
 
-	// Token: 0x04000330 RID: 816
+
 	private float sendDelay = 0.25f;
 }

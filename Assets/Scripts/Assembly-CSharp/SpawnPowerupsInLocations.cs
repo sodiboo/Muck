@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000132 RID: 306
+
 public class SpawnPowerupsInLocations : MonoBehaviour
 {
-	// Token: 0x06000764 RID: 1892 RVA: 0x00024DD4 File Offset: 0x00022FD4
+
 	public void SetChests(ConsistentRandom rand)
 	{
 		int num = rand.Next(0, this.positions.Length) + 1;
@@ -35,7 +35,7 @@ public class SpawnPowerupsInLocations : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000765 RID: 1893 RVA: 0x00024EE8 File Offset: 0x000230E8
+
 	public GameObject FindObjectToSpawn(StructureSpawner.WeightedSpawn[] prefabs, float totalWeight, ConsistentRandom randomGen)
 	{
 		float num = (float)randomGen.NextDouble();
@@ -51,9 +51,9 @@ public class SpawnPowerupsInLocations : MonoBehaviour
 		return prefabs[0].prefab;
 	}
 
-	// Token: 0x040007A4 RID: 1956
+
 	public Transform[] positions;
 
-	// Token: 0x040007A5 RID: 1957
+
 	public StructureSpawner.WeightedSpawn[] powerupChests;
 }

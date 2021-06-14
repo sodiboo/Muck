@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200006B RID: 107
+
 public class PlayerRagdoll : MonoBehaviour
 {
-	// Token: 0x06000228 RID: 552 RVA: 0x0000FAC8 File Offset: 0x0000DCC8
+
 	public void SetArmor(int armorSlot, int itemId)
 	{
 		MonoBehaviour.print(string.Concat(new object[]
@@ -24,7 +24,7 @@ public class PlayerRagdoll : MonoBehaviour
 		this.armor[armorSlot].material = inventoryItem.material;
 	}
 
-	// Token: 0x06000229 RID: 553 RVA: 0x0000FB58 File Offset: 0x0000DD58
+
 	public void WeaponInHand(int itemId)
 	{
 		if (itemId == -1)
@@ -37,7 +37,7 @@ public class PlayerRagdoll : MonoBehaviour
 		this.render.material = inventoryItem.material;
 	}
 
-	// Token: 0x0600022A RID: 554 RVA: 0x0000FBAC File Offset: 0x0000DDAC
+
 	public void SetRagdoll(int id, Vector3 dir)
 	{
 		this.ragdoll.MakeRagdoll(dir);
@@ -68,15 +68,15 @@ public class PlayerRagdoll : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000246 RID: 582
+
 	public TestRagdoll ragdoll;
 
-	// Token: 0x04000247 RID: 583
+
 	public SkinnedMeshRenderer[] armor;
 
-	// Token: 0x04000248 RID: 584
+
 	public MeshFilter filter;
 
-	// Token: 0x04000249 RID: 585
+
 	public Renderer render;
 }

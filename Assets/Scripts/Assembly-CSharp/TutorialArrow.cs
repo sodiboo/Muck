@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000150 RID: 336
+
 public class TutorialArrow : MonoBehaviour
 {
-	// Token: 0x0600080E RID: 2062 RVA: 0x0002790C File Offset: 0x00025B0C
+
 	private void Update()
 	{
 		base.transform.Rotate(Vector3.forward, 22f * Time.deltaTime);

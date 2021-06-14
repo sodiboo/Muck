@@ -152,7 +152,6 @@ public class HoloShieldEditor : ShaderGUI
             GUILayout.Space(4);
             var rect = GUILayoutUtility.GetRect(0, int.MaxValue, 60, 60);
             EditorGUI.DrawPreviewTexture(rect, bannerTexture, null, ScaleMode.ScaleAndCrop);
-            //
             EditorGUI.LabelField(rect, "HoloShield", title);
 
             if (GUI.Button(rect, "", linkStyle)) {

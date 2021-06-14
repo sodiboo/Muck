@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000A9 RID: 169
+
 public class DontAttackUntilPlayerSpotted : MonoBehaviour
 {
-	// Token: 0x060003E7 RID: 999 RVA: 0x00016424 File Offset: 0x00014624
+
 	private void Start()
 	{
 		this.mob = base.GetComponent<Mob>();
@@ -17,7 +17,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		base.InvokeRepeating(nameof(CheckForPlayers), 0.5f, 0.5f);
 	}
 
-	// Token: 0x060003E8 RID: 1000 RVA: 0x000164CC File Offset: 0x000146CC
+
 	private void CheckForPlayers()
 	{
 		Vector3 forward = base.transform.forward;
@@ -58,7 +58,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003E9 RID: 1001 RVA: 0x0001668C File Offset: 0x0001488C
+
 	private void FoundPlayer()
 	{
 		this.mob.ready = true;
@@ -74,15 +74,15 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 	Destroy(this);
 	}
 
-	// Token: 0x040003E0 RID: 992
+
 	private Mob mob;
 
-	// Token: 0x040003E1 RID: 993
+
 	private Vector3 headOffset;
 
-	// Token: 0x040003E2 RID: 994
+
 	public int mobZoneId;
 
-	// Token: 0x040003E3 RID: 995
+
 	private MobServerNeutral neutral;
 }

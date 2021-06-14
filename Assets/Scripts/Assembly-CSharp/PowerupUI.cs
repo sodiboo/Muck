@@ -4,10 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200006E RID: 110
+
 public class PowerupUI : MonoBehaviour
 {
-	// Token: 0x06000267 RID: 615 RVA: 0x00003D18 File Offset: 0x00001F18
+
 	private void Awake()
 	{
 		PowerupUI.Instance = this;
@@ -15,7 +15,7 @@ public class PowerupUI : MonoBehaviour
 		this.gridLayout = base.GetComponent<GridLayout>();
 	}
 
-	// Token: 0x06000268 RID: 616 RVA: 0x000107D4 File Offset: 0x0000E9D4
+
 	public void AddPowerup(int powerupId)
 	{
 		if (this.powerups.ContainsKey(powerupId))
@@ -34,15 +34,15 @@ public class PowerupUI : MonoBehaviour
 		this.powerups.Add(powerupId, gameObject);
 	}
 
-	// Token: 0x04000271 RID: 625
+
 	public GameObject uiPrefab;
 
-	// Token: 0x04000272 RID: 626
+
 	private GridLayout gridLayout;
 
-	// Token: 0x04000273 RID: 627
+
 	private Dictionary<int, GameObject> powerups;
 
-	// Token: 0x04000274 RID: 628
+
 	public static PowerupUI Instance;
 }

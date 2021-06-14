@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000004 RID: 4
+
 public class AudioFreqController : MonoBehaviour
 {
-	// Token: 0x0600000E RID: 14 RVA: 0x00007A70 File Offset: 0x00005C70
+
 	private void Update()
 	{
 		if (!PlayerStatus.Instance)
@@ -34,6 +34,6 @@ public class AudioFreqController : MonoBehaviour
 		this.filter.cutoffFrequency = Mathf.Lerp(this.filter.cutoffFrequency, 22000f * num, Time.deltaTime * 8f);
 	}
 
-	// Token: 0x0400000C RID: 12
+
 	public AudioLowPassFilter filter;
 }

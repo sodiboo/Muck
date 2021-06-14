@@ -2,22 +2,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020000F9 RID: 249
+
 public class Map : MonoBehaviour
 {
-	// Token: 0x1700004D RID: 77
-	// (get) Token: 0x06000694 RID: 1684 RVA: 0x000062B8 File Offset: 0x000044B8
-	// (set) Token: 0x06000695 RID: 1685 RVA: 0x000062C0 File Offset: 0x000044C0
+
+
+
 	public bool active { get; set; } = true;
 
-	// Token: 0x06000696 RID: 1686 RVA: 0x000062C9 File Offset: 0x000044C9
+
 	private void Awake()
 	{
 		Map.Instance = this;
 		this.active = false;
 	}
 
-	// Token: 0x06000697 RID: 1687 RVA: 0x00022370 File Offset: 0x00020570
+
 	public void GenerateMap()
 	{
 		this.mapSize = this.map.sizeDelta.x;
@@ -31,7 +31,7 @@ public class Map : MonoBehaviour
 		this.maxPos = new Vector3(this.mapSize / 2f, this.mapSize / 2f);
 	}
 
-	// Token: 0x06000698 RID: 1688 RVA: 0x000062D8 File Offset: 0x000044D8
+
 	private void Update()
 	{
 		if (!this.active)
@@ -42,7 +42,7 @@ public class Map : MonoBehaviour
 		this.PlayerInput();
 	}
 
-	// Token: 0x06000699 RID: 1689 RVA: 0x00022414 File Offset: 0x00020614
+
 	private void PlayerInput()
 	{
 		float y = Input.mouseScrollDelta.y;
@@ -83,7 +83,7 @@ public class Map : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600069A RID: 1690 RVA: 0x000225A4 File Offset: 0x000207A4
+
 	private Vector2 ClampVector(Vector2 v, Vector2 max)
 	{
 		if (v.x > max.x)
@@ -105,7 +105,7 @@ public class Map : MonoBehaviour
 		return v;
 	}
 
-	// Token: 0x0600069B RID: 1691 RVA: 0x00022628 File Offset: 0x00020828
+
 	public void ToggleMap()
 	{
 		this.active = !this.active;
@@ -120,7 +120,7 @@ public class Map : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	// Token: 0x0600069C RID: 1692 RVA: 0x0002267C File Offset: 0x0002087C
+
 	private void ShowPlayers()
 	{
 		if (!PlayerMovement.Instance)
@@ -134,36 +134,36 @@ public class Map : MonoBehaviour
 		this.playerIcon.transform.localRotation = Quaternion.Euler(0f, 0f, -y);
 	}
 
-	// Token: 0x0400067A RID: 1658
+
 	public Transform playerIcon;
 
-	// Token: 0x0400067B RID: 1659
+
 	public Transform mapParent;
 
-	// Token: 0x0400067C RID: 1660
+
 	public RectTransform map;
 
-	// Token: 0x0400067D RID: 1661
+
 	public RawImage mapRender;
 
-	// Token: 0x0400067E RID: 1662
+
 	private float mapSize;
 
-	// Token: 0x0400067F RID: 1663
+
 	private float mapRatio;
 
-	// Token: 0x04000680 RID: 1664
+
 	private Vector3 maxPos;
 
-	// Token: 0x04000681 RID: 1665
+
 	public Material mapTextureMaterial;
 
-	// Token: 0x04000683 RID: 1667
+
 	public static Map Instance;
 
-	// Token: 0x04000684 RID: 1668
+
 	private Vector2 startHoldPos;
 
-	// Token: 0x04000685 RID: 1669
+
 	private Vector2 startMapPos;
 }
