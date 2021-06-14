@@ -2,11 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!74 &7400000
 AnimationClip:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle_1
+  m_Name: Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -202,46 +201,40 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - serializedVersion: 2
-      path: 3557941407
+    - path: 3557941407
       attribute: 4
       script: {fileID: 0}
-      typeID: 4
+      classID: 4
       customType: 4
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 773774844
+    - path: 773774844
       attribute: 4
       script: {fileID: 0}
-      typeID: 4
+      classID: 4
       customType: 4
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1553195450
+    - path: 1553195450
       attribute: 4
       script: {fileID: 0}
-      typeID: 4
+      classID: 4
       customType: 4
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1899928853
+    - path: 1899928853
       attribute: 4
       script: {fileID: 0}
-      typeID: 4
+      classID: 4
       customType: 4
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1510395974
+    - path: 1510395974
       attribute: 4
       script: {fileID: 0}
-      typeID: 4
+      classID: 4
       customType: 4
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2777051746
+    - path: 3167766501
       attribute: 4
       script: {fileID: 0}
-      typeID: 4
+      classID: 4
       customType: 4
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -269,4 +262,5 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
   m_Events: []
