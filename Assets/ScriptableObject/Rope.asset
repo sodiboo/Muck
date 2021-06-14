@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Name: Rope
+  m_EditorClassIdentifier:
+  id: 74
+  name: Rope
+  description: how do i make a noose again?
+  type: 0
+  tier: 1
+  sprite: {fileID: 21300000, guid: 4c4c5149d1dc358499df60ebe589d827, type: 3}
+  material: {fileID: 2100000, guid: cb54e81fb51467e4b869b95b0286b1a9, type: 2}
+  mesh: {fileID: 4300000, guid: 90693593a8017c94c802b8d07ffb0d8c, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 180}
+  positionOffset: {x: 0, y: 0.1, z: 0.12}
+  scale: 0.7
+  stackable: 1
+  amount: 1
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1.5
+  attackRange: {x: 1, y: 1, z: 2}
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: b4eab4bb82aa3e94c978094246b2ca48, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: 62431e291556532479a3cb6ec56689f3, type: 2}
+    amount: 10
+  craftAmount: 2
+  stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1943718950072639, guid: fe5428ddf82b3d842973cb61d8d9a0d9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 2
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes:

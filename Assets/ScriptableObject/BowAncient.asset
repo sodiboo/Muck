@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Name: BowAncient
+  m_EditorClassIdentifier:
+  id: 111
+  name: Ancient Bow
+  description: It has ancient in the name, so it must be good
+  type: 9
+  tier: 1
+  sprite: {fileID: 21300000, guid: 4e6fdb3a228256d4497ed2a0b3022f2c, type: 3}
+  material: {fileID: 2100000, guid: c0bab369a57add942a75d0e588389ebe, type: 2}
+  mesh: {fileID: 4300000, guid: 53ed857de46c85c469ef4f31dae99e73, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 180}
+  positionOffset: {x: 0, y: 0.1, z: 0.12}
+  scale: 0.5
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1.5
+  attackRange: {x: 1, y: 1, z: 2}
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 1
+  requirements:
+  - item: {fileID: 11400000, guid: 1a23a12e5f60ced48aee48309ab6afe1, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 36dbe7fb4cb7855458ff6f4d3292f2ba, type: 2}
+    amount: 1
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 6df1a2684b27bfb4b8c6b091d8abf547, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1943718950072639, guid: fe5428ddf82b3d842973cb61d8d9a0d9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 11400000, guid: 08f213acfc78f2d4aae83613c6a2a2cf, type: 2}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 2
+  attackTypes:

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb39acb6fcbcc3948a30f798c69db3bb, type: 3}
+  m_Name: Hut_Jack_Table
+  m_EditorClassIdentifier:
+  loot:
+  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+    amountMin: 2
+    amountMax: 25
+    dropChance: 0.7
+  - item: {fileID: 11400000, guid: 4c8b6ed579053e9439a550476da612b8, type: 2}
+    amountMin: 2
+    amountMax: 15
+    dropChance: 0.3
+  - item: {fileID: 11400000, guid: 39bfba2a09f65b94fafaaa72272b3742, type: 2}
+    amountMin: 2
+    amountMax: 10
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: b2f850ec37921dc47975575fd9a78dbe, type: 2}
+    amountMin: 2
+    amountMax: 10
+    dropChance: 0.05
+  - item: {fileID: 11400000, guid: f17e80a8e8355b7478ff5128c84163a4, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.3
+  - item: {fileID: 11400000, guid: f5cd4d9b906cf92448ef9de946cc5e33, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.05
+  - item: {fileID: 11400000, guid: bb0ead6bae3831846a9825b1eaf2026b, type: 2}
+    amountMin: 1
+    amountMax: 50
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 7c17eef597c965b4c8d5ee0d6ea78f61, type: 2}
+    amountMin: 1
+    amountMax: 3
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: f2ab071bc52b8a44d9dc345475656136, type: 2}
+    amountMin: 1
+    amountMax: 2
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: daa1fa398d7422a46bbe9d21c638b884, type: 2}
+    amountMin: 1
+    amountMax: 4
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: 9331f08adc9ee534a9b4de47b3c9e48b, type: 2}
+    amountMin: 1
+    amountMax: 4
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: a72e7457951938d4095ff90cbba71e9e, type: 2}
+    amountMin: 1
+    amountMax: 4
+    dropChance: 0.2
+  dropOne: 0

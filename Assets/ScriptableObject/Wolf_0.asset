@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6bbb15b8c28ad4cb7e8099c9053c62, type: 3}
+  m_Name: Wolf
+  m_EditorClassIdentifier:
+  name: Wolf
+  mobPrefab: {fileID: 1573443381612003, guid: 830a140ffd3af3048b2af106320d1582, type: 2}
+  behaviour: 1
+  ranged: 0
+  rangedCooldown: 6
+  startAttackDistance: 6.5
+  startRangedAttackDistance: 5
+  maxAttackDistance: 1
+  speed: 26
+  spawnTime: 1.5
+  minAttackAngle: 50
+  sharpDefense: 0
+  defense: 0
+  knockbackThreshold: 0.3
+  ignoreBuilds: 0
+  followPlayerDistance: 6
+  followPlayerAccuracy: 0.3
+  onlyRangedInRangedPattern: 0
+  weaknesses: 03000000
+  boss: 0

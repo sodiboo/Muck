@@ -3,24 +3,24 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1065763280456499}
+  m_RootGameObject: {fileID: 1522265947390954}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1065763280456499
+--- !u!1 &1522265947390954
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4502061881511941}
-  - component: {fileID: 198025084812889794}
-  - component: {fileID: 199291298283165569}
-  - component: {fileID: 114433890468286229}
-  - component: {fileID: 82955855762572189}
+  - component: {fileID: 4941259236525943}
+  - component: {fileID: 198495717847559088}
+  - component: {fileID: 199745502515924654}
+  - component: {fileID: 114901483340309111}
+  - component: {fileID: 82548320577322815}
   m_Layer: 0
   m_Name: RockDestroyFx
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4502061881511941
+--- !u!4 &4941259236525943
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065763280456499}
+  m_GameObject: {fileID: 1522265947390954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -234.91, y: 21.09, z: 151.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &198025084812889794
+--- !u!198 &198495717847559088
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065763280456499}
+  m_GameObject: {fileID: 1522265947390954}
   serializedVersion: 6
   lengthInSec: 5
   simulationSpeed: 1
@@ -2060,13 +2060,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199291298283165569
+--- !u!199 &199745502515924654
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065763280456499}
+  m_GameObject: {fileID: 1522265947390954}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2078,8 +2078,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dcbfeac76cf76744aa9957b331ac6dd4, type: 2}
-  - {fileID: 2100000, guid: 0bfce94cccbde7240833768eaf5dc692, type: 2}
+  - {fileID: 2100000, guid: 06be4becee57d7f4c9fee79680aa88a7, type: 2}
+  - {fileID: 2100000, guid: 25dfe0b97aa139b4fbed02b248b66df5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2113,34 +2113,34 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 4300000, guid: a8fca52978acb2445b36aedb8e9af341, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &114433890468286229
+--- !u!114 &114901483340309111
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065763280456499}
+  m_GameObject: {fileID: 1522265947390954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d446087d70a704c942a4ba8e6df7a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a798d372caae04cb010a64b5d6bd50, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   sounds:
-  - {fileID: 8300000, guid: e0472e00e02df82448c6c83a4b2c645f, type: 3}
-  - {fileID: 8300000, guid: 351286fd96b458e489d3c3204149d86a, type: 3}
+  - {fileID: 8300000, guid: 78e2bcb6cb3611c4db6992c086e058e0, type: 3}
+  - {fileID: 8300000, guid: 3a901a75451091244b21df509c5da72b, type: 3}
   maxPitch: 0.8
   minPitch: 1.2
   playOnAwake: 1
---- !u!82 &82955855762572189
+--- !u!82 &82548320577322815
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065763280456499}
+  m_GameObject: {fileID: 1522265947390954}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}

@@ -3,26 +3,26 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1399438640483665}
+  m_RootGameObject: {fileID: 1359307260064126}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1399438640483665
+--- !u!1 &1359307260064126
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4538180628059137}
-  - component: {fileID: 33042163648326919}
-  - component: {fileID: 23707466975450254}
-  - component: {fileID: 114055631347177773}
-  - component: {fileID: 135840748260719956}
-  - component: {fileID: 208361473595913918}
-  - component: {fileID: 114803753072898011}
+  - component: {fileID: 4537416412126803}
+  - component: {fileID: 33201990622394212}
+  - component: {fileID: 23640491443185478}
+  - component: {fileID: 114696251206170225}
+  - component: {fileID: 135161658698281799}
+  - component: {fileID: 208952449045727446}
+  - component: {fileID: 114018068752248257}
   m_Layer: 10
   m_Name: Adamantite
   m_TagString: Count
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4538180628059137
+--- !u!4 &4537416412126803
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
+  m_GameObject: {fileID: 1359307260064126}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 75.073, y: 12.93614, z: -38.62126}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
@@ -43,19 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
---- !u!33 &33042163648326919
+--- !u!33 &33201990622394212
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
-  m_Mesh: {fileID: 4300000, guid: a8fca52978acb2445b36aedb8e9af341, type: 2}
---- !u!23 &23707466975450254
+  m_GameObject: {fileID: 1359307260064126}
+  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+--- !u!23 &23640491443185478
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
+  m_GameObject: {fileID: 1359307260064126}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 236e4e077340d4d40b7220b65f1175fe, type: 2}
+  - {fileID: 2100000, guid: cbdf33a50be6caf439cdb003de0eb92f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,50 +88,51 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114055631347177773
+--- !u!114 &114696251206170225
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
+  m_GameObject: {fileID: 1359307260064126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132f1785abd627f4a9022bdb3baeac94, type: 3}
+  m_Script: {fileID: 11500000, guid: 9901045ddda0afc4193112b0e72da9fd, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   entityName: Adamantite
-  dropTable: {fileID: 11400000, guid: 5e40f844d7bde38429a9b41c330f58de, type: 2}
+  canHitMoreThanOnce: 0
+  dropTable: {fileID: 11400000, guid: 402aaf25f7dddec448cbe4b9dfd1f997, type: 2}
   hp: 1000
   maxHp: 1000
-  destroyFx: {fileID: 1065763280456499, guid: 095043cc7f5b940428b3923a9cf3b5c3, type: 2}
-  hitFx: {fileID: 1720171158127790, guid: ea6e12ba49f8142479080b356b26517b, type: 2}
-  numberFx: {fileID: 1149227792111403, guid: d59c545170ff7da49aab72aabd6e8d37, type: 2}
+  destroyFx: {fileID: 1522265947390954, guid: 99c053368968acd489702d28a6f9cbbe, type: 2}
+  hitFx: {fileID: 1325647470422892, guid: 30bcb3043765499478a970e88e587811, type: 2}
+  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 2}
   compatibleItem: 2
   minTier: 2
-  dropItem: {fileID: 11400000, guid: dc7f8a8aa21223e48a47b10101f9a1ee, type: 2}
+  dropItem: {fileID: 11400000, guid: 2152ba60f9672bc418c0db0fad212094, type: 2}
   dropExtra: []
   dropChance: []
   amount: 5
   dontScale: 0
   poolId: 0
---- !u!135 &135840748260719956
+--- !u!135 &135161658698281799
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
+  m_GameObject: {fileID: 1359307260064126}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: -0.007239312, y: -0.02652388, z: 0.02334624}
---- !u!208 &208361473595913918
+--- !u!208 &208952449045727446
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
+  m_GameObject: {fileID: 1359307260064126}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
@@ -141,14 +142,14 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 0
   m_Center: {x: -0.007, y: -0.027, z: 0.023}
   m_TimeToStationary: 0.5
---- !u!114 &114803753072898011
+--- !u!114 &114018068752248257
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399438640483665}
+  m_GameObject: {fileID: 1359307260064126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7695285a97505e042b83e41fca7fb0ef, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a68516107349d4591f605641d976ef, type: 3}
   m_Name:
   m_EditorClassIdentifier:

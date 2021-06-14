@@ -3,21 +3,21 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1787662224239979}
+  m_RootGameObject: {fileID: 1814409883500370}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1787662224239979
+--- !u!1 &1814409883500370
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4865578192061463}
-  - component: {fileID: 114818536113762940}
+  - component: {fileID: 4125495184349761}
+  - component: {fileID: 114099054699296114}
   m_Layer: 0
   m_Name: ShroomZone
   m_TagString: Untagged
@@ -25,12 +25,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4865578192061463
+--- !u!4 &4125495184349761
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787662224239979}
+  m_GameObject: {fileID: 1814409883500370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.32, y: 12.8, z: -50.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,20 +38,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114818536113762940
+--- !u!114 &114099054699296114
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787662224239979}
+  m_GameObject: {fileID: 1814409883500370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac3010e70a6e774aadccf6ad0e4c3aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 85d8cf630509a874c876d268f825c05e, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   id: 0
   roamDistance: 12
   renderDistance: 70
+  despawn: 1
   entityCap: 4
   respawnTime: 140
   updateRate: 2

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Name: Ore_Chunkium
+  m_EditorClassIdentifier:
+  id: 99
+  name: Chunkium Ore
+  description: looks like your mom
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: d4f3e97ab6734d34ba8aaf7666158863, type: 3}
+  material: {fileID: 2100000, guid: 155a62e7c9f3a934bad138ac46899ac3, type: 2}
+  mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 69
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 0.7
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements: []
+  craftAmount: 0
+  stationRequirement: {fileID: 0}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 0}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 1
+  processType: 0
+  processedItem: {fileID: 11400000, guid: 472affb32bfc7fb47a0ea960015bc8f9, type: 2}
+  processTime: 23
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 2
+  attackTypes:

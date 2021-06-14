@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb39acb6fcbcc3948a30f798c69db3bb, type: 3}
+  m_Name: Goblin
+  m_EditorClassIdentifier:
+  loot:
+  - item: {fileID: 11400000, guid: bb0ead6bae3831846a9825b1eaf2026b, type: 2}
+    amountMin: 6
+    amountMax: 12
+    dropChance: 1
+  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+    amountMin: 5
+    amountMax: 10
+    dropChance: 0.25
+  - item: {fileID: 11400000, guid: 1a23a12e5f60ced48aee48309ab6afe1, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.01
+  - item: {fileID: 11400000, guid: 353950611a4dca644a5a1dee047b1d37, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.05
+  - item: {fileID: 11400000, guid: 78c8dee6350d5fe47ae96930c37a55cc, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.001
+  - item: {fileID: 11400000, guid: 2b48370d06123dc4dbb01159cb7cb03f, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.001
+  dropOne: 0

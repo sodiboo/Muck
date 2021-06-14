@@ -3,24 +3,24 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1492904835277594}
+  m_RootGameObject: {fileID: 1019683660402865}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1492904835277594
+--- !u!1 &1019683660402865
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4981739521999330}
-  - component: {fileID: 33763101618386344}
-  - component: {fileID: 23688733336565509}
-  - component: {fileID: 135150987877118248}
-  - component: {fileID: 114199914391278724}
+  - component: {fileID: 4686677247770227}
+  - component: {fileID: 33449596447544779}
+  - component: {fileID: 23024620087837583}
+  - component: {fileID: 135965345710421820}
+  - component: {fileID: 114438582276775947}
   m_Layer: 15
   m_Name: CoalPickup
   m_TagString: Count
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4981739521999330
+--- !u!4 &4686677247770227
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492904835277594}
+  m_GameObject: {fileID: 1019683660402865}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -54.6437, y: 13.24177, z: -131.3044}
   m_LocalScale: {x: 0.7741972, y: 0.7741972, z: 0.7741972}
@@ -41,19 +41,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
---- !u!33 &33763101618386344
+--- !u!33 &33449596447544779
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492904835277594}
-  m_Mesh: {fileID: 4300000, guid: fc5c8c60f2b922047a3da40d7fe1fb68, type: 2}
---- !u!23 &23688733336565509
+  m_GameObject: {fileID: 1019683660402865}
+  m_Mesh: {fileID: 4300000, guid: 19e4946bcc14b704a91e22a585b7688d, type: 2}
+--- !u!23 &23024620087837583
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492904835277594}
+  m_GameObject: {fileID: 1019683660402865}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f24e747fc961f244fb22c266d0e16014, type: 2}
+  - {fileID: 2100000, guid: 132ae33006a53f64f8b13a57427dbfb3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,29 +86,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &135150987877118248
+--- !u!135 &135965345710421820
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492904835277594}
+  m_GameObject: {fileID: 1019683660402865}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.4
   m_Center: {x: -0.007239312, y: -0.02652388, z: 0.02334624}
---- !u!114 &114199914391278724
+--- !u!114 &114438582276775947
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492904835277594}
+  m_GameObject: {fileID: 1019683660402865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da10a15cc652a70458b6361a54f01092, type: 3}
+  m_Script: {fileID: 11500000, guid: 109793d47b397de4d8e759733404a39d, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  item: {fileID: 11400000, guid: 599c11cbd052bc040a1eb5ab33f86961, type: 2}
+  item: {fileID: 11400000, guid: a3a033d4a4bd86747965cf653f71248c, type: 2}
   amount: 1
   id: 0

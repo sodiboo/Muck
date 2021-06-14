@@ -3,25 +3,25 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1066351760920956}
+  m_RootGameObject: {fileID: 1080013779700420}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1066351760920956
+--- !u!1 &1080013779700420
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4027773780786281}
-  - component: {fileID: 198188842143069169}
-  - component: {fileID: 199466925530682696}
-  - component: {fileID: 82300194900380818}
-  - component: {fileID: 114757700246459071}
-  - component: {fileID: 114665932531121283}
+  - component: {fileID: 4820512785471200}
+  - component: {fileID: 198232429040809311}
+  - component: {fileID: 199741905700748152}
+  - component: {fileID: 82553400274691336}
+  - component: {fileID: 114121015043313062}
+  - component: {fileID: 114646966271952602}
   m_Layer: 0
   m_Name: DestroyShrine (1)
   m_TagString: Untagged
@@ -29,27 +29,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4027773780786281
+--- !u!4 &4820512785471200
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066351760920956}
+  m_GameObject: {fileID: 1080013779700420}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 212.9974, y: 17.81692, z: 503.0638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4674499167699888}
-  - {fileID: 4248164909738941}
+  - {fileID: 4934837883418510}
+  - {fileID: 4941873076142830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &198188842143069169
+--- !u!198 &198232429040809311
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066351760920956}
+  m_GameObject: {fileID: 1080013779700420}
   serializedVersion: 6
   lengthInSec: 2
   simulationSpeed: 1.5
@@ -2171,13 +2171,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199466925530682696
+--- !u!199 &199741905700748152
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066351760920956}
+  m_GameObject: {fileID: 1080013779700420}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2189,7 +2189,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97de7afa34327b4790b84b1206ddabc, type: 2}
+  - {fileID: 2100000, guid: 2583880f177d4e04787de7dda287d106, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2224,21 +2224,21 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 4300000, guid: a8fca52978acb2445b36aedb8e9af341, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!82 &82300194900380818
+--- !u!82 &82553400274691336
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066351760920956}
+  m_GameObject: {fileID: 1080013779700420}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 111538056bef01a4b89e69535f22e7f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 44dc5a03563deaf459393091b391463a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -2324,42 +2324,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114757700246459071
+--- !u!114 &114121015043313062
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066351760920956}
+  m_GameObject: {fileID: 1080013779700420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a270dc3bd8980b46abc96da2b40a8f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f8291f7bfa1c944c830a884659a21ca, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   time: 1.33
-  objectToSpawn: {fileID: 1012374392567171, guid: 63ca7d147108fd54faff3be9c9abb98b, type: 2}
---- !u!114 &114665932531121283
+  objectToSpawn: {fileID: 1823111288964656, guid: c377743c617df8a43b98f2d371d46b05, type: 2}
+--- !u!114 &114646966271952602
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066351760920956}
+  m_GameObject: {fileID: 1080013779700420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe6e887852bf4348ac835f7fbb98273, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d8305c5236a5ff469c9365bc3d03263, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   time: 5
---- !u!1 &1051393074690334
+--- !u!1 &1907021974448022
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4674499167699888}
-  - component: {fileID: 198559793269455137}
-  - component: {fileID: 199206108425344492}
-  - component: {fileID: 82485067948919941}
+  - component: {fileID: 4934837883418510}
+  - component: {fileID: 198821040886618762}
+  - component: {fileID: 199917063098732371}
+  - component: {fileID: 82560750542841736}
   m_Layer: 0
   m_Name: DestroyShrine (2)
   m_TagString: Untagged
@@ -2367,25 +2367,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4674499167699888
+--- !u!4 &4934837883418510
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051393074690334}
+  m_GameObject: {fileID: 1907021974448022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4027773780786281}
+  m_Father: {fileID: 4820512785471200}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &198559793269455137
+--- !u!198 &198821040886618762
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051393074690334}
+  m_GameObject: {fileID: 1907021974448022}
   serializedVersion: 6
   lengthInSec: 3
   simulationSpeed: 1
@@ -4561,13 +4561,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199206108425344492
+--- !u!199 &199917063098732371
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051393074690334}
+  m_GameObject: {fileID: 1907021974448022}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4580,7 +4580,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 0}
-  - {fileID: 2100000, guid: 13001c58824cc4949aa02c2971f7746f, type: 2}
+  - {fileID: 2100000, guid: 17bcc5acfb989084d9a8d2eab0563554, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4614,21 +4614,21 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 4300000, guid: a8fca52978acb2445b36aedb8e9af341, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!82 &82485067948919941
+--- !u!82 &82560750542841736
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051393074690334}
+  m_GameObject: {fileID: 1907021974448022}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 111538056bef01a4b89e69535f22e7f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 44dc5a03563deaf459393091b391463a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -4714,16 +4714,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1082148718816291
+--- !u!1 &1555780246014560
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4248164909738941}
-  - component: {fileID: 198374416016336108}
-  - component: {fileID: 199742600977560096}
+  - component: {fileID: 4941873076142830}
+  - component: {fileID: 198663893626411577}
+  - component: {fileID: 199675483110457157}
   m_Layer: 0
   m_Name: DestroyShrine
   m_TagString: Untagged
@@ -4731,25 +4731,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4248164909738941
+--- !u!4 &4941873076142830
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082148718816291}
+  m_GameObject: {fileID: 1555780246014560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4027773780786281}
+  m_Father: {fileID: 4820512785471200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &198374416016336108
+--- !u!198 &198663893626411577
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082148718816291}
+  m_GameObject: {fileID: 1555780246014560}
   serializedVersion: 6
   lengthInSec: 5
   simulationSpeed: 1.5
@@ -6871,13 +6871,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199742600977560096
+--- !u!199 &199675483110457157
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082148718816291}
+  m_GameObject: {fileID: 1555780246014560}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -6889,7 +6889,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97de7afa34327b4790b84b1206ddabc, type: 2}
+  - {fileID: 2100000, guid: 2583880f177d4e04787de7dda287d106, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -6924,7 +6924,7 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 4300000, guid: a8fca52978acb2445b36aedb8e9af341, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

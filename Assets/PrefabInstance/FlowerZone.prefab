@@ -3,21 +3,21 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1170721244171609}
+  m_RootGameObject: {fileID: 1194723116970013}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1170721244171609
+--- !u!1 &1194723116970013
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4426660875591503}
-  - component: {fileID: 114835195913944245}
+  - component: {fileID: 4824353932276101}
+  - component: {fileID: 114186620654200018}
   m_Layer: 0
   m_Name: FlowerZone
   m_TagString: Untagged
@@ -25,12 +25,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4426660875591503
+--- !u!4 &4824353932276101
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170721244171609}
+  m_GameObject: {fileID: 1194723116970013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.32, y: 12.8, z: -50.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,22 +38,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114835195913944245
+--- !u!114 &114186620654200018
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170721244171609}
+  m_GameObject: {fileID: 1194723116970013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac3010e70a6e774aadccf6ad0e4c3aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 85d8cf630509a874c876d268f825c05e, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   id: 0
   roamDistance: 5
   renderDistance: 50
+  despawn: 1
   entityCap: 5
-  respawnTime: 60
+  respawnTime: 100
   updateRate: 3
   whatIsGround:
     serializedVersion: 2

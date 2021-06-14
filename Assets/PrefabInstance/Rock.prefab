@@ -3,26 +3,26 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1911850665377219}
+  m_RootGameObject: {fileID: 1005042306235822}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1911850665377219
+--- !u!1 &1005042306235822
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4933900778358761}
-  - component: {fileID: 33655763003318259}
-  - component: {fileID: 23599834084580378}
-  - component: {fileID: 114600327213443420}
-  - component: {fileID: 135225030202846390}
-  - component: {fileID: 208016776652368380}
-  - component: {fileID: 114441214854437688}
+  - component: {fileID: 4056388632210230}
+  - component: {fileID: 33154000732489877}
+  - component: {fileID: 23534379169906013}
+  - component: {fileID: 114263715563874265}
+  - component: {fileID: 135021388120342164}
+  - component: {fileID: 208290171153329570}
+  - component: {fileID: 114358185577468130}
   m_Layer: 10
   m_Name: Rock
   m_TagString: Count
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4933900778358761
+--- !u!4 &4056388632210230
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
+  m_GameObject: {fileID: 1005042306235822}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -46.81782, y: 13.07, z: -80.86682}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
@@ -43,19 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
---- !u!33 &33655763003318259
+--- !u!33 &33154000732489877
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
-  m_Mesh: {fileID: 4300000, guid: a8fca52978acb2445b36aedb8e9af341, type: 2}
---- !u!23 &23599834084580378
+  m_GameObject: {fileID: 1005042306235822}
+  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+--- !u!23 &23534379169906013
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
+  m_GameObject: {fileID: 1005042306235822}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dcbfeac76cf76744aa9957b331ac6dd4, type: 2}
+  - {fileID: 2100000, guid: 06be4becee57d7f4c9fee79680aa88a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,54 +88,55 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114600327213443420
+--- !u!114 &114263715563874265
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
+  m_GameObject: {fileID: 1005042306235822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132f1785abd627f4a9022bdb3baeac94, type: 3}
+  m_Script: {fileID: 11500000, guid: 9901045ddda0afc4193112b0e72da9fd, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   entityName: Rock
-  dropTable: {fileID: 11400000, guid: 9a2314845ca68294fb335abfb64dd52b, type: 2}
+  canHitMoreThanOnce: 0
+  dropTable: {fileID: 11400000, guid: b7d4c01eabf55c34abad83c71f9fd337, type: 2}
   hp: 100
   maxHp: 100
-  destroyFx: {fileID: 1065763280456499, guid: 095043cc7f5b940428b3923a9cf3b5c3, type: 2}
-  hitFx: {fileID: 1720171158127790, guid: ea6e12ba49f8142479080b356b26517b, type: 2}
-  numberFx: {fileID: 1149227792111403, guid: d59c545170ff7da49aab72aabd6e8d37, type: 2}
+  destroyFx: {fileID: 1522265947390954, guid: 99c053368968acd489702d28a6f9cbbe, type: 2}
+  hitFx: {fileID: 1325647470422892, guid: 30bcb3043765499478a970e88e587811, type: 2}
+  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 2}
   compatibleItem: 2
   minTier: 0
-  dropItem: {fileID: 11400000, guid: 4b64ddab483834b4995cd86aaf8c262b, type: 2}
+  dropItem: {fileID: 11400000, guid: 7c3b7d37072e928478cd0e0d01b08f37, type: 2}
   dropExtra:
-  - {fileID: 11400000, guid: 599c11cbd052bc040a1eb5ab33f86961, type: 2}
-  - {fileID: 11400000, guid: 64cd731f5a3c42b489ca1bac8d26be92, type: 2}
+  - {fileID: 11400000, guid: a3a033d4a4bd86747965cf653f71248c, type: 2}
+  - {fileID: 11400000, guid: e59f89a3551744940aed1caf477decd5, type: 2}
   dropChance:
   - 0.5
   - 0.5
   amount: 5
   dontScale: 0
   poolId: 0
---- !u!135 &135225030202846390
+--- !u!135 &135021388120342164
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
+  m_GameObject: {fileID: 1005042306235822}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: -9.049149E-05, y: -0.000331548, z: 0.000291828}
---- !u!208 &208016776652368380
+--- !u!208 &208290171153329570
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
+  m_GameObject: {fileID: 1005042306235822}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
@@ -145,14 +146,14 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 0
   m_Center: {x: -0.007, y: -0.027, z: 0.023}
   m_TimeToStationary: 0.5
---- !u!114 &114441214854437688
+--- !u!114 &114358185577468130
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911850665377219}
+  m_GameObject: {fileID: 1005042306235822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7695285a97505e042b83e41fca7fb0ef, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a68516107349d4591f605641d976ef, type: 3}
   m_Name:
   m_EditorClassIdentifier:

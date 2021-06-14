@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Name: Bow_Fir
+  m_EditorClassIdentifier:
+  id: 76
+  name: Fir bow
+  description: Bow
+  type: 9
+  tier: 1
+  sprite: {fileID: 21300000, guid: 5bb5366ea710da840b1171b1888e999d, type: 3}
+  material: {fileID: 2100000, guid: 6e0ceb4a7726ee34e9abf4a51e33b4d4, type: 2}
+  mesh: {fileID: 4300000, guid: c55945c1836a8e7498b208b15f7a7f0b, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 180}
+  positionOffset: {x: 0, y: 0.1, z: 0.12}
+  scale: 0.9
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1.25
+  attackRange: {x: 1, y: 1, z: 2}
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 39bfba2a09f65b94fafaaa72272b3742, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: 36dbe7fb4cb7855458ff6f4d3292f2ba, type: 2}
+    amount: 1
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: afc2c404f37a3e9479bebd2d9d7e476b, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1943718950072639, guid: fe5428ddf82b3d842973cb61d8d9a0d9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 11400000, guid: f13d59700e10c6b4d9dc08ec3ef6db5f, type: 2}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes:
