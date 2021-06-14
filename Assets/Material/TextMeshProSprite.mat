@@ -3,10 +3,11 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TextMeshPro/Sprite
+  m_Name: TextMeshProSprite
   m_Shader: {fileID: 4800000, guid: 1d2c1e7ebb05d724d91b3617de2c021e, type: 3}
   m_ShaderKeywords: UNITY_UI_CLIP_RECT
   m_LightmapFlags: 5
