@@ -3,12 +3,13 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LiberationSans SDF Material
+  m_Name: liberationsans sdf - fallback
   m_Shader: {fileID: 4800000, guid: 2539ecb1cf636c040ad2781a320458c7, type: 3}
-  m_ShaderKeywords:
+  m_ShaderKeywords: 
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

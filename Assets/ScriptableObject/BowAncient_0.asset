@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a01a2706b587eb4c99ed3da150aaa34, type: 3}
-  m_Name: BowAncient
-  m_EditorClassIdentifier:
+  m_Name: BowAncient_0
+  m_EditorClassIdentifier: 
   projectileSpeed: 40
   nArrows: 3
   angleDelta: 2
