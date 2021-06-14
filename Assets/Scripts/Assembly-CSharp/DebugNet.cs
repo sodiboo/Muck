@@ -14,7 +14,7 @@ public class DebugNet : MonoBehaviour
 	{
 		DebugNet.Instance = this;
 		base.gameObject.SetActive(false);
-		base.InvokeRepeating("BandWidth", 1f, 1f);
+		base.InvokeRepeating(nameof(BandWidth), 1f, 1f);
 	}
 
 	// Token: 0x060005C0 RID: 1472 RVA: 0x0000590E File Offset: 0x00003B0E

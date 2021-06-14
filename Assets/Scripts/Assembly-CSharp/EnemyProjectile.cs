@@ -12,14 +12,14 @@ public class EnemyProjectile : MonoBehaviour
 	// Token: 0x060000D5 RID: 213 RVA: 0x00002B93 File Offset: 0x00000D93
 	private void Awake()
 	{
-		base.Invoke("DestroySelf", 10f);
+		base.Invoke(nameof(DestroySelf), 10f);
 	}
 
 	// Token: 0x060000D6 RID: 214 RVA: 0x00002BA5 File Offset: 0x00000DA5
 	public void DisableCollider(float time)
 	{
 		base.GetComponent<Collider>().enabled = false;
-		base.Invoke("ActivateCollider", time);
+		base.Invoke(nameof(ActivateCollider), time);
 	}
 
 	// Token: 0x060000D7 RID: 215 RVA: 0x00002BBF File Offset: 0x00000DBF

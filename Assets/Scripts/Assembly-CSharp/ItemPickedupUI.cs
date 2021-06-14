@@ -13,7 +13,7 @@ public class ItemPickedupUI : MonoBehaviour
 		this.desiredPad = (float)this.layout.padding.left;
 		this.layout.padding.left = -300;
 		this.padLeft = (float)this.layout.padding.left;
-		base.Invoke("StartFade", this.fadeStart);
+		base.Invoke(nameof(StartFade), this.fadeStart);
 	}
 
 	// Token: 0x06000188 RID: 392 RVA: 0x0000E18C File Offset: 0x0000C38C
@@ -21,7 +21,7 @@ public class ItemPickedupUI : MonoBehaviour
 	{
 		this.icon.CrossFadeAlpha(0f, this.fadeTime, true);
 		this.item.CrossFadeAlpha(0f, this.fadeTime, true);
-		base.Invoke("DestroySelf", this.fadeTime);
+		base.Invoke(nameof(DestroySelf), this.fadeTime);
 	}
 
 	// Token: 0x06000189 RID: 393 RVA: 0x00002AC8 File Offset: 0x00000CC8

@@ -67,8 +67,8 @@ public class PlayerStatus : MonoBehaviour
 		GameManager.players[LocalClient.instance.myId].dead = false;
 		MoveCamera.Instance.PlayerRespawn(PlayerMovement.Instance.transform.position);
 		this.invincible = true;
-		base.CancelInvoke("StopInvincible");
-		base.Invoke("StopInvincible", 3f);
+		base.CancelInvoke(nameof(StopInvincible));
+		base.Invoke(nameof(StopInvincible), 3f);
 	}
 
 	// Token: 0x0600023C RID: 572 RVA: 0x00003B3E File Offset: 0x00001D3E
@@ -135,13 +135,13 @@ public class PlayerStatus : MonoBehaviour
 		{
 			this.adrenalineBoost = true;
 			this.readyToAdrenalineBoost = false;
-			base.Invoke("StopAdrenaline", 5f);
+			base.Invoke(nameof(StopAdrenaline), 5f);
 		}
 		this.readyToRegenShield = false;
-		base.CancelInvoke("RegenShield");
+		base.CancelInvoke(nameof(RegenShield));
 		if (!this.dead)
 		{
-			base.Invoke("RegenShield", this.regenShieldDelay);
+			base.Invoke(nameof(RegenShield), this.regenShieldDelay);
 		}
 		float shakeRatio = (float)damageTaken / (float)this.MaxHpAndShield();
 		CameraShaker.Instance.DamageShake(shakeRatio);
@@ -164,7 +164,7 @@ public class PlayerStatus : MonoBehaviour
 			damageDone = (int)((float)this.MaxHpAndShield() * this.oneShotThreshold);
 		}
 		this.protectionActive = false;
-		base.Invoke("ActivateProtection", this.oneShotProtectionCooldown);
+		base.Invoke(nameof(ActivateProtection), this.oneShotProtectionCooldown);
 		return damageDone;
 	}
 
@@ -178,7 +178,7 @@ public class PlayerStatus : MonoBehaviour
 	private void StopAdrenaline()
 	{
 		this.adrenalineBoost = false;
-		base.Invoke("ReadyAdrenaline", 10f);
+		base.Invoke(nameof(ReadyAdrenaline), 10f);
 	}
 
 	// Token: 0x06000244 RID: 580 RVA: 0x00003B97 File Offset: 0x00001D97

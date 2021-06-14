@@ -79,8 +79,8 @@ public class ChatBox : MonoBehaviour
 		this.ShowChat();
 		if (!this.typing)
 		{
-			base.CancelInvoke("HideChat");
-			base.Invoke("HideChat", 5f);
+			base.CancelInvoke(nameof(HideChat));
+			base.Invoke(nameof(HideChat), 5f);
 		}
 	}
 
@@ -186,8 +186,8 @@ public class ChatBox : MonoBehaviour
 		{
 			this.ClearMessage();
 			this.typing = false;
-			base.CancelInvoke("HideChat");
-			base.Invoke("HideChat", 5f);
+			base.CancelInvoke(nameof(HideChat));
+			base.Invoke(nameof(HideChat), 5f);
 		}
 	}
 

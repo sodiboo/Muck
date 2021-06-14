@@ -7,7 +7,7 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 	private new void Start()
 	{
 		base.Start();
-		base.Invoke("GetReadyForRangedAttack", Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
+		base.Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
 	}
 
 	// Token: 0x06000428 RID: 1064 RVA: 0x00017518 File Offset: 0x00015718
@@ -29,9 +29,9 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 				this.mob.Attack(this.mob.targetPlayerId, num3);
 				ServerSend.MobAttack(this.mob.GetId(), this.mob.targetPlayerId, num3);
 				this.serverReadyToAttack = false;
-				base.Invoke("GetReady", this.mob.attackTimes[num3] + Random.Range(0f, this.mob.attackCooldown));
+				base.Invoke(nameof(GetReady), this.mob.attackTimes[num3] + Random.Range(0f, this.mob.attackCooldown));
 				this.readyForRangedAttack = false;
-				base.Invoke("GetReadyForRangedAttack", Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
+				base.Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
 			}
 			return;
 		}
@@ -48,7 +48,7 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 		this.mob.Attack(this.mob.targetPlayerId, num5);
 		ServerSend.MobAttack(this.mob.GetId(), this.mob.targetPlayerId, num5);
 		this.serverReadyToAttack = false;
-		base.Invoke("GetReady", this.mob.attackTimes[num5] + Random.Range(0f, this.mob.attackCooldown));
+		base.Invoke(nameof(GetReady), this.mob.attackTimes[num5] + Random.Range(0f, this.mob.attackCooldown));
 	}
 
 	// Token: 0x06000429 RID: 1065 RVA: 0x00004EBC File Offset: 0x000030BC

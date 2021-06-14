@@ -56,7 +56,7 @@ public class MusicController : MonoBehaviour
 		{
 			this.queuedSong = audioClip;
 			this.StartFade(this.audio, this.fadeTime, 0f);
-			base.Invoke("NextSong", this.fadeTime);
+			base.Invoke(nameof(NextSong), this.fadeTime);
 			return;
 		}
 		this.NextSong(audioClip);

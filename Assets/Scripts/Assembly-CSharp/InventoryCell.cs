@@ -106,7 +106,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 				num2 = this.currentItem.amount;
 			}
 			ClientSend.ChestUpdate(OtherInput.Instance.currentChest.id, this.cellId, itemId, num2);
-			base.Invoke("GetReady", (float)(NetStatus.GetPing() * 3) * 0.01f);
+			base.Invoke(nameof(GetReady), (float)(NetStatus.GetPing() * 3) * 0.01f);
 		}
 		return inventoryItem3;
 	}
@@ -152,7 +152,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 				num3 = this.currentItem.amount;
 			}
 			float time = 1f;
-			base.Invoke("GetReady", time);
+			base.Invoke(nameof(GetReady), time);
 			ClientSend.ChestUpdate(OtherInput.Instance.currentChest.id, this.cellId, itemId, num3);
 		}
 		return inventoryItem2;
@@ -166,7 +166,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 			return;
 		}
 		this.ready = false;
-		base.Invoke("GetReady", Time.deltaTime * 2f);
+		base.Invoke(nameof(GetReady), Time.deltaTime * 2f);
 		if (this.cellType == InventoryCell.CellType.Crafting)
 		{
 			InventoryUI.Instance.CraftItem(this.currentItem);

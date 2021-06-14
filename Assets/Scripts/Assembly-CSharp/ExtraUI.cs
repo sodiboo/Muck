@@ -11,7 +11,7 @@ public class ExtraUI : MonoBehaviour
 	private void Awake()
 	{
 		this.IdToHpBar = new Dictionary<int, RawImage>();
-		base.InvokeRepeating("SlowUpdate", 0f, 1f);
+		base.InvokeRepeating(nameof(SlowUpdate), 0f, 1f);
 	}
 
 	// Token: 0x060000DE RID: 222 RVA: 0x00002C27 File Offset: 0x00000E27

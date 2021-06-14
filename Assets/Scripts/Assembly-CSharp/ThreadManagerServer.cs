@@ -25,7 +25,7 @@ public class ThreadManagerServer : MonoBehaviour
 	private void Awake()
 	{
 		ThreadManagerServer.Instance = this;
-		base.InvokeRepeating("TimeoutUpdate", 1f, 1f);
+		base.InvokeRepeating(nameof(TimeoutUpdate), 1f, 1f);
 	}
 
 	// Token: 0x060005B8 RID: 1464 RVA: 0x00002147 File Offset: 0x00000347

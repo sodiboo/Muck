@@ -17,7 +17,7 @@ public class Grass : MonoBehaviour
 				this.grassPool[i, j] =Instantiate<GameObject>(this.grass);
 			}
 		}
-		base.InvokeRepeating("MakeGrass", 0f, this.updateRate);
+		base.InvokeRepeating(nameof(MakeGrass), 0f, this.updateRate);
 	}
 
 	// Token: 0x06000110 RID: 272 RVA: 0x0000B9A8 File Offset: 0x00009BA8

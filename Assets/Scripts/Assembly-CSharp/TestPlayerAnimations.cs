@@ -13,7 +13,7 @@ public class TestPlayerAnimations : MonoBehaviour
 	private void Start()
 	{
 		this.grounded = true;
-		base.InvokeRepeating("FindRandomPosition", 1f, 5f);
+		base.InvokeRepeating(nameof(FindRandomPosition), 1f, 5f);
 		this.filter = this.weapon.GetComponent<MeshFilter>();
 		this.renderer = this.weapon.GetComponent<MeshRenderer>();
 	}

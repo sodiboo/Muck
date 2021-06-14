@@ -247,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
 	private void ResetJump()
 	{
 		this.readyToJump = true;
-		base.CancelInvoke("JumpCooldown");
+		base.CancelInvoke(nameof(JumpCooldown));
 	}
 
 	// Token: 0x06000646 RID: 1606 RVA: 0x0002116C File Offset: 0x0001F36C
@@ -265,8 +265,8 @@ public class PlayerMovement : MonoBehaviour
 				this.jumps--;
 			}
 			this.readyToJump = false;
-			base.CancelInvoke("JumpCooldown");
-			base.Invoke("JumpCooldown", 0.25f);
+			base.CancelInvoke(nameof(JumpCooldown));
+			base.Invoke(nameof(JumpCooldown), 0.25f);
 			this.resetJumpCounter = 0;
 			float d = this.jumpForce * PowerupInventory.Instance.GetJumpMultiplier(null);
 			this.rb.AddForce(Vector3.up * d * 1.5f, ForceMode.Impulse);

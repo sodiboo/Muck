@@ -27,7 +27,7 @@ public class FallIfNotGrounded : MonoBehaviour
 		{
 			this.bottomOffset = new Vector3(0f, this.c.bounds.extents.y, 0f);
 		}
-		base.InvokeRepeating("CheckFalling", 1f, 1f);
+		base.InvokeRepeating(nameof(CheckFalling), 1f, 1f);
 	}
 
 	// Token: 0x060000E8 RID: 232 RVA: 0x0000ACBC File Offset: 0x00008EBC

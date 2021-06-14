@@ -7,7 +7,7 @@ public class MoveCameraTowards : MonoBehaviour
 	// Token: 0x060001E4 RID: 484 RVA: 0x0000367D File Offset: 0x0000187D
 	private void Awake()
 	{
-		base.Invoke("SetReady", 1f);
+		base.Invoke(nameof(SetReady), 1f);
 	}
 
 	// Token: 0x060001E5 RID: 485 RVA: 0x0000368F File Offset: 0x0000188F

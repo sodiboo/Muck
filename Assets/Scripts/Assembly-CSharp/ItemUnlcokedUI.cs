@@ -13,7 +13,7 @@ public class ItemUnlcokedUI : MonoBehaviour
 		this.desiredPad = (float)this.layout.padding.top;
 		this.layout.padding.top = 400;
 		this.padUp = (float)this.layout.padding.top;
-		base.Invoke("StartFade", this.fadeStart);
+		base.Invoke(nameof(StartFade), this.fadeStart);
 	}
 
 	// Token: 0x06000190 RID: 400 RVA: 0x0000E35C File Offset: 0x0000C55C
@@ -22,7 +22,7 @@ public class ItemUnlcokedUI : MonoBehaviour
 		this.icon.CrossFadeAlpha(0f, this.fadeTime, true);
 		this.item.CrossFadeAlpha(0f, this.fadeTime, true);
 		this.overlay.CrossFadeAlpha(0f, this.fadeTime, true);
-		base.Invoke("DestroySelf", this.fadeTime);
+		base.Invoke(nameof(DestroySelf), this.fadeTime);
 	}
 
 	// Token: 0x06000191 RID: 401 RVA: 0x00002AC8 File Offset: 0x00000CC8

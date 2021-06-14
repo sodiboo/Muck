@@ -10,7 +10,7 @@ public class PlayerPing : MonoBehaviour
 	{
 		this.desiredScale = 1f;
 		base.transform.localScale = Vector3.zero;
-		base.Invoke("HidePing", 5f);
+		base.Invoke(nameof(HidePing), 5f);
 	}
 
 	// Token: 0x06000224 RID: 548 RVA: 0x00003AA1 File Offset: 0x00001CA1

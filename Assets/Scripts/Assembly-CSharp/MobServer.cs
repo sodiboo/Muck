@@ -13,9 +13,9 @@ public abstract class MobServer : MonoBehaviour
 	// Token: 0x06000417 RID: 1047 RVA: 0x00016C80 File Offset: 0x00014E80
 	protected void StartRoutines()
 	{
-		base.InvokeRepeating("SyncPosition", Random.Range(0f, this.syncPositionInterval), this.syncPositionInterval);
-		base.Invoke("SyncFindNextPosition", Random.Range(0f, this.FindPositionInterval) + this.mob.mobType.spawnTime);
-		base.InvokeRepeating("Behaviour", Random.Range(0f, this.behaviourInterval) + this.mob.mobType.spawnTime, this.behaviourInterval);
+		base.InvokeRepeating(nameof(SyncPosition), Random.Range(0f, this.syncPositionInterval), this.syncPositionInterval);
+		base.Invoke(nameof(SyncFindNextPosition), Random.Range(0f, this.FindPositionInterval) + this.mob.mobType.spawnTime);
+		base.InvokeRepeating(nameof(Behaviour), Random.Range(0f, this.behaviourInterval) + this.mob.mobType.spawnTime, this.behaviourInterval);
 	}
 
 	// Token: 0x06000418 RID: 1048 RVA: 0x00004E34 File Offset: 0x00003034

@@ -8,7 +8,7 @@ public class BuildDestruction : MonoBehaviour
 	// Token: 0x06000017 RID: 23 RVA: 0x00002135 File Offset: 0x00000335
 	private void Awake()
 	{
-		base.Invoke("CheckDirectlyGrounded", 2f);
+		base.Invoke(nameof(CheckDirectlyGrounded), 2f);
 	}
 
 	// Token: 0x06000018 RID: 24 RVA: 0x00007DD0 File Offset: 0x00005FD0

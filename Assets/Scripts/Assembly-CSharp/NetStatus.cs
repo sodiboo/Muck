@@ -9,7 +9,7 @@ public class NetStatus : MonoBehaviour
 	// Token: 0x060004DC RID: 1244 RVA: 0x000052DE File Offset: 0x000034DE
 	private void Awake()
 	{
-		base.InvokeRepeating("SlowUpdate", 1f, 1f);
+		base.InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
 	}
 
 	// Token: 0x060004DD RID: 1245 RVA: 0x000052F5 File Offset: 0x000034F5

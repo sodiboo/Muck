@@ -12,7 +12,7 @@ public class Hotbar : MonoBehaviour
 		this.cells = base.GetComponentsInChildren<InventoryCell>();
 		this.cells[this.currentActive].slot.color = this.cells[this.currentActive].hover;
 		this.UpdateHotbar();
-		base.Invoke("UpdateHotbar", 1f);
+		base.Invoke(nameof(UpdateHotbar), 1f);
 	}
 
 	// Token: 0x0600035A RID: 858 RVA: 0x000136DC File Offset: 0x000118DC
@@ -58,8 +58,8 @@ public class Hotbar : MonoBehaviour
 			{
 				UseInventory.Instance.SetWeapon(this.currentItem);
 			}
-			base.CancelInvoke("SendItemToServer");
-			base.Invoke("SendItemToServer", this.sendDelay);
+			base.CancelInvoke(nameof(SendItemToServer));
+			base.Invoke(nameof(SendItemToServer), this.sendDelay);
 		}
 		for (int i = 0; i < this.cells.Length; i++)
 		{

@@ -7,7 +7,7 @@ public class HitNumber : MonoBehaviour
 	// Token: 0x0600014D RID: 333 RVA: 0x0000CD58 File Offset: 0x0000AF58
 	private void Awake()
 	{
-		base.Invoke("StartFade", 1.5f);
+		base.Invoke(nameof(StartFade), 1.5f);
 		this.defaultScale = base.transform.localScale * 0.5f;
 		this.text = base.GetComponentInChildren<TextMeshProUGUI>();
 		float num = 0.5f;
@@ -40,7 +40,7 @@ public class HitNumber : MonoBehaviour
 	private void StartFade()
 	{
 		this.text.CrossFadeAlpha(0f, 1f, true);
-		base.Invoke("DestroySelf", 1f);
+		base.Invoke(nameof(DestroySelf), 1f);
 	}
 
 	// Token: 0x06000151 RID: 337 RVA: 0x00002AC8 File Offset: 0x00000CC8

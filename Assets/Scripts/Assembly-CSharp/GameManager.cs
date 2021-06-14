@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 		Instantiate<GameObject>(this.zone, Vector3.zero, Quaternion.identity);
 			if (LocalClient.serverOwner)
 			{
-				base.InvokeRepeating("SlowUpdate", 0.5f, 0.5f);
+				base.InvokeRepeating(nameof(SlowUpdate), 0.5f, 0.5f);
 			}
 		}
 		yield return 3f;
@@ -403,14 +403,14 @@ public class GameManager : MonoBehaviour
 	public void GameOver()
 	{
 		MusicController.Instance.StopSong();
-		base.Invoke("ShowEndScreen", 4f);
+		base.Invoke(nameof(ShowEndScreen), 4f);
 	}
 
 	// Token: 0x060004A9 RID: 1193 RVA: 0x000050D9 File Offset: 0x000032D9
 	public void GameOver(int winnerId)
 	{
 		this.winnerId = winnerId;
-		base.Invoke("ShowEndScreen", 4f);
+		base.Invoke(nameof(ShowEndScreen), 4f);
 		MusicController.Instance.StopSong();
 	}
 
@@ -523,7 +523,7 @@ public class GameManager : MonoBehaviour
 	public void SendPlayersIntoGame(List<Vector3> spawnPositions)
 	{
 		this.spawnPositions = spawnPositions;
-		base.Invoke("SendPlayersIntoGameNow", 2f);
+		base.Invoke(nameof(SendPlayersIntoGameNow), 2f);
 	}
 
 	// Token: 0x060004B2 RID: 1202 RVA: 0x00019FE4 File Offset: 0x000181E4

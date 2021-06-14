@@ -18,10 +18,10 @@ public class Item : MonoBehaviour
 	private void Awake()
 	{
 		this.outlineMat = base.GetComponent<MeshRenderer>().material;
-		base.Invoke("ReadyToPickup", this.pickupDelay);
+		base.Invoke(nameof(ReadyToPickup), this.pickupDelay);
 		if (LocalClient.serverOwner)
 		{
-			base.Invoke("DespawnItem", 300f);
+			base.Invoke(nameof(DespawnItem), 300f);
 		}
 	}
 

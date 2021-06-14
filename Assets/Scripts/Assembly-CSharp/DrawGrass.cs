@@ -30,7 +30,7 @@ public class DrawGrass : MonoBehaviour
 			return;
 		}
 		this.ClearMesh();
-		base.InvokeRepeating("SlowUpdate", 0f, this.updateRate);
+		base.InvokeRepeating(nameof(SlowUpdate), 0f, this.updateRate);
 		this.currentPositions = new Dictionary<Vector3, bool>();
 	}
 

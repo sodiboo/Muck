@@ -14,7 +14,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		this.neutral.mobZoneId = this.mobZoneId;
 		Mesh sharedMesh = base.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
 		this.headOffset = Vector3.up * sharedMesh.bounds.extents.y * 1.5f;
-		base.InvokeRepeating("CheckForPlayers", 0.5f, 0.5f);
+		base.InvokeRepeating(nameof(CheckForPlayers), 0.5f, 0.5f);
 	}
 
 	// Token: 0x060003E8 RID: 1000 RVA: 0x000164CC File Offset: 0x000146CC

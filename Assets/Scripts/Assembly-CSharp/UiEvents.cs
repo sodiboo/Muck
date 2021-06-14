@@ -157,7 +157,7 @@ public class UiEvents : MonoBehaviour
 		{
 			return;
 		}
-		if (base.IsInvoking("Unlock"))
+		if (base.IsInvoking(nameof(Unlock)))
 		{
 			return;
 		}
@@ -167,7 +167,7 @@ public class UiEvents : MonoBehaviour
 		gameObject.transform.SetSiblingIndex(0);
 		if (this.idsToUnlock.Count > 0)
 		{
-			base.Invoke("Unlock", 2f);
+			base.Invoke(nameof(Unlock), 2f);
 		}
 	}
 

@@ -7,9 +7,9 @@ public class ServerCommunication : MonoBehaviour
 	// Token: 0x06000500 RID: 1280 RVA: 0x0001B08C File Offset: 0x0001928C
 	private void Awake()
 	{
-		base.InvokeRepeating("QuickUpdate", this.updateFrequency, this.updateFrequency);
-		base.InvokeRepeating("SlowUpdate", this.slowUpdateFrequency, this.slowUpdateFrequency);
-		base.InvokeRepeating("SlowerUpdate", this.slowerUpdateFrequency, this.slowerUpdateFrequency);
+		base.InvokeRepeating(nameof(QuickUpdate), this.updateFrequency, this.updateFrequency);
+		base.InvokeRepeating(nameof(SlowUpdate), this.slowUpdateFrequency, this.slowUpdateFrequency);
+		base.InvokeRepeating(nameof(SlowerUpdate), this.slowerUpdateFrequency, this.slowerUpdateFrequency);
 	}
 
 	// Token: 0x06000501 RID: 1281 RVA: 0x0001B0E0 File Offset: 0x000192E0

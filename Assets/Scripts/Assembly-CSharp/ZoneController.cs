@@ -10,7 +10,7 @@ public class ZoneController : MonoBehaviour
 		ZoneController.Instance = this;
 		this.maxScale = base.transform.localScale.x;
 		this.desiredZoneScale = this.maxScale;
-		base.InvokeRepeating("SlowUpdate", this.updateRate, this.updateRate);
+		base.InvokeRepeating(nameof(SlowUpdate), this.updateRate, this.updateRate);
 	}
 
 	// Token: 0x0600083D RID: 2109 RVA: 0x000075F7 File Offset: 0x000057F7

@@ -15,7 +15,7 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 			return;
 		}
 		this.entities = new List<GameObject>();
-		base.InvokeRepeating("SlowUpdate", Random.Range(0f, this.updateRate), this.updateRate);
+		base.InvokeRepeating(nameof(SlowUpdate), Random.Range(0f, this.updateRate), this.updateRate);
 	}
 
 	// Token: 0x0600076D RID: 1901 RVA: 0x00024F90 File Offset: 0x00023190
@@ -28,7 +28,7 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 		this.entities.RemoveAll((GameObject item) => item == null);
 		if (this.entities.Count + this.entityBuffer < this.entityCap)
 		{
-			base.Invoke("QueueEntity", this.respawnTime);
+			base.Invoke(nameof(QueueEntity), this.respawnTime);
 			this.entityBuffer++;
 		}
 		bool flag = false;

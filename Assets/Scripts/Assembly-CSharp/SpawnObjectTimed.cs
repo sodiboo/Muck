@@ -7,7 +7,7 @@ public class SpawnObjectTimed : MonoBehaviour
 	// Token: 0x06000761 RID: 1889 RVA: 0x00006DB0 File Offset: 0x00004FB0
 	private void Awake()
 	{
-		base.Invoke("SpawnObject", this.time);
+		base.Invoke(nameof(SpawnObject), this.time);
 	}
 
 	// Token: 0x06000762 RID: 1890 RVA: 0x00006DC3 File Offset: 0x00004FC3

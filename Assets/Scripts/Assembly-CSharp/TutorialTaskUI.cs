@@ -22,7 +22,7 @@ public class TutorialTaskUI : MonoBehaviour
 		this.icon.CrossFadeAlpha(0f, this.fadeTime, true);
 		this.item.CrossFadeAlpha(0f, this.fadeTime, true);
 		this.overlay.CrossFadeAlpha(0f, this.fadeTime, true);
-		base.Invoke("DestroySelf", this.fadeTime);
+		base.Invoke(nameof(DestroySelf), this.fadeTime);
 	}
 
 	// Token: 0x06000812 RID: 2066 RVA: 0x00002AC8 File Offset: 0x00000CC8

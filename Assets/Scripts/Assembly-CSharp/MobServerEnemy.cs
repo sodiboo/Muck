@@ -57,7 +57,7 @@ public class MobServerEnemy : MobServer
 			this.mob.Attack(this.mob.targetPlayerId, num);
 			ServerSend.MobAttack(this.mob.GetId(), this.mob.targetPlayerId, num);
 			this.serverReadyToAttack = false;
-			base.Invoke("GetReady", this.mob.attackTimes[num] + Random.Range(0f, this.mob.attackCooldown));
+			base.Invoke(nameof(GetReady), this.mob.attackTimes[num] + Random.Range(0f, this.mob.attackCooldown));
 		}
 	}
 
@@ -77,15 +77,15 @@ public class MobServerEnemy : MobServer
 		}
 		if (num < 10f * this.mob.mobType.followPlayerDistance)
 		{
-			base.Invoke("SyncFindNextPosition", this.findPositionInterval[0]);
+			base.Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[0]);
 		}
 		else if (num < 25f * this.mob.mobType.followPlayerDistance)
 		{
-			base.Invoke("SyncFindNextPosition", this.findPositionInterval[1]);
+			base.Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[1]);
 		}
 		else
 		{
-			base.Invoke("SyncFindNextPosition", this.findPositionInterval[2]);
+			base.Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[2]);
 		}
 		if ((this.mob.IsAttacking() && this.mob.stopOnAttack) || this.mob.knocked || !this.mob.ready)
 		{

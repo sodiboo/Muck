@@ -14,7 +14,7 @@ public class DayUi : MonoBehaviour
 	// Token: 0x060000AE RID: 174 RVA: 0x000029F0 File Offset: 0x00000BF0
 	public void SetDay(int day)
 	{
-		base.Invoke("StartFade", 2f);
+		base.Invoke(nameof(StartFade), 2f);
 		this.dayText.text = string.Format("-DAY {0}-", day);
 	}
 
@@ -34,8 +34,8 @@ public class DayUi : MonoBehaviour
 		this.dayText.transform.localScale = this.defaultScale * 3f;
 		this.desiredScale = this.defaultScale * 1.2f;
 		this.dayText.CrossFadeAlpha(1f, this.fadeTime, true);
-		base.Invoke("FadeAway", 4f);
-		base.Invoke("Hide", 4f + this.fadeTime);
+		base.Invoke(nameof(FadeAway), 4f);
+		base.Invoke(nameof(Hide), 4f + this.fadeTime);
 		this.done = false;
 		this.sfx.Play();
 	}

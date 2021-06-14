@@ -30,7 +30,7 @@ public class MobServerNeutral : MobServer
 	// Token: 0x06000430 RID: 1072 RVA: 0x00004F0E File Offset: 0x0000310E
 	protected override Vector3 FindNextPosition()
 	{
-		base.Invoke("SyncFindNextPosition", 12f);
+		base.Invoke(nameof(SyncFindNextPosition), 12f);
 		return MobZoneManager.Instance.zones[this.mobZoneId].FindRandomPos();
 	}
 

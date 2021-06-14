@@ -79,7 +79,7 @@ public class InventoryUI : MonoBehaviour
 	public void CooldownPickup()
 	{
 		this.pickupCooldown = true;
-		base.Invoke("ResetCooldown", (float)(NetStatus.GetPing() * 2) / 1000f);
+		base.Invoke(nameof(ResetCooldown), (float)(NetStatus.GetPing() * 2) / 1000f);
 	}
 
 	// Token: 0x06000381 RID: 897 RVA: 0x0000489D File Offset: 0x00002A9D

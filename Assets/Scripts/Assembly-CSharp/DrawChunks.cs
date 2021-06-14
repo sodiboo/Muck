@@ -8,7 +8,7 @@ public class DrawChunks : MonoBehaviour
 	// Token: 0x060000C5 RID: 197 RVA: 0x0000A22C File Offset: 0x0000842C
 	private void Awake()
 	{
-		base.InvokeRepeating("UpdateChunks", 0f, this.updateRate);
+		base.InvokeRepeating(nameof(UpdateChunks), 0f, this.updateRate);
 		this.visibleChunks = new bool[this.nChunks];
 		this.chunkLOD = new int[this.nChunks];
 		this.chunkLength = Mathf.FloorToInt(Mathf.Sqrt((float)this.nChunks));

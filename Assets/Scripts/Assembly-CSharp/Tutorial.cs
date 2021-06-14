@@ -34,7 +34,7 @@ public class Tutorial : MonoBehaviour
 				return;
 			}
 			this.started = true;
-			base.Invoke("ContinueTutorial", 5f);
+			base.Invoke(nameof(ContinueTutorial), 5f);
 			return;
 		}
 		else

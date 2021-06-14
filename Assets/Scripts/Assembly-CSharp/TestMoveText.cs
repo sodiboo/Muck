@@ -18,8 +18,8 @@ public class TestMoveText : MonoBehaviour
 		}
 		float num = 0.08f;
 		float num2 = 2f;
-		base.InvokeRepeating("SlowUpdate", num2, num);
-		base.InvokeRepeating("AddMaterial", num * (float)base.transform.childCount + num2 + 2f, 0.05f);
+		base.InvokeRepeating(nameof(SlowUpdate), num2, num);
+		base.InvokeRepeating(nameof(AddMaterial), num * (float)base.transform.childCount + num2 + 2f, 0.05f);
 	}
 
 	// Token: 0x060007D1 RID: 2001 RVA: 0x00026A00 File Offset: 0x00024C00
@@ -65,7 +65,7 @@ public class TestMoveText : MonoBehaviour
 		this.notSurfacing.Remove(item);
 		if (this.notSurfacing.Count <= 0)
 		{
-			base.CancelInvoke("SlowUpdate");
+			base.CancelInvoke(nameof(SlowUpdate));
 		}
 	}
 

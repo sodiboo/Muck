@@ -29,7 +29,7 @@ public class NetworkController : MonoBehaviour
 		this.loading = true;
 		this.playerNames = names;
 		LoadingScreen.Instance.Show(1f);
-		base.Invoke("StartLoadingScene", LoadingScreen.Instance.totalFadeTime);
+		base.Invoke(nameof(StartLoadingScene), LoadingScreen.Instance.totalFadeTime);
 	}
 
 	// Token: 0x060001FF RID: 511 RVA: 0x000038F1 File Offset: 0x00001AF1

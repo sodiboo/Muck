@@ -8,7 +8,7 @@ public class TestScroll : MonoBehaviour
 	private void Awake()
 	{
 		TestScroll.Instance = this;
-		base.Invoke("GetReady", 4f);
+		base.Invoke(nameof(GetReady), 4f);
 	}
 
 	// Token: 0x060007EA RID: 2026 RVA: 0x00007320 File Offset: 0x00005520

@@ -7,7 +7,7 @@ public class DestroyObject : MonoBehaviour
 	// Token: 0x060000BC RID: 188 RVA: 0x00002AB5 File Offset: 0x00000CB5
 	private void Start()
 	{
-		base.Invoke("DestroySelf", this.time);
+		base.Invoke(nameof(DestroySelf), this.time);
 	}
 
 	// Token: 0x060000BD RID: 189 RVA: 0x00002AC8 File Offset: 0x00000CC8

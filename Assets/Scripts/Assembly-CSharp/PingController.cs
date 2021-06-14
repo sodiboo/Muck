@@ -28,7 +28,7 @@ public class PingController : MonoBehaviour
 			return;
 		}
 		this.readyToPing = false;
-		base.Invoke("PingCooldown", this.pingCooldown);
+		base.Invoke(nameof(PingCooldown), this.pingCooldown);
 		Vector3 vector = this.FindPingPos();
 		if (vector == Vector3.zero)
 		{

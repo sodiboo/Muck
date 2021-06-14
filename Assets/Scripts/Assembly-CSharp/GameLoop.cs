@@ -63,7 +63,7 @@ public class GameLoop : MonoBehaviour
 				}
 			}
 		}
-		base.InvokeRepeating("TimeoutPlayers", 2f, 2f);
+		base.InvokeRepeating(nameof(TimeoutPlayers), 2f, 2f);
 	}
 
 	// Token: 0x060000F9 RID: 249 RVA: 0x0000B034 File Offset: 0x00009234
@@ -76,7 +76,7 @@ public class GameLoop : MonoBehaviour
 		this.bossNight = false;
 		this.nightStarted = false;
 		this.currentDay = day;
-		base.CancelInvoke("CheckMobSpawns");
+		base.CancelInvoke(nameof(CheckMobSpawns));
 		ServerSend.NewDay(day);
 		GameManager.instance.UpdateDay(day);
 		this.totalWeight = this.CalculateSpawnWeights(this.currentDay);
@@ -150,7 +150,7 @@ public class GameLoop : MonoBehaviour
 		{
 			MusicController.Instance.PlaySong(MusicController.SongType.Night, true);
 		}
-		base.Invoke("CheckMobSpawns", Random.Range(this.checkMobUpdateInterval.x, this.checkMobUpdateInterval.y));
+		base.Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x, this.checkMobUpdateInterval.y));
 	}
 
 	// Token: 0x060000FD RID: 253 RVA: 0x0000B2C8 File Offset: 0x000094C8
@@ -168,7 +168,7 @@ public class GameLoop : MonoBehaviour
 			return;
 		}
 		float num = (float)GameManager.instance.GetPlayersAlive() / 2f;
-		base.Invoke("CheckMobSpawns", Random.Range(this.checkMobUpdateInterval.x / num, this.checkMobUpdateInterval.y / num));
+		base.Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x / num, this.checkMobUpdateInterval.y / num));
 		this.activeMobs = MobManager.Instance.GetActiveEnemies();
 		if (GameManager.state != GameManager.GameState.Playing)
 		{

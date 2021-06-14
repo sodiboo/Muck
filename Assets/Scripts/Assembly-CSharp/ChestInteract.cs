@@ -19,7 +19,7 @@ public class ChestInteract : MonoBehaviour, Interactable
 			return;
 		}
 		this.ready = false;
-		base.Invoke("GetReady", this.cooldownTime);
+		base.Invoke(nameof(GetReady), this.cooldownTime);
 		ClientSend.RequestChest(this.chest.id, true);
 	}
 

@@ -8,7 +8,7 @@ public class SpectatorCamera : MonoBehaviour
 	private void OnEnable()
 	{
 		this.ready = false;
-		base.Invoke("GetReady", 1f);
+		base.Invoke(nameof(GetReady), 1f);
 	}
 
 	// Token: 0x17000039 RID: 57

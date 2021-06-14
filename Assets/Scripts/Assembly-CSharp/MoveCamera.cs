@@ -49,7 +49,7 @@ public class MoveCamera : MonoBehaviour
 		base.transform.position = pos;
 		this.state = MoveCamera.CameraState.Player;
 		base.transform.parent = null;
-		base.CancelInvoke("SpectateCamera");
+		base.CancelInvoke(nameof(SpectateCamera));
 	}
 
 	// Token: 0x0600061C RID: 1564 RVA: 0x0002019C File Offset: 0x0001E39C
@@ -60,7 +60,7 @@ public class MoveCamera : MonoBehaviour
 		this.desiredDeathPos = base.transform.position + Vector3.up * 3f;
 		if (GameManager.state != GameManager.GameState.GameOver)
 		{
-			base.Invoke("StartSpectating", 4f);
+			base.Invoke(nameof(StartSpectating), 4f);
 		}
 	}
 

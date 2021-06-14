@@ -150,7 +150,7 @@ public class Mob : MonoBehaviour, SharedObject
 	// Token: 0x06000405 RID: 1029 RVA: 0x0001689C File Offset: 0x00014A9C
 	public void Knockback(Vector3 dir)
 	{
-		base.CancelInvoke("StopKnockback");
+		base.CancelInvoke(nameof(StopKnockback));
 		this.oldAngularSpeed = this.agent.angularSpeed;
 		this.agent.destination = base.transform.position + dir * 6f;
 		this.animator.SetBool("Knockback", true);
@@ -158,7 +158,7 @@ public class Mob : MonoBehaviour, SharedObject
 		this.agent.velocity += dir * 10f;
 		this.agent.angularSpeed = 0f;
 		this.agent.updateRotation = false;
-		base.Invoke("StopKnockback", 0.75f);
+		base.Invoke(nameof(StopKnockback), 0.75f);
 	}
 
 	// Token: 0x06000406 RID: 1030 RVA: 0x00016950 File Offset: 0x00014B50
@@ -215,7 +215,7 @@ public class Mob : MonoBehaviour, SharedObject
 		{
 			this.currentAttackType = Mob.AttackType.Melee;
 		}
-		base.Invoke("FinishAttacking", this.attackTimes[attackAnimationIndex]);
+		base.Invoke(nameof(FinishAttacking), this.attackTimes[attackAnimationIndex]);
 		this.animator.Play(this.attackAnimations[attackAnimationIndex].name);
 		this.targetPlayerId = targetPlayerId;
 	}

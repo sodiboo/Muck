@@ -426,8 +426,8 @@ public class PowerupInventory : MonoBehaviour
 			return;
 		}
 		this.juiceSpeed = this.GetJuiceMultiplier(null);
-		base.CancelInvoke("StopJuice");
-		base.Invoke("StopJuice", 2f);
+		base.CancelInvoke(nameof(StopJuice));
+		base.Invoke(nameof(StopJuice), 2f);
 	}
 
 	// Token: 0x060003BA RID: 954 RVA: 0x00004A2A File Offset: 0x00002C2A

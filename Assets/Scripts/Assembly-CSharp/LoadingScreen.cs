@@ -15,7 +15,7 @@ public class LoadingScreen : MonoBehaviour
 		this.players = new bool[10];
 		if (LocalClient.serverOwner)
 		{
-			base.InvokeRepeating("CheckAllPlayersLoading", 10f, 10f);
+			base.InvokeRepeating(nameof(CheckAllPlayersLoading), 10f, 10f);
 		}
 	}
 
@@ -24,7 +24,7 @@ public class LoadingScreen : MonoBehaviour
 	{
 		if (GameManager.state == GameManager.GameState.Playing)
 		{
-			base.CancelInvoke("CheckAllPlayersLoading");
+			base.CancelInvoke(nameof(CheckAllPlayersLoading));
 			return;
 		}
 		Debug.LogError("Checking all players");
@@ -69,7 +69,7 @@ public class LoadingScreen : MonoBehaviour
 		{
 			this.canvasGroup.alpha = 0f;
 		}
-		base.Invoke("HideStuff", this.totalFadeTime);
+		base.Invoke(nameof(HideStuff), this.totalFadeTime);
 	}
 
 	// Token: 0x060001A1 RID: 417 RVA: 0x000033A5 File Offset: 0x000015A5
