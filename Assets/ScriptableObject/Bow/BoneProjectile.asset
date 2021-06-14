@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a01a2706b587eb4c99ed3da150aaa34, type: 3}
   m_Name: BoneProjectile
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   projectileSpeed: 2.75
   nArrows: 1
   angleDelta: 0
