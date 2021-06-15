@@ -7,6 +7,7 @@
 - [Powerups by ID](#Powerups-by-ID)
 - [Powerups by name](#Powerups-by-name)
 - [Powerups](#Powerups)
+- [Mobs](#Mobs)
 
 # Items by ID
 0. [Bark](#Bark)
@@ -3130,6 +3131,8 @@ It's not gonna make much of a difference, but just for accuracy's sake, if you w
 
 This function can be graphed using a tool like [desmos](https://www.desmos.com/calculator), by replacing `a` and `b` in the formula with the actual values, and setting that as the value for `y`, which is what i've used for all the graphs on this page. You can click on any graph i've made to view the interactive desmos page for it.
 
+# YOU CAN CLICK ON ANY GRAPH AND YOU CAN ZOOM OUT AND SHIT AND SEE THE EQUATIONS ON THE LEFT SIDE
+
 ---
 
 ### Blue Pill
@@ -4327,6 +4330,152 @@ And if you want the raw stats for your specific level, here are the first few va
 10. 3.5x damage when falling
 
 </details>
+
+# Mobs
+### How does mob health work?
+
+Mobs have a base health. Depending on how the mob spawns, its real max health will be the base health with a multiplier.
+
+- When a mob spawns from a shrine, it has 1.75x health
+- A boss spawned from a shrine has 1.5x health, and another multiplier which increases by .1x for every additional player alive beyond the first player (i.e. 1 player = 1x, 2 players = 1.1x health)
+- A regular boss has a health multiplier which increases by .15x for every additional player alive beyond the first player
+- Starting at 6% for the first 5 days, every day after that adds another 1% chance to get 1.5x health, ending at day 30 (31%). This also defines a buff mob.
+- All mob health is multiplied by the current day times the difficulty health base (0.2 for easy, 0.23 for normal, 0.28 for gamer), to the power of the difficulty health exponent (1.3 for easy, 1.54 for normal, 1.65 for gamer), plus the difficulty base multiplier value (0.9 for easy, 1.05 for normal, 1.3 for gamer). What the fuck does that mean? I don't know, here's some lines that show you why the base health is always way lower than you'd expect:
+
+[![](mob.png)](https://www.desmos.com/calculator/dkoejbf993)
+- Red: Easy
+- Blue: Normal
+- Green: Gamer
+
+---
+
+### BOSS: Big Chunk
+- Base Health: 700
+#### Weaknesses
+- Blunt
+#### Loot Table
+- 100% chance to drop 25-50 [Rock](#Rock)
+- 80% chance to drop 10-25 [Iron Ore](#Iron-Ore)
+- 30% chance to drop 10-25 [Mithril Ore](#Mithril-Ore)
+- 100% chance to drop 50-100 [Coin](#Coin)
+- 50% chance to drop 5-20 [Chunkium Ore](#Chunkium-Ore)
+- 10% chance to drop 1-1 [Hammer Shaft](#Hammer-Shaft)
+- 33% chance to drop 1-1 [AncientCore](#AncientCore)
+
+---
+
+### BOSS: Gronk
+- Base Health: 650
+#### Weaknesses
+- None
+#### Loot Table
+- 100% chance to drop 50-100 [Coin](#Coin)
+- 40% chance to drop 5-15 [Oak Wood](#Oak-Wood)
+- 20% chance to drop 5-15 [Dark Oak Wood](#Dark-Oak-Wood)
+- 5% chance to drop 1-1 [Gronks Sword](#Gronks-Sword)
+- 33% chance to drop 1-1 [AncientCore](#AncientCore)
+- 10% chance to drop 1-1 [Ancient Bone](#Ancient-Bone)
+- 15% chance to drop 1-1 [Blade](#Blade)
+- 15% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
+
+---
+
+### Aquadave
+- Base Health: 100
+#### Weaknesses
+- Lightning
+#### Loot Table
+- 100% chance to drop 10-20 [Coin](#Coin)
+- 50% chance to drop 1-3 [Sugon Shroom](#Sugon-Shroom)
+- 5% chance to drop 4-8 [Waterball](#Waterball)
+
+---
+
+### Cow
+- Base Health: 80
+#### Weaknesses
+- None
+#### Loot Table
+- 100% chance to drop 1-2 [Raw Meat](#Raw-Meat)
+
+---
+
+### Electrodave
+- Base Health: 100
+#### Weaknesses
+- Fire
+#### Loot Table
+- 100% chance to drop 10-20 [Coin](#Coin)
+- 50% chance to drop 1-3 [Ligon Shroom](#Ligon-Shroom)
+- 5% chance to drop 4-8 [Lightningball](#Lightningball)
+
+---
+
+### Emberdave
+- Base Health: 100
+#### Weaknesses
+- Water
+#### Loot Table
+- 100% chance to drop 10-20 [Coin](#Coin)
+- 50% chance to drop 1-3 [Gulpon Shroom](#Gulpon-Shroom)
+- 5% chance to drop 4-8 [Fireball](#Fireball)
+
+---
+
+### Goblin
+- Base Health: 60
+#### Weaknesses
+- None
+#### Loot Table
+- 100% chance to drop 6-12 [Coin](#Coin)
+- 25% chance to drop 5-10 [Wood](#Wood)
+- 1% chance to drop 1-1 [Ancient Bone](#Ancient-Bone)
+- 5% chance to drop 5-15 [Gold Ore](#Gold-Ore)
+- 0.1% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
+- 0.1% chance to drop 1-1 [Blade](#Blade)
+
+---
+
+### Goblin
+- Base Health: 60
+#### Weaknesses
+- Fire
+#### Loot Table
+- 100% chance to drop 5-15 [Coin](#Coin)
+- 50% chance to drop 2-4 [Wolfskin](#Wolfskin)
+- 0.1% chance to drop 1-1 [Wolf Claws](#Wolf-Claws)
+
+---
+
+### Golem
+- Base Health: 150
+#### Weaknesses
+- Blunt
+#### Loot Table
+- 100% chance to drop 2-4 [Rock](#Rock)
+- 10% chance to drop 1-2 [Iron Ore](#Iron-Ore)
+- 50% chance to drop 2-4 [Flint](#Flint)
+- 100% chance to drop 12-16 [Coin](#Coin)
+
+---
+
+### Lil' Dave
+- Base Health: 40
+#### Weaknesses
+- None
+#### Loot Table
+- 100% chance to drop 3-7 [Coin](#Coin)
+
+---
+
+### Wyvern
+- Base Health: 100
+#### Weaknesses
+- Lightning
+#### Loot Table
+- 100% chance to drop 15-30 [Coin](#Coin)
+- 5% chance to drop 2-8 [Gold bar](#Gold-bar)
+- 1% chance to drop 1-1 [Wyvern Claws](#Wyvern-Claws)
 
 [Blue-Pill]: ../Assets/Texture2D/PillBlue.png
 [Broccoli]: ../Assets/Texture2D/Broccolo.png

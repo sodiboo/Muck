@@ -151,7 +151,7 @@ interface _ {
   fuel: string | null;
 }
 
-const items = new Map<string, Item>();
+export const items = new Map<string, Item>();
 let cauldron = "";
 for (const [guid, file] of await io.ScriptableObjects("Items")) {
   const extras: ExtraItemData = {

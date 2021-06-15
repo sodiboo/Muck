@@ -23,7 +23,9 @@ interface Dummy {
 
 export const mobs = new Map<string, Mob>();
 
-import { io, parse, prefabs, scripts } from "./common.ts";
+import { io, link, parse, prefabs, scripts } from "./common.ts";
+import { items } from "./item.ts";
+import { lootTables } from "./loot.ts";
 
 for (const [guid, file] of await io.ScriptableObjects("Mobs")) {
   const prefab = parse.guid<Dummy>(file, "mobPrefab")!;
@@ -47,3 +49,31 @@ for (const [guid, file] of await io.ScriptableObjects("Mobs")) {
   }
   mobs.set(guid, mob);
 }
+
+const explanation = await Deno.readTextFile("./Health.md");
+
+export const section: () => [string, string] =
+  () => [
+    "Mobs",
+    explanation + "\n\n---\n\n" + Array.from(mobs.values()).sort((a, b) => {
+      if (a.boss != b.boss) {
+        if (a.boss) return -1;
+        return 1;
+      }
+      return a.name.localeCompare(b.name);
+    }).map((mob) =>
+      `###${mob.boss ? " BOSS: " : " "}${mob.name}
+- Base Health: ${mob.health}
+#### Weaknesses
+${mob.weaknesses.length ? mob.weaknesses.map((weakness) => `- ${Weakness[weakness]}`).join("\n") : "- None"}
+#### Loot Table
+${
+        lootTables.get(mob.loot)!.loot.map((entry) =>
+          `- ${entry.dropChance *
+            100}% chance to drop ${entry.amountMin}-${entry.amountMax} ${
+            link(items.get(entry.item)!.name)
+          }`
+        ).join("\n")
+      }`
+    ).join("\n\n---\n\n"),
+  ];

@@ -10,3 +10,5 @@ The function the game uses to calculate these values takes in two parameters: `a
 It's not gonna make much of a difference, but just for accuracy's sake, if you want the exact result the game produces, it's using single-precision (32-bit) floating point numbers and `e` has the exact value of `2.71828`. It uses Unity's built in `Mathf.Pow` function, which as far as i know uses instructions, so they are not completely consistent across platforms. If you want completely 100% for sure exactly identical results to the game, get fucked. You can't.
 
 This function can be graphed using a tool like [desmos](https://www.desmos.com/calculator), by replacing `a` and `b` in the formula with the actual values, and setting that as the value for `y`, which is what i've used for all the graphs on this page. You can click on any graph i've made to view the interactive desmos page for it.
+
+# YOU CAN CLICK ON ANY GRAPH AND YOU CAN ZOOM OUT AND SHIT AND SEE THE EQUATIONS ON THE LEFT SIDE
