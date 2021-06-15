@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01649df7c5f2e2245983bd5665ec53df, type: 3}
   m_Name: Fuel_Wood
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   maxUses: 1
   currentUses: 1
   speedMultiplier: 1

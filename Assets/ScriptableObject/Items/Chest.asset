@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: Chest
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   id: 1
   name: Chest
   description: store thing in it
@@ -41,7 +42,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
   buildable: 1
   grid: 0
-  prefab: {fileID: 1989849249844966, guid: e3d2db8fb72aedd4f9386885a739d80b, type: 2}
+  prefab: {fileID: 1989849249844966, guid: e3d2db8fb72aedd4f9386885a739d80b, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -57,4 +58,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 0
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 1

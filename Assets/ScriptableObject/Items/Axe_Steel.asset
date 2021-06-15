@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: Axe_Steel
-  m_EditorClassIdentifier:
-  id: 56
+  m_EditorClassIdentifier: 
+  id: 94
   name: Steel Axe
   description: its axe
   type: 1
@@ -59,4 +60,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 0
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 1

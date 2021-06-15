@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: Meat_Cooked
-  m_EditorClassIdentifier:
-  id: 32
+  m_EditorClassIdentifier: 
+  id: 53
   name: Cooked Meat
   description: yummy
   type: 8
@@ -55,4 +56,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 2
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 1

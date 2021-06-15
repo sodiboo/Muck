@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,11 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ad122b1b50870c4694d1e911b72693c, type: 3}
   m_Name: Piggybank
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Piggybank
   description: I'm feeling lucky, time to <i>hog</i> all the loot
-  id: 1
+  id: 13
   tier: 1
   mesh: {fileID: 4300000, guid: 77e77385dd5ca6440b536491aef4ba82, type: 2}
   material: {fileID: 2100000, guid: 2a93c37357b389142b0e344ae6621e04, type: 2}
   sprite: {fileID: 21300000, guid: d33af7842b46dbd4786953346f2dc324, type: 3}
+  x: 0

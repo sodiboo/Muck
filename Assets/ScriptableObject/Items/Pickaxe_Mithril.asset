@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: Pickaxe_Mithril
-  m_EditorClassIdentifier:
-  id: 61
+  m_EditorClassIdentifier: 
+  id: 103
   name: Mithril Pickaxe
   description: its pickaxe
   type: 2
@@ -60,3 +61,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 01000000
+  x: 1

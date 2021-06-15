@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: LightningBall
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   id: 69
   name: Lightningball
   description: Ball of lightning
@@ -37,7 +38,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1430015698757044, guid: cfe87c54200694044b695ea56af31ea5, type: 2}
+  prefab: {fileID: 1430015698757044, guid: cfe87c54200694044b695ea56af31ea5, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -53,4 +54,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 0
   rarity: 2
-  attackTypes:
+  attackTypes: 
+  x: 1

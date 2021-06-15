@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,11 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ad122b1b50870c4694d1e911b72693c, type: 3}
   m_Name: Horseshoe
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Horseshoe
   description: Increased chance to hit a critical strike
-  id: 1
+  id: 11
   tier: 1
   mesh: {fileID: 4300000, guid: b9a32d4202b73194fb1b394d40e580bd, type: 2}
   material: {fileID: 2100000, guid: 1bddf103b72cbf94095ecd03a4795219, type: 2}
   sprite: {fileID: 21300000, guid: 5bf46fc784aef144b8ea24fe26ec8b81, type: 3}
+  x: 0

@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be6bbb15b8c28ad4cb7e8099c9053c62, type: 3}
-  m_Name: Wolf_0
+  m_Name: Gronk
   m_EditorClassIdentifier: 
-  name: Wolf
-  mobPrefab: {fileID: 1573443381612003, guid: 830a140ffd3af3048b2af106320d1582, type: 3}
-  behaviour: 1
+  name: Gronk
+  mobPrefab: {fileID: 1888509233187644, guid: 6b464a00c2aaff042abc65654b626d92, type: 3}
+  behaviour: 2
   ranged: 0
-  rangedCooldown: 6
-  startAttackDistance: 6.5
-  startRangedAttackDistance: 5
-  maxAttackDistance: 1
-  speed: 26
+  rangedCooldown: 7
+  startAttackDistance: 9
+  startRangedAttackDistance: 0
+  maxAttackDistance: 120
+  speed: 29
   spawnTime: 1.5
-  minAttackAngle: 50
+  minAttackAngle: 45
   sharpDefense: 0
   defense: 0
-  knockbackThreshold: 0.3
+  knockbackThreshold: 0.4
   ignoreBuilds: 0
-  followPlayerDistance: 6
-  followPlayerAccuracy: 0.3
-  onlyRangedInRangedPattern: 0
-  weaknesses: 03000000
-  boss: 0
+  followPlayerDistance: 12
+  followPlayerAccuracy: 1
+  onlyRangedInRangedPattern: 1
+  weaknesses: 
+  boss: 1

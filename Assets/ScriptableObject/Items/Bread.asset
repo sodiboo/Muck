@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: Bread
-  m_EditorClassIdentifier:
-  id: 31
+  m_EditorClassIdentifier: 
+  id: 52
   name: Bread
   description: lets get this bread
   type: 0
@@ -39,7 +40,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 11400000, guid: ac5040e198f049b4b91cafaea406e4a7, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1996728848672000, guid: 08f9e40726d3727418bed2d67d24dd5b, type: 2}
+  prefab: {fileID: 1996728848672000, guid: 08f9e40726d3727418bed2d67d24dd5b, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
@@ -55,4 +56,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 2
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 1

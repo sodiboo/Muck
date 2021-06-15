@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,11 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ad122b1b50870c4694d1e911b72693c, type: 3}
   m_Name: Orange Juice
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Orange Juice
   description: +Attack speed
-  id: 2
+  id: 3
   tier: 0
   mesh: {fileID: 4300000, guid: d0f1a369ac6ce244db69cc12c8b3ecee, type: 2}
   material: {fileID: 2100000, guid: 91ae79badd0eeed4dbe5c29a27e5da0c, type: 2}
   sprite: {fileID: 21300000, guid: 158990837d94b9d4899776534a9ba663, type: 3}
+  x: 0

@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: WorkBench
-  m_EditorClassIdentifier:
-  id: 52
+  m_EditorClassIdentifier: 
+  id: 90
   name: Workbench
   description: A crafting table
   type: 7
@@ -39,7 +40,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 1
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 2}
+  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -55,4 +56,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 0
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 1
