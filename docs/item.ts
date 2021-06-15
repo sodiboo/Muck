@@ -453,7 +453,7 @@ sections.push([
 
 for (const item of Array.from(items.values()).sort((a, b) => a.id - b.id)) {
   references.push(
-    `[item-${item.id}]: ../../Assets/Texture2D/${
+    `[item-${item.id}]: ../Assets/Texture2D/${
       encodeURIComponent(images.get(item.sprite)!)
     }`,
   );
