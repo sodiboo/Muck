@@ -2,12 +2,13 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1045 &1
 EditorBuildSettings:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scene/Scenes/Menu.unity
     guid: 31cfc1c4654c59544809b2e57ce33584
   - enabled: 1
-    path: Assets/Scenes/GameAfterLobby.unity
+    path: Assets/Scene/Scenes/GameAfterLobby.unity
     guid: 81b3159f17c9bbf4b9aa12bd2aec2920
   m_configObjects: {}
