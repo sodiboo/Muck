@@ -14,7 +14,7 @@ public class Grass : MonoBehaviour
 		{
 			for (int j = 0; j < this.thicc; j++)
 			{
-				this.grassPool[i, j] =Instantiate<GameObject>(this.grass);
+				this.grassPool[i, j] = Instantiate<GameObject>(this.grass);
 			}
 		}
 		base.InvokeRepeating(nameof(MakeGrass), 0f, this.updateRate);

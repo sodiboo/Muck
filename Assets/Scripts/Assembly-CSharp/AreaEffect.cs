@@ -29,7 +29,7 @@ public class AreaEffect : MonoBehaviour
 			return;
 		}
 		component.Hit(this.damage, 0f, 3, base.transform.position);
-	Destroy(this);
+		Destroy(this);
 	}
 
 

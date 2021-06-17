@@ -126,7 +126,7 @@ public class FurnaceSync : Chest
 	{
 		if (this.cells[2] == null)
 		{
-			this.cells[2] =Instantiate<InventoryItem>(ItemManager.Instance.allItems[processedItemId]);
+			this.cells[2] = Instantiate<InventoryItem>(ItemManager.Instance.allItems[processedItemId]);
 			this.cells[2].amount = 1;
 		}
 		else

@@ -85,7 +85,7 @@ public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 
 	public void AllExecute()
 	{
-	Destroy(base.gameObject.transform.parent.gameObject);
+		Destroy(base.gameObject.transform.parent.gameObject);
 	}
 
 
@@ -96,7 +96,7 @@ public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 
 	public void RemoveObject()
 	{
-	Destroy(base.gameObject.transform.parent.gameObject);
+		Destroy(base.gameObject.transform.parent.gameObject);
 	}
 
 

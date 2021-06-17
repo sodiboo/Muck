@@ -72,7 +72,7 @@ public class CraftingUI : InventoryExtensions
 		{
 			if (this.cells[i].gameObject)
 			{
-			Destroy(this.cells[i].gameObject);
+				Destroy(this.cells[i].gameObject);
 			}
 		}
 		this.cells = new List<InventoryCell>();
@@ -80,13 +80,13 @@ public class CraftingUI : InventoryExtensions
 		{
 			if (UiEvents.Instance.IsSoftUnlocked(inventoryItem.id))
 			{
-				InventoryCell component =Instantiate<GameObject>(this.cellPrefab, this.cellsParent).GetComponent<InventoryCell>();
+				InventoryCell component = Instantiate<GameObject>(this.cellPrefab, this.cellsParent).GetComponent<InventoryCell>();
 				component.currentItem = ScriptableObject.CreateInstance<InventoryItem>();
 				component.currentItem.Copy(inventoryItem, 1);
 				component.cellType = InventoryCell.CellType.Crafting;
 				foreach (InventoryItem.CraftRequirement craftRequirement in component.currentItem.requirements)
 				{
-					GameObject gameObject =Instantiate<GameObject>(this.requirementPrefab);
+					GameObject gameObject = Instantiate<GameObject>(this.requirementPrefab);
 					gameObject.GetComponent<Image>().sprite = craftRequirement.item.sprite;
 					gameObject.transform.SetParent(component.transform.GetChild(component.transform.childCount - 2));
 				}

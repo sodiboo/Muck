@@ -35,7 +35,7 @@ public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 				this.shrines[j] = raycastHit.point;
 				num2++;
 				GameObject gameObject = this.spawnZone;
-				SpawnZone spawnZone =Instantiate<GameObject>(gameObject, raycastHit.point, gameObject.transform.rotation).GetComponent<SpawnZone>();
+				SpawnZone spawnZone = Instantiate<GameObject>(gameObject, raycastHit.point, gameObject.transform.rotation).GetComponent<SpawnZone>();
 				spawnZone.GetComponentInChildren<SharedObject>().SetId(ResourceManager.Instance.GetNextId());
 				spawnZone.id = MobZoneManager.Instance.GetNextId();
 				spawnZone = this.ProcessZone(spawnZone);

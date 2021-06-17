@@ -7,17 +7,17 @@ namespace MilkShake
 	public class ShakeInstance
 	{
 
-		// (get) Token: 0x0600000F RID: 15 RVA: 0x00002050 File Offset: 0x00000250
-		// (set) Token: 0x06000010 RID: 16 RVA: 0x00002058 File Offset: 0x00000258
+
+
 		public ShakeState State { get; private set; }
 
 
-		// (get) Token: 0x06000011 RID: 17 RVA: 0x00002061 File Offset: 0x00000261
-		// (set) Token: 0x06000012 RID: 18 RVA: 0x00002069 File Offset: 0x00000269
+
+
 		public bool IsPaused { get; private set; }
 
 
-		// (get) Token: 0x06000013 RID: 19 RVA: 0x00002072 File Offset: 0x00000272
+
 		public bool IsFinished
 		{
 			get
@@ -27,7 +27,7 @@ namespace MilkShake
 		}
 
 
-		// (get) Token: 0x06000014 RID: 20 RVA: 0x00002085 File Offset: 0x00000285
+
 		public float CurrentStrength
 		{
 			get
@@ -37,7 +37,7 @@ namespace MilkShake
 		}
 
 
-		// (get) Token: 0x06000015 RID: 21 RVA: 0x000020A0 File Offset: 0x000002A0
+
 		public float CurrentRoughness
 		{
 			get

@@ -10,7 +10,7 @@ public class PPController : MonoBehaviour
 	{
 		if (PPController.Instance)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 			return;
 		}
 		PPController.Instance = this;

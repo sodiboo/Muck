@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 			this.distance += num2 * Time.deltaTime * 50f;
 			if (this.distance > 300f / num)
 			{
-			Instantiate<GameObject>(this.footstepFx, base.transform.position, Quaternion.identity);
+				Instantiate<GameObject>(this.footstepFx, base.transform.position, Quaternion.identity);
 				this.distance = 0f;
 			}
 		}
@@ -280,7 +280,7 @@ public class PlayerMovement : MonoBehaviour
 			{
 				this.rb.velocity = new Vector3(velocity.x, 0f, velocity.z);
 			}
-			ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime =Instantiate<GameObject>(this.playerJumpSmokeFx, base.transform.position, Quaternion.LookRotation(Vector3.up)).GetComponent<ParticleSystem>().velocityOverLifetime;
+			ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime = Instantiate<GameObject>(this.playerJumpSmokeFx, base.transform.position, Quaternion.LookRotation(Vector3.up)).GetComponent<ParticleSystem>().velocityOverLifetime;
 			velocityOverLifetime.x = this.rb.velocity.x * 2f;
 			velocityOverLifetime.z = this.rb.velocity.z * 2f;
 			this.playerStatus.Jump();
@@ -413,7 +413,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			MoveCamera.Instance.BobOnce(new Vector3(0f, this.fallSpeed, 0f));
 			Vector3 point = other.contacts[0].point;
-			ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime =Instantiate<GameObject>(this.playerSmokeFx, point, Quaternion.LookRotation(base.transform.position - point)).GetComponent<ParticleSystem>().velocityOverLifetime;
+			ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime = Instantiate<GameObject>(this.playerSmokeFx, point, Quaternion.LookRotation(base.transform.position - point)).GetComponent<ParticleSystem>().velocityOverLifetime;
 			velocityOverLifetime.x = this.rb.velocity.x * 2f;
 			velocityOverLifetime.z = this.rb.velocity.z * 2f;
 		}

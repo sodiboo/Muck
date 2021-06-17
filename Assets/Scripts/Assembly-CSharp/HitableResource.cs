@@ -25,19 +25,19 @@ public class HitableResource : Hitable
 		this.SpawnParticles(pos, normalized, hitEffect);
 		float d = Vector3.Distance(pos, vector);
 		pos += normalized * d * 0.5f;
-	Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir(0f, normalized, (HitEffect)hitEffect);
+		Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir(0f, normalized, (HitEffect)hitEffect);
 	}
 
 
 	protected override void SpawnDeathParticles()
 	{
-	Instantiate<GameObject>(this.destroyFx, base.transform.position, this.destroyFx.transform.rotation).GetComponent<ParticleSystemRenderer>().material.mainTexture = this.materialText;
+		Instantiate<GameObject>(this.destroyFx, base.transform.position, this.destroyFx.transform.rotation).GetComponent<ParticleSystemRenderer>().material.mainTexture = this.materialText;
 	}
 
 
 	protected override void SpawnParticles(Vector3 pos, Vector3 dir, int hitEffect)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.hitFx);
+		GameObject gameObject = Instantiate<GameObject>(this.hitFx);
 		gameObject.transform.position = pos;
 		gameObject.transform.rotation = Quaternion.LookRotation(dir);
 		gameObject.GetComponent<ParticleSystemRenderer>().material.mainTexture = this.materialText;

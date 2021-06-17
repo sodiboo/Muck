@@ -52,7 +52,7 @@ public class SinglePlayer : MonoBehaviour
 		{
 			return;
 		}
-	Destroy(this.grabJoint);
+		Destroy(this.grabJoint);
 		this.objectGrabbing.angularDrag = 0.05f;
 		this.objectGrabbing.drag = this.oldDrag;
 		this.objectGrabbing = null;

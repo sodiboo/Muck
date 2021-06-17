@@ -48,7 +48,7 @@ public class InventoryItem : ScriptableObject
 		this.processTime = item.processTime;
 		if (item.fuel)
 		{
-			this.fuel =Instantiate<ItemFuel>(item.fuel);
+			this.fuel = Instantiate<ItemFuel>(item.fuel);
 		}
 		this.rarity = item.rarity;
 		this.attackTypes = item.attackTypes;

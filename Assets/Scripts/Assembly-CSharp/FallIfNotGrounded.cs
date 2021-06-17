@@ -65,7 +65,7 @@ public class FallIfNotGrounded : MonoBehaviour
 
 	private void Land()
 	{
-	Destroy(this.rb);
+		Destroy(this.rb);
 		this.falling = false;
 	}
 

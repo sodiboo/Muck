@@ -118,7 +118,7 @@ public class LoadingScreen : MonoBehaviour
 		this.loadingParent.gameObject.SetActive(false);
 		for (int i = 0; i < NetworkController.Instance.playerNames.Length; i++)
 		{
-			PlayerLoading component =Instantiate<GameObject>(this.loadingPlayerPrefab, this.loadingParent).GetComponent<PlayerLoading>();
+			PlayerLoading component = Instantiate<GameObject>(this.loadingPlayerPrefab, this.loadingParent).GetComponent<PlayerLoading>();
 			string status = "<color=red>Loading";
 			component.SetStatus(NetworkController.Instance.playerNames[i], status);
 		}

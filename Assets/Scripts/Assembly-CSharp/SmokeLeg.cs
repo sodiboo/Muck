@@ -17,7 +17,7 @@ public class SmokeLeg : MonoBehaviour
 		}
 		this.ready = false;
 		base.Invoke(nameof(GetReady), this.cooldown);
-	Instantiate<GameObject>(this.smokeFx, base.transform.position, this.smokeFx.transform.rotation);
+		Instantiate<GameObject>(this.smokeFx, base.transform.position, this.smokeFx.transform.rotation);
 	}
 
 

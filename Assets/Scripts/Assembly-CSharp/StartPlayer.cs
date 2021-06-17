@@ -11,6 +11,6 @@ public class StartPlayer : MonoBehaviour
 		{
 			base.transform.GetChild(i).parent = null;
 		}
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 }

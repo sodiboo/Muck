@@ -40,7 +40,7 @@ public class PowerupCalculations : MonoBehaviour
 
 	public void HitEffect(AudioClip clip)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.hitFx);
+		GameObject gameObject = Instantiate<GameObject>(this.hitFx);
 		gameObject.AddComponent<DestroyObject>().time = 2f;
 		AudioSource component = gameObject.GetComponent<AudioSource>();
 		component.clip = clip;
@@ -50,7 +50,7 @@ public class PowerupCalculations : MonoBehaviour
 
 	public void SpawnOnHitEffect(int id, bool owner, Vector3 pos, int damage)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.onHitEffects[id], pos, this.onHitEffects[id].transform.rotation);
+		GameObject gameObject = Instantiate<GameObject>(this.onHitEffects[id], pos, this.onHitEffects[id].transform.rotation);
 		if (owner)
 		{
 			gameObject.GetComponent<AreaEffect>().SetDamage(damage);

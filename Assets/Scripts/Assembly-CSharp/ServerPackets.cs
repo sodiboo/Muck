@@ -1,6 +1,6 @@
 ﻿public enum ServerPackets
 {
-	welcome = 1,
+    welcome = 1,
     spawnPlayer,
     playerPosition,
     playerRotation,
@@ -52,6 +52,6 @@
     playerFinishedLoading,
     revivePlayer,
     spawnGrave,
-	interact,
-	setTarget,
+    interact,
+    setTarget,
 }

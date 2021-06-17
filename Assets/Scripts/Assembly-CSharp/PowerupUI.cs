@@ -26,7 +26,7 @@ public class PowerupUI : MonoBehaviour
 			componentInChildren.text = string.Concat(num);
 			return;
 		}
-		GameObject gameObject =Instantiate<GameObject>(this.uiPrefab, base.transform);
+		GameObject gameObject = Instantiate<GameObject>(this.uiPrefab, base.transform);
 		Powerup powerup = ItemManager.Instance.allPowerups[powerupId];
 		gameObject.GetComponent<Image>().sprite = powerup.sprite;
 		gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = string.Concat(1);

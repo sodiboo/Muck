@@ -211,7 +211,7 @@ public class PlayerStatus : MonoBehaviour
 		}
 		Hotbar.Instance.UpdateHotbar();
 		ClientSend.PlayerDied();
-		PlayerRagdoll component =Instantiate<GameObject>(this.playerRagdoll, PlayerMovement.Instance.transform.position, PlayerMovement.Instance.orientation.rotation).GetComponent<PlayerRagdoll>();
+		PlayerRagdoll component = Instantiate<GameObject>(this.playerRagdoll, PlayerMovement.Instance.transform.position, PlayerMovement.Instance.orientation.rotation).GetComponent<PlayerRagdoll>();
 		MoveCamera.Instance.PlayerDied(component.transform.GetChild(0).GetChild(0).GetChild(0));
 		component.SetRagdoll(LocalClient.instance.myId, -component.transform.forward);
 		GameManager.players[LocalClient.instance.myId].dead = true;

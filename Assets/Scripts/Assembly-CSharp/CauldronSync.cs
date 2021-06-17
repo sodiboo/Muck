@@ -133,7 +133,7 @@ public class CauldronSync : Chest
 	{
 		if (this.cells[this.resultCellId] == null)
 		{
-			this.cells[this.resultCellId] =Instantiate<InventoryItem>(ItemManager.Instance.allItems[processedItemId]);
+			this.cells[this.resultCellId] = Instantiate<InventoryItem>(ItemManager.Instance.allItems[processedItemId]);
 			this.cells[this.resultCellId].amount = 1;
 		}
 		else

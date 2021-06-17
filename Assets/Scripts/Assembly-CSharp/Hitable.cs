@@ -28,7 +28,7 @@ public abstract class Hitable : MonoBehaviour, SharedObject
 		int num = this.hp - newHp;
 		if (Vector3.Distance(PlayerMovement.Instance.playerCam.position, base.transform.position) < 100f)
 		{
-		Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir((float)num, normalized, (HitEffect)hitEffect);
+			Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir((float)num, normalized, (HitEffect)hitEffect);
 		}
 		this.hp = newHp;
 		if (this.hp <= 0)
@@ -47,7 +47,7 @@ public abstract class Hitable : MonoBehaviour, SharedObject
 		{
 			return;
 		}
-		GameObject gameObject =Instantiate<GameObject>(this.hitFx);
+		GameObject gameObject = Instantiate<GameObject>(this.hitFx);
 		gameObject.transform.position = pos;
 		gameObject.transform.rotation = Quaternion.LookRotation(dir);
 		if (hitEffect != 0)
@@ -63,7 +63,7 @@ public abstract class Hitable : MonoBehaviour, SharedObject
 
 	protected virtual void SpawnDeathParticles()
 	{
-	Instantiate<GameObject>(this.destroyFx, base.transform.position, this.destroyFx.transform.rotation);
+		Instantiate<GameObject>(this.destroyFx, base.transform.position, this.destroyFx.transform.rotation);
 	}
 
 

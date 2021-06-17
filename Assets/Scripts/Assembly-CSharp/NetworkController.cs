@@ -16,7 +16,7 @@ public class NetworkController : MonoBehaviour
 	{
 		if (NetworkController.Instance)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 			return;
 		}
 		NetworkController.Instance = this;

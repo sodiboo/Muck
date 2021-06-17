@@ -28,7 +28,7 @@ public class TutorialTaskUI : MonoBehaviour
 
 	private void DestroySelf()
 	{
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

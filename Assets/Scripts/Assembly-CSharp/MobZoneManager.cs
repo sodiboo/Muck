@@ -29,7 +29,7 @@ public class MobZoneManager : MonoBehaviour
 		this.zones.Add(id, mz);
 		if (this.attatchDebug)
 		{
-		Instantiate<GameObject>(this.debug, mz.transform).GetComponentInChildren<DebugObject>().text = "id" + id;
+			Instantiate<GameObject>(this.debug, mz.transform).GetComponentInChildren<DebugObject>().text = "id" + id;
 		}
 	}
 

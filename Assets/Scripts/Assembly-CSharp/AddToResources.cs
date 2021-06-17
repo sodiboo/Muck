@@ -10,7 +10,7 @@ public class AddToResources : MonoBehaviour
 		int nextId = ResourceManager.Instance.GetNextId();
 		base.GetComponent<Hitable>().SetId(nextId);
 		ResourceManager.Instance.AddObject(nextId, base.gameObject);
-	Destroy(this);
+		Destroy(this);
 		if (this.chest)
 		{
 			Chest componentInChildren = base.GetComponentInChildren<Chest>();

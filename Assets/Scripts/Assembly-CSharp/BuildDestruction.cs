@@ -76,8 +76,8 @@ public class BuildDestruction : MonoBehaviour
 
 	private void CheckDirectlyGrounded()
 	{
-	Destroy(this.trigger);
-	Destroy(GetComponent<Rigidbody>());
+		Destroy(this.trigger);
+		Destroy(base.GetComponent<Rigidbody>());
 	}
 
 

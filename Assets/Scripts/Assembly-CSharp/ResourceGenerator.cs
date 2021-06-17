@@ -105,7 +105,7 @@ public class ResourceGenerator : MonoBehaviour
 		Quaternion rotation = Quaternion.Euler((float)(this.randomGen.NextDouble() - 0.5) * this.randomRotation.x * 2f, (float)(this.randomGen.NextDouble() - 0.5) * this.randomRotation.y * 2f, (float)(this.randomGen.NextDouble() - 0.5) * this.randomRotation.z * 2f);
 		float num = (float)this.randomGen.NextDouble() * (this.randomScale.y - this.randomScale.x);
 		Vector3 vector = Vector3.one * (this.randomScale.x + num);
-		GameObject gameObject =Instantiate<GameObject>(this.FindObjectToSpawn(this.resourcePrefabs, this.totalWeight), pos, rotation);
+		GameObject gameObject = Instantiate<GameObject>(this.FindObjectToSpawn(this.resourcePrefabs, this.totalWeight), pos, rotation);
 		gameObject.transform.localScale = vector;
 		gameObject.GetComponentInChildren<SharedObject>().SetId(ResourceManager.Instance.GetNextId());
 		HitableResource component = gameObject.GetComponent<HitableResource>();

@@ -37,7 +37,7 @@ public class NetworkManager : MonoBehaviour
 		if (NetworkManager.instance != this)
 		{
 			Debug.Log("Instance already exists, destroying object");
-		Destroy(this);
+			Destroy(this);
 		}
 	}
 
@@ -61,7 +61,7 @@ public class NetworkManager : MonoBehaviour
 
 	public void DestroyPlayer(GameObject g)
 	{
-	Destroy(g);
+		Destroy(g);
 	}
 
 

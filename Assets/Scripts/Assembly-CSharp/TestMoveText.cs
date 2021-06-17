@@ -40,7 +40,7 @@ public class TestMoveText : MonoBehaviour
 			RaycastHit raycastHit;
 			if (Physics.Raycast(vector, Vector3.down, out raycastHit, 120f, this.whatIsGround) && Vector3.Angle(raycastHit.normal, Vector3.up) <= 5f)
 			{
-				Transform transform =Instantiate<GameObject>(gameObject, raycastHit.point, gameObject.transform.rotation).transform;
+				Transform transform = Instantiate<GameObject>(gameObject, raycastHit.point, gameObject.transform.rotation).transform;
 				HitableResource component = transform.GetComponent<HitableResource>();
 				if (component)
 				{

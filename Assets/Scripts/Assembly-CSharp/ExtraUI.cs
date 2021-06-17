@@ -25,7 +25,7 @@ public class ExtraUI : MonoBehaviour
 
 	public void InitPlayerStatus(int id, string name)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.playerStatusPrefab, this.playerStatusParent);
+		GameObject gameObject = Instantiate<GameObject>(this.playerStatusPrefab, this.playerStatusParent);
 		RawImage component = gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<RawImage>();
 		this.IdToHpBar.Add(id, component);
 		Vector2 sizeDelta = this.playerStatusParent.sizeDelta;

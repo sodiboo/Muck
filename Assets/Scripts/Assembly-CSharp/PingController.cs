@@ -46,14 +46,9 @@ public class PingController : MonoBehaviour
 		if (Physics.Raycast(playerCam.position, playerCam.forward, out raycastHit, 1500f))
 		{
 			Vector3 b = Vector3.zero;
-			Hitable hitable;
 			if (raycastHit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
 			{
 				b = Vector3.one;
-			}
-			else if (raycastHit.collider.TryGetComponent<Hitable>(out hitable))
-			{
-				hitable.Hit(9999, 0f, 0, raycastHit.point);
 			}
 			return raycastHit.point + b;
 		}
@@ -63,7 +58,7 @@ public class PingController : MonoBehaviour
 
 	public void MakePing(Vector3 pos, string name, string pingedName)
 	{
-	Instantiate<GameObject>(this.pingPrefab, pos, Quaternion.identity).GetComponent<PlayerPing>().SetPing(name, pingedName);
+		Instantiate<GameObject>(this.pingPrefab, pos, Quaternion.identity).GetComponent<PlayerPing>().SetPing(name, pingedName);
 	}
 
 

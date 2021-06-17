@@ -137,7 +137,7 @@ public class Mob : MonoBehaviour, SharedObject
 		this.distance += num * Time.deltaTime * 50f * this.footstepFrequency;
 		if (this.distance > 300f / this.footstepFrequency)
 		{
-		Instantiate<GameObject>(this.footstepFx, base.transform.position, Quaternion.identity);
+			Instantiate<GameObject>(this.footstepFx, base.transform.position, Quaternion.identity);
 			this.distance = 0f;
 		}
 	}

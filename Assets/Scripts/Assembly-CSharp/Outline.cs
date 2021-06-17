@@ -59,8 +59,8 @@ public class Outline : MonoBehaviour
 	private void Awake()
 	{
 		this.renderers = base.GetComponentsInChildren<Renderer>();
-		this.outlineMaskMaterial =Instantiate<Material>(Resources.Load<Material>("Materials/OutlineMask"));
-		this.outlineFillMaterial =Instantiate<Material>(Resources.Load<Material>("Materials/OutlineFill"));
+		this.outlineMaskMaterial = Instantiate<Material>(Resources.Load<Material>("Materials/OutlineMask"));
+		this.outlineFillMaterial = Instantiate<Material>(Resources.Load<Material>("Materials/OutlineFill"));
 		this.outlineMaskMaterial.name = "OutlineMask (Instance)";
 		this.outlineFillMaterial.name = "OutlineFill (Instance)";
 		this.LoadSmoothNormals();
@@ -119,8 +119,8 @@ public class Outline : MonoBehaviour
 
 	private void OnDestroy()
 	{
-	Destroy(this.outlineMaskMaterial);
-	Destroy(this.outlineFillMaterial);
+		Destroy(this.outlineMaskMaterial);
+		Destroy(this.outlineFillMaterial);
 	}
 
 

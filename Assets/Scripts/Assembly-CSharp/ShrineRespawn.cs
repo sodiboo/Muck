@@ -33,7 +33,7 @@ public class ShrineRespawn : MonoBehaviour, SharedObject, Interactable
 
 	public void RemoveObject()
 	{
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

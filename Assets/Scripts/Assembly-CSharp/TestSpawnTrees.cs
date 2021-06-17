@@ -19,7 +19,7 @@ public class TestSpawnTrees : MonoBehaviour
 
 	private GameObject SpawnTree(Vector3 pos)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.resourcePrefab, pos, Quaternion.identity);
+		GameObject gameObject = Instantiate<GameObject>(this.resourcePrefab, pos, Quaternion.identity);
 		gameObject.GetComponentInChildren<SharedObject>().SetId(ResourceManager.Instance.GetNextId());
 		gameObject.SetActive(true);
 		return gameObject;

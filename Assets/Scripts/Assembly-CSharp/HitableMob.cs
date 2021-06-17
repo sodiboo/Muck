@@ -33,7 +33,7 @@ public class HitableMob : Hitable
 			component.MakeRagdoll(dir);
 		}
 		MobManager.Instance.RemoveMob(this.id);
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

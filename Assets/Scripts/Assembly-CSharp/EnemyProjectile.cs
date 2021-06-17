@@ -50,10 +50,10 @@ public class EnemyProjectile : MonoBehaviour
 		{
 			other.gameObject.CompareTag("Build");
 		}
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 		if (Vector3.Distance(base.transform.position, PlayerMovement.Instance.playerCam.position) < this.hideFxDistance)
 		{
-			GameObject gameObject =Instantiate<GameObject>(this.hitFx, base.transform.position, Quaternion.LookRotation(other.GetContact(0).normal));
+			GameObject gameObject = Instantiate<GameObject>(this.hitFx, base.transform.position, Quaternion.LookRotation(other.GetContact(0).normal));
 			gameObject.transform.rotation = Quaternion.LookRotation(other.GetContact(0).normal);
 			ImpactDamage componentInChildren = gameObject.GetComponentInChildren<ImpactDamage>();
 			componentInChildren.SetDamage(this.damage);
@@ -68,7 +68,7 @@ public class EnemyProjectile : MonoBehaviour
 
 	private void DestroySelf()
 	{
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

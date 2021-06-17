@@ -8,7 +8,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 	private void Start()
 	{
 		this.mob = base.GetComponent<Mob>();
-	Destroy(base.gameObject.GetComponent<MobServer>());
+		Destroy(base.gameObject.GetComponent<MobServer>());
 		base.GetComponent<MobServer>().enabled = false;
 		this.neutral = base.gameObject.AddComponent<MobServerNeutral>();
 		this.neutral.mobZoneId = this.mobZoneId;
@@ -62,7 +62,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 	private void FoundPlayer()
 	{
 		this.mob.ready = true;
-	Destroy(this.neutral);
+		Destroy(this.neutral);
 		if (this.mob.mobType.behaviour == MobType.MobBehaviour.Enemy)
 		{
 			base.gameObject.AddComponent<MobServerEnemy>();
@@ -71,7 +71,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		{
 			base.gameObject.AddComponent<MobServerEnemyMeleeAndRanged>();
 		}
-	Destroy(this);
+		Destroy(this);
 	}
 
 

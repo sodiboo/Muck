@@ -20,7 +20,7 @@ public class MobManager : MonoBehaviour
 		this.mobs.Add(id, c);
 		if (this.attatchDebug)
 		{
-		Instantiate<GameObject>(this.debug, c.transform).GetComponentInChildren<DebugObject>().text = "id" + id;
+			Instantiate<GameObject>(this.debug, c.transform).GetComponentInChildren<DebugObject>().text = "id" + id;
 		}
 	}
 

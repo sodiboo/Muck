@@ -115,12 +115,12 @@ public class Arrow : MonoBehaviour
 		base.transform.SetParent(other.transform);
 		this.done = true;
 		base.gameObject.AddComponent<DestroyObject>().time = 10f;
-	Destroy(this);
-	Destroy(this.audio);
+		Destroy(this);
+		Destroy(this.audio);
 		this.trail.emitting = false;
 		Vector3 position = base.transform.position;
 		Vector3 forward = -base.transform.forward;
-		ParticleSystem component =Instantiate<GameObject>(this.hitFx, position, Quaternion.LookRotation(forward)).GetComponent<ParticleSystem>();
+		ParticleSystem component = Instantiate<GameObject>(this.hitFx, position, Quaternion.LookRotation(forward)).GetComponent<ParticleSystem>();
 		Renderer component2 = other.gameObject.GetComponent<Renderer>();
 		Material material = null;
 		if (component2 != null)
@@ -139,7 +139,7 @@ public class Arrow : MonoBehaviour
 		{
 			component.GetComponent<Renderer>().material = material;
 		}
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

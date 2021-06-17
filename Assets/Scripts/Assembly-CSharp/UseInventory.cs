@@ -205,7 +205,7 @@ public class UseInventory : MonoBehaviour
 			Vector3 vector2 = PlayerMovement.Instance.playerCam.forward;
 			float num3 = (float)inventoryItem.bowComponent.angleDelta;
 			vector2 = Quaternion.AngleAxis(-(num3 * (float)(inventoryItem.bowComponent.nArrows - 1)) / 2f + num3 * (float)num2, PlayerMovement.Instance.playerCam.up) * vector2;
-			GameObject gameObject =Instantiate<GameObject>(inventoryItem2.prefab);
+			GameObject gameObject = Instantiate<GameObject>(inventoryItem2.prefab);
 			gameObject.GetComponent<Renderer>().material = inventoryItem2.material;
 			gameObject.transform.position = vector;
 			gameObject.transform.rotation = base.transform.rotation;

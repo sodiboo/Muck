@@ -65,7 +65,7 @@ public class ChestManager : MonoBehaviour
 	{
 		Chest chest = this.chests[chestId];
 		this.chests.Remove(chestId);
-	Destroy(chest.transform.parent.gameObject);
+		Destroy(chest.transform.parent.gameObject);
 		if (OtherInput.Instance.currentChest == chest)
 		{
 			OtherInput.Instance.ToggleInventory(OtherInput.CraftingState.Inventory);

@@ -33,7 +33,7 @@ public class Item : MonoBehaviour
 			this.outlineMat.mainTexture = this.powerup.material.mainTexture;
 			this.outlineMat.SetColor("_Color", this.powerup.material.color);
 			base.GetComponent<MeshFilter>().mesh = this.powerup.mesh;
-			Renderer component =Instantiate<GameObject>(this.powerupParticles, base.transform).GetComponent<ParticleSystem>().GetComponent<Renderer>();
+			Renderer component = Instantiate<GameObject>(this.powerupParticles, base.transform).GetComponent<ParticleSystem>().GetComponent<Renderer>();
 			Material material = component.material;
 			material.color = this.powerup.GetOutlineColor();
 			material.SetColor("_EmissionColor", this.powerup.GetOutlineColor() * 3f);

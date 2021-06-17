@@ -39,7 +39,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 
 	public void ForceAddItem(InventoryItem item, int amount)
 	{
-		this.currentItem =Instantiate<InventoryItem>(item);
+		this.currentItem = Instantiate<InventoryItem>(item);
 		this.currentItem.amount = amount;
 		this.UpdateCell();
 	}

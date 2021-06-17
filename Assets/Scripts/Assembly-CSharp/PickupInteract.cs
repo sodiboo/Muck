@@ -39,7 +39,7 @@ public class PickupInteract : MonoBehaviour, Interactable, SharedObject
 
 	public void RemoveObject()
 	{
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 		ResourceManager.Instance.RemoveInteractItem(this.id);
 	}
 

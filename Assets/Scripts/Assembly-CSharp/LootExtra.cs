@@ -24,7 +24,7 @@ public class LootExtra : MonoBehaviour
 		if (dropTable.dropOne)
 		{
 			list = new List<InventoryItem>();
-			InventoryItem inventoryItem =Instantiate<InventoryItem>(hitable.dropItem);
+			InventoryItem inventoryItem = Instantiate<InventoryItem>(hitable.dropItem);
 			inventoryItem.amount = 1;
 			num = 1f;
 			list.Add(inventoryItem);

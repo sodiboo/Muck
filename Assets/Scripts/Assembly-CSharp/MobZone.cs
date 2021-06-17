@@ -33,7 +33,7 @@ public class MobZone : SpawnZone
 
 	public override GameObject LocalSpawnEntity(Vector3 pos, int mobType, int mobId, int zoneId)
 	{
-		Mob component =Instantiate<GameObject>(MobSpawner.Instance.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
+		Mob component = Instantiate<GameObject>(MobSpawner.Instance.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
 		component.tag = "DontCount";
 		MobManager.Instance.AddMob(component, mobId);
 		this.entities.Add(component.gameObject);

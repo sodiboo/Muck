@@ -16,7 +16,7 @@ public class SaveManager : MonoBehaviour
 	{
 		if (SaveManager.Instance != null && SaveManager.Instance != this)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 		}
 		else
 		{

@@ -19,7 +19,7 @@ public class LocalClient : MonoBehaviour
 		if (LocalClient.instance != this)
 		{
 			Debug.Log("Instance already exists, destroying object");
-		Destroy(this);
+			Destroy(this);
 		}
 	}
 
@@ -51,60 +51,214 @@ public class LocalClient : MonoBehaviour
 	{
 		LocalClient.packetHandlers = new Dictionary<int, LocalClient.PacketHandler>
 		{
-			{ (int)ServerPackets.welcome, new LocalClient.PacketHandler(ClientHandle.Welcome) },
-            { (int)ServerPackets.spawnPlayer, new LocalClient.PacketHandler(ClientHandle.SpawnPlayer) },
-            { (int)ServerPackets.playerPosition, new LocalClient.PacketHandler(ClientHandle.PlayerPosition) },
-            { (int)ServerPackets.playerRotation, new LocalClient.PacketHandler(ClientHandle.PlayerRotation) },
-            { (int)ServerPackets.playerDisconnect, new LocalClient.PacketHandler(ClientHandle.DisconnectPlayer) },
-            { (int)ServerPackets.playerDied, new LocalClient.PacketHandler(ClientHandle.PlayerDied) },
-            { (int)ServerPackets.pingPlayer, new LocalClient.PacketHandler(ClientHandle.ReceivePing) },
-            { (int)ServerPackets.connectionSuccessful, new LocalClient.PacketHandler(ClientHandle.ConnectionEstablished) },
-            // ServerPackets.sendLevel
-            { (int)ServerPackets.sendStatus, new LocalClient.PacketHandler(ClientHandle.ReceiveStatus) },
-            { (int)ServerPackets.gameOver, new LocalClient.PacketHandler(ClientHandle.GameOver) },
-            { (int)ServerPackets.startGame, new LocalClient.PacketHandler(ClientHandle.StartGame) },
-            { (int)ServerPackets.clock, new LocalClient.PacketHandler(ClientHandle.Clock) },
-            { (int)ServerPackets.openDoor, new LocalClient.PacketHandler(ClientHandle.OpenDoor) },
-            { (int)ServerPackets.ready, new LocalClient.PacketHandler(ClientHandle.Ready) },
-            // ServerPackets.taskProgress
-            { (int)ServerPackets.dropItem, new LocalClient.PacketHandler(ClientHandle.DropItem) },
-            { (int)ServerPackets.pickupItem, new LocalClient.PacketHandler(ClientHandle.PickupItem) },
-            { (int)ServerPackets.weaponInHand, new LocalClient.PacketHandler(ClientHandle.WeaponInHand) },
-            { (int)ServerPackets.playerHitObject, new LocalClient.PacketHandler(ClientHandle.PlayerHitObject) },
-            { (int)ServerPackets.dropResources, new LocalClient.PacketHandler(ClientHandle.DropResources) },
-            { (int)ServerPackets.animationUpdate, new LocalClient.PacketHandler(ClientHandle.AnimationUpdate) },
-            { (int)ServerPackets.finalizeBuild, new LocalClient.PacketHandler(ClientHandle.FinalizeBuild) },
-            { (int)ServerPackets.openChest, new LocalClient.PacketHandler(ClientHandle.OpenChest) },
-            { (int)ServerPackets.updateChest, new LocalClient.PacketHandler(ClientHandle.UpdateChest) },
-            { (int)ServerPackets.pickupInteract, new LocalClient.PacketHandler(ClientHandle.PickupInteract) },
-            { (int)ServerPackets.dropItemAtPosition, new LocalClient.PacketHandler(ClientHandle.DropItemAtPosition) },
-            { (int)ServerPackets.playerHit, new LocalClient.PacketHandler(ClientHandle.PlayerHit) },
-            { (int)ServerPackets.mobSpawn, new LocalClient.PacketHandler(ClientHandle.MobSpawn) },
-            { (int)ServerPackets.mobMove, new LocalClient.PacketHandler(ClientHandle.MobMove) },
-            { (int)ServerPackets.mobSetDestination, new LocalClient.PacketHandler(ClientHandle.MobSetDestination) },
-            { (int)ServerPackets.mobAttack, new LocalClient.PacketHandler(ClientHandle.MobAttack) },
-            { (int)ServerPackets.playerDamageMob, new LocalClient.PacketHandler(ClientHandle.PlayerDamageMob) },
-            { (int)ServerPackets.shrineCombatStart, new LocalClient.PacketHandler(ClientHandle.ShrineCombatStart) },
-            { (int)ServerPackets.dropPowerupAtPosition, new LocalClient.PacketHandler(ClientHandle.DropPowerupAtPosition) },
-            { (int)ServerPackets.MobZoneSpawn, new LocalClient.PacketHandler(ClientHandle.MobZoneSpawn) },
-            { (int)ServerPackets.MobZoneToggle, new LocalClient.PacketHandler(ClientHandle.MobZoneToggle) },
-            { (int)ServerPackets.PickupZoneSpawn, new LocalClient.PacketHandler(ClientHandle.PickupSpawnZone) },
-            { (int)ServerPackets.SendMessage, new LocalClient.PacketHandler(ClientHandle.ReceiveChatMessage) },
-            { (int)ServerPackets.playerPing, new LocalClient.PacketHandler(ClientHandle.ReceivePlayerPing) },
-            { (int)ServerPackets.sendArmor, new LocalClient.PacketHandler(ClientHandle.ReceivePlayerArmor) },
-            { (int)ServerPackets.playerHp, new LocalClient.PacketHandler(ClientHandle.PlayerHp) },
-            { (int)ServerPackets.respawnPlayer, new LocalClient.PacketHandler(ClientHandle.RespawnPlayer) },
-            { (int)ServerPackets.shootArrow, new LocalClient.PacketHandler(ClientHandle.ShootArrowFromPlayer) },
-            { (int)ServerPackets.removeResource, new LocalClient.PacketHandler(ClientHandle.RemoveResource) },
-            { (int)ServerPackets.mobProjectile, new LocalClient.PacketHandler(ClientHandle.MobSpawnProjectile) },
-            { (int)ServerPackets.newDay, new LocalClient.PacketHandler(ClientHandle.NewDay) },
-            { (int)ServerPackets.knockbackMob, new LocalClient.PacketHandler(ClientHandle.KnockbackMob) },
-            { (int)ServerPackets.spawnEffect, new LocalClient.PacketHandler(ClientHandle.SpawnEffect) },
-            { (int)ServerPackets.playerFinishedLoading, new LocalClient.PacketHandler(ClientHandle.PlayerFinishedLoading) },
-            { (int)ServerPackets.revivePlayer, new LocalClient.PacketHandler(ClientHandle.RevivePlayer) },
-            { (int)ServerPackets.spawnGrave, new LocalClient.PacketHandler(ClientHandle.SpawnGrave) },
-			{ (int)ServerPackets.interact, new LocalClient.PacketHandler(ClientHandle.Interact) },
-			{ (int)ServerPackets.setTarget, new LocalClient.PacketHandler(ClientHandle.MobSetTarget) },
+			{
+				1,
+				new LocalClient.PacketHandler(ClientHandle.Welcome)
+			},
+			{
+				2,
+				new LocalClient.PacketHandler(ClientHandle.SpawnPlayer)
+			},
+			{
+				3,
+				new LocalClient.PacketHandler(ClientHandle.PlayerPosition)
+			},
+			{
+				4,
+				new LocalClient.PacketHandler(ClientHandle.PlayerRotation)
+			},
+			{
+				7,
+				new LocalClient.PacketHandler(ClientHandle.ReceivePing)
+			},
+			{
+				10,
+				new LocalClient.PacketHandler(ClientHandle.ReceiveStatus)
+			},
+			{
+				13,
+				new LocalClient.PacketHandler(ClientHandle.Clock)
+			},
+			{
+				50,
+				new LocalClient.PacketHandler(ClientHandle.PlayerFinishedLoading)
+			},
+			{
+				8,
+				new LocalClient.PacketHandler(ClientHandle.ConnectionEstablished)
+			},
+			{
+				11,
+				new LocalClient.PacketHandler(ClientHandle.GameOver)
+			},
+			{
+				5,
+				new LocalClient.PacketHandler(ClientHandle.DisconnectPlayer)
+			},
+			{
+				6,
+				new LocalClient.PacketHandler(ClientHandle.PlayerDied)
+			},
+			{
+				52,
+				new LocalClient.PacketHandler(ClientHandle.SpawnGrave)
+			},
+			{
+				15,
+				new LocalClient.PacketHandler(ClientHandle.Ready)
+			},
+			{
+				12,
+				new LocalClient.PacketHandler(ClientHandle.StartGame)
+			},
+			{
+				14,
+				new LocalClient.PacketHandler(ClientHandle.OpenDoor)
+			},
+			{
+				17,
+				new LocalClient.PacketHandler(ClientHandle.DropItem)
+			},
+			{
+				21,
+				new LocalClient.PacketHandler(ClientHandle.DropResources)
+			},
+			{
+				18,
+				new LocalClient.PacketHandler(ClientHandle.PickupItem)
+			},
+			{
+				49,
+				new LocalClient.PacketHandler(ClientHandle.SpawnEffect)
+			},
+			{
+				19,
+				new LocalClient.PacketHandler(ClientHandle.WeaponInHand)
+			},
+			{
+				20,
+				new LocalClient.PacketHandler(ClientHandle.PlayerHitObject)
+			},
+			{
+				45,
+				new LocalClient.PacketHandler(ClientHandle.RemoveResource)
+			},
+			{
+				42,
+				new LocalClient.PacketHandler(ClientHandle.PlayerHp)
+			},
+			{
+				43,
+				new LocalClient.PacketHandler(ClientHandle.RespawnPlayer)
+			},
+			{
+				28,
+				new LocalClient.PacketHandler(ClientHandle.PlayerHit)
+			},
+			{
+				22,
+				new LocalClient.PacketHandler(ClientHandle.AnimationUpdate)
+			},
+			{
+				44,
+				new LocalClient.PacketHandler(ClientHandle.ShootArrowFromPlayer)
+			},
+			{
+				23,
+				new LocalClient.PacketHandler(ClientHandle.FinalizeBuild)
+			},
+			{
+				24,
+				new LocalClient.PacketHandler(ClientHandle.OpenChest)
+			},
+			{
+				25,
+				new LocalClient.PacketHandler(ClientHandle.UpdateChest)
+			},
+			{
+				26,
+				new LocalClient.PacketHandler(ClientHandle.PickupInteract)
+			},
+			{
+				27,
+				new LocalClient.PacketHandler(ClientHandle.DropItemAtPosition)
+			},
+			{
+				35,
+				new LocalClient.PacketHandler(ClientHandle.DropPowerupAtPosition)
+			},
+			{
+				29,
+				new LocalClient.PacketHandler(ClientHandle.MobSpawn)
+			},
+			{
+				30,
+				new LocalClient.PacketHandler(ClientHandle.MobMove)
+			},
+			{
+				31,
+				new LocalClient.PacketHandler(ClientHandle.MobSetDestination)
+			},
+			{
+				54,
+				new LocalClient.PacketHandler(ClientHandle.MobSetTarget)
+			},
+			{
+				32,
+				new LocalClient.PacketHandler(ClientHandle.MobAttack)
+			},
+			{
+				46,
+				new LocalClient.PacketHandler(ClientHandle.MobSpawnProjectile)
+			},
+			{
+				33,
+				new LocalClient.PacketHandler(ClientHandle.PlayerDamageMob)
+			},
+			{
+				48,
+				new LocalClient.PacketHandler(ClientHandle.KnockbackMob)
+			},
+			{
+				53,
+				new LocalClient.PacketHandler(ClientHandle.Interact)
+			},
+			{
+				34,
+				new LocalClient.PacketHandler(ClientHandle.ShrineCombatStart)
+			},
+			{
+				51,
+				new LocalClient.PacketHandler(ClientHandle.RevivePlayer)
+			},
+			{
+				37,
+				new LocalClient.PacketHandler(ClientHandle.MobZoneToggle)
+			},
+			{
+				36,
+				new LocalClient.PacketHandler(ClientHandle.MobZoneSpawn)
+			},
+			{
+				38,
+				new LocalClient.PacketHandler(ClientHandle.PickupSpawnZone)
+			},
+			{
+				39,
+				new LocalClient.PacketHandler(ClientHandle.ReceiveChatMessage)
+			},
+			{
+				40,
+				new LocalClient.PacketHandler(ClientHandle.ReceivePlayerPing)
+			},
+			{
+				41,
+				new LocalClient.PacketHandler(ClientHandle.ReceivePlayerArmor)
+			},
+			{
+				47,
+				new LocalClient.PacketHandler(ClientHandle.NewDay)
+			}
 		};
 		Debug.Log("Initializing packets.");
 	}

@@ -27,7 +27,7 @@ public class SpawnChestsInLocations : MonoBehaviour
 			Vector3 position = this.positions[num2].position;
 			Quaternion rotation = this.positions[num2].rotation;
 			List<InventoryItem> loot = this.FindLootTable(this.lootTables, this.totalWeight, rand).GetLoot(rand);
-			Chest componentInChildren =Instantiate<GameObject>(this.chest, position, rotation).GetComponentInChildren<Chest>();
+			Chest componentInChildren = Instantiate<GameObject>(this.chest, position, rotation).GetComponentInChildren<Chest>();
 			int nextId = ChestManager.Instance.GetNextId();
 			ChestManager.Instance.AddChest(componentInChildren, nextId);
 			componentInChildren.InitChest(loot, rand);

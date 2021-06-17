@@ -27,7 +27,7 @@ public class HitableActor : Hitable
 	{
 		Vector3 dir = GameManager.players[fromClient].transform.position - pos;
 		this.SpawnParticles(pos, dir, hitEffect);
-	Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir((float)damage, dir, (HitEffect)hitEffect);
+		Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir((float)damage, dir, (HitEffect)hitEffect);
 		return this.hp;
 	}
 

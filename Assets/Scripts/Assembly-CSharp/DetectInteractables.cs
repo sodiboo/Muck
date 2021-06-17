@@ -9,7 +9,7 @@ public class DetectInteractables : MonoBehaviour
 	private void Awake()
 	{
 		DetectInteractables.Instance = this;
-		this.interactUi =Instantiate<GameObject>(this.interactUiPrefab).transform;
+		this.interactUi = Instantiate<GameObject>(this.interactUiPrefab).transform;
 		this.interactText = this.interactUi.GetComponentInChildren<TextMeshProUGUI>();
 		this.interactUi.gameObject.SetActive(false);
 	}

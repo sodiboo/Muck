@@ -36,7 +36,7 @@ public class ResourceManagerPooled : MonoBehaviour
 		this.list.Add(key, o);
 		if (this.attatchDebug)
 		{
-		Instantiate<GameObject>(this.debug, o.transform).GetComponentInChildren<DebugObject>().text = "id" + key;
+			Instantiate<GameObject>(this.debug, o.transform).GetComponentInChildren<DebugObject>().text = "id" + key;
 		}
 	}
 
@@ -50,7 +50,7 @@ public class ResourceManagerPooled : MonoBehaviour
 			return;
 		}
 		this.list.Remove(id);
-	Destroy(gameObject);
+		Destroy(gameObject);
 	}
 
 
@@ -62,7 +62,7 @@ public class ResourceManagerPooled : MonoBehaviour
 		}
 		Object obj = this.list[id];
 		this.list.Remove(id);
-	Destroy(obj);
+		Destroy(obj);
 		return true;
 	}
 

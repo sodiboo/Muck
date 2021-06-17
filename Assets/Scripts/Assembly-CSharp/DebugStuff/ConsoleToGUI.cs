@@ -12,7 +12,7 @@ namespace DebugStuff
 		{
 			if (ConsoleToGUI.Instance)
 			{
-			Destroy(base.gameObject);
+				Destroy(base.gameObject);
 				return;
 			}
 			ConsoleToGUI.Instance = this;

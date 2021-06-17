@@ -13,8 +13,8 @@ public class SpawnObjectTimed : MonoBehaviour
 
 	private void SpawnObject()
 	{
-	Instantiate<GameObject>(this.objectToSpawn, base.transform.position, this.objectToSpawn.transform.rotation);
-	Destroy(this);
+		Instantiate<GameObject>(this.objectToSpawn, base.transform.position, this.objectToSpawn.transform.rotation);
+		Destroy(this);
 	}
 
 

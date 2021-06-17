@@ -23,14 +23,14 @@ public class GroundSwordAttack : MonoBehaviour
 		Collider component = base.GetComponent<Collider>();
 		for (int i = 0; i < 2; i++)
 		{
-			Transform transform =Instantiate<GameObject>(this.rollPrefab, base.transform.position, base.transform.rotation).transform;
+			Transform transform = Instantiate<GameObject>(this.rollPrefab, base.transform.position, base.transform.rotation).transform;
 			transform.GetComponent<GroundSwordAttack>().child = true;
 			transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + (float)(num * 2 * i) - (float)num, transform.eulerAngles.z);
 			Physics.IgnoreCollision(component, transform.GetComponent<Collider>());
 		}
 		for (int j = 0; j < 2; j++)
 		{
-			Transform transform2 =Instantiate<GameObject>(this.rollPrefab, base.transform.position, base.transform.rotation).transform;
+			Transform transform2 = Instantiate<GameObject>(this.rollPrefab, base.transform.position, base.transform.rotation).transform;
 			transform2.GetComponent<GroundSwordAttack>().child = true;
 			transform2.eulerAngles = new Vector3(transform2.eulerAngles.x, transform2.eulerAngles.y + (float)(num * 4 * j) - (float)(num * 2), transform2.eulerAngles.z);
 			Physics.IgnoreCollision(component, transform2.GetComponent<Collider>());

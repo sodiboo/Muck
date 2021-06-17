@@ -15,7 +15,7 @@ public class UnlockedAlert : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		}
 		if (UiEvents.Instance.alertCleared[this.cell.currentItem.id])
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 			return;
 		}
 		this.alert.transform.localScale = Vector3.one * (1f + Mathf.PingPong(Time.time, 0.25f) - 0.5f);
@@ -32,7 +32,7 @@ public class UnlockedAlert : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		UiEvents.Instance.alertCleared[this.cell.currentItem.id] = true;
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

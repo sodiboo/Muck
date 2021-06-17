@@ -8,7 +8,7 @@ public class ProjectileAttack : MonoBehaviour
 	public void SpawnProjectile()
 	{
 		Vector3 position = base.GetComponent<Mob>().target.position;
-		GameObject gameObject =Instantiate<GameObject>(this.projectile, this.spawnPos.position, Quaternion.identity);
+		GameObject gameObject = Instantiate<GameObject>(this.projectile, this.spawnPos.position, Quaternion.identity);
 		Rigidbody component = gameObject.GetComponent<Rigidbody>();
 		Vector3 vector = this.findLaunchVelocity(position, gameObject);
 		float mass = component.mass;

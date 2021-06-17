@@ -36,7 +36,7 @@ public class StructureSpawner : MonoBehaviour
 				this.shrines[j] = hit.point;
 				num++;
 				GameObject gameObject = this.FindObjectToSpawn(this.structurePrefabs, this.totalWeight);
-				GameObject gameObject2 =Instantiate<GameObject>(gameObject, hit.point, gameObject.transform.rotation);
+				GameObject gameObject2 = Instantiate<GameObject>(gameObject, hit.point, gameObject.transform.rotation);
 				if (!this.dontAddToResourceManager)
 				{
 					gameObject2.GetComponentInChildren<SharedObject>().SetId(ResourceManager.Instance.GetNextId());

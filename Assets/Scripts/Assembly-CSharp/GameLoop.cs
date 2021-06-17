@@ -50,7 +50,7 @@ public class GameLoop : MonoBehaviour
 	{
 		if (!LocalClient.serverOwner)
 		{
-		Destroy(this);
+			Destroy(this);
 		}
 		foreach (Client client in Server.clients.Values)
 		{

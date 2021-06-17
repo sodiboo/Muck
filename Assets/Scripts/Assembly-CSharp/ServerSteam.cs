@@ -19,7 +19,6 @@ public class ServerSteam : MonoBehaviour
 			return;
 		}
 		LocalClient.instance.name = SteamClient.Name;
-// 		default(SteamId).Value = ulong.Parse(this.steamIdField.text);
 		MonoBehaviour.print("sending join lobby request to server");
 		ClientSend.JoinLobby();
 		this.HideCamera();

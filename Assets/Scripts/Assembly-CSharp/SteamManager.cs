@@ -92,7 +92,7 @@ public class SteamManager : MonoBehaviour
 		}
 		if (SteamManager.Instance != this)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 		}
 	}
 
@@ -269,7 +269,7 @@ public class SteamManager : MonoBehaviour
 		{
 			LocalClient.serverOwner = false;
 			this.leaveLobby();
-			if (await lobby.Join() != RoomEnter.Success)
+			if (await  lobby.Join() != RoomEnter.Success)
 			{
 				Debug.Log("failed to join lobby");
 				StatusMessage.Instance.DisplayMessage("Couldn't find lobby. Make sure it's a valid lobbyID from someone");

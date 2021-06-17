@@ -50,7 +50,7 @@ public class UiEvents : MonoBehaviour
 
 	public void AddPowerup(Powerup p)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.pickupPrefab, this.pickupParent);
+		GameObject gameObject = Instantiate<GameObject>(this.pickupPrefab, this.pickupParent);
 		gameObject.GetComponent<ItemPickedupUI>().SetPowerup(p);
 		gameObject.transform.SetSiblingIndex(0);
 	}
@@ -59,7 +59,7 @@ public class UiEvents : MonoBehaviour
 	public void AddPickup(InventoryItem item)
 	{
 		Hotbar.Instance.UpdateHotbar();
-		GameObject gameObject =Instantiate<GameObject>(this.pickupPrefab, this.pickupParent);
+		GameObject gameObject = Instantiate<GameObject>(this.pickupPrefab, this.pickupParent);
 		gameObject.GetComponent<ItemPickedupUI>().SetItem(item);
 		gameObject.transform.SetSiblingIndex(0);
 		MonoBehaviour.print("checking");
@@ -162,7 +162,7 @@ public class UiEvents : MonoBehaviour
 			return;
 		}
 		int key = this.idsToUnlock.Dequeue();
-		GameObject gameObject =Instantiate<GameObject>(this.unlockPrefab, this.unlockParent);
+		GameObject gameObject = Instantiate<GameObject>(this.unlockPrefab, this.unlockParent);
 		gameObject.GetComponent<ItemUnlcokedUI>().SetItem(ItemManager.Instance.allItems[key]);
 		gameObject.transform.SetSiblingIndex(0);
 		if (this.idsToUnlock.Count > 0)

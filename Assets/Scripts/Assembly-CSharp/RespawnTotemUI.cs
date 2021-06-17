@@ -78,13 +78,13 @@ public class RespawnTotemUI : MonoBehaviour
 	{
 		for (int i = this.nameContainer.childCount - 1; i >= 0; i--)
 		{
-		Destroy(this.nameContainer.GetChild(i).gameObject);
+			Destroy(this.nameContainer.GetChild(i).gameObject);
 		}
 		foreach (PlayerManager playerManager in GameManager.players.Values)
 		{
 			if (!(playerManager == null) && !(playerManager == null) && !playerManager.disconnected && playerManager.dead)
 			{
-			Instantiate<GameObject>(this.namePrefab, this.nameContainer).GetComponent<RespawnPrefab>().Set(playerManager.id, InventoryUI.Instance.GetMoney() >= this.GetRevivePrice(), playerManager.username);
+				Instantiate<GameObject>(this.namePrefab, this.nameContainer).GetComponent<RespawnPrefab>().Set(playerManager.id, InventoryUI.Instance.GetMoney() >= this.GetRevivePrice(), playerManager.username);
 			}
 		}
 	}

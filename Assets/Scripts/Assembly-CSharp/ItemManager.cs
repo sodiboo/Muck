@@ -82,7 +82,7 @@ public class ItemManager : MonoBehaviour
 
 	public void DropItem(int fromClient, int itemId, int amount, int objectID)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.dropItem);
+		GameObject gameObject = Instantiate<GameObject>(this.dropItem);
 		InventoryItem inventoryItem = ScriptableObject.CreateInstance<InventoryItem>();
 		inventoryItem.Copy(this.allItems[itemId], amount);
 		Item component = gameObject.GetComponent<Item>();
@@ -100,7 +100,7 @@ public class ItemManager : MonoBehaviour
 		gameObject.GetComponent<Rigidbody>().AddForce(normalized * InventoryUI.throwForce);
 		if (this.attatchDebug)
 		{
-			GameObject gameObject2 =Instantiate<GameObject>(this.debug, gameObject.transform);
+			GameObject gameObject2 = Instantiate<GameObject>(this.debug, gameObject.transform);
 			gameObject2.GetComponent<DebugObject>().text = string.Concat(objectID);
 			gameObject2.transform.localPosition = Vector3.up * 1.25f;
 		}
@@ -111,7 +111,7 @@ public class ItemManager : MonoBehaviour
 
 	public void DropItemAtPosition(int itemId, int amount, Vector3 pos, int objectID)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.dropItem);
+		GameObject gameObject = Instantiate<GameObject>(this.dropItem);
 		InventoryItem inventoryItem = ScriptableObject.CreateInstance<InventoryItem>();
 		inventoryItem.Copy(this.allItems[itemId], amount);
 		Item component = gameObject.GetComponent<Item>();
@@ -121,7 +121,7 @@ public class ItemManager : MonoBehaviour
 		gameObject.transform.position = pos;
 		if (this.attatchDebug)
 		{
-			GameObject gameObject2 =Instantiate<GameObject>(this.debug, gameObject.transform);
+			GameObject gameObject2 = Instantiate<GameObject>(this.debug, gameObject.transform);
 			gameObject2.GetComponent<DebugObject>().text = string.Concat(objectID);
 			gameObject2.transform.localPosition = Vector3.up * 1.25f;
 		}
@@ -132,7 +132,7 @@ public class ItemManager : MonoBehaviour
 
 	public void DropResource(int fromClient, int dropTableId, int droppedObjectID)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.dropItem);
+		GameObject gameObject = Instantiate<GameObject>(this.dropItem);
 		InventoryItem item = ScriptableObject.CreateInstance<InventoryItem>();
 		Item component = gameObject.GetComponent<Item>();
 		component.item = item;
@@ -140,7 +140,7 @@ public class ItemManager : MonoBehaviour
 		gameObject.AddComponent<BoxCollider>();
 		if (this.attatchDebug)
 		{
-			GameObject gameObject2 =Instantiate<GameObject>(this.debug, gameObject.transform);
+			GameObject gameObject2 = Instantiate<GameObject>(this.debug, gameObject.transform);
 			gameObject2.GetComponent<DebugObject>().text = string.Concat(droppedObjectID);
 			gameObject2.transform.localPosition = Vector3.up * 1.25f;
 		}
@@ -151,8 +151,8 @@ public class ItemManager : MonoBehaviour
 
 	public void DropPowerupAtPosition(int powerupId, Vector3 pos, int objectID)
 	{
-		GameObject gameObject =Instantiate<GameObject>(this.dropItem);
-		Powerup powerup =Instantiate<Powerup>(this.allPowerups[powerupId]);
+		GameObject gameObject = Instantiate<GameObject>(this.dropItem);
+		Powerup powerup = Instantiate<Powerup>(this.allPowerups[powerupId]);
 		Item component = gameObject.GetComponent<Item>();
 		component.powerup = powerup;
 		component.UpdateMesh();
@@ -160,7 +160,7 @@ public class ItemManager : MonoBehaviour
 		gameObject.transform.position = pos;
 		if (this.attatchDebug)
 		{
-			GameObject gameObject2 =Instantiate<GameObject>(this.debug, gameObject.transform);
+			GameObject gameObject2 = Instantiate<GameObject>(this.debug, gameObject.transform);
 			gameObject2.GetComponent<DebugObject>().text = string.Concat(objectID);
 			gameObject2.transform.localPosition = Vector3.up * 1.25f;
 		}
@@ -187,7 +187,7 @@ public class ItemManager : MonoBehaviour
 
 	public bool PickupItem(int objectID)
 	{
-	Destroy(this.list[objectID]);
+		Destroy(this.list[objectID]);
 		this.list.Remove(objectID);
 		return true;
 	}

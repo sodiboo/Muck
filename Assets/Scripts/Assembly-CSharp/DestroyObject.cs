@@ -13,7 +13,7 @@ public class DestroyObject : MonoBehaviour
 
 	private void DestroySelf()
 	{
-	Destroy(base.gameObject);
+		Destroy(base.gameObject);
 	}
 
 

@@ -22,7 +22,7 @@ public class GrowableFoodZone : SpawnZone
 
 	public override GameObject LocalSpawnEntity(Vector3 pos, int entityId, int objectId, int zoneId)
 	{
-		GameObject gameObject =Instantiate<GameObject>(ItemManager.Instance.allItems[entityId].prefab, pos, Quaternion.identity);
+		GameObject gameObject = Instantiate<GameObject>(ItemManager.Instance.allItems[entityId].prefab, pos, Quaternion.identity);
 		gameObject.GetComponentInChildren<SharedObject>().SetId(objectId);
 		ResourceManager.Instance.AddObject(objectId, gameObject);
 		this.entities.Add(gameObject);

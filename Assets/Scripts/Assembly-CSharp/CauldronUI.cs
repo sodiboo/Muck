@@ -34,7 +34,7 @@ public class CauldronUI : InventoryExtensions
 				}
 				if (cells[i] != null)
 				{
-					this.synchedCells[i].currentItem =Instantiate<InventoryItem>(cells[i]);
+					this.synchedCells[i].currentItem = Instantiate<InventoryItem>(cells[i]);
 				}
 				else
 				{

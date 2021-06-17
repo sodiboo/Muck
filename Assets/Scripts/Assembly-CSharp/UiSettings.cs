@@ -19,7 +19,7 @@ public class UiSettings : MonoBehaviour
 		for (int i = 0; i < enumNames.Length; i++)
 		{
 			int index = i;
-			Button component =Instantiate<GameObject>(this.settingButton, base.transform).GetComponent<Button>();
+			Button component = Instantiate<GameObject>(this.settingButton, base.transform).GetComponent<Button>();
 			component.onClick.AddListener(delegate()
 			{
 				this.UpdateSetting(index);

@@ -20,7 +20,7 @@ public class Tutorial : MonoBehaviour
 	{
 		if (!CurrentSettings.Instance.tutorial)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 		}
 	}
 
@@ -226,14 +226,14 @@ public class Tutorial : MonoBehaviour
 		if (this.progress >= this.steps.Length)
 		{
 			this.currentStep = null;
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 			return;
 		}
 		Tutorial.TutorialStep[] array = this.steps;
 		int num = this.progress;
 		this.progress = num + 1;
 		this.currentStep = array[num];
-		this.currentTaskUi =Instantiate<GameObject>(this.taskPrefab, this.taskParent).GetComponent<TutorialTaskUI>();
+		this.currentTaskUi = Instantiate<GameObject>(this.taskPrefab, this.taskParent).GetComponent<TutorialTaskUI>();
 		this.currentTaskUi.SetItem(this.currentStep.item, this.currentStep.text);
 		if (this.currentStep.state == Tutorial.TutorialState.Unlock)
 		{

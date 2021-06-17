@@ -92,7 +92,7 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		if (base.gameObject.activeInHierarchy)
 		{
 			this.animator.Play("OpenChest");
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 		}
 	}
 

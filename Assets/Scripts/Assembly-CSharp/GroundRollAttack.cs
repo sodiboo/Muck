@@ -23,7 +23,7 @@ public class GroundRollAttack : MonoBehaviour
 		Collider component = base.GetComponent<Collider>();
 		for (int i = 0; i < num; i++)
 		{
-			Transform transform =Instantiate<GameObject>(this.rollPrefab, base.transform.position, base.transform.rotation).transform;
+			Transform transform = Instantiate<GameObject>(this.rollPrefab, base.transform.position, base.transform.rotation).transform;
 			transform.GetComponent<GroundRollAttack>().child = true;
 			transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + (float)(num2 * 2 * i) - (float)num2, transform.eulerAngles.z);
 			Physics.IgnoreCollision(component, transform.GetComponent<Collider>());

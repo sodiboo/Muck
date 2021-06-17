@@ -19,7 +19,7 @@ public class BuildManager : MonoBehaviour
 		Material material = this.renderer.material;
 		material.mainTexture = this.currentItem.material.mainTexture;
 		this.renderer.material = material;
-	Destroy(this.ghostItem.GetComponent<BoxCollider>());
+		Destroy(this.ghostItem.GetComponent<BoxCollider>());
 		this.ghostCollider = this.ghostItem.AddComponent<BoxCollider>();
 		BuildSnappingInfo component = this.currentItem.prefab.GetComponent<BuildSnappingInfo>();
 		if (component)
@@ -195,12 +195,12 @@ public class BuildManager : MonoBehaviour
 	public GameObject BuildItem(int buildOwner, int itemID, int objectId, Vector3 position, int yRotation)
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[itemID];
-		GameObject gameObject =Instantiate<GameObject>(inventoryItem.prefab);
+		GameObject gameObject = Instantiate<GameObject>(inventoryItem.prefab);
 		gameObject.transform.position = position;
 		gameObject.transform.rotation = Quaternion.Euler(0f, (float)yRotation, 0f);
 		if (this.buildFx)
 		{
-		Instantiate<GameObject>(this.buildFx, position, Quaternion.identity);
+			Instantiate<GameObject>(this.buildFx, position, Quaternion.identity);
 		}
 		if (inventoryItem.grid)
 		{

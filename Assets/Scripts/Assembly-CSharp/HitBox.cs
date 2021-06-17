@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 
 public class HitBox : MonoBehaviour
@@ -17,7 +15,7 @@ public class HitBox : MonoBehaviour
 		}
 		float maxDistance = 1.2f + PlayerStatus.Instance.currentChunkArmorMultiplier;
 		RaycastHit[] array = Physics.SphereCastAll(this.playerCam.position + this.playerCam.forward * 0.1f, 3f, this.playerCam.forward, maxDistance, this.whatIsHittable);
-		Array.Sort<RaycastHit>(array, (RaycastHit x, RaycastHit y) => x.distance.CompareTo(y.distance));
+		System.Array.Sort<RaycastHit>(array, (RaycastHit x, RaycastHit y) => x.distance.CompareTo(y.distance));
 		if (array.Length < 1)
 		{
 			return;
@@ -164,7 +162,7 @@ public class HitBox : MonoBehaviour
 				inventoryItem = ItemManager.Instance.GetItemByName("Flint");
 			}
 		}
-	Instantiate<GameObject>(original, vector, Quaternion.LookRotation(Vector3.up));
+		Instantiate<GameObject>(original, vector, Quaternion.LookRotation(Vector3.up));
 		if (inventoryItem != null)
 		{
 			ClientSend.DropItemAtPosition(inventoryItem.id, 1, vector);

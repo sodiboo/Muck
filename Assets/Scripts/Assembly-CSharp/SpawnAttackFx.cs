@@ -13,7 +13,7 @@ public class SpawnAttackFx : MonoBehaviour
 
 	public void SpawnFx(int n)
 	{
-		ImpactDamage componentInChildren =Instantiate<GameObject>(this.attackFx[n], this.spawnPos.position, this.attackFx[n].transform.rotation).GetComponentInChildren<ImpactDamage>();
+		ImpactDamage componentInChildren = Instantiate<GameObject>(this.attackFx[n], this.spawnPos.position, this.attackFx[n].transform.rotation).GetComponentInChildren<ImpactDamage>();
 		componentInChildren.baseDamage = (int)((float)componentInChildren.baseDamage * this.m.multiplier);
 	}
 

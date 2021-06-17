@@ -10,7 +10,7 @@ public class ImpactDamage : MonoBehaviour
 	{
 		if (this.race)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 			MonoBehaviour.print("destroying deu to race");
 		}
 		else
@@ -54,7 +54,7 @@ public class ImpactDamage : MonoBehaviour
 		this.alreadyHit.Add(other.gameObject);
 		if (this.race)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 		}
 		else
 		{

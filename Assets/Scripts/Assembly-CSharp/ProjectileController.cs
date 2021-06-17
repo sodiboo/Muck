@@ -15,7 +15,7 @@ public class ProjectileController : MonoBehaviour
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[arrowId];
 		InventoryUI.Instance.arrows.UpdateCell();
-		GameObject gameObject =Instantiate<GameObject>(inventoryItem.prefab);
+		GameObject gameObject = Instantiate<GameObject>(inventoryItem.prefab);
 		gameObject.GetComponent<Renderer>().material = inventoryItem.material;
 		gameObject.transform.position = spawnPos;
 		gameObject.transform.rotation = Quaternion.LookRotation(direction);
@@ -28,7 +28,7 @@ public class ProjectileController : MonoBehaviour
 	public void SpawnMobProjectile(Vector3 spawnPos, Vector3 direction, float force, int itemId, int mobObjectId)
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[itemId];
-		GameObject gameObject =Instantiate<GameObject>(inventoryItem.prefab, spawnPos, Quaternion.LookRotation(direction));
+		GameObject gameObject = Instantiate<GameObject>(inventoryItem.prefab, spawnPos, Quaternion.LookRotation(direction));
 		int attackDamage = inventoryItem.attackDamage;
 		float projectileSpeed = inventoryItem.bowComponent.projectileSpeed;
 		gameObject.transform.rotation = Quaternion.LookRotation(direction);

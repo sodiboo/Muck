@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 		}
 		else if (GameManager.instance != this)
 		{
-		Destroy(this);
+			Destroy(this);
 		}
 		GameManager.players = new Dictionary<int, PlayerManager>();
 		this.currentDay = 0;
@@ -38,11 +38,11 @@ public class GameManager : MonoBehaviour
 			GameManager.gameSettings.difficulty = GameSettings.Difficulty.Normal;
 			if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Versus)
 			{
-			Instantiate<GameObject>(this.zone, Vector3.zero, Quaternion.identity);
+				Instantiate<GameObject>(this.zone, Vector3.zero, Quaternion.identity);
 			}
 			Server.InitializeServerPackets();
 			LocalClient.InitializeClientData();
-		Instantiate<GameObject>(this.testGame);
+			Instantiate<GameObject>(this.testGame);
 			LocalClient.instance.serverHost = SteamManager.Instance.PlayerSteamId.Value;
 			SteamLobby.steamIdToClientId.Add(SteamManager.Instance.PlayerSteamId.Value, 0);
 			Server.clients.Add(0, new Client(0));
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Versus)
 		{
-		Instantiate<GameObject>(this.zone, Vector3.zero, Quaternion.identity);
+			Instantiate<GameObject>(this.zone, Vector3.zero, Quaternion.identity);
 			if (LocalClient.serverOwner)
 			{
 				base.InvokeRepeating(nameof(SlowUpdate), 0.5f, 0.5f);
@@ -133,12 +133,12 @@ public class GameManager : MonoBehaviour
 		PlayerManager component;
 		if (id == LocalClient.instance.myId)
 		{
-		Instantiate<GameObject>(this.localPlayerPrefab, position, Quaternion.Euler(0f, 0f, 0f));
+			Instantiate<GameObject>(this.localPlayerPrefab, position, Quaternion.Euler(0f, 0f, 0f));
 			component = PlayerMovement.Instance.gameObject.GetComponent<PlayerManager>();
 		}
 		else
 		{
-			component =Instantiate<GameObject>(this.playerPrefab, position, Quaternion.Euler(0f, orientationY, 0f)).GetComponent<PlayerManager>();
+			component = Instantiate<GameObject>(this.playerPrefab, position, Quaternion.Euler(0f, orientationY, 0f)).GetComponent<PlayerManager>();
 			component.SetDesiredPosition(position);
 		}
 		component.SetDesiredPosition(position);
@@ -260,7 +260,7 @@ public class GameManager : MonoBehaviour
 		playerManager.dead = true;
 		playerManager.gameObject.SetActive(false);
 		pos = playerManager.transform.position;
-	Instantiate<GameObject>(this.playerRagdoll, pos, playerManager.transform.rotation).GetComponent<PlayerRagdoll>().SetRagdoll(id, -playerManager.transform.forward);
+		Instantiate<GameObject>(this.playerRagdoll, pos, playerManager.transform.rotation).GetComponent<PlayerRagdoll>().SetRagdoll(id, -playerManager.transform.forward);
 	}
 
 
@@ -279,7 +279,7 @@ public class GameManager : MonoBehaviour
 				return raycastHit.point;
 			}
 		}
-		catch
+		catch (System.Exception)
 		{
 			return Vector3.zero;
 		}
@@ -291,7 +291,7 @@ public class GameManager : MonoBehaviour
 	{
 		PlayerManager playerManager = GameManager.players[playerId];
 		playerManager.deaths++;
-		GraveInteract componentInChildren =Instantiate<GameObject>(this.gravePrefab, gravePos, Quaternion.identity).GetComponentInChildren<GraveInteract>();
+		GraveInteract componentInChildren = Instantiate<GameObject>(this.gravePrefab, gravePos, Quaternion.identity).GetComponentInChildren<GraveInteract>();
 		componentInChildren.username = playerManager.username.Substring(0, Mathf.Clamp(15, 0, playerManager.username.Length));
 		componentInChildren.playerId = playerManager.id;
 		componentInChildren.SetId(graveObjectId);
@@ -344,7 +344,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (GameManager.players[id] != null && GameManager.players[id].gameObject != null)
 		{
-		Destroy(GameManager.players[id].gameObject);
+			Destroy(GameManager.players[id].gameObject);
 			GameManager.players[id].dead = true;
 			GameManager.players[id].disconnected = true;
 		}

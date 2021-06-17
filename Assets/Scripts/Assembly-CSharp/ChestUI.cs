@@ -25,7 +25,7 @@ public class ChestUI : InventoryExtensions
 			}
 			if (array[i] != null)
 			{
-				this.cells[i].currentItem =Instantiate<InventoryItem>(array[i]);
+				this.cells[i].currentItem = Instantiate<InventoryItem>(array[i]);
 			}
 			else
 			{

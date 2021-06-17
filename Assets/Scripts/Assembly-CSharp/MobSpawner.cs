@@ -32,7 +32,7 @@ public class MobSpawner : MonoBehaviour
 
 	public void SpawnMob(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier, Mob.BossType bossType = Mob.BossType.None)
 	{
-		Mob component =Instantiate<GameObject>(this.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
+		Mob component = Instantiate<GameObject>(this.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
 		MobManager.Instance.AddMob(component, mobId);
 		component.multiplier = multiplier;
 		component.bossMultiplier = bossMultiplier;

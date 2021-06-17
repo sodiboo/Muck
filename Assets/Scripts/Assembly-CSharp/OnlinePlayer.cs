@@ -70,7 +70,7 @@ public class OnlinePlayer : MonoBehaviour
 			this.distance += num2 * Time.deltaTime * 50f;
 			if (this.distance > 300f / num)
 			{
-			Instantiate<GameObject>(this.footstepFx, base.transform.position, Quaternion.identity);
+				Instantiate<GameObject>(this.footstepFx, base.transform.position, Quaternion.identity);
 				this.distance = 0f;
 			}
 		}
@@ -109,7 +109,7 @@ public class OnlinePlayer : MonoBehaviour
 		{
 			return;
 		}
-	Instantiate<GameObject>(this.smokeFx, this.jumpSmokeFxPos.position, Quaternion.LookRotation(Vector3.up));
+		Instantiate<GameObject>(this.smokeFx, this.jumpSmokeFxPos.position, Quaternion.LookRotation(Vector3.up));
 	}
 
 

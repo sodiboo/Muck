@@ -26,7 +26,7 @@ public class SpawnPowerupsInLocations : MonoBehaviour
 			list.Remove(num3);
 			Vector3 position = this.positions[num3].position;
 			Quaternion rotation = this.positions[num3].rotation;
-			GameObject gameObject =Instantiate<GameObject>(this.FindObjectToSpawn(this.powerupChests, num2, rand), position, rotation);
+			GameObject gameObject = Instantiate<GameObject>(this.FindObjectToSpawn(this.powerupChests, num2, rand), position, rotation);
 			int nextId = ResourceManager.Instance.GetNextId();
 			LootContainerInteract componentInChildren = gameObject.GetComponentInChildren<LootContainerInteract>();
 			componentInChildren.price = 0;

@@ -12,7 +12,7 @@ public class EnemyHpBarsManager : MonoBehaviour
 		this.hpBars = new MobHpBar[this.nHpBars];
 		for (int i = 0; i < this.nHpBars; i++)
 		{
-			this.hpBars[i] =Instantiate<GameObject>(this.hpBarPrefab).GetComponent<MobHpBar>();
+			this.hpBars[i] = Instantiate<GameObject>(this.hpBarPrefab).GetComponent<MobHpBar>();
 			this.hpBars[i].gameObject.SetActive(false);
 		}
 	}

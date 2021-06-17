@@ -11,7 +11,7 @@ public class SteamLobby : MonoBehaviour
 	{
 		if (SteamLobby.Instance)
 		{
-		Destroy(base.gameObject);
+			Destroy(base.gameObject);
 			return;
 		}
 		SteamLobby.Instance = this;
