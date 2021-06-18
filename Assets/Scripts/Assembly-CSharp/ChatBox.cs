@@ -117,10 +117,10 @@ public class ChatBox : MonoBehaviour
 
     private void ChatCommand(string message)
     {
-        string a = message.Substring(1);
+        string command = message.Substring(1);
         this.ClearMessage();
         string text = "#" + ColorUtility.ToHtmlStringRGB(this.console);
-        if (a == "seed")
+        if (command == "seed")
         {
             int seed = GameManager.gameSettings.Seed;
             this.AppendMessage(-1, string.Concat(new object[]
@@ -133,17 +133,56 @@ public class ChatBox : MonoBehaviour
             }), "");
             GUIUtility.systemCopyBuffer = string.Concat(seed);
         }
-        else if (a == "ping")
+        else if (command == "ping")
         {
             this.AppendMessage(-1, "<color=" + text + ">pong<color=white>", "");
         }
-        else if (a == "debug")
+        else if (command == "debug")
         {
             DebugNet.Instance.ToggleConsole();
         }
-        else if (a == "kill")
+        else if (command == "kill")
         {
             PlayerStatus.Instance.Damage(0, true);
+        }
+        else if (command.StartsWith("give "))
+        {
+            command = command.Substring(5);
+            int id;
+            int amount = 1;
+            if (command.Contains(' '))
+            {
+                var args = command.Split(' ');
+                if (!int.TryParse(args[0], out id)) return;
+                if (!int.TryParse(args[1], out amount)) return;
+            }
+            else if (!int.TryParse(command, out id)) return;
+
+            if (id < 0) return;
+            if (amount <= 0) return;
+            if (id >= ItemManager.Instance.allItems.Count) return;
+
+            var item = Instantiate(ItemManager.Instance.allItems[id]);
+            item.amount = amount;
+            InventoryUI.Instance.AddItemToInventory(item);
+        }
+        else if (command.StartsWith("powerup "))
+        {
+            command = command.Substring(8);
+            int id;
+            int amount = 1;
+            if (command.Contains(' '))
+            {
+                var args = command.Split(' ');
+                if (!int.TryParse(args[0], out id)) return;
+                if (!int.TryParse(args[1], out amount)) return;
+            }
+            else if (!int.TryParse(command, out id)) return;
+
+            if (id < 0) return;
+            if (id >= ItemManager.Instance.allPowerups.Count) return;
+
+            PowerupInventory.Instance.AddPowerup(id, amount);
         }
     }
 

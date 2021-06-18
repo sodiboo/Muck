@@ -25,8 +25,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public ShakeType ShakeType
 		{
 			get
@@ -40,8 +40,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public float Strength
 		{
 			get
@@ -55,8 +55,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public float Roughness
 		{
 			get
@@ -70,8 +70,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public float FadeIn
 		{
 			get
@@ -85,8 +85,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public float FadeOut
 		{
 			get
@@ -100,8 +100,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public Vector3 PositionInfluence
 		{
 			get
@@ -115,8 +115,8 @@ namespace MilkShake
 		}
 
 
-
-
+		
+		
 		public Vector3 RotationInfluence
 		{
 			get

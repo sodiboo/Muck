@@ -254,7 +254,8 @@ public class InventoryItem : ScriptableObject
 
 		Food,
 
-		Bow
+		Bow,
+		Car,
 	}
 
 

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Name: tofu machine
+  m_EditorClassIdentifier: 
+  id: 129
+  name: tofu machine
+  description: car go vroom zoom skrrrt
+  type: 10
+  tier: 0
+  sprite: {fileID: 21300000, guid: f2bf632c1c854d343ba1ef2c2de4424d, type: 3}
+  material: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  mesh: {fileID: 4300000, guid: 12c4ac22694438e48bdf9f1221a84d3f, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 0.1
+  stackable: 0
+  amount: 0
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements: []
+  craftAmount: 0
+  stationRequirement: {fileID: 0}
+  buildable: 1
+  grid: 0
+  prefab: {fileID: 1763291310010154, guid: 8cd7362ab5e35c74ea51ac8f0c7b3ae5, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 

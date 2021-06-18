@@ -36,7 +36,11 @@ public class PlayerInput : MonoBehaviour
 		{
 			return;
 		}
-		this.playerMovement.Movement(this.x, this.y);
+		if (OtherInput.Instance.currentCar != null) {
+			playerMovement.GetRb().position = OtherInput.Instance.currentCar.rb.position;
+		} else {
+			playerMovement.Movement(this.x, this.y);
+		}
 	}
 
 
@@ -64,10 +68,6 @@ public class PlayerInput : MonoBehaviour
 			this.StopInput();
 			return;
 		}
-		if (!this.playerMovement)
-		{
-			return;
-		}
 		this.x = 0f;
 		this.y = 0f;
 		if (Input.GetKey(InputManager.forward))
@@ -86,8 +86,18 @@ public class PlayerInput : MonoBehaviour
 		{
 			this.x += 1f;
 		}
+		if (OtherInput.Instance.currentCar)
+        {
+			OtherInput.Instance.currentCar.throttle = this.y;
+			OtherInput.Instance.currentCar.steering = this.x;
+			OtherInput.Instance.currentCar.breaking = Input.GetKey(InputManager.jump);
+			return;
+        }
+
+		if (!this.playerMovement) return;
 		this.jumping = Input.GetKey(InputManager.jump);
 		this.sprinting = Input.GetKey(InputManager.sprint);
+		this.crouching = Input.GetKey(KeyCode.LeftControl);
 		this.mouseScroll = Input.mouseScrollDelta.y;
 		if (Input.GetKeyDown(InputManager.jump))
 		{

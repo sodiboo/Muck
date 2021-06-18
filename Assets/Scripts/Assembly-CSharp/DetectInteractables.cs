@@ -20,7 +20,9 @@ public class DetectInteractables : MonoBehaviour
 		this.playerCam = PlayerMovement.Instance.playerCam;
 	}
 
-
+	private void OnDisable() {
+		currentInteractable = null;
+	}
 
 
 	public Interactable currentInteractable { get; private set; }

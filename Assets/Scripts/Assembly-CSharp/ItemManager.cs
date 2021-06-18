@@ -239,4 +239,7 @@ public class ItemManager : MonoBehaviour
 
 
 	public static int currentId;
+	
+	[Header("Jelly Drift")]
+	public GameObject crashParticles;
 }

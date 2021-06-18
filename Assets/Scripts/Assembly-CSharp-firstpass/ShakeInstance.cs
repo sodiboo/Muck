@@ -7,17 +7,17 @@ namespace MilkShake
 	public class ShakeInstance
 	{
 
-
-
+		
+		
 		public ShakeState State { get; private set; }
 
 
-
-
+		
+		
 		public bool IsPaused { get; private set; }
 
 
-
+		
 		public bool IsFinished
 		{
 			get
@@ -27,7 +27,7 @@ namespace MilkShake
 		}
 
 
-
+		
 		public float CurrentStrength
 		{
 			get
@@ -37,7 +37,7 @@ namespace MilkShake
 		}
 
 
-
+		
 		public float CurrentRoughness
 		{
 			get

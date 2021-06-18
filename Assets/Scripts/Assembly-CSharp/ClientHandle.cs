@@ -603,7 +603,7 @@ public class ClientHandle : MonoBehaviour
 	{
 		int day = packet.ReadInt(true);
 		GameManager.instance.UpdateDay(day);
-		DayCycle.time = 0f;
+		DayCycle.totalTime = day;
 	}
 
 

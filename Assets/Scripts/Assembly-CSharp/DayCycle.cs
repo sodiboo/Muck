@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class DayCycle : MonoBehaviour
 {
+	private static DayCycle Instance;
 
 	private void Awake()
 	{
+		Instance = this;
 		this.sky.mainTextureOffset = new Vector2(0.5f, 0f);
 		this.waterColor = this.water.material.GetColor("_ShallowColor");
 		this.waterShallowColor = this.water.material.GetColor("_DeepColor");
-		DayCycle.time = 0f;
 		DayCycle.totalTime = 0f;
 	}
 
 
 
 
-	public static float totalTime { get; private set; }
+	public static float totalTime { get; set; }
 
 
 	private void Update()
@@ -32,13 +33,7 @@ public class DayCycle : MonoBehaviour
 			num /= this.nightDuration;
 		}
 		float num2 = num * Time.deltaTime;
-		DayCycle.time += num2;
-		DayCycle.time %= 1f;
 		DayCycle.totalTime += num2;
-		if (this.alwaysDay)
-		{
-			DayCycle.time = 0.25f;
-		}
 		this.sun.rotation = Quaternion.Euler(new Vector3(DayCycle.time * 360f, 0f, 0f));
 		this.sky.mainTextureOffset = new Vector2(DayCycle.time - 0.25f, 0f);
 		this.SunLight();
@@ -96,7 +91,7 @@ public class DayCycle : MonoBehaviour
 	public float timeSpeed = 0.01f;
 
 
-	public static float time;
+	public static float time => Instance.alwaysDay ? 0.25f : totalTime % 1f ;
 
 
 	public Transform sun;

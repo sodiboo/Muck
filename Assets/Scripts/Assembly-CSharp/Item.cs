@@ -49,6 +49,12 @@ public class Item : MonoBehaviour
 				this.outlineMat.SetColor("_Color", this.item.material.color);
 			}
 			base.GetComponent<MeshFilter>().mesh = this.item.mesh;
+			if (item.type == InventoryItem.ItemType.Car) {
+				var scale = Vector3.one;
+				scale.Scale(item.prefab.transform.localScale);
+				scale.Scale(item.prefab.transform.GetChild(0).localScale);
+				transform.localScale = scale;
+			}
 		}
 		this.outlineMat.SetFloat("_OutlineWidth", 0.06f);
 		this.FindOutlineColor();

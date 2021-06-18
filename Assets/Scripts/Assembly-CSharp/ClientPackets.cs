@@ -31,6 +31,11 @@
     finishedLoading,
     spawnEffect,
     reviveRequest,
-    interact,
-    startedLoading,
+	interact,
+	startedLoading,
+
+    _vehicleOffset = 2360,
+    moveVehicle,
+    enterVehicle,
+    exitVehicle,
 }

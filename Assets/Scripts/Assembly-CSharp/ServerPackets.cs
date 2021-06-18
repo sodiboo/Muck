@@ -52,6 +52,11 @@
     playerFinishedLoading,
     revivePlayer,
     spawnGrave,
-    interact,
-    setTarget,
+	interact,
+	setTarget,
+
+    _vehicleOffset = 2360,
+    moveVehicle,
+    enterVehicle,
+    exitVehicle,
 }

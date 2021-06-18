@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Steamworks;
 using UnityEngine;
 
@@ -583,6 +584,32 @@ public class ClientSend : MonoBehaviour
 		}
 		catch (Exception message)
 		{
+			Debug.Log(message);
+		}
+	}
+
+	public static void UpdateCar(Car car) {
+		try {
+			using (var packet = new Packet((int)ClientPackets.moveVehicle)) {
+				packet.Write(ResourceManager.Instance.cars.First(kp => kp.Value == car).Key);
+				packet.Write(car.rb.angularVelocity);
+				packet.Write(car.lastVelocity);
+				packet.Write(car.rb.velocity);
+				
+				packet.Write(car.rb.rotation);
+				packet.Write(car.rb.position);
+
+				packet.Write(car.throttle);
+				packet.Write(car.steering);
+				packet.Write(car.breaking);
+
+				foreach (var sus in car.wheelPositions) {
+					packet.Write(sus.wheelAngleVelocity);
+					packet.Write(sus.lastCompression);
+				}
+				ClientSend.SendUDPData(packet);
+			}
+		} catch (Exception message) {
 			Debug.Log(message);
 		}
 	}

@@ -20,6 +20,9 @@ public class ServerCommunication : MonoBehaviour
 			ClientSend.PlayerPosition(this.root.position);
 			this.lastSentPosition = this.root.position;
 		}
+		if (OtherInput.Instance.currentCar) {
+			ClientSend.UpdateCar(OtherInput.Instance.currentCar);
+		}
 	}
 
 
