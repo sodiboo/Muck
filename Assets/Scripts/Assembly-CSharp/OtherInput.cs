@@ -77,41 +77,31 @@ public class OtherInput : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(InputManager.map))
+        if (currentCar != null)
         {
-            Map.Instance.ToggleMap();
+
+            if (Input.GetKeyDown(InputManager.interact)) ClientSend.ExitVehicle();
         }
-        if (Map.Instance.active)
+        else
         {
-            return;
-        }
-        if (Input.GetKeyDown(InputManager.inventory) && !PlayerStatus.Instance.IsPlayerDead())
-        {
-            this.ToggleInventory(OtherInput.CraftingState.Inventory);
-        }
-        if (Input.GetButton("Cancel") && InventoryUI.Instance.gameObject.activeInHierarchy)
-        {
-            this.ToggleInventory(OtherInput.CraftingState.Inventory);
-            return;
-        }
-        if (Input.GetKeyDown(InputManager.interact))
-        {
-            if (currentCar != null)
+            if (Input.GetKeyDown(InputManager.inventory) && !PlayerStatus.Instance.IsPlayerDead())
             {
-                var target = MoveCamera.Instance.transform.parent.gameObject;
-                MoveCamera.Instance.transform.SetParent(null);
-                MoveCamera.Instance.state = MoveCamera.CameraState.Player;
-                PlayerMovement.Instance.GetPlayerCollider().enabled = true;
-                PlayerMovement.Instance.GetRb().isKinematic = false;
-                Hotbar.Instance.gameObject.SetActive(true);
-                currentCar.breaking = true;
-                currentCar.throttle = 0f;
-                currentCar.steering = 0f;
-                currentCar.inUse = false;
-                currentCar = null;
-                Destroy(target);
+                this.ToggleInventory(OtherInput.CraftingState.Inventory);
             }
-            else
+            if (Input.GetButton("Cancel") && InventoryUI.Instance.gameObject.activeInHierarchy)
+            {
+                this.ToggleInventory(OtherInput.CraftingState.Inventory);
+                return;
+            }
+            if (Input.GetKeyDown(InputManager.map))
+            {
+                Map.Instance.ToggleMap();
+            }
+            if (Map.Instance.active)
+            {
+                return;
+            }
+            if (Input.GetKeyDown(InputManager.interact))
             {
                 Interactable currentInteractable = DetectInteractables.Instance.currentInteractable;
                 if (currentInteractable != null)

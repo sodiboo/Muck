@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class Car : MonoBehaviour
+public class Car : HitableResource
 {
     public const float Scale = 2;
 
@@ -38,8 +38,9 @@ public class Car : MonoBehaviour
     public float steerAngle { get; set; }
 
 
-    private void Awake()
+    private new void Awake()
     {
+        base.Awake();
         rb = base.GetComponent<Rigidbody>();
         if (autoValues)
         {
@@ -64,8 +65,12 @@ public class Car : MonoBehaviour
             sus.restLength *= Scale;
             sus.springTravel *= Scale;
         }
+        if (LocalClient.serverOwner) InvokeRepeating(nameof(QuickUpdate), 1/12f, 1f/12f);
     }
 
+    private void QuickUpdate() {
+        if (!inUse) ServerSend.UpdateCar(-1, ResourceManager.Instance.cars.First(kp => kp.Value == this).Key, this);
+    }
 
     private void Update()
     {
@@ -84,9 +89,26 @@ public class Car : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public override void OnKill(Vector3 dir)
     {
-        if (OtherInput.Instance.currentCar == this) OtherInput.Instance.currentCar = null;
+        base.OnKill(dir);
+        if (OtherInput.Instance.currentCar == this)
+        {
+            var target = MoveCamera.Instance.transform.parent.gameObject;
+            MoveCamera.Instance.transform.SetParent(null);
+            MoveCamera.Instance.state = MoveCamera.CameraState.Player;
+            MoveCamera.Instance.gunCamera.enabled = true;
+            PlayerMovement.Instance.GetPlayerCollider().enabled = true;
+            PlayerMovement.Instance.GetRb().isKinematic = false;
+            Hotbar.Instance.gameObject.SetActive(true);
+            breaking = true;
+            throttle = 0f;
+            steering = 0f;
+            inUse = false;
+            OtherInput.Instance.currentCar = null;
+            Destroy(target);
+        };
+        
     }
 
 
@@ -107,12 +129,20 @@ public class Car : MonoBehaviour
 
     public Vector3 acceleration { get; private set; }
 
-    private bool CounterMovement() => rb.isKinematic
+    private bool CounterMovement()
+    {
+        // if (inUse)
+        // {
+        //     if (OtherInput.Instance.currentCar != this) return rb.isKinematic = true;
+        // }
+        // else if (!LocalClient.serverOwner) return rb.isKinematic = true;
+
+        return rb.isKinematic
     = wheelPositions.All(sus => sus.grounded)
     && throttle == 0f
     && steering == 0f
     && rb.velocity.magnitude < 1f;
-
+    }
 
     private void Movement()
     {

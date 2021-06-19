@@ -239,7 +239,8 @@ public class BuildManager : MonoBehaviour
             component.PopIn();
         }
         gameObject.GetComponent<Hitable>().SetId(objectId);
-        ResourceManager.Instance.AddObject(objectId, gameObject); if (inventoryItem.type == InventoryItem.ItemType.Car)
+        ResourceManager.Instance.AddObject(objectId, gameObject);
+        if (inventoryItem.type == InventoryItem.ItemType.Car)
             ResourceManager.Instance.AddCar(objectId, gameObject);
         else
             ResourceManager.Instance.AddBuild(objectId, gameObject);

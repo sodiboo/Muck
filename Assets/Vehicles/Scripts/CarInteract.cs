@@ -12,12 +12,7 @@ public class CarInteract : MonoBehaviour, Interactable
 
     public void Interact() {
         if (!car.inUse) {
-            MoveCamera.Instance.state = MoveCamera.CameraState.Car;
-			PlayerMovement.Instance.GetPlayerCollider().enabled = false;
-			PlayerMovement.Instance.GetRb().isKinematic = true;
-            Hotbar.Instance.gameObject.SetActive(false);
-            OtherInput.Instance.currentCar = car;
-            car.inUse = true;
+            ClientSend.EnterVehicle(car);
         }
     }
 

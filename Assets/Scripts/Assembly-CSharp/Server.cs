@@ -158,6 +158,10 @@ public class Server
             { (int)ClientPackets.reviveRequest, ServerHandle.RevivePlayer },
 			{ (int)ClientPackets.interact, new Server.PacketHandler(ServerHandle.Interact) },
 			{ (int)ClientPackets.startedLoading, new Server.PacketHandler(ServerHandle.StartedLoading) },
+
+			{ (int)ClientPackets.moveVehicle, ServerHandle.UpdateCar },
+			{ (int)ClientPackets.enterVehicle, ServerHandle.EnterVehicle },
+			{ (int)ClientPackets.exitVehicle, ServerHandle.ExitVehicle },
 		};
 	}
 

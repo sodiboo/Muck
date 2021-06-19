@@ -13863,6 +13863,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b154d5c290db439ebfbf14de9079e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entityName: tofu machine
+  canHitMoreThanOnce: 0
+  dropTable: {fileID: 11400000, guid: e748b0f27027bef438e79ac8ae2d4a14, type: 2}
+  hp: 100
+  maxHp: 100
+  destroyFx: {fileID: 1522265947390954, guid: 99c053368968acd489702d28a6f9cbbe, type: 3}
+  hitFx: {fileID: 1325647470422892, guid: 30bcb3043765499478a970e88e587811, type: 3}
+  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 3}
+  compatibleItem: 2
+  minTier: 0
+  dropItem: {fileID: 11400000, guid: 4f5af7284ef968244a9a41cd4ff0843e, type: 2}
+  dropExtra: []
+  dropChance: []
+  amount: 1
+  dontScale: 1
+  poolId: 0
   centerOfMass: {fileID: 4121672312694435}
   wheelPositions:
   - {fileID: 114975142014515890}
@@ -17100,7 +17116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5434832478783380067}
-  - component: {fileID: 4208048499162420248}
+  - component: {fileID: 8028815432985832888}
   - component: {fileID: 3588149872661972467}
   m_Layer: 15
   m_Name: Interact
@@ -17123,20 +17139,19 @@ Transform:
   m_Father: {fileID: 4001624955784255}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!64 &4208048499162420248
-MeshCollider:
+--- !u!65 &8028815432985832888
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5861577260586800642}
-  m_Material: {fileID: 13400000, guid: 854ecb1e7c7b85a42a5b697ab31d22cc, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 12c4ac22694438e48bdf9f1221a84d3f, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 15, y: 38, z: 10}
+  m_Center: {x: 0, y: 1, z: 2}
 --- !u!114 &3588149872661972467
 MonoBehaviour:
   m_ObjectHideFlags: 0

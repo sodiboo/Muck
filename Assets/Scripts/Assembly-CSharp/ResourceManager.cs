@@ -10,6 +10,7 @@ public class ResourceManager : MonoBehaviour
         ResourceManager.Instance = this;
         this.list = new Dictionary<int, GameObject>();
         this.builds = new Dictionary<int, GameObject>();
+        this.cars = new Dictionary<int, Car>();
         ResourceManager.generatorSeedOffset = 0;
         ResourceManager.globalId = 0;
     }
@@ -80,8 +81,6 @@ public class ResourceManager : MonoBehaviour
     {
         if (cars.ContainsKey(key)) return;
         cars.Add(key, o.GetComponent<Car>());
-        if (!LocalClient.serverOwner) cars[key].rb.isKinematic = true;
-        ChatBox.Instance.AppendMessage(-1, key.ToString(), "Car");
     }
 
     public void RemoveItem(int id)
@@ -90,6 +89,10 @@ public class ResourceManager : MonoBehaviour
         if (this.builds.ContainsKey(id))
         {
             this.builds.Remove(id);
+        }
+        if (this.cars.ContainsKey(id))
+        {
+            this.cars.Remove(id);
         }
         this.list.Remove(id);
         Destroy(obj);
@@ -126,7 +129,7 @@ public class ResourceManager : MonoBehaviour
 
     public Dictionary<int, GameObject> builds;
 
-	public Dictionary<int, Car> cars;
+    public Dictionary<int, Car> cars;
 
 
     public GameObject debug;

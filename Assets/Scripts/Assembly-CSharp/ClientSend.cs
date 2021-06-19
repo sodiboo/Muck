@@ -614,6 +614,28 @@ public class ClientSend : MonoBehaviour
 		}
 	}
 
+	public static void EnterVehicle(Car car) {
+		try {
+			using (var packet = new Packet((int)ClientPackets.enterVehicle)) {
+				packet.Write(ResourceManager.Instance.cars.First(kp => kp.Value == car).Key);
+				ClientSend.SendTCPData(packet);
+			}
+		} catch (Exception message) {
+			Debug.Log(message);
+		}
+	}
+
+	public static void ExitVehicle() {
+		try {
+			using (var packet = new Packet((int)ClientPackets.exitVehicle)) {
+				packet.Write(ResourceManager.Instance.cars.First(kp => kp.Value == OtherInput.Instance.currentCar).Key);
+				ClientSend.SendTCPData(packet);
+			}
+		} catch (Exception message) {
+			Debug.Log(message);
+		}
+	}
+
 
 	public static int packetsSent;
 
