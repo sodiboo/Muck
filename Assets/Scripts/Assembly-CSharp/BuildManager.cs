@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -13,12 +15,16 @@ public class BuildManager : MonoBehaviour
     }
 
 
-    private void SetNewItem()
+    private void SetNewItem(MeshRenderer prefabRenderer)
     {
         this.filter.mesh = this.currentItem.mesh;
-        Material material = this.renderer.material;
-        material.mainTexture = this.currentItem.material.mainTexture;
-        this.renderer.material = material;
+        this.renderer.materials = prefabRenderer.sharedMaterials.Select(oldMat =>
+        {
+            var newMat = new Material(ghostMat);
+            newMat.color = new Color(oldMat.color.r, oldMat.color.g, oldMat.color.b, 0.6f);
+            newMat.mainTexture = oldMat.mainTexture;
+            return newMat;
+        }).ToArray();
         Destroy(this.ghostItem.GetComponent<BoxCollider>());
         this.ghostCollider = this.ghostItem.AddComponent<BoxCollider>();
         BuildSnappingInfo component = this.currentItem.prefab.GetComponent<BuildSnappingInfo>();
@@ -80,39 +86,46 @@ public class BuildManager : MonoBehaviour
             this.ghostItem.SetActive(true);
             this.rotateText.SetActive(true);
         }
-        this.SetNewItem();
-        Vector3 vector = this.filter.mesh.bounds.extents;
+        var prefabRenderer = currentItem.prefab.GetComponentsInChildren<MeshFilter>().First(filter => filter.sharedMesh == currentItem.mesh).GetComponent<MeshRenderer>();
+        var prefabTransform = prefabRenderer.transform;
+        var transforms = new List<Transform>();
+        while (prefabTransform != currentItem.prefab.transform)
+        {
+            transforms.Add(prefabTransform);
+            prefabTransform = prefabTransform.parent;
+        }
+        transforms.Add(prefabTransform);
+        transforms.Reverse();
+        var rot = Quaternion.Euler(currentItem.buildRotation);
+        var scale = Vector3.one;
+        foreach (var transform in transforms)
+        {
+            rot *= transform.rotation;
+            scale.Scale(transform.localScale);
+        }
         if (currentItem.type == InventoryItem.ItemType.Car)
         {
-            vector = new Vector3(vector.x, vector.z, vector.y);
-            vector.Scale(currentItem.prefab.transform.localScale);
-            vector.Scale(currentItem.prefab.transform.GetChild(0).localScale);
-            vector *= Car.Scale;
+            scale *= Car.Scale;
         }
         if (this.currentItem.grid)
         {
-            vector *= (float)this.gridSize;
+            scale *= (float)this.gridSize;
         }
-        if (currentItem.type == InventoryItem.ItemType.Car)
-        {
-            this.ghostItem.transform.rotation = Quaternion.Euler(-90, (float)this.yRotation, 0);
-        }
-        else
-        {
-
-            this.ghostItem.transform.rotation = Quaternion.Euler(0, (float)this.yRotation, 0);
-        }
+        this.SetNewItem(prefabRenderer);
+        var bounds = this.filter.mesh.bounds;
+        Vector3 vector = bounds.extents;
+        vector.Scale(scale);
+        vector = rot * vector;
+        this.ghostItem.transform.rotation = Quaternion.Euler(0, (float)this.yRotation, 0) * rot;
         RaycastHit raycastHit;
         if (Physics.Raycast(new Ray(this.playerCam.position, this.playerCam.forward), out raycastHit, 12f, this.whatIsGround))
         {
-            Vector3 center = this.filter.mesh.bounds.center;
-            if (currentItem.type == InventoryItem.ItemType.Car)
-            {
-                center = new Vector3(center.x, center.z, center.y);
-                center.Scale(currentItem.prefab.transform.localScale);
-                center.Scale(currentItem.prefab.transform.GetChild(0).localScale);
-            }
+            Vector3 center = bounds.center;
+            center.Scale(scale);
+            center = rot * center;
             Vector3 vector2 = raycastHit.point + Vector3.up * (vector.y - center.y);
+            vector2 += ghostItem.transform.TransformDirection(new Vector3(currentItem.buildOffset.x, currentItem.buildOffset.z));
+            vector2.y += currentItem.buildOffset.y;
             BuildSnappingInfo component = raycastHit.collider.GetComponent<BuildSnappingInfo>();
             if (raycastHit.collider.gameObject.CompareTag("Build") && this.currentItem.grid && component != null)
             {
@@ -157,13 +170,6 @@ public class BuildManager : MonoBehaviour
             this.canBuild = true;
             this.lastPosition = vector2;
             this.ghostItem.transform.position = vector2;
-            var scale = Vector3.one;
-            if (currentItem.type == InventoryItem.ItemType.Car)
-            {
-                scale.Scale(currentItem.prefab.transform.localScale);
-                scale.Scale(currentItem.prefab.transform.GetChild(0).localScale);
-                scale *= Car.Scale;
-            }
             ghostItem.transform.localScale = scale;
             return;
         }
@@ -223,14 +229,21 @@ public class BuildManager : MonoBehaviour
 
     public GameObject BuildItem(int buildOwner, int itemID, int objectId, Vector3 position, int yRotation)
     {
+        if (!SaveData.isExecuting) SaveData.Instance.save.Add(new SaveData.AddItem
+        {
+            itemId = itemID,
+            objectId = objectId,
+            position = position,
+            yRot = yRotation,
+        });
         InventoryItem inventoryItem = ItemManager.Instance.allItems[itemID];
         GameObject gameObject = Instantiate<GameObject>(inventoryItem.prefab);
         gameObject.transform.position = position;
         gameObject.transform.rotation = Quaternion.Euler(0f, (float)yRotation, 0f);
-        gameObject.transform.localScale *= Car.Scale;
+        if (inventoryItem.type == InventoryItem.ItemType.Car) gameObject.transform.localScale *= Car.Scale;
         if (this.buildFx)
         {
-            Instantiate<GameObject>(this.buildFx, position, Quaternion.identity);
+            Destroy(Instantiate<GameObject>(this.buildFx, position, Quaternion.identity), 5f);
         }
         if (inventoryItem.grid)
         {
@@ -341,4 +354,8 @@ public class BuildManager : MonoBehaviour
 
 
     private int id;
+
+    public Material ghostMat;
+    private Vector3[] sourcePoints = new Vector3[8];
+    private Vector3[] points = new Vector3[8];
 }

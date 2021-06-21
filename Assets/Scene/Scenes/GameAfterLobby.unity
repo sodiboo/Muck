@@ -19314,6 +19314,7 @@ Transform:
   - {fileID: 1046}
   - {fileID: 1108}
   - {fileID: 1014786336}
+  - {fileID: 259912542}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24803,7 +24804,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.41842735, g: 0.94132644, b: 0.8917271, a: 1}
+  m_FogColor: {r: 0.41838348, g: 0.9408213, b: 0.89346206, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.0035
   m_LinearFogStart: 0
@@ -38145,7 +38146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 293.99994, y: -13.333283}
+  m_AnchoredPosition: {x: 294, y: -13.333313}
   m_SizeDelta: {x: 294, y: 31.4}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &2225
@@ -72384,7 +72385,7 @@ MonoBehaviour:
   skybox: {fileID: 2100000, guid: d77a47fc74bdc6149965590776947d0e, type: 2}
   sunLight: {fileID: 1349}
   moonLight: {fileID: 1351}
-  dayFog: {r: 0.41842735, g: 0.94132644, b: 0.8917271, a: 1}
+  dayFog: {r: 0.41838348, g: 0.9408213, b: 0.89346206, a: 1}
   nightFog: {r: 0.03212886, g: 0.190873, b: 0.3584906, a: 0}
   waterGraph:
     serializedVersion: 2
@@ -73751,6 +73752,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9068a41bebc076e4287dc04978e70411, type: 2}
   - {fileID: 11400000, guid: 44d3c73d30754d54bbc2e271634d12bc, type: 2}
   - {fileID: 11400000, guid: 055e1f1b8e544af4b8714666cb5391b9, type: 2}
+  - {fileID: 11400000, guid: e6a5e33c566e9b94cb4fdfaef75a5b7b, type: 2}
   processBar: {fileID: 3239}
   synchedCells:
   - {fileID: 3864}
@@ -75046,6 +75048,7 @@ MonoBehaviour:
   ghostItem: {fileID: 68}
   yRotation: 0
   rotateText: {fileID: 25}
+  ghostMat: {fileID: 2100000, guid: f38c52216e6ebab429499a8ad76fff07, type: 2}
 --- !u!114 &3355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76724,7 +76727,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -78169,6 +78172,14 @@ MonoBehaviour:
   tabs:
   - items:
     - {fileID: 11400000, guid: bb0ead6bae3831846a9825b1eaf2026b, type: 2}
+    - {fileID: 11400000, guid: 0c395ebc7f16f3c4bb826ccdb7cf3940, type: 2}
+    - {fileID: 11400000, guid: a27e3e80278aad940aef772730030bd9, type: 2}
+    - {fileID: 11400000, guid: 87723e3cd45a2674496706d17790e923, type: 2}
+    - {fileID: 11400000, guid: 1dbc4ec4c2532a84ebdb300896bba60d, type: 2}
+    - {fileID: 11400000, guid: 403c4caa33fb6c64dad1e52ea77ed42a, type: 2}
+    - {fileID: 11400000, guid: 4f5af7284ef968244a9a41cd4ff0843e, type: 2}
+    - {fileID: 11400000, guid: 5e4f381dada0fe149827ea07c890ef70, type: 2}
+    - {fileID: 11400000, guid: 6292a291c9ef9a14ba911f8db2fb67c8, type: 2}
   - items:
     - {fileID: 11400000, guid: 4e78ad4b60dedc34aad6f88906d83a35, type: 2}
     - {fileID: 11400000, guid: f5cd4d9b906cf92448ef9de946cc5e33, type: 2}
@@ -78258,7 +78269,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 26cb38af670bc454db3f083bddd2fc66, type: 3}
   boss:
   - {fileID: 8300000, guid: dc9428109950dd24192124f6ff3aa3fb, type: 3}
-  eurobeat: []
+  eurobeat:
+  - {fileID: 8300000, guid: 936624c30a584fb43bb9b6821b60755e, type: 3}
 --- !u!114 &3478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103334,6 +103346,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f6a59e9b3380a24bb4aecad09146953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &259912541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259912542}
+  - component: {fileID: 259912543}
+  m_Layer: 0
+  m_Name: SaveData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &259912542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259912541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1064}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259912543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259912541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4968c3a8016b8dc48a93e69ae700c27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1014786335

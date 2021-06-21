@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -58,7 +59,7 @@ public class UseInventory : MonoBehaviour
 		this.renderTransform.localRotation = Quaternion.Euler(item.rotationOffset);
 		this.renderTransform.localScale = Vector3.one * item.scale;
 		this.renderTransform.localPosition = item.positionOffset;
-		this.meshRenderer.material = item.material;
+		this.meshRenderer.materials = new Material[item.mats].Select(_ => item.material).ToArray();
 		this.meshFilter.mesh = item.mesh;
 		this.hitBox.transform.parent.localScale = item.attackRange;
 		this.animator.SetFloat("AttackSpeed", this.currentItem.attackSpeed);

@@ -77,6 +77,7 @@ public class Hotbar : MonoBehaviour
 			this.cells[j].itemImage.sprite = this.inventoryCells[j].itemImage.sprite;
 			this.cells[j].itemImage.color = this.inventoryCells[j].itemImage.color;
 			this.cells[j].amount.text = this.inventoryCells[j].amount.text;
+			cells[j].itemImage.preserveAspect = true;
 		}
 	}
 

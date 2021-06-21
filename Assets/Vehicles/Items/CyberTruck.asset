@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Name: CyberTruck
+  m_EditorClassIdentifier: 
+  id: 136
+  name: CyberTruck
+  description: car go vroom zoom skrrrt
+  type: 10
+  tier: 0
+  sprite: {fileID: 21300000, guid: 807d3108671f82843b2daec5edf2688d, type: 3}
+  material: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  mesh: {fileID: 4300000, guid: 7adc65a2b3f4d384a90934cb33337499, type: 2}
+  mats: 6
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 0.5
+  stackable: 0
+  amount: 0
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: f204210d6d52e104690dfc917fe07905, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 2b48370d06123dc4dbb01159cb7cb03f, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: f4ded49973b5db248b6151b4fb88eb8d, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: f6f7ca6ef29946a4b915031c1d60888d, type: 2}
+    amount: 40
+  - item: {fileID: 11400000, guid: 3e9e2eb534661244bbe3551c99bef63b, type: 2}
+    amount: 1
+  craftAmount: 1
+  stationRequirement: {fileID: 0}
+  buildable: 1
+  grid: 0
+  prefab: {fileID: 1204102606129460, guid: 4681095e10c4461499a7d43325b2e04d, type: 3}
+  buildRotation: {x: 0, y: 180, z: 0}
+  buildOffset: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 

@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 
 public class ChatBox : MonoBehaviour
 {
 
-
+    string saveDir;
 
     public bool typing { get; set; }
 
@@ -20,6 +24,7 @@ public class ChatBox : MonoBehaviour
         ChatBox.Instance = this;
         this.HideChat();
         this.profanity = new List<string>();
+        saveDir = Path.Combine(Application.persistentDataPath, "saves");
         foreach (string input in this.profanityList.text.Split(new char[]
         {
             '\n'
@@ -88,14 +93,14 @@ public class ChatBox : MonoBehaviour
     public new void SendMessage(string message)
     {
         this.typing = false;
-        message = this.TrimMessage(message);
-        if (message == "")
-        {
-            return;
-        }
         if (message[0] == '/')
         {
             this.ChatCommand(message);
+            return;
+        }
+        message = this.TrimMessage(message);
+        if (message == "")
+        {
             return;
         }
         foreach (string pattern in this.profanity)
@@ -145,6 +150,116 @@ public class ChatBox : MonoBehaviour
         {
             PlayerStatus.Instance.Damage(0, true);
         }
+        else if (command.StartsWith("save "))
+        {
+            command = command.Substring(5);
+            if (command == "") return;
+            if (!Directory.Exists(saveDir)) Directory.CreateDirectory(saveDir);
+            var path = Path.Combine(saveDir, command);
+            using (var file = File.Open(path, FileMode.OpenOrCreate))
+            {
+                file.SetLength(0);
+                using (var writer = new BinaryWriter(file))
+                {
+                    SaveData.Instance.ToBinary(writer);
+                }
+            }
+            AppendMessage(-1, $"<color=green>Successfully saved the game<color=white>", "");
+        }
+        else if (command.StartsWith("asciisave "))
+        {
+            command = command.Substring(10);
+            if (command == "") return;
+            if (!Directory.Exists(saveDir)) Directory.CreateDirectory(saveDir);
+            var path = Path.Combine(saveDir, command);
+            using (var file = File.Open(path, FileMode.OpenOrCreate))
+            {
+                file.SetLength(0);
+                using (var writer = new StreamWriter(file))
+                {
+                    SaveData.Instance.ToASCII(writer);
+                }
+            }
+            AppendMessage(-1, $"<color=green>Successfully saved the game<color=white>", "");
+        }
+        else if (command.StartsWith("load"))
+        {
+            if (!LocalClient.serverOwner)
+            {
+                AppendMessage(-1, $"<color={text}>Only the server host can load saves<color=white>", "");
+                return;
+            }
+
+            if (SaveData.Instance.save.Count != 0)
+            {
+                AppendMessage(-1, $"<color={text}>Cannot load a save after the world has been modified<color=white>", "");
+                return;
+            }
+            command = command.Substring(4);
+            int offset;
+            switch (command[0])
+            {
+                case ' ':
+                    command = command.Substring(1);
+                    offset = 0;
+                    break;
+                case '+':
+                case '-':
+                    offset = int.Parse(command.Substring(0, command.IndexOf(' ') + 1));
+                    command = command.Substring(command.IndexOf(' ') + 1);
+                    break;
+                default:
+                    return;
+            }
+            if (command == "") return;
+            var path = Path.Combine(Application.persistentDataPath, "saves", command);
+            try
+            {
+
+                using (var file = File.Open(path, FileMode.Open))
+                {
+                    try
+                    {
+
+                        if (SaveData.Instance.Read(file))
+                        {
+                            if (offset > 0)
+                            {
+                                SaveData.Instance.save = SaveData.Instance.save.Take(offset).ToList();
+                            }
+                            else if (offset < 0)
+                            {
+                                SaveData.Instance.save = SaveData.Instance.save.Take(SaveData.Instance.save.Count + offset).ToList();
+                            }
+                            SaveData.Instance.ExecuteSave();
+                            ServerSend.LoadSave();
+                        }
+                        else
+                        {
+                            AppendMessage(-1, $"<color={text}>The seed of the save file does not match the world seed<color=white>", "");
+                            return;
+                        }
+                    }
+                    catch
+                    {
+                        AppendMessage(-1, $"<color={text}>Bad file format<color=white>", "");
+                    }
+                }
+            }
+            catch
+            {
+                AppendMessage(-1, $"<color={text}>There was an error reading the file<color=white>", "");
+            }
+        }
+        else if (command.StartsWith("autosave "))
+        {
+            command = command.Substring(9);
+            var mins = float.Parse(command.Substring(0, command.IndexOf(' ') + 1));
+            command = command.Substring(command.IndexOf(' ') + 1);
+            if (command == "") return;
+            if (!Directory.Exists(saveDir)) Directory.CreateDirectory(saveDir);
+            SaveData.Instance.AutoSave(mins, Path.Combine(saveDir, command));
+        }
         else if (command.StartsWith("give "))
         {
             command = command.Substring(5);
@@ -183,6 +298,66 @@ public class ChatBox : MonoBehaviour
             if (id >= ItemManager.Instance.allPowerups.Count) return;
 
             PowerupInventory.Instance.AddPowerup(id, amount);
+        }
+        else if (command.StartsWith("bulk "))
+        {
+            foreach (var cmd in command.Substring(5).Split(';'))
+            {
+                try
+                {
+                    ChatCommand($"/{cmd}");
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError(ex);
+                }
+            }
+        }
+        else if (command == "saveinventory")
+        {
+            var commands = new List<string>();
+            foreach (var cell in InventoryUI.Instance.allCells)
+            {
+                if (cell.currentItem != null)
+                {
+                    commands.Add($"give {cell.currentItem.id} {cell.currentItem.amount}");
+                }
+            }
+            foreach (var powerup in ItemManager.Instance.allPowerups.Values)
+            {
+                var amount = PowerupInventory.Instance.GetAmount(powerup.name);
+                if (amount != 0) commands.Add($"powerup {powerup.id} {amount}");
+            }
+            GUIUtility.systemCopyBuffer = $"/bulk {string.Join(";", commands)}";
+            AppendMessage(-1, $"<color={text}>Copied inventory command to clipboard<color=white>", "");
+        }
+        else if (command == "clearinventory")
+        {
+            foreach (var item in InventoryUI.Instance.allCells)
+            {
+                if (item.currentItem != null)
+                {
+                    item.currentItem = null;
+                    item.UpdateCell();
+                }
+            }
+        }
+        else if (command == "clearpowerups")
+        {
+            foreach (var powerup in ItemManager.Instance.allPowerups.Values)
+            {
+                var amount = PowerupInventory.Instance.GetAmount(powerup.name);
+                if (amount != 0) PowerupInventory.Instance.AddPowerup(powerup.id, -amount);
+            }
+        }
+        else if (command == "dontdestroyneighbors")
+        {
+            if (!LocalClient.serverOwner)
+            {
+                AppendMessage(-1, $"<color={text}>Only the server host can enable/disable destroying neighbors<color=white>", "");
+                return;
+            }
+            ServerSend.DontDestroy(!BuildDestruction.dontDestroy);
         }
     }
 

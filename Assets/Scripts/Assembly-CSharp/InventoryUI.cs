@@ -136,6 +136,7 @@ public class InventoryUI : MonoBehaviour
 			this.mouseItemSprite.sprite = this.currentMouseItem.sprite;
 			this.mouseItemSprite.color = Color.white;
 			this.mouseItemText.text = this.currentMouseItem.GetAmount();
+			mouseItemSprite.preserveAspect = true;
 		}
 		else
 		{

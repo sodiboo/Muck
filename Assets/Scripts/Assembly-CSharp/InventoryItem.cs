@@ -16,6 +16,7 @@ public class InventoryItem : ScriptableObject
 		this.stackable = item.stackable;
 		this.material = item.material;
 		this.mesh = item.mesh;
+		this.mats = item.mats;
 		this.id = item.id;
 		this.attackRange = item.attackRange;
 		this.resourceDamage = item.resourceDamage;
@@ -34,6 +35,7 @@ public class InventoryItem : ScriptableObject
 		this.positionOffset = item.positionOffset;
 		this.scale = item.scale;
 		this.buildRotation = item.buildRotation;
+		this.buildOffset = item.buildOffset;
 		this.processable = item.processable;
 		this.processType = item.processType;
 		this.processedItem = item.processedItem;
@@ -117,6 +119,7 @@ public class InventoryItem : ScriptableObject
 
 
 	public Mesh mesh;
+	public int mats = 1;
 
 
 	public Vector3 rotationOffset;
@@ -181,6 +184,7 @@ public class InventoryItem : ScriptableObject
 
 
 	public Vector3 buildRotation;
+	public Vector3 buildOffset;
 
 
 	[Header("Processing")]

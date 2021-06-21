@@ -48,6 +48,19 @@ public class Car : HitableResource
             suspensionForce = 10f * rb.mass;
             suspensionDamping = 4f * rb.mass;
         }
+        antiRoll *= Scale;
+        suspensionLength *= Scale;
+        rb.mass *= Scale;
+        suspensionForce *= Scale;
+        suspensionDamping *= Scale;
+        engineForce *= Scale * 0.75f;
+        restHeight *= Scale;
+        rb.maxAngularVelocity = 7f;
+        foreach (var sus in wheelPositions)
+        {
+            sus.restLength *= Scale;
+            sus.springTravel *= Scale;
+        }
         var componentsInChildren = base.gameObject.GetComponentsInChildren<AntiRoll>();
         for (var i = 0; i < componentsInChildren.Length; i++)
         {
@@ -58,17 +71,11 @@ public class Car : HitableResource
             rb.centerOfMass = centerOfMass.localPosition;
         }
         InitWheels();
-        suspensionLength *= Scale;
-        restHeight *= Scale;
-        foreach (var sus in wheelPositions)
-        {
-            sus.restLength *= Scale;
-            sus.springTravel *= Scale;
-        }
-        if (LocalClient.serverOwner) InvokeRepeating(nameof(QuickUpdate), 1/12f, 1f/12f);
+        if (LocalClient.serverOwner) InvokeRepeating(nameof(QuickUpdate), 1 / 12f, 1f / 12f);
     }
 
-    private void QuickUpdate() {
+    private void QuickUpdate()
+    {
         if (!inUse) ServerSend.UpdateCar(-1, ResourceManager.Instance.cars.First(kp => kp.Value == this).Key, this);
     }
 
@@ -78,6 +85,7 @@ public class Car : HitableResource
         Audio();
         CheckGrounded();
         Steering();
+        OutOfMap();
     }
 
 
@@ -107,8 +115,9 @@ public class Car : HitableResource
             inUse = false;
             OtherInput.Instance.currentCar = null;
             Destroy(target);
+            MusicController.Instance.StopSong();
         };
-        
+
     }
 
 
@@ -308,6 +317,24 @@ public class Car : HitableResource
             {
                 grounded = true;
             }
+        }
+    }
+
+    private DateTime lastRespawn;
+
+    private void OutOfMap()
+    {
+        if (rb.position.y < -195f)
+        {
+            if (lastRespawn != null && lastRespawn + TimeSpan.FromSeconds(15) > DateTime.Now)
+            {
+                rb.position = new Vector3(0f, 200f, 0f);
+            }
+            else
+            {
+                rb.position += new Vector3(0f, 400f, 0f);
+            }
+            lastRespawn = DateTime.Now;
         }
     }
 

@@ -108,7 +108,9 @@ public class LocalClient : MonoBehaviour
 
             { (int)ServerPackets.moveVehicle, ClientHandle.UpdateCar },
             { (int)ServerPackets.enterVehicle, ClientHandle.EnterVehicle },
-			{ (int)ServerPackets.exitVehicle, ClientHandle.ExitVehicle },
+            { (int)ServerPackets.exitVehicle, ClientHandle.ExitVehicle },
+            { (int)ServerPackets.loadSave, ClientHandle.LoadSave },
+            { (int)ServerPackets.dontDestroy, ClientHandle.DontDestroy },
         };
         Debug.Log("Initializing packets.");
     }

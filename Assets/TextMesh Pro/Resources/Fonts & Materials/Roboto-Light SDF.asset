@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Roboto-Light SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 2119065385
   material: {fileID: 2067242036879660443}
-  materialHashCode: 0
+  materialHashCode: -77814423
   m_Version: 1.1.0
   m_SourceFontFileGUID: 08463a7e8c4b39b4d9d1134ec3d79351
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 08463a7e8c4b39b4d9d1134ec3d79351,
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_AtlasTextures:
   - {fileID: 9019465126260649928}
   m_AtlasTextureIndex: 0
+  m_IsMultiAtlasTexturesEnabled: 0
   m_UsedGlyphRects: []
   m_FreeGlyphRects:
   - m_X: 0
@@ -139,7 +140,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Roboto-Light Atlas Material
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_Shader: {fileID: 4800000, guid: dd89cf5b9246416f84610a006f916af7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -180,6 +181,7 @@ Material:
     - _BumpFace: 0
     - _BumpOutline: 0
     - _ColorMask: 15
+    - _CullMode: 0
     - _Diffuse: 0.5
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0

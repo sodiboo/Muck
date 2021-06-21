@@ -32,6 +32,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 			this.amount.text = this.currentItem.GetAmount();
 			this.itemImage.sprite = this.currentItem.sprite;
 			this.itemImage.color = Color.white;
+			itemImage.preserveAspect = true;
 		}
 		this.SetColor(this.idle);
 	}

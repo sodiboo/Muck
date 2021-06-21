@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BuildDestruction : MonoBehaviour
 {
-
+	public static bool dontDestroy;
 	private void Awake()
 	{
 		base.Invoke(nameof(CheckDirectlyGrounded), 2f);
@@ -34,6 +34,7 @@ public class BuildDestruction : MonoBehaviour
 	private void OnDestroy()
 	{
 		this.destroyed = true;
+		if (SaveData.isExecuting || dontDestroy) return;
 		List<BuildDestruction> list = new List<BuildDestruction>();
 		list.Add(this);
 		for (int i = this.otherBuilds.Count - 1; i >= 0; i--)

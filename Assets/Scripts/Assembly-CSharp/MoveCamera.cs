@@ -140,6 +140,7 @@ public class MoveCamera : MonoBehaviour
         }
         Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         this.desiredSpectateRotation += new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+        this.desiredSpectateRotation.x = Mathf.Clamp(desiredSpectateRotation.x, -10f, 100f);
         this.target.position = OtherInput.Instance.currentCar.transform.position;
         this.target.rotation = Quaternion.Lerp(this.target.rotation, Quaternion.Euler(this.desiredSpectateRotation), Time.deltaTime * 10f);
         Vector3 direction = base.transform.position - this.target.position;

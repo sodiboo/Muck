@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
   m_Name: tofu machine
   m_EditorClassIdentifier: 
-  id: 129
+  id: 134
   name: tofu machine
   description: car go vroom zoom skrrrt
   type: 10
   tier: 0
-  sprite: {fileID: 21300000, guid: f2bf632c1c854d343ba1ef2c2de4424d, type: 3}
+  sprite: {fileID: 21300000, guid: 2e389f5f026328f4799a0ac5c662344e, type: 3}
   material: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   mesh: {fileID: 4300000, guid: 12c4ac22694438e48bdf9f1221a84d3f, type: 2}
+  mats: 9
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 0.1
@@ -31,15 +32,30 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: {x: 1, y: 1, z: 1}
   sharpness: 0
-  craftable: 0
+  craftable: 1
   unlockWithFirstRequirementOnly: 0
-  requirements: []
-  craftAmount: 0
+  requirements:
+  - item: {fileID: 11400000, guid: f204210d6d52e104690dfc917fe07905, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 472affb32bfc7fb47a0ea960015bc8f9, type: 2}
+    amount: 30
+  - item: {fileID: 11400000, guid: d4a74070f357277458b20b1a310e9af5, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: f4ded49973b5db248b6151b4fb88eb8d, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: 3e9e2eb534661244bbe3551c99bef63b, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 1a23a12e5f60ced48aee48309ab6afe1, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 36dbe7fb4cb7855458ff6f4d3292f2ba, type: 2}
+    amount: 10
+  craftAmount: 1
   stationRequirement: {fileID: 0}
   buildable: 1
   grid: 0
   prefab: {fileID: 1763291310010154, guid: 8cd7362ab5e35c74ea51ac8f0c7b3ae5, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
+  buildOffset: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
   processedItem: {fileID: 0}

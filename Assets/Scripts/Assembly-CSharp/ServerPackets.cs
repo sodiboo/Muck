@@ -59,4 +59,6 @@
     moveVehicle,
     enterVehicle,
     exitVehicle,
+    loadSave,
+    dontDestroy,
 }

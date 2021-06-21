@@ -54,9 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Roboto-Thin SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -17585012
   material: {fileID: 180402139111488461}
-  materialHashCode: 0
+  materialHashCode: -1894474836
   m_Version: 1.1.0
   m_SourceFontFileGUID: 578427245806a084f8e075138f450bb5
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 578427245806a084f8e075138f450bb5,
@@ -88,6 +88,7 @@ MonoBehaviour:
   m_AtlasTextures:
   - {fileID: -7918863249907480093}
   m_AtlasTextureIndex: 0
+  m_IsMultiAtlasTexturesEnabled: 0
   m_UsedGlyphRects: []
   m_FreeGlyphRects:
   - m_X: 0
@@ -181,7 +182,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Roboto-Thin Atlas Material
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_Shader: {fileID: 4800000, guid: dd89cf5b9246416f84610a006f916af7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -222,6 +223,7 @@ Material:
     - _BumpFace: 0
     - _BumpOutline: 0
     - _ColorMask: 15
+    - _CullMode: 0
     - _Diffuse: 0.5
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0

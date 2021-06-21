@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using UnityEngine;
 
@@ -621,18 +622,19 @@ public class ClientHandle : MonoBehaviour
         car.inUse = true;
         if (fromClient != LocalClient.instance.myId)
         {
-            
+
             GameManager.players[fromClient].GetComponent<Collider>().enabled = false;
             return;
         }
-            MoveCamera.Instance.state = MoveCamera.CameraState.Car;
-            MoveCamera.Instance.gunCamera.enabled = false;
-            PlayerMovement.Instance.GetPlayerCollider().enabled = false;
-            PlayerMovement.Instance.GetRb().isKinematic = true;
-            Hotbar.Instance.gameObject.SetActive(false);
-            OtherInput.Instance.currentCar = car;
-            if (Map.Instance.active) Map.Instance.ToggleMap();
-            if (InventoryUI.Instance.backDrop.activeInHierarchy) InventoryUI.Instance.ToggleInventory();
+        MoveCamera.Instance.state = MoveCamera.CameraState.Car;
+        MoveCamera.Instance.gunCamera.enabled = false;
+        PlayerMovement.Instance.GetPlayerCollider().enabled = false;
+        PlayerMovement.Instance.GetRb().isKinematic = true;
+        Hotbar.Instance.gameObject.SetActive(false);
+        OtherInput.Instance.currentCar = car;
+        if (Map.Instance.active) Map.Instance.ToggleMap();
+        if (InventoryUI.Instance.backDrop.activeInHierarchy) InventoryUI.Instance.ToggleInventory();
+        MusicController.Instance.PlaySong(MusicController.SongType.Eurobeat);
     }
 
     public static void UpdateCar(Packet packet)
@@ -667,7 +669,8 @@ public class ClientHandle : MonoBehaviour
         car.breaking = true;
         car.throttle = 0f;
         car.steering = 0f;
-        if (fromClient != LocalClient.instance.myId) {
+        if (fromClient != LocalClient.instance.myId)
+        {
             GameManager.players[fromClient].GetComponent<Collider>().enabled = true;
             return;
         }
@@ -680,5 +683,25 @@ public class ClientHandle : MonoBehaviour
         Hotbar.Instance.gameObject.SetActive(true);
         OtherInput.Instance.currentCar = null;
         Destroy(target);
+        MusicController.Instance.StopSong();
+    }
+
+    public static void LoadSave(Packet packet)
+    {
+        SaveData.Instance.ReadPacket(packet);
+        SaveData.Instance.ExecuteSave();
+    }
+
+    public static void DontDestroy(Packet packet)
+    {
+        BuildDestruction.dontDestroy = packet.ReadBool();
+        if (BuildDestruction.dontDestroy)
+        {
+            ChatBox.Instance.AppendMessage(-1, $"<color=#{ColorUtility.ToHtmlStringRGB(Color.cyan)}>Breaking structures will no longer destroy their neighbors<color=white>", "");
+        }
+        else
+        {
+            ChatBox.Instance.AppendMessage(-1, $"<color=#{ColorUtility.ToHtmlStringRGB(Color.cyan)}>Breaking structures will now destroy their neighbors<color=white>", "");
+        }
     }
 }

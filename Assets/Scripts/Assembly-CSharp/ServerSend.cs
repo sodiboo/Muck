@@ -832,6 +832,20 @@ public class ServerSend
         }
     }
 
+    public static void LoadSave() {
+        using (var packet = new Packet((int)ServerPackets.loadSave)) {
+            SaveData.Instance.ToPacket(packet);
+            ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
+        }
+    }
+
+    public static void DontDestroy(bool value) {
+        using (var packet = new Packet((int)ServerPackets.dontDestroy)) {
+            packet.Write(value);
+            ServerSend.SendTCPDataToAll(packet);
+        }
+    }
+
     private static P2PSend TCPvariant = P2PSend.Reliable;
 
 

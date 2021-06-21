@@ -13,7 +13,7 @@ public class MusicController : MonoBehaviour
 
     private void Start()
     {
-        this.targetVolume = CurrentSettings.Instance.music;
+        this.targetVolume = SaveManager.Instance.state.music;
     }
 
 
@@ -31,6 +31,7 @@ public class MusicController : MonoBehaviour
         {
             return;
         }
+        if (this.currentSong == SongType.Eurobeat && OtherInput.Instance.currentCar != null) return;
         this.currentSong = s;
         switch (s)
         {
@@ -85,6 +86,7 @@ public class MusicController : MonoBehaviour
     public void StopSong()
     {
         this.StartFade(this.audio, this.fadeTime, 0f);
+        currentSong = default;
     }
 
 

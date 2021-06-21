@@ -30,7 +30,7 @@ public class CarInteract : MonoBehaviour, Interactable
 
 
     public string GetName() {
-        if (!car.inUse) return "";
+        if (car.inUse) return "";
         return "Enter Vehicle";
     }
 
