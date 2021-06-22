@@ -107,8 +107,11 @@ public class HitableResource : Hitable
 
     private void Update()
     {
-		if (!ResourceManager.Instance.list.ContainsKey(id)) Destroy(gameObject);
-		else if (ResourceManager.Instance.list[id] != gameObject) Destroy(gameObject);
+        if (ResourceManager.Instance != null)
+        {
+            if (!ResourceManager.Instance.list.ContainsKey(id)) Destroy(gameObject);
+            else if (ResourceManager.Instance.list[id] != gameObject) Destroy(gameObject);
+        }
         if (this.dontScale)
         {
             return;

@@ -97,7 +97,7 @@ public class PlayerInput : MonoBehaviour
 		if (!this.playerMovement) return;
 		this.jumping = Input.GetKey(InputManager.jump);
 		this.sprinting = Input.GetKey(InputManager.sprint);
-		this.crouching = Input.GetKey(KeyCode.LeftControl);
+		this.crouching = Input.GetKey(InputManager.crouch);
 		this.mouseScroll = Input.mouseScrollDelta.y;
 		if (Input.GetKeyDown(InputManager.jump))
 		{

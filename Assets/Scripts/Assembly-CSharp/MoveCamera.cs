@@ -36,9 +36,10 @@ public class MoveCamera : MonoBehaviour
         {
             this.SpectateCamera();
         }
-		if (this.state == MoveCamera.CameraState.Car) {
-			this.CarCamera();
-		}
+        if (this.state == MoveCamera.CameraState.Car)
+        {
+            this.CarCamera();
+        }
     }
 
 
@@ -102,7 +103,15 @@ public class MoveCamera : MonoBehaviour
             }
         }
         Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        this.desiredSpectateRotation += new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+        var diff = new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+        if (CurrentSettings.invertedCar)
+        {
+            desiredSpectateRotation += diff;
+        }
+        else
+        {
+            desiredSpectateRotation -= diff;
+        }
         if (Input.GetKeyDown(InputManager.rightClick))
         {
             this.SpectateToggle(1);
@@ -139,7 +148,15 @@ public class MoveCamera : MonoBehaviour
             base.transform.localPosition = new Vector3(0f, 0f, -10f);
         }
         Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        this.desiredSpectateRotation += new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+        var diff = new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+        if (CurrentSettings.invertedCar)
+        {
+            desiredSpectateRotation += diff;
+        }
+        else
+        {
+            desiredSpectateRotation -= diff;
+        }
         this.desiredSpectateRotation.x = Mathf.Clamp(desiredSpectateRotation.x, -10f, 100f);
         this.target.position = OtherInput.Instance.currentCar.transform.position;
         this.target.rotation = Quaternion.Lerp(this.target.rotation, Quaternion.Euler(this.desiredSpectateRotation), Time.deltaTime * 10f);
@@ -345,6 +362,6 @@ public class MoveCamera : MonoBehaviour
         PlayerDeath,
 
         Spectate,
-		Car,
+        Car,
     }
 }
