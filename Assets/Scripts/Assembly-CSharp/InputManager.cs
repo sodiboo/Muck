@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
         InputManager.right = SaveManager.Instance.state.right;
         InputManager.jump = SaveManager.Instance.state.jump;
         InputManager.sprint = SaveManager.Instance.state.sprint;
+        InputManager.crouch = SaveManager.Instance.state.crouch;
         InputManager.interact = SaveManager.Instance.state.interact;
         InputManager.inventory = SaveManager.Instance.state.inventory;
         InputManager.map = SaveManager.Instance.state.map;

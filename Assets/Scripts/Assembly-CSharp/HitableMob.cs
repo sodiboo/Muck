@@ -21,6 +21,7 @@ public class HitableMob : Hitable
 
 	public override void Hit(int damage, float sharpness, int hitEffect, Vector3 hitPos)
 	{
+		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) damage = int.MaxValue;
 		ClientSend.PlayerDamageMob(this.id, damage, sharpness, hitEffect, hitPos);
 	}
 

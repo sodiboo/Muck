@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class StatusUI : MonoBehaviour
 {
+	public void Awake() {
+		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) gameObject.SetActive(false);
+	}
 
 	private void Start()
 	{

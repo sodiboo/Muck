@@ -138,6 +138,8 @@ public class MoveCamera : MonoBehaviour
         base.transform.localPosition = new Vector3(0f, 0f, -10f + num);
     }
 
+    float carAngle = 0f;
+
     private void CarCamera()
     {
         if (!this.target)
@@ -149,15 +151,27 @@ public class MoveCamera : MonoBehaviour
         }
         Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         var diff = new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+        carAngle = Mathf.Lerp(carAngle, Vector3.Angle(OtherInput.Instance.currentCar.transform.forward, Vector3.Scale(OtherInput.Instance.currentCar.transform.forward, new Vector3(1, 0, 1))), Time.deltaTime);
+        var minAngle = Mathf.Clamp(-carAngle - 10f, -100f, -10f);
         if (CurrentSettings.invertedCar)
         {
+        if (desiredSpectateRotation.x <= minAngle && diff.x < 0f) {
+            diff.x = 0f;
+        }
             desiredSpectateRotation += diff;
         }
         else
         {
+        if (desiredSpectateRotation.x <= minAngle && diff.x > 0f) {
+            diff.x = 0f;
+        }
             desiredSpectateRotation -= diff;
         }
-        this.desiredSpectateRotation.x = Mathf.Clamp(desiredSpectateRotation.x, -10f, 100f);
+        this.desiredSpectateRotation.x = Mathf.Clamp(desiredSpectateRotation.x, minAngle, 100f);
+        var actualRotation = desiredSpectateRotation;
+        if (desiredSpectateRotation.x < 0) {
+            } else if (desiredSpectateRotation.x > 90) {
+        }
         this.target.position = OtherInput.Instance.currentCar.transform.position;
         this.target.rotation = Quaternion.Lerp(this.target.rotation, Quaternion.Euler(this.desiredSpectateRotation), Time.deltaTime * 10f);
         Vector3 direction = base.transform.position - this.target.position;

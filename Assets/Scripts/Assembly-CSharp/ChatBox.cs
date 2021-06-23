@@ -89,9 +89,12 @@ public class ChatBox : MonoBehaviour
         }
     }
 
+    List<string> messageHistory = new List<string>();
+    int selectedMessage = -1;
 
     public new void SendMessage(string message)
     {
+        messageHistory.Insert(0, message);
         this.typing = false;
         if (message[0] == '/')
         {
@@ -260,7 +263,40 @@ public class ChatBox : MonoBehaviour
             if (!Directory.Exists(saveDir)) Directory.CreateDirectory(saveDir);
             SaveData.Instance.AutoSave(mins, Path.Combine(saveDir, command));
         }
-        else if (command.StartsWith("give "))
+        else if (command.StartsWith("bulk "))
+        {
+            foreach (var cmd in command.Substring(5).Split(';'))
+            {
+                try
+                {
+                    ChatCommand($"/{cmd}");
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError(ex);
+                }
+            }
+        }
+        else if (command == "saveinventory")
+        {
+            var commands = new List<string>();
+            foreach (var cell in InventoryUI.Instance.allCells)
+            {
+                if (cell.currentItem != null)
+                {
+                    commands.Add($"give {cell.currentItem.id} {cell.currentItem.amount}");
+                }
+            }
+            foreach (var powerup in ItemManager.Instance.allPowerups.Values)
+            {
+                var amount = PowerupInventory.Instance.GetAmount(powerup.name);
+                if (amount != 0) commands.Add($"powerup {powerup.id} {amount}");
+            }
+            GUIUtility.systemCopyBuffer = $"/bulk {string.Join(";", commands)}";
+            AppendMessage(-1, $"<color={text}>Copied inventory command to clipboard<color=white>", "");
+        }
+        else if (GameManager.gameSettings.gameMode != GameSettings.GameMode.Creative) return;
+        if (command.StartsWith("give "))
         {
             command = command.Substring(5);
             int id;
@@ -299,38 +335,6 @@ public class ChatBox : MonoBehaviour
 
             PowerupInventory.Instance.AddPowerup(id, amount);
         }
-        else if (command.StartsWith("bulk "))
-        {
-            foreach (var cmd in command.Substring(5).Split(';'))
-            {
-                try
-                {
-                    ChatCommand($"/{cmd}");
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError(ex);
-                }
-            }
-        }
-        else if (command == "saveinventory")
-        {
-            var commands = new List<string>();
-            foreach (var cell in InventoryUI.Instance.allCells)
-            {
-                if (cell.currentItem != null)
-                {
-                    commands.Add($"give {cell.currentItem.id} {cell.currentItem.amount}");
-                }
-            }
-            foreach (var powerup in ItemManager.Instance.allPowerups.Values)
-            {
-                var amount = PowerupInventory.Instance.GetAmount(powerup.name);
-                if (amount != 0) commands.Add($"powerup {powerup.id} {amount}");
-            }
-            GUIUtility.systemCopyBuffer = $"/bulk {string.Join(";", commands)}";
-            AppendMessage(-1, $"<color={text}>Copied inventory command to clipboard<color=white>", "");
-        }
         else if (command == "clearinventory")
         {
             foreach (var item in InventoryUI.Instance.allCells)
@@ -350,7 +354,7 @@ public class ChatBox : MonoBehaviour
                 if (amount != 0) PowerupInventory.Instance.AddPowerup(powerup.id, -amount);
             }
         }
-        else if (command == "dontdestroyneighbors")
+        else if (command == "dontdestroyneighbors" || command == "dontdestroyneighbours" || command == "ddn")
         {
             if (!LocalClient.serverOwner)
             {
@@ -358,6 +362,17 @@ public class ChatBox : MonoBehaviour
                 return;
             }
             ServerSend.DontDestroy(!BuildDestruction.dontDestroy);
+        }
+        else if (command == "noclip")
+        {
+            if (PlayerMovement.Instance.noclip = !PlayerMovement.Instance.noclip)
+            {
+                AppendMessage(-1, $"<color={text}>Enabled noclip<color=white>", "");
+            }
+            else
+            {
+                AppendMessage(-1, $"<color={text}>Disabled noclip<color=white>", "");
+            }
         }
     }
 
@@ -388,16 +403,39 @@ public class ChatBox : MonoBehaviour
                 this.typing = true;
             }
         }
-        if (this.typing && !this.inputField.isFocused)
+        if (this.typing)
         {
-            this.inputField.Select();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && this.typing)
-        {
-            this.ClearMessage();
-            this.typing = false;
-            base.CancelInvoke(nameof(HideChat));
-            base.Invoke(nameof(HideChat), 5f);
+            if (!this.inputField.isFocused) this.inputField.Select();
+
+            var prevMsg = selectedMessage;
+
+            if (selectedMessage >= 0 && inputField.text != messageHistory[selectedMessage]) selectedMessage = -1;
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                selectedMessage++;
+            }
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                selectedMessage--;
+            }
+
+            if (selectedMessage >= messageHistory.Count) selectedMessage = messageHistory.Count - 1;
+            if (selectedMessage < 0) selectedMessage = -1;
+
+            if (selectedMessage != -1 && selectedMessage != prevMsg)
+            {
+                inputField.text = messageHistory[selectedMessage];
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                this.ClearMessage();
+                this.typing = false;
+                base.CancelInvoke(nameof(HideChat));
+                base.Invoke(nameof(HideChat), 5f);
+            }
         }
     }
 

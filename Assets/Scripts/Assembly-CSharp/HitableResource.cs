@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Authentication;
 using UnityEngine;
 
 
@@ -16,6 +17,7 @@ public class HitableResource : Hitable
     {
         if (damage > 0)
         {
+            if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) damage = int.MaxValue;
             ClientSend.PlayerHitObject(damage, this.id, hitEffect, pos);
             return;
         }
@@ -105,7 +107,7 @@ public class HitableResource : Hitable
     }
 
 
-    private void Update()
+    protected void Update()
     {
         if (ResourceManager.Instance != null)
         {

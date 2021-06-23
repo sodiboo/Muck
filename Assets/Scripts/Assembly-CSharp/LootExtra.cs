@@ -8,6 +8,7 @@ public class LootExtra : MonoBehaviour
 
 	public static void CheckDrop(int fromClient, HitableResource hitable)
 	{
+		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return;
 		if (hitable.dropTable == null)
 		{
 			return;

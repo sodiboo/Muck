@@ -10,6 +10,7 @@ public class BuildManager : MonoBehaviour
     private void Awake()
     {
         BuildManager.Instance = this;
+		BuildDestruction.dontDestroy = GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative;
         this.filter = this.ghostItem.GetComponent<MeshFilter>();
         this.renderer = this.ghostItem.GetComponent<Renderer>();
     }

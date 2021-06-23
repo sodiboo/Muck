@@ -1,12 +1,11 @@
-﻿using System;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 public class MobZone : SpawnZone
 {
 
 	public override void ServerSpawnEntity()
 	{
+		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return;
 		MonoBehaviour.print("spawning mob from id: " + this.id);
 		MonoBehaviour.print("queue: " + this.entityQueue);
 		Vector3 vector = base.FindRandomPos();

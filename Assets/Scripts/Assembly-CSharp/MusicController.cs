@@ -32,7 +32,6 @@ public class MusicController : MonoBehaviour
             return;
         }
         if (this.currentSong == SongType.Eurobeat && OtherInput.Instance.currentCar != null) return;
-        this.currentSong = s;
         switch (s)
         {
             case SongType.Day:
@@ -49,8 +48,14 @@ public class MusicController : MonoBehaviour
                 break;
             case SongType.Eurobeat:
                 audioClip = this.eurobeat[Random.Range(0, this.eurobeat.Length)];
+                if (currentSong == default && desiredVolume * startVolume != audio.volume && audio.clip == audioClip) {
+                    StartFade(audio, currentTime * fadeTime, targetVolume);
+                    currentSong = SongType.Eurobeat;
+                    return;
+                }
                 break;
         }
+        this.currentSong = s;
         if (audioClip == null)
         {
             this.StartFade(this.audio, this.fadeTime, 0f);

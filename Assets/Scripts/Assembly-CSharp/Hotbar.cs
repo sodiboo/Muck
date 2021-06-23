@@ -99,6 +99,7 @@ public class Hotbar : MonoBehaviour
 
 	public void UseItem(int n)
 	{
+		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return;
 		this.currentItem.amount -= n;
 		if (this.currentItem.amount <= 0)
 		{

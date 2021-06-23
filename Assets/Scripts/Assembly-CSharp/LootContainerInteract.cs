@@ -34,7 +34,7 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 
 	public void Interact()
 	{
-		if (InventoryUI.Instance.GetMoney() < this.price)
+		if (GameManager.gameSettings.gameMode != GameSettings.GameMode.Creative && InventoryUI.Instance.GetMoney() < this.price)
 		{
 			return;
 		}
@@ -100,7 +100,7 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 	public string GetName()
 	{
 		this.price = (int)((float)this.basePrice * GameManager.instance.ChestPriceMultiplier());
-		if (this.price < 1)
+		if (this.price < 1 || GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative)
 		{
 			return "Open chest";
 		}
