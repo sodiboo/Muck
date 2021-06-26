@@ -270,7 +270,7 @@ public class InventoryItem : ScriptableObject
 
 		Cook,
 
-		None
+		None,
 	}
 
 
@@ -296,7 +296,9 @@ public class InventoryItem : ScriptableObject
 
 		Arrow,
 
-		Armor
+		Armor,
+		Trigger,
+		Precision,
 	}
 
 
@@ -307,7 +309,7 @@ public class InventoryItem : ScriptableObject
 
 		Uncommon,
 
-		Rare
+		Rare,
 	}
 
 

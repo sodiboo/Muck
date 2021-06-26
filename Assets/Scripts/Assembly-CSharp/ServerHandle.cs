@@ -418,20 +418,20 @@ public class ServerHandle
         {
             return;
         }
-        int num = packet.ReadInt(true);
-        Vector3 vector = packet.ReadVector3(true);
-        int num2 = packet.ReadInt(true);
-        int num3;
-        if (ItemManager.Instance.allItems[num].type == InventoryItem.ItemType.Storage)
+        int itemId = packet.ReadInt(true);
+        Vector3 pos = packet.ReadVector3(true);
+        Quaternion rot = packet.ReadQuaternion(true);
+        int objectId;
+        if (ItemManager.Instance.allItems[itemId].type == InventoryItem.ItemType.Storage)
         {
-            num3 = ResourceManager.Instance.GetNextId();
+            objectId = ResourceManager.Instance.GetNextId();
         }
         else
         {
-            num3 = BuildManager.Instance.GetNextBuildId();
+            objectId = BuildManager.Instance.GetNextBuildId();
         }
-        BuildManager.Instance.BuildItem(fromClient, num, num3, vector, num2);
-        ServerSend.SendBuild(fromClient, num, num3, vector, num2);
+        BuildManager.Instance.BuildItem(fromClient, itemId, objectId, pos, rot);
+        ServerSend.SendBuild(fromClient, itemId, objectId, pos, rot);
     }
 
 

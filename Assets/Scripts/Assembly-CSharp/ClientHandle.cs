@@ -206,9 +206,8 @@ public class ClientHandle : MonoBehaviour
         int itemID = packet.ReadInt(true);
         int objectId = packet.ReadInt(true);
         Vector3 position = packet.ReadVector3(true);
-        int yRotation = packet.ReadInt(true);
-        MonoBehaviour.print($"Received build #{objectId}, now building {ItemManager.Instance.allItems[itemID].name} @ {position} (rotated {yRotation})");
-        BuildManager.Instance.BuildItem(buildOwner, itemID, objectId, position, yRotation);
+        Quaternion rotation = packet.ReadQuaternion(true);
+        BuildManager.Instance.BuildItem(buildOwner, itemID, objectId, position, rotation);
     }
 
 

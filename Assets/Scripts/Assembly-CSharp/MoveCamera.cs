@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 
@@ -25,12 +26,10 @@ public class MoveCamera : MonoBehaviour
         if (this.state == MoveCamera.CameraState.Player)
         {
             this.PlayerCamera();
-            return;
         }
         if (this.state == MoveCamera.CameraState.PlayerDeath)
         {
             this.PlayerDeathCamera();
-            return;
         }
         if (this.state == MoveCamera.CameraState.Spectate)
         {
@@ -39,6 +38,8 @@ public class MoveCamera : MonoBehaviour
         if (this.state == MoveCamera.CameraState.Car)
         {
             this.CarCamera();
+        } else {
+            wasFirstPerson = false;
         }
     }
 
@@ -103,15 +104,10 @@ public class MoveCamera : MonoBehaviour
             }
         }
         Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        if (CurrentSettings.invertedCar.x) vector.x = -vector.x;
+        if (CurrentSettings.invertedCar.y) vector.y = -vector.y;
         var diff = new Vector3(-vector.y, vector.x, 0f) * 1.5f;
-        if (CurrentSettings.invertedCar)
-        {
-            desiredSpectateRotation += diff;
-        }
-        else
-        {
-            desiredSpectateRotation -= diff;
-        }
+        desiredSpectateRotation -= diff;
         if (Input.GetKeyDown(InputManager.rightClick))
         {
             this.SpectateToggle(1);
@@ -140,6 +136,8 @@ public class MoveCamera : MonoBehaviour
 
     float carAngle = 0f;
 
+    bool wasFirstPerson;
+
     private void CarCamera()
     {
         if (!this.target)
@@ -149,45 +147,57 @@ public class MoveCamera : MonoBehaviour
             base.transform.localRotation = Quaternion.identity;
             base.transform.localPosition = new Vector3(0f, 0f, -10f);
         }
-        Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        var diff = new Vector3(-vector.y, vector.x, 0f) * 1.5f;
-        carAngle = Mathf.Lerp(carAngle, Vector3.Angle(OtherInput.Instance.currentCar.transform.forward, Vector3.Scale(OtherInput.Instance.currentCar.transform.forward, new Vector3(1, 0, 1))), Time.deltaTime);
-        var minAngle = Mathf.Clamp(-carAngle - 10f, -100f, -10f);
-        if (CurrentSettings.invertedCar)
+        var car = OtherInput.Instance.currentCar;
+        var isFirstPerson = car.fpTriggers.Any();
+        if (isFirstPerson)
         {
-        if (desiredSpectateRotation.x <= minAngle && diff.x < 0f) {
-            diff.x = 0f;
-        }
-            desiredSpectateRotation += diff;
+            if (!wasFirstPerson)
+            {
+                target.SetParent(car.transform);
+                transform.localPosition = Vector3.zero;
+            }
+            target.localPosition = Vector3.Lerp(target.localPosition, new Vector3(0f, car.firstPersonHeight, car.firstPersonDistance), Time.deltaTime * 10f);
+            target.localRotation = Quaternion.Lerp(target.localRotation, Quaternion.identity, Time.deltaTime * 10f);
         }
         else
         {
-        if (desiredSpectateRotation.x <= minAngle && diff.x > 0f) {
-            diff.x = 0f;
-        }
+            if (wasFirstPerson)
+            {
+                target.SetParent(null);
+                transform.localRotation = Quaternion.identity;
+            }
+            Vector2 vector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            if (CurrentSettings.invertedCar.x) vector.x = -vector.x;
+            if (CurrentSettings.invertedCar.y) vector.y = -vector.y;
+            var diff = new Vector3(-vector.y, vector.x, 0f) * 1.5f;
+            carAngle = Mathf.Lerp(carAngle, Vector3.Angle(car.transform.forward, Vector3.Scale(car.transform.forward, new Vector3(1, 0, 1))), Time.deltaTime);
+            var minAngle = Mathf.Clamp(-carAngle - 10f, -100f, -10f);
+
+            if (desiredSpectateRotation.x <= minAngle && diff.x > 0f)
+            {
+                diff.x = 0f;
+            }
             desiredSpectateRotation -= diff;
+
+            this.desiredSpectateRotation.x = Mathf.Clamp(desiredSpectateRotation.x, minAngle, 100f);
+            this.target.position = car.transform.position;
+            this.target.rotation = Quaternion.Lerp(this.target.rotation, Quaternion.Euler(this.desiredSpectateRotation), Time.deltaTime * 10f);
+            Vector3 direction = base.transform.position - this.target.position;
+            RaycastHit raycastHit;
+            float num;
+            if (Physics.Raycast(this.target.position, direction, out raycastHit, 10f, this.whatIsGround))
+            {
+                Debug.DrawLine(this.target.position, raycastHit.point);
+                num = 10f - raycastHit.distance + 0.8f;
+                num = Mathf.Clamp(num, 0f, 10f);
+            }
+            else
+            {
+                num = 0f;
+            }
+            base.transform.localPosition = new Vector3(0f, 0f, -10f + num);
         }
-        this.desiredSpectateRotation.x = Mathf.Clamp(desiredSpectateRotation.x, minAngle, 100f);
-        var actualRotation = desiredSpectateRotation;
-        if (desiredSpectateRotation.x < 0) {
-            } else if (desiredSpectateRotation.x > 90) {
-        }
-        this.target.position = OtherInput.Instance.currentCar.transform.position;
-        this.target.rotation = Quaternion.Lerp(this.target.rotation, Quaternion.Euler(this.desiredSpectateRotation), Time.deltaTime * 10f);
-        Vector3 direction = base.transform.position - this.target.position;
-        RaycastHit raycastHit;
-        float num;
-        if (Physics.Raycast(this.target.position, direction, out raycastHit, 10f, this.whatIsGround))
-        {
-            Debug.DrawLine(this.target.position, raycastHit.point);
-            num = 10f - raycastHit.distance + 0.8f;
-            num = Mathf.Clamp(num, 0f, 10f);
-        }
-        else
-        {
-            num = 0f;
-        }
-        base.transform.localPosition = new Vector3(0f, 0f, -10f + num);
+        wasFirstPerson = isFirstPerson;
     }
 
 
@@ -239,6 +249,7 @@ public class MoveCamera : MonoBehaviour
         {
             return;
         }
+
         Vector3 cameraRot = this.playerInput.cameraRot;
         cameraRot.x = Mathf.Clamp(cameraRot.x, -90f, 90f);
         base.transform.rotation = Quaternion.Euler(cameraRot);

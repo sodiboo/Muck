@@ -18,6 +18,7 @@ public class Hotbar : MonoBehaviour
 
 	private void Update()
 	{
+		if (OtherInput.Instance.OtherUiActive()) return;
 		for (int i = 1; i < 8; i++)
 		{
 			if (Input.GetButtonDown("Hotbar" + i))

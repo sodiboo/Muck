@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -23,14 +24,21 @@ public class PlayerSave
 
     public float sensMultiplier = 1f;
 
-    public bool invertedCar = true;
-    public bool invertedMouse;
+    public bool invertedCarX = true;
+    public bool invertedCarY = true;
+    public bool invertedMouseX = false;
+    public bool invertedMouseY = false;
+    public bool invertedRotateX = true;
+    public bool invertedRotateY = true;
 
 
     public bool grass = true;
 
 
     public bool tutorial = true;
+
+
+    public bool disableBuildFx = false;
 
 
     public KeyCode forward = KeyCode.W;
@@ -49,10 +57,18 @@ public class PlayerSave
 
 
     public KeyCode sprint = KeyCode.LeftShift;
+
+
     public KeyCode crouch = KeyCode.LeftControl;
 
 
     public KeyCode interact = KeyCode.E;
+
+
+    public KeyCode rotate = KeyCode.R;
+
+
+    public KeyCode precisionRotate = KeyCode.LeftAlt;
 
 
     public KeyCode inventory = KeyCode.Tab;

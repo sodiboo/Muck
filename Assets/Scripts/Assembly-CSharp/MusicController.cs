@@ -13,7 +13,7 @@ public class MusicController : MonoBehaviour
 
     private void Start()
     {
-        this.targetVolume = SaveManager.Instance.state.music;
+        this.targetVolume = SaveManager.Instance.state.music / 10f;
     }
 
 

@@ -269,7 +269,7 @@ public class GameLoop : MonoBehaviour
 
 	private int SpawnMob(MobType mob, Vector3 pos, float multiplier = 1f, float bossMultiplier = 1f, Mob.BossType bossType = Mob.BossType.None, bool bypassCap = false)
 	{
-		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return 0;
+		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return -1;
 		float num = 0.01f + Mathf.Clamp((float)this.currentDay * 0.01f, 0.05f, 0.3f);
 		if (Random.Range(0f, 1f) < num)
 		{

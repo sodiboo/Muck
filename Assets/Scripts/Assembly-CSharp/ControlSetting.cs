@@ -11,6 +11,7 @@ public class ControlSetting : Setting
 		this.currentKey = k;
 		MonoBehaviour.print("key: " + k);
 		this.actionName = actionName;
+		actionText.text = actionName;
 		this.UpdateSetting();
 	}
 
@@ -34,6 +35,7 @@ public class ControlSetting : Setting
 		KeyListener.Instance.ListenForKey(this, this.actionName);
 	}
 
+	public TextMeshProUGUI actionText;
 
 	public TextMeshProUGUI keyText;
 

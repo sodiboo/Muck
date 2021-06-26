@@ -372,7 +372,7 @@ public class ServerSend
     }
 
 
-    public static void SendBuild(int fromClient, int itemId, int newObjectId, Vector3 pos, int yRot)
+    public static void SendBuild(int fromClient, int itemId, int newObjectId, Vector3 pos, Quaternion rot)
     {
         using (Packet packet = new Packet((int)ServerPackets.finalizeBuild))
         {
@@ -380,7 +380,7 @@ public class ServerSend
             packet.Write(itemId);
             packet.Write(newObjectId);
             packet.Write(pos);
-            packet.Write(yRot);
+            packet.Write(rot);
             ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
         }
     }

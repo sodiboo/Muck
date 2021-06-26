@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using UnityEngine;
 
 
@@ -17,6 +17,9 @@ public class BuildSnappingInfo : MonoBehaviour
 
 
 	public Vector3[] position;
+
+
+	public Vector3[] worldPos => position.Select(pos => transform.position + transform.rotation * pos).ToArray();
 
 
 	public bool half;

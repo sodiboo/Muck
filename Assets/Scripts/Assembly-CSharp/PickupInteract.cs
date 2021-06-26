@@ -46,7 +46,7 @@ public class PickupInteract : MonoBehaviour, Interactable, SharedObject
 
 	public string GetName()
 	{
-		return this.item.name + "\n<size=50%>(Press \"E\" to pickup";
+		return $"{this.item.name}\n<size=50%>(Press \"{InputManager.interact}\" to pickup)";
 	}
 
 

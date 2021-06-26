@@ -407,7 +407,7 @@ public class ClientSend : MonoBehaviour
 	}
 
 
-	public static void RequestBuild(int itemId, Vector3 pos, int yRot)
+	public static void RequestBuild(int itemId, Vector3 pos, Quaternion rot)
 	{
 		try
 		{
@@ -415,7 +415,7 @@ public class ClientSend : MonoBehaviour
 			{
 				packet.Write(itemId);
 				packet.Write(pos);
-				packet.Write(yRot);
+				packet.Write(rot);
 				ClientSend.SendTCPData(packet);
 			}
 		}

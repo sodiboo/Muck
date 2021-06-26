@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
             var v = 0f;
             if (crouching) v -= 1f;
             if (jumping) v += 1f;
-            rb.velocity = new Vector3(rb.velocity.x, v * 20f, rb.velocity.z);
+            rb.velocity = new Vector3(rb.velocity.x, v * Mathf.Max(vector.magnitude, 20f), rb.velocity.z);
         }
         float num3 = x;
         float num4 = y;
@@ -291,6 +291,7 @@ public class PlayerMovement : MonoBehaviour
         if (lastJump + TimeSpan.FromMilliseconds(500) > DateTime.Now)
         {
             flying = !flying;
+            lastJump = DateTime.MaxValue;
         }
         if ((this.grounded || this.surfing || (!this.grounded && this.jumps > 0)) && this.readyToJump && this.playerStatus.CanJump() && !flying)
         {

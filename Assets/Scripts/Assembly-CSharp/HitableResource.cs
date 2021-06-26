@@ -107,7 +107,7 @@ public class HitableResource : Hitable
     }
 
 
-    protected void Update()
+    protected virtual void Update()
     {
         if (ResourceManager.Instance != null)
         {

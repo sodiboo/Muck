@@ -153,17 +153,16 @@ public class UseInventory : MonoBehaviour
         this.eatingEmission.enabled = true;
     }
 
-
     public void UseButtonUp()
     {
-        if (currentItem.name == "Precision Delete")
+        if (currentItem && currentItem.tag == InventoryItem.ItemTag.Precision)
         {
             if (!BuildDestruction.dontDestroy)
             {
                 ChatBox.Instance.AppendMessage(-1, LocalClient.serverOwner ? "<color=red>Cannot use precision delete right now. Please run /dontdestroyneighbors first.<color=white>" : $"<color=red>Cannot use precision delete right now. Please ask the host ({new Friend(LocalClient.instance.serverHost).Name}) to run /dontdestroyneighbors first.<color=white>", "");
                 return;
             }
-            if (Physics.Raycast(PlayerMovement.Instance.playerCam.position, PlayerMovement.Instance.playerCam.forward, out var hit, float.PositiveInfinity, 1 << LayerMask.NameToLayer("Object"), QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(PlayerMovement.Instance.playerCam.position, PlayerMovement.Instance.playerCam.forward, out var hit, float.PositiveInfinity, 1 << LayerMask.NameToLayer("Object"), Input.GetKey(InputManager.precisionRotate) ? QueryTriggerInteraction.Collide : QueryTriggerInteraction.Ignore))
             {
                 Hitable target;
                 if (!hit.collider.TryGetComponent<Hitable>(out target) && hit.collider.transform.parent && !hit.collider.transform.parent.TryGetComponent<Hitable>(out target)) return;

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 
@@ -13,6 +13,9 @@ public class Settings : MonoBehaviour
         this.UpdateSave();
     }
 
+    public GameObject controlsSetting;
+    public RectTransform controlsParent;
+
 
     private void UpdateSave()
     {
@@ -22,38 +25,61 @@ public class Settings : MonoBehaviour
         this.fov.onClick.AddListener(new UnityAction(this.UpdateFov));
         this.sens.SetSettings(this.FloatToInt(SaveManager.Instance.state.sensMultiplier));
         this.sens.onClick.AddListener(new UnityAction(this.UpdateSens));
-        invertedCar.SetSetting(SaveManager.Instance.state.invertedCar);
-        invertedCar.onClick.AddListener(UpdateInvertedCar);
-        this.inverted.SetSetting(SaveManager.Instance.state.invertedMouse);
-        this.inverted.onClick.AddListener(new UnityAction(this.UpdateInverted));
+        
+        invertedCarX.SetSetting(SaveManager.Instance.state.invertedCarX);
+        invertedCarX.onClick.AddListener(UpdateInvertedCar);
+        invertedCarY.SetSetting(SaveManager.Instance.state.invertedCarY);
+        invertedCarY.onClick.AddListener(UpdateInvertedCar);
+
+        invertedMouseX.SetSetting(SaveManager.Instance.state.invertedMouseX);
+        invertedMouseX.onClick.AddListener(UpdateInvertedMouse);
+        invertedMouseY.SetSetting(SaveManager.Instance.state.invertedMouseY);
+        invertedMouseY.onClick.AddListener(UpdateInvertedMouse);
+
+        invertedRotateX.SetSetting(SaveManager.Instance.state.invertedRotateX);
+        invertedRotateX.onClick.AddListener(UpdateInvertedRotate);
+        invertedRotateY.SetSetting(SaveManager.Instance.state.invertedRotateY);
+        invertedRotateY.onClick.AddListener(UpdateInvertedRotate);
+
         this.grass.SetSetting(SaveManager.Instance.state.grass);
         this.grass.onClick.AddListener(new UnityAction(this.UpdateGrass));
         this.tutorial.SetSetting(SaveManager.Instance.state.tutorial);
         this.tutorial.onClick.AddListener(new UnityAction(this.UpdateTutorial));
-        this.forward.SetSetting(SaveManager.Instance.state.forward, "Forward");
-        this.forward.onClick.AddListener(new UnityAction(this.UpdateForwardKey));
-        this.backward.SetSetting(SaveManager.Instance.state.backwards, "Backward");
-        this.backward.onClick.AddListener(new UnityAction(this.UpdateBackwardKey));
-        this.left.SetSetting(SaveManager.Instance.state.left, "Left");
-        this.left.onClick.AddListener(new UnityAction(this.UpdateLeftKey));
-        this.right.SetSetting(SaveManager.Instance.state.right, "Right");
-        this.right.onClick.AddListener(new UnityAction(this.UpdateRightKey));
-        this.jump.SetSetting(SaveManager.Instance.state.jump, "Jump");
-        this.jump.onClick.AddListener(new UnityAction(this.UpdateJumpKey));
-        this.sprint.SetSetting(SaveManager.Instance.state.sprint, "Sprint");
-        this.sprint.onClick.AddListener(new UnityAction(this.UpdateSprintKey));
-        crouch.SetSetting(SaveManager.Instance.state.crouch, "Crouch");
-        crouch.onClick.AddListener(UpdateCrouchKey);
-        this.interact.SetSetting(SaveManager.Instance.state.interact, "Interact");
-        this.interact.onClick.AddListener(new UnityAction(this.UpdateInteractKey));
-        this.inventory.SetSetting(SaveManager.Instance.state.inventory, "Inventory");
-        this.inventory.onClick.AddListener(new UnityAction(this.UpdateInventoryKey));
-        this.map.SetSetting(SaveManager.Instance.state.map, "Map");
-        this.map.onClick.AddListener(new UnityAction(this.UpdateMapKey));
-        this.leftClick.SetSetting(SaveManager.Instance.state.leftClick, "Left Click / Attack");
-        this.leftClick.onClick.AddListener(new UnityAction(this.UpdateLeftClickKey));
-        this.rightClick.SetSetting(SaveManager.Instance.state.rightClick, "Right Click / Build");
-        this.rightClick.onClick.AddListener(new UnityAction(this.UpdateRightClickKey));
+        this.disableBuildFx.SetSetting(SaveManager.Instance.state.disableBuildFx);
+        this.disableBuildFx.onClick.AddListener(new UnityAction(this.UpdateBuildFx));
+
+        var controls = new (KeyCode defaultValue, Action<KeyCode> update, string name)[]
+        {
+            (SaveManager.Instance.state.forward, UpdateForwardKey, "Forward"),
+            (SaveManager.Instance.state.backwards, UpdateBackwardKey, "Backward"),
+            (SaveManager.Instance.state.left, UpdateLeftKey, "Left"),
+            (SaveManager.Instance.state.right, UpdateRightKey, "Right"),
+            (SaveManager.Instance.state.jump, UpdateJumpKey, "Jump"),
+            (SaveManager.Instance.state.sprint, UpdateSprintKey, "Sprint"),
+            (SaveManager.Instance.state.crouch, UpdateCrouchKey, "Crouch/Slide"),
+            (SaveManager.Instance.state.interact, UpdateInteractKey, "Interact"),
+            (SaveManager.Instance.state.rotate, UpdateRotateKey, "Rotate Build"),
+            (SaveManager.Instance.state.precisionRotate, UpdatePrecisionRotateKey, "Rotate Build Exactly"),
+            (SaveManager.Instance.state.inventory, UpdateInventoryKey, "Inventory"),
+            (SaveManager.Instance.state.map, UpdateMapKey, "Map"),
+            (SaveManager.Instance.state.leftClick, UpdateLeftClickKey, "Attack/Eat"),
+            (SaveManager.Instance.state.rightClick, UpdateRightClickKey, "Build"),
+        };
+
+        var height = 0f;
+
+        foreach (var control in controls)
+        {
+            var setting = Instantiate(controlsSetting).GetComponent<ControlSetting>();
+            setting.SetSetting(control.defaultValue, control.name);
+            setting.onClick.AddListener(() => control.update(setting.currentKey));
+            var transform = (RectTransform)setting.transform;
+            transform.SetParent(controlsParent, false);
+            height += transform.sizeDelta.y;
+        }
+        var group = controlsParent.GetComponent<VerticalLayoutGroup>();
+        controlsParent.sizeDelta = new Vector2(controlsParent.sizeDelta.x, height + (controls.Length - 1) * group.spacing + group.padding.top + group.padding.bottom);
+
         this.shadowQuality.SetSettings(Enum.GetNames(typeof(Settings.ShadowQuality)), SaveManager.Instance.state.shadowQuality);
         this.shadowQuality.onClick.AddListener(new UnityAction(this.UpdateShadowQuality));
         this.shadowResolution.SetSettings(Enum.GetNames(typeof(Settings.ShadowResolution)), SaveManager.Instance.state.shadowResolution);
@@ -97,13 +123,18 @@ public class Settings : MonoBehaviour
 
     private void UpdateInvertedCar()
     {
-        CurrentSettings.Instance.UpdateInvertedCar(IntToBool(invertedCar.currentSetting));
+        CurrentSettings.Instance.UpdateInvertedCar(IntToBool(invertedCarX.currentSetting), IntToBool(invertedCarY.currentSetting));
     }
 
 
-    private void UpdateInverted()
+    private void UpdateInvertedMouse()
     {
-        CurrentSettings.Instance.UpdateInverted(this.IntToBool(this.inverted.currentSetting));
+        CurrentSettings.Instance.UpdateInvertedMouse(IntToBool(invertedMouseX.currentSetting), IntToBool(invertedMouseY.currentSetting));
+    }
+
+    private void UpdateInvertedRotate()
+    {
+        CurrentSettings.Instance.UpdateInvertedRotate(IntToBool(invertedRotateX.currentSetting), IntToBool(invertedRotateY.currentSetting));
     }
 
 
@@ -115,7 +146,13 @@ public class Settings : MonoBehaviour
 
     private void UpdateTutorial()
     {
-        CurrentSettings.Instance.UpdateTutorial(this.IntToBool(this.grass.currentSetting));
+        CurrentSettings.Instance.UpdateTutorial(this.IntToBool(this.tutorial.currentSetting));
+    }
+
+
+    private void UpdateBuildFx()
+    {
+        CurrentSettings.Instance.UpdateBuildFx(this.IntToBool(this.disableBuildFx.currentSetting));
     }
 
 
@@ -131,98 +168,112 @@ public class Settings : MonoBehaviour
     }
 
 
-    private void UpdateForwardKey()
+    private void UpdateForwardKey(KeyCode current)
     {
-        SaveManager.Instance.state.forward = this.forward.currentKey;
+        SaveManager.Instance.state.forward = current;
         SaveManager.Instance.Save();
-        InputManager.forward = this.forward.currentKey;
+        InputManager.forward = current;
     }
 
 
-    private void UpdateBackwardKey()
+    private void UpdateBackwardKey(KeyCode current)
     {
-        SaveManager.Instance.state.backwards = this.backward.currentKey;
+        SaveManager.Instance.state.backwards = current;
         SaveManager.Instance.Save();
-        InputManager.backwards = this.backward.currentKey;
+        InputManager.backwards = current;
     }
 
 
-    private void UpdateLeftKey()
+    private void UpdateLeftKey(KeyCode current)
     {
-        SaveManager.Instance.state.left = this.left.currentKey;
+        SaveManager.Instance.state.left = current;
         SaveManager.Instance.Save();
-        InputManager.left = this.left.currentKey;
+        InputManager.left = current;
     }
 
 
-    private void UpdateRightKey()
+    private void UpdateRightKey(KeyCode current)
     {
-        SaveManager.Instance.state.right = this.right.currentKey;
+        SaveManager.Instance.state.right = current;
         SaveManager.Instance.Save();
-        InputManager.right = this.right.currentKey;
+        InputManager.right = current;
     }
 
 
-    private void UpdateJumpKey()
+    private void UpdateJumpKey(KeyCode current)
     {
-        SaveManager.Instance.state.jump = this.jump.currentKey;
+        SaveManager.Instance.state.jump = current;
         SaveManager.Instance.Save();
-        InputManager.jump = this.jump.currentKey;
+        InputManager.jump = current;
     }
 
 
-    private void UpdateSprintKey()
+    private void UpdateSprintKey(KeyCode current)
     {
-        SaveManager.Instance.state.sprint = this.sprint.currentKey;
+        SaveManager.Instance.state.sprint = current;
         SaveManager.Instance.Save();
-        InputManager.sprint = this.sprint.currentKey;
+        InputManager.sprint = current;
     }
 
-    private void UpdateCrouchKey()
+    private void UpdateCrouchKey(KeyCode current)
     {
-        SaveManager.Instance.state.crouch = this.crouch.currentKey;
+        SaveManager.Instance.state.crouch = current;
         SaveManager.Instance.Save();
-        InputManager.crouch = this.crouch.currentKey;
-    }
-
-
-    private void UpdateInteractKey()
-    {
-        SaveManager.Instance.state.interact = this.interact.currentKey;
-        SaveManager.Instance.Save();
-        InputManager.interact = this.interact.currentKey;
+        InputManager.crouch = current;
     }
 
 
-    private void UpdateInventoryKey()
+    private void UpdateInteractKey(KeyCode current)
     {
-        SaveManager.Instance.state.inventory = this.inventory.currentKey;
+        SaveManager.Instance.state.interact = current;
         SaveManager.Instance.Save();
-        InputManager.inventory = this.inventory.currentKey;
+        InputManager.interact = current;
+    }
+
+    private void UpdateRotateKey(KeyCode current)
+    {
+        SaveManager.Instance.state.rotate = current;
+        SaveManager.Instance.Save();
+        InputManager.rotate = current;
+    }
+
+    private void UpdatePrecisionRotateKey(KeyCode current)
+    {
+        SaveManager.Instance.state.precisionRotate = current;
+        SaveManager.Instance.Save();
+        InputManager.precisionRotate = current;
     }
 
 
-    private void UpdateMapKey()
+    private void UpdateInventoryKey(KeyCode current)
     {
-        SaveManager.Instance.state.map = this.map.currentKey;
+        SaveManager.Instance.state.inventory = current;
         SaveManager.Instance.Save();
-        InputManager.map = this.map.currentKey;
+        InputManager.inventory = current;
     }
 
 
-    private void UpdateLeftClickKey()
+    private void UpdateMapKey(KeyCode current)
     {
-        SaveManager.Instance.state.leftClick = this.leftClick.currentKey;
+        SaveManager.Instance.state.map = current;
         SaveManager.Instance.Save();
-        InputManager.leftClick = this.leftClick.currentKey;
+        InputManager.map = current;
     }
 
 
-    private void UpdateRightClickKey()
+    private void UpdateLeftClickKey(KeyCode current)
     {
-        SaveManager.Instance.state.rightClick = this.rightClick.currentKey;
+        SaveManager.Instance.state.leftClick = current;
         SaveManager.Instance.Save();
-        InputManager.rightClick = this.rightClick.currentKey;
+        InputManager.leftClick = current;
+    }
+
+
+    private void UpdateRightClickKey(KeyCode current)
+    {
+        SaveManager.Instance.state.rightClick = current;
+        SaveManager.Instance.Save();
+        InputManager.rightClick = current;
     }
 
 
@@ -372,9 +423,22 @@ public class Settings : MonoBehaviour
     public SliderSetting sens;
 
 
-    public MyBoolSetting invertedCar;
+    public MyBoolSetting invertedCarX;
 
-    public MyBoolSetting inverted;
+
+    public MyBoolSetting invertedCarY;
+
+
+    public MyBoolSetting invertedMouseX;
+
+
+    public MyBoolSetting invertedMouseY;
+
+
+    public MyBoolSetting invertedRotateX;
+
+
+    public MyBoolSetting invertedRotateY;
 
 
     public MyBoolSetting grass;
@@ -383,39 +447,7 @@ public class Settings : MonoBehaviour
     public MyBoolSetting tutorial;
 
 
-    [Header("Controls")]
-    public ControlSetting forward;
-
-
-    public ControlSetting backward;
-
-
-    public ControlSetting left;
-
-
-    public ControlSetting right;
-
-
-    public ControlSetting jump;
-
-
-    public ControlSetting sprint;
-    public ControlSetting crouch;
-
-
-    public ControlSetting interact;
-
-
-    public ControlSetting inventory;
-
-
-    public ControlSetting map;
-
-
-    public ControlSetting leftClick;
-
-
-    public ControlSetting rightClick;
+    public MyBoolSetting disableBuildFx;
 
 
     [Header("Graphics")]

@@ -114,7 +114,9 @@ public class ResourceManager : MonoBehaviour
 
     public int GetNextId()
     {
-        return ResourceManager.globalId++;
+        var id = globalId++;
+        while (list.ContainsKey(id)) id = globalId++;
+        return id;
     }
 
 

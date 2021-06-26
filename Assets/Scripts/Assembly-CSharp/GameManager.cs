@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
 	public static int GetSeed()
 	{
-		return GameManager.gameSettings.Seed;
+		return GameManager.gameSettings?.Seed ?? 44430;
 	}
 
 

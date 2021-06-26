@@ -21,6 +21,8 @@ public class InputManager : MonoBehaviour
         InputManager.sprint = SaveManager.Instance.state.sprint;
         InputManager.crouch = SaveManager.Instance.state.crouch;
         InputManager.interact = SaveManager.Instance.state.interact;
+        InputManager.rotate = SaveManager.Instance.state.rotate;
+        InputManager.precisionRotate = SaveManager.Instance.state.precisionRotate;
         InputManager.inventory = SaveManager.Instance.state.inventory;
         InputManager.map = SaveManager.Instance.state.map;
         InputManager.leftClick = SaveManager.Instance.state.leftClick;
@@ -44,10 +46,18 @@ public class InputManager : MonoBehaviour
 
 
     public static KeyCode sprint;
+
+
     public static KeyCode crouch;
 
 
     public static KeyCode interact;
+
+
+    public static KeyCode rotate;
+
+
+    public static KeyCode precisionRotate;
 
 
     public static KeyCode inventory;

@@ -34,8 +34,12 @@ public class CurrentSettings : MonoBehaviour
         this.UpdateCamShake(SaveManager.Instance.state.cameraShake);
         this.UpdateFov((float)SaveManager.Instance.state.fov);
         this.UpdateSens(SaveManager.Instance.state.sensMultiplier);
+        UpdateInvertedCar(SaveManager.Instance.state.invertedCarX, SaveManager.Instance.state.invertedCarY);
+        UpdateInvertedMouse(SaveManager.Instance.state.invertedMouseX, SaveManager.Instance.state.invertedMouseY);
+        UpdateInvertedRotate(SaveManager.Instance.state.invertedRotateX, SaveManager.Instance.state.invertedRotateY);
         this.UpdateGrass(SaveManager.Instance.state.grass);
         this.UpdateTutorial(SaveManager.Instance.state.tutorial);
+        this.UpdateBuildFx(SaveManager.Instance.state.disableBuildFx);
         this.UpdateShadowQuality(SaveManager.Instance.state.shadowQuality);
         this.UpdateShadowResolution(SaveManager.Instance.state.shadowResolution);
         this.UpdateShadowCascades(SaveManager.Instance.state.shadowCascade);
@@ -90,21 +94,31 @@ public class CurrentSettings : MonoBehaviour
         }
     }
 
-    public void UpdateInvertedCar(bool b)
+    public void UpdateInvertedCar(bool x, bool y)
     {
-        Debug.Log("Setting inverted car to: " + b.ToString());
-        SaveManager.Instance.state.invertedCar = b;
+        Debug.Log($"Setting inverted car to: {x},{y}");
+        SaveManager.Instance.state.invertedCarX = x;
+        SaveManager.Instance.state.invertedCarY = y;
         SaveManager.Instance.Save();
-        CurrentSettings.invertedCar = b;
+        CurrentSettings.invertedCar = (x, y);
     }
 
 
-    public void UpdateInverted(bool b)
+    public void UpdateInvertedMouse(bool x, bool y)
     {
-        Debug.Log("Setting inverted to: " + b.ToString());
-        SaveManager.Instance.state.invertedMouse = b;
+        Debug.Log($"Setting inverted mouse to: {x},{y}");
+        SaveManager.Instance.state.invertedMouseX = x;
+        SaveManager.Instance.state.invertedMouseY = y;
         SaveManager.Instance.Save();
-        CurrentSettings.inverted = b;
+        CurrentSettings.invertedMouse = (x, y);
+    }
+
+    public void UpdateInvertedRotate(bool x, bool y) {
+        Debug.Log($"Setting inverted rotate to: {x},{y}");
+        SaveManager.Instance.state.invertedRotateX = x;
+        SaveManager.Instance.state.invertedRotateY = y;
+        SaveManager.Instance.Save();
+        CurrentSettings.invertedRotate = (x, y);
     }
 
 
@@ -123,6 +137,15 @@ public class CurrentSettings : MonoBehaviour
         SaveManager.Instance.state.tutorial = b;
         SaveManager.Instance.Save();
         this.tutorial = b;
+    }
+
+
+    public void UpdateBuildFx(bool b)
+    {
+        Debug.Log("Setting disable build fx to: " + b.ToString());
+        SaveManager.Instance.state.disableBuildFx = b;
+        SaveManager.Instance.Save();
+        this.disableBuildFx = b;
     }
 
 
@@ -308,8 +331,10 @@ public class CurrentSettings : MonoBehaviour
 
     public static bool grass = true;
 
-    public static bool invertedCar = true;
-    public static bool inverted = false;
+
+    public static (bool x, bool y) invertedCar = (true, true);
+    public static (bool x, bool y) invertedMouse = (false, false);
+    public static (bool x, bool y) invertedRotate = (true, true);
 
 
     public float sensMultiplier;
@@ -319,6 +344,9 @@ public class CurrentSettings : MonoBehaviour
 
 
     public bool tutorial;
+
+
+    public bool disableBuildFx;
 
 
     public float volume;

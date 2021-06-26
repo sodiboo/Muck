@@ -10,7 +10,7 @@ public class BuildManager : MonoBehaviour
     private void Awake()
     {
         BuildManager.Instance = this;
-		BuildDestruction.dontDestroy = GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative;
+        BuildDestruction.dontDestroy = GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative;
         this.filter = this.ghostItem.GetComponent<MeshFilter>();
         this.renderer = this.ghostItem.GetComponent<Renderer>();
     }
@@ -117,9 +117,9 @@ public class BuildManager : MonoBehaviour
         Vector3 vector = bounds.extents;
         vector.Scale(scale);
         vector = rot * vector;
-        this.ghostItem.transform.rotation = Quaternion.Euler(0, (float)this.yRotation, 0) * rot;
+        this.ghostItem.transform.rotation = buildRot * rot;
         RaycastHit raycastHit;
-        if (Physics.Raycast(new Ray(this.playerCam.position, this.playerCam.forward), out raycastHit, 12f, this.whatIsGround))
+        if (Physics.Raycast(new Ray(this.playerCam.position, this.playerCam.forward), out raycastHit, 12f, this.whatIsGround, currentItem.tag == InventoryItem.ItemTag.Trigger ? QueryTriggerInteraction.Collide : QueryTriggerInteraction.Ignore))
         {
             Vector3 center = bounds.center;
             center.Scale(scale);
@@ -137,7 +137,7 @@ public class BuildManager : MonoBehaviour
                 foreach (Vector3 a in component.position)
                 {
                     Vector3 vector3 = raycastHit.collider.transform.position + a * (float)this.gridSize;
-                    vector3 = this.RotateAroundPivot(vector3, raycastHit.collider.transform.position, new Vector3(0f, raycastHit.collider.transform.eulerAngles.y, 0f));
+                    vector3 = this.RotateAroundPivot(vector3, raycastHit.collider.transform.position, raycastHit.collider.transform.rotation);
                     Vector3 vector4 = (vector3 - raycastHit.collider.transform.position).normalized;
                     Vector3 zero = Vector3.zero;
                     if (zero.y > 0f)
@@ -155,7 +155,7 @@ public class BuildManager : MonoBehaviour
                         foreach (Vector3 a2 in this.ghostExtents)
                         {
                             Vector3 vector5 = this.ghostItem.transform.position + a2 * (float)this.gridSize;
-                            vector5 = this.RotateAroundPivot(vector5, this.ghostCollider.transform.position, new Vector3(0f, (float)this.yRotation, 0f));
+                            vector5 = this.RotateAroundPivot(vector5, this.ghostCollider.transform.position, buildRot);
                             float num3 = Vector3.Distance(vector5 - vector4, vector3);
                             if (num3 < num2)
                             {
@@ -189,16 +189,16 @@ public class BuildManager : MonoBehaviour
         {
             Gizmos.color = Color.blue;
             Vector3 vector = this.ghostItem.transform.position + a * (float)this.gridSize;
-            vector = this.RotateAroundPivot(vector, this.ghostCollider.transform.position, new Vector3(0f, (float)this.yRotation, 0f));
+            vector = this.RotateAroundPivot(vector, this.ghostCollider.transform.position, buildRot);
             Gizmos.DrawCube(vector, Vector3.one);
         }
     }
 
 
-    private Vector3 RotateAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)
+    private Vector3 RotateAroundPivot(Vector3 point, Vector3 pivot, Quaternion rot)
     {
         Vector3 vector = point - pivot;
-        vector = Quaternion.Euler(angles) * vector;
+        vector = rot * vector;
         point = vector + pivot;
         return point;
     }
@@ -206,7 +206,7 @@ public class BuildManager : MonoBehaviour
 
     public void RotateBuild(int dir)
     {
-        this.yRotation -= dir * this.rotationAngle;
+        yRot -= dir * rotationAngle;
     }
 
 
@@ -218,8 +218,9 @@ public class BuildManager : MonoBehaviour
         }
         Hotbar.Instance.UseItem(1);
         Gun.Instance.Build();
-        ClientSend.RequestBuild(this.currentItem.id, this.lastPosition, this.yRotation);
+        ClientSend.RequestBuild(this.currentItem.id, this.lastPosition, buildRot);
     }
+
 
 
     public bool CanBuild()
@@ -228,21 +229,21 @@ public class BuildManager : MonoBehaviour
     }
 
 
-    public GameObject BuildItem(int buildOwner, int itemID, int objectId, Vector3 position, int yRotation)
+    public GameObject BuildItem(int buildOwner, int itemID, int objectId, Vector3 position, Quaternion rotation)
     {
         if (!SaveData.isExecuting) SaveData.Instance.save.Add(new SaveData.AddItem
         {
             itemId = itemID,
             objectId = objectId,
             position = position,
-            yRot = yRotation,
+            rotation = rotation,
         });
         InventoryItem inventoryItem = ItemManager.Instance.allItems[itemID];
         GameObject gameObject = Instantiate<GameObject>(inventoryItem.prefab);
         gameObject.transform.position = position;
-        gameObject.transform.rotation = Quaternion.Euler(0f, (float)yRotation, 0f);
+        gameObject.transform.rotation = rotation;
         if (inventoryItem.type == InventoryItem.ItemType.Car) gameObject.transform.localScale *= Car.Scale;
-        if (this.buildFx)
+        if (this.buildFx && !CurrentSettings.Instance.disableBuildFx)
         {
             Destroy(Instantiate<GameObject>(this.buildFx, position, Quaternion.identity), 5f);
         }
@@ -327,7 +328,22 @@ public class BuildManager : MonoBehaviour
     private MeshFilter filter;
 
 
-    public int yRotation;
+    public float yRot;
+
+
+    public float xRot;
+
+
+    public float baseXRot;
+
+
+    public float baseYRot;
+
+
+    public float baseZRot;
+
+
+    public Quaternion buildRot => Quaternion.Euler(baseXRot + xRot, baseYRot + yRot, baseZRot);
 
 
     public GameObject rotateText;
@@ -336,7 +352,7 @@ public class BuildManager : MonoBehaviour
     public static BuildManager Instance;
 
 
-    private Vector3 lastPosition;
+    public Vector3 lastPosition;
 
 
     private bool canBuild;

@@ -252,7 +252,16 @@ public class OtherInput : MonoBehaviour
         }
     }
 
+    public void SetCreative() {
+        _currentCraftingUiMenu = creative;
+        InventoryUI.Instance.CraftingUi = creative;
+    }
+
     public Car currentCar;
+
+
+    public InventoryExtensions creative;
+
 
     public InventoryExtensions handcrafts;
 
@@ -320,6 +329,6 @@ public class OtherInput : MonoBehaviour
 
         Furnace,
 
-        Chest
+        Chest,
     }
 }

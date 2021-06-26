@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Car : HitableResource
 {
@@ -79,8 +79,9 @@ public class Car : HitableResource
         if (!inUse) ServerSend.UpdateCar(-1, ResourceManager.Instance.cars.First(kp => kp.Value == this).Key, this);
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         MoveWheels();
         Audio();
         CheckGrounded();
@@ -335,6 +336,28 @@ public class Car : HitableResource
                 rb.position += new Vector3(0f, 400f, 0f);
             }
             lastRespawn = DateTime.Now;
+        }
+    }
+
+    public HashSet<TriggerFirstPerson> fpTriggers = new HashSet<TriggerFirstPerson>();
+
+    private void OnTriggerEnter(Collider collider) {
+        if (collider.TryGetComponent<Trigger>(out var trigger)) {
+            switch (trigger) {
+                case TriggerFirstPerson fp:
+                    fpTriggers.Add(fp);
+                break;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider collider) {
+        if (collider.TryGetComponent<Trigger>(out var trigger)) {
+            switch (trigger) {
+                case TriggerFirstPerson fp:
+                    fpTriggers.Remove(fp);
+                break;
+            }
         }
     }
 
