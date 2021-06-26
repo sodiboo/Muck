@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
+  m_Name: Boots_Chunkium
+  m_EditorClassIdentifier:
+  important: 0
+  id: 104
+  name: Chunkium Boots
+  description: it protecc foot
+  type: 0
+  tier: 1
+  sprite: {fileID: 21300000, guid: d780b1d3dd6e5464994be0ea47b8125e, type: 3}
+  material: {fileID: 2100000, guid: 00742a65edcffde4f85955672223d879, type: 2}
+  mesh: {fileID: 4300000, guid: 16078e84fa120b6459fa735f7a0558e0, type: 2}
+  rotationOffset: {x: 0, y: 7, z: 75}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 2}
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: bc2c0a26bda8f79439ef2fb2bce5012a, type: 2}
+    amount: 5
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 4
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 11400000, guid: d1df0aeba817ad0419a7c246341701e3, type: 2}
+  fuel: {fileID: 0}
+  tag: 7
+  rarity: 2
+  attackTypes:

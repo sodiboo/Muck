@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
+  m_Name: PeanutButter
+  m_EditorClassIdentifier:
+  name: Peanut Butter
+  description: +Stamina
+  id: 3
+  tier: 0
+  mesh: {fileID: 4300000, guid: 61f6075dec5954d4f9c699e9794c03af, type: 2}
+  material: {fileID: 2100000, guid: ee11177bcdacb5e429aafe444cd4d267, type: 2}
+  sprite: {fileID: 21300000, guid: 63dab10a1d0ec5d4cbb629b5ece006f7, type: 3}

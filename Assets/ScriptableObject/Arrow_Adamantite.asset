@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
+  m_Name: Arrow_Adamantite
+  m_EditorClassIdentifier:
+  important: 0
+  id: 70
+  name: Adamantite Arrow
+  description: Green arrow
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: b276858d8a2db544caf66b3d5f3a00a5, type: 3}
+  material: {fileID: 2100000, guid: 80cd3b9a0886ff1429bbf042a1ea66c7, type: 2}
+  mesh: {fileID: 4300000, guid: 0617c3e1bdab47d4394efd21b3cca309, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 64
+  max: 999
+  resourceDamage: 1
+  attackDamage: 70
+  attackSpeed: 0.3
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0.8
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: ca5e27fa2fade2142b4306a9f12f59f6, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: a90692fc17118f44181723a2c53de5d4, type: 2}
+    amount: 1
+  craftAmount: 4
+  stationRequirement: {fileID: 11400000, guid: b66ee1ade389b7d43909fe30259795f1, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1972850023764178, guid: 13f32a6915e1b644fa01ca73faca4db1, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 8
+  rarity: 0
+  attackTypes:

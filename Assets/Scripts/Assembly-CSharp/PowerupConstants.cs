@@ -1,10 +1,5 @@
-﻿using System;
-
-
 public enum PowerupConstants
 {
-
-	Sneakers,
-
-	PeanutButter
+	Sneakers = 0,
+	PeanutButter = 1,
 }

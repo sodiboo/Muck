@@ -3,24 +3,24 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1823111288964656}
+  m_RootGameObject: {fileID: 1767014184948690}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1823111288964656
+--- !u!1 &1767014184948690
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4373284554086453}
-  - component: {fileID: 198242302568922722}
-  - component: {fileID: 199314074893933344}
-  - component: {fileID: 114930665729113479}
-  - component: {fileID: 114426243842596274}
+  - component: {fileID: 4563483074369481}
+  - component: {fileID: 198229037393418904}
+  - component: {fileID: 199627305804620390}
+  - component: {fileID: 114433431605110897}
+  - component: {fileID: 114849149113149268}
   m_Layer: 0
   m_Name: SmokeShake
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4373284554086453
+--- !u!4 &4563483074369481
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823111288964656}
+  m_GameObject: {fileID: 1767014184948690}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 212.9974, y: 17.81692, z: 503.0638}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &198242302568922722
+--- !u!198 &198229037393418904
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823111288964656}
+  m_GameObject: {fileID: 1767014184948690}
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
@@ -2231,13 +2231,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199314074893933344
+--- !u!199 &199627305804620390
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823111288964656}
+  m_GameObject: {fileID: 1767014184948690}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2249,7 +2249,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b36fa26051e682d40998561af1be9882, type: 2}
+  - {fileID: 2100000, guid: 9418f0ef8516f9b49b4add912a0bfb8a, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2284,33 +2284,34 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 6ae751f0f512ab940a48ba75563e44a1, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &114930665729113479
+--- !u!114 &114433431605110897
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823111288964656}
+  m_GameObject: {fileID: 1767014184948690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d8305c5236a5ff469c9365bc3d03263, type: 3}
+  m_Script: {fileID: 11500000, guid: bb5102741bcc2764ebd3077523ba7a3b, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   time: 1.5
---- !u!114 &114426243842596274
+--- !u!114 &114849149113149268
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823111288964656}
+  m_GameObject: {fileID: 1767014184948690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2077bee44f825843b2bd8153049574f, type: 3}
+  m_Script: {fileID: 11500000, guid: 96bf475c60237f84bbb9ca5a44e1f934, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  customShake: {fileID: 0}
   maxDistance: 40
   shakeM: 0.75

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
+  m_Name: Enforcer
+  m_EditorClassIdentifier:
+  name: Enforcer
+  description: Deal more damage when moving faster
+  id: 8
+  tier: 2
+  mesh: {fileID: 4300000, guid: e501f4dac3af5f44d9339ec646e9c9cc, type: 2}
+  material: {fileID: 2100000, guid: f5ed158546606a64d8f7c33029aa4b85, type: 2}
+  sprite: {fileID: 21300000, guid: f082242052e733b4b9bd9fd27be42e75, type: 3}

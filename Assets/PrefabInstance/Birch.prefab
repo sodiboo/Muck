@@ -3,26 +3,26 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1844903508684128}
+  m_RootGameObject: {fileID: 1193405046996163}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1844903508684128
+--- !u!1 &1193405046996163
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4449051935027160}
-  - component: {fileID: 33587083888409155}
-  - component: {fileID: 23700156228088717}
-  - component: {fileID: 208490860460549821}
-  - component: {fileID: 114453726302051999}
-  - component: {fileID: 65914281654522948}
-  - component: {fileID: 114906346422468642}
+  - component: {fileID: 4863087932129001}
+  - component: {fileID: 33058437465684856}
+  - component: {fileID: 23917851262498563}
+  - component: {fileID: 208548660300261007}
+  - component: {fileID: 114483338956822516}
+  - component: {fileID: 65943686137314253}
+  - component: {fileID: 114357781658795108}
   m_Layer: 10
   m_Name: Birch
   m_TagString: Untagged
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4449051935027160
+--- !u!4 &4863087932129001
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
+  m_GameObject: {fileID: 1193405046996163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.585449, y: 19.52672, z: -5.849511}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,19 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33587083888409155
+--- !u!33 &33058437465684856
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
-  m_Mesh: {fileID: 4300000, guid: fd6e6a5f0e84ec441883d254fdb89051, type: 2}
---- !u!23 &23700156228088717
+  m_GameObject: {fileID: 1193405046996163}
+  m_Mesh: {fileID: 4300000, guid: 3c0275539916b4048a40d3a9b58b20c0, type: 2}
+--- !u!23 &23917851262498563
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
+  m_GameObject: {fileID: 1193405046996163}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c7e7571f4c2935d4ca85fad4daa7f9b1, type: 2}
+  - {fileID: 2100000, guid: 3d481cdf6bdfb0d43b59d0d8cefae1a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,68 +88,68 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &208490860460549821
+--- !u!208 &208548660300261007
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
+  m_GameObject: {fileID: 1193405046996163}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.5, y: 6.975, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
-  m_CarveOnlyStationary: 0
+  m_CarveOnlyStationary: 1
   m_Center: {x: -0.01, y: 6.97, z: 0.01}
   m_TimeToStationary: 0.5
---- !u!114 &114453726302051999
+--- !u!114 &114483338956822516
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
+  m_GameObject: {fileID: 1193405046996163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bb0e52d17d3b54eb626b5fefeb3c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c20889ea144f140be0beef688765fe, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   entityName: Birch
   canHitMoreThanOnce: 0
-  dropTable: {fileID: 11400000, guid: 78138e99f17f03c4da074fe77077ab71, type: 2}
+  dropTable: {fileID: 11400000, guid: cc4a56fcb4903544eb0ce0e582656082, type: 2}
   hp: 0
   maxHp: 200
-  destroyFx: {fileID: 1522400637981584, guid: af5ecdadc5650cf4cb29a50e82fb3da3, type: 2}
-  hitFx: {fileID: 1042652491422754, guid: d16bdc5f734e98346b7f37c9bbbe4451, type: 2}
-  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 2}
+  destroyFx: {fileID: 1089949562553497, guid: f36709352b60b7d41aa7811dbbd15599, type: 2}
+  hitFx: {fileID: 1335139153604704, guid: 6c63fd5f0a96d4947bd01e015804074c, type: 2}
+  numberFx: {fileID: 1454646626941367, guid: b7996cc3a224b6349b170766238e67b7, type: 2}
   compatibleItem: 1
   minTier: 1
-  dropItem: {fileID: 11400000, guid: 4c8b6ed579053e9439a550476da612b8, type: 2}
+  dropItem: {fileID: 11400000, guid: 8ba0e873fd1385143a19f18298ca0e1e, type: 2}
   dropExtra: []
   dropChance: []
   amount: 5
   dontScale: 0
   poolId: 0
---- !u!65 &65914281654522948
+--- !u!65 &65943686137314253
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
+  m_GameObject: {fileID: 1193405046996163}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8085284, y: 13.95075, z: 0.9577725}
   m_Center: {x: -0.03613305, y: 6.969569, z: 0.009728909}
---- !u!114 &114906346422468642
+--- !u!114 &114357781658795108
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844903508684128}
+  m_GameObject: {fileID: 1193405046996163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a68516107349d4591f605641d976ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c07cf9b1f331034cb3ffe06c5f12bbe, type: 3}
   m_Name:
   m_EditorClassIdentifier:

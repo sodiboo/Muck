@@ -1,11 +1,3 @@
-﻿using System;
-
-
-public interface SharedObject
+public class SharedObject
 {
-
-	void SetId(int id);
-
-
-	int GetId();
 }

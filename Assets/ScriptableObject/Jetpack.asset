@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
+  m_Name: Jetpack
+  m_EditorClassIdentifier:
+  name: Jetpack
+  description: To the moon
+  id: 6
+  tier: 0
+  mesh: {fileID: 4300000, guid: 1aab78d551196934f8d5e68ebc222f91, type: 2}
+  material: {fileID: 2100000, guid: 00cef89b5cfefe44fb84d3ff58727cf5, type: 2}
+  sprite: {fileID: 21300000, guid: ab80a9d71f73633478e6a71f2e6fe563, type: 3}

@@ -3,26 +3,26 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1562824876894594}
+  m_RootGameObject: {fileID: 1671994159309980}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1562824876894594
+--- !u!1 &1671994159309980
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4771458712514699}
-  - component: {fileID: 33249109751866574}
-  - component: {fileID: 23016682742883225}
-  - component: {fileID: 114600252675005264}
-  - component: {fileID: 208990909992983405}
-  - component: {fileID: 65768011216719476}
-  - component: {fileID: 114640930349262249}
+  - component: {fileID: 4896489258039873}
+  - component: {fileID: 33134717726985112}
+  - component: {fileID: 23095531500933869}
+  - component: {fileID: 114576678087363328}
+  - component: {fileID: 208228872265769264}
+  - component: {fileID: 65872332046596544}
+  - component: {fileID: 114994143066334204}
   m_Layer: 10
   m_Name: Oak
   m_TagString: Untagged
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4771458712514699
+--- !u!4 &4896489258039873
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
+  m_GameObject: {fileID: 1671994159309980}
   m_LocalRotation: {x: 2.185569E-08, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.61672, y: 20.86754, z: -10.41071}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,19 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 2.504478E-06, y: 0, z: 0}
---- !u!33 &33249109751866574
+--- !u!33 &33134717726985112
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
-  m_Mesh: {fileID: 4300000, guid: 7cccc5605d976c94c8a9c4d9bfb2fb99, type: 2}
---- !u!23 &23016682742883225
+  m_GameObject: {fileID: 1671994159309980}
+  m_Mesh: {fileID: 4300000, guid: 529a41cf96cb9bf44aeb05c0472aa5bd, type: 2}
+--- !u!23 &23095531500933869
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
+  m_GameObject: {fileID: 1671994159309980}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 521aaa0d198185d4fbc24c215aa6c4b1, type: 2}
+  - {fileID: 2100000, guid: 065c222bb2aa9164eb805021ce5cba1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,68 +88,68 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114600252675005264
+--- !u!114 &114576678087363328
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
+  m_GameObject: {fileID: 1671994159309980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bb0e52d17d3b54eb626b5fefeb3c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c20889ea144f140be0beef688765fe, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   entityName: Oak
   canHitMoreThanOnce: 0
-  dropTable: {fileID: 11400000, guid: 9adf9a0c5ab494f4ab9d868aacb652a9, type: 2}
+  dropTable: {fileID: 11400000, guid: 9113d96e03f888843ae821676aad5b29, type: 2}
   hp: 1000
   maxHp: 1000
-  destroyFx: {fileID: 1522400637981584, guid: af5ecdadc5650cf4cb29a50e82fb3da3, type: 2}
-  hitFx: {fileID: 1042652491422754, guid: d16bdc5f734e98346b7f37c9bbbe4451, type: 2}
-  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 2}
+  destroyFx: {fileID: 1089949562553497, guid: f36709352b60b7d41aa7811dbbd15599, type: 2}
+  hitFx: {fileID: 1335139153604704, guid: 6c63fd5f0a96d4947bd01e015804074c, type: 2}
+  numberFx: {fileID: 1454646626941367, guid: b7996cc3a224b6349b170766238e67b7, type: 2}
   compatibleItem: 1
   minTier: 3
-  dropItem: {fileID: 11400000, guid: b2f850ec37921dc47975575fd9a78dbe, type: 2}
+  dropItem: {fileID: 11400000, guid: ca5e27fa2fade2142b4306a9f12f59f6, type: 2}
   dropExtra: []
   dropChance: []
   amount: 5
   dontScale: 0
   poolId: 0
---- !u!208 &208990909992983405
+--- !u!208 &208228872265769264
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
+  m_GameObject: {fileID: 1671994159309980}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 6.975, z: 0.5}
+  m_Extents: {x: 1.4, y: 7.2, z: 1.4}
   m_MoveThreshold: 0.1
   m_Carve: 1
-  m_CarveOnlyStationary: 0
+  m_CarveOnlyStationary: 1
   m_Center: {x: -0.01, y: 6.97, z: 0.01}
   m_TimeToStationary: 0.5
---- !u!65 &65768011216719476
+--- !u!65 &65872332046596544
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
+  m_GameObject: {fileID: 1671994159309980}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.5, y: 13.95075, z: 2.5}
   m_Center: {x: -0.03613305, y: 6.969569, z: 0.009728909}
---- !u!114 &114640930349262249
+--- !u!114 &114994143066334204
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562824876894594}
+  m_GameObject: {fileID: 1671994159309980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a68516107349d4591f605641d976ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c07cf9b1f331034cb3ffe06c5f12bbe, type: 3}
   m_Name:
   m_EditorClassIdentifier:

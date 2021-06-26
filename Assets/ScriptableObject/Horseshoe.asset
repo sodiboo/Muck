@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
+  m_Name: Horseshoe
+  m_EditorClassIdentifier:
+  name: Horseshoe
+  description: Increased chance to hit a critical strike
+  id: 1
+  tier: 1
+  mesh: {fileID: 4300000, guid: 43ff8e3cfd60d1d4fbd2db30b2899971, type: 2}
+  material: {fileID: 2100000, guid: 5303b7ea8ceb82d4eb3802990bbe859a, type: 2}
+  sprite: {fileID: 21300000, guid: 1e210685961e6fa4cb96ca1c205c4f7e, type: 3}

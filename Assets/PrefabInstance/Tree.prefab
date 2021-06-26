@@ -3,26 +3,26 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1200161561247578}
+  m_RootGameObject: {fileID: 1819961660388312}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1200161561247578
+--- !u!1 &1819961660388312
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4947806570151586}
-  - component: {fileID: 33902153225208810}
-  - component: {fileID: 23347898066360461}
-  - component: {fileID: 65600569720962969}
-  - component: {fileID: 114360184813003021}
-  - component: {fileID: 208629223844426719}
-  - component: {fileID: 114007111087053721}
+  - component: {fileID: 4010017296522406}
+  - component: {fileID: 33696884597755820}
+  - component: {fileID: 23801959088588240}
+  - component: {fileID: 65403839121148663}
+  - component: {fileID: 114840983197364232}
+  - component: {fileID: 208293836475010579}
+  - component: {fileID: 114633497441808186}
   m_Layer: 10
   m_Name: Tree
   m_TagString: Untagged
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4947806570151586
+--- !u!4 &4010017296522406
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
+  m_GameObject: {fileID: 1819961660388312}
   m_LocalRotation: {x: 0, y: -0.2174576, z: 0, w: 0.9760698}
   m_LocalPosition: {x: 3.988079, y: 19.08972, z: -1.299617}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,19 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 25.1195, z: 0}
---- !u!33 &33902153225208810
+--- !u!33 &33696884597755820
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
-  m_Mesh: {fileID: 4300000, guid: ab4af8e84da6770418adde4da9c2caf3, type: 2}
---- !u!23 &23347898066360461
+  m_GameObject: {fileID: 1819961660388312}
+  m_Mesh: {fileID: 4300000, guid: e2a29a526306a8e4699a284d99b0b8f2, type: 2}
+--- !u!23 &23801959088588240
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
+  m_GameObject: {fileID: 1819961660388312}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c257757208d6a7469c8a5578c43a3a9, type: 2}
+  - {fileID: 2100000, guid: a035fda0bd635fe4c85845b4575dc9fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,70 +88,70 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &65600569720962969
+--- !u!65 &65403839121148663
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
+  m_GameObject: {fileID: 1819961660388312}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.128647, y: 8.553967, z: 1.07863}
   m_Center: {x: -0.01885378, y: 4.271177, z: -0.003923148}
---- !u!114 &114360184813003021
+--- !u!114 &114840983197364232
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
+  m_GameObject: {fileID: 1819961660388312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bb0e52d17d3b54eb626b5fefeb3c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c20889ea144f140be0beef688765fe, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   entityName: Tree
   canHitMoreThanOnce: 0
-  dropTable: {fileID: 11400000, guid: 41183468c8fa97b4c893ade28ac34357, type: 2}
+  dropTable: {fileID: 11400000, guid: 32b7e8ee3a62a0b41837c67dfc9f78dd, type: 2}
   hp: 0
   maxHp: 100
-  destroyFx: {fileID: 1522400637981584, guid: af5ecdadc5650cf4cb29a50e82fb3da3, type: 2}
-  hitFx: {fileID: 1042652491422754, guid: d16bdc5f734e98346b7f37c9bbbe4451, type: 2}
-  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 2}
+  destroyFx: {fileID: 1089949562553497, guid: f36709352b60b7d41aa7811dbbd15599, type: 2}
+  hitFx: {fileID: 1335139153604704, guid: 6c63fd5f0a96d4947bd01e015804074c, type: 2}
+  numberFx: {fileID: 1454646626941367, guid: b7996cc3a224b6349b170766238e67b7, type: 2}
   compatibleItem: 1
   minTier: 0
-  dropItem: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  dropItem: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
   dropExtra:
-  - {fileID: 11400000, guid: 7c17eef597c965b4c8d5ee0d6ea78f61, type: 2}
+  - {fileID: 11400000, guid: 30e7cbdd642b6f64a8ee9b903a05d000, type: 2}
   dropChance:
   - 0.2
   amount: 10
   dontScale: 0
   poolId: 0
---- !u!208 &208629223844426719
+--- !u!208 &208293836475010579
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
+  m_GameObject: {fileID: 1819961660388312}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.5, y: 6.975, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
-  m_CarveOnlyStationary: 0
+  m_CarveOnlyStationary: 1
   m_Center: {x: -0.01, y: 6.97, z: 0.01}
   m_TimeToStationary: 0.5
---- !u!114 &114007111087053721
+--- !u!114 &114633497441808186
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200161561247578}
+  m_GameObject: {fileID: 1819961660388312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a68516107349d4591f605641d976ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c07cf9b1f331034cb3ffe06c5f12bbe, type: 3}
   m_Name:
   m_EditorClassIdentifier:

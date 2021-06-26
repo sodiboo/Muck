@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
+  m_Name: Orange Juice
+  m_EditorClassIdentifier:
+  name: Orange Juice
+  description: +Attack speed
+  id: 2
+  tier: 0
+  mesh: {fileID: 4300000, guid: 636f210b6cc742c438f849206490c641, type: 2}
+  material: {fileID: 2100000, guid: 02d07487bab63c14aad1de63e6c8d2a1, type: 2}
+  sprite: {fileID: 21300000, guid: 1313eff4d92f37541a3dd8cf81b28cbb, type: 3}

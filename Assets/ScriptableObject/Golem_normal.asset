@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b725e49f632c06a468e8284b30d6c707, type: 3}
+  m_Name: Golem_normal
+  m_EditorClassIdentifier:
+  name:
+  mobPrefab: {fileID: 1620262550228029, guid: ffce035b8b8b4c74592dbb96b2b3ea4c, type: 2}
+  behaviour: 2
+  ranged: 0
+  rangedCooldown: 8
+  startAttackDistance: 4
+  startRangedAttackDistance: 5
+  maxAttackDistance: 35
+  speed: 5
+  spawnTime: 1.5
+  minAttackAngle: 20
+  sharpDefense: 0.75
+  defense: 0
+  knockbackThreshold: 0.2
+  ignoreBuilds: 0
+  followPlayerDistance: 1
+  followPlayerAccuracy: 0.8
+  onlyRangedInRangedPattern: 0
+  weaknesses: 01000000
+  boss: 0
