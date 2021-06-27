@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020000A8 RID: 168
 public class UseInventory : MonoBehaviour
 {
-	// Token: 0x0600045F RID: 1119 RVA: 0x000167D4 File Offset: 0x000149D4
 	private void Awake()
 	{
 		UseInventory.Instance = this;
@@ -36,7 +34,6 @@ public class UseInventory : MonoBehaviour
 		this.SetWeapon(null);
 	}
 
-	// Token: 0x06000460 RID: 1120 RVA: 0x00016898 File Offset: 0x00014A98
 	public void SetWeapon(InventoryItem item)
 	{
 		this.StopUse();
@@ -65,7 +62,6 @@ public class UseInventory : MonoBehaviour
 		this.animator.Play("Equip", -1, 0f);
 	}
 
-	// Token: 0x06000461 RID: 1121 RVA: 0x000169B0 File Offset: 0x00014BB0
 	private void StopUse()
 	{
 		if (this.IsAnimationPlaying("Eat"))
@@ -79,7 +75,6 @@ public class UseInventory : MonoBehaviour
 		this.eatingEmission.enabled = false;
 	}
 
-	// Token: 0x06000462 RID: 1122 RVA: 0x00016A10 File Offset: 0x00014C10
 	private void Update()
 	{
 		if (this.IsAnimationPlaying("Eat"))
@@ -91,7 +86,6 @@ public class UseInventory : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000463 RID: 1123 RVA: 0x00016A78 File Offset: 0x00014C78
 	public void Use()
 	{
 		if (this.currentItem == null)
@@ -144,13 +138,11 @@ public class UseInventory : MonoBehaviour
 		CooldownBar.Instance.ResetCooldownTime(num, stayOnScreen);
 	}
 
-	// Token: 0x06000464 RID: 1124 RVA: 0x00016C45 File Offset: 0x00014E45
 	private void StartParticles()
 	{
 		this.eatingEmission.enabled = true;
 	}
 
-	// Token: 0x06000465 RID: 1125 RVA: 0x00016C54 File Offset: 0x00014E54
 	public void UseButtonUp()
 	{
 		if (this.IsAnimationPlaying("Eat"))
@@ -170,7 +162,6 @@ public class UseInventory : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000466 RID: 1126 RVA: 0x00016CE0 File Offset: 0x00014EE0
 	private void ReleaseWeapon()
 	{
 		float num = 0f;
@@ -238,7 +229,6 @@ public class UseInventory : MonoBehaviour
 		CameraShaker.Instance.ChargeShake(num);
 	}
 
-	// Token: 0x06000467 RID: 1127 RVA: 0x0001704C File Offset: 0x0001524C
 	private void FinishEating()
 	{
 		this.eatSfx.Stop();
@@ -248,7 +238,6 @@ public class UseInventory : MonoBehaviour
 		Hotbar.Instance.UseItem(1);
 	}
 
-	// Token: 0x06000468 RID: 1128 RVA: 0x00017088 File Offset: 0x00015288
 	private bool IsAnimationPlaying(string animationName)
 	{
 		if (this.animator.GetCurrentAnimatorClipInfo(0).Length == 0)
@@ -259,54 +248,37 @@ public class UseInventory : MonoBehaviour
 		return name.Contains(animationName) || animationName == name;
 	}
 
-	// Token: 0x04000425 RID: 1061
 	public static UseInventory Instance;
 
-	// Token: 0x04000426 RID: 1062
 	public HitBox hitBox;
 
-	// Token: 0x04000427 RID: 1063
 	public Animator animator;
 
-	// Token: 0x04000428 RID: 1064
 	public TrailRenderer swingTrail;
 
-	// Token: 0x04000429 RID: 1065
 	public RandomSfx swingSfx;
 
-	// Token: 0x0400042A RID: 1066
 	public AudioSource chargeSfx;
 
-	// Token: 0x0400042B RID: 1067
 	public AudioSource eatSfx;
 
-	// Token: 0x0400042C RID: 1068
 	public ParticleSystem eatingParticles;
 
-	// Token: 0x0400042D RID: 1069
 	private ParticleSystem.EmissionModule eatingEmission;
 
-	// Token: 0x0400042E RID: 1070
 	private ParticleSystem.VelocityOverLifetimeModule velocity;
 
-	// Token: 0x0400042F RID: 1071
 	private float eatTime;
 
-	// Token: 0x04000430 RID: 1072
 	private float attackTime;
 
-	// Token: 0x04000431 RID: 1073
 	private float chargeTime;
 
-	// Token: 0x04000432 RID: 1074
 	public MeshRenderer meshRenderer;
 
-	// Token: 0x04000433 RID: 1075
 	public MeshFilter meshFilter;
 
-	// Token: 0x04000434 RID: 1076
 	public Transform renderTransform;
 
-	// Token: 0x04000435 RID: 1077
 	private InventoryItem currentItem;
 }

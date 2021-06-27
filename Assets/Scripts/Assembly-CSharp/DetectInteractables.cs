@@ -2,10 +2,8 @@
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000029 RID: 41
 public class DetectInteractables : MonoBehaviour
 {
-	// Token: 0x060000F1 RID: 241 RVA: 0x00006766 File Offset: 0x00004966
 	private void Awake()
 	{
 		DetectInteractables.Instance = this;
@@ -14,18 +12,13 @@ public class DetectInteractables : MonoBehaviour
 		this.interactUi.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060000F2 RID: 242 RVA: 0x000067A6 File Offset: 0x000049A6
 	private void Start()
 	{
 		this.playerCam = PlayerMovement.Instance.playerCam;
 	}
 
-	// Token: 0x1700000C RID: 12
-	// (get) Token: 0x060000F3 RID: 243 RVA: 0x000067B8 File Offset: 0x000049B8
-	// (set) Token: 0x060000F4 RID: 244 RVA: 0x000067C0 File Offset: 0x000049C0
 	public Interactable currentInteractable { get; private set; }
 
-	// Token: 0x060000F5 RID: 245 RVA: 0x000067CC File Offset: 0x000049CC
 	private void Update()
 	{
 		RaycastHit raycastHit;
@@ -62,24 +55,17 @@ public class DetectInteractables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040000F3 RID: 243
 	public LayerMask whatIsInteractable;
 
-	// Token: 0x040000F4 RID: 244
 	public GameObject interactUiPrefab;
 
-	// Token: 0x040000F5 RID: 245
 	private Transform interactUi;
 
-	// Token: 0x040000F6 RID: 246
 	private TextMeshProUGUI interactText;
 
-	// Token: 0x040000F7 RID: 247
 	private Transform playerCam;
 
-	// Token: 0x040000F8 RID: 248
 	public static DetectInteractables Instance;
 
-	// Token: 0x040000F9 RID: 249
 	private Collider currentCollider;
 }

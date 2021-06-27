@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000025 RID: 37
 public class DebugObject : MonoBehaviour
 {
-	// Token: 0x060000E6 RID: 230 RVA: 0x00006500 File Offset: 0x00004700
 	private void Update()
 	{
 		if (!base.transform.parent)
@@ -15,7 +13,6 @@ public class DebugObject : MonoBehaviour
 		base.transform.position = base.transform.parent.position + this.offset;
 	}
 
-	// Token: 0x060000E7 RID: 231 RVA: 0x00006558 File Offset: 0x00004758
 	private void OnGUI()
 	{
 		if (!PlayerMovement.Instance)
@@ -40,12 +37,9 @@ public class DebugObject : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040000EF RID: 239
 	public string text;
 
-	// Token: 0x040000F0 RID: 240
 	public Vector3 offset = new Vector3(0f, 1.5f, 0f);
 
-	// Token: 0x040000F1 RID: 241
 	private Camera cam;
 }

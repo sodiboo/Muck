@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000102 RID: 258
 public class DrawGrass : MonoBehaviour
 {
-	// Token: 0x060007A7 RID: 1959 RVA: 0x00027094 File Offset: 0x00025294
 	public void ClearMesh()
 	{
 		this.positions.Clear();
@@ -20,7 +18,6 @@ public class DrawGrass : MonoBehaviour
 		this.length = new List<Vector2>();
 	}
 
-	// Token: 0x060007A8 RID: 1960 RVA: 0x00027118 File Offset: 0x00025318
 	private void Awake()
 	{
 		if (!CurrentSettings.grass)
@@ -34,7 +31,6 @@ public class DrawGrass : MonoBehaviour
 		this.currentPositions = new Dictionary<Vector3, bool>();
 	}
 
-	// Token: 0x060007A9 RID: 1961 RVA: 0x0002716F File Offset: 0x0002536F
 	private void SlowUpdate()
 	{
 		if (!CurrentSettings.grass)
@@ -46,7 +42,6 @@ public class DrawGrass : MonoBehaviour
 		this.UpdateGrass();
 	}
 
-	// Token: 0x060007AA RID: 1962 RVA: 0x0002719C File Offset: 0x0002539C
 	private void UpdateGrass()
 	{
 		if (!this.target)
@@ -103,7 +98,6 @@ public class DrawGrass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007AB RID: 1963 RVA: 0x000273BC File Offset: 0x000255BC
 	public Vector3 posToGridPos(Vector3 point)
 	{
 		float num = point.x;
@@ -123,7 +117,6 @@ public class DrawGrass : MonoBehaviour
 		return new Vector3(x, 0f, num4);
 	}
 
-	// Token: 0x060007AC RID: 1964 RVA: 0x0002743C File Offset: 0x0002563C
 	private void CreateNewMesh(Vector3 offset, int d)
 	{
 		if (PlayerMovement.Instance)
@@ -162,131 +155,91 @@ public class DrawGrass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000724 RID: 1828
 	public Mesh mesh;
 
-	// Token: 0x04000725 RID: 1829
 	public MeshFilter filter;
 
-	// Token: 0x04000726 RID: 1830
 	public Color AdjustedColor;
 
-	// Token: 0x04000727 RID: 1831
 	[Range(1f, 600000f)]
 	public int grassLimit = 50000;
 
-	// Token: 0x04000728 RID: 1832
 	private Vector3 lastPosition = Vector3.zero;
 
-	// Token: 0x04000729 RID: 1833
 	public int toolbarInt;
 
-	// Token: 0x0400072A RID: 1834
 	[SerializeField]
 	private List<Vector3> positions = new List<Vector3>();
 
-	// Token: 0x0400072B RID: 1835
 	[SerializeField]
 	private List<Color> colors = new List<Color>();
 
-	// Token: 0x0400072C RID: 1836
 	[SerializeField]
 	private List<int> indicies = new List<int>();
 
-	// Token: 0x0400072D RID: 1837
 	[SerializeField]
 	private List<Vector3> normals = new List<Vector3>();
 
-	// Token: 0x0400072E RID: 1838
 	[SerializeField]
 	private List<Vector2> length = new List<Vector2>();
 
-	// Token: 0x0400072F RID: 1839
 	public bool painting;
 
-	// Token: 0x04000730 RID: 1840
 	public bool removing;
 
-	// Token: 0x04000731 RID: 1841
 	public bool editing;
 
-	// Token: 0x04000732 RID: 1842
 	public int i;
 
-	// Token: 0x04000733 RID: 1843
 	public float sizeWidth = 1f;
 
-	// Token: 0x04000734 RID: 1844
 	public float sizeLength = 1f;
 
-	// Token: 0x04000735 RID: 1845
 	public float density = 1f;
 
-	// Token: 0x04000736 RID: 1846
 	public float normalLimit = 1f;
 
-	// Token: 0x04000737 RID: 1847
 	public float rangeR;
 
-	// Token: 0x04000738 RID: 1848
 	public float rangeG;
 
-	// Token: 0x04000739 RID: 1849
 	public float rangeB;
 
-	// Token: 0x0400073A RID: 1850
 	public LayerMask hitMask = 1;
 
-	// Token: 0x0400073B RID: 1851
 	public LayerMask paintMask = 1;
 
-	// Token: 0x0400073C RID: 1852
 	public float brushSize;
 
-	// Token: 0x0400073D RID: 1853
 	private Vector3 mousePos;
 
-	// Token: 0x0400073E RID: 1854
 	[HideInInspector]
 	public Vector3 hitPosGizmo;
 
-	// Token: 0x0400073F RID: 1855
 	private Vector3 hitPos;
 
-	// Token: 0x04000740 RID: 1856
 	[HideInInspector]
 	public Vector3 hitNormal;
 
-	// Token: 0x04000741 RID: 1857
 	private int[] indi;
 
-	// Token: 0x04000742 RID: 1858
 	private float updateRate = 0.5f;
 
-	// Token: 0x04000743 RID: 1859
 	public Transform grassObject;
 
-	// Token: 0x04000744 RID: 1860
 	public float chunkLength = 20f;
 
-	// Token: 0x04000745 RID: 1861
 	public float chunkDensity = 10f;
 
-	// Token: 0x04000746 RID: 1862
 	public int nChunks = 16;
 
-	// Token: 0x04000747 RID: 1863
 	public int iterations;
 
-	// Token: 0x04000748 RID: 1864
 	private Dictionary<Vector3, bool> currentPositions;
 
-	// Token: 0x04000749 RID: 1865
 	public Transform target;
 
-	// Token: 0x0400074A RID: 1866
 	private Vector3 currentGridPos;
 
-	// Token: 0x0400074B RID: 1867
 	public int gridSize = 20;
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200011D RID: 285
 public class StructureSpawnerWithChests : StructureSpawner
 {
-	// Token: 0x06000851 RID: 2129 RVA: 0x00029BE8 File Offset: 0x00027DE8
 	public override void Process(GameObject newStructure, RaycastHit hit)
 	{
 		newStructure.transform.rotation = Quaternion.LookRotation(hit.normal);

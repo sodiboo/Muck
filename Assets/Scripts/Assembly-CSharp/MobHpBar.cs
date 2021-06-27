@@ -2,10 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000065 RID: 101
 public class MobHpBar : MonoBehaviour
 {
-	// Token: 0x06000240 RID: 576 RVA: 0x0000D4B8 File Offset: 0x0000B6B8
 	public void SetMob(GameObject mob)
 	{
 		this.buffIcon.SetActive(false);
@@ -28,7 +26,6 @@ public class MobHpBar : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000241 RID: 577 RVA: 0x0000D5CA File Offset: 0x0000B7CA
 	public void RemoveMob()
 	{
 		base.gameObject.SetActive(false);
@@ -37,7 +34,6 @@ public class MobHpBar : MonoBehaviour
 		this.mob = null;
 	}
 
-	// Token: 0x06000242 RID: 578 RVA: 0x0000D5F4 File Offset: 0x0000B7F4
 	private void Update()
 	{
 		if (!this.mob)
@@ -51,18 +47,13 @@ public class MobHpBar : MonoBehaviour
 		this.hpBar.transform.localScale = Vector3.Lerp(this.hpBar.transform.localScale, b, Time.deltaTime * 10f);
 	}
 
-	// Token: 0x0400025B RID: 603
 	public GameObject attachedObject;
 
-	// Token: 0x0400025C RID: 604
 	private HitableMob mob;
 
-	// Token: 0x0400025D RID: 605
 	private Vector3 offsetPos;
 
-	// Token: 0x0400025E RID: 606
 	public GameObject buffIcon;
 
-	// Token: 0x0400025F RID: 607
 	public Image hpBar;
 }

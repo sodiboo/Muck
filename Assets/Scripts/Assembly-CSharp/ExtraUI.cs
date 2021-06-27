@@ -4,17 +4,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000032 RID: 50
 public class ExtraUI : MonoBehaviour
 {
-	// Token: 0x06000123 RID: 291 RVA: 0x000076CD File Offset: 0x000058CD
 	private void Awake()
 	{
 		this.IdToHpBar = new Dictionary<int, RawImage>();
 		InvokeRepeating(nameof(SlowUpdate), 0f, 1f);
 	}
 
-	// Token: 0x06000124 RID: 292 RVA: 0x000076EF File Offset: 0x000058EF
 	private void SlowUpdate()
 	{
 		this.UpdateClock();
@@ -22,7 +19,6 @@ public class ExtraUI : MonoBehaviour
 		this.UpdateAllHpBars();
 	}
 
-	// Token: 0x06000125 RID: 293 RVA: 0x00007704 File Offset: 0x00005904
 	public void InitPlayerStatus(int id, string name, PlayerManager pm)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.playerStatusPrefab, this.playerStatusParent);
@@ -40,19 +36,16 @@ public class ExtraUI : MonoBehaviour
 		Map.Instance.AddMarker(pm.transform, Map.MarkerType.Player, null, Color.white, name, scale);
 	}
 
-	// Token: 0x06000126 RID: 294 RVA: 0x000077BD File Offset: 0x000059BD
 	private void UpdateClock()
 	{
 		this.clockText.text = this.TimeToClock();
 	}
 
-	// Token: 0x06000127 RID: 295 RVA: 0x000077D0 File Offset: 0x000059D0
 	private void UpdateMoney()
 	{
 		this.money.text = string.Concat(InventoryUI.Instance.GetMoney());
 	}
 
-	// Token: 0x06000128 RID: 296 RVA: 0x000077F4 File Offset: 0x000059F4
 	private void UpdateAllHpBars()
 	{
 		foreach (PlayerManager playerManager in GameManager.players.Values)
@@ -64,13 +57,11 @@ public class ExtraUI : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000129 RID: 297 RVA: 0x0000785C File Offset: 0x00005A5C
 	public void UpdateDay(int day)
 	{
 		this.dayText.text = string.Concat(day);
 	}
 
-	// Token: 0x0600012A RID: 298 RVA: 0x00007874 File Offset: 0x00005A74
 	private void UpdatePlayerHp(int id)
 	{
 		if (!this.IdToHpBar.ContainsKey(id))
@@ -95,7 +86,6 @@ public class ExtraUI : MonoBehaviour
 		component.transform.localScale = new Vector3(num, 1f, 1f);
 	}
 
-	// Token: 0x0600012B RID: 299 RVA: 0x00007948 File Offset: 0x00005B48
 	private string TimeToClock()
 	{
 		float time = DayCycle.time;
@@ -104,21 +94,15 @@ public class ExtraUI : MonoBehaviour
 		return num + ":" + arg;
 	}
 
-	// Token: 0x0400012B RID: 299
 	public TextMeshProUGUI money;
 
-	// Token: 0x0400012C RID: 300
 	public TextMeshProUGUI clockText;
 
-	// Token: 0x0400012D RID: 301
 	public TextMeshProUGUI dayText;
 
-	// Token: 0x0400012E RID: 302
 	private Dictionary<int, RawImage> IdToHpBar;
 
-	// Token: 0x0400012F RID: 303
 	public GameObject playerStatusPrefab;
 
-	// Token: 0x04000130 RID: 304
 	public RectTransform playerStatusParent;
 }

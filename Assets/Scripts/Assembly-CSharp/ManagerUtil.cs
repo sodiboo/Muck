@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020000AB RID: 171
 public class ManagerUtil : MonoBehaviour
 {
-	// Token: 0x06000472 RID: 1138 RVA: 0x00017254 File Offset: 0x00015454
 	public static int FindRandomUnusedID(InventoryItem.ItemType item, Dictionary<int, GameObject> list, System.Random random)
 	{
 		Vector2 idRange = ManagerUtil.GetIdRange(item);
@@ -24,7 +22,6 @@ public class ManagerUtil : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06000473 RID: 1139 RVA: 0x000172A4 File Offset: 0x000154A4
 	public static Vector2 GetIdRange(InventoryItem.ItemType item)
 	{
 		int num = 10000;

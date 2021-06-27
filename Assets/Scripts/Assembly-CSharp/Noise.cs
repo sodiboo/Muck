@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F9 RID: 249
 public static class Noise
 {
-	// Token: 0x06000768 RID: 1896 RVA: 0x00025E4C File Offset: 0x0002404C
 	public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistance, float lacunarity, float blend, float blendStrength, Vector2 offset)
 	{
 		float[,] array = new float[mapWidth, mapHeight];

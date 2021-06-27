@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Windball
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   important: 0
-  id: 93
+  id: 76
   name: Windball
   description: Ball of wind
   type: 0
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1589331922698207, guid: 066c2bf671ac10b4faddb2d659ec39e8, type: 2}
+  prefab: {fileID: 1589331922698207, guid: 066c2bf671ac10b4faddb2d659ec39e8, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -54,4 +55,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 0
   rarity: 2
-  attackTypes:
+  attackTypes: 
+  x: 0

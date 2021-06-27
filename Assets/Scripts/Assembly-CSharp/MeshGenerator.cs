@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F7 RID: 247
 public static class MeshGenerator
 {
-	// Token: 0x06000764 RID: 1892 RVA: 0x00025C94 File Offset: 0x00023E94
 	public static MeshData GenerateTerrainMesh(float[,] heightMap, float heightMultiplier, AnimationCurve heightCurve, int levelOfDetail)
 	{
 		int length = heightMap.GetLength(0);

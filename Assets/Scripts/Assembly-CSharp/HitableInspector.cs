@@ -3,10 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200004D RID: 77
 public class HitableInspector : MonoBehaviour
 {
-	// Token: 0x060001BA RID: 442 RVA: 0x0000ABD4 File Offset: 0x00008DD4
 	private void Awake()
 	{
 		this.child = base.transform.GetChild(0).gameObject;
@@ -14,7 +12,6 @@ public class HitableInspector : MonoBehaviour
 		this.hpBar.CrossFadeAlpha(0f, 0f, true);
 	}
 
-	// Token: 0x060001BB RID: 443 RVA: 0x0000AC24 File Offset: 0x00008E24
 	private void Update()
 	{
 		if (!PlayerMovement.Instance)
@@ -88,48 +85,33 @@ public class HitableInspector : MonoBehaviour
 		this.hpBar.transform.localScale = Vector3.Lerp(this.hpBar.transform.localScale, new Vector3(this.ratio, 1f, 1f), Time.deltaTime * 4f);
 	}
 
-	// Token: 0x040001C1 RID: 449
 	public LayerMask whatIsObject;
 
-	// Token: 0x040001C2 RID: 450
 	private GameObject child;
 
-	// Token: 0x040001C3 RID: 451
 	public TextMeshProUGUI hp;
 
-	// Token: 0x040001C4 RID: 452
 	public TextMeshProUGUI info;
 
-	// Token: 0x040001C5 RID: 453
 	public Image hpBar;
 
-	// Token: 0x040001C6 RID: 454
 	public Image maxBar;
 
-	// Token: 0x040001C7 RID: 455
 	public Image overlay;
 
-	// Token: 0x040001C8 RID: 456
 	private Vector3 desiredPosition;
 
-	// Token: 0x040001C9 RID: 457
 	private float speed = 2f;
 
-	// Token: 0x040001CA RID: 458
 	private Hitable currentResource;
 
-	// Token: 0x040001CB RID: 459
 	private bool show;
 
-	// Token: 0x040001CC RID: 460
 	private Vector3 offsetPos = Vector3.zero;
 
-	// Token: 0x040001CD RID: 461
 	private float maxResourceDistance = 15f;
 
-	// Token: 0x040001CE RID: 462
 	private float maxMobDistance = 100f;
 
-	// Token: 0x040001CF RID: 463
 	private float ratio;
 }

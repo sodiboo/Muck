@@ -29,7 +29,7 @@ import { lootTables } from "./loot.ts";
 
 for (const [guid, file] of await io.ScriptableObjects("Mobs")) {
   const prefab = parse.guid<Dummy>(file, "mobPrefab")!;
-  const hitable = prefabs.get(prefab)!.get(scripts.HitableMob)!;
+  const hitable = prefabs.get(prefab)!.scripts.get(scripts.HitableMob)![0];
   const mob: Mob = {
     name: parse.string<Dummy>(hitable, "entityName"),
     loot: parse.guid<Dummy>(hitable, "dropTable")!,

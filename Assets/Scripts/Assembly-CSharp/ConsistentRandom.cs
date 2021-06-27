@@ -1,14 +1,11 @@
 ﻿using System;
 
-// Token: 0x020000D3 RID: 211
 public class ConsistentRandom : Random
 {
-	// Token: 0x06000676 RID: 1654 RVA: 0x0002145F File Offset: 0x0001F65F
 	public ConsistentRandom() : this(Environment.TickCount)
 	{
 	}
 
-	// Token: 0x06000677 RID: 1655 RVA: 0x0002146C File Offset: 0x0001F66C
 	public ConsistentRandom(int seed)
 	{
 		int num = (seed == int.MinValue) ? int.MaxValue : Math.Abs(seed);
@@ -41,13 +38,11 @@ public class ConsistentRandom : Random
 		this.inextp = 21;
 	}
 
-	// Token: 0x06000678 RID: 1656 RVA: 0x00021566 File Offset: 0x0001F766
 	protected override double Sample()
 	{
 		return (double)this.InternalSample() * 4.656612875245797E-10;
 	}
 
-	// Token: 0x06000679 RID: 1657 RVA: 0x0002157C File Offset: 0x0001F77C
 	private int InternalSample()
 	{
 		int num = this.inext;
@@ -75,13 +70,11 @@ public class ConsistentRandom : Random
 		return num3;
 	}
 
-	// Token: 0x0600067A RID: 1658 RVA: 0x000215EF File Offset: 0x0001F7EF
 	public override int Next()
 	{
 		return this.InternalSample();
 	}
 
-	// Token: 0x0600067B RID: 1659 RVA: 0x000215F8 File Offset: 0x0001F7F8
 	private double GetSampleForLargeRange()
 	{
 		int num = this.InternalSample();
@@ -92,7 +85,6 @@ public class ConsistentRandom : Random
 		return ((double)num + 2147483646.0) / 4294967293.0;
 	}
 
-	// Token: 0x0600067C RID: 1660 RVA: 0x00021638 File Offset: 0x0001F838
 	public override int Next(int minValue, int maxValue)
 	{
 		if (minValue > maxValue)
@@ -107,7 +99,6 @@ public class ConsistentRandom : Random
 		return (int)((long)(this.GetSampleForLargeRange() * (double)num) + (long)minValue);
 	}
 
-	// Token: 0x0600067D RID: 1661 RVA: 0x00021680 File Offset: 0x0001F880
 	public override void NextBytes(byte[] buffer)
 	{
 		if (buffer == null)
@@ -120,21 +111,15 @@ public class ConsistentRandom : Random
 		}
 	}
 
-	// Token: 0x040005B9 RID: 1465
 	private const int MBIG = 2147483647;
 
-	// Token: 0x040005BA RID: 1466
 	private const int MSEED = 161803398;
 
-	// Token: 0x040005BB RID: 1467
 	private const int MZ = 0;
 
-	// Token: 0x040005BC RID: 1468
 	private int inext;
 
-	// Token: 0x040005BD RID: 1469
 	private int inextp;
 
-	// Token: 0x040005BE RID: 1470
 	private int[] SeedArray = new int[56];
 }

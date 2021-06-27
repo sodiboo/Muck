@@ -3,15 +3,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200012E RID: 302
 public class UiSettings : MonoBehaviour
 {
-	// Token: 0x17000065 RID: 101
-	// (get) Token: 0x060008B0 RID: 2224 RVA: 0x0002B56B File Offset: 0x0002976B
-	// (set) Token: 0x060008B1 RID: 2225 RVA: 0x0002B573 File Offset: 0x00029773
 	public int setting { get; private set; }
 
-	// Token: 0x060008B2 RID: 2226 RVA: 0x0002B57C File Offset: 0x0002977C
 	public void AddSettings(int defaultValue, string[] enumNames)
 	{
 		this.setting = defaultValue;
@@ -30,7 +25,6 @@ public class UiSettings : MonoBehaviour
 		this.UpdateSelection();
 	}
 
-	// Token: 0x060008B3 RID: 2227 RVA: 0x0002B614 File Offset: 0x00029814
 	private void UpdateSelection()
 	{
 		for (int i = 0; i < this.texts.Length; i++)
@@ -46,22 +40,17 @@ public class UiSettings : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060008B4 RID: 2228 RVA: 0x0002B665 File Offset: 0x00029865
 	private void UpdateSetting(int i)
 	{
 		this.setting = i;
 		this.UpdateSelection();
 	}
 
-	// Token: 0x0400083F RID: 2111
 	public GameObject settingButton;
 
-	// Token: 0x04000840 RID: 2112
 	private TextMeshProUGUI[] texts;
 
-	// Token: 0x04000841 RID: 2113
 	private Color selected = Color.white;
 
-	// Token: 0x04000842 RID: 2114
 	private Color deselected = Color.gray;
 }

@@ -3,6 +3,7 @@ import {
   images,
   io,
   link,
+  Menu,
   parse,
   prefabs,
   references,
@@ -74,8 +75,16 @@ export type Recipe =
 export interface CraftingRecipe {
   type: RecipeType.Crafting;
   ingredients: ItemAndAmount[];
+  station: number;
   amount: number;
 }
+
+const CraftingStations = [
+  "Handcrafting",
+  link("Workbench"),
+  link("Anvil"),
+  link("Fletching Table"),
+];
 
 export interface CauldronRecipe {
   type: RecipeType.Cauldron;
@@ -152,7 +161,6 @@ interface _ {
 }
 
 export const items = new Map<string, Item>();
-let cauldron = "";
 for (const [guid, file] of await io.ScriptableObjects("Items")) {
   const extras: ExtraItemData = {
     craftable: parse.bool<ExtraItemData>(file, "craftable"),
@@ -238,19 +246,54 @@ for (const [guid, file] of await io.ScriptableObjects("Items")) {
   }
   if (bow !== null) item.bow = bows.get(bow)!;
   if (fuel !== null) item.fuel = fuels.get(fuel)!;
-  if (item.name == "Cauldron") cauldron = guid;
   items.set(guid, item);
 }
 
 const allRecipes: Recipe[] = [];
 const cauldronResults = new Set(
   parse.array<{ processableFood: string[] }, string>(
-    GameAfterLobby.get(scripts.CauldronUI)!,
+    GameAfterLobby.scripts.get(scripts.CauldronUI)![0],
     "processableFood",
     (raw) => raw.match(/guid: (?<guid>[a-f0-9]+)[,}]/)!.groups!.guid,
   ),
 );
-for (const [guid, item] of items) {
+function parseCrafting(id: number) {
+  return parse.array<{ tabs: string[][] }, string[]>(
+    GameAfterLobby.components.get(id)!,
+    "tabs",
+    (tab) =>
+      parse.array<{ items: string[] }, string>(
+        tab,
+        "items",
+        (item) => item.match(/guid: (?<guid>[a-f0-9]+)[,}]/)!.groups!.guid,
+      ),
+  ).flat();
+}
+const otherinput = GameAfterLobby.scripts.get(scripts.OtherInput)![0];
+interface OtherInput {
+  handcrafts: number;
+  workbench: number;
+  anvil: number;
+  fletch: number;
+}
+const handcrafts = parseCrafting(
+  parse.fileID<OtherInput>(otherinput, "handcrafts"),
+);
+const workbench = parseCrafting(
+  parse.fileID<OtherInput>(otherinput, "workbench"),
+);
+const anvil = parseCrafting(parse.fileID<OtherInput>(otherinput, "anvil"));
+const fletch = parseCrafting(parse.fileID<OtherInput>(otherinput, "fletch"));
+const allCrafting = new Set([handcrafts, workbench, anvil, fletch].flat());
+const itemList = parse.array<{ allScriptableItems: string[] }, string>(
+  Menu.scripts.get(scripts.ItemManager)![1], // why is there an empty item manager
+  "allScriptableItems",
+  (item) => item.match(/guid: (?<guid>[a-f0-9]+)[,}]/)!.groups!.guid,
+);
+for (let i = 0; i < itemList.length; i++) {
+  const guid = itemList[i];
+  const item = items.get(guid)!;
+  item.id = i; // this shouldn't be necessary since i manually saved everything after running once, but just in case, this will make sure it works even without doing that after a future decompile
   const extras = item._extras;
   if (extras.processable && extras.processType == ProcessType.Smelt) {
     const result = items.get(extras.processedItem!)!;
@@ -267,7 +310,7 @@ for (const [guid, item] of items) {
     result.recipes.push(recipe);
     allRecipes.push(recipe);
   }
-  if (extras.craftable && extras.stationRequirement !== cauldron) {
+  if (allCrafting.has(guid)) {
     for (const { item: ingredient } of extras.requirements) {
       items.get(ingredient)!.ingredientFor.push({
         result: guid,
@@ -276,6 +319,9 @@ for (const [guid, item] of items) {
     }
     const recipe: Recipe = {
       result: item.name,
+      station: [handcrafts, workbench, anvil, fletch].findIndex((station) =>
+        station.includes(guid)
+      )!,
       type: RecipeType.Crafting,
       ingredients: extras.requirements,
       amount: extras.craftAmount,
@@ -357,7 +403,7 @@ function info(item: Item): string {
   }
   if (
     item.tag == ItemTag.Arrow &&
-    prefabs.get(item.prefab!)!.has(scripts.EnemyProjectile)
+    prefabs.get(item.prefab!)!.scripts.has(scripts.EnemyProjectile)
   ) {
     lines.push("- Enemy Projectile");
   }
@@ -439,19 +485,16 @@ function info(item: Item): string {
 
 export const sections: [string, string][] = [];
 
-const index = new Map<number, string>();
-for (const [, item] of items) {
-  index.set(item.id, link(item.name));
-}
-
 sections.push([
   "Items by ID",
-  Array.from(index.entries()).sort(([a, _a], [b, _b]) => a - b).map((
-    [index, item],
-  ) => `${index}. ${item}`).join("\n"),
+  itemList.map((item, i) => `${i}. ${link(items.get(item)!.name)}`).join("\n"),
 ]);
 
-for (const item of Array.from(items.values()).sort((a, b) => a.id - b.id)) {
+for (
+  const item of itemList.map((guid) => items.get(guid)!).sort((a, b) =>
+    a.id - b.id
+  )
+) {
   references.push(
     `[item-${item.id}]: ../Assets/Texture2D/${
       encodeURIComponent(images.get(item.sprite)!)
@@ -461,25 +504,27 @@ for (const item of Array.from(items.values()).sort((a, b) => a.id - b.id)) {
 
 sections.push([
   "Items by name",
-  Array.from(items.values()).sort((a, b) => a.name.localeCompare(b.name)).map(
+  itemList.map((guid) => items.get(guid)!).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  ).map(
     (item) => `- ${link(item.name)}`,
   ).join("\n"),
 ]);
 
 sections.push([
   "Items",
-  Array.from(items.values()).sort((a, b) =>
+  itemList.map((guid) => items.get(guid)!).sort((a, b) =>
     a.rarity - b.rarity || a.name.localeCompare(b.name)
   ).map(info).join("\n\n---\n\n"),
 ]);
-const craftingRecipes: string[] = [];
+const craftingRecipes: string[][] = [[], [], [], []];
 const cauldronRecipes: string[] = [];
 const furnaceRecipes: string[] = [];
 
 for (const recipe of allRecipes) {
   switch (recipe.type) {
     case RecipeType.Crafting:
-      craftingRecipes.push(
+      craftingRecipes[recipe.station].push(
         `- ${
           recipe.ingredients.map(({ item, amount }) =>
             `${amount} ${link(items.get(item)!.name)}`
@@ -508,12 +553,16 @@ for (const recipe of allRecipes) {
 
 sections.push([
   "Recipes",
-  `### Crafting Recipes
-${craftingRecipes.join("\n")}
+  `${
+    craftingRecipes.map((recipes, i) =>
+      `### ${CraftingStations[i]} Recipes
+${recipes.join("\n")}`
+    ).join("\n---\n")
+  }
 ---
-### Cauldron Recipes
+### ${link("Cauldron")} Recipes
 ${cauldronRecipes.join("\n")}
 ---
-### Furnace Recipes
+### ${link("Furnace")} Recipes
 ${furnaceRecipes.join("\n")}`,
 ]);

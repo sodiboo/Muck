@@ -3,10 +3,8 @@ using Steamworks;
 using Steamworks.Data;
 using UnityEngine;
 
-// Token: 0x0200011A RID: 282
 public class SteamLobby : MonoBehaviour
 {
-	// Token: 0x06000814 RID: 2068 RVA: 0x00028BEC File Offset: 0x00026DEC
 	private void Awake()
 	{
 		if (SteamLobby.Instance)
@@ -18,7 +16,6 @@ public class SteamLobby : MonoBehaviour
 		DontDestroyOnLoad(base.gameObject);
 	}
 
-	// Token: 0x06000815 RID: 2069 RVA: 0x00028C17 File Offset: 0x00026E17
 	private void InitLobby(Lobby l)
 	{
 		this.currentLobby = l;
@@ -26,7 +23,6 @@ public class SteamLobby : MonoBehaviour
 		SteamLobby.steamIdToClientId = new Dictionary<ulong, int>();
 	}
 
-	// Token: 0x06000816 RID: 2070 RVA: 0x00028C30 File Offset: 0x00026E30
 	public void StartLobby(SteamId hostSteamId, Lobby l)
 	{
 		this.InitLobby(l);
@@ -35,7 +31,6 @@ public class SteamLobby : MonoBehaviour
 		this.started = false;
 	}
 
-	// Token: 0x06000817 RID: 2071 RVA: 0x00028C5C File Offset: 0x00026E5C
 	public void CloseLobby()
 	{
 		SteamLobby.steamIdToClientId = new Dictionary<ulong, int>();
@@ -43,7 +38,6 @@ public class SteamLobby : MonoBehaviour
 		this.started = false;
 	}
 
-	// Token: 0x06000818 RID: 2072 RVA: 0x00028C7C File Offset: 0x00026E7C
 	public void AddPlayerToLobby(Friend friend)
 	{
 		SteamId steamId = friend.Id.Value;
@@ -67,7 +61,6 @@ public class SteamLobby : MonoBehaviour
 		MonoBehaviour.print("finished adding player");
 	}
 
-	// Token: 0x06000819 RID: 2073 RVA: 0x00028D20 File Offset: 0x00026F20
 	public void RemovePlayerFromLobby(Friend friend)
 	{
 		SteamId steamId = friend.Id.Value;
@@ -80,7 +73,6 @@ public class SteamLobby : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600081A RID: 2074 RVA: 0x00028D90 File Offset: 0x00026F90
 	private void InitLobbyClients()
 	{
 		MonoBehaviour.print("initing lobby");
@@ -91,7 +83,6 @@ public class SteamLobby : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600081B RID: 2075 RVA: 0x00028DD4 File Offset: 0x00026FD4
 	private int FindAvailableLobbyId()
 	{
 		for (int i = 0; i < SteamLobby.lobbySize; i++)
@@ -104,7 +95,6 @@ public class SteamLobby : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x0600081C RID: 2076 RVA: 0x00028E08 File Offset: 0x00027008
 	public void StartGame()
 	{
 		if (SteamClient.SteamId.Value != this.currentLobby.Owner.Id.Value)
@@ -139,7 +129,6 @@ public class SteamLobby : MonoBehaviour
 		LocalClient.instance.serverHost = SteamManager.Instance.PlayerSteamId;
 	}
 
-	// Token: 0x0600081D RID: 2077 RVA: 0x00028F34 File Offset: 0x00027134
 	private int FindSeed()
 	{
 		string text = LobbySettings.Instance.seed.text;
@@ -160,7 +149,6 @@ public class SteamLobby : MonoBehaviour
 		return result;
 	}
 
-	// Token: 0x0600081E RID: 2078 RVA: 0x00028F88 File Offset: 0x00027188
 	private GameSettings MakeSettings()
 	{
 		GameSettings gameSettings = new GameSettings(this.FindSeed(), GameSettings.GameMode.Survival, GameSettings.FriendlyFire.Off, GameSettings.Difficulty.Normal, GameSettings.GameLength.Short, GameSettings.Multiplayer.On);
@@ -175,21 +163,15 @@ public class SteamLobby : MonoBehaviour
 		return gameSettings;
 	}
 
-	// Token: 0x040007BD RID: 1981
 	private Lobby currentLobby;
 
-	// Token: 0x040007BE RID: 1982
 	public static Dictionary<ulong, int> steamIdToClientId = new Dictionary<ulong, int>();
 
-	// Token: 0x040007BF RID: 1983
 	public GameObject startButton;
 
-	// Token: 0x040007C0 RID: 1984
 	public static int lobbySize = 10;
 
-	// Token: 0x040007C1 RID: 1985
 	private bool started;
 
-	// Token: 0x040007C2 RID: 1986
 	public static SteamLobby Instance;
 }

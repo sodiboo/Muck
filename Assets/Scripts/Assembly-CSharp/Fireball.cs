@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000036 RID: 54
 public class Fireball : MonoBehaviour
 {
-	// Token: 0x06000140 RID: 320 RVA: 0x00007CA8 File Offset: 0x00005EA8
 	private void Start()
 	{
 		Vector3 forward = base.transform.forward;
@@ -26,9 +24,7 @@ public class Fireball : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400013C RID: 316
 	public InventoryItem fireball;
 
-	// Token: 0x0400013D RID: 317
 	public GameObject warningFx;
 }

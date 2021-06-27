@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200003E RID: 62
 public class Grass : MonoBehaviour
 {
-	// Token: 0x06000169 RID: 361 RVA: 0x00008C5C File Offset: 0x00006E5C
 	private void Awake()
 	{
 		this.grassPool = new GameObject[this.thicc, this.thicc];
@@ -19,7 +17,6 @@ public class Grass : MonoBehaviour
 		InvokeRepeating(nameof(MakeGrass), 0f, this.updateRate);
 	}
 
-	// Token: 0x0600016A RID: 362 RVA: 0x00008CDC File Offset: 0x00006EDC
 	private void MakeGrass()
 	{
 		float num = this.length / (float)this.thicc;
@@ -52,31 +49,23 @@ public class Grass : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600016B RID: 363 RVA: 0x00008E8B File Offset: 0x0000708B
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireCube(base.transform.position, Vector3.one * this.length);
 	}
 
-	// Token: 0x04000165 RID: 357
 	public float length;
 
-	// Token: 0x04000166 RID: 358
 	public int thicc = 10;
 
-	// Token: 0x04000167 RID: 359
 	public GameObject grass;
 
-	// Token: 0x04000168 RID: 360
 	private GameObject[,] grassPool;
 
-	// Token: 0x04000169 RID: 361
 	private Dictionary<(float, float), int> grassPositions;
 
-	// Token: 0x0400016A RID: 362
 	public LayerMask whatIsGround;
 
-	// Token: 0x0400016B RID: 363
 	private float updateRate = 0.02f;
 }

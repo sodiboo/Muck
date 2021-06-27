@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000E9 RID: 233
 public class MobZone : SpawnZone
 {
-	// Token: 0x06000731 RID: 1841 RVA: 0x00024EB8 File Offset: 0x000230B8
 	public override void ServerSpawnEntity()
 	{
 		MonoBehaviour.print("spawning mob from id: " + this.id);
@@ -30,7 +28,6 @@ public class MobZone : SpawnZone
 		}
 	}
 
-	// Token: 0x06000732 RID: 1842 RVA: 0x00024F90 File Offset: 0x00023190
 	public override GameObject LocalSpawnEntity(Vector3 pos, int mobType, int mobId, int zoneId)
 	{
 		Mob component = Instantiate<GameObject>(MobSpawner.Instance.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
@@ -40,6 +37,5 @@ public class MobZone : SpawnZone
 		return component.gameObject;
 	}
 
-	// Token: 0x040006B3 RID: 1715
 	public MobType mobType;
 }

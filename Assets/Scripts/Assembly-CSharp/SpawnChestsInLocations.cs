@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200010E RID: 270
 public class SpawnChestsInLocations : MonoBehaviour
 {
-	// Token: 0x060007E9 RID: 2025 RVA: 0x00027EF4 File Offset: 0x000260F4
 	public void SetChests(ConsistentRandom rand)
 	{
 		foreach (SpawnChestsInLocations.WeightedTables weightedTables in this.lootTables)
@@ -34,7 +32,6 @@ public class SpawnChestsInLocations : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007EA RID: 2026 RVA: 0x00028024 File Offset: 0x00026224
 	public LootDrop FindLootTable(SpawnChestsInLocations.WeightedTables[] structurePrefabs, float totalWeight, ConsistentRandom rand)
 	{
 		float num = (float)rand.NextDouble();
@@ -51,26 +48,19 @@ public class SpawnChestsInLocations : MonoBehaviour
 		return structurePrefabs[0].table;
 	}
 
-	// Token: 0x0400078A RID: 1930
 	public Transform[] positions;
 
-	// Token: 0x0400078B RID: 1931
 	public SpawnChestsInLocations.WeightedTables[] lootTables;
 
-	// Token: 0x0400078C RID: 1932
 	public GameObject chest;
 
-	// Token: 0x0400078D RID: 1933
 	private float totalWeight;
 
-	// Token: 0x0200017F RID: 383
 	[Serializable]
 	public class WeightedTables
 	{
-		// Token: 0x04000984 RID: 2436
 		public LootDrop table;
 
-		// Token: 0x04000985 RID: 2437
 		public float weight;
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000080 RID: 128
 public class ProjectileAttackNoGravity : MonoBehaviour
 {
-	// Token: 0x060002FF RID: 767 RVA: 0x00010473 File Offset: 0x0000E673
 	private void Awake()
 	{
 		this.mob = base.GetComponent<Mob>();
 	}
 
-	// Token: 0x06000300 RID: 768 RVA: 0x00010484 File Offset: 0x0000E684
 	private void SpawnProjectile()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -26,7 +23,6 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position, normalized, force, id, id2);
 	}
 
-	// Token: 0x06000301 RID: 769 RVA: 0x00010544 File Offset: 0x0000E744
 	public void SpawnPredictedWarningAttack()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -50,7 +46,6 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(vector2, vector, force, id, id2);
 	}
 
-	// Token: 0x06000302 RID: 770 RVA: 0x00010610 File Offset: 0x0000E810
 	public void SpawnProjectilePredictionTrajectory()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -72,7 +67,6 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position2, normalized, force, id, id2);
 	}
 
-	// Token: 0x06000303 RID: 771 RVA: 0x000106D8 File Offset: 0x0000E8D8
 	public void SpawnProjectilePredictNextPosition()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -99,7 +93,6 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position3, vector, force, id, id2);
 	}
 
-	// Token: 0x06000304 RID: 772 RVA: 0x000107D4 File Offset: 0x0000E9D4
 	private Vector3 findLaunchVelocity(Vector3 targetPosition, GameObject newProjectile)
 	{
 		if (this.useLowestLaunchAngle)
@@ -140,33 +133,23 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		return vector2;
 	}
 
-	// Token: 0x04000303 RID: 771
 	public InventoryItem projectile;
 
-	// Token: 0x04000304 RID: 772
 	public InventoryItem predictionProjectile;
 
-	// Token: 0x04000305 RID: 773
 	public InventoryItem warningAttack;
 
-	// Token: 0x04000306 RID: 774
 	public Transform spawnPos;
 
-	// Token: 0x04000307 RID: 775
 	public Transform predictionPos;
 
-	// Token: 0x04000308 RID: 776
 	public float attackForce = 1000f;
 
-	// Token: 0x04000309 RID: 777
 	public float launchAngle = 40f;
 
-	// Token: 0x0400030A RID: 778
 	public bool useLowestLaunchAngle;
 
-	// Token: 0x0400030B RID: 779
 	public Vector3 angularVel;
 
-	// Token: 0x0400030C RID: 780
 	private Mob mob;
 }

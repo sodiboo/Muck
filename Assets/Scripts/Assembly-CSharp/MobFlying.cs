@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000B0 RID: 176
 public class MobFlying : Mob
 {
-	// Token: 0x060004B3 RID: 1203 RVA: 0x000180C8 File Offset: 0x000162C8
 	public override void ExtraUpdate()
 	{
 		if (!base.target)
@@ -20,9 +18,7 @@ public class MobFlying : Mob
 		}
 	}
 
-	// Token: 0x04000463 RID: 1123
 	private float defaultHeight = 5.6f;
 
-	// Token: 0x04000464 RID: 1124
 	public LayerMask whatIsGround;
 }

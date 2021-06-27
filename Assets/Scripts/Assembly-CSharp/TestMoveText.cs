@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000120 RID: 288
 public class TestMoveText : MonoBehaviour
 {
-	// Token: 0x06000856 RID: 2134 RVA: 0x00029CA4 File Offset: 0x00027EA4
 	private void Awake()
 	{
 		this.toSurface = new List<int>();
@@ -22,7 +20,6 @@ public class TestMoveText : MonoBehaviour
 		InvokeRepeating(nameof(AddMaterial), num * (float)base.transform.childCount + num2 + 2f, 0.05f);
 	}
 
-	// Token: 0x06000857 RID: 2135 RVA: 0x00029D90 File Offset: 0x00027F90
 	private void AddMaterial()
 	{
 		this.a++;
@@ -56,7 +53,6 @@ public class TestMoveText : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000858 RID: 2136 RVA: 0x00029F44 File Offset: 0x00028144
 	private void SlowUpdate()
 	{
 		int index = Random.Range(0, this.notSurfacing.Count);
@@ -69,7 +65,6 @@ public class TestMoveText : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000859 RID: 2137 RVA: 0x00029FA4 File Offset: 0x000281A4
 	private void Update()
 	{
 		int num = 0;
@@ -81,30 +76,21 @@ public class TestMoveText : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040007E1 RID: 2017
 	private List<int> toSurface;
 
-	// Token: 0x040007E2 RID: 2018
 	private List<int> notSurfacing;
 
-	// Token: 0x040007E3 RID: 2019
 	private Transform[] children;
 
-	// Token: 0x040007E4 RID: 2020
 	private Vector3 startHeight;
 
-	// Token: 0x040007E5 RID: 2021
 	public Material[] mats;
 
-	// Token: 0x040007E6 RID: 2022
 	public GameObject[] trees;
 
-	// Token: 0x040007E7 RID: 2023
 	private int a;
 
-	// Token: 0x040007E8 RID: 2024
 	public LayerMask whatIsGround;
 
-	// Token: 0x040007E9 RID: 2025
 	public Vector3 drawArea;
 }

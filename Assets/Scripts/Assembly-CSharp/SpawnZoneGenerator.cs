@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020000EC RID: 236
 public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 {
-	// Token: 0x17000055 RID: 85
-	// (get) Token: 0x0600073A RID: 1850 RVA: 0x0002509D File Offset: 0x0002329D
-	// (set) Token: 0x0600073B RID: 1851 RVA: 0x000250A5 File Offset: 0x000232A5
 	public float worldScale { get; set; } = 12f;
 
-	// Token: 0x0600073C RID: 1852 RVA: 0x000250B0 File Offset: 0x000232B0
 	private void Start()
 	{
 		this.zones = new List<SpawnZone>();
@@ -46,18 +41,14 @@ public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 		this.nZones = this.zones.Count;
 	}
 
-	// Token: 0x0600073D RID: 1853
 	public abstract void AddEntitiesToZone();
 
-	// Token: 0x0600073E RID: 1854
 	public abstract SpawnZone ProcessZone(SpawnZone zone);
 
-	// Token: 0x0600073F RID: 1855 RVA: 0x000252A4 File Offset: 0x000234A4
 	private void OnDrawGizmos()
 	{
 	}
 
-	// Token: 0x06000740 RID: 1856 RVA: 0x000252B4 File Offset: 0x000234B4
 	public T FindObjectToSpawn(T[] entityTypes, float totalWeight)
 	{
 		float num = (float)this.randomGen.NextDouble();
@@ -73,39 +64,27 @@ public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 		return entityTypes[0];
 	}
 
-	// Token: 0x040006B4 RID: 1716
 	public GameObject spawnZone;
 
-	// Token: 0x040006B5 RID: 1717
 	private int mapChunkSize;
 
-	// Token: 0x040006B7 RID: 1719
 	private float worldEdgeBuffer = 0.6f;
 
-	// Token: 0x040006B8 RID: 1720
 	public int nZones = 50;
 
-	// Token: 0x040006B9 RID: 1721
 	protected ConsistentRandom randomGen;
 
-	// Token: 0x040006BA RID: 1722
 	public LayerMask whatIsTerrain;
 
-	// Token: 0x040006BB RID: 1723
 	protected List<SpawnZone> zones;
 
-	// Token: 0x040006BC RID: 1724
 	public int seedOffset;
 
-	// Token: 0x040006BD RID: 1725
 	private Vector3[] shrines;
 
-	// Token: 0x040006BE RID: 1726
 	protected float totalWeight;
 
-	// Token: 0x040006BF RID: 1727
 	public T[] entities;
 
-	// Token: 0x040006C0 RID: 1728
 	public float[] weights;
 }

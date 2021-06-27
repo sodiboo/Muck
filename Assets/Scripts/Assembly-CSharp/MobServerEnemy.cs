@@ -1,27 +1,22 @@
 ﻿using UnityEngine;
 
-// Token: 0x020000B2 RID: 178
 public class MobServerEnemy : MobServer
 {
-	// Token: 0x060004BE RID: 1214 RVA: 0x00018356 File Offset: 0x00016556
 	protected void Start()
 	{
 		base.StartRoutines();
 		this.groundMask = 1 << LayerMask.NameToLayer("Ground");
 	}
 
-	// Token: 0x060004BF RID: 1215 RVA: 0x00018378 File Offset: 0x00016578
 	protected override void Behaviour()
 	{
 		this.TryAttack();
 	}
 
-	// Token: 0x060004C0 RID: 1216 RVA: 0x000030D7 File Offset: 0x000012D7
 	public override void TookDamage()
 	{
 	}
 
-	// Token: 0x060004C1 RID: 1217 RVA: 0x00018380 File Offset: 0x00016580
 	private void TryAttack()
 	{
 		if (!this.mob.target)
@@ -44,7 +39,6 @@ public class MobServerEnemy : MobServer
 		this.AttackBehaviour();
 	}
 
-	// Token: 0x060004C2 RID: 1218 RVA: 0x000183F4 File Offset: 0x000165F4
 	protected virtual void AttackBehaviour()
 	{
 		if (Vector3.Distance(this.mob.target.position, base.transform.position) <= this.mob.mobType.startAttackDistance)
@@ -61,13 +55,11 @@ public class MobServerEnemy : MobServer
 		}
 	}
 
-	// Token: 0x060004C3 RID: 1219 RVA: 0x00018509 File Offset: 0x00016709
 	protected void GetReady()
 	{
 		this.serverReadyToAttack = true;
 	}
 
-	// Token: 0x060004C4 RID: 1220 RVA: 0x00018514 File Offset: 0x00016714
 	protected override Vector3 FindNextPosition()
 	{
 		float num = 15f * this.mob.mobType.followPlayerDistance;
@@ -180,9 +172,7 @@ public class MobServerEnemy : MobServer
 		return vector;
 	}
 
-	// Token: 0x0400046B RID: 1131
 	public LayerMask groundMask;
 
-	// Token: 0x0400046C RID: 1132
 	protected bool serverReadyToAttack = true;
 }

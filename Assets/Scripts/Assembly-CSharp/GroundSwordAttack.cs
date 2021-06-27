@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000045 RID: 69
 public class GroundSwordAttack : MonoBehaviour
 {
-	// Token: 0x06000198 RID: 408 RVA: 0x000099E0 File Offset: 0x00007BE0
 	private void Start()
 	{
 		Debug.LogError("Spawned");
@@ -37,7 +35,6 @@ public class GroundSwordAttack : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000199 RID: 409 RVA: 0x00009BD8 File Offset: 0x00007DD8
 	private void Update()
 	{
 		this.rb.velocity = base.transform.forward * this.projectile.bowComponent.projectileSpeed;
@@ -45,7 +42,6 @@ public class GroundSwordAttack : MonoBehaviour
 		this.SpinRock();
 	}
 
-	// Token: 0x0600019A RID: 410 RVA: 0x00009C14 File Offset: 0x00007E14
 	private void KeepRockGrounded()
 	{
 		RaycastHit raycastHit;
@@ -57,7 +53,6 @@ public class GroundSwordAttack : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600019B RID: 411 RVA: 0x00009C8C File Offset: 0x00007E8C
 	private void SpinRock()
 	{
 		RaycastHit raycastHit;
@@ -69,30 +64,21 @@ public class GroundSwordAttack : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000189 RID: 393
 	public Rigidbody rb;
 
-	// Token: 0x0400018A RID: 394
 	public float speed = 60f;
 
-	// Token: 0x0400018B RID: 395
 	public LayerMask whatIsGround;
 
-	// Token: 0x0400018C RID: 396
 	public Transform rollRock;
 
-	// Token: 0x0400018D RID: 397
 	public GameObject rollPrefab;
 
-	// Token: 0x0400018E RID: 398
 	public InventoryItem projectile;
 
-	// Token: 0x0400018F RID: 399
 	private bool child;
 
-	// Token: 0x04000190 RID: 400
 	private Vector3 rollAxis;
 
-	// Token: 0x04000191 RID: 401
 	private float rollSpeed = 10f;
 }

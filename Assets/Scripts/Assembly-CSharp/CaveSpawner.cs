@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000014 RID: 20
 public class CaveSpawner : MonoBehaviour
 {
-	// Token: 0x17000008 RID: 8
-	// (get) Token: 0x06000077 RID: 119 RVA: 0x000044D7 File Offset: 0x000026D7
-	// (set) Token: 0x06000078 RID: 120 RVA: 0x000044DF File Offset: 0x000026DF
 	public float worldScale { get; set; } = 12f;
 
-	// Token: 0x06000079 RID: 121 RVA: 0x000044E8 File Offset: 0x000026E8
 	private void Start()
 	{
 		this.structures = new List<GameObject>();
@@ -61,7 +56,6 @@ public class CaveSpawner : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600007A RID: 122 RVA: 0x00004744 File Offset: 0x00002944
 	public virtual void Process(GameObject newStructure, RaycastHit hit)
 	{
 		Cave component = newStructure.GetComponent<Cave>();
@@ -69,12 +63,10 @@ public class CaveSpawner : MonoBehaviour
 		component.SetCave(this.randomGen);
 	}
 
-	// Token: 0x0600007B RID: 123 RVA: 0x00004784 File Offset: 0x00002984
 	private void OnDrawGizmos()
 	{
 	}
 
-	// Token: 0x0600007C RID: 124 RVA: 0x00004794 File Offset: 0x00002994
 	public GameObject FindObjectToSpawn(CaveSpawner.WeightedSpawn[] structurePrefabs, float totalWeight)
 	{
 		float num = (float)this.randomGen.NextDouble();
@@ -90,47 +82,33 @@ public class CaveSpawner : MonoBehaviour
 		return structurePrefabs[0].prefab;
 	}
 
-	// Token: 0x04000077 RID: 119
 	public CaveSpawner.WeightedSpawn[] structurePrefabs;
 
-	// Token: 0x04000078 RID: 120
 	private int mapChunkSize;
 
-	// Token: 0x0400007A RID: 122
 	private float worldEdgeBuffer = 0.6f;
 
-	// Token: 0x0400007B RID: 123
 	public int maxCaves = 50;
 
-	// Token: 0x0400007C RID: 124
 	public int minCaves = 3;
 
-	// Token: 0x0400007D RID: 125
 	protected ConsistentRandom randomGen;
 
-	// Token: 0x0400007E RID: 126
 	public LayerMask whatIsTerrain;
 
-	// Token: 0x0400007F RID: 127
 	private List<GameObject> structures;
 
-	// Token: 0x04000080 RID: 128
 	public bool dontAddToResourceManager;
 
-	// Token: 0x04000081 RID: 129
 	private Vector3[] shrines;
 
-	// Token: 0x04000082 RID: 130
 	private float totalWeight;
 
-	// Token: 0x0200013E RID: 318
 	[Serializable]
 	public class WeightedSpawn
 	{
-		// Token: 0x04000883 RID: 2179
 		public GameObject prefab;
 
-		// Token: 0x04000884 RID: 2180
 		public float weight;
 	}
 }

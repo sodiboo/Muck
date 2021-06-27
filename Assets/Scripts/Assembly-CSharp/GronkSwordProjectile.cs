@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000043 RID: 67
 public class GronkSwordProjectile : MonoBehaviour
 {
-	// Token: 0x06000191 RID: 401 RVA: 0x00009734 File Offset: 0x00007934
 	private void Start()
 	{
 		Vector3 forward = base.transform.forward;

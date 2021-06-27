@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000044 RID: 68
 public class GroundRollAttack : MonoBehaviour
 {
-	// Token: 0x06000193 RID: 403 RVA: 0x000097BC File Offset: 0x000079BC
 	private void Start()
 	{
 		Vector3 forward = base.transform.forward;
@@ -30,14 +28,12 @@ public class GroundRollAttack : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000194 RID: 404 RVA: 0x00009911 File Offset: 0x00007B11
 	private void Update()
 	{
 		this.KeepRockGrounded();
 		this.SpinRock();
 	}
 
-	// Token: 0x06000195 RID: 405 RVA: 0x00009920 File Offset: 0x00007B20
 	private void KeepRockGrounded()
 	{
 		RaycastHit raycastHit;
@@ -49,33 +45,24 @@ public class GroundRollAttack : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000196 RID: 406 RVA: 0x00009995 File Offset: 0x00007B95
 	private void SpinRock()
 	{
 		this.rollRock.transform.Rotate(this.rollAxis * this.rollSpeed * Time.deltaTime);
 	}
 
-	// Token: 0x04000181 RID: 385
 	public Rigidbody rb;
 
-	// Token: 0x04000182 RID: 386
 	public float speed = 60f;
 
-	// Token: 0x04000183 RID: 387
 	public LayerMask whatIsGround;
 
-	// Token: 0x04000184 RID: 388
 	public Transform rollRock;
 
-	// Token: 0x04000185 RID: 389
 	public GameObject rollPrefab;
 
-	// Token: 0x04000186 RID: 390
 	private bool child;
 
-	// Token: 0x04000187 RID: 391
 	private Vector3 rollAxis;
 
-	// Token: 0x04000188 RID: 392
 	private float rollSpeed = 10f;
 }

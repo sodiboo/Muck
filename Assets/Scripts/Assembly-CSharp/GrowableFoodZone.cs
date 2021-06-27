@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-// Token: 0x020000E8 RID: 232
 public class GrowableFoodZone : SpawnZone
 {
-	// Token: 0x0600072D RID: 1837 RVA: 0x00024D78 File Offset: 0x00022F78
 	public override void ServerSpawnEntity()
 	{
 		MonoBehaviour.print("spawning food from id: " + this.id);
@@ -19,7 +17,6 @@ public class GrowableFoodZone : SpawnZone
 		ServerSend.PickupZoneSpawn(vector, num, nextId, this.id);
 	}
 
-	// Token: 0x0600072E RID: 1838 RVA: 0x00024DF4 File Offset: 0x00022FF4
 	public override GameObject LocalSpawnEntity(Vector3 pos, int entityId, int objectId, int zoneId)
 	{
 		GameObject gameObject = Instantiate<GameObject>(ItemManager.Instance.allItems[entityId].prefab, pos, Quaternion.identity);
@@ -29,7 +26,6 @@ public class GrowableFoodZone : SpawnZone
 		return gameObject;
 	}
 
-	// Token: 0x0600072F RID: 1839 RVA: 0x00024E48 File Offset: 0x00023048
 	public int FindItemToSpawn()
 	{
 		float num = Random.Range(0f, 1f);
@@ -45,12 +41,9 @@ public class GrowableFoodZone : SpawnZone
 		return this.spawnItems[0].id;
 	}
 
-	// Token: 0x040006B0 RID: 1712
 	public InventoryItem[] spawnItems;
 
-	// Token: 0x040006B1 RID: 1713
 	public float[] spawnChance;
 
-	// Token: 0x040006B2 RID: 1714
 	public float totalWeight;
 }

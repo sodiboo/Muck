@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000113 RID: 275
 public class SpawnResourcesInLocations : MonoBehaviour
 {
-	// Token: 0x060007F6 RID: 2038 RVA: 0x000282C8 File Offset: 0x000264C8
 	public void SetResources(ConsistentRandom rand)
 	{
 		foreach (SpawnResourcesInLocations.WeightedTables weightedTables in this.lootTables)
@@ -42,7 +40,6 @@ public class SpawnResourcesInLocations : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060007F7 RID: 2039 RVA: 0x00028438 File Offset: 0x00026638
 	public GameObject FindResource(SpawnResourcesInLocations.WeightedTables[] structurePrefabs, float totalWeight, ConsistentRandom rand)
 	{
 		float num = (float)rand.NextDouble();
@@ -58,29 +55,21 @@ public class SpawnResourcesInLocations : MonoBehaviour
 		return structurePrefabs[0].resource;
 	}
 
-	// Token: 0x04000796 RID: 1942
 	public Transform[] positions;
 
-	// Token: 0x04000797 RID: 1943
 	public SpawnResourcesInLocations.WeightedTables[] lootTables;
 
-	// Token: 0x04000798 RID: 1944
 	public int minResources;
 
-	// Token: 0x04000799 RID: 1945
 	public bool randomRotation = true;
 
-	// Token: 0x0400079A RID: 1946
 	private float totalWeight;
 
-	// Token: 0x02000180 RID: 384
 	[Serializable]
 	public class WeightedTables
 	{
-		// Token: 0x04000986 RID: 2438
 		public GameObject resource;
 
-		// Token: 0x04000987 RID: 2439
 		public float weight;
 	}
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000037 RID: 55
 public class FloatItem : MonoBehaviour
 {
-	// Token: 0x06000142 RID: 322 RVA: 0x00007DE2 File Offset: 0x00005FE2
 	private void Start()
 	{
 		this.PositionItem();
@@ -13,7 +11,6 @@ public class FloatItem : MonoBehaviour
 		base.transform.localScale = Vector3.zero;
 	}
 
-	// Token: 0x06000143 RID: 323 RVA: 0x00007E24 File Offset: 0x00006024
 	private void Update()
 	{
 		base.transform.localScale = Vector3.Lerp(base.transform.localScale, this.desiredScale, Time.deltaTime * 7f);
@@ -23,7 +20,6 @@ public class FloatItem : MonoBehaviour
 		base.transform.position = new Vector3(base.transform.position.x, this.yPos + this.yOffset, base.transform.position.z);
 	}
 
-	// Token: 0x06000144 RID: 324 RVA: 0x00007EF8 File Offset: 0x000060F8
 	private void PositionItem()
 	{
 		this.whatIsGround = LayerMask.GetMask(new string[]
@@ -37,21 +33,15 @@ public class FloatItem : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400013E RID: 318
 	private LayerMask whatIsGround;
 
-	// Token: 0x0400013F RID: 319
 	private float floatHeight = 2f;
 
-	// Token: 0x04000140 RID: 320
 	private Vector3 desiredScale;
 
-	// Token: 0x04000141 RID: 321
 	private float yPos;
 
-	// Token: 0x04000142 RID: 322
 	private float yOffset;
 
-	// Token: 0x04000143 RID: 323
 	public float maxOffset = 0.5f;
 }

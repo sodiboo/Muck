@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Arrow_Mithril
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   important: 0
-  id: 72
+  id: 127
   name: Mithril Arrow
   description: Sharp arrow
   type: 0
@@ -42,7 +43,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 11400000, guid: b66ee1ade389b7d43909fe30259795f1, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1972850023764178, guid: 13f32a6915e1b644fa01ca73faca4db1, type: 2}
+  prefab: {fileID: 1972850023764178, guid: 13f32a6915e1b644fa01ca73faca4db1, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -58,4 +59,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 8
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 0

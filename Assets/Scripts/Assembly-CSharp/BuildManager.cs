@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200000D RID: 13
 public class BuildManager : MonoBehaviour
 {
-	// Token: 0x0600004D RID: 77 RVA: 0x0000380F File Offset: 0x00001A0F
 	private void Awake()
 	{
 		BuildManager.Instance = this;
@@ -12,7 +10,6 @@ public class BuildManager : MonoBehaviour
 		this.renderer = this.ghostItem.GetComponent<Renderer>();
 	}
 
-	// Token: 0x0600004E RID: 78 RVA: 0x0000383C File Offset: 0x00001A3C
 	private void SetNewItem()
 	{
 		this.filter.mesh = this.currentItem.mesh;
@@ -37,13 +34,11 @@ public class BuildManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600004F RID: 79 RVA: 0x00003924 File Offset: 0x00001B24
 	private void Update()
 	{
 		this.NewestBuild();
 	}
 
-	// Token: 0x06000050 RID: 80 RVA: 0x0000392C File Offset: 0x00001B2C
 	private void NewestBuild()
 	{
 		this.debugInfo = "";
@@ -148,7 +143,6 @@ public class BuildManager : MonoBehaviour
 		this.ghostItem.transform.position = vector2;
 	}
 
-	// Token: 0x06000051 RID: 81 RVA: 0x00003DE4 File Offset: 0x00001FE4
 	private void OnDrawGizmos()
 	{
 		if (this.ghostExtents == null)
@@ -164,7 +158,6 @@ public class BuildManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000052 RID: 82 RVA: 0x00003E80 File Offset: 0x00002080
 	private Vector3 RotateAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)
 	{
 		Vector3 vector = point - pivot;
@@ -173,13 +166,11 @@ public class BuildManager : MonoBehaviour
 		return point;
 	}
 
-	// Token: 0x06000053 RID: 83 RVA: 0x00003EAC File Offset: 0x000020AC
 	public void RotateBuild(int dir)
 	{
 		this.yRotation -= dir * this.rotationAngle;
 	}
 
-	// Token: 0x06000054 RID: 84 RVA: 0x00003EC4 File Offset: 0x000020C4
 	public void RequestBuildItem()
 	{
 		if (!this.CanBuild() || !this.canBuild)
@@ -191,13 +182,11 @@ public class BuildManager : MonoBehaviour
 		ClientSend.RequestBuild(this.currentItem.id, this.lastPosition, this.yRotation);
 	}
 
-	// Token: 0x06000055 RID: 85 RVA: 0x00003F13 File Offset: 0x00002113
 	public bool CanBuild()
 	{
 		return this.currentItem && this.currentItem.buildable && this.currentItem.amount > 0;
 	}
 
-	// Token: 0x06000056 RID: 86 RVA: 0x00003F44 File Offset: 0x00002144
 	public GameObject BuildItem(int buildOwner, int itemID, int objectId, Vector3 position, int yRotation)
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[itemID];
@@ -253,66 +242,46 @@ public class BuildManager : MonoBehaviour
 		return gameObject;
 	}
 
-	// Token: 0x06000057 RID: 87 RVA: 0x000040DB File Offset: 0x000022DB
 	public int GetNextBuildId()
 	{
 		return ResourceManager.Instance.GetNextId();
 	}
 
-	// Token: 0x0400004A RID: 74
 	public int gridSize = 2;
 
-	// Token: 0x0400004B RID: 75
 	private int gridWidth = 10;
 
-	// Token: 0x0400004C RID: 76
 	public LayerMask whatIsGround;
 
-	// Token: 0x0400004D RID: 77
 	private Transform playerCam;
 
-	// Token: 0x0400004E RID: 78
 	private InventoryItem currentItem;
 
-	// Token: 0x0400004F RID: 79
 	public GameObject buildFx;
 
-	// Token: 0x04000050 RID: 80
 	public GameObject ghostItem;
 
-	// Token: 0x04000051 RID: 81
 	private Renderer renderer;
 
-	// Token: 0x04000052 RID: 82
 	private MeshFilter filter;
 
-	// Token: 0x04000053 RID: 83
 	public int yRotation;
 
-	// Token: 0x04000054 RID: 84
 	public GameObject rotateText;
 
-	// Token: 0x04000055 RID: 85
 	public static BuildManager Instance;
 
-	// Token: 0x04000056 RID: 86
 	private Vector3 lastPosition;
 
-	// Token: 0x04000057 RID: 87
 	private bool canBuild;
 
-	// Token: 0x04000058 RID: 88
 	private Vector3[] ghostExtents;
 
-	// Token: 0x04000059 RID: 89
 	private Collider ghostCollider;
 
-	// Token: 0x0400005A RID: 90
 	private string debugInfo;
 
-	// Token: 0x0400005B RID: 91
 	private int rotationAngle = 45;
 
-	// Token: 0x0400005C RID: 92
 	private int id;
 }

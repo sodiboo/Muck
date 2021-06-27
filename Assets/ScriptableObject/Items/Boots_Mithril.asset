@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Boots_Mithril
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   important: 0
-  id: 80
+  id: 8
   name: Mithril Boots
   description: it protecc foot
   type: 0
@@ -40,7 +41,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 2}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -56,4 +57,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 7
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 0

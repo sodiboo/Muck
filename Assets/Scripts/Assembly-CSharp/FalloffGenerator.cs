@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x020000F4 RID: 244
 public static class FalloffGenerator
 {
-	// Token: 0x06000755 RID: 1877 RVA: 0x000256DC File Offset: 0x000238DC
 	public static float[,] GenerateFalloffMap(int size)
 	{
 		float[,] array = new float[size, size];
@@ -21,7 +19,6 @@ public static class FalloffGenerator
 		return array;
 	}
 
-	// Token: 0x06000756 RID: 1878 RVA: 0x00025750 File Offset: 0x00023950
 	private static float Evaluate(float value)
 	{
 		float p = 3f;

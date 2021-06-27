@@ -3,10 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000009 RID: 9
 public class BossUI : MonoBehaviour
 {
-	// Token: 0x0600003D RID: 61 RVA: 0x000033A6 File Offset: 0x000015A6
 	private void Awake()
 	{
 		BossUI.Instance = this;
@@ -14,7 +12,6 @@ public class BossUI : MonoBehaviour
 		this.desiredScale = Vector3.zero;
 	}
 
-	// Token: 0x0600003E RID: 62 RVA: 0x000033D0 File Offset: 0x000015D0
 	public void SetBoss(Mob b)
 	{
 		if (this.currentBoss != null)
@@ -38,7 +35,6 @@ public class BossUI : MonoBehaviour
 		this.layout.localScale = Vector3.zero;
 	}
 
-	// Token: 0x0600003F RID: 63 RVA: 0x000034A4 File Offset: 0x000016A4
 	private void Update()
 	{
 		if (this.currentBoss == null)
@@ -60,33 +56,23 @@ public class BossUI : MonoBehaviour
 		this.layout.transform.localScale = Vector3.Lerp(this.layout.transform.localScale, this.desiredScale, Time.deltaTime * 10f);
 	}
 
-	// Token: 0x04000038 RID: 56
 	public TextMeshProUGUI bossName;
 
-	// Token: 0x04000039 RID: 57
 	public TextMeshProUGUI hpText;
 
-	// Token: 0x0400003A RID: 58
 	public RawImage hpBar;
 
-	// Token: 0x0400003B RID: 59
 	public Mob currentBoss;
 
-	// Token: 0x0400003C RID: 60
 	private HitableMob hitableMob;
 
-	// Token: 0x0400003D RID: 61
 	private int desiredHp;
 
-	// Token: 0x0400003E RID: 62
 	public Transform layout;
 
-	// Token: 0x0400003F RID: 63
 	private Vector3 desiredScale;
 
-	// Token: 0x04000040 RID: 64
 	public static BossUI Instance;
 
-	// Token: 0x04000041 RID: 65
 	private float currentHp;
 }

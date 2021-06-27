@@ -5,10 +5,8 @@ using System.Net.Sockets;
 using Steamworks;
 using UnityEngine;
 
-// Token: 0x020000B9 RID: 185
 public class LocalClient : MonoBehaviour
 {
-	// Token: 0x06000557 RID: 1367 RVA: 0x0001BA23 File Offset: 0x00019C23
 	private void Awake()
 	{
 		if (LocalClient.instance == null)
@@ -23,20 +21,17 @@ public class LocalClient : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000558 RID: 1368 RVA: 0x0001BA56 File Offset: 0x00019C56
 	private void Start()
 	{
 		this.StartProtocols();
 	}
 
-	// Token: 0x06000559 RID: 1369 RVA: 0x0001BA5E File Offset: 0x00019C5E
 	private void StartProtocols()
 	{
 		this.tcp = new LocalClient.TCP();
 		this.udp = new LocalClient.UDP();
 	}
 
-	// Token: 0x0600055A RID: 1370 RVA: 0x0001BA76 File Offset: 0x00019C76
 	public void ConnectToServer(string ip, string username)
 	{
 		this.ip = ip;
@@ -46,7 +41,6 @@ public class LocalClient : MonoBehaviour
 		this.tcp.Connect();
 	}
 
-	// Token: 0x0600055B RID: 1371 RVA: 0x0001BA9C File Offset: 0x00019C9C
 	public static void InitializeClientData()
 	{
 		LocalClient.packetHandlers = new Dictionary<int, LocalClient.PacketHandler>
@@ -271,13 +265,11 @@ public class LocalClient : MonoBehaviour
 		Debug.Log("Initializing packets.");
 	}
 
-	// Token: 0x0600055C RID: 1372 RVA: 0x0001BEED File Offset: 0x0001A0ED
 	private void OnApplicationQuit()
 	{
 		this.Disconnect();
 	}
 
-	// Token: 0x0600055D RID: 1373 RVA: 0x0001BEF5 File Offset: 0x0001A0F5
 	public void Disconnect()
 	{
 		if (this.isConnected)
@@ -290,53 +282,36 @@ public class LocalClient : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040004A3 RID: 1187
 	public static LocalClient instance;
 
-	// Token: 0x040004A4 RID: 1188
 	public static int dataBufferSize = 4096;
 
-	// Token: 0x040004A5 RID: 1189
 	public SteamId serverHost;
 
-	// Token: 0x040004A6 RID: 1190
 	public string ip = "127.0.0.1";
 
-	// Token: 0x040004A7 RID: 1191
 	public int port = 26950;
 
-	// Token: 0x040004A8 RID: 1192
 	public int myId;
 
-	// Token: 0x040004A9 RID: 1193
 	public LocalClient.TCP tcp;
 
-	// Token: 0x040004AA RID: 1194
 	public LocalClient.UDP udp;
 
-	// Token: 0x040004AB RID: 1195
 	public static bool serverOwner;
 
-	// Token: 0x040004AC RID: 1196
 	private bool isConnected;
 
-	// Token: 0x040004AD RID: 1197
 	public static Dictionary<int, LocalClient.PacketHandler> packetHandlers;
 
-	// Token: 0x040004AE RID: 1198
 	public static int byteDown;
 
-	// Token: 0x040004AF RID: 1199
 	public static int packetsReceived;
 
-	// Token: 0x0200015F RID: 351
-	// (Invoke) Token: 0x06000905 RID: 2309
 	public delegate void PacketHandler(Packet packet);
 
-	// Token: 0x02000160 RID: 352
 	public class TCP
 	{
-		// Token: 0x06000908 RID: 2312 RVA: 0x0002C588 File Offset: 0x0002A788
 		public void Connect()
 		{
 			this.socket = new TcpClient
@@ -348,7 +323,6 @@ public class LocalClient : MonoBehaviour
 			this.socket.BeginConnect(LocalClient.instance.ip, LocalClient.instance.port, new AsyncCallback(this.ConnectCallback), this.socket);
 		}
 
-		// Token: 0x06000909 RID: 2313 RVA: 0x0002C5F8 File Offset: 0x0002A7F8
 		private void ConnectCallback(IAsyncResult result)
 		{
 			this.socket.EndConnect(result);
@@ -361,7 +335,6 @@ public class LocalClient : MonoBehaviour
 			this.stream.BeginRead(this.receiveBuffer, 0, LocalClient.dataBufferSize, new AsyncCallback(this.ReceiveCallback), null);
 		}
 
-		// Token: 0x0600090A RID: 2314 RVA: 0x0002C660 File Offset: 0x0002A860
 		public void SendData(Packet packet)
 		{
 			try
@@ -377,7 +350,6 @@ public class LocalClient : MonoBehaviour
 			}
 		}
 
-		// Token: 0x0600090B RID: 2315 RVA: 0x0002C6B8 File Offset: 0x0002A8B8
 		private void ReceiveCallback(IAsyncResult result)
 		{
 			try
@@ -401,7 +373,6 @@ public class LocalClient : MonoBehaviour
 			}
 		}
 
-		// Token: 0x0600090C RID: 2316 RVA: 0x0002C748 File Offset: 0x0002A948
 		private bool HandleData(byte[] data)
 		{
 			LocalClient.packetsReceived++;
@@ -441,7 +412,6 @@ public class LocalClient : MonoBehaviour
 			return packetLength <= 1;
 		}
 
-		// Token: 0x0600090D RID: 2317 RVA: 0x0002C84F File Offset: 0x0002AA4F
 		private void Disconnect()
 		{
 			LocalClient.instance.Disconnect();
@@ -451,29 +421,22 @@ public class LocalClient : MonoBehaviour
 			this.socket = null;
 		}
 
-		// Token: 0x0400090E RID: 2318
 		public TcpClient socket;
 
-		// Token: 0x0400090F RID: 2319
 		private NetworkStream stream;
 
-		// Token: 0x04000910 RID: 2320
 		private Packet receivedData;
 
-		// Token: 0x04000911 RID: 2321
 		private byte[] receiveBuffer;
 	}
 
-	// Token: 0x02000161 RID: 353
 	public class UDP
 	{
-		// Token: 0x0600090F RID: 2319 RVA: 0x0002C877 File Offset: 0x0002AA77
 		public UDP()
 		{
 			this.endPoint = new IPEndPoint(IPAddress.Parse(LocalClient.instance.ip), LocalClient.instance.port);
 		}
 
-		// Token: 0x06000910 RID: 2320 RVA: 0x0002C8A4 File Offset: 0x0002AAA4
 		public void Connect(int localPort)
 		{
 			this.socket = new UdpClient(localPort);
@@ -485,7 +448,6 @@ public class LocalClient : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06000911 RID: 2321 RVA: 0x0002C910 File Offset: 0x0002AB10
 		public void SendData(Packet packet)
 		{
 			try
@@ -502,7 +464,6 @@ public class LocalClient : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06000912 RID: 2322 RVA: 0x0002C974 File Offset: 0x0002AB74
 		private void ReceiveCallback(IAsyncResult result)
 		{
 			try
@@ -525,7 +486,6 @@ public class LocalClient : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06000913 RID: 2323 RVA: 0x0002C9EC File Offset: 0x0002ABEC
 		private void HandleData(byte[] data)
 		{
 			LocalClient.packetsReceived++;
@@ -545,7 +505,6 @@ public class LocalClient : MonoBehaviour
 			});
 		}
 
-		// Token: 0x06000914 RID: 2324 RVA: 0x0002CA70 File Offset: 0x0002AC70
 		private void Disconnect()
 		{
 			LocalClient.instance.Disconnect();
@@ -553,10 +512,8 @@ public class LocalClient : MonoBehaviour
 			this.socket = null;
 		}
 
-		// Token: 0x04000912 RID: 2322
 		public UdpClient socket;
 
-		// Token: 0x04000913 RID: 2323
 		public IPEndPoint endPoint;
 	}
 }

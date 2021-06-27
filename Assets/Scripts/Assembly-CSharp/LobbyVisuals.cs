@@ -5,10 +5,8 @@ using Steamworks.Data;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200005F RID: 95
 public class LobbyVisuals : MonoBehaviour
 {
-	// Token: 0x06000222 RID: 546 RVA: 0x0000CED8 File Offset: 0x0000B0D8
 	private void Awake()
 	{
 		LobbyVisuals.Instance = this;
@@ -19,19 +17,16 @@ public class LobbyVisuals : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000223 RID: 547 RVA: 0x0000CF1E File Offset: 0x0000B11E
 	private void Start()
 	{
 		MusicController.Instance.PlaySong(MusicController.SongType.Day, false);
 	}
 
-	// Token: 0x06000224 RID: 548 RVA: 0x0000CF2C File Offset: 0x0000B12C
 	public void CopyLobbyId()
 	{
 		GUIUtility.systemCopyBuffer = string.Concat(this.currentLobby.Id.Value);
 	}
 
-	// Token: 0x06000225 RID: 549 RVA: 0x0000CF50 File Offset: 0x0000B150
 	public void CloseLobby()
 	{
 		for (int i = 0; i < this.lobbyPlayers.Length; i++)
@@ -42,7 +37,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.menuUi.LeaveLobby();
 	}
 
-	// Token: 0x06000226 RID: 550 RVA: 0x0000CF9C File Offset: 0x0000B19C
 	public void OpenLobby(Lobby lobby)
 	{
 		this.steamToLobbyId = new Dictionary<ulong, int>();
@@ -73,7 +67,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.menuUi.JoinLobby();
 	}
 
-	// Token: 0x06000227 RID: 551 RVA: 0x0000D0E0 File Offset: 0x0000B2E0
 	public void SpawnLobbyPlayer(Friend friend)
 	{
 		MonoBehaviour.print("spawning lobby player: " + friend.Name);
@@ -85,7 +78,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.playerNames[nextId].text = friend.Name;
 	}
 
-	// Token: 0x06000228 RID: 552 RVA: 0x0000D160 File Offset: 0x0000B360
 	public void DespawnLobbyPlayer(Friend friend)
 	{
 		int num = this.steamToLobbyId[friend.Id.Value];
@@ -95,7 +87,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.playerNames[num].text = "";
 	}
 
-	// Token: 0x06000229 RID: 553 RVA: 0x0000D1D0 File Offset: 0x0000B3D0
 	private int GetNextId()
 	{
 		for (int i = 0; i < this.lobbyPlayers.Length; i++)
@@ -108,30 +99,22 @@ public class LobbyVisuals : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x0600022A RID: 554 RVA: 0x0000D202 File Offset: 0x0000B402
 	public void ExitGame()
 	{
 		Application.Quit(0);
 	}
 
-	// Token: 0x04000245 RID: 581
 	private Dictionary<ulong, int> steamToLobbyId = new Dictionary<ulong, int>();
 
-	// Token: 0x04000246 RID: 582
 	public GameObject[] lobbyPlayers;
 
-	// Token: 0x04000247 RID: 583
 	public TextMeshProUGUI[] playerNames;
 
-	// Token: 0x04000248 RID: 584
 	public TextMeshProUGUI lobbyId;
 
-	// Token: 0x04000249 RID: 585
 	private Lobby currentLobby;
 
-	// Token: 0x0400024A RID: 586
 	public MenuUI menuUi;
 
-	// Token: 0x0400024B RID: 587
 	public static LobbyVisuals Instance;
 }

@@ -6,15 +6,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000015 RID: 21
 public class ChatBox : MonoBehaviour
 {
-	// Token: 0x17000009 RID: 9
-	// (get) Token: 0x0600007E RID: 126 RVA: 0x00004811 File Offset: 0x00002A11
-	// (set) Token: 0x0600007F RID: 127 RVA: 0x00004819 File Offset: 0x00002A19
 	public bool typing { get; set; }
 
-	// Token: 0x06000080 RID: 128 RVA: 0x00004824 File Offset: 0x00002A24
 	private void Awake()
 	{
 		ChatBox.Instance = this;
@@ -29,7 +24,6 @@ public class ChatBox : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000081 RID: 129 RVA: 0x00004887 File Offset: 0x00002A87
 	public static string RemoveWhitespace(string input)
 	{
 		return new string((from c in input.ToCharArray()
@@ -37,7 +31,6 @@ public class ChatBox : MonoBehaviour
 		select c).ToArray<char>());
 	}
 
-	// Token: 0x06000082 RID: 130 RVA: 0x000048C0 File Offset: 0x00002AC0
 	public void AppendMessage(int fromUser, string message, string fromUsername)
 	{
 		string str = this.TrimMessage(message);
@@ -84,7 +77,6 @@ public class ChatBox : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000083 RID: 131 RVA: 0x00004A40 File Offset: 0x00002C40
 	public new void SendMessage(string message)
 	{
 		this.typing = false;
@@ -107,14 +99,12 @@ public class ChatBox : MonoBehaviour
 		this.ClearMessage();
 	}
 
-	// Token: 0x06000084 RID: 132 RVA: 0x00004AF8 File Offset: 0x00002CF8
 	private void ClearMessage()
 	{
 		this.inputField.text = "";
 		this.inputField.interactable = false;
 	}
 
-	// Token: 0x06000085 RID: 133 RVA: 0x00004B18 File Offset: 0x00002D18
 	private void ChatCommand(string message)
 	{
 		string a = message.Substring(1);
@@ -151,7 +141,6 @@ public class ChatBox : MonoBehaviour
 		PlayerStatus.Instance.Damage(0, true);
 	}
 
-	// Token: 0x06000086 RID: 134 RVA: 0x00004C1C File Offset: 0x00002E1C
 	private string TrimMessage(string message)
 	{
 		if (string.IsNullOrEmpty(message))
@@ -161,7 +150,6 @@ public class ChatBox : MonoBehaviour
 		return message.Substring(0, Mathf.Min(message.Length, this.maxMsgLength));
 	}
 
-	// Token: 0x06000087 RID: 135 RVA: 0x00004C44 File Offset: 0x00002E44
 	private void UserInput()
 	{
 		if (Input.GetKeyDown(KeyCode.Return))
@@ -191,13 +179,11 @@ public class ChatBox : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000088 RID: 136 RVA: 0x00004CF2 File Offset: 0x00002EF2
 	private void Update()
 	{
 		this.UserInput();
 	}
 
-	// Token: 0x06000089 RID: 137 RVA: 0x00004CFC File Offset: 0x00002EFC
 	private void HideChat()
 	{
 		if (this.typing)
@@ -211,7 +197,6 @@ public class ChatBox : MonoBehaviour
 		this.inputField.GetComponentInChildren<TextMeshProUGUI>().CrossFadeAlpha(0f, 1f, true);
 	}
 
-	// Token: 0x0600008A RID: 138 RVA: 0x00004D7C File Offset: 0x00002F7C
 	private void ShowChat()
 	{
 		this.overlay.CrossFadeAlpha(1f, 0.2f, true);
@@ -220,42 +205,29 @@ public class ChatBox : MonoBehaviour
 		this.inputField.GetComponentInChildren<TextMeshProUGUI>().CrossFadeAlpha(0.2f, 1f, true);
 	}
 
-	// Token: 0x04000083 RID: 131
 	public Image overlay;
 
-	// Token: 0x04000084 RID: 132
 	public TMP_InputField inputField;
 
-	// Token: 0x04000085 RID: 133
 	public TextMeshProUGUI messages;
 
-	// Token: 0x04000086 RID: 134
 	public Color localPlayer;
 
-	// Token: 0x04000087 RID: 135
 	public Color onlinePlayer;
 
-	// Token: 0x04000088 RID: 136
 	public Color deadPlayer;
 
-	// Token: 0x04000089 RID: 137
 	private Color console = Color.cyan;
 
-	// Token: 0x0400008A RID: 138
 	private int maxMsgLength = 120;
 
-	// Token: 0x0400008B RID: 139
 	private int maxChars = 800;
 
-	// Token: 0x0400008C RID: 140
 	private int purgeAmount = 400;
 
-	// Token: 0x0400008E RID: 142
 	public static ChatBox Instance;
 
-	// Token: 0x0400008F RID: 143
 	public TextAsset profanityList;
 
-	// Token: 0x04000090 RID: 144
 	private List<string> profanity;
 }

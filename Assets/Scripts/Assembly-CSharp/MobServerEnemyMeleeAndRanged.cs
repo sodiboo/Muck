@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 
-// Token: 0x020000B3 RID: 179
 public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 {
-	// Token: 0x060004C6 RID: 1222 RVA: 0x00018A53 File Offset: 0x00016C53
 	private new void Start()
 	{
 		base.Start();
 		Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
 	}
 
-	// Token: 0x060004C7 RID: 1223 RVA: 0x00018A84 File Offset: 0x00016C84
 	protected override void AttackBehaviour()
 	{
 		this.rangedCooldown = this.mob.mobType.rangedCooldown;
@@ -51,15 +48,12 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 		Invoke(nameof(GetReady), this.mob.attackTimes[num5] + Random.Range(0f, this.mob.attackCooldown));
 	}
 
-	// Token: 0x060004C8 RID: 1224 RVA: 0x00018CFC File Offset: 0x00016EFC
 	private void GetReadyForRangedAttack()
 	{
 		this.readyForRangedAttack = true;
 	}
 
-	// Token: 0x0400046D RID: 1133
 	public float rangedCooldown = 6f;
 
-	// Token: 0x0400046E RID: 1134
 	public bool readyForRangedAttack;
 }

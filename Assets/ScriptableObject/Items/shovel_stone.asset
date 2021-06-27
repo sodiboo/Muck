@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: shovel_stone
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   important: 0
-  id: 12
+  id: 117
   name: Shovel
   description: its shovel dig dig
   type: 5
@@ -60,4 +61,5 @@ MonoBehaviour:
   fuel: {fileID: 0}
   tag: 0
   rarity: 0
-  attackTypes:
+  attackTypes: 
+  x: 0

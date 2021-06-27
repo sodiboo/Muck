@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000073 RID: 115
 public class OtherInput : MonoBehaviour
 {
-	// Token: 0x17000017 RID: 23
-	// (get) Token: 0x06000289 RID: 649 RVA: 0x0000E612 File Offset: 0x0000C812
-	// (set) Token: 0x0600028A RID: 650 RVA: 0x0000E61A File Offset: 0x0000C81A
 	public OtherInput.CraftingState craftingState { get; set; }
 
-	// Token: 0x0600028B RID: 651 RVA: 0x0000E623 File Offset: 0x0000C823
 	private void Awake()
 	{
 		OtherInput.Instance = this;
 		this.chestsOpened = new Dictionary<int, bool>();
 	}
 
-	// Token: 0x0600028C RID: 652 RVA: 0x0000E636 File Offset: 0x0000C836
 	public void Unpause()
 	{
 		if (GameManager.gameSettings.multiplayer == GameSettings.Multiplayer.Off)
@@ -30,7 +24,6 @@ public class OtherInput : MonoBehaviour
 		this.pauseUi.SetActive(false);
 	}
 
-	// Token: 0x0600028D RID: 653 RVA: 0x0000E66D File Offset: 0x0000C86D
 	public void Pause()
 	{
 		if (GameManager.gameSettings.multiplayer == GameSettings.Multiplayer.Off)
@@ -43,18 +36,13 @@ public class OtherInput : MonoBehaviour
 		this.pauseUi.SetActive(true);
 	}
 
-	// Token: 0x17000018 RID: 24
-	// (get) Token: 0x0600028E RID: 654 RVA: 0x0000E6A4 File Offset: 0x0000C8A4
-	// (set) Token: 0x0600028F RID: 655 RVA: 0x0000E6AC File Offset: 0x0000C8AC
 	public bool paused { get; set; }
 
-	// Token: 0x06000290 RID: 656 RVA: 0x0000E6B8 File Offset: 0x0000C8B8
 	public bool OtherUiActive()
 	{
 		return this.pauseUi.activeInHierarchy || this.settingsUi.activeInHierarchy || ChatBox.Instance.typing || Map.Instance.active || RespawnTotemUI.Instance.root.activeInHierarchy || (InventoryUI.Instance.gameObject.activeInHierarchy && this.craftingState != OtherInput.CraftingState.Inventory);
 	}
 
-	// Token: 0x06000291 RID: 657 RVA: 0x0000E72C File Offset: 0x0000C92C
 	private void Update()
 	{
 		if (GameManager.state == GameManager.GameState.GameOver)
@@ -114,7 +102,6 @@ public class OtherInput : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000292 RID: 658 RVA: 0x0000E848 File Offset: 0x0000CA48
 	public void ToggleInventory(OtherInput.CraftingState state)
 	{
 		this.craftingState = state;
@@ -182,7 +169,6 @@ public class OtherInput : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000293 RID: 659 RVA: 0x0000EA60 File Offset: 0x0000CC60
 	private void CenterInventory()
 	{
 		if (!this._currentCraftingUiMenu)
@@ -195,13 +181,11 @@ public class OtherInput : MonoBehaviour
 		this.craftingOverlay.offsetMax = new Vector2(0f, -num);
 	}
 
-	// Token: 0x06000294 RID: 660 RVA: 0x0000EABA File Offset: 0x0000CCBA
 	public bool IsAnyMenuOpen()
 	{
 		return InventoryUI.Instance.gameObject.activeInHierarchy;
 	}
 
-	// Token: 0x06000295 RID: 661 RVA: 0x0000EAD0 File Offset: 0x0000CCD0
 	private void CheckStationUnlock()
 	{
 		int stationId = this.GetStationId();
@@ -212,7 +196,6 @@ public class OtherInput : MonoBehaviour
 		UiEvents.Instance.StationUnlock(stationId);
 	}
 
-	// Token: 0x06000296 RID: 662 RVA: 0x0000EAF4 File Offset: 0x0000CCF4
 	private int GetStationId()
 	{
 		switch (this.craftingState)
@@ -232,7 +215,6 @@ public class OtherInput : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000297 RID: 663 RVA: 0x0000EB90 File Offset: 0x0000CD90
 	private void FindCurrentCraftingState()
 	{
 		switch (this.craftingState)
@@ -263,76 +245,50 @@ public class OtherInput : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040002A0 RID: 672
 	public InventoryExtensions handcrafts;
 
-	// Token: 0x040002A1 RID: 673
 	public InventoryExtensions furnace;
 
-	// Token: 0x040002A2 RID: 674
 	public InventoryExtensions workbench;
 
-	// Token: 0x040002A3 RID: 675
 	public InventoryExtensions anvil;
 
-	// Token: 0x040002A4 RID: 676
 	public InventoryExtensions fletch;
 
-	// Token: 0x040002A5 RID: 677
 	public InventoryExtensions chest;
 
-	// Token: 0x040002A6 RID: 678
 	public InventoryExtensions cauldron;
 
-	// Token: 0x040002A7 RID: 679
 	public GameObject hotbar;
 
-	// Token: 0x040002A8 RID: 680
 	public GameObject crosshair;
 
-	// Token: 0x040002A9 RID: 681
 	public static bool lockCamera;
 
-	// Token: 0x040002AA RID: 682
 	private InventoryExtensions _currentCraftingUiMenu;
 
-	// Token: 0x040002AB RID: 683
 	public Chest currentChest;
 
-	// Token: 0x040002AC RID: 684
 	private Dictionary<int, bool> chestsOpened;
 
-	// Token: 0x040002AD RID: 685
 	public static OtherInput Instance;
 
-	// Token: 0x040002AF RID: 687
 	public GameObject pauseUi;
 
-	// Token: 0x040002B0 RID: 688
 	public GameObject settingsUi;
 
-	// Token: 0x040002B1 RID: 689
 	public UiSfx UiSfx;
 
-	// Token: 0x040002B2 RID: 690
 	public RectTransform craftingOverlay;
 
-	// Token: 0x0200014A RID: 330
 	public enum CraftingState
 	{
-		// Token: 0x040008AB RID: 2219
 		Inventory,
-		// Token: 0x040008AC RID: 2220
 		Workbench,
-		// Token: 0x040008AD RID: 2221
 		Anvil,
-		// Token: 0x040008AE RID: 2222
 		Cauldron,
-		// Token: 0x040008AF RID: 2223
 		Fletch,
-		// Token: 0x040008B0 RID: 2224
 		Furnace,
-		// Token: 0x040008B1 RID: 2225
 		Chest
 	}
 }

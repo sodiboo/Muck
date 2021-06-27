@@ -3,10 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x0200012B RID: 299
 public class TutorialTaskUI : MonoBehaviour
 {
-	// Token: 0x06000897 RID: 2199 RVA: 0x0002AF90 File Offset: 0x00029190
 	private void Awake()
 	{
 		this.layout = base.GetComponent<HorizontalLayoutGroup>();
@@ -15,7 +13,6 @@ public class TutorialTaskUI : MonoBehaviour
 		this.padUp = (float)this.layout.padding.left;
 	}
 
-	// Token: 0x06000898 RID: 2200 RVA: 0x0002AFEC File Offset: 0x000291EC
 	public void StartFade()
 	{
 		this.icon.texture = this.checkedBox;
@@ -25,13 +22,11 @@ public class TutorialTaskUI : MonoBehaviour
 		Invoke(nameof(DestroySelf), this.fadeTime);
 	}
 
-	// Token: 0x06000899 RID: 2201 RVA: 0x00006759 File Offset: 0x00004959
 	private void DestroySelf()
 	{
 		Destroy(base.gameObject);
 	}
 
-	// Token: 0x0600089A RID: 2202 RVA: 0x0002B060 File Offset: 0x00029260
 	public void SetItem(InventoryItem i, string text)
 	{
 		text = text.Replace("[inv]", "[" + InputManager.inventory + "]");
@@ -39,7 +34,6 @@ public class TutorialTaskUI : MonoBehaviour
 		this.item.text = text;
 	}
 
-	// Token: 0x0600089B RID: 2203 RVA: 0x0002B0C8 File Offset: 0x000292C8
 	public void Update()
 	{
 		this.padUp = Mathf.Lerp(this.padUp, this.desiredPad, Time.deltaTime * 6f);
@@ -48,30 +42,21 @@ public class TutorialTaskUI : MonoBehaviour
 		this.layout.padding = rectOffset;
 	}
 
-	// Token: 0x04000828 RID: 2088
 	public RawImage overlay;
 
-	// Token: 0x04000829 RID: 2089
 	public RawImage icon;
 
-	// Token: 0x0400082A RID: 2090
 	public TextMeshProUGUI item;
 
-	// Token: 0x0400082B RID: 2091
 	private HorizontalLayoutGroup layout;
 
-	// Token: 0x0400082C RID: 2092
 	public Texture checkedBox;
 
-	// Token: 0x0400082D RID: 2093
 	private float desiredPad;
 
-	// Token: 0x0400082E RID: 2094
 	private float fadeStart = 1.5f;
 
-	// Token: 0x0400082F RID: 2095
 	private float fadeTime = 1.5f;
 
-	// Token: 0x04000830 RID: 2096
 	private float padUp;
 }

@@ -4,20 +4,12 @@ using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 
-// Token: 0x020000C7 RID: 199
 public class Server
 {
-	// Token: 0x17000040 RID: 64
-	// (get) Token: 0x060005BF RID: 1471 RVA: 0x0001D590 File Offset: 0x0001B790
-	// (set) Token: 0x060005C0 RID: 1472 RVA: 0x0001D597 File Offset: 0x0001B797
 	public static int MaxPlayers { get; private set; }
 
-	// Token: 0x17000041 RID: 65
-	// (get) Token: 0x060005C1 RID: 1473 RVA: 0x0001D59F File Offset: 0x0001B79F
-	// (set) Token: 0x060005C2 RID: 1474 RVA: 0x0001D5A6 File Offset: 0x0001B7A6
 	public static int Port { get; private set; }
 
-	// Token: 0x060005C3 RID: 1475 RVA: 0x0001D5AE File Offset: 0x0001B7AE
 	public static int GetNextId()
 	{
 		int result = Server.idCounter;
@@ -25,7 +17,6 @@ public class Server
 		return result;
 	}
 
-	// Token: 0x060005C4 RID: 1476 RVA: 0x0001D5C4 File Offset: 0x0001B7C4
 	public static void Start(int maxPlayers, int port)
 	{
 		Server.MaxPlayers = maxPlayers;
@@ -42,7 +33,6 @@ public class Server
 		ThreadManagerServer.Instance.ResetGame();
 	}
 
-	// Token: 0x060005C5 RID: 1477 RVA: 0x0001D680 File Offset: 0x0001B880
 	private static void TCPConnectCallback(IAsyncResult result)
 	{
 		TcpClient tcpClient = Server.tcpListener.EndAcceptTcpClient(result);
@@ -59,7 +49,6 @@ public class Server
 		Debug.Log(string.Format("{0} failed to connect: Server full! f", tcpClient.Client.RemoteEndPoint));
 	}
 
-	// Token: 0x060005C6 RID: 1478 RVA: 0x0001D724 File Offset: 0x0001B924
 	private static void UDPReceiveCallback(IAsyncResult result)
 	{
 		try
@@ -93,7 +82,6 @@ public class Server
 		}
 	}
 
-	// Token: 0x060005C7 RID: 1479 RVA: 0x0001D83C File Offset: 0x0001BA3C
 	public static void SendUDPData(IPEndPoint clientEndPoint, Packet packet)
 	{
 		try
@@ -109,7 +97,6 @@ public class Server
 		}
 	}
 
-	// Token: 0x060005C8 RID: 1480 RVA: 0x0001D88C File Offset: 0x0001BA8C
 	public static void InitializeServerData()
 	{
 		for (int i = 1; i <= Server.MaxPlayers; i++)
@@ -120,7 +107,6 @@ public class Server
 		Debug.Log("Initialized Packets.");
 	}
 
-	// Token: 0x060005C9 RID: 1481 RVA: 0x0001D8CC File Offset: 0x0001BACC
 	public static void InitializeServerPackets()
 	{
 		Server.PacketHandlers = new Dictionary<int, Server.PacketHandler>
@@ -260,32 +246,23 @@ public class Server
 		};
 	}
 
-	// Token: 0x060005CA RID: 1482 RVA: 0x0001DB70 File Offset: 0x0001BD70
 	public static void Stop()
 	{
 		Server.tcpListener.Stop();
 		Server.udpListener.Close();
 	}
 
-	// Token: 0x04000532 RID: 1330
 	public static Dictionary<int, Client> clients = new Dictionary<int, Client>();
 
-	// Token: 0x04000533 RID: 1331
 	public static Dictionary<int, Server.PacketHandler> PacketHandlers;
 
-	// Token: 0x04000534 RID: 1332
 	public static int idCounter;
 
-	// Token: 0x04000535 RID: 1333
 	private static TcpListener tcpListener;
 
-	// Token: 0x04000536 RID: 1334
 	private static UdpClient udpListener;
 
-	// Token: 0x04000537 RID: 1335
 	public static IPAddress ipAddress = IPAddress.Any;
 
-	// Token: 0x02000165 RID: 357
-	// (Invoke) Token: 0x06000921 RID: 2337
 	public delegate void PacketHandler(int fromClient, Packet packet);
 }

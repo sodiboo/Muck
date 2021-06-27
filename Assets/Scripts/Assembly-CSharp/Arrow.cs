@@ -1,37 +1,24 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x02000003 RID: 3
 public class Arrow : MonoBehaviour
 {
-	// Token: 0x17000001 RID: 1
-	// (get) Token: 0x06000003 RID: 3 RVA: 0x000020BA File Offset: 0x000002BA
-	// (set) Token: 0x06000004 RID: 4 RVA: 0x000020C2 File Offset: 0x000002C2
 	public InventoryItem item { get; set; }
 
-	// Token: 0x17000002 RID: 2
-	// (get) Token: 0x06000005 RID: 5 RVA: 0x000020CB File Offset: 0x000002CB
-	// (set) Token: 0x06000006 RID: 6 RVA: 0x000020D3 File Offset: 0x000002D3
 	public int damage { get; set; }
 
-	// Token: 0x17000003 RID: 3
-	// (get) Token: 0x06000007 RID: 7 RVA: 0x000020DC File Offset: 0x000002DC
-	// (set) Token: 0x06000008 RID: 8 RVA: 0x000020E4 File Offset: 0x000002E4
 	public bool otherPlayersArrow { get; set; }
 
-	// Token: 0x06000009 RID: 9 RVA: 0x000020ED File Offset: 0x000002ED
 	private void Awake()
 	{
 		this.rb = base.GetComponent<Rigidbody>();
 	}
 
-	// Token: 0x0600000A RID: 10 RVA: 0x000020FB File Offset: 0x000002FB
 	private void Update()
 	{
 		base.transform.rotation = Quaternion.LookRotation(this.rb.velocity);
 	}
 
-	// Token: 0x0600000B RID: 11 RVA: 0x00002118 File Offset: 0x00000318
 	private void OnCollisionEnter(Collision other)
 	{
 		if (this.done)
@@ -108,7 +95,6 @@ public class Arrow : MonoBehaviour
 		this.StopArrow(other);
 	}
 
-	// Token: 0x0600000C RID: 12 RVA: 0x00002354 File Offset: 0x00000554
 	private void StopArrow(Collision other)
 	{
 		this.rb.isKinematic = true;
@@ -142,24 +128,17 @@ public class Arrow : MonoBehaviour
 		Destroy(base.gameObject);
 	}
 
-	// Token: 0x04000002 RID: 2
 	private Rigidbody rb;
 
-	// Token: 0x04000003 RID: 3
 	public AudioSource audio;
 
-	// Token: 0x04000004 RID: 4
 	public TrailRenderer trail;
 
-	// Token: 0x04000006 RID: 6
 	public GameObject hitFx;
 
-	// Token: 0x04000008 RID: 8
 	public bool fallingWhileShooting;
 
-	// Token: 0x04000009 RID: 9
 	public float speedWhileShooting;
 
-	// Token: 0x0400000B RID: 11
 	private bool done;
 }

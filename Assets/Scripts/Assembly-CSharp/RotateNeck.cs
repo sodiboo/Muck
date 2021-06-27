@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-// Token: 0x0200008B RID: 139
 public class RotateNeck : MonoBehaviour
 {
-	// Token: 0x0600035B RID: 859 RVA: 0x00012358 File Offset: 0x00010558
 	private void OnEnable()
 	{
 		this.desiredRot = Quaternion.Euler(-8f, 2f, 0f);
@@ -16,13 +14,11 @@ public class RotateNeck : MonoBehaviour
 		this.currentBreath = Instantiate<GameObject>(this.fireBreathPrefab).transform;
 	}
 
-	// Token: 0x0600035C RID: 860 RVA: 0x000123DE File Offset: 0x000105DE
 	private void ResetNeck()
 	{
 		this.done = true;
 	}
 
-	// Token: 0x0600035D RID: 861 RVA: 0x000123E8 File Offset: 0x000105E8
 	private void LateUpdate()
 	{
 		if (this.done)
@@ -59,42 +55,29 @@ public class RotateNeck : MonoBehaviour
 		this.currentBreath.position = this.head.position;
 	}
 
-	// Token: 0x0400035C RID: 860
 	public Mob mob;
 
-	// Token: 0x0400035D RID: 861
 	public Transform neck;
 
-	// Token: 0x0400035E RID: 862
 	public Transform neckForward;
 
-	// Token: 0x0400035F RID: 863
 	public Transform customTarget;
 
-	// Token: 0x04000360 RID: 864
 	private Quaternion desiredRot;
 
-	// Token: 0x04000361 RID: 865
 	private Quaternion desiredHeadRot;
 
-	// Token: 0x04000362 RID: 866
 	private Quaternion oldRot;
 
-	// Token: 0x04000363 RID: 867
 	private Quaternion oldHeadRot;
 
-	// Token: 0x04000364 RID: 868
 	private Transform currentBreath;
 
-	// Token: 0x04000365 RID: 869
 	private bool done;
 
-	// Token: 0x04000366 RID: 870
 	public GameObject fireBreathPrefab;
 
-	// Token: 0x04000367 RID: 871
 	public Transform head;
 
-	// Token: 0x04000368 RID: 872
 	public Transform realHead;
 }
