@@ -30,6 +30,7 @@ export enum ToolTier {
   Steel,
   Mithril,
   Adamantite,
+  Milk,
 }
 
 export enum ItemTag {
@@ -43,6 +44,7 @@ export enum ItemTag {
   Feet,
   Arrow,
   Armor,
+  Gem,
 }
 
 export enum ItemRarity {

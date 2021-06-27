@@ -1408,7 +1408,7 @@
 
 ![item-122]
 - Type: Axe
-- Tier: undefined
+- Tier: Milk
 - Rarity: Common
 - Stackable: No
 #### Weapon
@@ -2854,7 +2854,7 @@
 
 ![item-96]
 - Type: Item
-- Tag: undefined
+- Tag: Gem
 - Rarity: Rare
 - Stackable: 1
 #### Weapon
@@ -3075,7 +3075,7 @@
 
 ![item-97]
 - Type: Item
-- Tag: undefined
+- Tag: Gem
 - Rarity: Rare
 - Stackable: 1
 #### Weapon
@@ -3203,7 +3203,7 @@
 
 ![item-98]
 - Type: Item
-- Tag: undefined
+- Tag: Gem
 - Rarity: Rare
 - Stackable: 1
 #### Weapon
@@ -3221,7 +3221,7 @@
 
 ![item-99]
 - Type: Item
-- Tag: undefined
+- Tag: Gem
 - Rarity: Rare
 - Stackable: 1
 #### Weapon
@@ -3363,7 +3363,7 @@
 
 ![item-100]
 - Type: Item
-- Tag: undefined
+- Tag: Gem
 - Rarity: Rare
 - Stackable: 1
 #### Weapon
