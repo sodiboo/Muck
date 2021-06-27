@@ -2,10 +2,11 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cube
+  m_Name: Cube_45
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24,15 +25,15 @@ Mesh:
     channels: []
     fullWeights: []
   m_BindPose: []
-  m_BoneNameHashes:
+  m_BoneNameHashes: 
   m_RootBoneNameHash: 0
   m_BonesAABB: []
   m_VariableBoneCountWeights:
-    m_Data:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 1
-  m_KeepVertices: 0
-  m_KeepIndices: 0
+  m_KeepVertices: 1
+  m_KeepIndices: 1
   m_IndexFormat: 0
   m_IndexBuffer: 00000100020000000300010000000400030000000500040005000600040005000700060007000800060007000900080009000a00080009000b000a000b000c000a000b000d000c000d000e000c000d000f000e0010001100120010001300110010001400130010001500140015001600140015001700160017001800160017001900180019001a00180019001b001a001b001c001a001b001d001c001d001e001c001d001f001e002000210022002000230021002400230020002400250023002600250024002600270025002800270026002800290027002a002b002c002a002d002b002e002d002a002e002f002d0030002f002e00300031002f00320031003000320033003100340035003600340036003700380034003700370036003900380037003a003b0038003a00370039003c003a0037003c003c0039003d003b003a003e003f003b003e003c003d00400040003d0041004000410042003a003c00430043003c0040003e003a0043004400400042004300400044004400420045003f003e00460047003f0046003e004300480048004300440046003e004800490044004500480044004900490045004a00470046004b004c0047004b00460048004d004d00480049004b0046004d004e0049004a004d0049004e004e004a004f004b004d00500050004d004e0051004e004f0050004e00510051004f0052004c004b00530053004b005000540051005200540052005500540055005600540056005700580050005100580051005400580054005700530050005800580057005900530058005900530059005a004c0053005a004c005a005b005c005d005e005c005e005f0060005c005f005f005e00610060005f0062006300600062005f006100640062005f006400640061006500630062006600670063006600640065006800680065006900680069006a00620064006b006b0064006800660062006b006c0068006a006b0068006c006c006a006d00670066006e006f0067006e0066006b00700070006b006c006e006600700071006c006d0070006c00710071006d0072006f006e00730074006f0073006e007000750075007000710073006e007500760071007200750071007600760072007700730075007800780075007600790076007700780076007900790077007a00740073007b007b00730078007c0079007a007c007a007d007c007d007e007c007e007f00800078007900800079007c0080007c007f007b007800800080007f0081007b00800081007b008100820074007b008200740082008300
   m_VertexData:
@@ -102,63 +103,63 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UV:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Normals:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Weights:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_NormalSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_TangentSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_FloatColors:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Triangles:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: -0.0003948212, y: 0.8922777, z: 0.2609491}
     m_Extent: {x: 9.793062, y: 3.629343, z: 13.53931}
   m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh:
-  m_BakedTriangleCollisionMesh:
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 2854.488
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: -1
   m_StreamData:
     offset: 0
     size: 0
-    path:
+    path: 

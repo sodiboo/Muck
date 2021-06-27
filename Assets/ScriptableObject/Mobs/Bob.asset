@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b725e49f632c06a468e8284b30d6c707, type: 3}
+  m_Name: Bob
+  m_EditorClassIdentifier: 
+  name: Bob
+  mobPrefab: {fileID: 1283139144128645, guid: 7cded08ba65a0a342ad3259d863ce516, type: 3}
+  behaviour: 3
+  ranged: 0
+  rangedCooldown: 2
+  startAttackDistance: 9
+  startRangedAttackDistance: 0
+  maxAttackDistance: 120
+  speed: 29
+  spawnTime: 1.5
+  minAttackAngle: 45
+  sharpDefense: 0
+  defense: 0
+  knockbackThreshold: 1
+  ignoreBuilds: 0
+  followPlayerDistance: 12
+  followPlayerAccuracy: 1
+  onlyRangedInRangedPattern: 1
+  weaknesses: 
+  boss: 1
