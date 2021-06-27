@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Wood_oak
   m_EditorClassIdentifier: 
-  id: 85
+  important: 0
+  id: 88
   name: Oak Wood
   description: its oak wood
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 3f3c5e0b7dd61c64ca68c96f18ffd99f, type: 3}
-  material: {fileID: 2100000, guid: 521aaa0d198185d4fbc24c215aa6c4b1, type: 2}
-  mesh: {fileID: 4300000, guid: e11a3293cf0ac784f9124c0162657ee3, type: 2}
+  sprite: {fileID: 21300000, guid: d85ad4845d317dd46b5615c71aab556e, type: 3}
+  material: {fileID: 2100000, guid: 065c222bb2aa9164eb805021ce5cba1e, type: 2}
+  mesh: {fileID: 4300000, guid: d477644ecfd67144884f90c34f93cbf7, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -51,8 +52,8 @@ MonoBehaviour:
   swingFx: 0
   bowComponent: {fileID: 0}
   armorComponent: {fileID: 0}
-  fuel: {fileID: 11400000, guid: 8a39ada3730254040a6708338101986b, type: 2}
+  fuel: {fileID: 11400000, guid: 30703a055f435404db462775299e2d3c, type: 2}
   tag: 1
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

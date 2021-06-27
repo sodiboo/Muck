@@ -1,30 +1,30 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class Item : MonoBehaviour
 {
-
-
-
 	public InventoryItem item { get; set; }
 
-
-
-
 	public Powerup powerup { get; set; }
-
 
 	private void Awake()
 	{
 		this.outlineMat = base.GetComponent<MeshRenderer>().material;
-		base.Invoke(nameof(ReadyToPickup), this.pickupDelay);
+		Invoke(nameof(ReadyToPickup), this.pickupDelay);
 		if (LocalClient.serverOwner)
 		{
-			base.Invoke(nameof(DespawnItem), 300f);
+			Invoke(nameof(DespawnItem), 300f);
 		}
 	}
 
+	private void Start()
+	{
+		if (this.item && this.item.tag == InventoryItem.ItemTag.Gem)
+		{
+			Debug.LogError("gem dropped");
+			Map.Instance.AddMarker(base.transform, Map.MarkerType.Gem, this.item.sprite.texture, Color.white, "", 1f);
+		}
+	}
 
 	public void UpdateMesh()
 	{
@@ -60,7 +60,6 @@ public class Item : MonoBehaviour
 		this.FindOutlineColor();
 	}
 
-
 	private void FindOutlineColor()
 	{
 		if (this.powerup)
@@ -73,7 +72,6 @@ public class Item : MonoBehaviour
 			this.outlineMat.SetColor("_OutlineColor", this.item.GetOutlineColor());
 		}
 	}
-
 
 	private void OnTriggerStay(Collider other)
 	{
@@ -98,34 +96,30 @@ public class Item : MonoBehaviour
 		InventoryUI.Instance.CheckInventoryAlmostFull();
 	}
 
-
 	private void ReadyToPickup()
 	{
 		this.readyToPickUp = true;
 	}
 
-
 	private void DespawnItem()
 	{
+		if (this.item != null && this.item.important)
+		{
+			return;
+		}
 		ItemManager.Instance.PickupItem(this.objectID);
 		ServerSend.PickupItem(-1, this.objectID);
 	}
 
-
 	public float pickupDelay = 0.85f;
-
 
 	public int objectID;
 
-
 	private bool pickedUp;
-
 
 	private bool readyToPickUp;
 
-
 	private Material outlineMat;
-
 
 	public GameObject powerupParticles;
 }

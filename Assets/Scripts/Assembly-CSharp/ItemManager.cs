@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ItemManager : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ItemManager.Instance = this;
@@ -18,7 +16,6 @@ public class ItemManager : MonoBehaviour
 		this.InitAllDropTables();
 	}
 
-
 	private void InitAllItems()
 	{
 		for (int i = 0; i < this.allScriptableItems.Length; i++)
@@ -27,7 +24,6 @@ public class ItemManager : MonoBehaviour
 			this.allItems.Add(i, this.allScriptableItems[i]);
 		}
 	}
-
 
 	private void InitAllDropTables()
 	{
@@ -38,7 +34,6 @@ public class ItemManager : MonoBehaviour
 		}
 	}
 
-
 	private void InitAllPowerups()
 	{
 		int id = 0;
@@ -46,7 +41,6 @@ public class ItemManager : MonoBehaviour
 		id = this.AddPowerupsToList(this.powerupsBlue, id);
 		id = this.AddPowerupsToList(this.powerupsOrange, id);
 	}
-
 
 	private int AddPowerupsToList(Powerup[] powerups, int id)
 	{
@@ -60,7 +54,6 @@ public class ItemManager : MonoBehaviour
 		return id;
 	}
 
-
 	public InventoryItem GetItemByName(string name)
 	{
 		foreach (InventoryItem inventoryItem in this.allItems.Values)
@@ -73,12 +66,10 @@ public class ItemManager : MonoBehaviour
 		return null;
 	}
 
-
 	public int GetNextId()
 	{
 		return ItemManager.currentId++;
 	}
-
 
 	public void DropItem(int fromClient, int itemId, int amount, int objectID)
 	{
@@ -108,7 +99,6 @@ public class ItemManager : MonoBehaviour
 		this.list.Add(objectID, gameObject);
 	}
 
-
 	public void DropItemAtPosition(int itemId, int amount, Vector3 pos, int objectID)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.dropItem);
@@ -129,7 +119,6 @@ public class ItemManager : MonoBehaviour
 		this.list.Add(objectID, gameObject);
 	}
 
-
 	public void DropResource(int fromClient, int dropTableId, int droppedObjectID)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.dropItem);
@@ -147,7 +136,6 @@ public class ItemManager : MonoBehaviour
 		gameObject.GetComponent<Item>().objectID = droppedObjectID;
 		this.list.Add(droppedObjectID, gameObject);
 	}
-
 
 	public void DropPowerupAtPosition(int powerupId, Vector3 pos, int objectID)
 	{
@@ -168,7 +156,6 @@ public class ItemManager : MonoBehaviour
 		this.list.Add(objectID, gameObject);
 	}
 
-
 	public Powerup GetRandomPowerup(float whiteWeight, float blueWeight, float orangeWeight)
 	{
 		float num = whiteWeight + blueWeight + orangeWeight;
@@ -184,7 +171,6 @@ public class ItemManager : MonoBehaviour
 		return this.powerupsOrange[Random.Range(0, this.powerupsOrange.Length)];
 	}
 
-
 	public bool PickupItem(int objectID)
 	{
 		Destroy(this.list[objectID]);
@@ -192,51 +178,35 @@ public class ItemManager : MonoBehaviour
 		return true;
 	}
 
-
 	public GameObject dropItem;
-
 
 	public Dictionary<int, GameObject> list;
 
-
 	public GameObject debug;
-
 
 	public InventoryItem[] allScriptableItems;
 
-
 	public LootDrop[] allScriptableDropTables;
-
 
 	public Powerup[] powerupsWhite;
 
-
 	public Powerup[] powerupsBlue;
-
 
 	public Powerup[] powerupsOrange;
 
-
 	public Dictionary<int, InventoryItem> allItems;
-
 
 	public Dictionary<int, Powerup> allPowerups;
 
-
 	public Dictionary<int, LootDrop> allDropTables;
-
 
 	public Dictionary<string, int> stringToPowerupId;
 
-
 	private ConsistentRandom random;
-
 
 	public bool attatchDebug;
 
-
 	public static ItemManager Instance;
-
 
 	public static int currentId;
 	

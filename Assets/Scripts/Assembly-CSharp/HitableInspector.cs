@@ -3,17 +3,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class HitableInspector : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.child = base.transform.GetChild(0).gameObject;
 		this.hpBar.CrossFadeAlpha(0f, 0f, true);
 		this.hpBar.CrossFadeAlpha(0f, 0f, true);
 	}
-
 
 	private void Update()
 	{
@@ -88,48 +85,33 @@ public class HitableInspector : MonoBehaviour
 		this.hpBar.transform.localScale = Vector3.Lerp(this.hpBar.transform.localScale, new Vector3(this.ratio, 1f, 1f), Time.deltaTime * 4f);
 	}
 
-
 	public LayerMask whatIsObject;
-
 
 	private GameObject child;
 
-
 	public TextMeshProUGUI hp;
-
 
 	public TextMeshProUGUI info;
 
-
 	public Image hpBar;
-
 
 	public Image maxBar;
 
-
 	public Image overlay;
-
 
 	private Vector3 desiredPosition;
 
-
 	private float speed = 2f;
-
 
 	private Hitable currentResource;
 
-
 	private bool show;
-
 
 	private Vector3 offsetPos = Vector3.zero;
 
-
 	private float maxResourceDistance = 15f;
 
-
 	private float maxMobDistance = 100f;
-
 
 	private float ratio;
 }

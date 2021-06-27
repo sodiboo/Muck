@@ -78,67 +78,82 @@
 65. [Iron bar](#Iron-bar)
 66. [Mithril bar](#Mithril-bar)
 67. [Ancient Bone](#Ancient-Bone)
-68. [Fireball](#Fireball)
-69. [Lightningball](#Lightningball)
-70. [Rock Projectile](#Rock-Projectile)
+68. [Dragonball](#Dragonball)
+69. [Fireball](#Fireball)
+70. [Lightningball](#Lightningball)
 71. [Rock Projectile](#Rock-Projectile)
-72. [Gronk Projectile](#Gronk-Projectile)
-73. [Waterball](#Waterball)
-74. [Windball](#Windball)
-75. [Adamantite Ore](#Adamantite-Ore)
-76. [Chunkium Ore](#Chunkium-Ore)
-77. [Gold Ore](#Gold-Ore)
-78. [Iron Ore](#Iron-Ore)
-79. [Mithril Ore](#Mithril-Ore)
-80. [Rock](#Rock)
-81. [Birch Wood](#Birch-Wood)
-82. [Dark Oak Wood](#Dark-Oak-Wood)
-83. [Fir Wood](#Fir-Wood)
-84. [Wood](#Wood)
-85. [Oak Wood](#Oak-Wood)
-86. [Anvil](#Anvil)
-87. [Cauldron](#Cauldron)
-88. [Fletching Table](#Fletching-Table)
-89. [Furnace](#Furnace)
-90. [Workbench](#Workbench)
-91. [Adamantite Axe](#Adamantite-Axe)
-92. [Gold Axe](#Gold-Axe)
-93. [Mithril Axe](#Mithril-Axe)
-94. [Steel Axe](#Steel-Axe)
-95. [Wood Axe](#Wood-Axe)
-96. [Oak Bow](#Oak-Bow)
-97. [Wood Bow](#Wood-Bow)
-98. [Birch bow](#Birch-bow)
-99. [Fir bow](#Fir-bow)
-100. [Ancient Bow](#Ancient-Bow)
-101. [Adamantite Pickaxe](#Adamantite-Pickaxe)
-102. [Gold Pickaxe](#Gold-Pickaxe)
-103. [Mithril Pickaxe](#Mithril-Pickaxe)
-104. [Steel Pickaxe](#Steel-Pickaxe)
-105. [Wood Pickaxe](#Wood-Pickaxe)
-106. [Rope](#Rope)
-107. [Shovel](#Shovel)
-108. [Adamantite Sword](#Adamantite-Sword)
-109. [Gold Sword](#Gold-Sword)
-110. [Mithril Sword](#Mithril-Sword)
-111. [Steel Sword](#Steel-Sword)
-112. [Adamantite Arrow](#Adamantite-Arrow)
-113. [Fire arrow](#Fire-arrow)
-114. [Flint Arrow](#Flint-Arrow)
-115. [Lightning Arrow](#Lightning-Arrow)
-116. [Mithril Arrow](#Mithril-Arrow)
-117. [Steel Arrow](#Steel-Arrow)
-118. [Water Arrow](#Water-Arrow)
-119. [Chunky Hammer](#Chunky-Hammer)
-120. [Gronks Sword](#Gronks-Sword)
-121. [Gronks Sword Projectile](#Gronks-Sword-Projectile)
-122. [Wyvern Dagger](#Wyvern-Dagger)
-123. [Blade](#Blade)
-124. [Hammer Shaft](#Hammer-Shaft)
-125. [Sword Hilt](#Sword-Hilt)
-126. [Wolf Claws](#Wolf-Claws)
-127. [Wolfskin](#Wolfskin)
-128. [Wyvern Claws](#Wyvern-Claws)
+72. [Rock Projectile](#Rock-Projectile)
+73. [Spike Attack](#Spike-Attack)
+74. [Gronk Projectile](#Gronk-Projectile)
+75. [Waterball](#Waterball)
+76. [Windball](#Windball)
+77. [Adamantite Ore](#Adamantite-Ore)
+78. [Chunkium Ore](#Chunkium-Ore)
+79. [Gold Ore](#Gold-Ore)
+80. [Iron Ore](#Iron-Ore)
+81. [Mithril Ore](#Mithril-Ore)
+82. [Ruby](#Ruby)
+83. [Rock](#Rock)
+84. [Birch Wood](#Birch-Wood)
+85. [Dark Oak Wood](#Dark-Oak-Wood)
+86. [Fir Wood](#Fir-Wood)
+87. [Wood](#Wood)
+88. [Oak Wood](#Oak-Wood)
+89. [Anvil](#Anvil)
+90. [Cauldron](#Cauldron)
+91. [Fletching Table](#Fletching-Table)
+92. [Furnace](#Furnace)
+93. [Workbench](#Workbench)
+94. [Boat Map](#Boat-Map)
+95. [Gem Map](#Gem-Map)
+96. [Blue Gem](#Blue-Gem)
+97. [Green Gem](#Green-Gem)
+98. [Pink Gem](#Pink-Gem)
+99. [Red Gem](#Red-Gem)
+100. [Yellow Gem](#Yellow-Gem)
+101. [Adamantite Axe](#Adamantite-Axe)
+102. [Gold Axe](#Gold-Axe)
+103. [Mithril Axe](#Mithril-Axe)
+104. [Steel Axe](#Steel-Axe)
+105. [Wood Axe](#Wood-Axe)
+106. [Oak Bow](#Oak-Bow)
+107. [Wood Bow](#Wood-Bow)
+108. [Birch bow](#Birch-bow)
+109. [Fir bow](#Fir-bow)
+110. [Ancient Bow](#Ancient-Bow)
+111. [Adamantite Pickaxe](#Adamantite-Pickaxe)
+112. [Gold Pickaxe](#Gold-Pickaxe)
+113. [Mithril Pickaxe](#Mithril-Pickaxe)
+114. [Steel Pickaxe](#Steel-Pickaxe)
+115. [Wood Pickaxe](#Wood-Pickaxe)
+116. [Rope](#Rope)
+117. [Shovel](#Shovel)
+118. [Adamantite Sword](#Adamantite-Sword)
+119. [Gold Sword](#Gold-Sword)
+120. [Mithril Sword](#Mithril-Sword)
+121. [Steel Sword](#Steel-Sword)
+122. [milk](#milk)
+123. [Adamantite Arrow](#Adamantite-Arrow)
+124. [Fire arrow](#Fire-arrow)
+125. [Flint Arrow](#Flint-Arrow)
+126. [Lightning Arrow](#Lightning-Arrow)
+127. [Mithril Arrow](#Mithril-Arrow)
+128. [Steel Arrow](#Steel-Arrow)
+129. [Water Arrow](#Water-Arrow)
+130. [Chunky Hammer](#Chunky-Hammer)
+131. [Gronks Sword](#Gronks-Sword)
+132. [Gronks Sword Projectile](#Gronks-Sword-Projectile)
+133. [Wyvern Dagger](#Wyvern-Dagger)
+134. [Blade](#Blade)
+135. [Hammer Shaft](#Hammer-Shaft)
+136. [Sword Hilt](#Sword-Hilt)
+137. [Wolf Claws](#Wolf-Claws)
+138. [Wolfskin](#Wolfskin)
+139. [Wyvern Claws](#Wyvern-Claws)
+140. [Obamium bar](#Obamium-bar)
+141. [Obamium Ore](#Obamium-Ore)
+142. [Black Shard](#Black-Shard)
+143. [Night Blade](#Night-Blade)
 
 # Items by name
 - [Adamantite Arrow](#Adamantite-Arrow)
@@ -159,7 +174,10 @@
 - [Bark](#Bark)
 - [Birch bow](#Birch-bow)
 - [Birch Wood](#Birch-Wood)
+- [Black Shard](#Black-Shard)
 - [Blade](#Blade)
+- [Blue Gem](#Blue-Gem)
+- [Boat Map](#Boat-Map)
 - [Bowl](#Bowl)
 - [Bread](#Bread)
 - [Cauldron](#Cauldron)
@@ -176,6 +194,7 @@
 - [Cooked Meat](#Cooked-Meat)
 - [Dark Oak Wood](#Dark-Oak-Wood)
 - [Dough](#Dough)
+- [Dragonball](#Dragonball)
 - [Fir bow](#Fir-bow)
 - [Fir Wood](#Fir-Wood)
 - [Fire arrow](#Fire-arrow)
@@ -186,6 +205,7 @@
 - [Flint](#Flint)
 - [Flint Arrow](#Flint-Arrow)
 - [Furnace](#Furnace)
+- [Gem Map](#Gem-Map)
 - [Gold Axe](#Gold-Axe)
 - [Gold bar](#Gold-bar)
 - [Gold Boots](#Gold-Boots)
@@ -195,6 +215,7 @@
 - [Gold Pants](#Gold-Pants)
 - [Gold Pickaxe](#Gold-Pickaxe)
 - [Gold Sword](#Gold-Sword)
+- [Green Gem](#Green-Gem)
 - [Gronk Projectile](#Gronk-Projectile)
 - [Gronks Sword](#Gronks-Sword)
 - [Gronks Sword Projectile](#Gronks-Sword-Projectile)
@@ -207,6 +228,7 @@
 - [Ligon Shroom](#Ligon-Shroom)
 - [Meat Pie](#Meat-Pie)
 - [Meat Soup](#Meat-Soup)
+- [milk](#milk)
 - [Mithril Arrow](#Mithril-Arrow)
 - [Mithril Axe](#Mithril-Axe)
 - [Mithril bar](#Mithril-bar)
@@ -217,18 +239,25 @@
 - [Mithril Pants](#Mithril-Pants)
 - [Mithril Pickaxe](#Mithril-Pickaxe)
 - [Mithril Sword](#Mithril-Sword)
+- [Night Blade](#Night-Blade)
 - [Oak Bow](#Oak-Bow)
 - [Oak Wood](#Oak-Wood)
+- [Obamium bar](#Obamium-bar)
+- [Obamium Ore](#Obamium-Ore)
+- [Pink Gem](#Pink-Gem)
 - [Purple Soup](#Purple-Soup)
 - [Raw Meat](#Raw-Meat)
 - [Red Apple](#Red-Apple)
+- [Red Gem](#Red-Gem)
 - [Red Soup](#Red-Soup)
 - [Rock](#Rock)
 - [Rock Projectile](#Rock-Projectile)
 - [Rock Projectile](#Rock-Projectile)
 - [Rope](#Rope)
+- [Ruby](#Ruby)
 - [Shovel](#Shovel)
 - [Slurbon Shroom](#Slurbon-Shroom)
+- [Spike Attack](#Spike-Attack)
 - [Steel Arrow](#Steel-Arrow)
 - [Steel Axe](#Steel-Axe)
 - [Steel Boots](#Steel-Boots)
@@ -269,13 +298,14 @@
 - [Workbench](#Workbench)
 - [Wyvern Claws](#Wyvern-Claws)
 - [Wyvern Dagger](#Wyvern-Dagger)
+- [Yellow Gem](#Yellow-Gem)
 - [Yellow Soup](#Yellow-Soup)
 
 # Items
 ### Adamantite Arrow
 *Green arrow*
 
-![item-112]
+![item-123]
 - Type: Item
 - Tag: Arrow
 - Rarity: Common
@@ -284,6 +314,7 @@
 - Resource Damage: 1
 - Attack Damage: 70
 - Attack Speed: 0.3
+- DPS: 21
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Adamantite Arrow
@@ -295,7 +326,7 @@
 ### Adamantite Axe
 *its axe*
 
-![item-91]
+![item-101]
 - Type: Axe
 - Tier: Adamantite
 - Rarity: Common
@@ -304,6 +335,7 @@
 - Resource Damage: 50
 - Attack Damage: 40
 - Attack Speed: 1
+- DPS: 40
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Adamantite Axe
@@ -324,6 +356,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Adamantite bar
@@ -331,14 +364,14 @@
 - Made in Furnace
 - Needs 1 [Adamantite Ore](#Adamantite-Ore)
 #### Ingredient For:
-- [Adamantite Arrow](#Adamantite-Arrow)
-- [Adamantite Axe](#Adamantite-Axe)
 - [Adamantite Boots](#Adamantite-Boots)
 - [Adamantite Helmet](#Adamantite-Helmet)
 - [Adamantite Pants](#Adamantite-Pants)
+- [Adamantite Chestplate](#Adamantite-Chestplate)
+- [Adamantite Axe](#Adamantite-Axe)
 - [Adamantite Pickaxe](#Adamantite-Pickaxe)
 - [Adamantite Sword](#Adamantite-Sword)
-- [Adamantite Chestplate](#Adamantite-Chestplate)
+- [Adamantite Arrow](#Adamantite-Arrow)
 
 ---
 
@@ -356,6 +389,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Boots
@@ -377,6 +411,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Chestplate
@@ -398,6 +433,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Helmet
@@ -408,7 +444,7 @@
 ### Adamantite Ore
 *its hard rock*
 
-![item-75]
+![item-77]
 - Type: Axe
 - Tier: None
 - Rarity: Common
@@ -417,6 +453,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -438,6 +475,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Pants
@@ -448,7 +486,7 @@
 ### Adamantite Pickaxe
 *its pickaxe*
 
-![item-101]
+![item-111]
 - Type: Pickaxe
 - Tier: Adamantite
 - Rarity: Common
@@ -457,6 +495,7 @@
 - Resource Damage: 40
 - Attack Damage: 40
 - Attack Speed: 0.8
+- DPS: 32
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Adamantite Pickaxe
@@ -469,7 +508,7 @@
 ### Adamantite Sword
 *its sharp*
 
-![item-108]
+![item-118]
 - Type: Sword
 - Rarity: Common
 - Stackable: No
@@ -477,6 +516,7 @@
 - Resource Damage: 1
 - Attack Damage: 50
 - Attack Speed: 1.4
+- DPS: 70
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Sword
@@ -488,7 +528,7 @@
 ### Anvil
 *chonky metal station*
 
-![item-86]
+![item-89]
 - Type: Station
 - Rarity: Common
 - Stackable: Yes
@@ -497,6 +537,7 @@
 - Resource Damage: 1
 - Attack Damage: 10
 - Attack Speed: 1
+- DPS: 10
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Anvil
@@ -521,6 +562,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Apple Pie
@@ -543,6 +585,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 0.75
 - Sharpness: 0
 #### Crafting: Gives 5 Bark
@@ -559,14 +602,13 @@
 - [Steel Pickaxe](#Steel-Pickaxe)
 - [Wood Pickaxe](#Wood-Pickaxe)
 - [Rope](#Rope)
-- [Shovel](#Shovel)
 
 ---
 
 ### Birch bow
 *bitch boi*
 
-![item-98]
+![item-108]
 - Type: Bow
 - Rarity: Common
 - Stackable: No
@@ -582,7 +624,7 @@
 ### Birch Wood
 *its bitch wood*
 
-![item-81]
+![item-84]
 - Type: Item
 - Tag: Fuel
 - Rarity: Common
@@ -593,15 +635,33 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
-- [Steel Arrow](#Steel-Arrow)
+- [Fletching Table](#Fletching-Table)
 - [Steel Axe](#Steel-Axe)
 - [Birch bow](#Birch-bow)
-- [Fletching Table](#Fletching-Table)
 - [Steel Pickaxe](#Steel-Pickaxe)
 - [Steel Sword](#Steel-Sword)
+- [Steel Arrow](#Steel-Arrow)
+
+---
+
+### Boat Map
+*Something important is marked on this map..*
+
+![item-94]
+- Type: Item
+- Rarity: Common
+- Stackable: Yes
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
 
 ---
 
@@ -616,8 +676,11 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
+#### Crafting: Gives 1 Bowl
+- 1 [Wood](#Wood)
 #### Ingredient For:
 - [Apple Pie](#Apple-Pie)
 - [Meat Pie](#Meat-Pie)
@@ -645,6 +708,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Bread
@@ -657,7 +721,7 @@
 ### Cauldron
 *food go brr*
 
-![item-87]
+![item-90]
 - Type: Storage
 - Rarity: Common
 - Stackable: Yes
@@ -666,6 +730,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Cauldron
@@ -686,6 +751,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Chest
@@ -708,6 +774,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1.2
+- DPS: 1.2
 - Attack Range: 0.8
 - Sharpness: 0
 #### Ingredient For:
@@ -726,8 +793,11 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
+#### Crafting: Gives 5 Coin
+- 1 [Gold bar](#Gold-bar)
 
 ---
 
@@ -747,6 +817,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Cooked Meat
@@ -767,6 +838,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Dough
@@ -781,7 +853,7 @@
 ### Fir bow
 *Bow*
 
-![item-99]
+![item-109]
 - Type: Bow
 - Rarity: Common
 - Stackable: No
@@ -797,7 +869,7 @@
 ### Fir Wood
 *its fir wood*
 
-![item-83]
+![item-86]
 - Type: Item
 - Tag: Fuel
 - Rarity: Common
@@ -808,14 +880,15 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
-- [Mithril Arrow](#Mithril-Arrow)
 - [Mithril Axe](#Mithril-Axe)
 - [Fir bow](#Fir-bow)
 - [Mithril Pickaxe](#Mithril-Pickaxe)
 - [Mithril Sword](#Mithril-Sword)
+- [Mithril Arrow](#Mithril-Arrow)
 
 ---
 
@@ -830,6 +903,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -848,6 +922,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Flax Fibers
@@ -863,7 +938,7 @@
 ### Fletching Table
 *fletch*
 
-![item-88]
+![item-91]
 - Type: Station
 - Rarity: Common
 - Stackable: Yes
@@ -872,6 +947,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Fletching Table
@@ -891,18 +967,19 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1.5
+- DPS: 1.5
 - Attack Range: 0.8
 - Sharpness: 0.7
 #### Ingredient For:
-- [Flint Arrow](#Flint-Arrow)
 - [Fletching Table](#Fletching-Table)
+- [Flint Arrow](#Flint-Arrow)
 
 ---
 
 ### Flint Arrow
 *kinda wacky, but gets the job done ig*
 
-![item-114]
+![item-125]
 - Type: Item
 - Tag: Arrow
 - Rarity: Common
@@ -911,6 +988,7 @@
 - Resource Damage: 1
 - Attack Damage: 25
 - Attack Speed: 1
+- DPS: 25
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Flint Arrow
@@ -922,7 +1000,7 @@
 ### Furnace
 *it go melt*
 
-![item-89]
+![item-92]
 - Type: Storage
 - Rarity: Common
 - Stackable: Yes
@@ -931,6 +1009,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Furnace
@@ -938,10 +1017,27 @@
 
 ---
 
+### Gem Map
+*Something important is marked on this map..*
+
+![item-95]
+- Type: Item
+- Rarity: Common
+- Stackable: Yes
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
+
+---
+
 ### Gold Axe
 *its axe*
 
-![item-92]
+![item-102]
 - Type: Axe
 - Tier: Steel
 - Rarity: Common
@@ -950,6 +1046,7 @@
 - Resource Damage: 22
 - Attack Damage: 15
 - Attack Speed: 1.1
+- DPS: 16.5
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Gold Axe
@@ -970,6 +1067,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Gold bar
@@ -977,13 +1075,14 @@
 - Made in Furnace
 - Needs 1 [Gold Ore](#Gold-Ore)
 #### Ingredient For:
-- [Gold Axe](#Gold-Axe)
+- [Coin](#Coin)
 - [Gold Boots](#Gold-Boots)
 - [Gold Helmet](#Gold-Helmet)
 - [Gold Pants](#Gold-Pants)
+- [Gold Chestplate](#Gold-Chestplate)
+- [Gold Axe](#Gold-Axe)
 - [Gold Pickaxe](#Gold-Pickaxe)
 - [Gold Sword](#Gold-Sword)
-- [Gold Chestplate](#Gold-Chestplate)
 
 ---
 
@@ -1001,6 +1100,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Boots
@@ -1022,6 +1122,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Chestplate
@@ -1043,6 +1144,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Helmet
@@ -1053,7 +1155,7 @@
 ### Gold Ore
 *its hard rock*
 
-![item-77]
+![item-79]
 - Type: Axe
 - Tier: None
 - Rarity: Common
@@ -1062,6 +1164,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1083,6 +1186,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Pants
@@ -1093,7 +1197,7 @@
 ### Gold Pickaxe
 *its pickaxe*
 
-![item-102]
+![item-112]
 - Type: Pickaxe
 - Tier: Wood
 - Rarity: Common
@@ -1102,6 +1206,7 @@
 - Resource Damage: 22
 - Attack Damage: 24
 - Attack Speed: 0.9
+- DPS: 21.6
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Gold Pickaxe
@@ -1114,7 +1219,7 @@
 ### Gold Sword
 *its sharp*
 
-![item-109]
+![item-119]
 - Type: Sword
 - Rarity: Common
 - Stackable: No
@@ -1122,6 +1227,7 @@
 - Resource Damage: 1
 - Attack Damage: 15
 - Attack Speed: 1.6
+- DPS: 24
 - Attack Range: 2
 - Sharpness: 0.9
 #### Crafting: Gives 1 Gold Sword
@@ -1133,7 +1239,7 @@
 ### Gronk Projectile
 *I shouldn't have this*
 
-![item-72]
+![item-74]
 - Type: Item
 - Rarity: Common
 - Stackable: Yes
@@ -1159,6 +1265,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1177,6 +1284,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Iron bar
@@ -1184,22 +1292,22 @@
 - Made in Furnace
 - Needs 1 [Iron Ore](#Iron-Ore)
 #### Ingredient For:
-- [Anvil](#Anvil)
-- [Steel Arrow](#Steel-Arrow)
-- [Steel Axe](#Steel-Axe)
 - [Steel Boots](#Steel-Boots)
 - [Steel Helmet](#Steel-Helmet)
 - [Steel Pants](#Steel-Pants)
+- [Steel Chestplate](#Steel-Chestplate)
+- [Anvil](#Anvil)
+- [Steel Axe](#Steel-Axe)
 - [Steel Pickaxe](#Steel-Pickaxe)
 - [Steel Sword](#Steel-Sword)
-- [Steel Chestplate](#Steel-Chestplate)
+- [Steel Arrow](#Steel-Arrow)
 
 ---
 
 ### Iron Ore
 *its hard rock*
 
-![item-78]
+![item-80]
 - Type: Axe
 - Tier: None
 - Rarity: Common
@@ -1208,6 +1316,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1231,6 +1340,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1254,6 +1364,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Meat Pie
@@ -1281,6 +1392,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Meat Soup
@@ -1291,10 +1403,28 @@
 
 ---
 
+### milk
+*testing item lol*
+
+![item-122]
+- Type: Axe
+- Tier: Milk
+- Rarity: Common
+- Stackable: No
+#### Weapon
+- Resource Damage: 500
+- Attack Damage: 15
+- Attack Speed: 1.5
+- DPS: 22.5
+- Attack Range: 2
+- Sharpness: 1
+
+---
+
 ### Mithril Arrow
 *Sharp arrow*
 
-![item-116]
+![item-127]
 - Type: Item
 - Tag: Arrow
 - Rarity: Common
@@ -1303,6 +1433,7 @@
 - Resource Damage: 1
 - Attack Damage: 45
 - Attack Speed: 1
+- DPS: 45
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Mithril Arrow
@@ -1314,7 +1445,7 @@
 ### Mithril Axe
 *its axe*
 
-![item-93]
+![item-103]
 - Type: Axe
 - Tier: Mithril
 - Rarity: Common
@@ -1323,6 +1454,7 @@
 - Resource Damage: 35
 - Attack Damage: 25
 - Attack Speed: 0.95
+- DPS: 23.75
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Mithril Axe
@@ -1343,6 +1475,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Mithril bar
@@ -1350,14 +1483,14 @@
 - Made in Furnace
 - Needs 1 [Mithril Ore](#Mithril-Ore)
 #### Ingredient For:
-- [Mithril Arrow](#Mithril-Arrow)
-- [Mithril Axe](#Mithril-Axe)
 - [Mithril Boots](#Mithril-Boots)
 - [Mithril Helmet](#Mithril-Helmet)
 - [Mithril Pants](#Mithril-Pants)
+- [Mithril Chestplate](#Mithril-Chestplate)
+- [Mithril Axe](#Mithril-Axe)
 - [Mithril Pickaxe](#Mithril-Pickaxe)
 - [Mithril Sword](#Mithril-Sword)
-- [Mithril Chestplate](#Mithril-Chestplate)
+- [Mithril Arrow](#Mithril-Arrow)
 
 ---
 
@@ -1375,6 +1508,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Boots
@@ -1396,6 +1530,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Chestplate
@@ -1417,6 +1552,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Helmet
@@ -1427,7 +1563,7 @@
 ### Mithril Ore
 *its hard rock*
 
-![item-79]
+![item-81]
 - Type: Axe
 - Tier: None
 - Rarity: Common
@@ -1436,6 +1572,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1457,6 +1594,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Pants
@@ -1467,7 +1605,7 @@
 ### Mithril Pickaxe
 *its pickaxe*
 
-![item-103]
+![item-113]
 - Type: Pickaxe
 - Tier: Steel
 - Rarity: Common
@@ -1476,6 +1614,7 @@
 - Resource Damage: 32
 - Attack Damage: 30
 - Attack Speed: 0.8
+- DPS: 24
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Mithril Pickaxe
@@ -1488,7 +1627,7 @@
 ### Mithril Sword
 *its sharp*
 
-![item-110]
+![item-120]
 - Type: Sword
 - Rarity: Common
 - Stackable: No
@@ -1496,6 +1635,7 @@
 - Resource Damage: 1
 - Attack Damage: 35
 - Attack Speed: 1.4
+- DPS: 49
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Sword
@@ -1507,12 +1647,12 @@
 ### Oak Bow
 *This bow looks sick*
 
-![item-96]
+![item-106]
 - Type: Bow
 - Rarity: Common
 - Stackable: No
 #### Bow
-- Projectile Speed: 40
+- Projectile Speed: 50
 - Arrows per shot: 1
 #### Crafting: Gives 1 Oak Bow
 - 5 [Oak Wood](#Oak-Wood)
@@ -1523,7 +1663,7 @@
 ### Oak Wood
 *its oak wood*
 
-![item-85]
+![item-88]
 - Type: Item
 - Tag: Fuel
 - Rarity: Common
@@ -1534,14 +1674,15 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
-- [Adamantite Arrow](#Adamantite-Arrow)
 - [Adamantite Axe](#Adamantite-Axe)
 - [Oak Bow](#Oak-Bow)
 - [Adamantite Pickaxe](#Adamantite-Pickaxe)
 - [Adamantite Sword](#Adamantite-Sword)
+- [Adamantite Arrow](#Adamantite-Arrow)
 - [Wyvern Dagger](#Wyvern-Dagger)
 
 ---
@@ -1562,6 +1703,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Purple Soup
@@ -1588,6 +1730,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1613,6 +1756,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1636,6 +1780,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Red Soup
@@ -1649,7 +1794,7 @@
 ### Rock
 *its rock*
 
-![item-80]
+![item-83]
 - Type: Axe
 - Tier: None
 - Rarity: Common
@@ -1658,21 +1803,21 @@
 - Resource Damage: 15
 - Attack Damage: 15
 - Attack Speed: 0.72
+- DPS: 10.799999999999999
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
+- [Chest](#Chest)
 - [Anvil](#Anvil)
 - [Cauldron](#Cauldron)
-- [Chest](#Chest)
 - [Furnace](#Furnace)
-- [Shovel](#Shovel)
 
 ---
 
 ### Rock Projectile
 *It's a rock, but for some reason you can use this on a bow lol*
 
-![item-70]
+![item-71]
 - Type: Item
 - Tag: Arrow
 - Rarity: Common
@@ -1687,7 +1832,7 @@
 ### Rock Projectile
 *It's a rock, but for some reason you can use this on a bow lol*
 
-![item-71]
+![item-72]
 - Type: Item
 - Tag: Arrow
 - Rarity: Common
@@ -1702,7 +1847,7 @@
 ### Rope
 *how do i make a noose again?*
 
-![item-106]
+![item-116]
 - Type: Item
 - Rarity: Common
 - Stackable: Yes
@@ -1710,6 +1855,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1.5
+- DPS: 1.5
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 2 Rope
@@ -1717,17 +1863,17 @@
 - 10 [Bark](#Bark)
 #### Ingredient For:
 - [Oak Bow](#Oak-Bow)
-- [Ancient Bow](#Ancient-Bow)
 - [Wood Bow](#Wood-Bow)
 - [Birch bow](#Birch-bow)
 - [Fir bow](#Fir-bow)
+- [Ancient Bow](#Ancient-Bow)
 
 ---
 
 ### Shovel
 *its shovel dig dig*
 
-![item-107]
+![item-117]
 - Type: Shovel
 - Tier: None
 - Rarity: Common
@@ -1736,12 +1882,9 @@
 - Resource Damage: 1
 - Attack Damage: 25
 - Attack Speed: 1.5
+- DPS: 37.5
 - Attack Range: 2
 - Sharpness: 0.5
-#### Crafting: Gives 1 Shovel
-- 5 [Wood](#Wood)
-- 5 [Rock](#Rock)
-- 5 [Bark](#Bark)
 
 ---
 
@@ -1761,6 +1904,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1768,10 +1912,23 @@
 
 ---
 
+### Spike Attack
+*I shouldn't have this*
+
+![item-73]
+- Type: Item
+- Rarity: Common
+- Stackable: Yes
+#### Bow
+- Projectile Speed: 3
+- Arrows per shot: 1
+
+---
+
 ### Steel Arrow
 *Shiny arrow*
 
-![item-117]
+![item-128]
 - Type: Item
 - Tag: Arrow
 - Rarity: Common
@@ -1780,6 +1937,7 @@
 - Resource Damage: 1
 - Attack Damage: 35
 - Attack Speed: 1
+- DPS: 35
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Steel Arrow
@@ -1791,7 +1949,7 @@
 ### Steel Axe
 *its axe*
 
-![item-94]
+![item-104]
 - Type: Axe
 - Tier: Steel
 - Rarity: Common
@@ -1800,6 +1958,7 @@
 - Resource Damage: 25
 - Attack Damage: 20
 - Attack Speed: 0.9
+- DPS: 18
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Steel Axe
@@ -1823,6 +1982,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Boots
@@ -1844,6 +2004,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Chestplate
@@ -1865,6 +2026,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Helmet
@@ -1886,6 +2048,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Pants
@@ -1896,7 +2059,7 @@
 ### Steel Pickaxe
 *its pickaxe*
 
-![item-104]
+![item-114]
 - Type: Pickaxe
 - Tier: Wood
 - Rarity: Common
@@ -1905,6 +2068,7 @@
 - Resource Damage: 25
 - Attack Damage: 27
 - Attack Speed: 0.8
+- DPS: 21.6
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Steel Pickaxe
@@ -1917,7 +2081,7 @@
 ### Steel Sword
 *its sharp*
 
-![item-111]
+![item-121]
 - Type: Sword
 - Rarity: Common
 - Stackable: No
@@ -1925,6 +2089,7 @@
 - Resource Damage: 1
 - Attack Damage: 25
 - Attack Speed: 1.3
+- DPS: 32.5
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Sword
@@ -1949,6 +2114,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1968,6 +2134,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 5 Torch
@@ -1992,6 +2159,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Weird Soup
@@ -2013,6 +2181,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -2024,7 +2193,7 @@
 ### Wolfskin
 *Feels warm and cozy*
 
-![item-127]
+![item-138]
 - Type: Item
 - Rarity: Common
 - Stackable: Yes
@@ -2032,6 +2201,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -2051,11 +2221,12 @@
 - Rarity: Common
 - Stackable: No
 - +2 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) ('<i>Full set gives 50% speed increase</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Boots
@@ -2073,11 +2244,12 @@
 - Rarity: Common
 - Stackable: No
 - +8 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) ('<i>Full set gives 50% speed increase</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Chestplate
@@ -2095,11 +2267,12 @@
 - Rarity: Common
 - Stackable: No
 - +3 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) ('<i>Full set gives 50% speed increase</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Helmet
@@ -2117,11 +2290,12 @@
 - Rarity: Common
 - Stackable: No
 - +6 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) ('<i>Full set gives 50% speed increase</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Pants
@@ -2133,7 +2307,7 @@
 ### Wood
 *its wood*
 
-![item-84]
+![item-87]
 - Type: Item
 - Tag: Fuel
 - Rarity: Common
@@ -2144,18 +2318,13 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
-- [Flint Arrow](#Flint-Arrow)
-- [Gold Axe](#Gold-Axe)
-- [Wood Axe](#Wood-Axe)
 - [Bark](#Bark)
-- [Wood Bow](#Wood-Bow)
-- [Cauldron](#Cauldron)
 - [Chest](#Chest)
-- [Gold Pickaxe](#Gold-Pickaxe)
-- [Wood Pickaxe](#Wood-Pickaxe)
+- [Wood Doorway](#Wood-Doorway)
 - [Wood Doorway](#Wood-Doorway)
 - [Wood Floor](#Wood-Floor)
 - [Wood Pole](#Wood-Pole)
@@ -2166,18 +2335,24 @@
 - [Wood Wall](#Wood-Wall)
 - [Wood Wall Half](#Wood-Wall-Half)
 - [Wood Wall Tilted](#Wood-Wall-Tilted)
-- [Wood Doorway](#Wood-Doorway)
-- [Shovel](#Shovel)
-- [Gold Sword](#Gold-Sword)
 - [Torch](#Torch)
+- [Bowl](#Bowl)
+- [Cauldron](#Cauldron)
 - [Workbench](#Workbench)
+- [Gold Axe](#Gold-Axe)
+- [Wood Axe](#Wood-Axe)
+- [Wood Bow](#Wood-Bow)
+- [Gold Pickaxe](#Gold-Pickaxe)
+- [Wood Pickaxe](#Wood-Pickaxe)
+- [Gold Sword](#Gold-Sword)
+- [Flint Arrow](#Flint-Arrow)
 
 ---
 
 ### Wood Axe
 *its axe*
 
-![item-95]
+![item-105]
 - Type: Axe
 - Tier: Wood
 - Rarity: Common
@@ -2188,6 +2363,7 @@
 - Resource Damage: 20
 - Attack Damage: 15
 - Attack Speed: 0.9
+- DPS: 13.5
 - Attack Range: 1
 - Sharpness: 0.75
 #### Crafting: Gives 1 Wood Axe
@@ -2199,7 +2375,7 @@
 ### Wood Bow
 *Looks kinda scuffed*
 
-![item-97]
+![item-107]
 - Type: Bow
 - Rarity: Common
 - Stackable: No
@@ -2215,7 +2391,7 @@
 ### Wood Doorway
 *its wood*
 
-![item-30]
+![item-29]
 - Type: Item
 - Rarity: Common
 - Stackable: Yes
@@ -2224,6 +2400,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Doorway
@@ -2234,7 +2411,7 @@
 ### Wood Doorway
 *its wood*
 
-![item-29]
+![item-30]
 - Type: Item
 - Rarity: Common
 - Stackable: Yes
@@ -2243,6 +2420,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Doorway
@@ -2262,6 +2440,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Floor
@@ -2272,7 +2451,7 @@
 ### Wood Pickaxe
 *its pickaxe*
 
-![item-105]
+![item-115]
 - Type: Pickaxe
 - Tier: None
 - Rarity: Common
@@ -2283,6 +2462,7 @@
 - Resource Damage: 18
 - Attack Damage: 20
 - Attack Speed: 0.8
+- DPS: 16
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Wood Pickaxe
@@ -2303,6 +2483,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Pole
@@ -2322,6 +2503,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Pole
@@ -2341,6 +2523,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Roof
@@ -2360,6 +2543,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood stairs
@@ -2379,6 +2563,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood stairs thinn
@@ -2398,6 +2583,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall
@@ -2417,6 +2603,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall Half
@@ -2436,6 +2623,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall Tilted
@@ -2446,7 +2634,7 @@
 ### Workbench
 *A crafting table*
 
-![item-90]
+![item-93]
 - Type: Station
 - Rarity: Common
 - Stackable: Yes
@@ -2455,6 +2643,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Workbench
@@ -2478,6 +2667,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Yellow Soup
@@ -2491,7 +2681,7 @@
 ### Dark Oak Wood
 *its literally oak but darker*
 
-![item-82]
+![item-85]
 - Type: Item
 - Tag: Fuel
 - Rarity: Uncommon
@@ -2502,12 +2692,74 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
 - [Fire arrow](#Fire-arrow)
 - [Lightning Arrow](#Lightning-Arrow)
 - [Water Arrow](#Water-Arrow)
+- [Gronks Sword](#Gronks-Sword)
+- [Night Blade](#Night-Blade)
+
+---
+
+### Obamium bar
+*block of Obamium*
+
+![item-140]
+- Type: Item
+- Rarity: Uncommon
+- Stackable: Yes
+#### Weapon
+- Resource Damage: 1
+- Attack Damage: 1
+- Attack Speed: 0.7
+- DPS: 0.7
+- Attack Range: 1
+- Sharpness: 0
+#### Smelting: Gives 1 Obamium bar
+- Takes 15 seconds
+- Made in Furnace
+- Needs 1 [Obamium Ore](#Obamium-Ore)
+#### Ingredient For:
+- [Night Blade](#Night-Blade)
+
+---
+
+### Obamium Ore
+*its purple rock*
+
+![item-141]
+- Type: Item
+- Rarity: Uncommon
+- Stackable: Yes
+#### Weapon
+- Resource Damage: 1
+- Attack Damage: 1
+- Attack Speed: 0.7
+- DPS: 0.7
+- Attack Range: 1
+- Sharpness: 0
+#### Ingredient For:
+- [Obamium bar](#Obamium-bar)
+
+---
+
+### Ruby
+*This looks pretty expensive*
+
+![item-82]
+- Type: Item
+- Rarity: Uncommon
+- Stackable: Yes
+#### Weapon
+- Resource Damage: 1
+- Attack Damage: 1
+- Attack Speed: 0.7
+- DPS: 0.7
+- Attack Range: 1
+- Sharpness: 0
 
 ---
 
@@ -2529,12 +2781,12 @@
 ### Ancient Bow
 *It has ancient in the name, so it must be good*
 
-![item-100]
+![item-110]
 - Type: Bow
 - Rarity: Rare
 - Stackable: No
 #### Bow
-- Projectile Speed: 40
+- Projectile Speed: 50
 - Arrows per shot: 3 (2 degrees apart)
 #### Crafting: Gives 1 Ancient Bow
 - 1 [Ancient Bone](#Ancient-Bone)
@@ -2553,15 +2805,35 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
+
+---
+
+### Black Shard
+*It's black*
+
+![item-142]
+- Type: Item
+- Rarity: Rare
+- Stackable: Yes
+#### Weapon
+- Resource Damage: 1
+- Attack Damage: 1
+- Attack Speed: 0.9
+- DPS: 0.9
+- Attack Range: 2
+- Sharpness: 1
+#### Ingredient For:
+- [Night Blade](#Night-Blade)
 
 ---
 
 ### Blade
 *I need a sword hilt for this*
 
-![item-123]
+![item-134]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2569,8 +2841,29 @@
 - Resource Damage: 1
 - Attack Damage: 20
 - Attack Speed: 0.9
+- DPS: 18
 - Attack Range: 2
 - Sharpness: 1
+#### Ingredient For:
+- [Gronks Sword](#Gronks-Sword)
+
+---
+
+### Blue Gem
+*A shiny blue gem*
+
+![item-96]
+- Type: Item
+- Tag: Gem
+- Rarity: Rare
+- Stackable: 1
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
 
 ---
 
@@ -2585,6 +2878,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Chunkium bar
@@ -2593,10 +2887,10 @@
 - Needs 1 [Chunkium Ore](#Chunkium-Ore)
 #### Ingredient For:
 - [Chunkium Boots](#Chunkium-Boots)
-- [Chunky Hammer](#Chunky-Hammer)
 - [Chunkium Helmet](#Chunkium-Helmet)
 - [Chunkium Pants](#Chunkium-Pants)
 - [Chunkium Chestplate](#Chunkium-Chestplate)
+- [Chunky Hammer](#Chunky-Hammer)
 
 ---
 
@@ -2609,11 +2903,12 @@
 - Rarity: Rare
 - Stackable: No
 - +4 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#Chunkium-Armor) ('<i>Full set gives 60% increased attack length</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Boots
@@ -2630,11 +2925,12 @@
 - Rarity: Rare
 - Stackable: No
 - +15 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#Chunkium-Armor) ('<i>Full set gives 60% increased attack length</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Chestplate
@@ -2651,11 +2947,12 @@
 - Rarity: Rare
 - Stackable: No
 - +6 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#Chunkium-Armor) ('<i>Full set gives 60% increased attack length</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Helmet
@@ -2666,7 +2963,7 @@
 ### Chunkium Ore
 *looks like your mom*
 
-![item-76]
+![item-78]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2674,6 +2971,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -2690,11 +2988,12 @@
 - Rarity: Rare
 - Stackable: No
 - +11 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#Chunkium-Armor) ('<i>Full set gives 60% increased attack length</i>')
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Pants
@@ -2705,7 +3004,7 @@
 ### Chunky Hammer
 *its blunt and chunky*
 
-![item-119]
+![item-130]
 - Type: Sword
 - Rarity: Rare
 - Stackable: No
@@ -2713,6 +3012,7 @@
 - Resource Damage: 1
 - Attack Damage: 120
 - Attack Speed: 0.95
+- DPS: 114
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunky Hammer
@@ -2721,10 +3021,23 @@
 
 ---
 
+### Dragonball
+*Ball of fire*
+
+![item-68]
+- Type: Item
+- Rarity: Rare
+- Stackable: Yes
+#### Bow
+- Projectile Speed: 80
+- Arrows per shot: 1
+
+---
+
 ### Fire arrow
 *An arrow charged with fire*
 
-![item-113]
+![item-124]
 - Type: Item
 - Tag: Arrow
 - Rarity: Rare
@@ -2733,6 +3046,7 @@
 - Resource Damage: 1
 - Attack Damage: 100
 - Attack Speed: 0.3
+- DPS: 30
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Fire arrow
@@ -2744,7 +3058,7 @@
 ### Fireball
 *Ball of fire*
 
-![item-68]
+![item-69]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2756,10 +3070,28 @@
 
 ---
 
+### Green Gem
+*A shiny green gem*
+
+![item-97]
+- Type: Item
+- Tag: Gem
+- Rarity: Rare
+- Stackable: 1
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
+
+---
+
 ### Gronks Sword
 *A very heavy sword*
 
-![item-120]
+![item-131]
 - Type: Sword
 - Rarity: Rare
 - Stackable: No
@@ -2767,15 +3099,20 @@
 - Resource Damage: 1
 - Attack Damage: 110
 - Attack Speed: 1.1
+- DPS: 121.00000000000001
 - Attack Range: 2
 - Sharpness: 1
+#### Crafting: Gives 1 Gronks Sword
+- 1 [Blade](#Blade)
+- 10 [Dark Oak Wood](#Dark-Oak-Wood)
+- 1 [Sword Hilt](#Sword-Hilt)
 
 ---
 
 ### Gronks Sword Projectile
 *A very heavy sword*
 
-![item-121]
+![item-132]
 - Type: Sword
 - Rarity: Rare
 - Stackable: No
@@ -2788,7 +3125,7 @@
 ### Hammer Shaft
 *Wild guess, but it might be used for making a hammer?*
 
-![item-124]
+![item-135]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2796,6 +3133,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -2806,7 +3144,7 @@
 ### Lightning Arrow
 *An arrow charged with lightning*
 
-![item-115]
+![item-126]
 - Type: Item
 - Tag: Arrow
 - Rarity: Rare
@@ -2815,6 +3153,7 @@
 - Resource Damage: 1
 - Attack Damage: 100
 - Attack Speed: 0.3
+- DPS: 30
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Lightning Arrow
@@ -2826,7 +3165,7 @@
 ### Lightningball
 *Ball of lightning*
 
-![item-69]
+![item-70]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2838,10 +3177,67 @@
 
 ---
 
+### Night Blade
+*Dark as the night sky*
+
+![item-143]
+- Type: Sword
+- Rarity: Rare
+- Stackable: No
+#### Weapon
+- Resource Damage: 1
+- Attack Damage: 130
+- Attack Speed: 1.15
+- DPS: 149.5
+- Attack Range: 2
+- Sharpness: 1
+#### Crafting: Gives 1 Night Blade
+- 1 [Black Shard](#Black-Shard)
+- 15 [Dark Oak Wood](#Dark-Oak-Wood)
+- 10 [Obamium bar](#Obamium-bar)
+
+---
+
+### Pink Gem
+*A shiny pink gem*
+
+![item-98]
+- Type: Item
+- Tag: Gem
+- Rarity: Rare
+- Stackable: 1
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
+
+---
+
+### Red Gem
+*A shiny red gem*
+
+![item-99]
+- Type: Item
+- Tag: Gem
+- Rarity: Rare
+- Stackable: 1
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
+
+---
+
 ### Sword Hilt
 *I'm gonna need a blade for this*
 
-![item-125]
+![item-136]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2849,15 +3245,18 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
+#### Ingredient For:
+- [Gronks Sword](#Gronks-Sword)
 
 ---
 
 ### Water Arrow
 *An arrow charged with water*
 
-![item-118]
+![item-129]
 - Type: Item
 - Tag: Arrow
 - Rarity: Rare
@@ -2866,6 +3265,7 @@
 - Resource Damage: 1
 - Attack Damage: 100
 - Attack Speed: 0.3
+- DPS: 30
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Water Arrow
@@ -2877,7 +3277,7 @@
 ### Waterball
 *Ball of water*
 
-![item-73]
+![item-75]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2892,7 +3292,7 @@
 ### Windball
 *Ball of wind*
 
-![item-74]
+![item-76]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2905,7 +3305,7 @@
 ### Wolf Claws
 *A wolfs claws*
 
-![item-126]
+![item-137]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2913,6 +3313,7 @@
 - Resource Damage: 1
 - Attack Damage: 20
 - Attack Speed: 1.2
+- DPS: 24
 - Attack Range: 2
 - Sharpness: 1
 
@@ -2921,7 +3322,7 @@
 ### Wyvern Claws
 *Extremely sharp claws*
 
-![item-128]
+![item-139]
 - Type: Item
 - Rarity: Rare
 - Stackable: Yes
@@ -2929,6 +3330,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -2939,7 +3341,7 @@
 ### Wyvern Dagger
 *An extremely sharp dagger*
 
-![item-122]
+![item-133]
 - Type: Sword
 - Rarity: Rare
 - Stackable: No
@@ -2947,63 +3349,39 @@
 - Resource Damage: 1
 - Attack Damage: 60
 - Attack Speed: 1.75
+- DPS: 105
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wyvern Dagger
 - 1 [Wyvern Claws](#Wyvern-Claws)
 - 10 [Oak Wood](#Oak-Wood)
 
+---
+
+### Yellow Gem
+*A shiny yellow gem*
+
+![item-100]
+- Type: Item
+- Tag: Gem
+- Rarity: Rare
+- Stackable: 1
+#### Weapon
+- Resource Damage: 0
+- Attack Damage: 0
+- Attack Speed: 1
+- DPS: 0
+- Attack Range: 1
+- Sharpness: 0
+
 # Recipes
-### Crafting Recipes
-- 5 [Iron bar](#Iron-bar) + 15 [Rock](#Rock) => 1 [Anvil](#Anvil)
-- 2 [Oak Wood](#Oak-Wood) + 1 [Adamantite bar](#Adamantite-bar) => 4 [Adamantite Arrow](#Adamantite-Arrow)
-- 1 [Fireball](#Fireball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Fire arrow](#Fire-arrow)
-- 2 [Wood](#Wood) + 1 [Flint](#Flint) => 4 [Flint Arrow](#Flint-Arrow)
-- 1 [Lightningball](#Lightningball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Lightning Arrow](#Lightning-Arrow)
-- 2 [Fir Wood](#Fir-Wood) + 1 [Mithril bar](#Mithril-bar) => 4 [Mithril Arrow](#Mithril-Arrow)
-- 2 [Birch Wood](#Birch-Wood) + 1 [Iron bar](#Iron-bar) => 4 [Steel Arrow](#Steel-Arrow)
-- 1 [Waterball](#Waterball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Water Arrow](#Water-Arrow)
-- 5 [Adamantite bar](#Adamantite-bar) + 5 [Bark](#Bark) + 10 [Oak Wood](#Oak-Wood) => 1 [Adamantite Axe](#Adamantite-Axe)
-- 5 [Gold bar](#Gold-bar) + 5 [Bark](#Bark) + 10 [Wood](#Wood) => 1 [Gold Axe](#Gold-Axe)
-- 5 [Mithril bar](#Mithril-bar) + 5 [Bark](#Bark) + 10 [Fir Wood](#Fir-Wood) => 1 [Mithril Axe](#Mithril-Axe)
-- 5 [Iron bar](#Iron-bar) + 5 [Bark](#Bark) + 10 [Birch Wood](#Birch-Wood) => 1 [Steel Axe](#Steel-Axe)
-- 5 [Wood](#Wood) + 5 [Bark](#Bark) => 1 [Wood Axe](#Wood-Axe)
+### Handcrafting Recipes
+- 10 [Wood](#Wood) => 1 [Workbench](#Workbench)
+---
+### [Workbench](#Workbench) Recipes
 - 5 [Wood](#Wood) => 5 [Bark](#Bark)
-- 5 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Boots](#Adamantite-Boots)
-- 5 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Boots](#Chunkium-Boots)
-- 5 [Gold bar](#Gold-bar) => 1 [Gold Boots](#Gold-Boots)
-- 5 [Mithril bar](#Mithril-bar) => 1 [Mithril Boots](#Mithril-Boots)
-- 5 [Iron bar](#Iron-bar) => 1 [Steel Boots](#Steel-Boots)
-- 5 [Wolfskin](#Wolfskin) + 5 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Boots](#Wolfskin-Boots)
-- 5 [Oak Wood](#Oak-Wood) + 1 [Rope](#Rope) => 1 [Oak Bow](#Oak-Bow)
-- 1 [Ancient Bone](#Ancient-Bone) + 1 [Rope](#Rope) => 1 [Ancient Bow](#Ancient-Bow)
-- 10 [Wood](#Wood) + 1 [Rope](#Rope) => 1 [Wood Bow](#Wood-Bow)
-- 10 [Birch Wood](#Birch-Wood) + 1 [Rope](#Rope) => 1 [Birch bow](#Birch-bow)
-- 10 [Fir Wood](#Fir-Wood) + 1 [Rope](#Rope) => 1 [Fir bow](#Fir-bow)
-- 10 [Wood](#Wood) + 10 [Rock](#Rock) => 1 [Cauldron](#Cauldron)
 - 20 [Wood](#Wood) + 10 [Rock](#Rock) => 1 [Chest](#Chest)
-- 1 [Hammer Shaft](#Hammer-Shaft) + 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunky Hammer](#Chunky-Hammer)
-- 5 [Wheat](#Wheat) => 1 [Dough](#Dough)
-- 1 [Flax](#Flax) => 1 [Flax Fibers](#Flax-Fibers)
-- 25 [Birch Wood](#Birch-Wood) + 10 [Flint](#Flint) => 1 [Fletching Table](#Fletching-Table)
-- 15 [Rock](#Rock) => 1 [Furnace](#Furnace)
-- 5 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Helmet](#Adamantite-Helmet)
-- 5 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Helmet](#Chunkium-Helmet)
-- 5 [Gold bar](#Gold-bar) => 1 [Gold Helmet](#Gold-Helmet)
-- 5 [Mithril bar](#Mithril-bar) => 1 [Mithril Helmet](#Mithril-Helmet)
-- 5 [Iron bar](#Iron-bar) => 1 [Steel Helmet](#Steel-Helmet)
-- 5 [Wolfskin](#Wolfskin) + 5 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Helmet](#Wolfskin-Helmet)
-- 15 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Pants](#Adamantite-Pants)
-- 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Pants](#Chunkium-Pants)
-- 15 [Gold bar](#Gold-bar) => 1 [Gold Pants](#Gold-Pants)
-- 15 [Mithril bar](#Mithril-bar) => 1 [Mithril Pants](#Mithril-Pants)
-- 15 [Iron bar](#Iron-bar) => 1 [Steel Pants](#Steel-Pants)
-- 15 [Wolfskin](#Wolfskin) + 15 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Pants](#Wolfskin-Pants)
-- 5 [Adamantite bar](#Adamantite-bar) + 5 [Bark](#Bark) + 10 [Oak Wood](#Oak-Wood) => 1 [Adamantite Pickaxe](#Adamantite-Pickaxe)
-- 5 [Gold bar](#Gold-bar) + 5 [Bark](#Bark) + 5 [Wood](#Wood) => 1 [Gold Pickaxe](#Gold-Pickaxe)
-- 5 [Mithril bar](#Mithril-bar) + 5 [Bark](#Bark) + 10 [Fir Wood](#Fir-Wood) => 1 [Mithril Pickaxe](#Mithril-Pickaxe)
-- 5 [Iron bar](#Iron-bar) + 5 [Bark](#Bark) + 10 [Birch Wood](#Birch-Wood) => 1 [Steel Pickaxe](#Steel-Pickaxe)
-- 5 [Wood](#Wood) + 5 [Bark](#Bark) => 1 [Wood Pickaxe](#Wood-Pickaxe)
+- 2 [Wood](#Wood) => 1 [Wood Doorway](#Wood-Doorway)
 - 2 [Wood](#Wood) => 1 [Wood Doorway](#Wood-Doorway)
 - 2 [Wood](#Wood) => 1 [Wood Floor](#Wood-Floor)
 - 2 [Wood](#Wood) => 1 [Wood Pole](#Wood-Pole)
@@ -3014,24 +3392,76 @@
 - 2 [Wood](#Wood) => 1 [Wood Wall](#Wood-Wall)
 - 2 [Wood](#Wood) => 1 [Wood Wall Half](#Wood-Wall-Half)
 - 2 [Wood](#Wood) => 1 [Wood Wall Tilted](#Wood-Wall-Tilted)
-- 2 [Wood](#Wood) => 1 [Wood Doorway](#Wood-Doorway)
-- 10 [Wheat](#Wheat) + 10 [Bark](#Bark) => 2 [Rope](#Rope)
-- 5 [Wood](#Wood) + 5 [Rock](#Rock) + 5 [Bark](#Bark) => 1 [Shovel](#Shovel)
-- 5 [Adamantite bar](#Adamantite-bar) + 5 [Oak Wood](#Oak-Wood) => 1 [Adamantite Sword](#Adamantite-Sword)
-- 5 [Gold bar](#Gold-bar) + 5 [Wood](#Wood) => 1 [Gold Sword](#Gold-Sword)
-- 5 [Mithril bar](#Mithril-bar) + 5 [Fir Wood](#Fir-Wood) => 1 [Mithril Sword](#Mithril-Sword)
-- 7 [Iron bar](#Iron-bar) + 5 [Birch Wood](#Birch-Wood) => 1 [Steel Sword](#Steel-Sword)
 - 2 [Wood](#Wood) + 1 [Coal](#Coal) => 5 [Torch](#Torch)
+- 1 [Wood](#Wood) => 1 [Bowl](#Bowl)
+- 5 [Wheat](#Wheat) => 1 [Dough](#Dough)
+- 5 [Iron bar](#Iron-bar) + 15 [Rock](#Rock) => 1 [Anvil](#Anvil)
+- 10 [Wood](#Wood) + 10 [Rock](#Rock) => 1 [Cauldron](#Cauldron)
+- 25 [Birch Wood](#Birch-Wood) + 10 [Flint](#Flint) => 1 [Fletching Table](#Fletching-Table)
+- 15 [Rock](#Rock) => 1 [Furnace](#Furnace)
+- 5 [Wood](#Wood) + 5 [Bark](#Bark) => 1 [Wood Axe](#Wood-Axe)
+- 10 [Wood](#Wood) + 1 [Rope](#Rope) => 1 [Wood Bow](#Wood-Bow)
+- 5 [Wood](#Wood) + 5 [Bark](#Bark) => 1 [Wood Pickaxe](#Wood-Pickaxe)
+- 10 [Wheat](#Wheat) + 10 [Bark](#Bark) => 2 [Rope](#Rope)
+- 2 [Wood](#Wood) + 1 [Flint](#Flint) => 4 [Flint Arrow](#Flint-Arrow)
+---
+### [Anvil](#Anvil) Recipes
+- 1 [Gold bar](#Gold-bar) => 5 [Coin](#Coin)
+- 5 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Boots](#Adamantite-Boots)
+- 5 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Boots](#Chunkium-Boots)
+- 5 [Gold bar](#Gold-bar) => 1 [Gold Boots](#Gold-Boots)
+- 5 [Mithril bar](#Mithril-bar) => 1 [Mithril Boots](#Mithril-Boots)
+- 5 [Iron bar](#Iron-bar) => 1 [Steel Boots](#Steel-Boots)
+- 5 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Helmet](#Adamantite-Helmet)
+- 5 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Helmet](#Chunkium-Helmet)
+- 5 [Gold bar](#Gold-bar) => 1 [Gold Helmet](#Gold-Helmet)
+- 5 [Mithril bar](#Mithril-bar) => 1 [Mithril Helmet](#Mithril-Helmet)
+- 5 [Iron bar](#Iron-bar) => 1 [Steel Helmet](#Steel-Helmet)
+- 15 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Pants](#Adamantite-Pants)
+- 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Pants](#Chunkium-Pants)
+- 15 [Gold bar](#Gold-bar) => 1 [Gold Pants](#Gold-Pants)
+- 15 [Mithril bar](#Mithril-bar) => 1 [Mithril Pants](#Mithril-Pants)
+- 15 [Iron bar](#Iron-bar) => 1 [Steel Pants](#Steel-Pants)
 - 15 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Chestplate](#Adamantite-Chestplate)
 - 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Chestplate](#Chunkium-Chestplate)
 - 15 [Gold bar](#Gold-bar) => 1 [Gold Chestplate](#Gold-Chestplate)
 - 20 [Mithril bar](#Mithril-bar) => 1 [Mithril Chestplate](#Mithril-Chestplate)
 - 20 [Iron bar](#Iron-bar) => 1 [Steel Chestplate](#Steel-Chestplate)
-- 20 [Wolfskin](#Wolfskin) + 20 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Chestplate](#Wolfskin-Chestplate)
-- 10 [Wood](#Wood) => 1 [Workbench](#Workbench)
+- 5 [Adamantite bar](#Adamantite-bar) + 5 [Bark](#Bark) + 10 [Oak Wood](#Oak-Wood) => 1 [Adamantite Axe](#Adamantite-Axe)
+- 5 [Gold bar](#Gold-bar) + 5 [Bark](#Bark) + 10 [Wood](#Wood) => 1 [Gold Axe](#Gold-Axe)
+- 5 [Mithril bar](#Mithril-bar) + 5 [Bark](#Bark) + 10 [Fir Wood](#Fir-Wood) => 1 [Mithril Axe](#Mithril-Axe)
+- 5 [Iron bar](#Iron-bar) + 5 [Bark](#Bark) + 10 [Birch Wood](#Birch-Wood) => 1 [Steel Axe](#Steel-Axe)
+- 5 [Adamantite bar](#Adamantite-bar) + 5 [Bark](#Bark) + 10 [Oak Wood](#Oak-Wood) => 1 [Adamantite Pickaxe](#Adamantite-Pickaxe)
+- 5 [Gold bar](#Gold-bar) + 5 [Bark](#Bark) + 5 [Wood](#Wood) => 1 [Gold Pickaxe](#Gold-Pickaxe)
+- 5 [Mithril bar](#Mithril-bar) + 5 [Bark](#Bark) + 10 [Fir Wood](#Fir-Wood) => 1 [Mithril Pickaxe](#Mithril-Pickaxe)
+- 5 [Iron bar](#Iron-bar) + 5 [Bark](#Bark) + 10 [Birch Wood](#Birch-Wood) => 1 [Steel Pickaxe](#Steel-Pickaxe)
+- 5 [Adamantite bar](#Adamantite-bar) + 5 [Oak Wood](#Oak-Wood) => 1 [Adamantite Sword](#Adamantite-Sword)
+- 5 [Gold bar](#Gold-bar) + 5 [Wood](#Wood) => 1 [Gold Sword](#Gold-Sword)
+- 5 [Mithril bar](#Mithril-bar) + 5 [Fir Wood](#Fir-Wood) => 1 [Mithril Sword](#Mithril-Sword)
+- 7 [Iron bar](#Iron-bar) + 5 [Birch Wood](#Birch-Wood) => 1 [Steel Sword](#Steel-Sword)
+- 1 [Hammer Shaft](#Hammer-Shaft) + 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunky Hammer](#Chunky-Hammer)
+- 1 [Blade](#Blade) + 10 [Dark Oak Wood](#Dark-Oak-Wood) + 1 [Sword Hilt](#Sword-Hilt) => 1 [Gronks Sword](#Gronks-Sword)
 - 1 [Wyvern Claws](#Wyvern-Claws) + 10 [Oak Wood](#Oak-Wood) => 1 [Wyvern Dagger](#Wyvern-Dagger)
+- 1 [Black Shard](#Black-Shard) + 15 [Dark Oak Wood](#Dark-Oak-Wood) + 10 [Obamium bar](#Obamium-bar) => 1 [Night Blade](#Night-Blade)
 ---
-### Cauldron Recipes
+### [Fletching Table](#Fletching-Table) Recipes
+- 5 [Wolfskin](#Wolfskin) + 5 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Boots](#Wolfskin-Boots)
+- 5 [Wolfskin](#Wolfskin) + 5 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Helmet](#Wolfskin-Helmet)
+- 15 [Wolfskin](#Wolfskin) + 15 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Pants](#Wolfskin-Pants)
+- 20 [Wolfskin](#Wolfskin) + 20 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Chestplate](#Wolfskin-Chestplate)
+- 1 [Flax](#Flax) => 1 [Flax Fibers](#Flax-Fibers)
+- 5 [Oak Wood](#Oak-Wood) + 1 [Rope](#Rope) => 1 [Oak Bow](#Oak-Bow)
+- 10 [Birch Wood](#Birch-Wood) + 1 [Rope](#Rope) => 1 [Birch bow](#Birch-bow)
+- 10 [Fir Wood](#Fir-Wood) + 1 [Rope](#Rope) => 1 [Fir bow](#Fir-bow)
+- 1 [Ancient Bone](#Ancient-Bone) + 1 [Rope](#Rope) => 1 [Ancient Bow](#Ancient-Bow)
+- 2 [Oak Wood](#Oak-Wood) + 1 [Adamantite bar](#Adamantite-bar) => 4 [Adamantite Arrow](#Adamantite-Arrow)
+- 1 [Fireball](#Fireball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Fire arrow](#Fire-arrow)
+- 1 [Lightningball](#Lightningball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Lightning Arrow](#Lightning-Arrow)
+- 2 [Fir Wood](#Fir-Wood) + 1 [Mithril bar](#Mithril-bar) => 4 [Mithril Arrow](#Mithril-Arrow)
+- 2 [Birch Wood](#Birch-Wood) + 1 [Iron bar](#Iron-bar) => 4 [Steel Arrow](#Steel-Arrow)
+- 1 [Waterball](#Waterball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Water Arrow](#Water-Arrow)
+---
+### [Cauldron](#Cauldron) Recipes
 - 1 [Dough](#Dough) => [Bread](#Bread) (5s)
 - 1 [Raw Meat](#Raw-Meat) => [Cooked Meat](#Cooked-Meat) (5s)
 - 1 [Bowl](#Bowl) + 1 [Red Apple](#Red-Apple) + 1 [Dough](#Dough) => [Apple Pie](#Apple-Pie) (5s)
@@ -3042,53 +3472,54 @@
 - 1 [Bowl](#Bowl) + 1 [Slurbon Shroom](#Slurbon-Shroom) => [Weird Soup](#Weird-Soup) (5s)
 - 1 [Bowl](#Bowl) + 1 [Ligon Shroom](#Ligon-Shroom) => [Yellow Soup](#Yellow-Soup) (5s)
 ---
-### Furnace Recipes
+### [Furnace](#Furnace) Recipes
 - [Adamantite Ore](#Adamantite-Ore) => [Adamantite bar](#Adamantite-bar) (15s)
 - [Chunkium Ore](#Chunkium-Ore) => [Chunkium bar](#Chunkium-bar) (23s)
 - [Gold Ore](#Gold-Ore) => [Gold bar](#Gold-bar) (4s)
 - [Iron Ore](#Iron-Ore) => [Iron bar](#Iron-bar) (6s)
 - [Mithril Ore](#Mithril-Ore) => [Mithril bar](#Mithril-bar) (10s)
+- [Obamium Ore](#Obamium-Ore) => [Obamium bar](#Obamium-bar) (15s)
 
 # Armor Sets
 ### Chunkium Armor
-*<i>Full set gives 60% increased attack length</i>*
+*'<i>Full set gives 60% increased attack length</i>'*
 - [Chunkium Helmet](#Chunkium-Helmet)
 - [Chunkium Chestplate](#Chunkium-Chestplate)
 - [Chunkium Pants](#Chunkium-Pants)
 - [Chunkium Boots](#Chunkium-Boots)
 ### Wolfskin Armor
-*<i>Full set gives 50% speed increase</i>*
+*'<i>Full set gives 50% speed increase</i>'*
 - [Wolfskin Helmet](#Wolfskin-Helmet)
 - [Wolfskin Chestplate](#Wolfskin-Chestplate)
 - [Wolfskin Pants](#Wolfskin-Pants)
 - [Wolfskin Boots](#Wolfskin-Boots)
 
 # Powerups by ID
-0. [Broccoli](#Broccoli)
-1. [Dumbbell](#Dumbbell)
-2. [Jetpack](#Jetpack)
-3. [Orange Juice](#Orange-Juice)
-4. [Peanut Butter](#Peanut-Butter)
-5. [Blue Pill](#Blue-Pill)
-6. [Red Pill](#Red-Pill)
-7. [Sneaker](#Sneaker)
-8. [Robin Hood Hat](#Robin-Hood-Hat)
-9. [Spooo Bean](#Spooo-Bean)
-10. [Bulldozer](#Bulldozer)
-11. [Horseshoe](#Horseshoe)
-12. [Danis Milk](#Danis-Milk)
-13. [Piggybank](#Piggybank)
-14. [Crimson Dagger](#Crimson-Dagger)
-15. [Dracula](#Dracula)
-16. [Janniks Frog](#Janniks-Frog)
+0. [Blue Pill](#Blue-Pill)
+0. [Red Pill](#Red-Pill)
+1. [Bulldozer](#Bulldozer)
+1. [Dracula](#Dracula)
+1. [Horseshoe](#Horseshoe)
+1. [Janniks Frog](#Janniks-Frog)
+1. [Piggybank](#Piggybank)
+1. [Crimson Dagger](#Crimson-Dagger)
+2. [Orange Juice](#Orange-Juice)
+3. [Dumbbell](#Dumbbell)
+3. [Peanut Butter](#Peanut-Butter)
+5. [Adrenaline](#Adrenaline)
+6. [Jetpack](#Jetpack)
+6. [Sneaker](#Sneaker)
+7. [Spooo Bean](#Spooo-Bean)
+7. [Broccoli](#Broccoli)
+7. [Robin Hood Hat](#Robin-Hood-Hat)
+8. [Berserk](#Berserk)
+8. [Checkered Shirt](#Checkered-Shirt)
+8. [Enforcer](#Enforcer)
+8. [Knuts Hammer](#Knuts-Hammer)
+8. [Danis Milk](#Danis-Milk)
+8. [Sniper Scope](#Sniper-Scope)
+8. [Wings of Glory](#Wings-of-Glory)
 17. [Juice](#Juice)
-18. [Adrenaline](#Adrenaline)
-19. [Berserk](#Berserk)
-20. [Checkered Shirt](#Checkered-Shirt)
-21. [Sniper Scope](#Sniper-Scope)
-22. [Knuts Hammer](#Knuts-Hammer)
-23. [Wings of Glory](#Wings-of-Glory)
-24. [Enforcer](#Enforcer)
 
 # Powerups by name
 - [Adrenaline](#Adrenaline)
@@ -3155,7 +3586,7 @@ Every blue pill you have gives you +10 shield. There is no limit to this, other 
 <details>
 <summary> Boring nerd details </summary>
 
-Broccoli gives you passive health regen over time. It does not consume any hunger, though it does not work when you have 0 hunger. It is linear, and every broccoli gives you +0.25 health regen per second. Implementation regenerates health every frame, multiplied by `Time.deltaTime`.
+Broccoli gives you passive health regen over time. It does not consume any hunger, though it does not work when you have 0 hunger. It is linear, and every broccoli gives you +0.05 health regen per second. Implementation regenerates health every frame, multiplied by `Time.deltaTime`.
 
 </details>
 
@@ -3794,7 +4225,7 @@ Dani's Milk adds to your total armor count, which is like wearing armor, but wit
 <details>
 <summary> Boring nerd details </summary>
 
-Every time you get a kill, you get additional hp. Specifically, the amount of Dracula powerups you have is how much hp you gain. Each dracula also caps out at 50 additional hp. Every time you get a Dracula, you need to kill 50 mobs to reach the limit.
+Every time you get a kill, you get additional hp. Specifically, the amount of Dracula powerups you have is how much hp you gain. Each dracula also caps out at 40 additional hp. Every time you get a Dracula, you need to kill 40 mobs to reach the limit.
 
 </details>
 
@@ -4245,7 +4676,7 @@ Here's how likely you are for the first few amounts of powerups you can get:
 
 Each sniper scope you collect gives you a higher chance to deal more damage.
 
-The more sniper scopes you have, the higher chance you have to deal additional damage from it. This caps out at 0.2 (20%) and has a scale speed of 0.15. Here's a graph of the chance to deal additonal damage:
+The more sniper scopes you have, the higher chance you have to deal additional damage from it. This caps out at 0.15 (15%) and has a scale speed of 0.14. Here's a graph of the chance to deal additonal damage:
 [![][Sniper-Scope-chance-image]][Sniper-Scope-chance-link]
 
 If you're lucky and get the additional damage, the actual amount of damage you deal is multiplied by up to 50x its original value. That function has a scale speed of 0.25, and here's the graph for that:
@@ -4257,46 +4688,51 @@ If you're lucky and get the additional damage, the actual amount of damage you d
 And here is a precalculated list of the numbers for the first couple sniper scopes, if you'd rather have the current stats of your character than a graph of all of them:
 
 0. 0% chance to deal 0x damage
-1. 2.8% chance to deal 11.1x damage
-2. 5.2% chance to deal 19.7x damage
-3. 7.2% chance to deal 26.4x damage
-4. 9% chance to deal 31.6x damage
-5. 10.6% chance to deal 35.7x damage
-6. 11.9% chance to deal 38.8x damage
-7. 13% chance to deal 41.3x damage
-8. 14% chance to deal 43.2x damage
-9. 14.8% chance to deal 44.7x damage
-10. 15.5% chance to deal 45.9x damage
-11. 16.2% chance to deal 46.8x damage
-12. 16.7% chance to deal 47.5x damage
-13. 17.2% chance to deal 48.1x damage
-14. 17.6% chance to deal 48.5x damage
-15. 17.9% chance to deal 48.8x damage
-16. 18.2% chance to deal 49.1x damage
-17. 18.4% chance to deal 49.3x damage
-18. 18.7% chance to deal 49.4x damage
-19. 18.8% chance to deal 49.6x damage
-20. 19% chance to deal 49.7x damage
-21. 19.1% chance to deal 49.7x damage
-22. 19.3% chance to deal 49.8x damage
-23. 19.4% chance to deal 49.8x damage
-24. 19.5% chance to deal 49.9x damage
-25. 19.5% chance to deal 49.9x damage
-26. 19.6% chance to deal 49.9x damage
-27. 19.7% chance to deal 49.9x damage
-28. 19.7% chance to deal 50x damage
-29. 19.7% chance to deal 50x damage
-30. 19.8% chance to deal 50x damage
-31. 19.8% chance to deal 50x damage
-32. 19.8% chance to deal 50x damage
-33. 19.9% chance to deal 50x damage
-34. 19.9% chance to deal 50x damage
-35. 19.9% chance to deal 50x damage
-36. 19.9% chance to deal 50x damage
-37. 19.9% chance to deal 50x damage
-38. 19.9% chance to deal 50x damage
-39. 19.9% chance to deal 50x damage
-40. 20% chance to deal 50x damage
+1. 2% chance to deal 11.1x damage
+2. 3.7% chance to deal 19.7x damage
+3. 5.1% chance to deal 26.4x damage
+4. 6.4% chance to deal 31.6x damage
+5. 7.6% chance to deal 35.7x damage
+6. 8.5% chance to deal 38.8x damage
+7. 9.4% chance to deal 41.3x damage
+8. 10.1% chance to deal 43.2x damage
+9. 10.7% chance to deal 44.7x damage
+10. 11.3% chance to deal 45.9x damage
+11. 11.8% chance to deal 46.8x damage
+12. 12.2% chance to deal 47.5x damage
+13. 12.6% chance to deal 48.1x damage
+14. 12.9% chance to deal 48.5x damage
+15. 13.2% chance to deal 48.8x damage
+16. 13.4% chance to deal 49.1x damage
+17. 13.6% chance to deal 49.3x damage
+18. 13.8% chance to deal 49.4x damage
+19. 14% chance to deal 49.6x damage
+20. 14.1% chance to deal 49.7x damage
+21. 14.2% chance to deal 49.7x damage
+22. 14.3% chance to deal 49.8x damage
+23. 14.4% chance to deal 49.8x damage
+24. 14.5% chance to deal 49.9x damage
+25. 14.5% chance to deal 49.9x damage
+26. 14.6% chance to deal 49.9x damage
+27. 14.7% chance to deal 49.9x damage
+28. 14.7% chance to deal 50x damage
+29. 14.7% chance to deal 50x damage
+30. 14.8% chance to deal 50x damage
+31. 14.8% chance to deal 50x damage
+32. 14.8% chance to deal 50x damage
+33. 14.9% chance to deal 50x damage
+34. 14.9% chance to deal 50x damage
+35. 14.9% chance to deal 50x damage
+36. 14.9% chance to deal 50x damage
+37. 14.9% chance to deal 50x damage
+38. 14.9% chance to deal 50x damage
+39. 14.9% chance to deal 50x damage
+40. 14.9% chance to deal 50x damage
+41. 15% chance to deal 50x damage
+42. 15% chance to deal 50x damage
+43. 15% chance to deal 50x damage
+44. 15% chance to deal 50x damage
+45. 15% chance to deal 50x damage
 
 </details>
 
@@ -4364,6 +4800,15 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 
 ---
 
+### BOSS: Bob
+- Base Health: 2500
+#### Weaknesses
+- None
+#### Loot Table
+
+
+---
+
 ### BOSS: Gronk
 - Base Health: 650
 #### Weaknesses
@@ -4372,11 +4817,24 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 - 100% chance to drop 50-100 [Coin](#Coin)
 - 40% chance to drop 5-15 [Oak Wood](#Oak-Wood)
 - 20% chance to drop 5-15 [Dark Oak Wood](#Dark-Oak-Wood)
-- 5% chance to drop 1-1 [Gronks Sword](#Gronks-Sword)
+- 2.5% chance to drop 1-1 [Gronks Sword](#Gronks-Sword)
 - 33% chance to drop 1-1 [AncientCore](#AncientCore)
 - 10% chance to drop 1-1 [Ancient Bone](#Ancient-Bone)
-- 15% chance to drop 1-1 [Blade](#Blade)
-- 15% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
+- 12% chance to drop 1-1 [Blade](#Blade)
+- 12% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
+
+---
+
+### BOSS: Guardian
+- Base Health: 650
+#### Weaknesses
+- None
+#### Loot Table
+- 100% chance to drop 50-100 [Coin](#Coin)
+- 2% chance to drop 1-1 [Black Shard](#Black-Shard)
+- 5% chance to drop 1-1 [AncientCore](#AncientCore)
+- 5% chance to drop 5-10 [Ruby](#Ruby)
+- 1% chance to drop 5-10 [Obamium Ore](#Obamium-Ore)
 
 ---
 
@@ -4539,7 +4997,7 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 [Knuts-Hammer-damage-link]: https://www.desmos.com/calculator/eyrumd2q4k
 [Sniper-Scope]: ../Assets/Texture2D/SniperScope.png
 [Sniper-Scope-chance-image]: PowerupStats/Images/sniper_chance.png
-[Sniper-Scope-chance-link]: https://www.desmos.com/calculator/vivzwiuqzm
+[Sniper-Scope-chance-link]: https://www.desmos.com/calculator/pbw4za9dwc
 [Sniper-Scope-damage-image]: PowerupStats/Images/sniper_damage.png
 [Sniper-Scope-damage-link]: https://www.desmos.com/calculator/akocvnn74b
 [Wings-of-Glory]: ../Assets/Texture2D/Wings.png
@@ -4614,63 +5072,78 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 [item-66]: ../Assets/Texture2D/MithrilBar.png
 [item-67]: ../Assets/Texture2D/Bone.png
 [item-68]: ../Assets/Texture2D/FireBall.png
-[item-69]: ../Assets/Texture2D/LightningBall.png
-[item-70]: ../Assets/Texture2D/RockIcon.png
+[item-69]: ../Assets/Texture2D/FireBall.png
+[item-70]: ../Assets/Texture2D/LightningBall.png
 [item-71]: ../Assets/Texture2D/RockIcon.png
-[item-72]: ../Assets/Texture2D/BigSword.png
-[item-73]: ../Assets/Texture2D/WaterBall.png
-[item-74]: ../Assets/Texture2D/FireBall.png
-[item-75]: ../Assets/Texture2D/Ore_Adamantite.png
-[item-76]: ../Assets/Texture2D/Ore_Chunkium_0.png
-[item-77]: ../Assets/Texture2D/Ore_Gold.png
-[item-78]: ../Assets/Texture2D/IronIcon.png
-[item-79]: ../Assets/Texture2D/Ore_Mithril.png
-[item-80]: ../Assets/Texture2D/RockIcon.png
-[item-81]: ../Assets/Texture2D/Wood_Birch.png
-[item-82]: ../Assets/Texture2D/Wood_DarkOak.png
-[item-83]: ../Assets/Texture2D/Wood_Fir.png
-[item-84]: ../Assets/Texture2D/Wood_Normal.png
-[item-85]: ../Assets/Texture2D/Wood_Oak.png
-[item-86]: ../Assets/Texture2D/AnvilIcon.png
-[item-87]: ../Assets/Texture2D/CookingIcon.png
-[item-88]: ../Assets/Texture2D/FletchingIcon.png
-[item-89]: ../Assets/Texture2D/FurnaceIcon.png
-[item-90]: ../Assets/Texture2D/WorckbenchIcon.png
-[item-91]: ../Assets/Texture2D/Axe_adamantite.png
-[item-92]: ../Assets/Texture2D/Axe_Gold.png
-[item-93]: ../Assets/Texture2D/Axe_Mihtril.png
-[item-94]: ../Assets/Texture2D/Axe_Steel.png
-[item-95]: ../Assets/Texture2D/Axe_wood.png
-[item-96]: ../Assets/Texture2D/Bow_icon.png
-[item-97]: ../Assets/Texture2D/Bow_normal.png
-[item-98]: ../Assets/Texture2D/Bow_Birch.png
-[item-99]: ../Assets/Texture2D/Bow_fir.png
-[item-100]: ../Assets/Texture2D/Ancient%20Bow.png
-[item-101]: ../Assets/Texture2D/Pickaxe_Adamantite.png
-[item-102]: ../Assets/Texture2D/Pickaxe_gold.png
-[item-103]: ../Assets/Texture2D/Pickaxe_mithril.png
-[item-104]: ../Assets/Texture2D/Pickaxe_Steel.png
-[item-105]: ../Assets/Texture2D/Pickaxe_wood.png
-[item-106]: ../Assets/Texture2D/Rope.png
-[item-107]: ../Assets/Texture2D/ShovelIcon.png
-[item-108]: ../Assets/Texture2D/Sword_Adamantite.png
-[item-109]: ../Assets/Texture2D/Sword_Gold.png
-[item-110]: ../Assets/Texture2D/Sword_Mithril.png
-[item-111]: ../Assets/Texture2D/Sword_steel.png
-[item-112]: ../Assets/Texture2D/Arrow_adamantite.png
-[item-113]: ../Assets/Texture2D/Arrow_Fire_0.png
-[item-114]: ../Assets/Texture2D/Arrow_flint.png
-[item-115]: ../Assets/Texture2D/ArrowLightning.png
-[item-116]: ../Assets/Texture2D/Arrow_mithril_0.png
-[item-117]: ../Assets/Texture2D/Arrow_Steel.png
-[item-118]: ../Assets/Texture2D/ArrowWater.png
-[item-119]: ../Assets/Texture2D/ChunkyHammer.png
-[item-120]: ../Assets/Texture2D/BigSword.png
-[item-121]: ../Assets/Texture2D/BigSword.png
-[item-122]: ../Assets/Texture2D/WyvernDagger.png
-[item-123]: ../Assets/Texture2D/Blade.png
-[item-124]: ../Assets/Texture2D/HammerShaft.png
-[item-125]: ../Assets/Texture2D/SwordHilt.png
-[item-126]: ../Assets/Texture2D/WolfClaws_0.png
-[item-127]: ../Assets/Texture2D/WolfSkin.png
-[item-128]: ../Assets/Texture2D/Claws.png
+[item-72]: ../Assets/Texture2D/RockIcon.png
+[item-73]: ../Assets/Texture2D/CircleHollow.png
+[item-74]: ../Assets/Texture2D/BigSword.png
+[item-75]: ../Assets/Texture2D/WaterBall.png
+[item-76]: ../Assets/Texture2D/FireBall.png
+[item-77]: ../Assets/Texture2D/Ore_Adamantite.png
+[item-78]: ../Assets/Texture2D/Ore_Chunkium_0.png
+[item-79]: ../Assets/Texture2D/Ore_Gold.png
+[item-80]: ../Assets/Texture2D/IronIcon.png
+[item-81]: ../Assets/Texture2D/Ore_Mithril.png
+[item-82]: ../Assets/Texture2D/Ruby.png
+[item-83]: ../Assets/Texture2D/RockIcon.png
+[item-84]: ../Assets/Texture2D/Wood_Birch.png
+[item-85]: ../Assets/Texture2D/Wood_DarkOak.png
+[item-86]: ../Assets/Texture2D/Wood_Fir.png
+[item-87]: ../Assets/Texture2D/Wood_Normal.png
+[item-88]: ../Assets/Texture2D/Wood_Oak.png
+[item-89]: ../Assets/Texture2D/AnvilIcon.png
+[item-90]: ../Assets/Texture2D/CookingIcon.png
+[item-91]: ../Assets/Texture2D/FletchingIcon.png
+[item-92]: ../Assets/Texture2D/FurnaceIcon.png
+[item-93]: ../Assets/Texture2D/WorckbenchIcon.png
+[item-94]: ../Assets/Texture2D/MapIcon.png
+[item-95]: ../Assets/Texture2D/MapIcon.png
+[item-96]: ../Assets/Texture2D/GemBlue.png
+[item-97]: ../Assets/Texture2D/GemGreen.png
+[item-98]: ../Assets/Texture2D/GemPurple.png
+[item-99]: ../Assets/Texture2D/GemRed.png
+[item-100]: ../Assets/Texture2D/GemYellow.png
+[item-101]: ../Assets/Texture2D/Axe_adamantite.png
+[item-102]: ../Assets/Texture2D/Axe_Gold.png
+[item-103]: ../Assets/Texture2D/Axe_Mihtril.png
+[item-104]: ../Assets/Texture2D/Axe_Steel.png
+[item-105]: ../Assets/Texture2D/Axe_wood.png
+[item-106]: ../Assets/Texture2D/Bow_icon.png
+[item-107]: ../Assets/Texture2D/Bow_normal.png
+[item-108]: ../Assets/Texture2D/Bow_Birch.png
+[item-109]: ../Assets/Texture2D/Bow_fir.png
+[item-110]: ../Assets/Texture2D/Ancient%20Bow.png
+[item-111]: ../Assets/Texture2D/Pickaxe_Adamantite.png
+[item-112]: ../Assets/Texture2D/Pickaxe_gold.png
+[item-113]: ../Assets/Texture2D/Pickaxe_mithril.png
+[item-114]: ../Assets/Texture2D/Pickaxe_Steel.png
+[item-115]: ../Assets/Texture2D/Pickaxe_wood.png
+[item-116]: ../Assets/Texture2D/Rope.png
+[item-117]: ../Assets/Texture2D/ShovelIcon.png
+[item-118]: ../Assets/Texture2D/Sword_Adamantite.png
+[item-119]: ../Assets/Texture2D/Sword_Gold.png
+[item-120]: ../Assets/Texture2D/Sword_Mithril.png
+[item-121]: ../Assets/Texture2D/Sword_steel.png
+[item-122]: ../Assets/Texture2D/Milk.png
+[item-123]: ../Assets/Texture2D/Arrow_adamantite.png
+[item-124]: ../Assets/Texture2D/Arrow_Fire_0.png
+[item-125]: ../Assets/Texture2D/Arrow_flint.png
+[item-126]: ../Assets/Texture2D/ArrowLightning.png
+[item-127]: ../Assets/Texture2D/Arrow_mithril_0.png
+[item-128]: ../Assets/Texture2D/Arrow_Steel.png
+[item-129]: ../Assets/Texture2D/ArrowWater.png
+[item-130]: ../Assets/Texture2D/ChunkyHammer.png
+[item-131]: ../Assets/Texture2D/BigSword.png
+[item-132]: ../Assets/Texture2D/BigSword.png
+[item-133]: ../Assets/Texture2D/WyvernDagger.png
+[item-134]: ../Assets/Texture2D/Blade.png
+[item-135]: ../Assets/Texture2D/HammerShaft.png
+[item-136]: ../Assets/Texture2D/SwordHilt.png
+[item-137]: ../Assets/Texture2D/WolfClaws_0.png
+[item-138]: ../Assets/Texture2D/WolfSkin.png
+[item-139]: ../Assets/Texture2D/Claws.png
+[item-140]: ../Assets/Texture2D/Bar_Obamium.png
+[item-141]: ../Assets/Texture2D/Ore_Obamium.png
+[item-142]: ../Assets/Texture2D/Black%20Shard.png
+[item-143]: ../Assets/Texture2D/NightBlade.png

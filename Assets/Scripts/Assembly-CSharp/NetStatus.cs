@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-
 public class NetStatus : MonoBehaviour
 {
-
 	private void Awake()
 	{
-		base.InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
+		InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
 	}
-
 
 	private void SlowUpdate()
 	{
@@ -20,7 +17,6 @@ public class NetStatus : MonoBehaviour
 			ClientSend.PingServer();
 		}
 	}
-
 
 	public static void AddPing(int p)
 	{
@@ -31,7 +27,6 @@ public class NetStatus : MonoBehaviour
 		}
 	}
 
-
 	public static int GetPing()
 	{
 		if (NetStatus.pings.Count > 0)
@@ -41,9 +36,7 @@ public class NetStatus : MonoBehaviour
 		return 0;
 	}
 
-
 	private static LinkedList<int> pings = new LinkedList<int>();
-
 
 	private static int pingBuffer = 2;
 }

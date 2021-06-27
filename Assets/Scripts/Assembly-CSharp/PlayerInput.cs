@@ -1,14 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class PlayerInput : MonoBehaviour
 {
-
-
-
     public static PlayerInput Instance { get; set; }
-
 
     private void Awake()
     {
@@ -18,17 +13,20 @@ public class PlayerInput : MonoBehaviour
         this.orientation = this.playerMovement.orientation;
     }
 
-
     private void Update()
     {
         if (!this.active)
         {
             return;
         }
+		if (GameManager.state == GameManager.GameState.GameOver)
+		{
+			this.StopInput();
+			return;
+		}
         this.MyInput();
         this.Look();
     }
-
 
     private void FixedUpdate()
     {
@@ -46,13 +44,6 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-
-    public void UpdateSensitivity(float s)
-    {
-        PlayerInput.sensMultiplier = s;
-    }
-
-
     private void StopInput()
     {
         this.x = 0f;
@@ -62,7 +53,6 @@ public class PlayerInput : MonoBehaviour
         this.playerMovement.SetInput(new Vector2(this.x, this.y), this.crouching, this.jumping, this.sprinting);
     }
 
-
     private void MyInput()
     {
         if (OtherInput.Instance.OtherUiActive() && !Map.Instance.active)
@@ -70,6 +60,10 @@ public class PlayerInput : MonoBehaviour
             this.StopInput();
             return;
         }
+		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.U) && Input.GetKeyDown(KeyCode.I))
+		{
+			UiController.Instance.ToggleHud();
+		}
         this.x = 0f;
         this.y = 0f;
         if (Input.GetKey(InputManager.forward))
@@ -127,11 +121,9 @@ public class PlayerInput : MonoBehaviour
             {
                 BuildManager.Instance.RotateBuild(1);
             }
-
         }
         this.playerMovement.SetInput(new Vector2(this.x, this.y), this.crouching, this.jumping, this.sprinting);
     }
-
 
     private void Look()
     {
@@ -166,81 +158,59 @@ public class PlayerInput : MonoBehaviour
         this.orientation.transform.localRotation = Quaternion.Euler(0f, this.desiredX, 0f);
     }
 
-
     public Vector2 GetAxisInput()
     {
         return new Vector2(this.x, this.y);
     }
-
 
     public float GetMouseX()
     {
         return Input.GetAxis("Mouse X") * this.sensitivity * 0.02f * PlayerInput.sensMultiplier;
     }
 
-
     public void SetMouseOffset(float o)
     {
         this.xRotation = o;
     }
-
 
     public float GetMouseOffset()
     {
         return this.xRotation;
     }
 
-
     private float xRotation;
-
 
     private float sensitivity = 50f;
 
-
     public static float sensMultiplier = 1f;
-
 
     private float desiredX;
 
-
     private float x;
-
 
     private float y;
 
-
     private bool jumping;
-
 
     private bool crouching;
 
-
     private bool sprinting;
-
 
     private Transform playerCam;
 
-
     private Transform orientation;
-
 
     private PlayerMovement playerMovement;
 
-
     public bool active = true;
-
 
     private float actualWallRotation;
 
-
     private float wallRotationVel;
-
 
     public Vector3 cameraRot;
 
-
     private float wallRunRotation;
-
 
     public float mouseOffsetY;
 }

@@ -11,7 +11,6 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
-
 public class ChatBox : MonoBehaviour
 {
 

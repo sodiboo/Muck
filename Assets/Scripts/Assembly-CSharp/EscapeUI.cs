@@ -2,10 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class EscapeUI : MonoBehaviour
 {
-
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
@@ -14,7 +12,6 @@ public class EscapeUI : MonoBehaviour
 			UiSfx.Instance.PlayClick();
 		}
 	}
-
 
 	public Button backBtn;
 }

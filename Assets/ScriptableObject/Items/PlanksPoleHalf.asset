@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: PlanksPoleHalf
   m_EditorClassIdentifier: 
+  important: 0
   id: 33
   name: Wood Pole
   description: its wood
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 8a11f7c13420dc347af1c04c6499c59d, type: 3}
-  material: {fileID: 2100000, guid: b1fecdfb80857684b876f147aeda516b, type: 2}
-  mesh: {fileID: 4300000, guid: cb07e5483278de84d928a469fbc8c313, type: 2}
+  sprite: {fileID: 21300000, guid: 32c6ec6a14b89dc47b1c4ebc41dbe0bc, type: 3}
+  material: {fileID: 2100000, guid: e4a3e08b591f0a8419aff8727b5fd5b4, type: 2}
+  mesh: {fileID: 4300000, guid: 413ac31a2b72efc469c58a69e3b754be, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,13 +35,13 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  - item: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
     amount: 2
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 1b566f1c1b2caab40a53b713f68baec7, type: 2}
   buildable: 1
   grid: 1
-  prefab: {fileID: 1758668002621812, guid: c0b706bff4e1ba94a9b2c54345d70a46, type: 3}
+  prefab: {fileID: 1526105990930589, guid: 64e28dd87be97a542921c1764fc32bdf, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -57,4 +58,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

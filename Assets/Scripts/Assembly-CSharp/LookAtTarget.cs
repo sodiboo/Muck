@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-
 [ExecuteInEditMode]
 public class LookAtTarget : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.mob = base.transform.root.GetComponent<Mob>();
 	}
-
 
 	private void LateUpdate()
 	{
@@ -33,18 +30,13 @@ public class LookAtTarget : MonoBehaviour
 		this.head.transform.localRotation = Quaternion.Euler(eulerAngles.x, num, eulerAngles.z);
 	}
 
-
 	public Transform target;
-
 
 	public Transform head;
 
-
 	public float lookDistance = 30f;
 
-
 	public bool yAxis;
-
 
 	private Mob mob;
 }

@@ -2,10 +2,8 @@
 using TMPro;
 using UnityEngine.UI;
 
-
 public class ScrollSettings : Setting
 {
-
 	public void SetSettings(string[] settings, int startVal)
 	{
 		this.settingNames = settings;
@@ -13,13 +11,11 @@ public class ScrollSettings : Setting
 		this.UpdateSetting();
 	}
 
-
 	public void Scroll(int i)
 	{
 		this.currentSetting += i;
 		this.UpdateSetting();
 	}
-
 
 	private void UpdateSetting()
 	{
@@ -43,15 +39,11 @@ public class ScrollSettings : Setting
 		this.m_OnClick.Invoke();
 	}
 
-
 	public TextMeshProUGUI settingText;
-
 
 	private string[] settingNames;
 
-
 	public RawImage scrollLeft;
-
 
 	public RawImage scrollRight;
 }

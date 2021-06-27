@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class GrassChunks : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.InitChunks();
 		this.UpdateChunkCenters(Vector2.zero);
 	}
-
 
 	private void InitChunks()
 	{
@@ -20,7 +17,6 @@ public class GrassChunks : MonoBehaviour
 		this.topLeftZ = (float)(this.chunkSize * this.chunkLength) / 2f;
 		this.chunks = new Dictionary<Vector3, GrassChunks.Chunk>();
 	}
-
 
 	private void UpdateChunkCenters(Vector2 dir)
 	{
@@ -64,7 +60,6 @@ public class GrassChunks : MonoBehaviour
 		this.chunks = dictionary;
 	}
 
-
 	private void Update()
 	{
 		Vector2 vector = this.FindPLayerChunk();
@@ -77,7 +72,6 @@ public class GrassChunks : MonoBehaviour
 		}
 	}
 
-
 	private void UpdateChunkLOD()
 	{
 		this.target = base.transform;
@@ -85,7 +79,6 @@ public class GrassChunks : MonoBehaviour
 		{
 		}
 	}
-
 
 	public int FindLOD(float distanceFromChunk)
 	{
@@ -98,7 +91,6 @@ public class GrassChunks : MonoBehaviour
 		}
 		return this.maxLOD * this.maxLOD;
 	}
-
 
 	private Vector2 FindPLayerChunk()
 	{
@@ -130,7 +122,6 @@ public class GrassChunks : MonoBehaviour
 		return Vector2.zero;
 	}
 
-
 	private void OnDrawGizmos()
 	{
 		if (this.chunks == null)
@@ -143,50 +134,36 @@ public class GrassChunks : MonoBehaviour
 		}
 	}
 
-
 	public int nChunks = 25;
-
 
 	public int chunkSize = 5;
 
-
 	private int chunkLength;
-
 
 	private float topLeftX;
 
-
 	private float topLeftZ;
 
-
 	public Dictionary<Vector3, GrassChunks.Chunk> chunks;
-
 
 	[Header("Grass")]
 	public int grassDensity;
 
-
 	private Vector2 previousChunk;
-
 
 	public Transform target;
 
-
 	private int maxLOD = 20;
-
 
 	public class Chunk
 	{
-
 		public Chunk(int lod, Vector3 chunkCenter)
 		{
 			this.lod = lod;
 			this.chunkCenter = chunkCenter;
 		}
 
-
 		public int lod;
-
 
 		public Vector3 chunkCenter;
 	}

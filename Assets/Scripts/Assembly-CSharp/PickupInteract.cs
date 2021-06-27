@@ -1,22 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class PickupInteract : MonoBehaviour, Interactable, SharedObject
 {
-
 	private void Awake()
 	{
 		this.defaultScale = base.transform.localScale;
 		this.desiredScale = this.defaultScale;
 	}
 
-
 	public void Interact()
 	{
 		ClientSend.PickupInteract(this.id);
 	}
-
 
 	public void LocalExecute()
 	{
@@ -25,17 +21,14 @@ public class PickupInteract : MonoBehaviour, Interactable, SharedObject
 		InventoryUI.Instance.AddItemToInventory(inventoryItem);
 	}
 
-
 	public void AllExecute()
 	{
 		this.RemoveObject();
 	}
 
-
 	public void ServerExecute(int fromClient)
 	{
 	}
-
 
 	public void RemoveObject()
 	{
@@ -43,24 +36,20 @@ public class PickupInteract : MonoBehaviour, Interactable, SharedObject
 		ResourceManager.Instance.RemoveInteractItem(this.id);
 	}
 
-
 	public string GetName()
 	{
 		return $"{this.item.name}\n<size=50%>(Press \"{InputManager.interact}\" to pickup)";
 	}
-
 
 	public bool IsStarted()
 	{
 		return false;
 	}
 
-
 	public void SetId(int id)
 	{
 		this.id = id;
 	}
-
 
 	private void Update()
 	{
@@ -69,24 +58,18 @@ public class PickupInteract : MonoBehaviour, Interactable, SharedObject
 		base.transform.localScale = Vector3.Lerp(base.transform.localScale, this.desiredScale, Time.deltaTime * 15f);
 	}
 
-
 	public int GetId()
 	{
 		return this.id;
 	}
 
-
 	public InventoryItem item;
-
 
 	public int amount;
 
-
 	public int id;
 
-
 	private Vector3 defaultScale;
-
 
 	private Vector3 desiredScale;
 }

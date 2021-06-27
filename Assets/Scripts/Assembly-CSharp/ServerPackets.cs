@@ -1,4 +1,6 @@
-﻿public enum ServerPackets
+﻿using System;
+
+public enum ServerPackets
 {
     welcome = 1,
     spawnPlayer,
@@ -54,6 +56,8 @@
     spawnGrave,
 	interact,
 	setTarget,
+	shipUpdate,
+	dragonUpdate,
 
     _vehicleOffset = 2360,
     moveVehicle,

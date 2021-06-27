@@ -4,10 +4,8 @@ using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
-
 public class Settings : MonoBehaviour
 {
-
     private void Start()
     {
         this.UpdateSave();
@@ -15,7 +13,6 @@ public class Settings : MonoBehaviour
 
     public GameObject controlsSetting;
     public RectTransform controlsParent;
-
 
     private void UpdateSave()
     {
@@ -115,7 +112,6 @@ public class Settings : MonoBehaviour
         this.music.onClick.AddListener(new UnityAction(this.UpdateMusic));
     }
 
-
     private void UpdateCamShake()
     {
         CurrentSettings.Instance.UpdateCamShake(this.IntToBool(this.camShake.currentSetting));
@@ -125,7 +121,6 @@ public class Settings : MonoBehaviour
     {
         CurrentSettings.Instance.UpdateInvertedCar(IntToBool(invertedCarX.currentSetting), IntToBool(invertedCarY.currentSetting));
     }
-
 
     private void UpdateInvertedMouse()
     {
@@ -137,36 +132,30 @@ public class Settings : MonoBehaviour
         CurrentSettings.Instance.UpdateInvertedRotate(IntToBool(invertedRotateX.currentSetting), IntToBool(invertedRotateY.currentSetting));
     }
 
-
     private void UpdateGrass()
     {
         CurrentSettings.Instance.UpdateGrass(this.IntToBool(this.grass.currentSetting));
     }
-
 
     private void UpdateTutorial()
     {
         CurrentSettings.Instance.UpdateTutorial(this.IntToBool(this.tutorial.currentSetting));
     }
 
-
     private void UpdateBuildFx()
     {
         CurrentSettings.Instance.UpdateBuildFx(this.IntToBool(this.disableBuildFx.currentSetting));
     }
-
 
     private void UpdateSens()
     {
         CurrentSettings.Instance.UpdateSens(this.IntToFloat(this.sens.currentSetting));
     }
 
-
     private void UpdateFov()
     {
         CurrentSettings.Instance.UpdateFov((float)this.fov.currentSetting);
     }
-
 
     private void UpdateForwardKey(KeyCode current)
     {
@@ -175,14 +164,12 @@ public class Settings : MonoBehaviour
         InputManager.forward = current;
     }
 
-
     private void UpdateBackwardKey(KeyCode current)
     {
         SaveManager.Instance.state.backwards = current;
         SaveManager.Instance.Save();
         InputManager.backwards = current;
     }
-
 
     private void UpdateLeftKey(KeyCode current)
     {
@@ -191,7 +178,6 @@ public class Settings : MonoBehaviour
         InputManager.left = current;
     }
 
-
     private void UpdateRightKey(KeyCode current)
     {
         SaveManager.Instance.state.right = current;
@@ -199,14 +185,12 @@ public class Settings : MonoBehaviour
         InputManager.right = current;
     }
 
-
     private void UpdateJumpKey(KeyCode current)
     {
         SaveManager.Instance.state.jump = current;
         SaveManager.Instance.Save();
         InputManager.jump = current;
     }
-
 
     private void UpdateSprintKey(KeyCode current)
     {
@@ -221,7 +205,6 @@ public class Settings : MonoBehaviour
         SaveManager.Instance.Save();
         InputManager.crouch = current;
     }
-
 
     private void UpdateInteractKey(KeyCode current)
     {
@@ -244,14 +227,12 @@ public class Settings : MonoBehaviour
         InputManager.precisionRotate = current;
     }
 
-
     private void UpdateInventoryKey(KeyCode current)
     {
         SaveManager.Instance.state.inventory = current;
         SaveManager.Instance.Save();
         InputManager.inventory = current;
     }
-
 
     private void UpdateMapKey(KeyCode current)
     {
@@ -260,14 +241,12 @@ public class Settings : MonoBehaviour
         InputManager.map = current;
     }
 
-
     private void UpdateLeftClickKey(KeyCode current)
     {
         SaveManager.Instance.state.leftClick = current;
         SaveManager.Instance.Save();
         InputManager.leftClick = current;
     }
-
 
     private void UpdateRightClickKey(KeyCode current)
     {
@@ -276,114 +255,95 @@ public class Settings : MonoBehaviour
         InputManager.rightClick = current;
     }
 
-
     private void UpdateShadowQuality()
     {
         CurrentSettings.Instance.UpdateShadowQuality(this.shadowQuality.currentSetting);
     }
-
 
     private void UpdateShadowResolution()
     {
         CurrentSettings.Instance.UpdateShadowResolution(this.shadowResolution.currentSetting);
     }
 
-
     private void UpdateShadowDistance()
     {
         CurrentSettings.Instance.UpdateShadowDistance(this.shadowDistance.currentSetting);
     }
-
 
     private void UpdateShadowCascades()
     {
         CurrentSettings.Instance.UpdateShadowCascades(this.shadowCascades.currentSetting);
     }
 
-
     private void UpdateTextureRes()
     {
         CurrentSettings.Instance.UpdateTextureQuality(this.textureQuality.currentSetting);
     }
-
 
     private void UpdateAntiAliasing()
     {
         CurrentSettings.Instance.UpdateAntiAliasing(this.antiAliasing.currentSetting);
     }
 
-
     private void UpdateSoftParticles()
     {
         CurrentSettings.Instance.UpdateSoftParticles(this.IntToBool(this.softParticles.currentSetting));
     }
-
 
     private void UpdateBloom()
     {
         CurrentSettings.Instance.UpdateBloom(this.bloom.currentSetting);
     }
 
-
     private void UpdateMotionBlur()
     {
         CurrentSettings.Instance.UpdateMotionBlur(this.IntToBool(this.motionBlur.currentSetting));
     }
-
 
     private void UpdateAO()
     {
         CurrentSettings.Instance.UpdateAO(this.IntToBool(this.ao.currentSetting));
     }
 
-
     private void UpdateFullscreen()
     {
         CurrentSettings.Instance.UpdateFullscreen(this.IntToBool(this.fullscreen.currentSetting));
     }
-
 
     private void UpdateFullscreenMode()
     {
         CurrentSettings.Instance.UpdateFullscreenMode(this.fullscreenMode.currentSetting);
     }
 
-
     private void UpdateVSync()
     {
         CurrentSettings.Instance.UpdateVSync(this.vSync.currentSetting);
     }
-
 
     private void UpdateMaxFps()
     {
         CurrentSettings.Instance.UpdateMaxFps(this.fpsLimit.currentSetting);
     }
 
-
     private void UpdateVolume()
     {
         CurrentSettings.Instance.UpdateVolume(this.volume.currentSetting);
     }
-
 
     private void UpdateMusic()
     {
         CurrentSettings.Instance.UpdateMusic(this.music.currentSetting);
     }
 
-
     private float IntToFloat(int i)
     {
         return (float)i / 100f;
     }
 
-
     private int FloatToInt(float f)
     {
         return (int)(f * 100f);
     }
-
 
     private int BoolToInt(bool b)
     {
@@ -394,12 +354,10 @@ public class Settings : MonoBehaviour
         return 0;
     }
 
-
     private bool IntToBool(int i)
     {
         return i != 0;
     }
-
 
     public void ResetSaveFile()
     {
@@ -409,203 +367,136 @@ public class Settings : MonoBehaviour
         CurrentSettings.Instance.UpdateSave();
     }
 
-
     public Button backBtn;
-
 
     [Header("Game")]
     public MyBoolSetting camShake;
 
-
     public SliderSetting fov;
 
+	public MyBoolSetting invertedHor;
 
     public SliderSetting sens;
 
-
     public MyBoolSetting invertedCarX;
-
 
     public MyBoolSetting invertedCarY;
 
-
     public MyBoolSetting invertedMouseX;
-
 
     public MyBoolSetting invertedMouseY;
 
-
     public MyBoolSetting invertedRotateX;
-
 
     public MyBoolSetting invertedRotateY;
 
-
     public MyBoolSetting grass;
-
 
     public MyBoolSetting tutorial;
 
-
     public MyBoolSetting disableBuildFx;
-
 
     [Header("Graphics")]
     public ScrollSettings shadowQuality;
 
-
     public ScrollSettings shadowResolution;
-
 
     public ScrollSettings shadowDistance;
 
-
     public ScrollSettings shadowCascades;
-
 
     public ScrollSettings textureQuality;
 
-
     public ScrollSettings antiAliasing;
-
 
     public MyBoolSetting softParticles;
 
-
     public ScrollSettings bloom;
-
 
     public MyBoolSetting motionBlur;
 
-
     public MyBoolSetting ao;
-
 
     [Header("Video")]
     public ResolutionSetting resolution;
 
-
     public MyBoolSetting fullscreen;
-
 
     public ScrollSettings fullscreenMode;
 
-
     public ScrollSettings vSync;
 
-
     public SliderSetting fpsLimit;
-
 
     [Header("Audio")]
     public SliderSetting volume;
 
-
     [Header("Audio")]
     public SliderSetting music;
 
-
     public enum BoolSetting
     {
-
         Off,
-
-        On
+        On,
     }
-
 
     public enum VSync
     {
-
         Off,
-
         Always,
-
-        Half
+        Half,
     }
-
 
     public enum ShadowQuality
     {
-
         Off,
-
         Hard,
-
-        Soft
+        Soft,
     }
-
 
     public enum ShadowResolution
     {
-
         Low,
-
         Medium,
-
         High,
-
-        Ultra
+        Ultra,
     }
-
 
     public enum ShadowDistance
     {
-
         Low,
-
         Medium,
-
         High,
-
-        Ultra
+        Ultra,
     }
-
 
     public enum ShadowCascades
     {
-
         None,
-
         Two,
-
-        Four
+        Four,
     }
-
 
     public enum TextureResolution
     {
-
         Low,
-
         Medium,
-
         High,
-
-        Ultra
+        Ultra,
     }
-
 
     public enum AntiAliasing
     {
-
         Off,
-
         x2,
-
         x4,
-
-        x8
+        x8,
     }
-
 
     public enum Bloom
     {
-
         Off,
-
         Fast,
-
-        Fancy
+        Fancy,
     }
 }

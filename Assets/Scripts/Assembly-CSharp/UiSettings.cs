@@ -3,14 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class UiSettings : MonoBehaviour
 {
-
-
-
 	public int setting { get; private set; }
-
 
 	public void AddSettings(int defaultValue, string[] enumNames)
 	{
@@ -30,7 +25,6 @@ public class UiSettings : MonoBehaviour
 		this.UpdateSelection();
 	}
 
-
 	private void UpdateSelection()
 	{
 		for (int i = 0; i < this.texts.Length; i++)
@@ -46,22 +40,17 @@ public class UiSettings : MonoBehaviour
 		}
 	}
 
-
 	private void UpdateSetting(int i)
 	{
 		this.setting = i;
 		this.UpdateSelection();
 	}
 
-
 	public GameObject settingButton;
-
 
 	private TextMeshProUGUI[] texts;
 
-
 	private Color selected = Color.white;
-
 
 	private Color deselected = Color.gray;
 }

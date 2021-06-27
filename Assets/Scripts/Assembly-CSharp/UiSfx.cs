@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
 
-
 public class UiSfx : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		UiSfx.Instance = this;
 	}
-
 
 	public void PlayInventory(bool open)
 	{
@@ -25,7 +22,6 @@ public class UiSfx : MonoBehaviour
 		this.audio.Play();
 	}
 
-
 	public void PlayPickup()
 	{
 		this.audio.clip = this.pickupItem;
@@ -33,7 +29,6 @@ public class UiSfx : MonoBehaviour
 		this.audio.pitch = Random.Range(0.8f, 1.2f);
 		this.audio.Play();
 	}
-
 
 	public void PlayArmor()
 	{
@@ -43,7 +38,6 @@ public class UiSfx : MonoBehaviour
 		this.audio.Play();
 	}
 
-
 	public void PlayClick()
 	{
 		this.audio.clip = this.hover;
@@ -51,7 +45,6 @@ public class UiSfx : MonoBehaviour
 		this.audio.pitch = Random.Range(0.6f, 0.7f);
 		this.audio.Play();
 	}
-
 
 	public void PlayTaskComplete()
 	{
@@ -61,30 +54,21 @@ public class UiSfx : MonoBehaviour
 		this.audio.Play();
 	}
 
-
 	public AudioSource audio;
-
 
 	public AudioClip openInventory;
 
-
 	public AudioClip closeInventory;
-
 
 	public AudioClip pickupItem;
 
-
 	public AudioClip armor;
-
 
 	public AudioClip hover;
 
-
 	public AudioClip click;
 
-
 	public AudioClip tutorialTask;
-
 
 	public static UiSfx Instance;
 }

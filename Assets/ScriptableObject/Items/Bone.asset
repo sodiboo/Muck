@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bone
   m_EditorClassIdentifier: 
+  important: 0
   id: 67
   name: Ancient Bone
   description: oof owie my bones
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 255afc7b8cec2ad49b98f681d6c108f9, type: 3}
-  material: {fileID: 2100000, guid: ac23bc4890a0db44d8fbf7b23a497990, type: 2}
-  mesh: {fileID: 4300000, guid: 36913a7c3117458478e1e4b91246d7e5, type: 2}
+  sprite: {fileID: 21300000, guid: 9b90b2468f8574444b10e56270ba68e5, type: 3}
+  material: {fileID: 2100000, guid: 1503310d16194354a808564afa26e7ac, type: 2}
+  mesh: {fileID: 4300000, guid: 950bf0816b6c944458eebeca6bbf5770, type: 2}
   rotationOffset: {x: 0, y: 0, z: -20}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1465296028374316, guid: 998482cef44adce4bb0aba65daa0975e, type: 3}
+  prefab: {fileID: 1576084888928057, guid: 650c08d3f39553a4aa3f7397760663bb, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -49,10 +50,10 @@ MonoBehaviour:
   stamina: 0
   armor: 0
   swingFx: 0
-  bowComponent: {fileID: 11400000, guid: 48f375ce76c7779449a0682f651dca0a, type: 2}
+  bowComponent: {fileID: 11400000, guid: df8c2db69f9377747a655d7da59c2c62, type: 2}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

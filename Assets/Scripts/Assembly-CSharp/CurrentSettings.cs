@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class CurrentSettings : MonoBehaviour
 {
-
     private void Awake()
     {
         if (CurrentSettings.Instance)
@@ -13,21 +11,17 @@ public class CurrentSettings : MonoBehaviour
             return;
         }
         CurrentSettings.Instance = this;
-        Debug.LogError("new settings instance");
     }
-
 
     private void Start()
     {
         this.InitSettings();
     }
 
-
     private void InitSettings()
     {
         this.UpdateSave();
     }
-
 
     public void UpdateSave()
     {
@@ -61,14 +55,12 @@ public class CurrentSettings : MonoBehaviour
         this.UpdateMusic(SaveManager.Instance.state.music);
     }
 
-
     public void UpdateCamShake(bool b)
     {
         SaveManager.Instance.state.cameraShake = b;
         SaveManager.Instance.Save();
         CurrentSettings.cameraShake = b;
     }
-
 
     public void UpdateSens(float i)
     {
@@ -78,7 +70,6 @@ public class CurrentSettings : MonoBehaviour
         this.sensMultiplier = i;
         PlayerInput.sensMultiplier = i;
     }
-
 
     public void UpdateFov(float i)
     {
@@ -103,7 +94,6 @@ public class CurrentSettings : MonoBehaviour
         CurrentSettings.invertedCar = (x, y);
     }
 
-
     public void UpdateInvertedMouse(bool x, bool y)
     {
         Debug.Log($"Setting inverted mouse to: {x},{y}");
@@ -121,7 +111,6 @@ public class CurrentSettings : MonoBehaviour
         CurrentSettings.invertedRotate = (x, y);
     }
 
-
     public void UpdateGrass(bool b)
     {
         Debug.Log("Setting grass to: " + b.ToString());
@@ -129,7 +118,6 @@ public class CurrentSettings : MonoBehaviour
         SaveManager.Instance.Save();
         CurrentSettings.grass = b;
     }
-
 
     public void UpdateTutorial(bool b)
     {
@@ -139,7 +127,6 @@ public class CurrentSettings : MonoBehaviour
         this.tutorial = b;
     }
 
-
     public void UpdateBuildFx(bool b)
     {
         Debug.Log("Setting disable build fx to: " + b.ToString());
@@ -147,7 +134,6 @@ public class CurrentSettings : MonoBehaviour
         SaveManager.Instance.Save();
         this.disableBuildFx = b;
     }
-
 
     public void UpdateShadowQuality(int i)
     {
@@ -157,7 +143,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updating shadow quality");
     }
 
-
     public void UpdateShadowResolution(int i)
     {
         SaveManager.Instance.state.shadowResolution = i;
@@ -165,7 +150,6 @@ public class CurrentSettings : MonoBehaviour
         QualitySettings.shadowResolution = (ShadowResolution)i;
         MonoBehaviour.print("updating shadow res");
     }
-
 
     public void UpdateShadowCascades(int i)
     {
@@ -175,7 +159,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updating shadow cascades");
     }
 
-
     public void UpdateShadowDistance(int i)
     {
         SaveManager.Instance.state.shadowDistance = i;
@@ -184,7 +167,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updating shadow distance");
     }
 
-
     public void UpdateTextureQuality(int i)
     {
         SaveManager.Instance.state.textureQuality = i;
@@ -192,7 +174,6 @@ public class CurrentSettings : MonoBehaviour
         QualitySettings.masterTextureLimit = 3 - i;
         MonoBehaviour.print("updating texture quality");
     }
-
 
     public void UpdateAntiAliasing(int i)
     {
@@ -218,7 +199,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updating AA");
     }
 
-
     public void UpdateSoftParticles(bool b)
     {
         SaveManager.Instance.state.softParticles = b;
@@ -226,7 +206,6 @@ public class CurrentSettings : MonoBehaviour
         QualitySettings.softParticles = b;
         MonoBehaviour.print("updating soft particles");
     }
-
 
     public void UpdateBloom(int i)
     {
@@ -236,7 +215,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updating bloom");
     }
 
-
     public void UpdateMotionBlur(bool b)
     {
         SaveManager.Instance.state.motionBlur = b;
@@ -245,7 +223,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updating motion blur");
     }
 
-
     public void UpdateAO(bool b)
     {
         SaveManager.Instance.state.ambientOcclusion = b;
@@ -253,7 +230,6 @@ public class CurrentSettings : MonoBehaviour
         PPController.Instance.SetAO(b);
         MonoBehaviour.print("updating AO");
     }
-
 
     public void UpdateResolution(int width, int height, int refreshRate)
     {
@@ -271,7 +247,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("Updated screen resoltion");
     }
 
-
     public void UpdateFullscreen(bool i)
     {
         SaveManager.Instance.state.fullscreen = i;
@@ -279,7 +254,6 @@ public class CurrentSettings : MonoBehaviour
         Screen.fullScreen = i;
         MonoBehaviour.print("updated fullscreen");
     }
-
 
     public void UpdateFullscreenMode(int i)
     {
@@ -289,7 +263,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updated fullscreenmode");
     }
 
-
     public void UpdateVSync(int i)
     {
         SaveManager.Instance.state.vSync = i;
@@ -297,7 +270,6 @@ public class CurrentSettings : MonoBehaviour
         QualitySettings.vSyncCount = i;
         MonoBehaviour.print("updated vsync");
     }
-
 
     public void UpdateMaxFps(int i)
     {
@@ -307,7 +279,6 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updated fps limit");
     }
 
-
     public void UpdateVolume(int i)
     {
         SaveManager.Instance.state.volume = i;
@@ -316,21 +287,18 @@ public class CurrentSettings : MonoBehaviour
         MonoBehaviour.print("updated volume");
     }
 
-
     public void UpdateMusic(int i)
     {
         SaveManager.Instance.state.music = i;
         SaveManager.Instance.Save();
         MusicController.Instance.SetVolume((float)i / 10f);
+		this.music = (float)SaveManager.Instance.state.music / 10f;
         MonoBehaviour.print("updated music");
     }
 
-
     public static bool cameraShake;
 
-
     public static bool grass = true;
-
 
     public static (bool x, bool y) invertedCar = (true, true);
     public static (bool x, bool y) invertedMouse = (false, false);
@@ -339,21 +307,15 @@ public class CurrentSettings : MonoBehaviour
 
     public float sensMultiplier;
 
-
     public int fov = 85;
-
 
     public bool tutorial;
 
-
     public bool disableBuildFx;
-
 
     public float volume;
 
-
     public float music;
-
 
     public static CurrentSettings Instance;
 }

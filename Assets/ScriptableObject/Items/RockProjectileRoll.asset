@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: RockProjectileRoll
   m_EditorClassIdentifier: 
-  id: 71
+  important: 0
+  id: 72
   name: Rock Projectile
   description: It's a rock, but for some reason you can use this on a bow lol
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: d351dec16b24da444a03c106fbb74466, type: 3}
-  material: {fileID: 2100000, guid: 06be4becee57d7f4c9fee79680aa88a7, type: 2}
-  mesh: {fileID: 4300000, guid: 265a04f3178dea144a9e3db44d1a7a2d, type: 2}
+  sprite: {fileID: 21300000, guid: 134f5776495e2714eb42c93034111740, type: 3}
+  material: {fileID: 2100000, guid: 4a2d8a16a7e7e7b488cf94789997e63d, type: 2}
+  mesh: {fileID: 4300000, guid: 69c2f69917431f541a314c53ac0c369b, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1803234825599623, guid: cf294643e82327a4ab323546069fb9d3, type: 3}
+  prefab: {fileID: 1626780352715365, guid: ac667184ab159ce4a97cce85a2595371, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -49,10 +50,10 @@ MonoBehaviour:
   stamina: 0
   armor: 0
   swingFx: 0
-  bowComponent: {fileID: 11400000, guid: d2d464b4348831c4186664ae33e0b45a, type: 2}
+  bowComponent: {fileID: 11400000, guid: 4112d5e07ac6a8d469cc8276b5d29834, type: 2}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
   tag: 8
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

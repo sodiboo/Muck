@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Anvil
   m_EditorClassIdentifier: 
-  id: 86
+  important: 0
+  id: 89
   name: Anvil
   description: chonky metal station
   type: 7
   tier: 0
-  sprite: {fileID: 21300000, guid: 0c8718ba2c66a1f4482b29c6b2b5bdef, type: 3}
-  material: {fileID: 2100000, guid: ca0c5d81e327cd141a3984d308b42f37, type: 2}
-  mesh: {fileID: 4300000, guid: 8bd826f6ad1fe324389c67ead0dbb33e, type: 2}
+  sprite: {fileID: 21300000, guid: 03c708abc18626043aa52321ef84eb4c, type: 3}
+  material: {fileID: 2100000, guid: 6fdb0265db07f254aad2e9e6c2d4f5bb, type: 2}
+  mesh: {fileID: 4300000, guid: e65eeaa9106937c438ec272d1546e94f, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: d4a74070f357277458b20b1a310e9af5, type: 2}
+  - item: {fileID: 11400000, guid: fd86d4cf96cc7c745b19e2dd1df1258b, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 7c3b7d37072e928478cd0e0d01b08f37, type: 2}
+  - item: {fileID: 11400000, guid: d60bb66c49cdd34449404fbcd3c9616a, type: 2}
     amount: 15
   craftAmount: 1
   stationRequirement: {fileID: 0}
   buildable: 1
   grid: 0
-  prefab: {fileID: 1077103157652612, guid: 20ed21af5783efe49b58a78982080b8f, type: 3}
+  prefab: {fileID: 1997414301702305, guid: f59972d6676695e43b848a36382f3501, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -59,4 +60,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

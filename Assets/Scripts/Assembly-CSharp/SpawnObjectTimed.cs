@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class SpawnObjectTimed : MonoBehaviour
 {
-
 	private void Awake()
 	{
-		base.Invoke(nameof(SpawnObject), this.time);
+		Invoke(nameof(SpawnObject), this.time);
 	}
-
 
 	private void SpawnObject()
 	{
@@ -17,9 +14,7 @@ public class SpawnObjectTimed : MonoBehaviour
 		Destroy(this);
 	}
 
-
 	public float time;
-
 
 	public GameObject objectToSpawn;
 }

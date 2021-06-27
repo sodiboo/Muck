@@ -1,11 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-
 [CreateAssetMenu]
 public class Powerup : ScriptableObject
 {
-
 	public Color GetOutlineColor()
 	{
 		switch (this.tier)
@@ -20,7 +18,6 @@ public class Powerup : ScriptableObject
 			return Color.white;
 		}
 	}
-
 
 	public string GetColorName()
 	{
@@ -37,35 +34,24 @@ public class Powerup : ScriptableObject
 		}
 	}
 
-
 	public new string name;
-
 
 	public string description;
 
-
 	public int id;
-
 
 	public Powerup.PowerTier tier;
 
-
 	public Mesh mesh;
-
 
 	public Material material;
 
-
 	public Sprite sprite;
-
 
 	public enum PowerTier
 	{
-
 		White,
-
 		Blue,
-
 		Orange
 	}
 }

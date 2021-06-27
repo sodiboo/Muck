@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: WolfClaws
   m_EditorClassIdentifier: 
-  id: 126
+  important: 0
+  id: 137
   name: Wolf Claws
   description: A wolfs claws
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 6979dacc888c4224fa7527a870efeabe, type: 3}
-  material: {fileID: 2100000, guid: 9b936cda7bb75c04dafd3abaac2456fd, type: 2}
-  mesh: {fileID: 4300000, guid: 91ce5514ec76abf40b13c017f5b663ce, type: 2}
+  sprite: {fileID: 21300000, guid: d9c29d4ec3f06c14ebe5f3b772d364fc, type: 3}
+  material: {fileID: 2100000, guid: e23e139395d836a4ab9f6a2a3f466d27, type: 2}
+  mesh: {fileID: 4300000, guid: 3e7c60405ec28c141b25c3aa614fd361, type: 2}
   rotationOffset: {x: -95, y: 0, z: 15}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

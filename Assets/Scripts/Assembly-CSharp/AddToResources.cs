@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class AddToResources : MonoBehaviour
 {
-
 	private void Start()
 	{
 		int nextId = ResourceManager.Instance.GetNextId();
@@ -18,7 +16,6 @@ public class AddToResources : MonoBehaviour
 		}
 		base.transform.SetParent(null);
 	}
-
 
 	public bool chest;
 }

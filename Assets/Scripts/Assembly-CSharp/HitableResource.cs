@@ -2,16 +2,13 @@
 using System.Security.Authentication;
 using UnityEngine;
 
-
 public class HitableResource : Hitable
 {
-
     protected void Start()
     {
         Material material = base.GetComponentInChildren<Renderer>().materials[0];
         this.materialText = material.mainTexture;
     }
-
 
     public override void Hit(int damage, float sharpness, int hitEffect, Vector3 pos)
     {
@@ -30,12 +27,10 @@ public class HitableResource : Hitable
         Instantiate<GameObject>(this.numberFx, pos, Quaternion.identity).GetComponent<HitNumber>().SetTextAndDir(0f, normalized, (HitEffect)hitEffect);
     }
 
-
     protected override void SpawnDeathParticles()
     {
         Instantiate<GameObject>(this.destroyFx, base.transform.position, this.destroyFx.transform.rotation).GetComponent<ParticleSystemRenderer>().material.mainTexture = this.materialText;
     }
-
 
     protected override void SpawnParticles(Vector3 pos, Vector3 dir, int hitEffect)
     {
@@ -53,13 +48,11 @@ public class HitableResource : Hitable
         }
     }
 
-
     public override void OnKill(Vector3 dir)
     {
         ResourceManager.Instance.RemoveItem(this.id);
         if (!SaveData.isExecuting) SaveData.Instance.save.Add(new SaveData.DestroyItem { objectId = id });
     }
-
 
     private void OnEnable()
     {
@@ -69,7 +62,6 @@ public class HitableResource : Hitable
         }
         base.transform.localScale = Vector3.zero;
     }
-
 
     private new void Awake()
     {
@@ -86,12 +78,10 @@ public class HitableResource : Hitable
         base.transform.localScale = Vector3.zero;
     }
 
-
     public void SetDefaultScale(Vector3 scale)
     {
         this.defaultScale = scale;
     }
-
 
     protected override void ExecuteHit()
     {
@@ -99,13 +89,11 @@ public class HitableResource : Hitable
         this.currentScale = this.defaultScale * 0.7f;
     }
 
-
     public void PopIn()
     {
         base.transform.localScale = Vector3.zero;
         this.desiredScale = this.defaultScale;
     }
-
 
     protected virtual void Update()
     {
@@ -126,43 +114,30 @@ public class HitableResource : Hitable
         base.transform.localScale = Vector3.Lerp(base.transform.localScale, this.currentScale, Time.deltaTime * 15f);
     }
 
-
     public InventoryItem.ItemType compatibleItem;
 
-
     public int minTier;
-
 
     [Header("Loot")]
     public InventoryItem dropItem;
 
-
     public InventoryItem[] dropExtra;
-
 
     public float[] dropChance;
 
-
     public int amount;
-
 
     public bool dontScale;
 
-
     private Texture materialText;
-
 
     public int poolId;
 
-
     private Vector3 defaultScale;
-
 
     private float scaleMultiplier;
 
-
     private Vector3 desiredScale;
-
 
     private Vector3 currentScale;
 }

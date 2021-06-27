@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class GroundRollAttack : MonoBehaviour
 {
-
 	private void Start()
 	{
 		Vector3 forward = base.transform.forward;
@@ -30,13 +28,11 @@ public class GroundRollAttack : MonoBehaviour
 		}
 	}
 
-
 	private void Update()
 	{
 		this.KeepRockGrounded();
 		this.SpinRock();
 	}
-
 
 	private void KeepRockGrounded()
 	{
@@ -49,33 +45,24 @@ public class GroundRollAttack : MonoBehaviour
 		}
 	}
 
-
 	private void SpinRock()
 	{
 		this.rollRock.transform.Rotate(this.rollAxis * this.rollSpeed * Time.deltaTime);
 	}
 
-
 	public Rigidbody rb;
-
 
 	public float speed = 60f;
 
-
 	public LayerMask whatIsGround;
-
 
 	public Transform rollRock;
 
-
 	public GameObject rollPrefab;
-
 
 	private bool child;
 
-
 	private Vector3 rollAxis;
-
 
 	private float rollSpeed = 10f;
 }

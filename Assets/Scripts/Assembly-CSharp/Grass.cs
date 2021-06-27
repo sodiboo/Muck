@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-
 
 public class Grass : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.grassPool = new GameObject[this.thicc, this.thicc];
-		this.grassPositions = new Dictionary<ValueTuple<float, float>, int>();
+		this.grassPositions = new Dictionary<(float, float), int>();
 		for (int i = 0; i < this.thicc; i++)
 		{
 			for (int j = 0; j < this.thicc; j++)
@@ -17,9 +14,8 @@ public class Grass : MonoBehaviour
 				this.grassPool[i, j] = Instantiate<GameObject>(this.grass);
 			}
 		}
-		base.InvokeRepeating(nameof(MakeGrass), 0f, this.updateRate);
+		InvokeRepeating(nameof(MakeGrass), 0f, this.updateRate);
 	}
-
 
 	private void MakeGrass()
 	{
@@ -43,7 +39,7 @@ public class Grass : MonoBehaviour
 					transform.gameObject.SetActive(true);
 					transform.position = vector;
 					transform.rotation = rotation;
-					transform.localScale = Vector3.one * UnityEngine.Random.Range(0.85f, 1.4f);
+					transform.localScale = Vector3.one * Random.Range(0.85f, 1.4f);
 				}
 				else
 				{
@@ -53,31 +49,23 @@ public class Grass : MonoBehaviour
 		}
 	}
 
-
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireCube(base.transform.position, Vector3.one * this.length);
 	}
 
-
 	public float length;
-
 
 	public int thicc = 10;
 
-
 	public GameObject grass;
-
 
 	private GameObject[,] grassPool;
 
-
-	private Dictionary<ValueTuple<float, float>, int> grassPositions;
-
+	private Dictionary<(float, float), int> grassPositions;
 
 	public LayerMask whatIsGround;
-
 
 	private float updateRate = 0.02f;
 }

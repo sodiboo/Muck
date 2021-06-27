@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Chest : MonoBehaviour
 {
-
-
-
 	public int id { get; set; }
-
 
 	private void Start()
 	{
@@ -21,7 +16,6 @@ public class Chest : MonoBehaviour
 		}
 	}
 
-
 	public void Use(bool b)
 	{
 		if (this.animator)
@@ -31,17 +25,14 @@ public class Chest : MonoBehaviour
 		this.inUse = b;
 	}
 
-
 	public bool IsUsed()
 	{
 		return this.inUse;
 	}
 
-
 	public virtual void UpdateCraftables()
 	{
 	}
-
 
 	public void InitChest(List<InventoryItem> items, ConsistentRandom rand)
 	{
@@ -59,18 +50,13 @@ public class Chest : MonoBehaviour
 		}
 	}
 
-
 	public InventoryItem[] cells;
-
 
 	public int chestSize = 21;
 
-
 	public bool inUse;
 
-
 	public bool[] locked;
-
 
 	private Animator animator;
 }

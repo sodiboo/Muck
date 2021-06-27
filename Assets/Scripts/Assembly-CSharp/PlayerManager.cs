@@ -2,21 +2,15 @@
 using TMPro;
 using UnityEngine;
 
-
 public class PlayerManager : MonoBehaviour, IComparable
 {
-
-
-
 	public int graveId { get; set; }
-
 
 	private void Awake()
 	{
 		this.hitable = base.GetComponent<HitableActor>();
 		this.collider = base.GetComponent<Collider>();
 	}
-
 
 	public void DamagePlayer(int hpLeft)
 	{
@@ -28,7 +22,6 @@ public class PlayerManager : MonoBehaviour, IComparable
 		PlayerStatus.Instance.Damage(hpLeft, false);
 	}
 
-
 	public void SetHpRatio(float hpRatio)
 	{
 		if (this.onlinePlayer)
@@ -36,7 +29,6 @@ public class PlayerManager : MonoBehaviour, IComparable
 			this.SetDesiredHpRatio(hpRatio);
 		}
 	}
-
 
 	public void RemoveGrave()
 	{
@@ -47,7 +39,6 @@ public class PlayerManager : MonoBehaviour, IComparable
 		ResourceManager.Instance.RemoveInteractItem(this.graveId);
 		this.graveId = -1;
 	}
-
 
 	public void SetArmor(int armorSlot, int itemId)
 	{
@@ -65,7 +56,6 @@ public class PlayerManager : MonoBehaviour, IComparable
 		}
 	}
 
-
 	private void Start()
 	{
 		if (this.nameText)
@@ -77,7 +67,6 @@ public class PlayerManager : MonoBehaviour, IComparable
 		this.hitable.SetId(this.id);
 	}
 
-
 	public void SetDesiredPosition(Vector3 position)
 	{
 		if (this.onlinePlayer)
@@ -85,7 +74,6 @@ public class PlayerManager : MonoBehaviour, IComparable
 			this.onlinePlayer.desiredPos = position;
 		}
 	}
-
 
 	public void SetDesiredRotation(float orientationY, float orientationX)
 	{
@@ -96,63 +84,46 @@ public class PlayerManager : MonoBehaviour, IComparable
 		}
 	}
 
-
 	public void SetDesiredHpRatio(float ratio)
 	{
 		this.onlinePlayer.hpRatio = ratio;
 	}
-
 
 	public int CompareTo(object obj)
 	{
 		return 0;
 	}
 
-
 	public Collider GetCollider()
 	{
 		return this.collider;
 	}
 
-
 	public int id;
-
 
 	public string username;
 
-
 	public bool dead;
-
 
 	public Color color;
 
-
 	public OnlinePlayer onlinePlayer;
-
 
 	public int kills;
 
-
 	public int deaths;
-
 
 	public int ping;
 
-
 	public bool disconnected;
-
 
 	public bool loaded;
 
-
 	public TextMeshProUGUI nameText;
-
 
 	public HitableActor hitable;
 
-
 	private Collider collider;
-
 
 	public Transform spectateOrbit;
 }

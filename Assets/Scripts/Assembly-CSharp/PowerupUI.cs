@@ -4,17 +4,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class PowerupUI : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		PowerupUI.Instance = this;
 		this.powerups = new Dictionary<int, GameObject>();
 		this.gridLayout = base.GetComponent<GridLayout>();
 	}
-
 
 	public void AddPowerup(int powerupId)
 	{
@@ -34,15 +31,11 @@ public class PowerupUI : MonoBehaviour
 		this.powerups.Add(powerupId, gameObject);
 	}
 
-
 	public GameObject uiPrefab;
-
 
 	private GridLayout gridLayout;
 
-
 	private Dictionary<int, GameObject> powerups;
-
 
 	public static PowerupUI Instance;
 }

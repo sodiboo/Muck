@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class CauldronSync : Chest
 {
-
 	public float ProgressRatio()
 	{
 		return this.currentProcessTime / this.timeToProcess;
 	}
-
 
 	public override void UpdateCraftables()
 	{
@@ -29,7 +26,6 @@ public class CauldronSync : Chest
 			CauldronUI.Instance.processBar.transform.localScale = new Vector3(this.currentProcessTime / this.timeToProcess, 1f, 1f);
 		}
 	}
-
 
 	private void Update()
 	{
@@ -55,7 +51,6 @@ public class CauldronSync : Chest
 		}
 	}
 
-
 	private void StopProcessing()
 	{
 		this.processing = false;
@@ -64,7 +59,6 @@ public class CauldronSync : Chest
 			CauldronUI.Instance.processBar.transform.localScale = Vector3.zero;
 		}
 	}
-
 
 	public void ProcessItem()
 	{
@@ -97,7 +91,6 @@ public class CauldronSync : Chest
 		}
 	}
 
-
 	private void UseMaterial(InventoryItem materialItem, int cellId)
 	{
 		materialItem.amount--;
@@ -109,7 +102,6 @@ public class CauldronSync : Chest
 		}
 		ClientSend.ChestUpdate(base.id, cellId, materialItem.id, materialItem.amount);
 	}
-
 
 	private void UseFuel(InventoryItem fuelItem)
 	{
@@ -128,7 +120,6 @@ public class CauldronSync : Chest
 		}
 	}
 
-
 	private void AddMaterial(InventoryItem item, int processedItemId)
 	{
 		if (this.cells[this.resultCellId] == null)
@@ -142,7 +133,6 @@ public class CauldronSync : Chest
 		}
 		ClientSend.ChestUpdate(base.id, this.resultCellId, processedItemId, this.cells[this.resultCellId].amount);
 	}
-
 
 	public InventoryItem CanProcess()
 	{
@@ -172,7 +162,6 @@ public class CauldronSync : Chest
 		}
 		return null;
 	}
-
 
 	public InventoryItem FindItemByIngredients(int[] iCells)
 	{
@@ -216,7 +205,6 @@ public class CauldronSync : Chest
 		return null;
 	}
 
-
 	private bool NoIngredients()
 	{
 		foreach (int num in this.ingredientCells)
@@ -229,12 +217,9 @@ public class CauldronSync : Chest
 		return true;
 	}
 
-
 	private int fuelCellId;
 
-
 	private int resultCellId = 5;
-
 
 	private int[] ingredientCells = new int[]
 	{
@@ -244,15 +229,11 @@ public class CauldronSync : Chest
 		4
 	};
 
-
 	private bool processing;
-
 
 	private float currentProcessTime;
 
-
 	private float totalProcessTime;
-
 
 	private float timeToProcess = 1f;
 }

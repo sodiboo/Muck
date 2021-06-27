@@ -6,17 +6,14 @@ using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 
-
 public class ExtraUI : MonoBehaviour
 {
-
     private void Awake()
     {
         if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) transform.GetChild(0).gameObject.SetActive(false);
         this.IdToHpBar = new Dictionary<int, RawImage>();
-        base.InvokeRepeating(nameof(SlowUpdate), 0f, 1f);
+        InvokeRepeating(nameof(SlowUpdate), 0f, 1f);
     }
-
 
     private void SlowUpdate()
     {
@@ -25,8 +22,7 @@ public class ExtraUI : MonoBehaviour
         this.UpdateAllHpBars();
     }
 
-
-    public void InitPlayerStatus(int id, string name)
+	public void InitPlayerStatus(int id, string name, PlayerManager pm)
     {
         GameObject gameObject = Instantiate<GameObject>(this.playerStatusPrefab, this.playerStatusParent);
 		var hurt = (RectTransform)gameObject.transform.GetChild(1).GetChild(1);
@@ -41,20 +37,23 @@ public class ExtraUI : MonoBehaviour
         sizeDelta.y += 40f;
         this.playerStatusParent.sizeDelta = sizeDelta;
         gameObject.transform.GetComponentInChildren<TextMeshProUGUI>().text = name;
-    }
-
+		float scale = 0.85f;
+		if (pm.id == LocalClient.instance.myId)
+		{
+			scale = 1f;
+		}
+		Map.Instance.AddMarker(pm.transform, Map.MarkerType.Player, null, Color.white, name, scale);
+	}
 
     private void UpdateClock()
     {
         this.clockText.text = this.TimeToClock();
     }
 
-
     private void UpdateMoney()
     {
         this.money.text = string.Concat(InventoryUI.Instance.GetMoney());
     }
-
 
     private void UpdateAllHpBars()
     {
@@ -67,12 +66,10 @@ public class ExtraUI : MonoBehaviour
         }
     }
 
-
     public void UpdateDay(int day)
     {
         this.dayText.text = string.Concat(day);
     }
-
 
     private void UpdatePlayerHp(int id)
     {
@@ -98,7 +95,6 @@ public class ExtraUI : MonoBehaviour
         component.transform.localScale = new Vector3(num, 1f, 1f);
     }
 
-
     private string TimeToClock()
     {
         float time = DayCycle.time;
@@ -107,21 +103,15 @@ public class ExtraUI : MonoBehaviour
         return num + ":" + arg;
     }
 
-
     public TextMeshProUGUI money;
-
 
     public TextMeshProUGUI clockText;
 
-
     public TextMeshProUGUI dayText;
-
 
     private Dictionary<int, RawImage> IdToHpBar;
 
-
     public GameObject playerStatusPrefab;
-
 
     public RectTransform playerStatusParent;
 }

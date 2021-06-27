@@ -1,30 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 {
-
-
-
 	public int playerId { get; set; }
-
-
-
 
 	public string username { get; set; }
 
-
-
-
 	public float timeLeft { get; set; } = 30f;
-
 
 	public void SetTime(float time)
 	{
 		this.timeLeft = time;
 	}
-
 
 	private void Update()
 	{
@@ -51,7 +39,6 @@ public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 		}
 	}
 
-
 	private void StartHolding()
 	{
 		CooldownBar.Instance.ResetCooldownTime(this.requiredHoldTime, true);
@@ -59,14 +46,12 @@ public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 		this.holdTime = 0f;
 	}
 
-
 	private void StopHolding()
 	{
 		this.holding = false;
 		CooldownBar.Instance.HideBar();
 		this.holdTime = 0f;
 	}
-
 
 	public void Interact()
 	{
@@ -77,28 +62,23 @@ public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 		this.StartHolding();
 	}
 
-
 	public void LocalExecute()
 	{
 	}
-
 
 	public void AllExecute()
 	{
 		Destroy(base.gameObject.transform.parent.gameObject);
 	}
 
-
 	public void ServerExecute(int fromClient)
 	{
 	}
-
 
 	public void RemoveObject()
 	{
 		Destroy(base.gameObject.transform.parent.gameObject);
 	}
-
 
 	public string GetName()
 	{
@@ -114,39 +94,31 @@ public class GraveInteract : MonoBehaviour, SharedObject, Interactable
 		return "Can only revive during day..";
 	}
 
-
 	public bool IsStarted()
 	{
 		return false;
 	}
-
 
 	public void SetId(int id)
 	{
 		this.id = id;
 	}
 
-
 	public int GetId()
 	{
 		return this.id;
 	}
-
 
 	public bool IsDay()
 	{
 		return DayCycle.time > 0f && DayCycle.time < 0.5f;
 	}
 
-
 	private int id;
-
 
 	private bool holding;
 
-
 	private float holdTime;
-
 
 	private float requiredHoldTime = 3f;
 }

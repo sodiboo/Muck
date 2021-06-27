@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: shovel_stone
   m_EditorClassIdentifier: 
-  id: 107
+  important: 0
+  id: 117
   name: Shovel
   description: its shovel dig dig
   type: 5
   tier: 0
-  sprite: {fileID: 21300000, guid: f1be19fdad704474f9e95748d16f0338, type: 3}
-  material: {fileID: 2100000, guid: 8604675bda1ad3a43b90a221054ed978, type: 2}
-  mesh: {fileID: 4300000, guid: 097d3915b40441747ba0fedb431e3f35, type: 2}
+  sprite: {fileID: 21300000, guid: 369a3185ed4d96f4aa85104b9a3297ee, type: 3}
+  material: {fileID: 2100000, guid: 2ece96377d2ab1d45a41e9851fb62641, type: 2}
+  mesh: {fileID: 4300000, guid: 04b8593d3e0210b4ba60bb941eec2686, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,14 +35,14 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  - item: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 7c3b7d37072e928478cd0e0d01b08f37, type: 2}
+  - item: {fileID: 11400000, guid: d60bb66c49cdd34449404fbcd3c9616a, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 62431e291556532479a3cb6ec56689f3, type: 2}
+  - item: {fileID: 11400000, guid: 5e8b30acbef6fbf43b826dc600277e63, type: 2}
     amount: 5
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 1b566f1c1b2caab40a53b713f68baec7, type: 2}
   buildable: 0
   grid: 0
   prefab: {fileID: 0}
@@ -61,4 +62,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

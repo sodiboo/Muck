@@ -19,6 +19,6 @@ export function CumulativeDistribution(
 export * as parse from "./parse.ts";
 export * as io from "./io.ts";
 export * as scripts from "./scripts.ts";
-export { references } from "./data.ts";
-export { GameAfterLobby, prefabs } from "./prefabs.ts";
-export { images } from "./images.ts";
+export * from "./data.ts";
+export * from "./prefabs.ts";
+export * from "./images.ts";

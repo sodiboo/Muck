@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Sword_Mithril
   m_EditorClassIdentifier: 
-  id: 110
+  important: 0
+  id: 120
   name: Mithril Sword
   description: its sharp
   type: 3
   tier: 2
-  sprite: {fileID: 21300000, guid: c548e69d09bc52141ae78485980cbebc, type: 3}
-  material: {fileID: 2100000, guid: b8689150b600ff940bcc0dde99fda0de, type: 2}
-  mesh: {fileID: 4300000, guid: 835267f1b455764468727140bf7ff523, type: 2}
+  sprite: {fileID: 21300000, guid: 808336dc938d2424e9ed1b90ddd52e27, type: 3}
+  material: {fileID: 2100000, guid: 9db9db29e92f0ab4d9468f65d76d7025, type: 2}
+  mesh: {fileID: 4300000, guid: b81da1ba279a9a24b9cc846a8bd5b1ec, type: 2}
   rotationOffset: {x: 0, y: 7, z: 75}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 1
   requirements:
-  - item: {fileID: 11400000, guid: ed7d065cfc0a3bf41917ff94e8fc68b2, type: 2}
+  - item: {fileID: 11400000, guid: ce3be86d651f563468a1a0a41ee3f9d2, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 39bfba2a09f65b94fafaaa72272b3742, type: 2}
+  - item: {fileID: 11400000, guid: 84a4b33b661e4ec4a838a1607bf1092c, type: 2}
     amount: 5
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: afc2c404f37a3e9479bebd2d9d7e476b, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -59,4 +60,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

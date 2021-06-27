@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Shroom_Gulpon
   m_EditorClassIdentifier: 
+  important: 0
   id: 47
   name: Gulpon Shroom
   description: yummy
   type: 8
   tier: 0
-  sprite: {fileID: 21300000, guid: 0689124f5f76b104c8061411bc21aedc, type: 3}
-  material: {fileID: 2100000, guid: f9540d1db29802f4b9871fea71687882, type: 2}
-  mesh: {fileID: 4300000, guid: 6ea54bb97fb5e1f4e9b59638bc653419, type: 2}
+  sprite: {fileID: 21300000, guid: a43118d5cf8d6914dbad5040128ae29f, type: 3}
+  material: {fileID: 2100000, guid: 308410aeffca186439392189765e0d9c, type: 2}
+  mesh: {fileID: 4300000, guid: 096304fb9d62be3408abb0c8e330871f, type: 2}
   rotationOffset: {x: 90, y: 0, z: 0}
   positionOffset: {x: 0, y: -0.1, z: 0}
   scale: 1
@@ -38,11 +39,11 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1177748604021847, guid: cb32dbf2fd443ea4a9471d75e0c6c6e7, type: 3}
+  prefab: {fileID: 1074101773145669, guid: 1ffc05860043f0b478904ff44a325118, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
-  processedItem: {fileID: 11400000, guid: a4ef86caf66891045a770c1058972d00, type: 2}
+  processedItem: {fileID: 11400000, guid: 90320ab996194e244aa9f2543c0092ee, type: 2}
   processTime: 1
   heal: 12
   hunger: 0
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 2
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

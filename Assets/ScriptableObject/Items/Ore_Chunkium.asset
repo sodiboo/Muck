@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Ore_Chunkium
   m_EditorClassIdentifier: 
-  id: 76
+  important: 0
+  id: 78
   name: Chunkium Ore
   description: looks like your mom
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: d4f3e97ab6734d34ba8aaf7666158863, type: 3}
-  material: {fileID: 2100000, guid: 155a62e7c9f3a934bad138ac46899ac3, type: 2}
-  mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+  sprite: {fileID: 21300000, guid: 9e90c429cebdb094ea87772da4168a97, type: 3}
+  material: {fileID: 2100000, guid: 1b8f8efeb0e351a4b93544518b26e1a7, type: 2}
+  mesh: {fileID: 4300000, guid: 6ae751f0f512ab940a48ba75563e44a1, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -42,7 +43,7 @@ MonoBehaviour:
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 1
   processType: 0
-  processedItem: {fileID: 11400000, guid: 472affb32bfc7fb47a0ea960015bc8f9, type: 2}
+  processedItem: {fileID: 11400000, guid: bc2c0a26bda8f79439ef2fb2bce5012a, type: 2}
   processTime: 23
   heal: 0
   hunger: 0
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

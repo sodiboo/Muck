@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class BuildDestruction : MonoBehaviour
 {
 	public static bool dontDestroy;
 	private void Awake()
 	{
-		base.Invoke(nameof(CheckDirectlyGrounded), 2f);
+		Invoke(nameof(CheckDirectlyGrounded), 2f);
 	}
-
 
 	private void Start()
 	{
@@ -25,11 +23,9 @@ public class BuildDestruction : MonoBehaviour
 		this.trigger.size *= 1.1f;
 	}
 
-
 	private void Update()
 	{
 	}
-
 
 	private void OnDestroy()
 	{
@@ -46,13 +42,11 @@ public class BuildDestruction : MonoBehaviour
 		}
 	}
 
-
 	private void DestroyBuild()
 	{
 		Hitable component = base.GetComponent<Hitable>();
 		component.Hit(component.hp, 1f, 1, base.transform.position);
 	}
-
 
 	public bool IsDirectlyGrounded(List<BuildDestruction> alreadyChecked)
 	{
@@ -74,13 +68,12 @@ public class BuildDestruction : MonoBehaviour
 		return false;
 	}
 
-
 	private void CheckDirectlyGrounded()
 	{
+		var component = base.GetComponent<Rigidbody>();
 		Destroy(this.trigger);
-		Destroy(base.GetComponent<Rigidbody>());
+		Destroy(component);
 	}
-
 
 	private void OnTriggerEnter(Collider collision)
 	{
@@ -100,26 +93,19 @@ public class BuildDestruction : MonoBehaviour
 		}
 	}
 
-
 	private void OnDrawGizmos()
 	{
 	}
 
-
 	public bool connectedToGround;
-
 
 	public bool directlyGrounded;
 
-
 	public bool started;
-
 
 	public bool destroyed;
 
-
 	private List<BuildDestruction> otherBuilds = new List<BuildDestruction>();
-
 
 	private BoxCollider trigger;
 }

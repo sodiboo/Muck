@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerStatus : MonoBehaviour
 {
-
-
-
     public int draculaStacks { get; set; }
-
 
     private float _stamina;
 
@@ -19,11 +14,7 @@ public class PlayerStatus : MonoBehaviour
         set => _stamina = value;
     }
 
-
-
-
     public float maxStamina { get; set; }
-
 
     private float _hunger;
 
@@ -33,21 +24,11 @@ public class PlayerStatus : MonoBehaviour
         set => _hunger = value;
     }
 
-
-
-
     public float maxHunger { get; set; }
-
-
-
 
     public int strength { get; set; } = 1;
 
-
-
-
     public int speed { get; set; } = 1;
-
 
     private void Awake()
     {
@@ -63,8 +44,8 @@ public class PlayerStatus : MonoBehaviour
         this.speed = 1;
         this.armor = new InventoryItem[4];
         if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) invincible = true;
+		InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
     }
-
 
     public void Respawn()
     {
@@ -80,19 +61,16 @@ public class PlayerStatus : MonoBehaviour
         if (GameManager.gameSettings.gameMode != GameSettings.GameMode.Creative) base.Invoke(nameof(StopInvincible), 3f);
     }
 
-
     private void StopInvincible()
     {
         this.invincible = false;
     }
-
 
     public void UpdateStats()
     {
         this.maxHp = 100 + PowerupInventory.Instance.GetHpMultiplier(null) + this.draculaStacks;
         this.maxShield = PowerupInventory.Instance.GetShield(null);
     }
-
 
     public void Damage(int newHp, bool ignoreProtection = false)
     {
@@ -108,7 +86,6 @@ public class PlayerStatus : MonoBehaviour
         this.HandleDamage(damageTaken, ignoreProtection);
     }
 
-
     public void DealDamage(int damage, bool ignoreProtection = false)
     {
         if (invincible) return;
@@ -118,7 +95,6 @@ public class PlayerStatus : MonoBehaviour
         }
         this.HandleDamage(damage, ignoreProtection);
     }
-
 
     private void HandleDamage(int damageTaken, bool ignoreProtection = false)
     {
@@ -158,7 +134,6 @@ public class PlayerStatus : MonoBehaviour
         DamageVignette.Instance.VignetteHit();
     }
 
-
     private int OneShotProtection(int damageDone)
     {
         if (GameManager.gameSettings.difficulty == GameSettings.Difficulty.Gamer)
@@ -178,12 +153,10 @@ public class PlayerStatus : MonoBehaviour
         return damageDone;
     }
 
-
     private void ActivateProtection()
     {
         this.protectionActive = true;
     }
-
 
     private void StopAdrenaline()
     {
@@ -191,17 +164,12 @@ public class PlayerStatus : MonoBehaviour
         base.Invoke(nameof(ReadyAdrenaline), 10f);
     }
 
-
     private void ReadyAdrenaline()
     {
         this.readyToAdrenalineBoost = true;
     }
 
-
-
-
     public bool adrenalineBoost { get; private set; }
-
 
     private void PlayerDied()
     {
@@ -235,41 +203,34 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-
     public bool IsPlayerDead()
     {
         return this.dead;
     }
 
-
     public void DropAllItems(List<InventoryCell> cells)
     {
     }
-
 
     public bool IsFullyHealed()
     {
         return this.hp >= (float)this.maxHp && this.shield >= (float)this.maxShield;
     }
 
-
     public int HpAndShield()
     {
         return (int)(this.hp + this.shield);
     }
-
 
     public int MaxHpAndShield()
     {
         return this.maxHp + this.maxShield;
     }
 
-
     public float GetArmorRatio()
     {
         return this.armorTotal / 100f;
     }
-
 
     private void Update()
     {
@@ -280,6 +241,33 @@ public class PlayerStatus : MonoBehaviour
         this.OutOfMap();
     }
 
+	public void EnterOcean()
+	{
+		this.windParticles.SetActive(true);
+		var emission = this.leafParticles.GetComponent<ParticleSystem>().emission;
+		emission.enabled = false;
+	}
+
+	private void SlowUpdate()
+	{
+		if (this.player.playerCam.position.y < World.Instance.water.position.y)
+		{
+			if (!this.underwaterAudio.enabled)
+			{
+				this.underwaterAudio.enabled = true;
+				this.underwaterAudio.Play();
+			}
+		}
+		else if (this.underwaterAudio.enabled)
+		{
+			this.underwaterAudio.enabled = false;
+		}
+		if (this.stamina <= 0f && this.underwater && this.hp > 0f)
+		{
+			this.DealDamage(5, false);
+			Instantiate<GameObject>(this.drownParticles, base.transform.position, Quaternion.LookRotation(this.player.playerCam.transform.forward));
+		}
+	}
 
     private void OutOfMap()
     {
@@ -299,7 +287,6 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-
     private void Shield()
     {
         if (!this.readyToRegenShield || this.shield >= (float)this.maxShield || this.hp + this.shield <= 0f)
@@ -312,7 +299,6 @@ public class PlayerStatus : MonoBehaviour
             this.shield = (float)this.maxShield;
         }
     }
-
 
     private void Hunger()
     {
@@ -336,7 +322,6 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-
     private void Healing()
     {
         if (this.hp <= 0f || this.hp >= (float)this.maxHp || this.hunger <= 0f)
@@ -347,11 +332,11 @@ public class PlayerStatus : MonoBehaviour
         this.hp += num;
     }
 
-
     private void Stamina()
     {
         this.running = (this.player.GetVelocity().magnitude > 5f && this.player.sprinting);
-        if (!this.running)
+		this.underwater = this.player.IsUnderWater();
+		if (!this.running && !this.underwater)
         {
             if (this.stamina < 100f && this.player.grounded && this.hunger > 0f)
             {
@@ -371,7 +356,6 @@ public class PlayerStatus : MonoBehaviour
         this.stamina -= this.staminaDrainRate * Time.deltaTime / PowerupInventory.Instance.GetStaminaMultiplier(null);
     }
 
-
     public void Heal(int healAmount)
     {
         this.hp += (float)healAmount;
@@ -380,7 +364,6 @@ public class PlayerStatus : MonoBehaviour
             this.hp = (float)this.maxHp;
         }
     }
-
 
     public void Eat(InventoryItem item)
     {
@@ -401,12 +384,10 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-
     private void RegenShield()
     {
         this.readyToRegenShield = true;
     }
-
 
     public float GetHpRatio()
     {
@@ -419,7 +400,6 @@ public class PlayerStatus : MonoBehaviour
         return this.hp / (float)this.maxHp * num2;
     }
 
-
     public float GetShieldRatio()
     {
         if (this.maxShield == 0)
@@ -431,38 +411,33 @@ public class PlayerStatus : MonoBehaviour
         return this.shield / (float)this.maxShield * num2;
     }
 
-
     public float GetStaminaRatio()
     {
         return this.stamina / this.maxStamina;
     }
-
 
     public float GetHungerRatio()
     {
         return this.hunger / this.maxHunger;
     }
 
-
     public void Jump()
     {
         this.stamina -= this.jumpDrain / PowerupInventory.Instance.GetStaminaMultiplier(null);
     }
 
-
     public void Dracula()
     {
         int hpIncreasePerKill = PowerupInventory.Instance.GetHpIncreasePerKill(null);
         this.draculaStacks += hpIncreasePerKill;
-        int num = PowerupInventory.Instance.GetAmount("Dracula") * PowerupInventory.Instance.GetMaxDraculaStacks();
-        if (this.draculaStacks >= num)
-        {
-            this.draculaStacks = num;
-        }
+		int maxDraculaStacks = PowerupInventory.Instance.GetMaxDraculaStacks();
+		if (this.draculaStacks >= maxDraculaStacks)
+		{
+			this.draculaStacks = maxDraculaStacks;
+		}
         this.UpdateStats();
         this.hp += (float)hpIncreasePerKill;
     }
-
 
     public void UpdateArmor(int armorSlot, int itemId)
     {
@@ -484,7 +459,6 @@ public class PlayerStatus : MonoBehaviour
         this.CheckArmorSetBonus();
         PreviewPlayer.Instance.SetArmor(armorSlot, itemId);
     }
-
 
     private void CheckArmorSetBonus()
     {
@@ -519,105 +493,83 @@ public class PlayerStatus : MonoBehaviour
         this.currentChunkArmorMultiplier = 1.6f;
     }
 
-
     public bool CanRun()
     {
         return this.stamina > 0f;
     }
-
 
     public bool CanJump()
     {
         return this.stamina >= this.jumpDrain;
     }
 
-
     public float hp = 100f;
-
 
     public int maxHp;
 
-
     public float shield;
-
 
     public int maxShield;
 
-
     private bool dead;
-
 
     private float staminaRegenRate = 15f;
 
-
     private float staminaDrainRate = 12f;
-
 
     private float staminaBoost = 1f;
 
-
     private bool running;
-
 
     private float jumpDrain = 10f;
 
-
     private float hungerDrainRate = 0.15f;
-
 
     private float healingDrainMultiplier = 2f;
 
-
     private float staminaDrainMultiplier = 5f;
-
 
     private bool healing;
 
-
     private float healingRate = 5f;
-
 
     private bool readyToRegenShield = true;
 
-
     private float shieldRegenRate = 20f;
-
 
     private float regenShieldDelay = 5f;
 
-
     private PlayerMovement player;
-
 
     public static PlayerStatus Instance;
 
-
     private bool invincible;
-
 
     private float oneShotThreshold = 0.9f;
 
-
     private float oneShotProtectionCooldown = 20f;
-
 
     private bool protectionActive = true;
 
-
     private bool readyToAdrenalineBoost = true;
-
 
     public GameObject playerRagdoll;
 
+	public GameObject drownParticles;
+
+	public AudioSource underwaterAudio;
+
+	public GameObject leafParticles;
+
+	public GameObject windParticles;
+
+	private bool underwater;
 
     public InventoryItem[] armor;
 
-
     private float armorTotal;
 
-
     public float currentSpeedArmorMultiplier = 1f;
-
 
     public float currentChunkArmorMultiplier = 1f;
 }

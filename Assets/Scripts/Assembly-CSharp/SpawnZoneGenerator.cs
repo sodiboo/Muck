@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 {
-
-
-
 	public float worldScale { get; set; } = 12f;
-
 
 	private void Start()
 	{
@@ -46,17 +41,13 @@ public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 		this.nZones = this.zones.Count;
 	}
 
-
 	public abstract void AddEntitiesToZone();
 
-
 	public abstract SpawnZone ProcessZone(SpawnZone zone);
-
 
 	private void OnDrawGizmos()
 	{
 	}
-
 
 	public T FindObjectToSpawn(T[] entityTypes, float totalWeight)
 	{
@@ -73,39 +64,27 @@ public abstract class SpawnZoneGenerator<T> : MonoBehaviour
 		return entityTypes[0];
 	}
 
-
 	public GameObject spawnZone;
-
 
 	private int mapChunkSize;
 
-
 	private float worldEdgeBuffer = 0.6f;
-
 
 	public int nZones = 50;
 
-
 	protected ConsistentRandom randomGen;
-
 
 	public LayerMask whatIsTerrain;
 
-
 	protected List<SpawnZone> zones;
-
 
 	public int seedOffset;
 
-
 	private Vector3[] shrines;
-
 
 	protected float totalWeight;
 
-
 	public T[] entities;
-
 
 	public float[] weights;
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class RotateTowardsPlayer : MonoBehaviour
 {
-
 	private void Update()
 	{
 		if (!this.mob.target)
@@ -17,7 +15,6 @@ public class RotateTowardsPlayer : MonoBehaviour
 			base.transform.rotation = Quaternion.Lerp(base.transform.rotation, b, Time.deltaTime * 5f);
 		}
 	}
-
 
 	public Mob mob;
 }

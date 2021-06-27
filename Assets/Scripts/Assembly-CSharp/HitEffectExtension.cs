@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 internal static class HitEffectExtension
 {
-
 	public static Color GetColor(HitEffect effect)
 	{
 		switch (effect)
@@ -23,7 +21,6 @@ internal static class HitEffectExtension
 			return Color.white;
 		}
 	}
-
 
 	public static string GetColorName(HitEffect effect)
 	{

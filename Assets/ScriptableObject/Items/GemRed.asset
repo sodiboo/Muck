@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
+  m_Name: GemRed
+  m_EditorClassIdentifier: 
+  important: 1
+  id: 99
+  name: Red Gem
+  description: A shiny red gem
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: 68787a88ca312f4468a28f0572e56a9e, type: 3}
+  material: {fileID: 2100000, guid: 1f1f072d4220e4b4cb08f05cf7bbc928, type: 2}
+  mesh: {fileID: 4300000, guid: 175b5afd3b5f8bf41af6fc7b35c380db, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 1
+  max: 1
+  resourceDamage: 0
+  attackDamage: 0
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements: []
+  craftAmount: 0
+  stationRequirement: {fileID: 0}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 10
+  rarity: 2
+  attackTypes: 
+  x: 0

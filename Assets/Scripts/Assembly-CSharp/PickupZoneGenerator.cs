@@ -1,14 +1,11 @@
 ﻿using System;
 
-
 public class PickupZoneGenerator : SpawnZoneGenerator<InventoryItem>
 {
-
 	public override void AddEntitiesToZone()
 	{
 		MobZoneManager.Instance.AddZones(this.zones);
 	}
-
 
 	public override SpawnZone ProcessZone(SpawnZone zone)
 	{

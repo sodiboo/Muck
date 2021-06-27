@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  id: 80
+  important: 0
+  id: 83
   name: Rock
   description: its rock
   type: 1
   tier: 0
-  sprite: {fileID: 21300000, guid: d351dec16b24da444a03c106fbb74466, type: 3}
-  material: {fileID: 2100000, guid: 06be4becee57d7f4c9fee79680aa88a7, type: 2}
-  mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+  sprite: {fileID: 21300000, guid: 134f5776495e2714eb42c93034111740, type: 3}
+  material: {fileID: 2100000, guid: 4a2d8a16a7e7e7b488cf94789997e63d, type: 2}
+  mesh: {fileID: 4300000, guid: 6ae751f0f512ab940a48ba75563e44a1, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

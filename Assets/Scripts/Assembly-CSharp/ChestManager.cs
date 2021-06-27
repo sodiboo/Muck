@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ChestManager : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ChestManager.Instance = this;
@@ -13,13 +11,11 @@ public class ChestManager : MonoBehaviour
 		this.chestId = (int)IdOffsets.chestIdRange.x;
 	}
 
-
 	public void AddChest(Chest c, int id)
 	{
 		c.id = id;
 		this.chests.Add(id, c);
 	}
-
 
 	public int GetNextId()
 	{
@@ -28,18 +24,15 @@ public class ChestManager : MonoBehaviour
 		return num;
 	}
 
-
 	public void UseChest(int chestId, bool inUse)
 	{
 		this.chests[chestId].Use(inUse);
 	}
 
-
 	public void SendChestUpdate(int chestId, int cellId)
 	{
 		this.chests[chestId].locked[cellId] = true;
 	}
-
 
 	public void UpdateChest(int chestId, int cellId, int itemId, int amount)
 	{
@@ -54,12 +47,10 @@ public class ChestManager : MonoBehaviour
 		this.chests[chestId].UpdateCraftables();
 	}
 
-
 	public bool IsChestOpen(int chestId)
 	{
 		return this.chests[chestId].IsUsed();
 	}
-
 
 	public void RemoveChest(int chestId)
 	{
@@ -76,7 +67,6 @@ public class ChestManager : MonoBehaviour
 		}
 	}
 
-
 	private void DropChest(Chest chest)
 	{
 		Vector3 vector = chest.transform.position;
@@ -92,12 +82,9 @@ public class ChestManager : MonoBehaviour
 		}
 	}
 
-
 	public Dictionary<int, Chest> chests;
 
-
 	private int chestId;
-
 
 	public static ChestManager Instance;
 }

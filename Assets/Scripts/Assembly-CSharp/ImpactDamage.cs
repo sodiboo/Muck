@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ImpactDamage : MonoBehaviour
 {
-
 	private void Start()
 	{
 		if (this.race)
 		{
 			Destroy(base.gameObject);
-			MonoBehaviour.print("destroying deu to race");
 		}
 		else
 		{
@@ -44,7 +41,6 @@ public class ImpactDamage : MonoBehaviour
 		ClientSend.PlayerHit((int)((float)this.baseDamage * num2), LocalClient.instance.myId, 0f, 0, base.transform.position);
 	}
 
-
 	private void OnTriggerEnter(Collider other)
 	{
 		if (this.alreadyHit.Contains(other.gameObject))
@@ -74,37 +70,28 @@ public class ImpactDamage : MonoBehaviour
 		this.multiplier *= 0.5f;
 	}
 
-
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(base.transform.position, this.radius);
 	}
 
-
 	public void SetDamage(int damage)
 	{
 		this.baseDamage = damage;
 	}
 
-
 	public float radius = 1f;
-
 
 	public int baseDamage;
 
-
 	public bool hitPlayer;
-
 
 	public bool decreaseWithDistance;
 
-
 	private float multiplier = 1f;
 
-
 	private List<GameObject> alreadyHit = new List<GameObject>();
-
 
 	private bool race;
 }

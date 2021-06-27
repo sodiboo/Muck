@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class DontAttackUntilPlayerSpotted : MonoBehaviour
 {
-
 	private void Start()
 	{
 		this.mob = base.GetComponent<Mob>();
@@ -14,9 +12,8 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		this.neutral.mobZoneId = this.mobZoneId;
 		Mesh sharedMesh = base.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
 		this.headOffset = Vector3.up * sharedMesh.bounds.extents.y * 1.5f;
-		base.InvokeRepeating(nameof(CheckForPlayers), 0.5f, 0.5f);
+		InvokeRepeating(nameof(CheckForPlayers), 0.5f, 0.5f);
 	}
-
 
 	private void CheckForPlayers()
 	{
@@ -58,7 +55,6 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		}
 	}
 
-
 	private void FoundPlayer()
 	{
 		this.mob.ready = true;
@@ -74,15 +70,11 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
 		Destroy(this);
 	}
 
-
 	private Mob mob;
-
 
 	private Vector3 headOffset;
 
-
 	public int mobZoneId;
-
 
 	private MobServerNeutral neutral;
 }

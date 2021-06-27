@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: WyvernClaws
   m_EditorClassIdentifier: 
-  id: 128
+  important: 0
+  id: 139
   name: Wyvern Claws
   description: Extremely sharp claws
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 82d4cd345c4f10d4c939fd6af5f9cda4, type: 3}
-  material: {fileID: 2100000, guid: 95f54b4d83f5926488dbb3126b76dad7, type: 2}
-  mesh: {fileID: 4300000, guid: 2db01b1169ea3254fb2a3fd6416d3c75, type: 2}
+  sprite: {fileID: 21300000, guid: 0ec2d2ddf2ea33946904e0b64cbce4df, type: 3}
+  material: {fileID: 2100000, guid: 92c257725dc0ae046a1b524500ffbaed, type: 2}
+  mesh: {fileID: 4300000, guid: 913ff032f401dc04296028d9f74ec832, type: 2}
   rotationOffset: {x: -95, y: 0, z: 15}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 0.7
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Cauldron
   m_EditorClassIdentifier: 
-  id: 87
+  important: 0
+  id: 90
   name: Cauldron
   description: food go brr
   type: 6
   tier: 0
-  sprite: {fileID: 21300000, guid: d1ef9a12b75c02a42abdf85862079df8, type: 3}
-  material: {fileID: 2100000, guid: efccf2aefeb498c4082798bc328689ca, type: 2}
-  mesh: {fileID: 4300000, guid: 843126760b8e8e541819611e9a6032f3, type: 2}
+  sprite: {fileID: 21300000, guid: 7285fc528f832424282885c7bc080928, type: 3}
+  material: {fileID: 2100000, guid: ae3ca81ff498ae148ba732bfa5121dc0, type: 2}
+  mesh: {fileID: 4300000, guid: 0d198e7b42a00ca4fbaa063e0a1ded4d, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  - item: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
     amount: 10
-  - item: {fileID: 11400000, guid: 7c3b7d37072e928478cd0e0d01b08f37, type: 2}
+  - item: {fileID: 11400000, guid: d60bb66c49cdd34449404fbcd3c9616a, type: 2}
     amount: 10
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 1b566f1c1b2caab40a53b713f68baec7, type: 2}
   buildable: 1
   grid: 0
-  prefab: {fileID: 1933011834759604, guid: af057cd7e0a0114428b0bac84beb460f, type: 3}
+  prefab: {fileID: 1995035866420472, guid: 04f2a3c8711d91a4ba85db6306935309, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -59,4 +60,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

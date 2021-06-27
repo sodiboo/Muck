@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b725e49f632c06a468e8284b30d6c707, type: 3}
+  m_Name: Wyvern_0
+  m_EditorClassIdentifier: 
+  name: 
+  mobPrefab: {fileID: 1864042884068972, guid: 633e968f4e4163b449f7c689ee2f6e05, type: 3}
+  behaviour: 1
+  ranged: 1
+  rangedCooldown: 6
+  startAttackDistance: 30
+  startRangedAttackDistance: 5
+  maxAttackDistance: 1
+  speed: 14
+  spawnTime: 1.5
+  minAttackAngle: 90
+  sharpDefense: 0
+  defense: 0
+  knockbackThreshold: 0.2
+  ignoreBuilds: 0
+  followPlayerDistance: 1
+  followPlayerAccuracy: 0.15
+  onlyRangedInRangedPattern: 0
+  weaknesses: 04000000
+  boss: 0

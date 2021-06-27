@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class SinglePlayer : MonoBehaviour
 {
-
 	private void Start()
 	{
 		SinglePlayer.Instance = this;
@@ -15,17 +13,14 @@ public class SinglePlayer : MonoBehaviour
 		this.playerCam = PlayerMovement.Instance.playerCam;
 	}
 
-
 	private void Update()
 	{
 		this.DrawGrabbing();
 	}
 
-
 	private void DrawGrabbing()
 	{
 	}
-
 
 	private void FindNewGrabLerp()
 	{
@@ -35,7 +30,6 @@ public class SinglePlayer : MonoBehaviour
 		this.grabLr.SetPosition(1, this.myHandPoint);
 	}
 
-
 	private void HoldGrab()
 	{
 		this.grabJoint.connectedAnchor = this.playerCam.transform.position + this.playerCam.transform.forward * 6.5f;
@@ -43,7 +37,6 @@ public class SinglePlayer : MonoBehaviour
 		this.grabLr.endWidth = 0.05f;
 		this.previousLookdir = this.playerCam.transform.forward;
 	}
-
 
 	public void StopGrab()
 	{
@@ -58,39 +51,27 @@ public class SinglePlayer : MonoBehaviour
 		this.objectGrabbing = null;
 	}
 
-
 	private Transform playerCam;
-
 
 	public LayerMask whatIsGrabbable;
 
-
 	private Rigidbody objectGrabbing;
-
 
 	private Vector3 previousLookdir;
 
-
 	private Vector3 grabPoint;
-
 
 	private float dragForce = 700000f;
 
-
 	private SpringJoint grabJoint;
-
 
 	public LineRenderer grabLr;
 
-
 	private Vector3 myGrabPoint;
-
 
 	private Vector3 myHandPoint;
 
-
 	public static SinglePlayer Instance;
-
 
 	private float oldDrag;
 }

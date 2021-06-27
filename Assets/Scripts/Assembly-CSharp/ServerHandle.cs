@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ServerHandle
 {
-
     public static void WelcomeReceived(int fromClient, Packet packet)
     {
         int num = packet.ReadInt(true);
@@ -24,7 +22,6 @@ public class ServerHandle
         Server.clients[fromClient].SendIntoGame();
     }
 
-
     public static void JoinRequest(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player.joined)
@@ -38,7 +35,6 @@ public class ServerHandle
         ServerSend.Welcome(fromClient, "weclome");
     }
 
-
     public static void StartedLoading(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player.loading)
@@ -47,7 +43,6 @@ public class ServerHandle
         }
         Server.clients[fromClient].player.loading = true;
     }
-
 
     public static void PlayerFinishedLoading(int fromClient, Packet packet)
     {
@@ -93,7 +88,6 @@ public class ServerHandle
         }
     }
 
-
     public static void PlayerDisconnect(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -102,7 +96,6 @@ public class ServerHandle
         }
         ServerHandle.DisconnectPlayer(fromClient);
     }
-
 
     public static void DisconnectPlayer(int fromClient)
     {
@@ -119,7 +112,6 @@ public class ServerHandle
         Server.clients[fromClient] = null;
     }
 
-
     public static void SpawnPlayersRequest(int fromClient, Packet packet)
     {
         Debug.Log("received request to spawn players");
@@ -129,7 +121,6 @@ public class ServerHandle
         }
         Server.clients[fromClient].SendIntoGame();
     }
-
 
     public static void PlayerHp(int fromClient, Packet packet)
     {
@@ -143,7 +134,6 @@ public class ServerHandle
         float hpRatio = (float)num / (float)num2;
         ServerSend.PlayerHp(fromClient, hpRatio);
     }
-
 
     public static void PlayerDied(int fromClient, Packet packet)
     {
@@ -165,7 +155,6 @@ public class ServerHandle
             GameManager.instance.CheckIfGameOver();
         }
     }
-
 
     public static void RevivePlayer(int fromClient, Packet packet)
     {
@@ -204,7 +193,6 @@ public class ServerHandle
         ServerSend.RevivePlayer(fromClient, num, flag, num2);
     }
 
-
     public static void PlayerPosition(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -215,7 +203,6 @@ public class ServerHandle
         Server.clients[fromClient].player.pos = pos;
         ServerSend.PlayerPosition(Server.clients[fromClient].player, 0);
     }
-
 
     public static void PlayerRotation(int fromClient, Packet packet)
     {
@@ -230,7 +217,6 @@ public class ServerHandle
         ServerSend.PlayerRotation(Server.clients[fromClient].player);
     }
 
-
     public static void ItemDropped(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -243,7 +229,6 @@ public class ServerHandle
         ItemManager.Instance.DropItem(fromClient, itemId, amount, nextId);
         ServerSend.DropItem(fromClient, itemId, amount, nextId);
     }
-
 
     public static void ItemDroppedAtPosition(int fromClient, Packet packet)
     {
@@ -258,7 +243,6 @@ public class ServerHandle
         ItemManager.Instance.DropItemAtPosition(num, amount, pos, num);
         ServerSend.DropItemAtPosition(num, amount, nextId, pos);
     }
-
 
     public static void ItemPickedUp(int fromClient, Packet packet)
     {
@@ -299,7 +283,6 @@ public class ServerHandle
         ServerSend.PickupItem(fromClient, num);
     }
 
-
     public static void ItemInteract(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -320,7 +303,6 @@ public class ServerHandle
         }
     }
 
-
     public static void WeaponInHand(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -330,7 +312,6 @@ public class ServerHandle
         int objectID = packet.ReadInt(true);
         ServerSend.WeaponInHand(fromClient, objectID);
     }
-
 
     public static void AnimationUpdate(int fromClient, Packet packet)
     {
@@ -346,7 +327,6 @@ public class ServerHandle
         bool b = packet.ReadBool(true);
         ServerSend.AnimationUpdate(fromClient, animation, b);
     }
-
 
     public static void ShootArrow(int fromClient, Packet packet)
     {
@@ -364,7 +344,6 @@ public class ServerHandle
         int arrowId = packet.ReadInt(true);
         ServerSend.ShootArrow(pos, rot, force, arrowId, fromClient);
     }
-
 
     public static void RequestChest(int fromClient, Packet packet)
     {
@@ -394,7 +373,6 @@ public class ServerHandle
         }
     }
 
-
     public static void UpdateChest(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -410,7 +388,6 @@ public class ServerHandle
         ChestManager.Instance.UpdateChest(chestId, cellId, itemId, amount);
         ServerSend.UpdateChest(fromClient, chestId, cellId, itemId, amount);
     }
-
 
     public static void RequestBuild(int fromClient, Packet packet)
     {
@@ -433,7 +410,6 @@ public class ServerHandle
         BuildManager.Instance.BuildItem(fromClient, itemId, objectId, pos, rot);
         ServerSend.SendBuild(fromClient, itemId, objectId, pos, rot);
     }
-
 
     public static void PlayerHitObject(int fromClient, Packet packet)
     {
@@ -466,7 +442,6 @@ public class ServerHandle
         ServerSend.PlayerHitObject(fromClient, num2, num3, hitEffect, pos);
     }
 
-
     public static void SpawnEffect(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -477,7 +452,6 @@ public class ServerHandle
         Vector3 pos = packet.ReadVector3(true);
         ServerSend.SpawnEffect(effectId, pos, fromClient);
     }
-
 
     public static void PlayerHit(int fromClient, Packet packet)
     {
@@ -536,12 +510,10 @@ public class ServerHandle
         ServerSend.HitPlayer(fromClient, num4, num6, num2, hitEffect, pos);
     }
 
-
     public static void PlayerRequestedSpawns(int fromClient, Packet packet)
     {
         Debug.LogError("Player requested spawns, but method is not implemented");
     }
-
 
     public static void Ready(int fromClient, Packet packet)
     {
@@ -555,7 +527,6 @@ public class ServerHandle
         Server.clients[fromClient].player.ready = ready;
     }
 
-
     public static void PingReceived(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -566,7 +537,6 @@ public class ServerHandle
         Server.clients[fromClient].player.PingPlayer();
         ServerSend.PingPlayer(fromClient, ms);
     }
-
 
     public static void ShrineCombatStartRequest(int fromClient, Packet packet)
     {
@@ -591,7 +561,6 @@ public class ServerHandle
         }
     }
 
-
     public static void Interact(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -615,7 +584,6 @@ public class ServerHandle
             ServerSend.Interact(num, fromClient);
         }
     }
-
 
     public static void PlayerDamageMob(int fromClient, Packet packet)
     {
@@ -682,7 +650,6 @@ public class ServerHandle
         ServerSend.PlayerHitMob(fromClient, num, num5, num3, pos);
     }
 
-
     public static void ReceiveChatMessage(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -693,7 +660,6 @@ public class ServerHandle
         string username = GameManager.players[fromClient].username;
         ServerSend.SendChatMessage(fromClient, username, msg);
     }
-
 
     public static void ReceivePing(int fromClient, Packet packet)
     {
@@ -706,7 +672,6 @@ public class ServerHandle
         ServerSend.SendPing(fromClient, pos, username);
     }
 
-
     public static void ReceiveArmor(int fromClient, Packet packet)
     {
         if (Server.clients[fromClient].player == null)
@@ -718,6 +683,17 @@ public class ServerHandle
         Server.clients[fromClient].player.UpdateArmor(armorSlot, itemId);
         ServerSend.SendArmor(fromClient, armorSlot, itemId);
     }
+    
+	public static void ReceiveShipUpdate(int fromClient, Packet packet)
+	{
+		if (Server.clients[fromClient].player == null)
+		{
+			return;
+		}
+		int type = packet.ReadInt(true);
+		int interactId = packet.ReadInt(true);
+		ServerSend.SendShipUpdate(fromClient, type, interactId);
+	}
 
     public static void UpdateCar(int fromClient, Packet packet)
     {

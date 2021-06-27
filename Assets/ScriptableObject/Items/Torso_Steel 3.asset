@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
+  m_Name: Torso_Steel 3
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 27
+  name: Steel Chestplate
+  description: it protecc chest
+  type: 0
+  tier: 1
+  sprite: {fileID: 21300000, guid: a562ca25e91c98048b4d62ac998c4554, type: 3}
+  material: {fileID: 2100000, guid: 6fdb0265db07f254aad2e9e6c2d4f5bb, type: 2}
+  mesh: {fileID: 4300000, guid: 6724e56ae9c362545a1a7e951a0daedb, type: 2}
+  rotationOffset: {x: 0, y: 7, z: 75}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 2}
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: fd86d4cf96cc7c745b19e2dd1df1258b, type: 2}
+    amount: 20
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 10
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 11400000, guid: e13e06e6b121685459f53027b67a8390, type: 2}
+  fuel: {fileID: 0}
+  tag: 5
+  rarity: 0
+  attackTypes: 
+  x: 0

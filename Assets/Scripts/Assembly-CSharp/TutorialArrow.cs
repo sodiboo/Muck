@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class TutorialArrow : MonoBehaviour
 {
-
 	private void Update()
 	{
 		base.transform.Rotate(Vector3.forward, 22f * Time.deltaTime);

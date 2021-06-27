@@ -3,16 +3,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ItemInfo : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ItemInfo.Instance = this;
 		this.defaultTextPos = this.text.transform.localPosition;
 	}
-
 
 	private void Update()
 	{
@@ -20,12 +17,10 @@ public class ItemInfo : MonoBehaviour
 		this.FitToText();
 	}
 
-
 	private void OnEnable()
 	{
 		this.SetText("", false);
 	}
-
 
 	public void FitToText()
 	{
@@ -45,7 +40,6 @@ public class ItemInfo : MonoBehaviour
 		Vector3 b = new Vector3(this.padding / 2f, 0f, 0f);
 		this.image.rectTransform.localPosition = this.text.rectTransform.localPosition - b;
 	}
-
 
 	public void SetText(string t, bool leftCorner = false)
 	{
@@ -67,28 +61,21 @@ public class ItemInfo : MonoBehaviour
 		this.leftCorner = false;
 	}
 
-
 	public void Fade(float opacity, float time = 0.2f)
 	{
 		this.text.CrossFadeAlpha(opacity, time, true);
 		this.image.CrossFadeAlpha(opacity, time, true);
 	}
 
-
 	public TextMeshProUGUI text;
-
 
 	public RawImage image;
 
-
 	public float padding;
-
 
 	private Vector3 defaultTextPos;
 
-
 	public static ItemInfo Instance;
-
 
 	private bool leftCorner;
 }

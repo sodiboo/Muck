@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class HitableActor : Hitable
 {
-
 	public override void Hit(int damage, float sharpness, int hitEffect, Vector3 pos)
 	{
 		if (GameManager.gameSettings.friendlyFire == GameSettings.FriendlyFire.Off)
@@ -17,11 +15,9 @@ public class HitableActor : Hitable
 		}
 	}
 
-
 	private void Update()
 	{
 	}
-
 
 	public new virtual int Damage(int damage, int fromClient, int hitEffect, Vector3 pos)
 	{
@@ -31,25 +27,19 @@ public class HitableActor : Hitable
 		return this.hp;
 	}
 
-
 	public override void OnKill(Vector3 dir)
 	{
 	}
-
 
 	protected override void ExecuteHit()
 	{
 	}
 
-
 	public HitableActor.ActorType actorType;
-
 
 	public enum ActorType
 	{
-
 		Player,
-
 		Enemy
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class Billboard : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.defaultScale = base.transform.localScale;
 	}
-
 
 	private void Update()
 	{
@@ -41,15 +38,11 @@ public class Billboard : MonoBehaviour
 		base.transform.localScale = this.defaultScale;
 	}
 
-
 	private Vector3 defaultScale;
-
 
 	public bool xz;
 
-
 	public bool affectScale;
-
 
 	private Transform t;
 }

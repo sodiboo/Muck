@@ -2,16 +2,13 @@
 using TMPro;
 using UnityEngine;
 
-
 public class KeyListener : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		KeyListener.Instance = this;
 		this.overlay.SetActive(false);
 	}
-
 
 	public void ListenForKey(ControlSetting listener, string actionName)
 	{
@@ -19,7 +16,6 @@ public class KeyListener : MonoBehaviour
 		this.currentlyChanging = listener;
 		this.overlay.SetActive(true);
 	}
-
 
 	private void Update()
 	{
@@ -45,7 +41,6 @@ public class KeyListener : MonoBehaviour
 		}
 	}
 
-
 	private void CloseListener()
 	{
 		this.overlay.SetActive(false);
@@ -53,15 +48,11 @@ public class KeyListener : MonoBehaviour
 		UiSfx.Instance.PlayClick();
 	}
 
-
 	public ControlSetting currentlyChanging;
-
 
 	public TextMeshProUGUI alertText;
 
-
 	public GameObject overlay;
-
 
 	public static KeyListener Instance;
 }

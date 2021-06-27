@@ -1,9 +1,7 @@
 ﻿using System;
 
-
 public class WorldUtility
 {
-
 	public static TextureData.TerrainType WorldHeightToBiome(float height)
 	{
 		float heightMultiplier = MapGenerator.Instance.terrainData.heightMultiplier;

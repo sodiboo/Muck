@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Arrow_Fire
   m_EditorClassIdentifier: 
-  id: 113
+  important: 0
+  id: 124
   name: Fire arrow
   description: An arrow charged with fire
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 3f8502ae39fafbc47b0a530dd0defb9c, type: 3}
-  material: {fileID: 2100000, guid: 2f016871c1d35de49b0564a047d131d3, type: 2}
-  mesh: {fileID: 4300000, guid: 37c5ddc096790144c9259de7560b9c1c, type: 2}
+  sprite: {fileID: 21300000, guid: 7bf7691b1cd6f33449acf17b93f56b66, type: 3}
+  material: {fileID: 2100000, guid: 98825b85deb286a4b8ac6be57503c667, type: 2}
+  mesh: {fileID: 4300000, guid: 0617c3e1bdab47d4394efd21b3cca309, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 1
   requirements:
-  - item: {fileID: 11400000, guid: 45a331006ba5a4a4eb9d6962a4635fe2, type: 2}
+  - item: {fileID: 11400000, guid: 2c63875c528337c48a4a3d6bca639dda, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: e7e70f316ca856342bf1fe6f5a2d57da, type: 2}
+  - item: {fileID: 11400000, guid: aa8103830ba458446b2f3a8f5a4b813e, type: 2}
     amount: 1
   craftAmount: 4
-  stationRequirement: {fileID: 11400000, guid: 6df1a2684b27bfb4b8c6b091d8abf547, type: 2}
+  stationRequirement: {fileID: 11400000, guid: b66ee1ade389b7d43909fe30259795f1, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1943718950072639, guid: fe5428ddf82b3d842973cb61d8d9a0d9, type: 3}
+  prefab: {fileID: 1972850023764178, guid: 13f32a6915e1b644fa01ca73faca4db1, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -59,4 +60,4 @@ MonoBehaviour:
   tag: 8
   rarity: 2
   attackTypes: 03000000
-  x: 1
+  x: 0

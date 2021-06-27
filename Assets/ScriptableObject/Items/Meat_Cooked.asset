@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Meat_Cooked
   m_EditorClassIdentifier: 
+  important: 0
   id: 53
   name: Cooked Meat
   description: yummy
   type: 8
   tier: 0
-  sprite: {fileID: 21300000, guid: 3fdda8be98ab1f6449f7515407348b8d, type: 3}
-  material: {fileID: 2100000, guid: 106fc4f3e00eb8b4baaedde6410017fd, type: 2}
-  mesh: {fileID: 4300000, guid: e386615a5c865b34a9652e6af7b51887, type: 2}
+  sprite: {fileID: 21300000, guid: 0e0c9d4ce1464144283b65f573269b10, type: 3}
+  material: {fileID: 2100000, guid: 69fa8006badfd724da61c71027c25900, type: 2}
+  mesh: {fileID: 4300000, guid: 64a3de3907d91814a8c67346f7d18e1d, type: 2}
   rotationOffset: {x: 0, y: -76, z: -10}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 0.5
@@ -34,7 +35,7 @@ MonoBehaviour:
   craftable: 0
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 09b2bc44342f77340ba084f0ba12529b, type: 2}
+  - item: {fileID: 11400000, guid: 947fb45b053328d4eac2fc76dcc36b33, type: 2}
     amount: 1
   craftAmount: 1
   stationRequirement: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 1
-  processedItem: {fileID: 11400000, guid: f6f7ca6ef29946a4b915031c1d60888d, type: 2}
+  processedItem: {fileID: 11400000, guid: a90692fc17118f44181723a2c53de5d4, type: 2}
   processTime: 5
   heal: 20
   hunger: 50
@@ -57,4 +58,4 @@ MonoBehaviour:
   tag: 2
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

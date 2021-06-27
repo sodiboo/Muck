@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class SmokeLeg : MonoBehaviour
 {
-
 	private void OnTriggerEnter(Collider other)
 	{
 		if (!this.ready)
@@ -16,22 +14,18 @@ public class SmokeLeg : MonoBehaviour
 			return;
 		}
 		this.ready = false;
-		base.Invoke(nameof(GetReady), this.cooldown);
+		Invoke(nameof(GetReady), this.cooldown);
 		Instantiate<GameObject>(this.smokeFx, base.transform.position, this.smokeFx.transform.rotation);
 	}
-
 
 	private void GetReady()
 	{
 		this.ready = true;
 	}
 
-
 	public GameObject smokeFx;
 
-
 	public float cooldown;
-
 
 	private bool ready = true;
 }

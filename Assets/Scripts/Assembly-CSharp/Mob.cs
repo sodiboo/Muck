@@ -2,49 +2,23 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-
 public class Mob : MonoBehaviour, SharedObject
 {
-
-
-
 	public Transform target { get; set; }
-
-
-
 
 	public int targetPlayerId { get; set; }
 
-
-
-
 	public bool ready { get; set; } = true;
-
-
-
 
 	public float multiplier { get; set; } = 1f;
 
-
-
-
 	public float bossMultiplier { get; set; } = 1f;
 
-
-
-
-	public Animator animator { get; private set; }
-
-
-
+	public Animator animator { get; protected set; }
 
 	public NavMeshAgent agent { get; private set; }
 
-
-
-
-	public Hitable hitable { get; private set; }
-
+	public Hitable hitable { get; protected set; }
 
 	private void TestSpawn()
 	{
@@ -52,28 +26,23 @@ public class Mob : MonoBehaviour, SharedObject
 		MobManager.Instance.AddMob(this, this.id);
 	}
 
-
 	public bool IsBuff()
 	{
 		return this.multiplier > 1f;
 	}
 
-
 	private void Start()
 	{
 		if (this.IsBuff())
 		{
-			MonoBehaviour.print("dangerous mob oOoOOo spooky");
 			base.transform.localScale *= 1.4f;
 		}
 	}
-
 
 	public void SetSpeed(float multiplier)
 	{
 		this.agent.speed = this.mobType.speed * multiplier;
 	}
-
 
 	private void Awake()
 	{
@@ -104,11 +73,7 @@ public class Mob : MonoBehaviour, SharedObject
 		}
 	}
 
-
-
-
 	public float[] attackTimes { get; set; }
-
 
 	private void Update()
 	{
@@ -117,7 +82,6 @@ public class Mob : MonoBehaviour, SharedObject
 		this.FootSteps();
 		this.UpdateOffsetPosition();
 	}
-
 
 	private void FootSteps()
 	{
@@ -142,15 +106,13 @@ public class Mob : MonoBehaviour, SharedObject
 		}
 	}
 
-
 	public virtual void ExtraUpdate()
 	{
 	}
 
-
 	public void Knockback(Vector3 dir)
 	{
-		base.CancelInvoke(nameof(StopKnockback));
+		base.CancelInvoke("StopKnockback");
 		this.oldAngularSpeed = this.agent.angularSpeed;
 		this.agent.destination = base.transform.position + dir * 6f;
 		this.animator.SetBool("Knockback", true);
@@ -158,9 +120,8 @@ public class Mob : MonoBehaviour, SharedObject
 		this.agent.velocity += dir * 10f;
 		this.agent.angularSpeed = 0f;
 		this.agent.updateRotation = false;
-		base.Invoke(nameof(StopKnockback), 0.75f);
+		Invoke(nameof(StopKnockback), 0.75f);
 	}
-
 
 	private void StopKnockback()
 	{
@@ -170,7 +131,6 @@ public class Mob : MonoBehaviour, SharedObject
 		this.agent.angularSpeed = this.defaulAngularSpeed;
 		this.agent.updateRotation = true;
 	}
-
 
 	private void LateUpdate()
 	{
@@ -186,20 +146,17 @@ public class Mob : MonoBehaviour, SharedObject
 		}
 	}
 
-
 	public bool IsAttacking()
 	{
 		return this.attacking;
 	}
-
 
 	public bool IsRangedAttacking()
 	{
 		return this.currentAttackType == Mob.AttackType.Ranged;
 	}
 
-
-	public void Attack(int targetPlayerId, int attackAnimationIndex)
+	public virtual void Attack(int targetPlayerId, int attackAnimationIndex)
 	{
 		MonoBehaviour.print("attacking. stoponattack: " + this.stopOnAttack.ToString());
 		if (this.stopOnAttack)
@@ -215,13 +172,12 @@ public class Mob : MonoBehaviour, SharedObject
 		{
 			this.currentAttackType = Mob.AttackType.Melee;
 		}
-		base.Invoke(nameof(FinishAttacking), this.attackTimes[attackAnimationIndex]);
+		Invoke(nameof(FinishAttacking), this.attackTimes[attackAnimationIndex]);
 		this.animator.Play(this.attackAnimations[attackAnimationIndex].name);
 		this.targetPlayerId = targetPlayerId;
 	}
 
-
-	private void FinishAttacking()
+	protected virtual void FinishAttacking()
 	{
 		this.attacking = false;
 		this.currentAttackType = Mob.AttackType.Melee;
@@ -232,8 +188,7 @@ public class Mob : MonoBehaviour, SharedObject
 		this.agent.isStopped = false;
 	}
 
-
-	private void Animate()
+	protected virtual void Animate()
 	{
 		if (!this.animator)
 		{
@@ -243,8 +198,7 @@ public class Mob : MonoBehaviour, SharedObject
 		this.animator.SetFloat("Speed", value);
 	}
 
-
-	public void SetDestination(Vector3 dest)
+	public virtual void SetDestination(Vector3 dest)
 	{
 		if (!this.agent.isOnNavMesh)
 		{
@@ -254,8 +208,7 @@ public class Mob : MonoBehaviour, SharedObject
 		this.agent.isStopped = false;
 	}
 
-
-	public void SetTarget(int targetId)
+	public virtual void SetTarget(int targetId)
 	{
 		if (!this.agent.isOnNavMesh)
 		{
@@ -265,14 +218,12 @@ public class Mob : MonoBehaviour, SharedObject
 		this.target = GameManager.players[this.targetPlayerId].transform;
 	}
 
-
 	public void SetPosition(Vector3 nextPosition)
 	{
 		Debug.DrawLine(base.transform.position, nextPosition, Color.red, 10f);
 		this.offsetPosition = nextPosition - base.transform.position;
 		this.offsetDir = this.offsetPosition.normalized;
 	}
-
 
 	private void UpdateOffsetPosition()
 	{
@@ -289,93 +240,65 @@ public class Mob : MonoBehaviour, SharedObject
 		base.transform.position += vector;
 	}
 
-
 	public void SetId(int id)
 	{
 		this.id = id;
 		this.hitable.SetId(id);
 	}
 
-
 	public int GetId()
 	{
 		return this.id;
 	}
 
-
 	public MobType mobType;
-
 
 	public float attackCooldown;
 
-
 	public int id;
-
 
 	public bool stopOnAttack;
 
-
 	private bool attacking;
-
 
 	public Mob.BossType bossType;
 
-
 	public AnimationClip[] attackAnimations;
-
 
 	public GameObject footstepFx;
 
-
 	private float distance;
-
 
 	public float footstepFrequency = 1f;
 
-
 	public bool knocked;
-
 
 	private float defaulAngularSpeed;
 
-
 	private float oldAccel;
-
 
 	private float oldAngularSpeed;
 
-
 	public int nRangedAttacks;
-
 
 	private Mob.AttackType currentAttackType;
 
-
 	private Vector3 offsetPosition;
-
 
 	private Vector3 offsetDir;
 
-
 	private float syncSpeed = 5f;
-
 
 	public enum AttackType
 	{
-
 		Melee,
-
 		Ranged
 	}
 
-
 	public enum BossType
 	{
-
 		None,
-
 		BossNight,
-
 		BossShrine
 	}
 }

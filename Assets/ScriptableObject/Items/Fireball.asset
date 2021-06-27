@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  id: 68
+  important: 0
+  id: 69
   name: Fireball
   description: Ball of fire
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 39e53a75ba9c20b4e98661e06243cf28, type: 3}
-  material: {fileID: 2100000, guid: 28ada41888a2cfe458ab8283eab813d1, type: 2}
+  sprite: {fileID: 21300000, guid: 8765f3982d48f334b8fb179b50824462, type: 3}
+  material: {fileID: 2100000, guid: 751b1dde7e797494286dcf1a05fb91c7, type: 2}
   mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1033906885990454, guid: 1d5fbb93414cc5d45b4e9eea00141afa, type: 3}
+  prefab: {fileID: 1576395472222997, guid: 33478948fa0f1434992c921ac1d3be63, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -49,10 +50,10 @@ MonoBehaviour:
   stamina: 0
   armor: 0
   swingFx: 0
-  bowComponent: {fileID: 11400000, guid: 3ecc52c0199cace4f8f15190f8aa30df, type: 2}
+  bowComponent: {fileID: 11400000, guid: aa532ca894c4ad245821f1cbeeef5373, type: 2}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

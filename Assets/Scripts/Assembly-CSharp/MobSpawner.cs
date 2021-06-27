@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class MobSpawner : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		MobSpawner.Instance = this;
 		this.FillList();
 	}
-
 
 	private void FillList()
 	{
@@ -22,15 +19,13 @@ public class MobSpawner : MonoBehaviour
 		}
 	}
 
-
-	public void ServerSpawnNewMob(int mobId, int mobType, Vector3 pos, float multiplier, float bossMultiplier, Mob.BossType bossType = Mob.BossType.None)
+	public void ServerSpawnNewMob(int mobId, int mobType, Vector3 pos, float multiplier, float bossMultiplier, Mob.BossType bossType = Mob.BossType.None, int guardianType = -1)
 	{
-		this.SpawnMob(pos, mobType, mobId, multiplier, bossMultiplier, bossType);
-		ServerSend.MobSpawn(pos, mobType, mobId, multiplier, bossMultiplier);
+		this.SpawnMob(pos, mobType, mobId, multiplier, bossMultiplier, bossType, guardianType);
+		ServerSend.MobSpawn(pos, mobType, mobId, multiplier, bossMultiplier, guardianType);
 	}
 
-
-	public void SpawnMob(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier, Mob.BossType bossType = Mob.BossType.None)
+	public void SpawnMob(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier, Mob.BossType bossType = Mob.BossType.None, int guardianType = -1)
 	{
 		Mob component = Instantiate<GameObject>(this.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
 		MobManager.Instance.AddMob(component, mobId);
@@ -40,15 +35,16 @@ public class MobSpawner : MonoBehaviour
 		{
 			component.bossType = bossType;
 		}
+		if (guardianType != -1)
+		{
+			component.GetComponent<Guardian>().type = (Guardian.GuardianType)guardianType;
+		}
 		MonoBehaviour.print("spawned new mob with id: " + mobId);
 	}
 
-
 	public MobType[] mobsInspector;
 
-
 	public MobType[] allMobs;
-
 
 	public static MobSpawner Instance;
 }

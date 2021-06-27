@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 
-
 public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 {
-
 	private new void Start()
 	{
 		base.Start();
-		base.Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
+		Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
 	}
-
 
 	protected override void AttackBehaviour()
 	{
@@ -29,9 +26,9 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 				this.mob.Attack(this.mob.targetPlayerId, num3);
 				ServerSend.MobAttack(this.mob.GetId(), this.mob.targetPlayerId, num3);
 				this.serverReadyToAttack = false;
-				base.Invoke(nameof(GetReady), this.mob.attackTimes[num3] + Random.Range(0f, this.mob.attackCooldown));
+				Invoke(nameof(GetReady), this.mob.attackTimes[num3] + Random.Range(0f, this.mob.attackCooldown));
 				this.readyForRangedAttack = false;
-				base.Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
+				Invoke(nameof(GetReadyForRangedAttack), Random.Range(this.rangedCooldown * 0.5f, this.rangedCooldown * 1.5f));
 			}
 			return;
 		}
@@ -48,18 +45,15 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
 		this.mob.Attack(this.mob.targetPlayerId, num5);
 		ServerSend.MobAttack(this.mob.GetId(), this.mob.targetPlayerId, num5);
 		this.serverReadyToAttack = false;
-		base.Invoke(nameof(GetReady), this.mob.attackTimes[num5] + Random.Range(0f, this.mob.attackCooldown));
+		Invoke(nameof(GetReady), this.mob.attackTimes[num5] + Random.Range(0f, this.mob.attackCooldown));
 	}
-
 
 	private void GetReadyForRangedAttack()
 	{
 		this.readyForRangedAttack = true;
 	}
 
-
 	public float rangedCooldown = 6f;
-
 
 	public bool readyForRangedAttack;
 }

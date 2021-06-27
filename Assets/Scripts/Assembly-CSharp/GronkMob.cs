@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class GronkMob : Mob
 {
-
 	public override void ExtraUpdate()
 	{
 		if (!base.target)

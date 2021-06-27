@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Shroom_Ligon
   m_EditorClassIdentifier: 
+  important: 0
   id: 48
   name: Ligon Shroom
   description: yummy
   type: 8
   tier: 0
-  sprite: {fileID: 21300000, guid: 4232e1ea22f05bf4a9c5df80cac3ed3e, type: 3}
-  material: {fileID: 2100000, guid: e2f56fd0a14c6fd4595cc22e9ffcb5ff, type: 2}
-  mesh: {fileID: 4300000, guid: 6ea54bb97fb5e1f4e9b59638bc653419, type: 2}
+  sprite: {fileID: 21300000, guid: 7b4215d6c3287ca4a8bcf603a54e29af, type: 3}
+  material: {fileID: 2100000, guid: 6893b4f774d213d4298e01ac20396aca, type: 2}
+  mesh: {fileID: 4300000, guid: 096304fb9d62be3408abb0c8e330871f, type: 2}
   rotationOffset: {x: 90, y: 0, z: 0}
   positionOffset: {x: 0, y: -0.1, z: 0}
   scale: 1
@@ -38,11 +39,11 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1018162376399544, guid: d144f0679a5a04b4284a4ff42d4fcf15, type: 3}
+  prefab: {fileID: 1064023910020043, guid: c2fbbdd128081bf4382039b59f170f8f, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
-  processedItem: {fileID: 11400000, guid: a4ef86caf66891045a770c1058972d00, type: 2}
+  processedItem: {fileID: 11400000, guid: 90320ab996194e244aa9f2543c0092ee, type: 2}
   processTime: 1
   heal: 0
   hunger: 12
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 2
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

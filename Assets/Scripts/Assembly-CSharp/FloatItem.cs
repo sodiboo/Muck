@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class FloatItem : MonoBehaviour
 {
-
 	private void Start()
 	{
 		this.PositionItem();
@@ -12,7 +10,6 @@ public class FloatItem : MonoBehaviour
 		this.desiredScale = base.transform.localScale;
 		base.transform.localScale = Vector3.zero;
 	}
-
 
 	private void Update()
 	{
@@ -22,7 +19,6 @@ public class FloatItem : MonoBehaviour
 		this.yOffset = Mathf.Lerp(this.yOffset, b, Time.deltaTime * 2f);
 		base.transform.position = new Vector3(base.transform.position.x, this.yPos + this.yOffset, base.transform.position.z);
 	}
-
 
 	private void PositionItem()
 	{
@@ -37,21 +33,15 @@ public class FloatItem : MonoBehaviour
 		}
 	}
 
-
 	private LayerMask whatIsGround;
-
 
 	private float floatHeight = 2f;
 
-
 	private Vector3 desiredScale;
-
 
 	private float yPos;
 
-
 	private float yOffset;
-
 
 	public float maxOffset = 0.5f;
 }

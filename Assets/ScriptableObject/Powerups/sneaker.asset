@@ -2,21 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad122b1b50870c4694d1e911b72693c, type: 3}
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
   m_Name: sneaker
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   name: Sneaker
   description: +Movement speed
-  id: 7
+  id: 6
   tier: 0
-  mesh: {fileID: 4300000, guid: 0c706c12e79d0d441b73649f0eda7bd8, type: 2}
-  material: {fileID: 2100000, guid: 84423d1bf7a715b4ab515b8d8d34069a, type: 2}
-  sprite: {fileID: 21300000, guid: 6d51de57f5692ac4a85aa93f87d7e2ff, type: 3}
-  x: 0
+  mesh: {fileID: 4300000, guid: 5a5aef3e307e620478567cdfc27ea4e0, type: 2}
+  material: {fileID: 2100000, guid: b7e775fa1b3aaf44eafe4c0b47af93e7, type: 2}
+  sprite: {fileID: 21300000, guid: 380813fced382f14c9c27cd5c7e04c87, type: 3}

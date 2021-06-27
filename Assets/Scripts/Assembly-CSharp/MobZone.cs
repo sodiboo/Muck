@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MobZone : SpawnZone
 {
-
 	public override void ServerSpawnEntity()
 	{
 		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return;
@@ -29,7 +29,6 @@ public class MobZone : SpawnZone
 		}
 	}
 
-
 	public override GameObject LocalSpawnEntity(Vector3 pos, int mobType, int mobId, int zoneId)
 	{
 		Mob component = Instantiate<GameObject>(MobSpawner.Instance.allMobs[mobType].mobPrefab, pos, Quaternion.identity).GetComponent<Mob>();
@@ -38,7 +37,6 @@ public class MobZone : SpawnZone
 		this.entities.Add(component.gameObject);
 		return component.gameObject;
 	}
-
 
 	public MobType mobType;
 }

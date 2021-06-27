@@ -4,10 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class CraftingUI : InventoryExtensions
 {
-
 	private void Awake()
 	{
 		if (this.handCrafts)
@@ -23,18 +21,15 @@ public class CraftingUI : InventoryExtensions
 		}
 	}
 
-
 	private void Start()
 	{
 		this.UpdateCraftables();
 		this.UpdateTabs();
 	}
 
-
 	private void OnEnable()
 	{
 	}
-
 
 	public void OpenTab(int i)
 	{
@@ -42,7 +37,6 @@ public class CraftingUI : InventoryExtensions
 		this.UpdateTabs();
 		this.UpdateCraftables();
 	}
-
 
 	private void UpdateTabs()
 	{
@@ -64,7 +58,6 @@ public class CraftingUI : InventoryExtensions
 			}
 		}
 	}
-
 
 	public override void UpdateCraftables()
 	{
@@ -104,65 +97,45 @@ public class CraftingUI : InventoryExtensions
 		}
 	}
 
-
 	public int nCells;
-
 
 	public RectTransform cellsParent;
 
-
 	public RectTransform cellsParentParent;
-
 
 	public RectTransform cellsParentParentParent;
 
-
 	private Rect rect;
-
 
 	public GameObject cellPrefab;
 
-
 	public GameObject requirementPrefab;
-
 
 	private List<InventoryCell> cells = new List<InventoryCell>();
 
-
 	private int tabSelected;
-
 
 	public CraftingUI.Tab[] tabs;
 
-
 	public Transform tabParent;
-
 
 	private RawImage[] tabImgs;
 
-
 	private TextMeshProUGUI[] tabTexts;
-
 
 	public Color selectedTabColor;
 
-
 	public Color unselectedTabColor;
-
 
 	public Color selectedTextColor;
 
-
 	public Color unselectedTextColor;
 
-
 	public bool handCrafts;
-
 
 	[Serializable]
 	public class Tab
 	{
-
 		public InventoryItem[] items;
 	}
 }

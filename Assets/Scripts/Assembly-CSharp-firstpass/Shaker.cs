@@ -4,18 +4,15 @@ using UnityEngine;
 
 namespace MilkShake
 {
-
 	[AddComponentMenu("MilkShake/Shaker")]
 	public class Shaker : MonoBehaviour
 	{
-
 		public static ShakeInstance ShakeAll(IShakeParameters shakeData, int? seed = null)
 		{
 			ShakeInstance shakeInstance = new ShakeInstance(shakeData, seed);
 			Shaker.AddShakeAll(shakeInstance);
 			return shakeInstance;
 		}
-
 
 		public static void ShakeAllSeparate(IShakeParameters shakeData, List<ShakeInstance> shakeInstances = null, int? seed = null)
 		{
@@ -36,7 +33,6 @@ namespace MilkShake
 			}
 		}
 
-
 		public static void ShakeAllFromPoint(Vector3 point, float maxDistance, IShakeParameters shakeData, List<ShakeInstance> shakeInstances = null, int? seed = null)
 		{
 			if (shakeInstances != null)
@@ -56,7 +52,6 @@ namespace MilkShake
 			}
 		}
 
-
 		public static void AddShakeAll(ShakeInstance shakeInstance)
 		{
 			for (int i = 0; i < Shaker.GlobalShakers.Count; i++)
@@ -68,7 +63,6 @@ namespace MilkShake
 			}
 		}
 
-
 		private void Awake()
 		{
 			if (this.addToGlobalShakers)
@@ -77,7 +71,6 @@ namespace MilkShake
 			}
 		}
 
-
 		private void OnDestroy()
 		{
 			if (this.addToGlobalShakers)
@@ -85,7 +78,6 @@ namespace MilkShake
 				Shaker.GlobalShakers.Remove(this);
 			}
 		}
-
 
 		private void Update()
 		{
@@ -106,14 +98,12 @@ namespace MilkShake
 			base.transform.localEulerAngles = shakeResult.RotationShake;
 		}
 
-
 		public ShakeInstance Shake(IShakeParameters shakeData, int? seed = null)
 		{
 			ShakeInstance shakeInstance = new ShakeInstance(shakeData, seed);
 			this.AddShake(shakeInstance);
 			return shakeInstance;
 		}
-
 
 		public ShakeInstance ShakeFromPoint(Vector3 point, float maxDistance, IShakeParameters shakeData, int? seed = null)
 		{
@@ -130,19 +120,15 @@ namespace MilkShake
 			return null;
 		}
 
-
 		public void AddShake(ShakeInstance shakeInstance)
 		{
 			this.activeShakes.Add(shakeInstance);
 		}
 
-
 		public static List<Shaker> GlobalShakers = new List<Shaker>();
-
 
 		[SerializeField]
 		private bool addToGlobalShakers;
-
 
 		private List<ShakeInstance> activeShakes = new List<ShakeInstance>();
 	}

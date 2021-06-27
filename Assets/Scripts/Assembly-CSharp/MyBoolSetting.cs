@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class MyBoolSetting : Setting
 {
-
 	public void SetSetting(int s)
 	{
 		this.currentSetting = s;
 		this.UpdateSetting();
 	}
-
 
 	public void SetSetting(bool s)
 	{
@@ -25,7 +22,6 @@ public class MyBoolSetting : Setting
 		this.UpdateSetting();
 	}
 
-
 	public void ToggleSetting()
 	{
 		if (this.currentSetting == 1)
@@ -39,7 +35,6 @@ public class MyBoolSetting : Setting
 		this.UpdateSetting();
 	}
 
-
 	private void UpdateSetting()
 	{
 		if (this.currentSetting == 1)
@@ -52,7 +47,6 @@ public class MyBoolSetting : Setting
 		}
 		this.m_OnClick.Invoke();
 	}
-
 
 	public GameObject checkMark;
 }

@@ -1,24 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class ZoneController : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ZoneController.Instance = this;
 		this.maxScale = base.transform.localScale.x;
 		this.desiredZoneScale = this.maxScale;
-		base.InvokeRepeating(nameof(SlowUpdate), this.updateRate, this.updateRate);
+		InvokeRepeating(nameof(SlowUpdate), this.updateRate, this.updateRate);
 	}
-
 
 	private void Start()
 	{
 		this.AdjustZoneHeight();
 	}
-
 
 	private void AdjustZoneHeight()
 	{
@@ -31,7 +27,6 @@ public class ZoneController : MonoBehaviour
 		}
 	}
 
-
 	public void NextDay(int day)
 	{
 		int gameLength = (int)GameManager.gameSettings.gameLength;
@@ -40,7 +35,6 @@ public class ZoneController : MonoBehaviour
 		this.desiredZoneScale = Mathf.Clamp(this.desiredZoneScale, 0f, 1f);
 		this.desiredZoneScale *= this.maxScale;
 	}
-
 
 	private void SlowUpdate()
 	{
@@ -78,7 +72,6 @@ public class ZoneController : MonoBehaviour
 		}
 	}
 
-
 	private void Update()
 	{
 		if (!PlayerMovement.Instance)
@@ -105,42 +98,29 @@ public class ZoneController : MonoBehaviour
 		}
 	}
 
-
 	private int baseDamage = 1;
-
 
 	private float threshold = 1.5f;
 
-
 	private float updateRate = 0.5f;
-
 
 	private bool inZone;
 
-
 	public Transform audio;
-
 
 	public AudioSource transition;
 
-
 	public AudioSource damageAudio;
-
 
 	private float maxScale;
 
-
 	public static ZoneController Instance;
-
 
 	public LayerMask whatIsGround;
 
-
 	private int currentDay;
 
-
 	private float desiredZoneScale;
-
 
 	private float zoneSpeed = 5f;
 }

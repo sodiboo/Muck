@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class SpawnAttackFx : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.m = base.GetComponent<Mob>();
 	}
-
 
 	public void SpawnFx(int n)
 	{
@@ -17,12 +14,9 @@ public class SpawnAttackFx : MonoBehaviour
 		componentInChildren.baseDamage = (int)((float)componentInChildren.baseDamage * this.m.multiplier);
 	}
 
-
 	public GameObject[] attackFx;
 
-
 	public Transform spawnPos;
-
 
 	private Mob m;
 }

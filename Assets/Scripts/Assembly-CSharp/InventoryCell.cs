@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-
 public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerEnterHandler, IPointerExitHandler
 {
-
     private void Start()
     {
         if (this.spawnItem)
@@ -17,7 +15,6 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         }
         this.UpdateCell();
     }
-
 
     public void UpdateCell()
     {
@@ -37,14 +34,12 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         this.SetColor(this.idle);
     }
 
-
     public void ForceAddItem(InventoryItem item, int amount)
     {
         this.currentItem = Instantiate<InventoryItem>(item);
         this.currentItem.amount = amount;
         this.UpdateCell();
     }
-
 
     public InventoryItem SetItem(InventoryItem pointerItem, PointerEventData eventData)
     {
@@ -116,17 +111,15 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
                 num2 = this.currentItem.amount;
             }
             ClientSend.ChestUpdate(OtherInput.Instance.currentChest.id, this.cellId, itemId, num2);
-            base.Invoke(nameof(GetReady), (float)(NetStatus.GetPing() * 3) * 0.01f);
+            Invoke(nameof(GetReady), (float)(NetStatus.GetPing() * 3) * 0.01f);
         }
         return inventoryItem3;
     }
-
 
     private void GetReady()
     {
         this.ready = true;
     }
-
 
     public InventoryItem PickupItem(PointerEventData eventData)
     {
@@ -174,12 +167,11 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
                 num3 = this.currentItem.amount;
             }
             float time = 1f;
-            base.Invoke(nameof(GetReady), time);
+            Invoke(nameof(GetReady), time);
             ClientSend.ChestUpdate(OtherInput.Instance.currentChest.id, this.cellId, itemId, num3);
         }
         return inventoryItem2;
     }
-
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -188,7 +180,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
             return;
         }
         this.ready = false;
-        base.Invoke(nameof(GetReady), Time.deltaTime * 2f);
+        Invoke(nameof(GetReady), Time.deltaTime * 2f);
         if (this.cellType == InventoryCell.CellType.Crafting)
         {
             InventoryUI.Instance.CraftItem(this.currentItem);
@@ -222,7 +214,6 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         }
     }
 
-
     private bool IsItemCompatibleWithCell(InventoryItem item)
     {
         if (this.tags.Length == 0)
@@ -239,14 +230,12 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         return false;
     }
 
-
     public void RemoveItem()
     {
         if (cellType == CellType.Creative) return;
         this.currentItem = null;
         this.UpdateCell();
     }
-
 
     private void DoubleClick()
     {
@@ -275,7 +264,6 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         }
         InventoryUI.Instance.PickupItem(currentMouseItem);
     }
-
 
     private bool ShiftClick()
     {
@@ -314,13 +302,12 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         return false;
     }
 
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         this.SetColor(this.hover);
         if (this.currentItem)
         {
-            if (this.cellType == InventoryCell.CellType.Inventory)
+			if (this.cellType == InventoryCell.CellType.Inventory || this.cellType == InventoryCell.CellType.Chest)
             {
                 string text = this.currentItem.name + "\n<size=50%><i>" + this.currentItem.description;
                 if (this.currentItem.IsArmour())
@@ -356,7 +343,6 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         }
     }
 
-
     public void Eat(int amount)
     {
         this.currentItem.amount -= amount;
@@ -367,33 +353,27 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         this.UpdateCell();
     }
 
-
     public void OnPointerExit(PointerEventData eventData)
     {
         this.SetColor(this.idle);
         ItemInfo.Instance.Fade(0f, 0.2f);
     }
 
-
     public void SetColor(Color c)
     {
     }
-
 
     public void AddItemToChest(InventoryItem item)
     {
     }
 
-
     public void AddItemToCauldron()
     {
     }
 
-
     public void AddItemToFurnace()
     {
     }
-
 
     public void SetOverlayAlpha(float f)
     {
@@ -401,57 +381,39 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         this.overlay.color = new Color(0f, 0f, 0f, f);
     }
 
-
     public InventoryCell.CellType cellType;
-
 
     public TextMeshProUGUI amount;
 
-
     public Image itemImage;
 
-
     public RawImage slot;
-
 
     [HideInInspector]
     public InventoryItem currentItem;
 
-
     public InventoryItem spawnItem;
-
 
     public int cellId;
 
-
     public Color idle;
-
 
     public Color hover;
 
-
     private bool ready = true;
-
 
     private float lastClickTime;
 
-
     private float doubleClickThreshold = 0.15f;
-
 
     public InventoryItem.ItemTag[] tags;
 
-
     public RawImage overlay;
-
 
     public enum CellType
     {
-
         Inventory,
-
         Crafting,
-
         Chest,
         Creative,
     }

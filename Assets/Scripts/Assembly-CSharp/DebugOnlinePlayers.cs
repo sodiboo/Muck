@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class DebugOnlinePlayers : MonoBehaviour
 {
-
 	private void Start()
 	{
 		GameManager.instance.SpawnPlayer(2, "a", Color.black, new Vector3(0f, 30f, 0f), 50f);

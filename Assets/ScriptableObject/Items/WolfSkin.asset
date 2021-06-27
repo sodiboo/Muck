@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: WolfSkin
   m_EditorClassIdentifier: 
-  id: 127
+  important: 0
+  id: 138
   name: Wolfskin
   description: Feels warm and cozy
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 687a4bb0e2fd7cb46baba081388d5d87, type: 3}
-  material: {fileID: 2100000, guid: 7f8d349dabe002d428f408ae2e1130af, type: 2}
-  mesh: {fileID: 4300000, guid: 5996072ee5d552a4ba5653f4aaeaee84, type: 2}
+  sprite: {fileID: 21300000, guid: e208e6fac80a6194684d3e9990836e84, type: 3}
+  material: {fileID: 2100000, guid: 8dadff3fba8a3234dadbaa2a9366574e, type: 2}
+  mesh: {fileID: 4300000, guid: 0ac8f4fa2b27f674e916f7b1042ed685, type: 2}
   rotationOffset: {x: -95, y: 0, z: 15}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 0.7
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

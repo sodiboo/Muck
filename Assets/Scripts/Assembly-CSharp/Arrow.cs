@@ -1,36 +1,23 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class Arrow : MonoBehaviour
 {
-
-
-
 	public InventoryItem item { get; set; }
-
-
-
 
 	public int damage { get; set; }
 
-
-
-
 	public bool otherPlayersArrow { get; set; }
-
 
 	private void Awake()
 	{
 		this.rb = base.GetComponent<Rigidbody>();
 	}
 
-
 	private void Update()
 	{
 		base.transform.rotation = Quaternion.LookRotation(this.rb.velocity);
 	}
-
 
 	private void OnCollisionEnter(Collision other)
 	{
@@ -108,7 +95,6 @@ public class Arrow : MonoBehaviour
 		this.StopArrow(other);
 	}
 
-
 	private void StopArrow(Collision other)
 	{
 		this.rb.isKinematic = true;
@@ -142,24 +128,17 @@ public class Arrow : MonoBehaviour
 		Destroy(base.gameObject);
 	}
 
-
 	private Rigidbody rb;
-
 
 	public AudioSource audio;
 
-
 	public TrailRenderer trail;
-
 
 	public GameObject hitFx;
 
-
 	public bool fallingWhileShooting;
 
-
 	public float speedWhileShooting;
-
 
 	private bool done;
 }

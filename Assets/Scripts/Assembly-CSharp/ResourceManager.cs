@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
 
 public class ResourceManager : MonoBehaviour
 {
-
     private void Awake()
     {
         ResourceManager.Instance = this;
@@ -15,14 +14,12 @@ public class ResourceManager : MonoBehaviour
         ResourceManager.globalId = 0;
     }
 
-
     public static int GetNextGenOffset()
     {
         int result = ResourceManager.generatorSeedOffset;
         ResourceManager.generatorSeedOffset++;
         return result;
     }
-
 
     public void AddResources(List<GameObject>[] trees)
     {
@@ -37,7 +34,6 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-
     public void AddResources(List<GameObject> trees)
     {
         for (int i = 0; i < trees.Count; i++)
@@ -47,7 +43,6 @@ public class ResourceManager : MonoBehaviour
             this.AddObject(id, gameObject);
         }
     }
-
 
     public void AddObject(int key, GameObject o)
     {
@@ -62,7 +57,6 @@ public class ResourceManager : MonoBehaviour
             Instantiate<GameObject>(this.debug, o.transform).GetComponentInChildren<DebugObject>().text = "id" + key;
         }
     }
-
 
     public void AddBuild(int key, GameObject o)
     {
@@ -85,7 +79,7 @@ public class ResourceManager : MonoBehaviour
 
     public void RemoveItem(int id)
     {
-        Object obj = this.list[id];
+        var obj = this.list[id];
         if (this.builds.ContainsKey(id))
         {
             this.builds.Remove(id);
@@ -97,7 +91,6 @@ public class ResourceManager : MonoBehaviour
         this.list.Remove(id);
         Destroy(obj);
     }
-
 
     public bool RemoveInteractItem(int id)
     {
@@ -111,7 +104,6 @@ public class ResourceManager : MonoBehaviour
         return true;
     }
 
-
     public int GetNextId()
     {
         var id = globalId++;
@@ -119,26 +111,19 @@ public class ResourceManager : MonoBehaviour
         return id;
     }
 
-
     public static int globalId;
-
 
     public static int generatorSeedOffset;
 
-
     public Dictionary<int, GameObject> list;
-
 
     public Dictionary<int, GameObject> builds;
 
     public Dictionary<int, Car> cars;
 
-
     public GameObject debug;
 
-
     public bool attatchDebug;
-
 
     public static ResourceManager Instance;
 }

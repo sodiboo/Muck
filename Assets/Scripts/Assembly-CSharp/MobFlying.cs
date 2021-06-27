@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class MobFlying : Mob
 {
-
 	public override void ExtraUpdate()
 	{
 		if (!base.target)
@@ -20,9 +18,7 @@ public class MobFlying : Mob
 		}
 	}
 
-
 	private float defaultHeight = 5.6f;
-
 
 	public LayerMask whatIsGround;
 }

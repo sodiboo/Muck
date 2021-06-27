@@ -1,17 +1,14 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class ServerCommunication : MonoBehaviour
 {
-
 	private void Awake()
 	{
-		base.InvokeRepeating(nameof(QuickUpdate), this.updateFrequency, this.updateFrequency);
-		base.InvokeRepeating(nameof(SlowUpdate), this.slowUpdateFrequency, this.slowUpdateFrequency);
-		base.InvokeRepeating(nameof(SlowerUpdate), this.slowerUpdateFrequency, this.slowerUpdateFrequency);
+		InvokeRepeating(nameof(QuickUpdate), this.updateFrequency, this.updateFrequency);
+		InvokeRepeating(nameof(SlowUpdate), this.slowUpdateFrequency, this.slowUpdateFrequency);
+		InvokeRepeating(nameof(SlowerUpdate), this.slowerUpdateFrequency, this.slowerUpdateFrequency);
 	}
-
 
 	private void QuickUpdate()
 	{
@@ -24,7 +21,6 @@ public class ServerCommunication : MonoBehaviour
 			ClientSend.UpdateCar(OtherInput.Instance.currentCar);
 		}
 	}
-
 
 	private void SlowUpdate()
 	{
@@ -43,7 +39,6 @@ public class ServerCommunication : MonoBehaviour
 		}
 	}
 
-
 	private void SlowerUpdate()
 	{
 		int num = Mathf.Abs(this.playerStatus.HpAndShield() - this.lastSentHp);
@@ -60,60 +55,41 @@ public class ServerCommunication : MonoBehaviour
 		}
 	}
 
-
 	public Transform root;
-
 
 	public Transform cam;
 
-
 	public PlayerStatus playerStatus;
-
 
 	private int lastSentHp;
 
-
 	private float hpThreshold = 1f;
-
 
 	private float posThreshold = 0.075f;
 
-
 	private float rotThreshold = 6f;
-
 
 	private Vector3 lastSentPosition;
 
-
 	private float lastSentRotationY;
-
 
 	private float lastSentRotationX;
 
-
 	private float lastSentXZ;
-
 
 	private float lastSentBlendX;
 
-
 	private float lastSentBlendY;
-
 
 	private static readonly float updatesPerSecond = 12f;
 
-
 	private static readonly float slowUpdatesPerSecond = 8f;
-
 
 	private static readonly float slowerUpdatesPerSecond = 2f;
 
-
 	private float updateFrequency = 1f / ServerCommunication.updatesPerSecond;
 
-
 	private float slowUpdateFrequency = 1f / ServerCommunication.slowUpdatesPerSecond;
-
 
 	private float slowerUpdateFrequency = 1f / ServerCommunication.slowerUpdatesPerSecond;
 }

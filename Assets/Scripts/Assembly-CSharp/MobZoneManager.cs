@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class MobZoneManager : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		MobZoneManager.zoneId = 0;
 		MobZoneManager.Instance = this;
 		this.zones = new Dictionary<int, SpawnZone>();
 	}
-
 
 	public void AddZones(List<SpawnZone> zones)
 	{
@@ -21,7 +18,6 @@ public class MobZoneManager : MonoBehaviour
 			this.AddZone(spawnZone, spawnZone.id);
 		}
 	}
-
 
 	public void AddZone(SpawnZone mz, int id)
 	{
@@ -33,30 +29,23 @@ public class MobZoneManager : MonoBehaviour
 		}
 	}
 
-
 	public int GetNextId()
 	{
 		return MobZoneManager.zoneId++;
 	}
-
 
 	public void RemoveZone(int mobId)
 	{
 		this.zones.Remove(mobId);
 	}
 
-
 	public Dictionary<int, SpawnZone> zones;
-
 
 	private static int zoneId;
 
-
 	public bool attatchDebug;
 
-
 	public GameObject debug;
-
 
 	public static MobZoneManager Instance;
 }

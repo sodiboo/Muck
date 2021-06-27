@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class Hotbar : MonoBehaviour
 {
-
 	private void Start()
 	{
 		Hotbar.Instance = this;
@@ -12,9 +10,8 @@ public class Hotbar : MonoBehaviour
 		this.cells = base.GetComponentsInChildren<InventoryCell>();
 		this.cells[this.currentActive].slot.color = this.cells[this.currentActive].hover;
 		this.UpdateHotbar();
-		base.Invoke(nameof(UpdateHotbar), 1f);
+		Invoke(nameof(UpdateHotbar), 1f);
 	}
-
 
 	private void Update()
 	{
@@ -49,7 +46,6 @@ public class Hotbar : MonoBehaviour
 		}
 	}
 
-
 	public void UpdateHotbar()
 	{
 		if (this.inventoryCells[this.currentActive].currentItem != this.currentItem)
@@ -59,8 +55,8 @@ public class Hotbar : MonoBehaviour
 			{
 				UseInventory.Instance.SetWeapon(this.currentItem);
 			}
-			base.CancelInvoke(nameof(SendItemToServer));
-			base.Invoke(nameof(SendItemToServer), this.sendDelay);
+			base.CancelInvoke("SendItemToServer");
+			Invoke(nameof(SendItemToServer), this.sendDelay);
 		}
 		for (int i = 0; i < this.cells.Length; i++)
 		{
@@ -82,21 +78,26 @@ public class Hotbar : MonoBehaviour
 		}
 	}
 
-
 	private void SendItemToServer()
 	{
 		if (this.currentItem == null)
 		{
 			ClientSend.WeaponInHand(-1);
-			return;
+			if (PreviewPlayer.Instance)
+			{
+				PreviewPlayer.Instance.WeaponInHand(-1);
+				return;
+			}
 		}
-		ClientSend.WeaponInHand(this.currentItem.id);
-		if (PreviewPlayer.Instance)
+		else
 		{
-			PreviewPlayer.Instance.WeaponInHand(this.currentItem.id);
+			ClientSend.WeaponInHand(this.currentItem.id);
+			if (PreviewPlayer.Instance)
+			{
+				PreviewPlayer.Instance.WeaponInHand(this.currentItem.id);
+			}
 		}
 	}
-
 
 	public void UseItem(int n)
 	{
@@ -110,30 +111,21 @@ public class Hotbar : MonoBehaviour
 		this.UpdateHotbar();
 	}
 
-
 	private InventoryCell[] cells;
-
 
 	private InventoryCell[] inventoryCells;
 
-
 	public InventoryUI inventory;
-
 
 	public InventoryItem currentItem;
 
-
 	private int oldActive = -1;
-
 
 	private int currentActive;
 
-
 	private int max = 6;
 
-
 	public static Hotbar Instance;
-
 
 	private float sendDelay = 0.25f;
 }

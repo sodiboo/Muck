@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eaa186bbd04cd7419c461d5694fae03, type: 3}
+  m_Name: Mineral_Stone
+  m_EditorClassIdentifier:
+  loot:
+  - item: {fileID: 11400000, guid: d60bb66c49cdd34449404fbcd3c9616a, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 1
+  - item: {fileID: 11400000, guid: d0b91c4fbe6202745abaa86b4b9f9336, type: 2}
+    amountMin: 3
+    amountMax: 6
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: de304ce3980ba4d45be720539678a606, type: 2}
+    amountMin: 3
+    amountMax: 6
+    dropChance: 0.4
+  dropOne: 0

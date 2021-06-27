@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class DrawChunks : MonoBehaviour
 {
-
 	private void Awake()
 	{
-		base.InvokeRepeating(nameof(UpdateChunks), 0f, this.updateRate);
+		InvokeRepeating(nameof(UpdateChunks), 0f, this.updateRate);
 		this.visibleChunks = new bool[this.nChunks];
 		this.chunkLOD = new int[this.nChunks];
 		this.chunkLength = Mathf.FloorToInt(Mathf.Sqrt((float)this.nChunks));
@@ -19,12 +17,10 @@ public class DrawChunks : MonoBehaviour
 		this.InitChunkCenters();
 	}
 
-
 	public void InitChunks(List<GameObject>[] chunks)
 	{
 		this.chunks = chunks;
 	}
-
 
 	public int FindChunk(int x, int y)
 	{
@@ -40,7 +36,6 @@ public class DrawChunks : MonoBehaviour
 		}
 		return num + num2;
 	}
-
 
 	private void UpdateChunks()
 	{
@@ -77,7 +72,6 @@ public class DrawChunks : MonoBehaviour
 			}
 		}
 	}
-
 
 	private void DrawChunk(int c, bool draw, int lod)
 	{
@@ -123,7 +117,6 @@ public class DrawChunks : MonoBehaviour
 		}
 	}
 
-
 	private void InitChunkCenters()
 	{
 		this.chunkCenters = new Vector3[this.nChunks];
@@ -135,13 +128,11 @@ public class DrawChunks : MonoBehaviour
 		}
 	}
 
-
 	public float DistanceFromChunk(int chunk)
 	{
 		Vector3 b = this.chunkCenters[chunk];
 		return Vector3.Distance(this.player.position, b);
 	}
-
 
 	public int FindLOD(float distanceFromChunk)
 	{
@@ -155,64 +146,45 @@ public class DrawChunks : MonoBehaviour
 		return this.maxLOD * this.maxLOD;
 	}
 
-
 	public ResourceGenerator resourceGen;
-
 
 	[Header("Chunks")]
 	public int nChunks = 256;
 
-
 	private int chunkLength;
-
 
 	private int chunkSize;
 
-
 	public float updateRate = 1f;
-
 
 	[Header("Render distance")]
 	[Range(0f, 2000f)]
 	public float drawDistance;
 
-
 	public float minRenderDistance;
-
 
 	public static readonly float maxRenderDistance = 1500f;
 
-
 	public int drawnTrees;
 
-
 	public int totalTrees;
-
 
 	[Header("LOD")]
 	public int maxLOD = 10;
 
-
 	private bool[] visibleChunks;
-
 
 	private int[] chunkLOD;
 
-
 	public List<GameObject>[] chunks;
-
 
 	private float topLeftX;
 
-
 	private float topLeftZ;
-
 
 	public Transform player;
 
-
 	private int a;
-
 
 	private Vector3[] chunkCenters;
 }

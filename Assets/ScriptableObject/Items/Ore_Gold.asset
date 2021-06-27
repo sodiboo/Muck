@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Ore_Gold
   m_EditorClassIdentifier: 
-  id: 77
+  important: 0
+  id: 79
   name: Gold Ore
   description: its hard rock
   type: 1
   tier: 0
-  sprite: {fileID: 21300000, guid: e98a6f222f0fddd48b5222d86fe29e80, type: 3}
-  material: {fileID: 2100000, guid: 50b94999fc8021a408e744a6905ce416, type: 2}
-  mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+  sprite: {fileID: 21300000, guid: 0eb380e5470e71640b011cc9fdc5bea1, type: 3}
+  material: {fileID: 2100000, guid: 30e7b6f447915054496c8cb3b9569f6a, type: 2}
+  mesh: {fileID: 4300000, guid: 6ae751f0f512ab940a48ba75563e44a1, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -42,7 +43,7 @@ MonoBehaviour:
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 1
   processType: 0
-  processedItem: {fileID: 11400000, guid: 762e7af6ea15bcc49ab3bbbbdfdf4216, type: 2}
+  processedItem: {fileID: 11400000, guid: 8adcaadf670ede24cb06facfb39398dd, type: 2}
   processTime: 4
   heal: 0
   hunger: 0
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

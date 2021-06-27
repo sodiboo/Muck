@@ -2,10 +2,8 @@
 using TMPro;
 using UnityEngine;
 
-
 public class ControlSetting : Setting
 {
-
 	public void SetSetting(KeyCode k, string actionName)
 	{
 		this.currentKey = k;
@@ -15,12 +13,10 @@ public class ControlSetting : Setting
 		this.UpdateSetting();
 	}
 
-
 	private void UpdateSetting()
 	{
 		this.keyText.text = (this.currentKey.ToString() ?? "");
 	}
-
 
 	public void SetKey(KeyCode k)
 	{
@@ -28,7 +24,6 @@ public class ControlSetting : Setting
 		base.onClick.Invoke();
 		this.UpdateSetting();
 	}
-
 
 	public void StartListening()
 	{
@@ -39,9 +34,7 @@ public class ControlSetting : Setting
 
 	public TextMeshProUGUI keyText;
 
-
 	public KeyCode currentKey;
-
 
 	private string actionName;
 }

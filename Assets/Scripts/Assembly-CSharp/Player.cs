@@ -2,10 +2,8 @@
 using Steamworks;
 using UnityEngine;
 
-
 public class Player
 {
-
 	public Player(int id, string username, Color color)
 	{
 		this.id = id;
@@ -19,7 +17,6 @@ public class Player
 			this.armor[i] = -1;
 		}
 	}
-
 
 	public Player(int id, string username, Color color, SteamId steamId)
 	{
@@ -36,12 +33,10 @@ public class Player
 		}
 	}
 
-
 	public void PingPlayer()
 	{
 		this.lastPingTime = Time.time;
 	}
-
 
 	public void UpdateArmor(int armorSlot, int itemId)
 	{
@@ -63,13 +58,11 @@ public class Player
 		}
 	}
 
-
 	public void Died()
 	{
 		this.currentHp = 0;
 		this.dead = true;
 	}
-
 
 	public int Damage(int damageDone)
 	{
@@ -81,66 +74,45 @@ public class Player
 		return this.currentHp;
 	}
 
-
 	public int id;
-
 
 	public string username;
 
-
 	public bool ready;
-
 
 	public bool joined;
 
-
 	public bool loading;
-
 
 	public Color color;
 
-
 	public Vector3 pos;
-
 
 	public float yOrientation;
 
-
 	public float xOrientation;
-
 
 	public bool running;
 
-
 	public bool dead;
-
 
 	public int ping;
 
-
 	public ulong damageDone;
-
 
 	public ulong mobsKilled;
 
-
 	public ulong damageTaken;
-
 
 	public float lastPingTime;
 
-
 	public int[] powerups;
-
 
 	public int[] armor;
 
-
 	public int totalArmor;
 
-
 	public SteamId steamId;
-
 
 	public int currentHp;
 }

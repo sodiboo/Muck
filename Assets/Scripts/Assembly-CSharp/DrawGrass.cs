@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class DrawGrass : MonoBehaviour
 {
-
 	public void ClearMesh()
 	{
 		this.positions.Clear();
@@ -20,7 +18,6 @@ public class DrawGrass : MonoBehaviour
 		this.length = new List<Vector2>();
 	}
 
-
 	private void Awake()
 	{
 		if (!CurrentSettings.grass)
@@ -30,10 +27,9 @@ public class DrawGrass : MonoBehaviour
 			return;
 		}
 		this.ClearMesh();
-		base.InvokeRepeating(nameof(SlowUpdate), 0f, this.updateRate);
+		InvokeRepeating(nameof(SlowUpdate), 0f, this.updateRate);
 		this.currentPositions = new Dictionary<Vector3, bool>();
 	}
-
 
 	private void SlowUpdate()
 	{
@@ -45,7 +41,6 @@ public class DrawGrass : MonoBehaviour
 		}
 		this.UpdateGrass();
 	}
-
 
 	private void UpdateGrass()
 	{
@@ -103,7 +98,6 @@ public class DrawGrass : MonoBehaviour
 		}
 	}
 
-
 	public Vector3 posToGridPos(Vector3 point)
 	{
 		float num = point.x;
@@ -122,7 +116,6 @@ public class DrawGrass : MonoBehaviour
 		num4 += (float)this.gridSize / 2f;
 		return new Vector3(x, 0f, num4);
 	}
-
 
 	private void CreateNewMesh(Vector3 offset, int d)
 	{
@@ -162,131 +155,91 @@ public class DrawGrass : MonoBehaviour
 		}
 	}
 
-
 	public Mesh mesh;
-
 
 	public MeshFilter filter;
 
-
 	public Color AdjustedColor;
-
 
 	[Range(1f, 600000f)]
 	public int grassLimit = 50000;
 
-
 	private Vector3 lastPosition = Vector3.zero;
 
-
 	public int toolbarInt;
-
 
 	[SerializeField]
 	private List<Vector3> positions = new List<Vector3>();
 
-
 	[SerializeField]
 	private List<Color> colors = new List<Color>();
-
 
 	[SerializeField]
 	private List<int> indicies = new List<int>();
 
-
 	[SerializeField]
 	private List<Vector3> normals = new List<Vector3>();
-
 
 	[SerializeField]
 	private List<Vector2> length = new List<Vector2>();
 
-
 	public bool painting;
-
 
 	public bool removing;
 
-
 	public bool editing;
-
 
 	public int i;
 
-
 	public float sizeWidth = 1f;
-
 
 	public float sizeLength = 1f;
 
-
 	public float density = 1f;
-
 
 	public float normalLimit = 1f;
 
-
 	public float rangeR;
-
 
 	public float rangeG;
 
-
 	public float rangeB;
-
 
 	public LayerMask hitMask = 1;
 
-
 	public LayerMask paintMask = 1;
-
 
 	public float brushSize;
 
-
 	private Vector3 mousePos;
-
 
 	[HideInInspector]
 	public Vector3 hitPosGizmo;
 
-
 	private Vector3 hitPos;
-
 
 	[HideInInspector]
 	public Vector3 hitNormal;
 
-
 	private int[] indi;
-
 
 	private float updateRate = 0.5f;
 
-
 	public Transform grassObject;
-
 
 	public float chunkLength = 20f;
 
-
 	public float chunkDensity = 10f;
-
 
 	public int nChunks = 16;
 
-
 	public int iterations;
-
 
 	private Dictionary<Vector3, bool> currentPositions;
 
-
 	public Transform target;
 
-
 	private Vector3 currentGridPos;
-
 
 	public int gridSize = 20;
 }

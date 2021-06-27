@@ -3,24 +3,24 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1965524869120976}
+  m_RootGameObject: {fileID: 1720083132894698}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1965524869120976
+--- !u!1 &1720083132894698
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4763473110877908}
-  - component: {fileID: 198203300488173161}
-  - component: {fileID: 199728869549311254}
-  - component: {fileID: 114544404451624687}
-  - component: {fileID: 82553206087455220}
+  - component: {fileID: 4429502939782204}
+  - component: {fileID: 198597271040830327}
+  - component: {fileID: 199155741244306552}
+  - component: {fileID: 114244239337843725}
+  - component: {fileID: 82487368354500812}
   m_Layer: 0
   m_Name: PickupFx
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4763473110877908
+--- !u!4 &4429502939782204
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965524869120976}
+  m_GameObject: {fileID: 1720083132894698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.603, y: 22.221, z: 7.701}
   m_LocalScale: {x: 1, y: 1, z: 0.9999999}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &198203300488173161
+--- !u!198 &198597271040830327
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965524869120976}
+  m_GameObject: {fileID: 1720083132894698}
   serializedVersion: 6
   lengthInSec: 2
   simulationSpeed: 1
@@ -2186,13 +2186,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199728869549311254
+--- !u!199 &199155741244306552
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965524869120976}
+  m_GameObject: {fileID: 1720083132894698}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2204,7 +2204,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ccfe373a222f8bb4b822fd1fa12bd86a, type: 2}
+  - {fileID: 2100000, guid: b956e7640a6e468469ef681c5a0de93d, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2244,32 +2244,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &114544404451624687
+--- !u!114 &114244239337843725
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965524869120976}
+  m_GameObject: {fileID: 1720083132894698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a798d372caae04cb010a64b5d6bd50, type: 3}
+  m_Script: {fileID: 11500000, guid: aba195ebb84ceb54ea52eb8995e8a4d4, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   sounds:
-  - {fileID: 8300000, guid: 4b6d056dcda88b9408f94a97ae8fcb94, type: 3}
+  - {fileID: 8300000, guid: 1693689f023ecd64ba113b75c438c396, type: 3}
   maxPitch: 0.8
   minPitch: 1.2
   playOnAwake: 1
---- !u!82 &82553206087455220
+--- !u!82 &82487368354500812
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965524869120976}
+  m_GameObject: {fileID: 1720083132894698}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b6d056dcda88b9408f94a97ae8fcb94, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1693689f023ecd64ba113b75c438c396, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.35
   m_Pitch: 1

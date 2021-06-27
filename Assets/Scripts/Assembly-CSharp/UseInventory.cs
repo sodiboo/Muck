@@ -2,11 +2,9 @@
 using System.Linq;
 using UnityEngine;
 using Steamworks;
-using UnityEngine.Analytics;
 
 public class UseInventory : MonoBehaviour
 {
-
     private void Awake()
     {
         UseInventory.Instance = this;
@@ -38,7 +36,6 @@ public class UseInventory : MonoBehaviour
         this.SetWeapon(null);
     }
 
-
     public void SetWeapon(InventoryItem item)
     {
         this.StopUse();
@@ -67,7 +64,6 @@ public class UseInventory : MonoBehaviour
         this.animator.Play("Equip", -1, 0f);
     }
 
-
     private void StopUse()
     {
         if (this.IsAnimationPlaying("Eat"))
@@ -81,7 +77,6 @@ public class UseInventory : MonoBehaviour
         this.eatingEmission.enabled = false;
     }
 
-
     private void Update()
     {
         if (this.IsAnimationPlaying("Eat"))
@@ -92,7 +87,6 @@ public class UseInventory : MonoBehaviour
             this.velocity.z = vector.z;
         }
     }
-
 
     public void Use()
     {
@@ -123,8 +117,8 @@ public class UseInventory : MonoBehaviour
             base.CancelInvoke(nameof(FinishEating));
             this.eatSfx.PlayDelayed(0.3f / num2);
             ClientSend.AnimationUpdate(OnlinePlayer.SharedAnimation.Eat, true);
-            base.Invoke(nameof(FinishEating), num * 0.95f);
-            base.Invoke(nameof(StartParticles), num * 0.25f);
+            Invoke(nameof(FinishEating), num * 0.95f);
+            Invoke(nameof(StartParticles), num * 0.25f);
         }
         else if (this.currentItem.type == InventoryItem.ItemType.Bow)
         {
@@ -146,7 +140,6 @@ public class UseInventory : MonoBehaviour
         this.animator.SetFloat("AttackSpeed", num2);
         CooldownBar.Instance.ResetCooldownTime(num, stayOnScreen);
     }
-
 
     private void StartParticles()
     {
@@ -171,7 +164,6 @@ public class UseInventory : MonoBehaviour
             return;
         }
         if (this.IsAnimationPlaying("Eat"))
-
         {
             this.animator.Play("Idle");
             this.eatingEmission.enabled = false;
@@ -187,7 +179,6 @@ public class UseInventory : MonoBehaviour
             this.ReleaseWeapon();
         }
     }
-
 
     private void ReleaseWeapon()
     {
@@ -256,7 +247,6 @@ public class UseInventory : MonoBehaviour
         CameraShaker.Instance.ChargeShake(num);
     }
 
-
     private void FinishEating()
     {
         this.eatSfx.Stop();
@@ -265,7 +255,6 @@ public class UseInventory : MonoBehaviour
         ClientSend.AnimationUpdate(OnlinePlayer.SharedAnimation.Eat, false);
         Hotbar.Instance.UseItem(1);
     }
-
 
     private bool IsAnimationPlaying(string animationName)
     {
@@ -277,54 +266,37 @@ public class UseInventory : MonoBehaviour
         return name.Contains(animationName) || animationName == name;
     }
 
-
     public static UseInventory Instance;
-
 
     public HitBox hitBox;
 
-
     public Animator animator;
-
 
     public TrailRenderer swingTrail;
 
-
     public RandomSfx swingSfx;
-
 
     public AudioSource chargeSfx;
 
-
     public AudioSource eatSfx;
-
 
     public ParticleSystem eatingParticles;
 
-
     private ParticleSystem.EmissionModule eatingEmission;
-
 
     private ParticleSystem.VelocityOverLifetimeModule velocity;
 
-
     private float eatTime;
-
 
     private float attackTime;
 
-
     private float chargeTime;
-
 
     public MeshRenderer meshRenderer;
 
-
     public MeshFilter meshFilter;
 
-
     public Transform renderTransform;
-
 
     private InventoryItem currentItem;
 }

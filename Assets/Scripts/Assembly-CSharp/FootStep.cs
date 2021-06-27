@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class FootStep : MonoBehaviour
 {
-
 	private void Start()
 	{
 		this.FindGroundType();
 	}
-
 
 	private void FindGroundType()
 	{
@@ -21,12 +18,9 @@ public class FootStep : MonoBehaviour
 		this.randomSfx.Randomize(0f);
 	}
 
-
 	public LayerMask whatIsGround;
 
-
 	public RandomSfx randomSfx;
-
 
 	public AudioClip[] woodSfx;
 }

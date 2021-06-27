@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ThreadManagerServer : MonoBehaviour
 {
-
 	public static void ExecuteOnMainThread(Action _action)
 	{
 		if (_action == null)
@@ -21,34 +19,28 @@ public class ThreadManagerServer : MonoBehaviour
 		}
 	}
 
-
 	private void Awake()
 	{
 		ThreadManagerServer.Instance = this;
-		base.InvokeRepeating(nameof(TimeoutUpdate), 1f, 1f);
+		InvokeRepeating(nameof(TimeoutUpdate), 1f, 1f);
 	}
-
 
 	public void GameOver()
 	{
 	}
 
-
 	public void ResetGame()
 	{
 	}
-
 
 	private void TimeoutUpdate()
 	{
 	}
 
-
 	private void FixedUpdate()
 	{
 		ThreadManagerServer.UpdateMain();
 	}
-
 
 	public static void UpdateMain()
 	{
@@ -69,18 +61,13 @@ public class ThreadManagerServer : MonoBehaviour
 		}
 	}
 
-
 	private static readonly List<Action> executeOnMainThread = new List<Action>();
-
 
 	private static readonly List<Action> executeCopiedOnMainThread = new List<Action>();
 
-
 	private static bool actionToExecuteOnMainThread = false;
 
-
 	public static ThreadManagerServer Instance;
-
 
 	private int minPlayerAmount = 3;
 }

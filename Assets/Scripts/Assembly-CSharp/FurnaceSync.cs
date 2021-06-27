@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class FurnaceSync : Chest
 {
-
 	public float ProgressRatio()
 	{
 		return this.currentProcessTime / this.timeToProcess;
 	}
-
 
 	public override void UpdateCraftables()
 	{
@@ -28,7 +25,6 @@ public class FurnaceSync : Chest
 		}
 	}
 
-
 	private void StartProcessing()
 	{
 		this.currentFuel = this.cells[0];
@@ -39,7 +35,6 @@ public class FurnaceSync : Chest
 		this.timeToProcess = this.currentMetal.processTime / fuel.speedMultiplier;
 		this.processing = true;
 	}
-
 
 	private void Update()
 	{
@@ -66,7 +61,6 @@ public class FurnaceSync : Chest
 		}
 	}
 
-
 	private void StopProcessing()
 	{
 		this.processing = false;
@@ -75,7 +69,6 @@ public class FurnaceSync : Chest
 			FurnaceUI.Instance.processBar.transform.localScale = Vector3.zero;
 		}
 	}
-
 
 	public void ProcessItem()
 	{
@@ -90,7 +83,6 @@ public class FurnaceSync : Chest
 		this.UpdateCraftables();
 	}
 
-
 	private void UseMaterial(InventoryItem materialItem)
 	{
 		materialItem.amount--;
@@ -102,7 +94,6 @@ public class FurnaceSync : Chest
 		}
 		ClientSend.ChestUpdate(base.id, 1, materialItem.id, materialItem.amount);
 	}
-
 
 	private void UseFuel(InventoryItem fuelItem)
 	{
@@ -121,7 +112,6 @@ public class FurnaceSync : Chest
 		}
 	}
 
-
 	private void AddMaterial(InventoryItem item, int processedItemId)
 	{
 		if (this.cells[2] == null)
@@ -135,7 +125,6 @@ public class FurnaceSync : Chest
 		}
 		ClientSend.ChestUpdate(base.id, 2, processedItemId, this.cells[2].amount);
 	}
-
 
 	public bool CanProcess()
 	{
@@ -157,24 +146,17 @@ public class FurnaceSync : Chest
 		return this.cells[1].processable && this.cells[1].processType == this.processType && this.cells[0].tag == InventoryItem.ItemTag.Fuel;
 	}
 
-
 	public InventoryItem.ProcessType processType;
-
 
 	private bool processing;
 
-
 	private float currentProcessTime;
-
 
 	private float totalProcessTime;
 
-
 	private float timeToProcess = 1f;
 
-
 	private InventoryItem currentFuel;
-
 
 	private InventoryItem currentMetal;
 }

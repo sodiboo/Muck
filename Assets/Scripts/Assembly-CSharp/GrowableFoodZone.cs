@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-
 public class GrowableFoodZone : SpawnZone
 {
-
 	public override void ServerSpawnEntity()
 	{
 		MonoBehaviour.print("spawning food from id: " + this.id);
@@ -19,7 +17,6 @@ public class GrowableFoodZone : SpawnZone
 		ServerSend.PickupZoneSpawn(vector, num, nextId, this.id);
 	}
 
-
 	public override GameObject LocalSpawnEntity(Vector3 pos, int entityId, int objectId, int zoneId)
 	{
 		GameObject gameObject = Instantiate<GameObject>(ItemManager.Instance.allItems[entityId].prefab, pos, Quaternion.identity);
@@ -28,7 +25,6 @@ public class GrowableFoodZone : SpawnZone
 		this.entities.Add(gameObject);
 		return gameObject;
 	}
-
 
 	public int FindItemToSpawn()
 	{
@@ -45,12 +41,9 @@ public class GrowableFoodZone : SpawnZone
 		return this.spawnItems[0].id;
 	}
 
-
 	public InventoryItem[] spawnItems;
 
-
 	public float[] spawnChance;
-
 
 	public float totalWeight;
 }

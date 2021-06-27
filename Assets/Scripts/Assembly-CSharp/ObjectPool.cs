@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ObjectPool : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.InitPools();
 	}
-
 
 	private void InitPools()
 	{
@@ -22,20 +19,16 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
-
 	public int ActivateGameObject(PooledObject activatedObject)
 	{
 		return 0;
 	}
 
-
 	public void DeactivateGameObject(PooledObject deactivatedObject)
 	{
 	}
 
-
 	public List<SharedObject>[] pools;
-
 
 	private ResourceGenerator gen;
 }

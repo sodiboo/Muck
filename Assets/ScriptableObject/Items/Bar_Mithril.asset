@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bar_Mithril
   m_EditorClassIdentifier: 
+  important: 0
   id: 66
   name: Mithril bar
   description: block of mithril
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 82fdd4b3abd45334195acbacf54690bc, type: 3}
-  material: {fileID: 2100000, guid: aad0c3bf86730494f85995e42c44bf73, type: 2}
-  mesh: {fileID: 4300000, guid: 66dc5852b806a4e438e564893eabba21, type: 2}
+  sprite: {fileID: 21300000, guid: 011d4f5165506b843a77526ab0d85975, type: 3}
+  material: {fileID: 2100000, guid: 7ab597f4d5d9db741b4e8a2b854a938a, type: 2}
+  mesh: {fileID: 4300000, guid: 4fcbf5e7d71e9974ead74e3fa2d26da2, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

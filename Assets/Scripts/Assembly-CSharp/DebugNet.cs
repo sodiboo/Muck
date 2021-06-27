@@ -6,29 +6,24 @@ using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.SceneManagement;
 
-
 public class DebugNet : MonoBehaviour
 {
-
 	private void Start()
 	{
 		DebugNet.Instance = this;
 		base.gameObject.SetActive(false);
-		base.InvokeRepeating(nameof(BandWidth), 1f, 1f);
+		InvokeRepeating(nameof(BandWidth), 1f, 1f);
 	}
-
 
 	public void ToggleConsole()
 	{
 		base.gameObject.SetActive(!base.gameObject.activeInHierarchy);
 	}
 
-
 	private void Update()
 	{
 		this.Fps();
 	}
-
 
 	private void Fps()
 	{
@@ -119,7 +114,6 @@ public class DebugNet : MonoBehaviour
 		this.fps.gameObject.SetActive(false);
 	}
 
-
 	private void BandWidth()
 	{
 		this.byteUp = (float)ClientSend.bytesSent;
@@ -132,54 +126,39 @@ public class DebugNet : MonoBehaviour
 		LocalClient.packetsReceived = 0;
 	}
 
-
 	private void OpenConsole()
 	{
 		this.console.gameObject.SetActive(true);
 	}
-
 
 	private void CloseConsole()
 	{
 		this.console.gameObject.SetActive(false);
 	}
 
-
 	public TextMeshProUGUI fps;
-
 
 	public GameObject console;
 
-
 	private bool fpsOn = true;
-
 
 	private bool speedOn = true;
 
-
 	private bool pingOn = true;
-
 
 	private bool bandwidthOn = true;
 
-
 	private float deltaTime;
-
 
 	public static List<string> r = new List<string>();
 
-
 	public static DebugNet Instance;
-
 
 	private float byteUp;
 
-
 	private float byteDown;
 
-
 	private float pSent;
-
 
 	private float pReceived;
 }

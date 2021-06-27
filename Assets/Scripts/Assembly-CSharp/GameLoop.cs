@@ -2,14 +2,9 @@
 using Steamworks;
 using UnityEngine;
 
-
 public class GameLoop : MonoBehaviour
 {
-
-
-
 	public static int currentMobCap { get; set; } = 999;
-
 
 	private void ResetBossRotations()
 	{
@@ -19,7 +14,6 @@ public class GameLoop : MonoBehaviour
 			this.bossRotation.Add(item);
 		}
 	}
-
 
 	private void Update()
 	{
@@ -38,13 +32,11 @@ public class GameLoop : MonoBehaviour
 		this.DayLoop();
 	}
 
-
 	private void Awake()
 	{
 		GameLoop.Instance = this;
 		this.ResetBossRotations();
 	}
-
 
 	public void StartLoop()
 	{
@@ -63,9 +55,8 @@ public class GameLoop : MonoBehaviour
 				}
 			}
 		}
-		base.InvokeRepeating(nameof(TimeoutPlayers), 2f, 2f);
+		InvokeRepeating(nameof(TimeoutPlayers), 2f, 2f);
 	}
-
 
 	private void NewDay(int day)
 	{
@@ -76,7 +67,7 @@ public class GameLoop : MonoBehaviour
 		this.bossNight = false;
 		this.nightStarted = false;
 		this.currentDay = day;
-		base.CancelInvoke(nameof(CheckMobSpawns));
+		base.CancelInvoke("CheckMobSpawns");
 		ServerSend.NewDay(day);
 		GameManager.instance.UpdateDay(day);
 		this.totalWeight = this.CalculateSpawnWeights(this.currentDay);
@@ -85,7 +76,6 @@ public class GameLoop : MonoBehaviour
 		this.checkMobUpdateInterval = this.maxCheckMobUpdateInterval * d;
 		MusicController.Instance.PlaySong(MusicController.SongType.Day, true);
 	}
-
 
 	private void FindMobCap()
 	{
@@ -111,7 +101,6 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-
 	private void DayLoop()
 	{
 		int num = Mathf.FloorToInt(DayCycle.totalTime);
@@ -126,7 +115,6 @@ public class GameLoop : MonoBehaviour
 			this.StartNight();
 		}
 	}
-
 
 	private void StartNight()
 	{
@@ -150,9 +138,8 @@ public class GameLoop : MonoBehaviour
 		{
 			MusicController.Instance.PlaySong(MusicController.SongType.Night, true);
 		}
-		base.Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x, this.checkMobUpdateInterval.y));
+		Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x, this.checkMobUpdateInterval.y));
 	}
-
 
 	public void StartBoss(MobType bossMob)
 	{
@@ -160,15 +147,18 @@ public class GameLoop : MonoBehaviour
 		this.SpawnMob(bossMob, this.FindBossPosition(), 1f, bossMultiplier, Mob.BossType.BossNight, true);
 	}
 
-
 	private void CheckMobSpawns()
 	{
 		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative)
 		{
 			return;
 		}
+		if (GameManager.instance.boatLeft)
+		{
+			return;
+		}
 		float num = (float)GameManager.instance.GetPlayersAlive() / 2f;
-		base.Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x / num, this.checkMobUpdateInterval.y / num));
+		Invoke(nameof(CheckMobSpawns), Random.Range(this.checkMobUpdateInterval.x / num, this.checkMobUpdateInterval.y / num));
 		this.activeMobs = MobManager.Instance.GetActiveEnemies();
 		if (GameManager.state != GameManager.GameState.Playing)
 		{
@@ -187,15 +177,18 @@ public class GameLoop : MonoBehaviour
 		{
 			return;
 		}
-		MobType mob = this.SelectMobToSpawn(false);
+		MobType mobType = this.SelectMobToSpawn(false);
 		int num3 = Random.Range(1, 3);
+		if (mobType.boss)
+		{
+			num3 = Random.Range(1, 2);
+		}
 		num3 = Mathf.Clamp(num3, 1, GameLoop.currentMobCap - this.activeMobs);
 		for (int i = 0; i < num3; i++)
 		{
-			this.SpawnMob(mob, this.FindPositionAroundPlayer(num2), 1f, 1f, Mob.BossType.None, false);
+			this.SpawnMob(mobType, this.FindPositionAroundPlayer(num2), 1f, 1f, Mob.BossType.None, false);
 		}
 	}
-
 
 	private int FindRandomAlivePlayer()
 	{
@@ -213,7 +206,6 @@ public class GameLoop : MonoBehaviour
 		}
 		return list[Random.Range(0, list.Count)];
 	}
-
 
 	public MobType SelectMobToSpawn(bool shrine = false)
 	{
@@ -237,7 +229,6 @@ public class GameLoop : MonoBehaviour
 		return this.mobs[0].mob;
 	}
 
-
 	private Vector3 FindPositionAroundPlayer(int selectedPlayerId)
 	{
 		Vector3 a;
@@ -260,12 +251,10 @@ public class GameLoop : MonoBehaviour
 		return Vector3.zero;
 	}
 
-
 	private Vector3 FindBossPosition()
 	{
 		return this.FindPositionAroundPlayer(this.FindRandomAlivePlayer());
 	}
-
 
 	private int SpawnMob(MobType mob, Vector3 pos, float multiplier = 1f, float bossMultiplier = 1f, Mob.BossType bossType = Mob.BossType.None, bool bypassCap = false)
 	{
@@ -280,10 +269,9 @@ public class GameLoop : MonoBehaviour
 			return -1;
 		}
 		int nextId = MobManager.Instance.GetNextId();
-		MobSpawner.Instance.ServerSpawnNewMob(nextId, mob.id, pos, multiplier, bossMultiplier, bossType);
+		MobSpawner.Instance.ServerSpawnNewMob(nextId, mob.id, pos, multiplier, bossMultiplier, bossType, -1);
 		return nextId;
 	}
-
 
 	private float CalculateSpawnWeights(int day)
 	{
@@ -309,7 +297,6 @@ public class GameLoop : MonoBehaviour
 		return num;
 	}
 
-
 	public void TimeoutPlayers()
 	{
 		foreach (Client client in Server.clients.Values)
@@ -334,62 +321,43 @@ public class GameLoop : MonoBehaviour
 		}
 	}
 
-
 	public int currentDay = -1;
-
 
 	private Vector2 maxCheckMobUpdateInterval = new Vector2(3f, 10f);
 
-
 	private Vector2 checkMobUpdateInterval = new Vector2(3f, 10f);
-
 
 	public GameLoop.MobSpawn[] mobs;
 
-
 	private int activeMobs;
-
 
 	private int maxMobCap = 999;
 
-
 	private float totalWeight;
 
-
 	public LayerMask whatIsSpawnable;
-
 
 	[Header("Boss Stuff")]
 	public MobType[] bosses;
 
-
 	private List<MobType> bossRotation;
-
 
 	public static GameLoop Instance;
 
-
 	private bool nightStarted;
 
-
 	private bool bossNight;
-
 
 	[System.Serializable]
 	public class MobSpawn
 	{
-
 		public MobType mob;
-
 
 		public int dayStart;
 
-
 		public int dayPeak;
 
-
 		public float maxWeight;
-
 
 		public float currentWeight;
 	}

@@ -2,7 +2,6 @@
 using TMPro;
 using UnityEngine;
 
-
 public class StatusUI : MonoBehaviour
 {
 	public void Awake() {
@@ -17,7 +16,6 @@ public class StatusUI : MonoBehaviour
 		}
 		this.playerStatus = PlayerMovement.Instance.gameObject.GetComponent<PlayerStatus>();
 	}
-
 
 	private void Update()
 	{
@@ -44,36 +42,25 @@ public class StatusUI : MonoBehaviour
 		this.playerStatus = PlayerMovement.Instance.gameObject.GetComponent<PlayerStatus>();
 	}
 
-
 	public RectTransform hpBar;
-
 
 	public RectTransform shieldBar;
 
-
 	public RectTransform armorBar;
-
 
 	private float hpRatio;
 
-
 	private float shieldRatio;
-
 
 	public Transform hungerBar;
 
-
 	public Transform staminaBar;
-
 
 	public TextMeshProUGUI hpText;
 
-
 	private float currentHp;
 
-
 	private PlayerStatus playerStatus;
-
 
 	private float speed = 10f;
 }

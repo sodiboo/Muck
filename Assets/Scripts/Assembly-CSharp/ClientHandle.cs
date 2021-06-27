@@ -3,10 +3,8 @@ using System.IO;
 using System.Net;
 using UnityEngine;
 
-
 public class ClientHandle : MonoBehaviour
 {
-
     public static void Welcome(Packet packet)
     {
         string str = packet.ReadString(true);
@@ -22,19 +20,16 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void Clock(Packet packet)
     {
         int num = packet.ReadInt(true);
         LoadingScreen.Instance.players[num] = true;
     }
 
-
     public static void PlayerFinishedLoading(Packet packet)
     {
         LoadingScreen.Instance.UpdateStatuses(packet.ReadInt(true));
     }
-
 
     public static void DropItem(Packet packet)
     {
@@ -45,7 +40,6 @@ public class ClientHandle : MonoBehaviour
         ItemManager.Instance.DropItem(fromClient, itemId, amount, objectID);
     }
 
-
     public static void DropItemAtPosition(Packet packet)
     {
         int itemId = packet.ReadInt(true);
@@ -55,7 +49,6 @@ public class ClientHandle : MonoBehaviour
         ItemManager.Instance.DropItemAtPosition(itemId, amount, pos, objectID);
     }
 
-
     public static void DropPowerupAtPosition(Packet packet)
     {
         int powerupId = packet.ReadInt(true);
@@ -63,7 +56,6 @@ public class ClientHandle : MonoBehaviour
         Vector3 pos = packet.ReadVector3(true);
         ItemManager.Instance.DropPowerupAtPosition(powerupId, pos, objectID);
     }
-
 
     public static void DropResources(Packet packet)
     {
@@ -73,7 +65,6 @@ public class ClientHandle : MonoBehaviour
         MonoBehaviour.print("CLIENT: Dropping resources with id: " + num);
         ItemManager.Instance.DropResource(fromClient, dropTableId, num);
     }
-
 
     public static void PickupItem(Packet packet)
     {
@@ -97,14 +88,12 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void SpawnEffect(Packet packet)
     {
         int id = packet.ReadInt(true);
         Vector3 pos = packet.ReadVector3(true);
         PowerupCalculations.Instance.SpawnOnHitEffect(id, false, pos, 0);
     }
-
 
     public static void WeaponInHand(Packet packet)
     {
@@ -113,7 +102,6 @@ public class ClientHandle : MonoBehaviour
         GameManager.players[key].onlinePlayer.UpdateWeapon(objectID);
     }
 
-
     public static void AnimationUpdate(Packet packet)
     {
         int key = packet.ReadInt(true);
@@ -121,7 +109,6 @@ public class ClientHandle : MonoBehaviour
         bool b = packet.ReadBool(true);
         GameManager.players[key].onlinePlayer.NewAnimation(animation, b);
     }
-
 
     public static void ShootArrowFromPlayer(Packet packet)
     {
@@ -133,7 +120,6 @@ public class ClientHandle : MonoBehaviour
         ProjectileController.Instance.SpawnProjectileFromPlayer(spawnPos, direction, force, arrowId, fromPlayer);
     }
 
-
     public static void PlayerHitObject(Packet packet)
     {
         int fromClient = packet.ReadInt(true);
@@ -144,13 +130,11 @@ public class ClientHandle : MonoBehaviour
         ResourceManager.Instance.list[key].GetComponent<Hitable>().Damage(newHp, fromClient, hitEffect, pos);
     }
 
-
     public static void RemoveResource(Packet packet)
     {
         int id = packet.ReadInt(true);
         ResourceManager.Instance.RemoveItem(id);
     }
-
 
     public static void PlayerHp(Packet packet)
     {
@@ -159,14 +143,12 @@ public class ClientHandle : MonoBehaviour
         GameManager.players[key].SetHpRatio(hpRatio);
     }
 
-
     public static void RespawnPlayer(Packet packet)
     {
         int id = packet.ReadInt(true);
         Vector3 zero = packet.ReadVector3(true);
         GameManager.instance.RespawnPlayer(id, zero);
     }
-
 
     public static void PlayerHit(Packet packet)
     {
@@ -199,7 +181,6 @@ public class ClientHandle : MonoBehaviour
         playerManager.hitable.Damage(num2, num, hitEffect, pos);
     }
 
-
     public static void FinalizeBuild(Packet packet)
     {
         int buildOwner = packet.ReadInt(true);
@@ -209,7 +190,6 @@ public class ClientHandle : MonoBehaviour
         Quaternion rotation = packet.ReadQuaternion(true);
         BuildManager.Instance.BuildItem(buildOwner, itemID, objectId, position, rotation);
     }
-
 
     public static void OpenChest(Packet packet)
     {
@@ -231,7 +211,6 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void UpdateChest(Packet packet)
     {
         packet.ReadInt(true);
@@ -241,7 +220,6 @@ public class ClientHandle : MonoBehaviour
         int amount = packet.ReadInt(true);
         ChestManager.Instance.UpdateChest(chestId, cellId, itemId, amount);
     }
-
 
     public static void PickupInteract(Packet packet)
     {
@@ -260,7 +238,6 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void SpawnPlayer(Packet packet)
     {
         int id = packet.ReadInt(true);
@@ -271,7 +248,6 @@ public class ClientHandle : MonoBehaviour
         GameManager.instance.SpawnPlayer(id, username, new Color(vector.x, vector.y, vector.z), position, orientationY);
         GameManager.instance.StartGame();
     }
-
 
     public static void StartGame(Packet packet)
     {
@@ -301,7 +277,6 @@ public class ClientHandle : MonoBehaviour
         ClientSend.StartedLoading();
     }
 
-
     public static void PlayerPosition(Packet packet)
     {
         int key = packet.ReadInt(true);
@@ -312,7 +287,6 @@ public class ClientHandle : MonoBehaviour
         }
         GameManager.players[key].SetDesiredPosition(desiredPosition);
     }
-
 
     public static void PlayerRotation(Packet packet)
     {
@@ -326,7 +300,6 @@ public class ClientHandle : MonoBehaviour
         GameManager.players[key].SetDesiredRotation(orientationY, orientationX);
     }
 
-
     public static void ReceivePing(Packet packet)
     {
         packet.ReadInt(true);
@@ -334,12 +307,10 @@ public class ClientHandle : MonoBehaviour
         NetStatus.AddPing((int)(DateTime.Now - d).TotalMilliseconds);
     }
 
-
     public static void ReceiveStatus(Packet packet)
     {
         MonoBehaviour.print("received status");
     }
-
 
     public static void ConnectionEstablished(Packet packet)
     {
@@ -347,12 +318,10 @@ public class ClientHandle : MonoBehaviour
         GameManager.connected = true;
     }
 
-
     public static void OpenDoor(Packet packet)
     {
         packet.ReadInt(true);
     }
-
 
     public static void PlayerDied(Packet packet)
     {
@@ -360,7 +329,6 @@ public class ClientHandle : MonoBehaviour
         Vector3 pos = packet.ReadVector3(true);
         GameManager.instance.KillPlayer(id, pos);
     }
-
 
     public static void SpawnGrave(Packet packet)
     {
@@ -370,13 +338,11 @@ public class ClientHandle : MonoBehaviour
         GameManager.instance.SpawnGrave(gravePos, playerId, graveObjectId);
     }
 
-
     public static void Ready(Packet packet)
     {
         packet.ReadInt(true);
         packet.ReadBool(true);
     }
-
 
     public static void DisconnectPlayer(Packet packet)
     {
@@ -389,7 +355,6 @@ public class ClientHandle : MonoBehaviour
         }
         GameManager.instance.DisconnectPlayer(num);
     }
-
 
     public static void ShrineCombatStart(Packet packet)
     {
@@ -408,7 +373,6 @@ public class ClientHandle : MonoBehaviour
         }
         componentInChildren.StartShrine(array);
     }
-
 
     public static void RevivePlayer(Packet packet)
     {
@@ -432,7 +396,6 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void MobSpawn(Packet packet)
     {
         Vector3 pos = packet.ReadVector3(true);
@@ -440,9 +403,9 @@ public class ClientHandle : MonoBehaviour
         int mobId = packet.ReadInt(true);
         float multiplier = packet.ReadFloat(true);
         float bossMultiplier = packet.ReadFloat(true);
-        MobSpawner.Instance.SpawnMob(pos, mobType, mobId, multiplier, bossMultiplier, Mob.BossType.None);
+		int guardianType = packet.ReadInt(true);
+		MobSpawner.Instance.SpawnMob(pos, mobType, mobId, multiplier, bossMultiplier, Mob.BossType.None, guardianType);
     }
-
 
     public static void MobMove(Packet packet)
     {
@@ -454,14 +417,12 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void MobSetDestination(Packet packet)
     {
         int key = packet.ReadInt(true);
         Vector3 destination = packet.ReadVector3(true);
         MobManager.Instance.mobs[key].SetDestination(destination);
     }
-
 
     public static void MobSetTarget(Packet packet)
     {
@@ -470,7 +431,6 @@ public class ClientHandle : MonoBehaviour
         MobManager.Instance.mobs[key].SetTarget(target);
     }
 
-
     public static void MobAttack(Packet packet)
     {
         int key = packet.ReadInt(true);
@@ -478,7 +438,6 @@ public class ClientHandle : MonoBehaviour
         int attackAnimationIndex = packet.ReadInt(true);
         MobManager.Instance.mobs[key].Attack(targetPlayerId, attackAnimationIndex);
     }
-
 
     public static void MobSpawnProjectile(Packet packet)
     {
@@ -489,7 +448,6 @@ public class ClientHandle : MonoBehaviour
         int mobObjectId = packet.ReadInt(true);
         ProjectileController.Instance.SpawnMobProjectile(spawnPos, direction, force, itemId, mobObjectId);
     }
-
 
     public static void PlayerDamageMob(Packet packet)
     {
@@ -505,7 +463,6 @@ public class ClientHandle : MonoBehaviour
         MobManager.Instance.mobs[key].hitable.Damage(num2, num, hitEffect, pos);
     }
 
-
     public static void KnockbackMob(Packet packet)
     {
         int key = packet.ReadInt(true);
@@ -516,7 +473,6 @@ public class ClientHandle : MonoBehaviour
         }
         MobManager.Instance.mobs[key].Knockback(dir);
     }
-
 
     public static void Interact(Packet packet)
     {
@@ -537,14 +493,12 @@ public class ClientHandle : MonoBehaviour
         }
     }
 
-
     public static void MobZoneToggle(Packet packet)
     {
         bool show = packet.ReadBool(true);
         int key = packet.ReadInt(true);
         MobZoneManager.Instance.zones[key].ToggleEntities(show);
     }
-
 
     public static void MobZoneSpawn(Packet packet)
     {
@@ -555,7 +509,6 @@ public class ClientHandle : MonoBehaviour
         MobZoneManager.Instance.zones[num].LocalSpawnEntity(pos, entityType, objectId, num);
     }
 
-
     public static void PickupSpawnZone(Packet packet)
     {
         Vector3 pos = packet.ReadVector3(true);
@@ -565,7 +518,6 @@ public class ClientHandle : MonoBehaviour
         MobZoneManager.Instance.zones[num].LocalSpawnEntity(pos, entityType, objectId, num);
     }
 
-
     public static void ReceiveChatMessage(Packet packet)
     {
         int fromUser = packet.ReadInt(true);
@@ -574,14 +526,12 @@ public class ClientHandle : MonoBehaviour
         ChatBox.Instance.AppendMessage(fromUser, message, fromUsername);
     }
 
-
     public static void ReceivePlayerPing(Packet packet)
     {
         Vector3 pos = packet.ReadVector3(true);
         string name = packet.ReadString(true);
         PingController.Instance.MakePing(pos, name, "");
     }
-
 
     public static void ReceivePlayerArmor(Packet packet)
     {
@@ -598,20 +548,34 @@ public class ClientHandle : MonoBehaviour
         GameManager.players[key].SetArmor(num, num2);
     }
 
-
     public static void NewDay(Packet packet)
     {
         int day = packet.ReadInt(true);
         GameManager.instance.UpdateDay(day);
-        DayCycle.totalTime = day;
+        DayCycle.time = 0f;
     }
-
 
     public static void GameOver(Packet packet)
     {
         int winnerId = packet.ReadInt(true);
-        GameManager.instance.GameOver(winnerId);
+        GameManager.instance.GameOver(winnerId, 4f);
     }
+
+	public static void ShipUpdate(Packet packet)
+	{
+		Boat.BoatPackets p = (Boat.BoatPackets)packet.ReadInt(true);
+		int interactId = packet.ReadInt(true);
+		Boat.Instance.UpdateShipStatus(p, interactId);
+	}
+
+	public static void DragonUpdate(Packet packet)
+	{
+		BobMob.DragonState state = (BobMob.DragonState)packet.ReadInt(true);
+		if (Dragon.Instance)
+		{
+			Dragon.Instance.transform.root.GetComponent<BobMob>().DragonUpdate(state);
+		}
+	}
 
     public static void EnterVehicle(Packet packet)
     {

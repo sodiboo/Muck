@@ -1,11 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-
 [ExecuteInEditMode]
 public class ColorAtmosphere : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ConsistentRandom consistentRandom = new ConsistentRandom(GameManager.GetSeed());
@@ -24,7 +22,6 @@ public class ColorAtmosphere : MonoBehaviour
 		this.dayCycle.dayFog = color2;
 	}
 
-
 	public Color FindRandomBlendColor(Color[] colors, float rand)
 	{
 		rand *= (float)(colors.Length - 1);
@@ -37,32 +34,23 @@ public class ColorAtmosphere : MonoBehaviour
 		return a * num3 + a2 * b;
 	}
 
-
 	[Header("Ground / Grass")]
 	public TextureData textureData;
 
-
 	public Color defaultGrassColor;
-
 
 	public Color[] colorRange;
 
-
 	public Color[] grassColorRange;
-
 
 	public Color groundColor;
 
-
 	public Color grassColor;
-
 
 	public Material grass;
 
-
 	[Header("Fog")]
 	public DayCycle dayCycle;
-
 
 	public Color[] fogColors;
 }

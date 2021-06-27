@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: BowAncient
   m_EditorClassIdentifier: 
-  id: 100
+  important: 0
+  id: 110
   name: Ancient Bow
   description: It has ancient in the name, so it must be good
   type: 9
   tier: 1
-  sprite: {fileID: 21300000, guid: 4e6fdb3a228256d4497ed2a0b3022f2c, type: 3}
-  material: {fileID: 2100000, guid: c0bab369a57add942a75d0e588389ebe, type: 2}
-  mesh: {fileID: 4300000, guid: 53ed857de46c85c469ef4f31dae99e73, type: 2}
+  sprite: {fileID: 21300000, guid: acaae6a884f64ca4abac414056820005, type: 3}
+  material: {fileID: 2100000, guid: ddb600ca6bbc26d47a79723affb5249b, type: 2}
+  mesh: {fileID: 4300000, guid: a28b45aca72123d40b1cf8953e378ef3, type: 2}
   rotationOffset: {x: 0, y: 0, z: 180}
   positionOffset: {x: 0, y: 0.1, z: 0.12}
   scale: 0.5
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 1
   requirements:
-  - item: {fileID: 11400000, guid: 1a23a12e5f60ced48aee48309ab6afe1, type: 2}
+  - item: {fileID: 11400000, guid: 905340509a8be19479e3ec59437c7d4a, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: 36dbe7fb4cb7855458ff6f4d3292f2ba, type: 2}
+  - item: {fileID: 11400000, guid: 3970000b4b213694ebc91ce90e837e23, type: 2}
     amount: 1
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: 6df1a2684b27bfb4b8c6b091d8abf547, type: 2}
+  stationRequirement: {fileID: 11400000, guid: b66ee1ade389b7d43909fe30259795f1, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1943718950072639, guid: fe5428ddf82b3d842973cb61d8d9a0d9, type: 3}
+  prefab: {fileID: 1972850023764178, guid: 13f32a6915e1b644fa01ca73faca4db1, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -53,10 +54,10 @@ MonoBehaviour:
   stamina: 0
   armor: 0
   swingFx: 0
-  bowComponent: {fileID: 11400000, guid: 08f213acfc78f2d4aae83613c6a2a2cf, type: 2}
+  bowComponent: {fileID: 11400000, guid: 0a4eee820057ba946b74813d1dcaa549, type: 2}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

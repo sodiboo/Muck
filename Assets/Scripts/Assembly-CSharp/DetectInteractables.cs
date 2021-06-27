@@ -2,10 +2,8 @@
 using TMPro;
 using UnityEngine;
 
-
 public class DetectInteractables : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		DetectInteractables.Instance = this;
@@ -13,7 +11,6 @@ public class DetectInteractables : MonoBehaviour
 		this.interactText = this.interactUi.GetComponentInChildren<TextMeshProUGUI>();
 		this.interactUi.gameObject.SetActive(false);
 	}
-
 
 	private void Start()
 	{
@@ -24,9 +21,7 @@ public class DetectInteractables : MonoBehaviour
 		currentInteractable = null;
 	}
 
-
 	public Interactable currentInteractable { get; private set; }
-
 
 	private void Update()
 	{
@@ -64,24 +59,17 @@ public class DetectInteractables : MonoBehaviour
 		}
 	}
 
-
 	public LayerMask whatIsInteractable;
-
 
 	public GameObject interactUiPrefab;
 
-
 	private Transform interactUi;
-
 
 	private TextMeshProUGUI interactText;
 
-
 	private Transform playerCam;
 
-
 	public static DetectInteractables Instance;
-
 
 	private Collider currentCollider;
 }

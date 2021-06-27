@@ -1,33 +1,29 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class EnemyProjectile : MonoBehaviour
 {
-
-
-
 	public int damage { get; set; }
-
 
 	private void Awake()
 	{
-		base.Invoke(nameof(DestroySelf), 10f);
+		Invoke(nameof(DestroySelf), 10f);
 	}
-
 
 	public void DisableCollider(float time)
 	{
+		if (!base.GetComponent<Collider>())
+		{
+			return;
+		}
 		base.GetComponent<Collider>().enabled = false;
-		base.Invoke(nameof(ActivateCollider), time);
+		Invoke(nameof(ActivateCollider), time);
 	}
-
 
 	private void ActivateCollider()
 	{
 		base.GetComponent<Collider>().enabled = true;
 	}
-
 
 	private void OnCollisionEnter(Collision other)
 	{
@@ -65,27 +61,20 @@ public class EnemyProjectile : MonoBehaviour
 		}
 	}
 
-
 	private void DestroySelf()
 	{
 		Destroy(base.gameObject);
 	}
 
-
 	public GameObject hitFx;
-
 
 	private bool done;
 
-
 	public bool collideWithPlayerAndBuildOnly;
-
 
 	public bool ignoreGround;
 
-
 	public Transform spawnPos;
-
 
 	public float hideFxDistance = 40f;
 }

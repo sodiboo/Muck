@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class DebugObject : MonoBehaviour
 {
-
 	private void Update()
 	{
 		if (!base.transform.parent)
@@ -14,7 +12,6 @@ public class DebugObject : MonoBehaviour
 		base.transform.rotation = Quaternion.identity;
 		base.transform.position = base.transform.parent.position + this.offset;
 	}
-
 
 	private void OnGUI()
 	{
@@ -40,12 +37,9 @@ public class DebugObject : MonoBehaviour
 		}
 	}
 
-
 	public string text;
 
-
 	public Vector3 offset = new Vector3(0f, 1.5f, 0f);
-
 
 	private Camera cam;
 }

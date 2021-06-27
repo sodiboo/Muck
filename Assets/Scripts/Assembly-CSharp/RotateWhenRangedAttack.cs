@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class RotateWhenRangedAttack : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.mob = base.GetComponent<Mob>();
 	}
-
 
 	public void LateUpdate()
 	{
@@ -22,7 +19,6 @@ public class RotateWhenRangedAttack : MonoBehaviour
 			base.transform.rotation = Quaternion.LookRotation(VectorExtensions.XZVector(this.mob.target.transform.position - base.transform.position));
 		}
 	}
-
 
 	private Mob mob;
 }

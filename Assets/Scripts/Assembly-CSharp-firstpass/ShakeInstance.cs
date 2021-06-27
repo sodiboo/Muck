@@ -2,22 +2,13 @@
 
 namespace MilkShake
 {
-
 	[System.Serializable]
 	public class ShakeInstance
 	{
-
-		
-		
 		public ShakeState State { get; private set; }
 
-
-		
-		
 		public bool IsPaused { get; private set; }
 
-
-		
 		public bool IsFinished
 		{
 			get
@@ -26,8 +17,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
 		public float CurrentStrength
 		{
 			get
@@ -36,8 +25,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
 		public float CurrentRoughness
 		{
 			get
@@ -45,7 +32,6 @@ namespace MilkShake
 				return this.ShakeParameters.Roughness * this.fadeTimer * this.RoughnessScale;
 			}
 		}
-
 
 		public ShakeInstance(int? seed = null)
 		{
@@ -64,7 +50,6 @@ namespace MilkShake
 			this.RoughnessScale = 1f;
 		}
 
-
 		public ShakeInstance(IShakeParameters shakeData, int? seed = null) : this(seed)
 		{
 			this.ShakeParameters = new ShakeParameters(shakeData);
@@ -72,7 +57,6 @@ namespace MilkShake
 			this.fadeOutTime = shakeData.FadeOut;
 			this.State = ShakeState.FadingIn;
 		}
-
 
 		public ShakeResult UpdateShake(float deltaTime)
 		{
@@ -138,13 +122,11 @@ namespace MilkShake
 			return result;
 		}
 
-
 		public void Start(float fadeTime)
 		{
 			this.fadeInTime = fadeTime;
 			this.State = ShakeState.FadingIn;
 		}
-
 
 		public void Stop(float fadeTime, bool removeWhenStopped)
 		{
@@ -152,7 +134,6 @@ namespace MilkShake
 			this.RemoveWhenStopped = removeWhenStopped;
 			this.State = ShakeState.FadingOut;
 		}
-
 
 		public void Pause(float fadeTime)
 		{
@@ -164,7 +145,6 @@ namespace MilkShake
 			}
 		}
 
-
 		public void Resume(float fadeTime)
 		{
 			this.IsPaused = false;
@@ -174,7 +154,6 @@ namespace MilkShake
 				this.pauseTimer = 0f;
 			}
 		}
-
 
 		public void TogglePaused(float fadeTime)
 		{
@@ -186,7 +165,6 @@ namespace MilkShake
 			this.Pause(fadeTime);
 		}
 
-
 		private Vector3 getPositionShake()
 		{
 			Vector3 zero = Vector3.zero;
@@ -195,7 +173,6 @@ namespace MilkShake
 			zero.z = this.getNoise(this.seed3 + this.noiseTimer, (float)this.baseSeed + this.noiseTimer);
 			return Vector3.Scale(zero * this.CurrentStrength, this.ShakeParameters.PositionInfluence);
 		}
-
 
 		private Vector3 getRotationShake()
 		{
@@ -206,54 +183,38 @@ namespace MilkShake
 			return Vector3.Scale(zero * this.CurrentStrength, this.ShakeParameters.RotationInfluence);
 		}
 
-
 		private float getNoise(float x, float y)
 		{
 			return (Mathf.PerlinNoise(x, y) - 0.5f) * 2f;
 		}
 
-
 		public ShakeParameters ShakeParameters;
-
 
 		public float StrengthScale;
 
-
 		public float RoughnessScale;
-
 
 		public bool RemoveWhenStopped;
 
-
 		private int baseSeed;
-
 
 		private float seed1;
 
-
 		private float seed2;
-
 
 		private float seed3;
 
-
 		private float noiseTimer;
-
 
 		private float fadeTimer;
 
-
 		private float fadeInTime;
-
 
 		private float fadeOutTime;
 
-
 		private float pauseTimer;
 
-
 		private float pauseFadeTime;
-
 
 		private int lastUpdatedFrame;
 	}

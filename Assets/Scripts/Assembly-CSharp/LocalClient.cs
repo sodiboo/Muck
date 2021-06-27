@@ -5,10 +5,8 @@ using System.Net.Sockets;
 using Steamworks;
 using UnityEngine;
 
-
 public class LocalClient : MonoBehaviour
 {
-
     private void Awake()
     {
         if (LocalClient.instance == null)
@@ -23,19 +21,16 @@ public class LocalClient : MonoBehaviour
         }
     }
 
-
     private void Start()
     {
         this.StartProtocols();
     }
-
 
     private void StartProtocols()
     {
         this.tcp = new LocalClient.TCP();
         this.udp = new LocalClient.UDP();
     }
-
 
     public void ConnectToServer(string ip, string username)
     {
@@ -46,65 +41,66 @@ public class LocalClient : MonoBehaviour
         this.tcp.Connect();
     }
 
-
     public static void InitializeClientData()
     {
         LocalClient.packetHandlers = new Dictionary<int, LocalClient.PacketHandler>
         {
-            { (int)ServerPackets.welcome, new LocalClient.PacketHandler(ClientHandle.Welcome) },
-            { (int)ServerPackets.spawnPlayer, new LocalClient.PacketHandler(ClientHandle.SpawnPlayer) },
-            { (int)ServerPackets.playerPosition, new LocalClient.PacketHandler(ClientHandle.PlayerPosition) },
-            { (int)ServerPackets.playerRotation, new LocalClient.PacketHandler(ClientHandle.PlayerRotation) },
-            { (int)ServerPackets.playerDisconnect, new LocalClient.PacketHandler(ClientHandle.DisconnectPlayer) },
-            { (int)ServerPackets.playerDied, new LocalClient.PacketHandler(ClientHandle.PlayerDied) },
-            { (int)ServerPackets.pingPlayer, new LocalClient.PacketHandler(ClientHandle.ReceivePing) },
-            { (int)ServerPackets.connectionSuccessful, new LocalClient.PacketHandler(ClientHandle.ConnectionEstablished) },
+            { (int)ServerPackets.welcome, ClientHandle.Welcome },
+            { (int)ServerPackets.spawnPlayer, ClientHandle.SpawnPlayer },
+            { (int)ServerPackets.playerPosition, ClientHandle.PlayerPosition },
+            { (int)ServerPackets.playerRotation, ClientHandle.PlayerRotation },
+            { (int)ServerPackets.playerDisconnect, ClientHandle.DisconnectPlayer },
+            { (int)ServerPackets.playerDied, ClientHandle.PlayerDied },
+            { (int)ServerPackets.pingPlayer, ClientHandle.ReceivePing },
+            { (int)ServerPackets.connectionSuccessful, ClientHandle.ConnectionEstablished },
             // ServerPackets.sendLevel
-            { (int)ServerPackets.sendStatus, new LocalClient.PacketHandler(ClientHandle.ReceiveStatus) },
-            { (int)ServerPackets.gameOver, new LocalClient.PacketHandler(ClientHandle.GameOver) },
-            { (int)ServerPackets.startGame, new LocalClient.PacketHandler(ClientHandle.StartGame) },
-            { (int)ServerPackets.clock, new LocalClient.PacketHandler(ClientHandle.Clock) },
-            { (int)ServerPackets.openDoor, new LocalClient.PacketHandler(ClientHandle.OpenDoor) },
-            { (int)ServerPackets.ready, new LocalClient.PacketHandler(ClientHandle.Ready) },
+            { (int)ServerPackets.sendStatus, ClientHandle.ReceiveStatus },
+            { (int)ServerPackets.gameOver, ClientHandle.GameOver },
+            { (int)ServerPackets.startGame, ClientHandle.StartGame },
+            { (int)ServerPackets.clock, ClientHandle.Clock },
+            { (int)ServerPackets.openDoor, ClientHandle.OpenDoor },
+            { (int)ServerPackets.ready, ClientHandle.Ready },
             // ServerPackets.taskProgress
-            { (int)ServerPackets.dropItem, new LocalClient.PacketHandler(ClientHandle.DropItem) },
-            { (int)ServerPackets.pickupItem, new LocalClient.PacketHandler(ClientHandle.PickupItem) },
-            { (int)ServerPackets.weaponInHand, new LocalClient.PacketHandler(ClientHandle.WeaponInHand) },
-            { (int)ServerPackets.playerHitObject, new LocalClient.PacketHandler(ClientHandle.PlayerHitObject) },
-            { (int)ServerPackets.dropResources, new LocalClient.PacketHandler(ClientHandle.DropResources) },
-            { (int)ServerPackets.animationUpdate, new LocalClient.PacketHandler(ClientHandle.AnimationUpdate) },
-            { (int)ServerPackets.finalizeBuild, new LocalClient.PacketHandler(ClientHandle.FinalizeBuild) },
-            { (int)ServerPackets.openChest, new LocalClient.PacketHandler(ClientHandle.OpenChest) },
-            { (int)ServerPackets.updateChest, new LocalClient.PacketHandler(ClientHandle.UpdateChest) },
-            { (int)ServerPackets.pickupInteract, new LocalClient.PacketHandler(ClientHandle.PickupInteract) },
-            { (int)ServerPackets.dropItemAtPosition, new LocalClient.PacketHandler(ClientHandle.DropItemAtPosition) },
-            { (int)ServerPackets.playerHit, new LocalClient.PacketHandler(ClientHandle.PlayerHit) },
-            { (int)ServerPackets.mobSpawn, new LocalClient.PacketHandler(ClientHandle.MobSpawn) },
-            { (int)ServerPackets.mobMove, new LocalClient.PacketHandler(ClientHandle.MobMove) },
-            { (int)ServerPackets.mobSetDestination, new LocalClient.PacketHandler(ClientHandle.MobSetDestination) },
-            { (int)ServerPackets.mobAttack, new LocalClient.PacketHandler(ClientHandle.MobAttack) },
-            { (int)ServerPackets.playerDamageMob, new LocalClient.PacketHandler(ClientHandle.PlayerDamageMob) },
-            { (int)ServerPackets.shrineCombatStart, new LocalClient.PacketHandler(ClientHandle.ShrineCombatStart) },
-            { (int)ServerPackets.dropPowerupAtPosition, new LocalClient.PacketHandler(ClientHandle.DropPowerupAtPosition) },
-            { (int)ServerPackets.MobZoneSpawn, new LocalClient.PacketHandler(ClientHandle.MobZoneSpawn) },
-            { (int)ServerPackets.MobZoneToggle, new LocalClient.PacketHandler(ClientHandle.MobZoneToggle) },
-            { (int)ServerPackets.PickupZoneSpawn, new LocalClient.PacketHandler(ClientHandle.PickupSpawnZone) },
-            { (int)ServerPackets.SendMessage, new LocalClient.PacketHandler(ClientHandle.ReceiveChatMessage) },
-            { (int)ServerPackets.playerPing, new LocalClient.PacketHandler(ClientHandle.ReceivePlayerPing) },
-            { (int)ServerPackets.sendArmor, new LocalClient.PacketHandler(ClientHandle.ReceivePlayerArmor) },
-            { (int)ServerPackets.playerHp, new LocalClient.PacketHandler(ClientHandle.PlayerHp) },
-            { (int)ServerPackets.respawnPlayer, new LocalClient.PacketHandler(ClientHandle.RespawnPlayer) },
-            { (int)ServerPackets.shootArrow, new LocalClient.PacketHandler(ClientHandle.ShootArrowFromPlayer) },
-            { (int)ServerPackets.removeResource, new LocalClient.PacketHandler(ClientHandle.RemoveResource) },
-            { (int)ServerPackets.mobProjectile, new LocalClient.PacketHandler(ClientHandle.MobSpawnProjectile) },
-            { (int)ServerPackets.newDay, new LocalClient.PacketHandler(ClientHandle.NewDay) },
-            { (int)ServerPackets.knockbackMob, new LocalClient.PacketHandler(ClientHandle.KnockbackMob) },
-            { (int)ServerPackets.spawnEffect, new LocalClient.PacketHandler(ClientHandle.SpawnEffect) },
-            { (int)ServerPackets.playerFinishedLoading, new LocalClient.PacketHandler(ClientHandle.PlayerFinishedLoading) },
-            { (int)ServerPackets.revivePlayer, new LocalClient.PacketHandler(ClientHandle.RevivePlayer) },
-            { (int)ServerPackets.spawnGrave, new LocalClient.PacketHandler(ClientHandle.SpawnGrave) },
-            { (int)ServerPackets.interact, new LocalClient.PacketHandler(ClientHandle.Interact) },
-            { (int)ServerPackets.setTarget, new LocalClient.PacketHandler(ClientHandle.MobSetTarget) },
+            { (int)ServerPackets.dropItem, ClientHandle.DropItem },
+            { (int)ServerPackets.pickupItem, ClientHandle.PickupItem },
+            { (int)ServerPackets.weaponInHand, ClientHandle.WeaponInHand },
+            { (int)ServerPackets.playerHitObject, ClientHandle.PlayerHitObject },
+            { (int)ServerPackets.dropResources, ClientHandle.DropResources },
+            { (int)ServerPackets.animationUpdate, ClientHandle.AnimationUpdate },
+            { (int)ServerPackets.finalizeBuild, ClientHandle.FinalizeBuild },
+            { (int)ServerPackets.openChest, ClientHandle.OpenChest },
+            { (int)ServerPackets.updateChest, ClientHandle.UpdateChest },
+            { (int)ServerPackets.pickupInteract, ClientHandle.PickupInteract },
+            { (int)ServerPackets.dropItemAtPosition, ClientHandle.DropItemAtPosition },
+            { (int)ServerPackets.playerHit, ClientHandle.PlayerHit },
+            { (int)ServerPackets.mobSpawn, ClientHandle.MobSpawn },
+            { (int)ServerPackets.mobMove, ClientHandle.MobMove },
+            { (int)ServerPackets.mobSetDestination, ClientHandle.MobSetDestination },
+            { (int)ServerPackets.mobAttack, ClientHandle.MobAttack },
+            { (int)ServerPackets.playerDamageMob, ClientHandle.PlayerDamageMob },
+            { (int)ServerPackets.shrineCombatStart, ClientHandle.ShrineCombatStart },
+            { (int)ServerPackets.dropPowerupAtPosition, ClientHandle.DropPowerupAtPosition },
+            { (int)ServerPackets.MobZoneSpawn, ClientHandle.MobZoneSpawn },
+            { (int)ServerPackets.MobZoneToggle, ClientHandle.MobZoneToggle },
+            { (int)ServerPackets.PickupZoneSpawn, ClientHandle.PickupSpawnZone },
+            { (int)ServerPackets.SendMessage, ClientHandle.ReceiveChatMessage },
+            { (int)ServerPackets.playerPing, ClientHandle.ReceivePlayerPing },
+            { (int)ServerPackets.sendArmor, ClientHandle.ReceivePlayerArmor },
+            { (int)ServerPackets.playerHp, ClientHandle.PlayerHp },
+            { (int)ServerPackets.respawnPlayer, ClientHandle.RespawnPlayer },
+            { (int)ServerPackets.shootArrow, ClientHandle.ShootArrowFromPlayer },
+            { (int)ServerPackets.removeResource, ClientHandle.RemoveResource },
+            { (int)ServerPackets.mobProjectile, ClientHandle.MobSpawnProjectile },
+            { (int)ServerPackets.newDay, ClientHandle.NewDay },
+            { (int)ServerPackets.knockbackMob, ClientHandle.KnockbackMob },
+            { (int)ServerPackets.spawnEffect, ClientHandle.SpawnEffect },
+            { (int)ServerPackets.playerFinishedLoading, ClientHandle.PlayerFinishedLoading },
+            { (int)ServerPackets.revivePlayer, ClientHandle.RevivePlayer },
+            { (int)ServerPackets.spawnGrave, ClientHandle.SpawnGrave },
+            { (int)ServerPackets.interact, ClientHandle.Interact },
+            { (int)ServerPackets.setTarget, ClientHandle.MobSetTarget },
+			{ (int)ServerPackets.shipUpdate, ClientHandle.ShipUpdate },
+			{ (int)ServerPackets.dragonUpdate, ClientHandle.DragonUpdate },
 
             { (int)ServerPackets.moveVehicle, ClientHandle.UpdateCar },
             { (int)ServerPackets.enterVehicle, ClientHandle.EnterVehicle },
@@ -115,12 +111,10 @@ public class LocalClient : MonoBehaviour
         Debug.Log("Initializing packets.");
     }
 
-
     private void OnApplicationQuit()
     {
         this.Disconnect();
     }
-
 
     public void Disconnect()
     {
@@ -134,53 +128,36 @@ public class LocalClient : MonoBehaviour
         }
     }
 
-
     public static LocalClient instance;
-
 
     public static int dataBufferSize = 4096;
 
-
     public SteamId serverHost;
-
 
     public string ip = "127.0.0.1";
 
-
     public int port = 26950;
-
 
     public int myId;
 
-
     public LocalClient.TCP tcp;
-
 
     public LocalClient.UDP udp;
 
-
     public static bool serverOwner;
-
 
     private bool isConnected;
 
-
     public static Dictionary<int, LocalClient.PacketHandler> packetHandlers;
-
 
     public static int byteDown;
 
-
     public static int packetsReceived;
-
-
 
     public delegate void PacketHandler(Packet packet);
 
-
     public class TCP
     {
-
         public void Connect()
         {
             this.socket = new TcpClient
@@ -191,7 +168,6 @@ public class LocalClient : MonoBehaviour
             this.receiveBuffer = new byte[LocalClient.dataBufferSize];
             this.socket.BeginConnect(LocalClient.instance.ip, LocalClient.instance.port, new AsyncCallback(this.ConnectCallback), this.socket);
         }
-
 
         private void ConnectCallback(IAsyncResult result)
         {
@@ -204,7 +180,6 @@ public class LocalClient : MonoBehaviour
             this.receivedData = new Packet();
             this.stream.BeginRead(this.receiveBuffer, 0, LocalClient.dataBufferSize, new AsyncCallback(this.ReceiveCallback), null);
         }
-
 
         public void SendData(Packet packet)
         {
@@ -220,7 +195,6 @@ public class LocalClient : MonoBehaviour
                 Debug.Log(string.Format("Error sending data to server via TCP: {0}", arg));
             }
         }
-
 
         private void ReceiveCallback(IAsyncResult result)
         {
@@ -244,7 +218,6 @@ public class LocalClient : MonoBehaviour
                 this.Disconnect();
             }
         }
-
 
         private bool HandleData(byte[] data)
         {
@@ -285,7 +258,6 @@ public class LocalClient : MonoBehaviour
             return packetLength <= 1;
         }
 
-
         private void Disconnect()
         {
             LocalClient.instance.Disconnect();
@@ -295,28 +267,21 @@ public class LocalClient : MonoBehaviour
             this.socket = null;
         }
 
-
         public TcpClient socket;
-
 
         private NetworkStream stream;
 
-
         private Packet receivedData;
-
 
         private byte[] receiveBuffer;
     }
 
-
     public class UDP
     {
-
         public UDP()
         {
             this.endPoint = new IPEndPoint(IPAddress.Parse(LocalClient.instance.ip), LocalClient.instance.port);
         }
-
 
         public void Connect(int localPort)
         {
@@ -328,7 +293,6 @@ public class LocalClient : MonoBehaviour
                 this.SendData(packet);
             }
         }
-
 
         public void SendData(Packet packet)
         {
@@ -345,7 +309,6 @@ public class LocalClient : MonoBehaviour
                 Debug.Log(string.Format("Error sending data to server via UDP: {0}", arg));
             }
         }
-
 
         private void ReceiveCallback(IAsyncResult result)
         {
@@ -369,7 +332,6 @@ public class LocalClient : MonoBehaviour
             }
         }
 
-
         private void HandleData(byte[] data)
         {
             LocalClient.packetsReceived++;
@@ -389,7 +351,6 @@ public class LocalClient : MonoBehaviour
             });
         }
 
-
         private void Disconnect()
         {
             LocalClient.instance.Disconnect();
@@ -397,9 +358,7 @@ public class LocalClient : MonoBehaviour
             this.socket = null;
         }
 
-
         public UdpClient socket;
-
 
         public IPEndPoint endPoint;
     }

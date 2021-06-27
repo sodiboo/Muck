@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class LocalPlayer : MonoBehaviour
 {
-
 	public void SwitchUserInterface(bool b)
 	{
 		GameObject[] array = this.objects;
@@ -13,7 +11,6 @@ public class LocalPlayer : MonoBehaviour
 			array[i].SetActive(b);
 		}
 	}
-
 
 	public GameObject[] objects;
 }

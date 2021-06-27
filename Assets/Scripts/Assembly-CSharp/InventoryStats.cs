@@ -2,15 +2,12 @@
 using TMPro;
 using UnityEngine;
 
-
 public class InventoryStats : MonoBehaviour
 {
-
 	private void OnEnable()
 	{
 		this.UpdateStats();
 	}
-
 
 	private void UpdateStats()
 	{
@@ -36,7 +33,6 @@ public class InventoryStats : MonoBehaviour
 		});
 	}
 
-
 	private int FindMaxHit()
 	{
 		InventoryItem currentItem = Hotbar.Instance.currentItem;
@@ -52,9 +48,7 @@ public class InventoryStats : MonoBehaviour
 		return (int)((float)num * PowerupCalculations.Instance.GetMaxMultiplier().damageMultiplier);
 	}
 
-
 	public TextMeshProUGUI text;
-
 
 	public TextMeshProUGUI numbersText;
 }

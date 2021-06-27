@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
+  m_Name: NightBlade
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 143
+  name: Night Blade
+  description: Dark as the night sky
+  type: 3
+  tier: 2
+  sprite: {fileID: 21300000, guid: 9f5a2b2ae66c8644c92288e795930828, type: 3}
+  material: {fileID: 2100000, guid: 2596e0f243af1c74aa571ddeeaa0ff55, type: 2}
+  mesh: {fileID: 4300000, guid: 4fa4c54a1bb609346adf2fb4f63955e4, type: 2}
+  rotationOffset: {x: -2.5, y: 20, z: -10}
+  positionOffset: {x: 0, y: 0, z: -0.25}
+  scale: 0.72
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 130
+  attackSpeed: 1.15
+  attackRange: {x: 1, y: 1, z: 2}
+  sharpness: 1
+  craftable: 0
+  unlockWithFirstRequirementOnly: 1
+  requirements:
+  - item: {fileID: 11400000, guid: 4f38d7b6c192a2249b5317c49821c7a7, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: aa8103830ba458446b2f3a8f5a4b813e, type: 2}
+    amount: 15
+  - item: {fileID: 11400000, guid: 2def0c344d3fd7d4aae73b2e794eb5d8, type: 2}
+    amount: 10
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 1
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 2
+  attackTypes: 
+  x: 0

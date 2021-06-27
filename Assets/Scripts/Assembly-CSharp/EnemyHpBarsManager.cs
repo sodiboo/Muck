@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class EnemyHpBarsManager : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.onMobs = new List<GameObject>();
@@ -16,7 +14,6 @@ public class EnemyHpBarsManager : MonoBehaviour
 			this.hpBars[i].gameObject.SetActive(false);
 		}
 	}
-
 
 	private void Update()
 	{
@@ -74,7 +71,6 @@ public class EnemyHpBarsManager : MonoBehaviour
 		}
 	}
 
-
 	private MobHpBar FindAvailableHpBar(RaycastHit hit)
 	{
 		foreach (MobHpBar mobHpBar in this.hpBars)
@@ -87,24 +83,17 @@ public class EnemyHpBarsManager : MonoBehaviour
 		return null;
 	}
 
-
 	public GameObject hpBarPrefab;
-
 
 	private int nHpBars = 5;
 
-
 	private MobHpBar[] hpBars;
-
 
 	private float[] distances;
 
-
 	private List<GameObject> onMobs;
 
-
 	private Transform camera;
-
 
 	public LayerMask whatIsEnemy;
 }

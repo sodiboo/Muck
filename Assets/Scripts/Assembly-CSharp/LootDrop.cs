@@ -1,15 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 [CreateAssetMenu]
 public class LootDrop : ScriptableObject
 {
-
-
-
 	public int id { get; set; }
-
 
 	public List<InventoryItem> GetLoot()
 	{
@@ -27,7 +22,6 @@ public class LootDrop : ScriptableObject
 		return list;
 	}
 
-
 	public List<InventoryItem> GetLoot(ConsistentRandom rand)
 	{
 		List<InventoryItem> list = new List<InventoryItem>();
@@ -44,26 +38,19 @@ public class LootDrop : ScriptableObject
 		return list;
 	}
 
-
 	[Header("Loot Table")]
 	public LootDrop.LootItems[] loot;
 
-
 	public bool dropOne;
-
 
 	[System.Serializable]
 	public class LootItems
 	{
-
 		public InventoryItem item;
-
 
 		public int amountMin;
 
-
 		public int amountMax;
-
 
 		public float dropChance;
 	}

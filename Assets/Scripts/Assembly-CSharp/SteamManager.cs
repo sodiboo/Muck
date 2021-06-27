@@ -7,20 +7,11 @@ using Steamworks.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class SteamManager : MonoBehaviour
 {
-
-
-
 	public string PlayerName { get; set; }
 
-
-
-
 	public SteamId PlayerSteamId { get; set; }
-
-
 
 	public string PlayerSteamIdString
 	{
@@ -29,9 +20,6 @@ public class SteamManager : MonoBehaviour
 			return this.playerSteamIdString;
 		}
 	}
-
-
-
 
 	public Friend LobbyPartner
 	{
@@ -45,16 +33,9 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
-
-
 	public SteamId lobbyOwnerSteamId { get; set; }
 
-
-
-
 	public bool LobbyPartnerDisconnected { get; set; }
-
 
 	public void Awake()
 	{
@@ -96,7 +77,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	public bool TryToReconnectToSteam()
 	{
 		Debug.Log("Attempting to reconnect to Steam");
@@ -127,24 +107,20 @@ public class SteamManager : MonoBehaviour
 		return result;
 	}
 
-
 	public bool ConnectedToSteam()
 	{
 		return this.connectedToSteam;
 	}
-
 
 	public void StartLobby()
 	{
 		this.CreateLobby(0);
 	}
 
-
 	public void StopLobby()
 	{
 		this.leaveLobby();
 	}
-
 
 	private void Start()
 	{
@@ -160,12 +136,10 @@ public class SteamManager : MonoBehaviour
 		this.UpdateRichPresenceStatus(SceneManager.GetActiveScene().name);
 	}
 
-
 	private void Update()
 	{
 		SteamClient.RunCallbacks();
 	}
-
 
 	private void OnDisable()
 	{
@@ -175,7 +149,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void OnDestroy()
 	{
 		if (this.daRealOne)
@@ -184,7 +157,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void OnApplicationQuit()
 	{
 		if (this.daRealOne)
@@ -192,7 +164,6 @@ public class SteamManager : MonoBehaviour
 			this.gameCleanup();
 		}
 	}
-
 
 	private void gameCleanup()
 	{
@@ -204,18 +175,15 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void OnLobbyMemberDisconnectedCallback(Lobby lobby, Friend friend)
 	{
 		this.OtherLobbyMemberLeft(friend);
 	}
 
-
 	private void OnLobbyMemberLeaveCallback(Lobby lobby, Friend friend)
 	{
 		this.OtherLobbyMemberLeft(friend);
 	}
-
 
 	private void OtherLobbyMemberLeft(Friend friend)
 	{
@@ -253,11 +221,9 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void OnLobbyGameCreatedCallback(Lobby lobby, uint ip, ushort port, SteamId steamId)
 	{
 	}
-
 
 	public async void JoinLobby(Lobby lobby)
 	{
@@ -269,7 +235,7 @@ public class SteamManager : MonoBehaviour
 		{
 			LocalClient.serverOwner = false;
 			this.leaveLobby();
-			if (await  lobby.Join() != RoomEnter.Success)
+			if (await lobby.Join() != RoomEnter.Success)
 			{
 				Debug.Log("failed to join lobby");
 				StatusMessage.Instance.DisplayMessage("Couldn't find lobby. Make sure it's a valid lobbyID from someone");
@@ -284,7 +250,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void AcceptP2P(SteamId opponentId)
 	{
 		try
@@ -297,7 +262,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void OnChatMessageCallback(Lobby lobby, Friend friend, string message)
 	{
 		if (friend.Id != this.PlayerSteamId)
@@ -307,7 +271,6 @@ public class SteamManager : MonoBehaviour
 			lobby.SetGameServer(this.PlayerSteamId);
 		}
 	}
-
 
 	private void OnLobbyEnteredCallback(Lobby lobby)
 	{
@@ -341,7 +304,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private async void OnGameLobbyJoinRequestedCallback(Lobby joinedLobby, SteamId id)
 	{
 		Debug.LogError("trying to join lobby");
@@ -368,7 +330,6 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	private void OnLobbyCreatedCallback(Result result, Lobby lobby)
 	{
 		Debug.LogError("lobbyu created opkay");
@@ -383,7 +344,6 @@ public class SteamManager : MonoBehaviour
 		Debug.Log("on version: " + lobby.GetData("Version"));
 		SteamLobby.Instance.StartLobby(this.PlayerSteamId, lobby);
 	}
-
 
 	private void OnLobbyMemberJoinedCallback(Lobby lobby, Friend friend)
 	{
@@ -401,7 +361,6 @@ public class SteamManager : MonoBehaviour
 			SteamLobby.Instance.AddPlayerToLobby(friend);
 		}
 	}
-
 
 	public void leaveLobby()
 	{
@@ -440,7 +399,6 @@ public class SteamManager : MonoBehaviour
 		this.currentLobby = default(Lobby);
 	}
 
-
 	public async Task<bool> CreateFriendLobby()
 	{
 		bool result;
@@ -467,7 +425,6 @@ public class SteamManager : MonoBehaviour
 		}
 		return result;
 	}
-
 
 	public async Task<bool> CreateLobby(int lobbyParameters)
 	{
@@ -499,18 +456,15 @@ public class SteamManager : MonoBehaviour
 		return result;
 	}
 
-
 	public void OpenFriendOverlayForGameInvite()
 	{
 		SteamFriends.OpenGameInviteOverlay(this.currentLobby.Id);
 	}
 
-
 	private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 	{
 		this.UpdateRichPresenceStatus(scene.name);
 	}
-
 
 	public void UpdateRichPresenceStatus(string SceneName)
 	{
@@ -529,39 +483,27 @@ public class SteamManager : MonoBehaviour
 		}
 	}
 
-
 	public static SteamManager Instance;
-
 
 	private static uint gameAppId = 1625450U;
 
-
 	private string playerSteamIdString;
-
 
 	private bool connectedToSteam;
 
-
 	private Friend lobbyPartner;
-
 
 	public List<Lobby> activeUnrankedLobbies;
 
-
 	public List<Lobby> activeRankedLobbies;
-
 
 	public Lobby currentLobby;
 
-
 	private Lobby hostedMultiplayerLobby;
-
 
 	private SteamId originalLobbyOwnerId;
 
-
 	private bool applicationHasQuit;
-
 
 	private bool daRealOne;
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour
 {
+	public bool jumping { get; set; }
 
+	public bool sliding { get; set; }
 
+	public bool crouching { get; set; }
 
     public bool sprinting { get; private set; }
 
@@ -13,11 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool noclip { get; set; }
 
-
-
-
     public static PlayerMovement Instance { get; private set; }
-
 
     private void Awake()
     {
@@ -26,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         this.playerStatus = base.GetComponent<PlayerStatus>();
     }
 
-
     private void Start()
     {
         this.playerScale = base.transform.localScale;
@@ -34,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
 
     private void Update()
     {
@@ -46,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
         this.fallSpeed = this.rb.velocity.y;
     }
 
+	public Vector2 GetInput()
+	{
+		return new Vector2(this.x, this.y);
+	}
 
     public void SetInput(Vector2 dir, bool crouching, bool jumping, bool sprinting)
     {
@@ -55,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         this.jumping = jumping;
         this.sprinting = sprinting;
     }
-
 
     private void CheckInput()
     {
@@ -80,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
         this.maxSpeed = this.maxWalkSpeed;
     }
 
-
     public void StartCrouch()
     {
         if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return;
@@ -97,14 +95,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     public void StopCrouch()
     {
         this.sliding = false;
         base.transform.localScale = this.playerScale;
         base.transform.position = new Vector3(base.transform.position.x, base.transform.position.y + 0.65f, base.transform.position.z);
     }
-
 
     private void FootSteps()
     {
@@ -129,6 +125,28 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+	private void WaterMovement()
+	{
+		float num = 1f;
+		if (this.jumping)
+		{
+			num *= 2f;
+		}
+		this.rb.AddForce(Vector3.up * this.rb.mass * -Physics.gravity.y * num);
+		float d = 1f;
+		if (PlayerStatus.Instance.stamina <= 0f)
+		{
+			d = 0.5f;
+		}
+		this.rb.AddForce(this.playerCam.transform.forward * this.y * this.swimSpeed * d);
+		this.rb.AddForce(this.orientation.transform.right * this.x * this.swimSpeed * d);
+	}
+
+	public bool IsUnderWater()
+	{
+		float num = World.Instance.water.position.y;
+		return base.transform.position.y < num;
+	}
 
     public void Movement(float x, float y)
     {
@@ -147,6 +165,15 @@ public class PlayerMovement : MonoBehaviour
         {
             this.maxSpeed *= 0.4f;
         }
+		if (this.IsUnderWater() && (!flying || !noclip))
+		{
+			if (this.rb.drag <= 0f)
+			{
+				this.rb.drag = 1f;
+			}
+			this.WaterMovement();
+			return;
+		}
         if (!flying && !this.grounded)
         {
             this.rb.AddForce(Vector3.down * this.extraGravity);
@@ -253,11 +280,21 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+	
+	public void PushPlayer()
+	{
+		this.pushed = true;
+		Invoke(nameof(ResetPush), 0.3f);
+	}
 
+	private void ResetPush()
+	{
+		this.pushed = false;
+	}
 
     private void RampMovement(Vector2 mag)
     {
-        if (this.grounded && this.onRamp && !this.surfing && !this.crouching && !this.jumping && this.resetJumpCounter >= this.jumpCounterResetTime && Math.Abs(this.x) < 0.05f && Math.Abs(this.y) < 0.05f)
+        if (this.grounded && this.onRamp && !this.surfing && !this.crouching && !this.jumping && this.resetJumpCounter >= this.jumpCounterResetTime && Math.Abs(this.x) < 0.05f && Math.Abs(this.y) < 0.05f && !this.pushed)
         {
             this.rb.useGravity = false;
             if (this.rb.velocity.y > 0f)
@@ -276,7 +313,6 @@ public class PlayerMovement : MonoBehaviour
             this.rb.useGravity = true;
         }
     }
-
 
     private void ResetJump()
     {
@@ -306,7 +342,7 @@ public class PlayerMovement : MonoBehaviour
             }
             this.readyToJump = false;
             base.CancelInvoke(nameof(JumpCooldown));
-            base.Invoke(nameof(JumpCooldown), 0.25f);
+            Invoke(nameof(JumpCooldown), 0.25f);
             this.resetJumpCounter = 0;
             float d = this.jumpForce * PowerupInventory.Instance.GetJumpMultiplier(null);
             this.rb.AddForce(Vector3.up * d * 1.5f, ForceMode.Impulse);
@@ -328,12 +364,10 @@ public class PlayerMovement : MonoBehaviour
         if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) lastJump = DateTime.Now;
     }
 
-
     private void JumpCooldown()
     {
         this.readyToJump = true;
     }
-
 
     private void CounterMovement(float x, float y, Vector2 mag)
     {
@@ -392,18 +426,15 @@ public class PlayerMovement : MonoBehaviour
         this.readyToCounterY = 0;
     }
 
-
     private bool IsHoldingAgainstHorizontalVel(Vector2 vel)
     {
         return (vel.x < -this.threshold && this.x > 0f) || (vel.x > this.threshold && this.x < 0f);
     }
 
-
     private bool IsHoldingAgainstVerticalVel(Vector2 vel)
     {
         return (vel.y < -this.threshold && this.y > 0f) || (vel.y > this.threshold && this.y < 0f);
     }
-
 
     public Vector2 FindVelRelativeToLook()
     {
@@ -416,12 +447,10 @@ public class PlayerMovement : MonoBehaviour
         return new Vector2(magnitude * Mathf.Cos(num2 * 0.017453292f), num3);
     }
 
-
     private bool IsFloor(Vector3 v)
     {
         return Vector3.Angle(Vector3.up, v) < this.maxSlopeAngle;
     }
-
 
     private bool IsSurf(Vector3 v)
     {
@@ -429,18 +458,15 @@ public class PlayerMovement : MonoBehaviour
         return num < 89f && num > this.maxSlopeAngle;
     }
 
-
     private bool IsWall(Vector3 v)
     {
         return Math.Abs(90f - Vector3.Angle(Vector3.up, v)) < 0.1f;
     }
 
-
     private bool IsRoof(Vector3 v)
     {
         return v.y == -1f;
     }
-
 
     private void OnCollisionEnter(Collision other)
     {
@@ -460,7 +486,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void OnCollisionStay(Collision other)
     {
         int layer = other.gameObject.layer;
@@ -471,11 +496,12 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < other.contactCount; i++)
         {
             Vector3 normal = other.contacts[i].normal;
+			normal = new Vector3(normal.x, Mathf.Abs(normal.y), normal.z);
             if (this.IsFloor(normal))
             {
                 if (!this.grounded)
                 {
-                    bool flag = this.crouching;
+                    bool crouching = this.crouching;
                 }
                 if (Vector3.Angle(Vector3.up, normal) > 1f)
                 {
@@ -498,7 +524,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
 
     private void UpdateCollisionChecks()
     {
@@ -527,42 +552,35 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void StopGrounded()
     {
         this.grounded = false;
     }
-
 
     private void StopSurf()
     {
         this.surfing = false;
     }
 
-
     public Vector3 GetVelocity()
     {
         return this.rb.velocity;
     }
-
 
     public float GetFallSpeed()
     {
         return this.rb.velocity.y;
     }
 
-
     public Collider GetPlayerCollider()
     {
         return this.playerCollider;
     }
 
-
     public Transform GetPlayerCamTransform()
     {
         return this.playerCam.transform;
     }
-
 
     public Vector3 HitPoint()
     {
@@ -584,192 +602,136 @@ public class PlayerMovement : MonoBehaviour
         return array[0].point;
     }
 
-
     public bool IsCrouching()
     {
         return this.crouching && !flying;
     }
-
 
     public bool IsDead()
     {
         return this.dead;
     }
 
-
     public Rigidbody GetRb()
     {
         return this.rb;
     }
 
-
     public GameObject playerJumpSmokeFx;
-
 
     public GameObject footstepFx;
 
-
     public Transform playerCam;
-
 
     public Transform orientation;
 
-
     private Rigidbody rb;
-
 
     public bool dead;
 
-
     private float moveSpeed = 3500f;
-
 
     private float maxWalkSpeed = 6.5f;
 
-
     private float maxRunSpeed = 13f;
-
 
     private float maxSpeed = 6.5f;
 
-
     public bool grounded;
-
 
     public LayerMask whatIsGround;
 
-
     public float extraGravity = 5f;
-
 
     private Vector3 crouchScale = new Vector3(1f, 1.05f, 1f);
 
-
     private Vector3 playerScale;
-
 
     private float slideForce = 800f;
 
-
     private float slideCounterMovement = 0.12f;
-
 
     private bool readyToJump = true;
 
-
     private float jumpCooldown = 0.25f;
-
 
     private float jumpForce = 12f;
 
-
     private int jumps = 1;
-
 
     private float x;
 
-
     private float y;
-
 
     private float mouseDeltaX;
 
-
     private float mouseDeltaY;
-
 
     private bool jumping;
 
-
     private bool sliding;
-
 
     private bool crouching;
 
-
     private Vector3 normalVector;
-
 
     public ParticleSystem ps;
 
-
     private ParticleSystem.EmissionModule psEmission;
-
 
     private Collider playerCollider;
 
-
     private float fallSpeed;
-
 
     public GameObject playerSmokeFx;
 
-
     private PlayerStatus playerStatus;
-
 
     private float distance;
 
+	private float swimSpeed = 50f;
 
-    private bool onRamp;
+	private bool pushed;
 
+	private bool onRamp;
 
     private int extraJumps;
 
-
     private int resetJumpCounter;
-
 
     private int jumpCounterResetTime = 10;
 
-
     private float counterMovement = 0.14f;
-
 
     private float threshold = 0.01f;
 
-
     private int readyToCounterX;
-
 
     private int readyToCounterY;
 
-
     private bool cancelling;
-
 
     private float maxSlopeAngle = 50f;
 
-
     private bool airborne;
-
 
     private bool onGround;
 
-
     private bool surfing;
-
 
     private bool cancellingGrounded;
 
-
     private bool cancellingSurf;
-
 
     private float delay = 5f;
 
-
     private int groundCancel;
-
 
     private int wallCancel;
 
-
     private int surfCancel;
 
-
     public LayerMask whatIsHittable;
-
 
     private float vel;
 }

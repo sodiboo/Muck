@@ -3,10 +3,8 @@ using UnityEngine;
 
 namespace MilkShake
 {
-
 	public struct ShakeResult
 	{
-
 		public static ShakeResult operator +(ShakeResult a, ShakeResult b)
 		{
 			return new ShakeResult
@@ -16,9 +14,7 @@ namespace MilkShake
 			};
 		}
 
-
 		public Vector3 PositionShake;
-
 
 		public Vector3 RotationShake;
 	}

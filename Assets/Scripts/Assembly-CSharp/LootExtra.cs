@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class LootExtra : MonoBehaviour
 {
-
 	public static void CheckDrop(int fromClient, HitableResource hitable)
 	{
 		if (GameManager.gameSettings.gameMode == GameSettings.GameMode.Creative) return;
@@ -45,7 +43,6 @@ public class LootExtra : MonoBehaviour
 		}
 	}
 
-
 	public static void DropMobLoot(Transform dropTransform, LootDrop lootTable, int fromClient, float buffMultiplier)
 	{
 		Vector3 vector = dropTransform.position;
@@ -77,26 +74,16 @@ public class LootExtra : MonoBehaviour
 		}
 	}
 
-
 	public static void BossLoot(Transform dropPos, Mob.BossType mobType)
 	{
-		int num = GameManager.instance.GetPlayersInLobby();
-		if (mobType == Mob.BossType.BossShrine)
-		{
-			num = 1;
-		}
+		GameManager.instance.GetPlayersInLobby();
 		Vector3 position = dropPos.position;
 		int id = ItemManager.Instance.GetRandomPowerup(0f, 0.8f, 0.2f).id;
-		for (int i = 0; i < num; i++)
-		{
-			float angle = (float)(360 / num * i);
-			Vector3 pos = LootExtra.RandomCircle(position, 10f, angle);
-			int nextId = ItemManager.Instance.GetNextId();
-			ItemManager.Instance.DropPowerupAtPosition(id, pos, nextId);
-			ServerSend.DropPowerupAtPosition(id, nextId, dropPos.position);
-		}
+		Vector3 position2 = dropPos.position;
+		int nextId = ItemManager.Instance.GetNextId();
+		ItemManager.Instance.DropPowerupAtPosition(id, position2, nextId);
+		ServerSend.DropPowerupAtPosition(id, nextId, dropPos.position);
 	}
-
 
 	private static Vector3 RandomCircle(Vector3 center, float radius, float angle)
 	{

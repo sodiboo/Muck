@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class HitParticles : MonoBehaviour
 {
-
 	public void SetEffect(HitEffect effect)
 	{
 		foreach (ParticleSystem particleSystem in this.particles)
@@ -23,27 +21,21 @@ public class HitParticles : MonoBehaviour
 		this.audio.Randomize(0f);
 	}
 
-
 	private void Start()
 	{
-		if (!this.audioDone)
+		if (this.audio != null && !this.audioDone)
 		{
 			this.audio.Randomize(0f);
 		}
 	}
 
-
 	public ParticleSystem[] particles;
-
 
 	public RandomSfx audio;
 
-
 	public AudioClip[] normalHit;
 
-
 	public AudioClip[] critHit;
-
 
 	private bool audioDone;
 }

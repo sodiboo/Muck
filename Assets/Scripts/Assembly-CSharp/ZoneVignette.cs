@@ -2,10 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ZoneVignette : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ZoneVignette.Instance = this;
@@ -15,7 +13,6 @@ public class ZoneVignette : MonoBehaviour
 		color.a = 0.8f;
 		this.img.color = color;
 	}
-
 
 	public void SetVignette(bool on)
 	{
@@ -29,21 +26,16 @@ public class ZoneVignette : MonoBehaviour
 		this.desiredScale = Vector3.one * 1f;
 	}
 
-
 	private void Update()
 	{
 		base.transform.localScale = Vector3.Lerp(base.transform.localScale, this.desiredScale, Time.deltaTime * 0.2f);
 	}
 
-
 	private float intensity;
-
 
 	private RawImage img;
 
-
 	public static ZoneVignette Instance;
-
 
 	private Vector3 desiredScale = Vector3.one;
 }

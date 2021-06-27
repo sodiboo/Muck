@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class NavmeshTest : MonoBehaviour
 {
-
 	private void OnDrawGizmos()
 	{
 		base.GetComponentInChildren<Renderer>();

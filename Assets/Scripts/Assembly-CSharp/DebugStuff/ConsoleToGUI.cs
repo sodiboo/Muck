@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace DebugStuff
 {
-
 	public class ConsoleToGUI : MonoBehaviour
 	{
-
 		private void Awake()
 		{
 			if (ConsoleToGUI.Instance)
@@ -19,18 +17,15 @@ namespace DebugStuff
 			DontDestroyOnLoad(base.gameObject);
 		}
 
-
 		private void OnEnable()
 		{
 			Application.logMessageReceived += this.Log;
 		}
 
-
 		private void OnDisable()
 		{
 			Application.logMessageReceived -= this.Log;
 		}
-
 
 		public void Log(string logString, string stackTrace, LogType type)
 		{
@@ -44,23 +39,17 @@ namespace DebugStuff
 			this.debugText.text = ConsoleToGUI.myLog;
 		}
 
-
 		private void OnGUI()
 		{
 		}
 
-
 		public TextMeshProUGUI debugText;
-
 
 		private static string myLog = "";
 
-
 		private string output;
 
-
 		private string stack;
-
 
 		public static ConsoleToGUI Instance;
 	}

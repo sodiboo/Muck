@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class CooldownBar : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		CooldownBar.Instance = this;
 		base.gameObject.SetActive(false);
 	}
-
 
 	private void Update()
 	{
@@ -30,7 +27,6 @@ public class CooldownBar : MonoBehaviour
 		}
 	}
 
-
 	public void ResetCooldown(float speedMultiplier)
 	{
 		this.t = 0f;
@@ -38,7 +34,6 @@ public class CooldownBar : MonoBehaviour
 		this.timeToReachTarget = this.time / speedMultiplier;
 		base.transform.gameObject.SetActive(true);
 	}
-
 
 	public void ResetCooldownTime(float time, bool stayOnScreen)
 	{
@@ -49,28 +44,21 @@ public class CooldownBar : MonoBehaviour
 		base.transform.gameObject.SetActive(true);
 	}
 
-
 	public void HideBar()
 	{
 		this.t = this.timeToReachTarget;
 		base.gameObject.SetActive(false);
 	}
 
-
 	public Transform cooldownBar;
-
 
 	private float time = 1f;
 
-
 	private float t;
-
 
 	private float timeToReachTarget;
 
-
 	public static CooldownBar Instance;
-
 
 	private bool stayOnScreen;
 }

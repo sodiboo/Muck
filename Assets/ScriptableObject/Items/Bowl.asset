@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bowl
   m_EditorClassIdentifier: 
+  important: 0
   id: 42
   name: Bowl
   description: its bowl
   type: 8
   tier: 0
-  sprite: {fileID: 21300000, guid: a11f4f149fd6f78499d12dd9dcabb636, type: 3}
-  material: {fileID: 2100000, guid: 5c3684c53ff53a74a9b70d996b46f972, type: 2}
-  mesh: {fileID: 4300000, guid: e9e683ca50a5ed34bbf508d63f1c9894, type: 2}
+  sprite: {fileID: 21300000, guid: f573f690b6ddbc147af9daf065a0b761, type: 3}
+  material: {fileID: 2100000, guid: be5c67385b4fb724397ed9ef81bdefc2, type: 2}
+  mesh: {fileID: 4300000, guid: 48ce86694f554df47bd7b15d6a360222, type: 2}
   rotationOffset: {x: 0, y: -30, z: -10}
   positionOffset: {x: 0, y: 0.1, z: 0}
   scale: 0.6
@@ -34,17 +35,17 @@ MonoBehaviour:
   craftable: 0
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  - item: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
     amount: 1
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 1b566f1c1b2caab40a53b713f68baec7, type: 2}
   buildable: 0
   grid: 0
   prefab: {fileID: 0}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 1
-  processedItem: {fileID: 11400000, guid: f6f7ca6ef29946a4b915031c1d60888d, type: 2}
+  processedItem: {fileID: 11400000, guid: a90692fc17118f44181723a2c53de5d4, type: 2}
   processTime: 1
   heal: 0
   hunger: 0
@@ -57,4 +58,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

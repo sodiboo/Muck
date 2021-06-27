@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 [ExecuteInEditMode]
 public abstract class SpawnZone : MonoBehaviour, SharedObject
 {
-
 	private void Start()
 	{
 		this.entityQueue = this.entityCap;
@@ -15,9 +13,8 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 			return;
 		}
 		this.entities = new List<GameObject>();
-		base.InvokeRepeating(nameof(SlowUpdate), Random.Range(0f, this.updateRate), this.updateRate);
+		InvokeRepeating(nameof(SlowUpdate), Random.Range(0f, this.updateRate), this.updateRate);
 	}
-
 
 	private void SlowUpdate()
 	{
@@ -28,7 +25,7 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 		this.entities.RemoveAll((GameObject item) => item == null);
 		if (this.entities.Count + this.entityBuffer < this.entityCap)
 		{
-			base.Invoke(nameof(QueueEntity), this.respawnTime);
+			Invoke(nameof(QueueEntity), this.respawnTime);
 			this.entityBuffer++;
 		}
 		bool flag = false;
@@ -66,15 +63,12 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 		}
 	}
 
-
 	private void QueueEntity()
 	{
 		this.entityQueue++;
 	}
 
-
 	public abstract void ServerSpawnEntity();
-
 
 	public Vector3 FindRandomPos()
 	{
@@ -89,9 +83,7 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 		return Vector3.zero;
 	}
 
-
 	public abstract GameObject LocalSpawnEntity(Vector3 pos, int entityType, int objectId, int zoneId);
-
 
 	public void ToggleEntities(bool show)
 	{
@@ -104,56 +96,41 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
 		}
 	}
 
-
 	private void OnDrawGizmos()
 	{
 	}
-
 
 	public void SetId(int id)
 	{
 		this.id = id;
 	}
 
-
 	public int GetId()
 	{
 		return this.id;
 	}
 
-
 	public int id;
-
 
 	protected List<GameObject> entities;
 
-
 	protected int entityBuffer;
-
 
 	protected int entityQueue;
 
-
 	public float roamDistance;
-
 
 	public float renderDistance;
 
-
 	public bool despawn = true;
-
 
 	public int entityCap = 3;
 
-
 	public float respawnTime = 60f;
-
 
 	public float updateRate = 2f;
 
-
 	private bool rendered;
-
 
 	public LayerMask whatIsGround;
 }

@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Hammer Shaft
   m_EditorClassIdentifier: 
-  id: 124
+  important: 0
+  id: 135
   name: Hammer Shaft
   description: Wild guess, but it might be used for making a hammer?
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: c74dae1dc3cf3d14f81a399082cdcbfe, type: 3}
-  material: {fileID: 2100000, guid: c4ee4306864ab034bba471e1c032beef, type: 2}
-  mesh: {fileID: 4300000, guid: 7405d8f38d25aac46a0ca877895cee3b, type: 2}
+  sprite: {fileID: 21300000, guid: 01ec82781fab80847b6dd9239bdb4193, type: 3}
+  material: {fileID: 2100000, guid: 11ec73b0cf7be1149b654bd56947e46e, type: 2}
+  mesh: {fileID: 4300000, guid: 3bf0ea7795e5d0541b32a78f2438891b, type: 2}
   rotationOffset: {x: 90, y: 0, z: -15}
   positionOffset: {x: 0, y: 0, z: 0.15}
   scale: 0.8
@@ -38,7 +39,7 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

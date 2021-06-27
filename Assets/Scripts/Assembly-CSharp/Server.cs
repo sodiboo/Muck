@@ -4,19 +4,11 @@ using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 
-
 public class Server
 {
-
-
-
 	public static int MaxPlayers { get; private set; }
 
-
-
-
 	public static int Port { get; private set; }
-
 
 	public static int GetNextId()
 	{
@@ -24,7 +16,6 @@ public class Server
 		Server.idCounter++;
 		return result;
 	}
-
 
 	public static void Start(int maxPlayers, int port)
 	{
@@ -42,7 +33,6 @@ public class Server
 		ThreadManagerServer.Instance.ResetGame();
 	}
 
-
 	private static void TCPConnectCallback(IAsyncResult result)
 	{
 		TcpClient tcpClient = Server.tcpListener.EndAcceptTcpClient(result);
@@ -58,7 +48,6 @@ public class Server
 		}
 		Debug.Log(string.Format("{0} failed to connect: Server full! f", tcpClient.Client.RemoteEndPoint));
 	}
-
 
 	private static void UDPReceiveCallback(IAsyncResult result)
 	{
@@ -93,7 +82,6 @@ public class Server
 		}
 	}
 
-
 	public static void SendUDPData(IPEndPoint clientEndPoint, Packet packet)
 	{
 		try
@@ -109,7 +97,6 @@ public class Server
 		}
 	}
 
-
 	public static void InitializeServerData()
 	{
 		for (int i = 1; i <= Server.MaxPlayers; i++)
@@ -119,7 +106,6 @@ public class Server
 		Server.InitializeServerPackets();
 		Debug.Log("Initialized Packets.");
 	}
-
 
 	public static void InitializeServerPackets()
 	{
@@ -156,8 +142,9 @@ public class Server
             { (int)ClientPackets.finishedLoading, ServerHandle.PlayerFinishedLoading },
             { (int)ClientPackets.spawnEffect, ServerHandle.SpawnEffect },
             { (int)ClientPackets.reviveRequest, ServerHandle.RevivePlayer },
-			{ (int)ClientPackets.interact, new Server.PacketHandler(ServerHandle.Interact) },
-			{ (int)ClientPackets.startedLoading, new Server.PacketHandler(ServerHandle.StartedLoading) },
+			{ (int)ClientPackets.interact, ServerHandle.Interact },
+			{ (int)ClientPackets.startedLoading, ServerHandle.StartedLoading },
+			{ (int)ClientPackets.shipUpdate, ServerHandle.ReceiveShipUpdate },
 
 			{ (int)ClientPackets.moveVehicle, ServerHandle.UpdateCar },
 			{ (int)ClientPackets.enterVehicle, ServerHandle.EnterVehicle },
@@ -165,32 +152,23 @@ public class Server
 		};
 	}
 
-
 	public static void Stop()
 	{
 		Server.tcpListener.Stop();
 		Server.udpListener.Close();
 	}
 
-
 	public static Dictionary<int, Client> clients = new Dictionary<int, Client>();
-
 
 	public static Dictionary<int, Server.PacketHandler> PacketHandlers;
 
-
 	public static int idCounter;
-
 
 	private static TcpListener tcpListener;
 
-
 	private static UdpClient udpListener;
 
-
 	public static IPAddress ipAddress = IPAddress.Any;
-
-
 
 	public delegate void PacketHandler(int fromClient, Packet packet);
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public static class FalloffGenerator
 {
-
 	public static float[,] GenerateFalloffMap(int size)
 	{
 		float[,] array = new float[size, size];
@@ -20,7 +18,6 @@ public static class FalloffGenerator
 		}
 		return array;
 	}
-
 
 	private static float Evaluate(float value)
 	{

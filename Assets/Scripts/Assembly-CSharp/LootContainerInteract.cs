@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 {
-
 	private void Start()
 	{
 		if (this.testPowerup)
@@ -15,7 +13,6 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		this.basePrice = this.price;
 	}
 
-
 	private void OnEnable()
 	{
 		if (this.opened)
@@ -24,13 +21,11 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		}
 	}
 
-
 	private void TestSpawn()
 	{
 		this.id = LootContainerInteract.totalId++;
 		ResourceManager.Instance.AddObject(this.id, base.gameObject);
 	}
-
 
 	public void Interact()
 	{
@@ -47,23 +42,19 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		ClientSend.PickupInteract(this.id);
 	}
 
-
 	private void GetReady()
 	{
 		this.ready = true;
 	}
 
-
 	public void LocalExecute()
 	{
 	}
-
 
 	public void AllExecute()
 	{
 		this.OpenContainer();
 	}
-
 
 	public void ServerExecute(int fromClient)
 	{
@@ -80,11 +71,9 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		}
 	}
 
-
 	public void RemoveObject()
 	{
 	}
-
 
 	public void OpenContainer()
 	{
@@ -96,7 +85,6 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		}
 	}
 
-
 	public string GetName()
 	{
 		this.price = (int)((float)this.basePrice * GameManager.instance.ChestPriceMultiplier());
@@ -107,60 +95,44 @@ public class LootContainerInteract : MonoBehaviour, Interactable, SharedObject
 		return string.Format("{0} Gold\n<size=75%>open chest", this.price);
 	}
 
-
 	public bool IsStarted()
 	{
 		return false;
 	}
-
 
 	public void SetId(int id)
 	{
 		this.id = id;
 	}
 
-
 	public int GetId()
 	{
 		return this.id;
 	}
 
-
 	public LootDrop lootTable;
-
 
 	public int price;
 
-
 	private int basePrice;
-
 
 	private int id;
 
-
 	private static int totalId = 69420;
-
 
 	private bool ready = true;
 
-
 	private bool opened;
-
 
 	public Animator animator;
 
-
 	public float white;
-
 
 	public float blue;
 
-
 	public float gold;
 
-
 	public bool testPowerup;
-
 
 	public Powerup powerupToTest;
 }

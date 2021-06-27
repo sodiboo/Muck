@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class AreaEffect : MonoBehaviour
 {
-
 	public void SetDamage(int d)
 	{
 		this.damage = d;
 		base.GetComponent<Collider>().enabled = true;
 	}
-
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -32,9 +29,7 @@ public class AreaEffect : MonoBehaviour
 		Destroy(this);
 	}
 
-
 	private int damage;
-
 
 	private List<GameObject> actorsHit;
 }

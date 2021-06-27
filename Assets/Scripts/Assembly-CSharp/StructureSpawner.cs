@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class StructureSpawner : MonoBehaviour
 {
-
-
-
 	public float worldScale { get; set; } = 12f;
-
 
 	private void Start()
 	{
@@ -52,16 +47,13 @@ public class StructureSpawner : MonoBehaviour
 		MonoBehaviour.print("spawned: " + this.structures.Count);
 	}
 
-
 	public virtual void Process(GameObject newStructure, RaycastHit hit)
 	{
 	}
 
-
 	private void OnDrawGizmos()
 	{
 	}
-
 
 	public GameObject FindObjectToSpawn(StructureSpawner.WeightedSpawn[] structurePrefabs, float totalWeight)
 	{
@@ -78,43 +70,30 @@ public class StructureSpawner : MonoBehaviour
 		return structurePrefabs[0].prefab;
 	}
 
-
 	public StructureSpawner.WeightedSpawn[] structurePrefabs;
-
 
 	private int mapChunkSize;
 
-
 	private float worldEdgeBuffer = 0.6f;
-
 
 	public int nShrines = 50;
 
-
 	protected ConsistentRandom randomGen;
-
 
 	public LayerMask whatIsTerrain;
 
-
 	private List<GameObject> structures;
-
 
 	public bool dontAddToResourceManager;
 
-
 	private Vector3[] shrines;
 
-
 	private float totalWeight;
-
 
 	[Serializable]
 	public class WeightedSpawn
 	{
-
 		public GameObject prefab;
-
 
 		public float weight;
 	}

@@ -2,20 +2,14 @@
 using TMPro;
 using UnityEngine;
 
-
 public class RespawnTotemUI : MonoBehaviour
 {
-
-
-
 	public bool active { get; set; }
-
 
 	private void Awake()
 	{
 		RespawnTotemUI.Instance = this;
 	}
-
 
 	public void Show()
 	{
@@ -27,7 +21,6 @@ public class RespawnTotemUI : MonoBehaviour
 		Cursor.visible = true;
 	}
 
-
 	public void Hide()
 	{
 		this.root.SetActive(false);
@@ -35,7 +28,6 @@ public class RespawnTotemUI : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
-
 
 	public void RequestRevive(int playerId)
 	{
@@ -52,7 +44,6 @@ public class RespawnTotemUI : MonoBehaviour
 		Debug.LogError("sendinging revie");
 		ClientSend.RevivePlayer(playerId, -1, false);
 	}
-
 
 	public int GetRevivePrice()
 	{
@@ -73,7 +64,6 @@ public class RespawnTotemUI : MonoBehaviour
 		return (int)((float)this.basePrice * num3);
 	}
 
-
 	public void Refresh()
 	{
 		for (int i = this.nameContainer.childCount - 1; i >= 0; i--)
@@ -89,21 +79,15 @@ public class RespawnTotemUI : MonoBehaviour
 		}
 	}
 
-
 	public GameObject namePrefab;
-
 
 	public Transform nameContainer;
 
-
 	public GameObject root;
-
 
 	public TextMeshProUGUI respawnPrice;
 
-
 	public int basePrice = 50;
-
 
 	public static RespawnTotemUI Instance;
 }

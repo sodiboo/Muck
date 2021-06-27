@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bar_Adamantite
   m_EditorClassIdentifier: 
+  important: 0
   id: 62
   name: Adamantite bar
   description: block of adamantite
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: e1235e13f49a9ff4683eae41d524a9d3, type: 3}
-  material: {fileID: 2100000, guid: 9a5bb05dea22dcb4996f6b02729b4870, type: 2}
-  mesh: {fileID: 4300000, guid: 66dc5852b806a4e438e564893eabba21, type: 2}
+  sprite: {fileID: 21300000, guid: 8a8b5ae3d3c2ca747b9f7ac623d9068d, type: 3}
+  material: {fileID: 2100000, guid: baef70c730dc9004e9062c33c3edad6a, type: 2}
+  mesh: {fileID: 4300000, guid: 4fcbf5e7d71e9974ead74e3fa2d26da2, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -42,7 +43,7 @@ MonoBehaviour:
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
-  processedItem: {fileID: 11400000, guid: bb0ead6bae3831846a9825b1eaf2026b, type: 2}
+  processedItem: {fileID: 11400000, guid: 8ec1ac53e4c868149a5552a37cdb2584, type: 2}
   processTime: 0
   heal: 0
   hunger: 0
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

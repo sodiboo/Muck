@@ -1,21 +1,17 @@
 ﻿using UnityEngine;
 
-
 public class MusicController : MonoBehaviour
 {
-
     private void Awake()
     {
         MusicController.Instance = this;
         this.audio = base.GetComponent<AudioSource>();
     }
 
-
     private void Start()
     {
-        this.targetVolume = SaveManager.Instance.state.music / 10f;
+		this.targetVolume = CurrentSettings.Instance.music;
     }
-
 
     public void SetVolume(float f)
     {
@@ -23,9 +19,12 @@ public class MusicController : MonoBehaviour
         this.StartFade(this.audio, 0.1f, f);
     }
 
-
     public void PlaySong(MusicController.SongType s, bool chanceToSkip = true)
     {
+		if (GameManager.instance && GameManager.instance.boatLeft)
+		{
+			return;
+		}
         AudioClip audioClip = null;
         if (this.currentSong == MusicController.SongType.Boss && BossUI.Instance.currentBoss != null)
         {
@@ -65,12 +64,11 @@ public class MusicController : MonoBehaviour
         {
             this.queuedSong = audioClip;
             this.StartFade(this.audio, this.fadeTime, 0f);
-            base.Invoke(nameof(NextSong), this.fadeTime);
+            Invoke(nameof(NextSong), this.fadeTime);
             return;
         }
         this.NextSong(audioClip);
     }
-
 
     private void NextSong()
     {
@@ -79,7 +77,6 @@ public class MusicController : MonoBehaviour
         this.audio.Play();
     }
 
-
     private void NextSong(AudioClip song)
     {
         this.StartFade(this.audio, this.fadeTime, this.targetVolume);
@@ -87,20 +84,21 @@ public class MusicController : MonoBehaviour
         this.audio.Play();
     }
 
-
-    public void StopSong()
+	public void StopSong(float fade = -1f)
     {
-        this.StartFade(this.audio, this.fadeTime, 0f);
-        currentSong = default;
+		float duration = this.fadeTime;
+		if (fade >= 0f)
+		{
+			duration = fade;
+		}
+		this.StartFade(this.audio, duration, 0f);
     }
-
 
     private void Update()
     {
         this.currentTime += Time.deltaTime;
         this.audio.volume = Mathf.Lerp(this.startVolume, this.desiredVolume * this.targetVolume, this.currentTime / this.newFadeTime);
     }
-
 
     private void StartFade(AudioSource audioSource, float duration, float targetVolume)
     {
@@ -110,55 +108,38 @@ public class MusicController : MonoBehaviour
         this.startVolume = audioSource.volume;
     }
 
-
     public AudioClip[] day;
 
-
     public AudioClip[] night;
-
 
     public AudioClip[] boss;
 	
 	public AudioClip[] eurobeat;
 
-
     private AudioSource audio;
-
 
     public static MusicController Instance;
 
-
     private AudioClip queuedSong;
-
 
     private float fadeTime = 6f;
 
-
     private float targetVolume = 0.2f;
-
 
     private MusicController.SongType currentSong;
 
-
     private float currentTime;
-
 
     private float newFadeTime;
 
-
     private float desiredVolume;
-
 
     private float startVolume;
 
-
     public enum SongType
     {
-
         Day,
-
         Night,
-
         Boss,
 		Eurobeat,
     }

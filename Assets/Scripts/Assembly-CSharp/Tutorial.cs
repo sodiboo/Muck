@@ -1,20 +1,14 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class Tutorial : MonoBehaviour
 {
-
-
-
 	public Transform target { get; set; }
-
 
 	private void Awake()
 	{
 		Tutorial.Instance = this;
 	}
-
 
 	private void Start()
 	{
@@ -23,7 +17,6 @@ public class Tutorial : MonoBehaviour
 			Destroy(base.gameObject);
 		}
 	}
-
 
 	private void Update()
 	{
@@ -34,7 +27,7 @@ public class Tutorial : MonoBehaviour
 				return;
 			}
 			this.started = true;
-			base.Invoke(nameof(ContinueTutorial), 5f);
+			Invoke(nameof(ContinueTutorial), 5f);
 			return;
 		}
 		else
@@ -71,11 +64,9 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-
 	private void Tree()
 	{
 	}
-
 
 	private void Workbench()
 	{
@@ -89,7 +80,6 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-
 	private void Build()
 	{
 		if (this.stationPlaced)
@@ -99,7 +89,6 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-
 	private void Inventory()
 	{
 		if (InventoryUI.Instance.gameObject.activeInHierarchy)
@@ -107,7 +96,6 @@ public class Tutorial : MonoBehaviour
 			this.ContinueTutorial();
 		}
 	}
-
 
 	private void TargetFollowUI()
 	{
@@ -127,7 +115,6 @@ public class Tutorial : MonoBehaviour
 			}
 		}
 	}
-
 
 	private void TargetFollowItem()
 	{
@@ -171,7 +158,6 @@ public class Tutorial : MonoBehaviour
 		this.tutorialArrow.localPosition = vector2;
 	}
 
-
 	private Vector3 calculateWorldPosition(Vector3 position, Camera camera)
 	{
 		Vector3 forward = camera.transform.forward;
@@ -185,21 +171,23 @@ public class Tutorial : MonoBehaviour
 		return position;
 	}
 
-
 	private void FindItem(InventoryItem item)
 	{
 		float num = float.PositiveInfinity;
 		GameObject gameObject = null;
 		foreach (GameObject gameObject2 in ResourceManager.Instance.list.Values)
 		{
-			PickupInteract component = gameObject2.GetComponent<PickupInteract>();
-			if (component != null && component.item.id == item.id)
+			if (!(gameObject2 == null))
 			{
-				float num2 = Vector3.Distance(gameObject2.transform.position, PlayerMovement.Instance.transform.position);
-				if (num2 < num)
+				PickupInteract component = gameObject2.GetComponent<PickupInteract>();
+				if (component != null && component.item.id == item.id)
 				{
-					num = num2;
-					gameObject = gameObject2;
+					float num2 = Vector3.Distance(gameObject2.transform.position, PlayerMovement.Instance.transform.position);
+					if (num2 < num)
+					{
+						num = num2;
+						gameObject = gameObject2;
+					}
 				}
 			}
 		}
@@ -209,11 +197,7 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-
-
-
 	public Tutorial.TutorialStep currentStep { get; set; }
-
 
 	public void ContinueTutorial()
 	{
@@ -246,7 +230,6 @@ public class Tutorial : MonoBehaviour
 		}
 	}
 
-
 	private void FindTree()
 	{
 		float num = float.PositiveInfinity;
@@ -272,68 +255,46 @@ public class Tutorial : MonoBehaviour
 		Debug.LogError("didnt find tree");
 	}
 
-
 	public Transform tutorialArrow;
-
 
 	public RectTransform canvasRect;
 
-
 	private bool started;
-
 
 	public Tutorial.TutorialStep[] steps;
 
-
 	public Transform taskParent;
-
 
 	public GameObject taskPrefab;
 
-
 	public static Tutorial Instance;
-
 
 	public bool stationPlaced;
 
-
 	private TutorialTaskUI currentTaskUi;
 
-
 	private int progress;
-
 
 	[Serializable]
 	public class TutorialStep
 	{
-
 		public Tutorial.TutorialState state;
-
 
 		public string text;
 
-
 		public InventoryItem item;
-
 
 		public Transform arrowTargetPos;
 	}
 
-
 	[Serializable]
 	public enum TutorialState
 	{
-
 		Unlock,
-
 		Hotbar,
-
 		Inventory,
-
 		Tree,
-
 		Workbench,
-
 		Build
 	}
 }

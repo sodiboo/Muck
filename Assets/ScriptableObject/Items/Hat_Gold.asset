@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Hat_Gold
   m_EditorClassIdentifier: 
+  important: 0
   id: 13
   name: Gold Helmet
   description: it protecc head
   type: 0
   tier: 1
-  sprite: {fileID: 21300000, guid: cb72f022be8e5a84497db24bedc05617, type: 3}
-  material: {fileID: 2100000, guid: 8ce21768adba8eb4abc40f17ed9d1b52, type: 2}
-  mesh: {fileID: 4300000, guid: 639e3edcfe0e18f4b9d3ab0343934185, type: 2}
+  sprite: {fileID: 21300000, guid: 5c1763ed266d5614680089df8ae5527c, type: 3}
+  material: {fileID: 2100000, guid: c8c31caa1233c6b498d22748ad0c9877, type: 2}
+  mesh: {fileID: 4300000, guid: 2d8713dddbc367c4ab843617a643c710, type: 2}
   rotationOffset: {x: 0, y: 7, z: 75}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,13 +35,13 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 762e7af6ea15bcc49ab3bbbbdfdf4216, type: 2}
+  - item: {fileID: 11400000, guid: 8adcaadf670ede24cb06facfb39398dd, type: 2}
     amount: 5
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: afc2c404f37a3e9479bebd2d9d7e476b, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1778975995777981, guid: ddfb6a9c66def8048a8f8b738d1716ca, type: 3}
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -52,9 +53,9 @@ MonoBehaviour:
   armor: 3
   swingFx: 0
   bowComponent: {fileID: 0}
-  armorComponent: {fileID: 11400000, guid: 7ae8911f1306fba4f8da5c3814ae37d6, type: 2}
+  armorComponent: {fileID: 11400000, guid: e13e06e6b121685459f53027b67a8390, type: 2}
   fuel: {fileID: 0}
   tag: 4
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

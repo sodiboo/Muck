@@ -6,15 +6,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-
 public class InventoryUI : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		InventoryUI.Instance = this;
 	}
-
 
 	private void Start()
 	{
@@ -22,7 +19,6 @@ public class InventoryUI : MonoBehaviour
 		this.UpdateMouseSprite();
 		this.backDrop.SetActive(false);
 	}
-
 
 	public bool CanPickup(InventoryItem i)
 	{
@@ -54,7 +50,6 @@ public class InventoryUI : MonoBehaviour
 		return true;
 	}
 
-
 	public bool IsInventoryFull()
 	{
 		using (List<InventoryCell>.Enumerator enumerator = this.cells.GetEnumerator())
@@ -70,24 +65,18 @@ public class InventoryUI : MonoBehaviour
 		return true;
 	}
 
-
-
-
 	public bool pickupCooldown { get; set; }
-
 
 	public void CooldownPickup()
 	{
 		this.pickupCooldown = true;
-		base.Invoke(nameof(ResetCooldown), (float)(NetStatus.GetPing() * 2) / 1000f);
+		Invoke(nameof(ResetCooldown), (float)(NetStatus.GetPing() * 2) / 1000f);
 	}
-
 
 	private void ResetCooldown()
 	{
 		this.pickupCooldown = false;
 	}
-
 
 	public void CheckInventoryAlmostFull()
 	{
@@ -112,7 +101,6 @@ public class InventoryUI : MonoBehaviour
 		}
 	}
 
-
 	public void PickupItem(InventoryItem item)
 	{
 		this.hotbar.UpdateHotbar();
@@ -120,14 +108,16 @@ public class InventoryUI : MonoBehaviour
 		this.UpdateMouseSprite();
 	}
 
-
 	public void PlaceItem(InventoryItem item)
 	{
 		this.hotbar.UpdateHotbar();
 		this.currentMouseItem = item;
 		this.UpdateMouseSprite();
+		if (Boat.Instance)
+		{
+			Boat.Instance.CheckForMap();
+		}
 	}
-
 
 	private void UpdateMouseSprite()
 	{
@@ -150,12 +140,10 @@ public class InventoryUI : MonoBehaviour
 		}
 	}
 
-
 	private void Update()
 	{
 		this.mouseItemSprite.transform.position = Input.mousePosition;
 	}
-
 
 	public void DropItem([CanBeNull] PointerEventData eventData)
 	{
@@ -190,7 +178,6 @@ public class InventoryUI : MonoBehaviour
 		this.UpdateMouseSprite();
 	}
 
-
 	public void DropItemIntoWorld(InventoryItem item)
 	{
 		if (item == null)
@@ -199,7 +186,6 @@ public class InventoryUI : MonoBehaviour
 		}
 		ClientSend.DropItem(item.id, item.amount);
 	}
-
 
 	private void FillCellList()
 	{
@@ -214,7 +200,6 @@ public class InventoryUI : MonoBehaviour
 		}
 	}
 
-
 	public void UpdateAllCells()
 	{
 		foreach (InventoryCell inventoryCell in this.cells)
@@ -222,7 +207,6 @@ public class InventoryUI : MonoBehaviour
 			inventoryCell.UpdateCell();
 		}
 	}
-
 
 	public void ToggleInventory()
 	{
@@ -232,7 +216,6 @@ public class InventoryUI : MonoBehaviour
 			this.DropItem(null);
 		}
 	}
-
 
 	public int AddItemToInventory(InventoryItem item)
 	{
@@ -276,7 +259,6 @@ public class InventoryUI : MonoBehaviour
 		return inventoryItem.amount;
 	}
 
-
 	public int GetMoney()
 	{
 		int num = 0;
@@ -289,7 +271,6 @@ public class InventoryUI : MonoBehaviour
 		}
 		return num;
 	}
-
 
 	public void UseMoney(int amount)
 	{
@@ -314,7 +295,6 @@ public class InventoryUI : MonoBehaviour
 		}
 	}
 
-
 	public bool IsCraftable(InventoryItem item)
 	{
 		foreach (InventoryItem.CraftRequirement craftRequirement in item.requirements)
@@ -338,7 +318,6 @@ public class InventoryUI : MonoBehaviour
 		}
 		return true;
 	}
-
 
 	public void CraftItem(InventoryItem item)
 	{
@@ -390,6 +369,65 @@ public class InventoryUI : MonoBehaviour
 		this.UpdateMouseSprite();
 	}
 
+	public bool CanRepair(InventoryItem[] requirements)
+	{
+		foreach (InventoryItem requirement in requirements)
+		{
+			if (!this.HasItem(requirement))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public bool Repair(InventoryItem[] requirements)
+	{
+		foreach (InventoryItem requirement in requirements)
+		{
+			if (!this.HasItem(requirement))
+			{
+				return false;
+			}
+		}
+		foreach (InventoryItem inventoryItem in requirements)
+		{
+			int num = 0;
+			foreach (InventoryCell inventoryCell in this.cells)
+			{
+				if (!(inventoryCell.currentItem == null) && inventoryCell.currentItem.Compare(inventoryItem))
+				{
+					if (inventoryCell.currentItem.amount > inventoryItem.amount)
+					{
+						int num2 = inventoryItem.amount - num;
+						inventoryCell.currentItem.amount -= num2;
+						inventoryCell.UpdateCell();
+						break;
+					}
+					num += inventoryCell.currentItem.amount;
+					inventoryCell.RemoveItem();
+				}
+			}
+		}
+		return true;
+	}
+
+	public bool HasItem(InventoryItem requirement)
+	{
+		int num = 0;
+		foreach (InventoryCell inventoryCell in this.cells)
+		{
+			if (!(inventoryCell.currentItem == null) && inventoryCell.currentItem.Compare(requirement))
+			{
+				num += inventoryCell.currentItem.amount;
+				if (num >= requirement.amount)
+				{
+					break;
+				}
+			}
+		}
+		return num >= requirement.amount;
+	}
 
 	public bool AddArmor(InventoryItem item)
 	{
@@ -405,63 +443,44 @@ public class InventoryUI : MonoBehaviour
 		return false;
 	}
 
-
 	public bool HoldingItem()
 	{
 		return this.currentMouseItem != null;
 	}
 
-
 	public Transform inventoryParent;
-
 
 	public Transform hotkeysTransform;
 
-
 	public Transform armorTransform;
-
 
 	public Transform leftTransform;
 
-
 	public InventoryCell[] armorCells;
-
 
 	public InventoryCell[] hotkeyCells;
 
-
 	public InventoryCell[] allCells;
-
 
 	public InventoryCell leftHand;
 
-
 	public InventoryCell arrows;
-
 
 	public Hotbar hotbar;
 
-
 	public List<InventoryCell> cells;
-
 
 	public InventoryItem currentMouseItem;
 
-
 	public Image mouseItemSprite;
-
 
 	public TextMeshProUGUI mouseItemText;
 
-
 	public static InventoryUI Instance;
-
 
 	public static readonly float throwForce = 700f;
 
-
 	public GameObject backDrop;
-
 
 	public InventoryExtensions CraftingUi;
 }

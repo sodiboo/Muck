@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bow_Fir
   m_EditorClassIdentifier: 
-  id: 99
+  important: 0
+  id: 109
   name: Fir bow
   description: Bow
   type: 9
   tier: 1
-  sprite: {fileID: 21300000, guid: 5bb5366ea710da840b1171b1888e999d, type: 3}
-  material: {fileID: 2100000, guid: 6e0ceb4a7726ee34e9abf4a51e33b4d4, type: 2}
-  mesh: {fileID: 4300000, guid: c55945c1836a8e7498b208b15f7a7f0b, type: 2}
+  sprite: {fileID: 21300000, guid: 9592914631f8e1e49acb945dd930bd56, type: 3}
+  material: {fileID: 2100000, guid: fbcfcc8e9cd2d104391b50443936dd35, type: 2}
+  mesh: {fileID: 4300000, guid: 828bfe6ae55534a46844ca09a169c88e, type: 2}
   rotationOffset: {x: 0, y: 0, z: 180}
   positionOffset: {x: 0, y: 0.1, z: 0.12}
   scale: 0.9
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 39bfba2a09f65b94fafaaa72272b3742, type: 2}
+  - item: {fileID: 11400000, guid: 84a4b33b661e4ec4a838a1607bf1092c, type: 2}
     amount: 10
-  - item: {fileID: 11400000, guid: 36dbe7fb4cb7855458ff6f4d3292f2ba, type: 2}
+  - item: {fileID: 11400000, guid: 3970000b4b213694ebc91ce90e837e23, type: 2}
     amount: 1
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: afc2c404f37a3e9479bebd2d9d7e476b, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1943718950072639, guid: fe5428ddf82b3d842973cb61d8d9a0d9, type: 3}
+  prefab: {fileID: 1972850023764178, guid: 13f32a6915e1b644fa01ca73faca4db1, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -53,10 +54,10 @@ MonoBehaviour:
   stamina: 0
   armor: 0
   swingFx: 0
-  bowComponent: {fileID: 11400000, guid: f13d59700e10c6b4d9dc08ec3ef6db5f, type: 2}
+  bowComponent: {fileID: 11400000, guid: eb2aae4180938a4478f9643a6c1deb15, type: 2}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

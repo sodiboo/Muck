@@ -4,10 +4,8 @@ using System.Net.Sockets;
 using TMPro;
 using UnityEngine;
 
-
 public class UiManager : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		if (UiManager.instance == null)
@@ -22,11 +20,9 @@ public class UiManager : MonoBehaviour
 		}
 	}
 
-
 	private void Start()
 	{
 	}
-
 
 	public void Host()
 	{
@@ -44,7 +40,6 @@ public class UiManager : MonoBehaviour
 		this.ConnectTest();
 	}
 
-
 	public void ConnectTest()
 	{
 		foreach (IPAddress ipaddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
@@ -59,7 +54,6 @@ public class UiManager : MonoBehaviour
 		}
 		throw new Exception("No network adapters with an IPv4 address in the system!");
 	}
-
 
 	public void ConnectToServer()
 	{
@@ -78,30 +72,22 @@ public class UiManager : MonoBehaviour
 		}
 	}
 
-
 	public void ConnectionSuccessful()
 	{
 		this.startMenu.SetActive(false);
 	}
 
-
 	public static UiManager instance;
-
 
 	public GameObject lobbyCam;
 
-
 	public GameObject startMenu;
-
 
 	public TMP_InputField usernameField;
 
-
 	public TMP_InputField ipField;
 
-
 	public TMP_InputField portField;
-
 
 	public GameObject server;
 }

@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Gun : MonoBehaviour
 {
-
-
-
 	public static Gun Instance { get; set; }
-
 
 	private void Start()
 	{
@@ -19,7 +14,6 @@ public class Gun : MonoBehaviour
 		this.rb = PlayerMovement.Instance.GetRb();
 		this.playerCam = PlayerMovement.Instance.playerCam;
 	}
-
 
 	private void Update()
 	{
@@ -45,7 +39,6 @@ public class Gun : MonoBehaviour
 		base.transform.localPosition = Vector3.Lerp(base.transform.localPosition, b3, Time.unscaledDeltaTime * 15f);
 	}
 
-
 	private void Rotation(Vector2 offset)
 	{
 		float num = offset.magnitude * 0.03f;
@@ -68,7 +61,6 @@ public class Gun : MonoBehaviour
 		}
 	}
 
-
 	private void MovementBob()
 	{
 		if (!this.rb)
@@ -86,7 +78,6 @@ public class Gun : MonoBehaviour
 		this.desiredBob = new Vector3(x, y, z);
 	}
 
-
 	private void SpeedBob()
 	{
 		Vector2 vector = PlayerMovement.Instance.FindVelRelativeToLook();
@@ -96,19 +87,16 @@ public class Gun : MonoBehaviour
 		this.speedBob = Vector3.Lerp(this.speedBob, vector2, Time.deltaTime * 10f);
 	}
 
-
 	private void RecoilGun()
 	{
 		this.recoilOffset = Vector3.SmoothDamp(this.recoilOffset, Vector3.zero, ref this.recoilOffsetVel, 0.05f);
 		this.recoilRotation = Vector3.SmoothDamp(this.recoilRotation, Vector3.zero, ref this.recoilRotVel, 0.07f);
 	}
 
-
 	public void Build()
 	{
 		this.recoilOffset += Vector3.down;
 	}
-
 
 	private void ReloadGun()
 	{
@@ -121,81 +109,55 @@ public class Gun : MonoBehaviour
 		}
 	}
 
-
 	private Rigidbody rb;
-
 
 	private Transform playerCam;
 
-
 	private Vector3 startPos;
-
 
 	private List<Vector3> velHistory;
 
-
 	private Vector3 desiredBob;
-
 
 	private float xBob = 0.12f;
 
-
 	private float yBob = 0.08f;
-
 
 	private float zBob = 0.1f;
 
-
 	private float bobSpeed = 0.45f;
-
 
 	private Vector3 recoilOffset;
 
-
 	private Vector3 recoilRotation;
-
 
 	private Vector3 recoilOffsetVel;
 
-
 	private Vector3 recoilRotVel;
-
 
 	private float reloadRotation;
 
-
 	private float desiredReloadRotation;
-
 
 	private float reloadTime;
 
-
 	private float rVel;
-
 
 	private float reloadPosOffset;
 
-
 	private float rPVel;
-
 
 	private float gunDrag = 0.2f;
 
-
 	public float currentGunDragMultiplier = 1f;
-
 
 	private float desX;
 
-
 	private float desY;
-
 
 	private Vector3 speedBob;
 
-
 	private float reloadProgress;
-
 
 	private int spins;
 }

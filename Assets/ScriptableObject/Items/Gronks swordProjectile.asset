@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Gronks swordProjectile
   m_EditorClassIdentifier: 
-  id: 121
+  important: 0
+  id: 132
   name: Gronks Sword Projectile
   description: A very heavy sword
   type: 3
   tier: 2
-  sprite: {fileID: 21300000, guid: 6a8e5e814b72a854aa487f11f755abde, type: 3}
-  material: {fileID: 2100000, guid: f917c5bf006b8df42906a9ac7c6bfcfc, type: 2}
-  mesh: {fileID: 4300000, guid: b5f3fdbfa5bcdf24aa16e9354b1e69b8, type: 2}
+  sprite: {fileID: 21300000, guid: 74922831863bba241b72525eabaafdbf, type: 3}
+  material: {fileID: 2100000, guid: eb55794d4b0c52b42b559a545df00035, type: 2}
+  mesh: {fileID: 4300000, guid: 36047bd9c83698b4c8bb6b53e0e35f7b, type: 2}
   rotationOffset: {x: -2.5, y: 20, z: -0.2}
   positionOffset: {x: 0, y: 0, z: -0.2}
   scale: 0.43
@@ -34,15 +35,15 @@ MonoBehaviour:
   craftable: 0
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 78940b9f47b275a4dac300aa99b8676e, type: 2}
+  - item: {fileID: 11400000, guid: 26ad70ef200051e41a5b217316f4baca, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: b2f850ec37921dc47975575fd9a78dbe, type: 2}
+  - item: {fileID: 11400000, guid: ca5e27fa2fade2142b4306a9f12f59f6, type: 2}
     amount: 10
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: afc2c404f37a3e9479bebd2d9d7e476b, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 505a5660e2cc65d4fb891c9edf930725, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1882377552881312, guid: de429db9286260745b5e660ec94d375b, type: 3}
+  prefab: {fileID: 1735057396659708, guid: 3fb9fd200affbdc4cb0f557fa4d5b3d4, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 0
@@ -53,10 +54,10 @@ MonoBehaviour:
   stamina: 0
   armor: 0
   swingFx: 1
-  bowComponent: {fileID: 11400000, guid: c394639b1425a4d45b01bfa2866e4c80, type: 2}
+  bowComponent: {fileID: 11400000, guid: 68a2e8a4e08467a48944da63b4c25f4b, type: 2}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

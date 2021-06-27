@@ -2,15 +2,12 @@
 using TMPro;
 using UnityEngine;
 
-
 public class TopNavigate : MonoBehaviour
 {
-
 	private void OnEnable()
 	{
 		this.Select(0);
 	}
-
 
 	public void Select(int selected)
 	{
@@ -29,15 +26,11 @@ public class TopNavigate : MonoBehaviour
 		}
 	}
 
-
 	public GameObject[] settingMenus;
-
 
 	public TextMeshProUGUI[] texts;
 
-
 	public Color selectedColor;
-
 
 	public Color idleColor;
 }

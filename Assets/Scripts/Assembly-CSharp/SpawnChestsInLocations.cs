@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class SpawnChestsInLocations : MonoBehaviour
 {
-
 	public void SetChests(ConsistentRandom rand)
 	{
 		foreach (SpawnChestsInLocations.WeightedTables weightedTables in this.lootTables)
@@ -37,7 +35,6 @@ public class SpawnChestsInLocations : MonoBehaviour
 		}
 	}
 
-
 	public LootDrop FindLootTable(SpawnChestsInLocations.WeightedTables[] structurePrefabs, float totalWeight, ConsistentRandom rand)
 	{
 		float num = (float)rand.NextDouble();
@@ -54,25 +51,18 @@ public class SpawnChestsInLocations : MonoBehaviour
 		return structurePrefabs[0].table;
 	}
 
-
 	public Transform[] positions;
-
 
 	public SpawnChestsInLocations.WeightedTables[] lootTables;
 
-
 	public GameObject chest;
 
-
 	private float totalWeight;
-
 
 	[Serializable]
 	public class WeightedTables
 	{
-
 		public LootDrop table;
-
 
 		public float weight;
 	}

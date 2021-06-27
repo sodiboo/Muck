@@ -2,15 +2,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class DamageVignette : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		DamageVignette.Instance = this;
 	}
-
 
 	private void Update()
 	{
@@ -47,7 +44,6 @@ public class DamageVignette : MonoBehaviour
 		this.vignette.color = Color.Lerp(this.vignette.color, color, Time.deltaTime * 12f);
 	}
 
-
 	public void VignetteHit()
 	{
 		Color color = this.vignette.color;
@@ -55,9 +51,7 @@ public class DamageVignette : MonoBehaviour
 		this.vignette.color = color;
 	}
 
-
 	public RawImage vignette;
-
 
 	public static DamageVignette Instance;
 }

@@ -3,10 +3,8 @@ using Steamworks.Data;
 using TMPro;
 using UnityEngine;
 
-
 public class JoinLobbyBtn : MonoBehaviour
 {
-
 	public void JoinLobby()
 	{
 		ulong value;
@@ -18,7 +16,6 @@ public class JoinLobbyBtn : MonoBehaviour
 		}
 		StatusMessage.Instance.DisplayMessage("Couldn't find lobby. Make sure it's a valid lobbyID from someone");
 	}
-
 
 	public TMP_InputField inputField;
 }

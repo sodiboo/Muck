@@ -1,27 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class SpectatorCamera : MonoBehaviour
 {
-
 	private void OnEnable()
 	{
 		this.ready = false;
-		base.Invoke(nameof(GetReady), 1f);
+		Invoke(nameof(GetReady), 1f);
 	}
 
-
-
-
 	public static SpectatorCamera Instance { get; private set; }
-
 
 	private void Awake()
 	{
 		SpectatorCamera.Instance = this;
 	}
-
 
 	private void Update()
 	{
@@ -48,27 +41,21 @@ public class SpectatorCamera : MonoBehaviour
 		base.transform.LookAt(this.target);
 	}
 
-
 	public void SetTarget(Transform target, string name)
 	{
 		this.target = target;
 	}
-
 
 	private void GetReady()
 	{
 		this.ready = true;
 	}
 
-
 	public Transform target;
-
 
 	private bool ready;
 
-
 	private int targetId;
-
 
 	private string targetName;
 }

@@ -3,10 +3,8 @@ using Steamworks;
 using Steamworks.Data;
 using UnityEngine;
 
-
 public class SteamPacketManager : MonoBehaviour
 {
-
 	private void Start()
 	{
 		DontDestroyOnLoad(base.gameObject);
@@ -14,13 +12,11 @@ public class SteamPacketManager : MonoBehaviour
 		LocalClient.InitializeClientData();
 	}
 
-
 	private void Update()
 	{
 		SteamClient.RunCallbacks();
 		this.CheckForPackets();
 	}
-
 
 	private void CheckForPackets()
 	{
@@ -35,7 +31,6 @@ public class SteamPacketManager : MonoBehaviour
 			}
 		}
 	}
-
 
 	private static void HandlePacket(P2Packet? p2Packet, int channel)
 	{
@@ -71,7 +66,6 @@ public class SteamPacketManager : MonoBehaviour
 		LocalClient.packetHandlers[key](packet);
 	}
 
-
 	public static void SendPacket(SteamId steamId, Packet p, P2PSend p2pSend, SteamPacketManager.NetworkChannel channel)
 	{
 		int length = p.Length();
@@ -88,12 +82,10 @@ public class SteamPacketManager : MonoBehaviour
 		}), (int)channel);
 	}
 
-
 	private void OnApplicationQuit()
 	{
 		SteamPacketManager.CloseConnections();
 	}
-
 
 	public static void CloseConnections()
 	{
@@ -112,12 +104,9 @@ public class SteamPacketManager : MonoBehaviour
 		SteamClient.Shutdown();
 	}
 
-
 	public enum NetworkChannel
 	{
-
 		ToClient,
-
 		ToServer
 	}
 }

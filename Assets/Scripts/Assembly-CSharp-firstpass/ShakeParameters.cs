@@ -3,15 +3,12 @@ using UnityEngine;
 
 namespace MilkShake
 {
-
 	[Serializable]
 	public class ShakeParameters : IShakeParameters
 	{
-
 		public ShakeParameters()
 		{
 		}
-
 
 		public ShakeParameters(IShakeParameters original)
 		{
@@ -24,9 +21,6 @@ namespace MilkShake
 			this.rotationInfluence = original.RotationInfluence;
 		}
 
-
-		
-		
 		public ShakeType ShakeType
 		{
 			get
@@ -39,9 +33,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
-		
 		public float Strength
 		{
 			get
@@ -54,9 +45,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
-		
 		public float Roughness
 		{
 			get
@@ -69,9 +57,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
-		
 		public float FadeIn
 		{
 			get
@@ -84,9 +69,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
-		
 		public float FadeOut
 		{
 			get
@@ -99,9 +81,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
-		
 		public Vector3 PositionInfluence
 		{
 			get
@@ -114,9 +93,6 @@ namespace MilkShake
 			}
 		}
 
-
-		
-		
 		public Vector3 RotationInfluence
 		{
 			get
@@ -129,34 +105,27 @@ namespace MilkShake
 			}
 		}
 
-
 		[Header("Shake Type")]
 		[SerializeField]
 		private ShakeType shakeType;
-
 
 		[Header("Shake Strength")]
 		[SerializeField]
 		private float strength;
 
-
 		[SerializeField]
 		private float roughness;
-
 
 		[Header("Fade")]
 		[SerializeField]
 		private float fadeIn;
 
-
 		[SerializeField]
 		private float fadeOut;
-
 
 		[Header("Shake Influence")]
 		[SerializeField]
 		private Vector3 positionInfluence;
-
 
 		[SerializeField]
 		private Vector3 rotationInfluence;

@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Pickaxe_Gold
   m_EditorClassIdentifier: 
-  id: 102
+  important: 0
+  id: 112
   name: Gold Pickaxe
   description: its pickaxe
   type: 2
   tier: 1
-  sprite: {fileID: 21300000, guid: 7f77a74f6a7b798428f233fdd7a961ea, type: 3}
-  material: {fileID: 2100000, guid: d9a624ab14f84ca4ea16a3867cbd028c, type: 2}
-  mesh: {fileID: 4300000, guid: a34ecd31716f74d4ab2d156697571078, type: 2}
+  sprite: {fileID: 21300000, guid: dab6c0ffc7bfa6748b76d5c5d630982c, type: 3}
+  material: {fileID: 2100000, guid: 94862ade83bc64f42bff9b835744754d, type: 2}
+  mesh: {fileID: 4300000, guid: 91035a71321e7ba4f8f82b27b74db596, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -34,14 +35,14 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 1
   requirements:
-  - item: {fileID: 11400000, guid: 762e7af6ea15bcc49ab3bbbbdfdf4216, type: 2}
+  - item: {fileID: 11400000, guid: 8adcaadf670ede24cb06facfb39398dd, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 62431e291556532479a3cb6ec56689f3, type: 2}
+  - item: {fileID: 11400000, guid: 5e8b30acbef6fbf43b826dc600277e63, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  - item: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
     amount: 5
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: 21f5202c1b4bd204690ef57622600f31, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 1b566f1c1b2caab40a53b713f68baec7, type: 2}
   buildable: 0
   grid: 0
   prefab: {fileID: 0}
@@ -61,4 +62,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 01000000
-  x: 1
+  x: 0

@@ -1,21 +1,17 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 
-
 public class PowerupInventory : MonoBehaviour
 {
-
     private void Awake()
     {
         PowerupInventory.Instance = this;
     }
 
-
     private void Start()
     {
         this.powerups = new int[ItemManager.Instance.allPowerups.Count];
     }
-
 
     public void AddPowerup(string name, int powerupId, int objectId)
     {
@@ -35,8 +31,8 @@ public class PowerupInventory : MonoBehaviour
         ChatBox.Instance.SendMessage(message);
         Vector3 position = ItemManager.Instance.list[objectId].transform.position;
         ParticleSystem component = Instantiate<GameObject>(this.powerupFx, position, Quaternion.identity).GetComponent<ParticleSystem>();
-        var main = component.main;
-        main.startColor = ItemManager.Instance.allPowerups[powerupId].GetOutlineColor();
+		var sys = component.main;
+		sys.startColor = ItemManager.Instance.allPowerups[powerupId].GetOutlineColor();
         if (ItemManager.Instance.allPowerups[powerupId].tier == Powerup.PowerTier.Orange)
         {
             component.gameObject.GetComponent<RandomSfx>().sounds = new AudioClip[]
@@ -54,7 +50,6 @@ public class PowerupInventory : MonoBehaviour
         PlayerStatus.Instance.UpdateStats();
     }
 
-
     public float GetDefenseMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -64,13 +59,11 @@ public class PowerupInventory : MonoBehaviour
         return PowerupInventory.CumulativeDistribution(playerPowerups[ItemManager.Instance.stringToPowerupId["Danis Milk"]], 0.1f, 40f);
     }
 
-
     public static float CumulativeDistribution(int amount, float scaleSpeed, float maxValue)
     {
         float f = 2.71828f;
         return (1f - Mathf.Pow(f, (float)(-(float)amount) * scaleSpeed)) * maxValue;
     }
-
 
     public float GetStrengthMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -90,7 +83,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + (float)num * num2 + (float)num3 * num4;
     }
 
-
     public int GetExtraDamage([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -99,7 +91,6 @@ public class PowerupInventory : MonoBehaviour
         }
         return 0;
     }
-
 
     public float GetAttackSpeedMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -115,7 +106,6 @@ public class PowerupInventory : MonoBehaviour
         }
         return (1f + num) * num2 * this.juiceSpeed;
     }
-
 
     public float GetStaminaMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -133,7 +123,6 @@ public class PowerupInventory : MonoBehaviour
         return (1f + (float)num * num2) * num3;
     }
 
-
     public float GetHealingMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -144,7 +133,6 @@ public class PowerupInventory : MonoBehaviour
         float num2 = 0.05f;
         return num * num2;
     }
-
 
     public float GetResourceMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -161,7 +149,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + PowerupInventory.CumulativeDistribution(amount, 0.3f, 4f) + num;
     }
 
-
     public float GetLootMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -172,7 +159,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + PowerupInventory.CumulativeDistribution(amount, 0.15f, 1.25f);
     }
 
-
     public float GetSniperScopeMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -180,7 +166,7 @@ public class PowerupInventory : MonoBehaviour
             playerPowerups = this.powerups;
         }
         int amount = playerPowerups[ItemManager.Instance.stringToPowerupId["Sniper Scope"]];
-        float num = PowerupInventory.CumulativeDistribution(amount, 0.15f, 0.2f);
+		float num = PowerupInventory.CumulativeDistribution(amount, 0.14f, 0.15f);
         float result = PowerupInventory.CumulativeDistribution(amount, 0.25f, 50f);
         if (num > Random.Range(0f, 1f))
         {
@@ -188,7 +174,6 @@ public class PowerupInventory : MonoBehaviour
         }
         return 1f;
     }
-
 
     public float GetSniperScopeDamageMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -199,7 +184,6 @@ public class PowerupInventory : MonoBehaviour
         float num = PowerupInventory.CumulativeDistribution(playerPowerups[ItemManager.Instance.stringToPowerupId["Sniper Scope"]], 0.3f, 70f);
         return 1f + num;
     }
-
 
     public float GetLightningMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -221,7 +205,6 @@ public class PowerupInventory : MonoBehaviour
         return -1f;
     }
 
-
     public int GetHpMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -233,7 +216,6 @@ public class PowerupInventory : MonoBehaviour
         return num * num2;
     }
 
-
     public int GetHpIncreasePerKill([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -242,7 +224,6 @@ public class PowerupInventory : MonoBehaviour
         }
         return playerPowerups[ItemManager.Instance.stringToPowerupId["Dracula"]];
     }
-
 
     public int GetShield([CanBeNull] int[] playerPowerups)
     {
@@ -255,7 +236,6 @@ public class PowerupInventory : MonoBehaviour
         return num * num2;
     }
 
-
     public float GetHungerMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -265,7 +245,6 @@ public class PowerupInventory : MonoBehaviour
         float num = PowerupInventory.CumulativeDistribution(playerPowerups[ItemManager.Instance.stringToPowerupId["Spooo Bean"]], 0.2f, 0.5f);
         return 1f - num;
     }
-
 
     public float GetJuiceMultiplier([CanBeNull] int[] playerPowerups)
     {
@@ -277,7 +256,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + num;
     }
 
-
     public float GetRobinMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -287,7 +265,6 @@ public class PowerupInventory : MonoBehaviour
         float num = PowerupInventory.CumulativeDistribution(playerPowerups[ItemManager.Instance.stringToPowerupId["Robin Hood Hat"]], 0.06f, 2f);
         return 1f + num;
     }
-
 
     public float GetEnforcerMultiplier([CanBeNull] int[] playerPowerups, float speed = -1f)
     {
@@ -310,7 +287,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + num4;
     }
 
-
     public float GetSpeedMultiplier([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -326,7 +302,6 @@ public class PowerupInventory : MonoBehaviour
         return (1f + num) * num2 * PlayerStatus.Instance.currentSpeedArmorMultiplier;
     }
 
-
     public float GetAdrenalineBoost([CanBeNull] int[] playerPowerups)
     {
         if (playerPowerups == null)
@@ -337,7 +312,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + num;
     }
 
-
     public int GetMaxHpAndShield(int[] playerPowerups = null)
     {
         if (playerPowerups == null)
@@ -346,7 +320,6 @@ public class PowerupInventory : MonoBehaviour
         }
         return 100 + this.GetHpMultiplier(playerPowerups) + this.GetShield(playerPowerups);
     }
-
 
     public float GetCritChance(int[] playerPowerups = null)
     {
@@ -358,7 +331,6 @@ public class PowerupInventory : MonoBehaviour
         return 0.1f + num;
     }
 
-
     public float GetJumpMultiplier(int[] playerPowerups = null)
     {
         if (playerPowerups == null)
@@ -369,7 +341,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + num;
     }
 
-
     public int GetExtraJumps(int[] playerPowerups = null)
     {
         if (playerPowerups == null)
@@ -378,7 +349,6 @@ public class PowerupInventory : MonoBehaviour
         }
         return playerPowerups[ItemManager.Instance.stringToPowerupId["Janniks Frog"]];
     }
-
 
     public float GetFallWingsMultiplier(int[] playerPowerups = null)
     {
@@ -395,7 +365,6 @@ public class PowerupInventory : MonoBehaviour
         return 1f + num2;
     }
 
-
     public float GetKnockbackMultiplier(int[] playerPowerups = null)
     {
         if (playerPowerups == null)
@@ -409,7 +378,6 @@ public class PowerupInventory : MonoBehaviour
         return 0f;
     }
 
-
     public float GetLifestealMultiplier(int[] playerPowerups = null)
     {
         if (playerPowerups == null)
@@ -419,12 +387,10 @@ public class PowerupInventory : MonoBehaviour
         return PowerupInventory.CumulativeDistribution(playerPowerups[ItemManager.Instance.stringToPowerupId["Crimson Dagger"]], 0.1f, 0.5f);
     }
 
-
     public float GetDamageMultiplier()
     {
         return 1f;
     }
-
 
     public void StartJuice()
     {
@@ -434,42 +400,33 @@ public class PowerupInventory : MonoBehaviour
         }
         this.juiceSpeed = this.GetJuiceMultiplier(null);
         base.CancelInvoke(nameof(StopJuice));
-        base.Invoke(nameof(StopJuice), 2f);
+        Invoke(nameof(StopJuice), 2f);
     }
-
 
     private void StopJuice()
     {
         this.juiceSpeed = 1f;
     }
 
-
     public int GetAmount(string powerup)
     {
         return this.powerups[ItemManager.Instance.stringToPowerupId[powerup]];
     }
-
 
     public int GetMaxDraculaStacks()
     {
         return this.powerups[ItemManager.Instance.stringToPowerupId["Dracula"]] * this.maxStacksPerDracula;
     }
 
-
     private int[] powerups;
-
 
     public GameObject powerupFx;
 
-
     public AudioClip goodPowerupSfx;
-
 
     private float juiceSpeed = 1f;
 
-
     public static PowerupInventory Instance;
 
-
-    private int maxStacksPerDracula = 50;
+	private int maxStacksPerDracula = 40;
 }

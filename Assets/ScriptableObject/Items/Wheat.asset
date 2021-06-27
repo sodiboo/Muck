@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Wheat
   m_EditorClassIdentifier: 
+  important: 0
   id: 51
   name: Wheat
   description: i could totally make dough with this
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 4d087ac8a9d6b1e4fa0f00bffd7dd24a, type: 3}
-  material: {fileID: 2100000, guid: 441fb1a12c6813149a26a45e27de3a96, type: 2}
-  mesh: {fileID: 4300000, guid: 89a0d9a8c2e8d4c4fa75541694df586d, type: 2}
+  sprite: {fileID: 21300000, guid: b0c6902f4d8a16140813be7d71349778, type: 3}
+  material: {fileID: 2100000, guid: b84a76fe7d2f92549aef62f8989b9d30, type: 2}
+  mesh: {fileID: 4300000, guid: 78cefaa9ed4cca94ca39e77e99a3da84, type: 2}
   rotationOffset: {x: 90, y: 0, z: 0}
   positionOffset: {x: 0, y: -0.15, z: 0}
   scale: 0.7
@@ -38,11 +39,11 @@ MonoBehaviour:
   stationRequirement: {fileID: 0}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1996728848672000, guid: 08f9e40726d3727418bed2d67d24dd5b, type: 3}
+  prefab: {fileID: 1805492398279819, guid: bf9712916c738dd42ac23bc9abb15d42, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
-  processedItem: {fileID: 11400000, guid: a4ef86caf66891045a770c1058972d00, type: 2}
+  processedItem: {fileID: 11400000, guid: 90320ab996194e244aa9f2543c0092ee, type: 2}
   processTime: 1
   heal: 2
   hunger: 10
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

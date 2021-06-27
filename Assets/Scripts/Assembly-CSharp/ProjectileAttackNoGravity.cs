@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class ProjectileAttackNoGravity : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.mob = base.GetComponent<Mob>();
 	}
-
 
 	private void SpawnProjectile()
 	{
@@ -26,6 +23,28 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position, normalized, force, id, id2);
 	}
 
+	public void SpawnPredictedWarningAttack()
+	{
+		if (!LocalClient.serverOwner || this.mob.target == null)
+		{
+			return;
+		}
+		Rigidbody component = this.mob.target.GetComponent<Rigidbody>();
+		Vector3 position = this.mob.target.position;
+		Vector3 a = Vector3.zero;
+		if (component)
+		{
+			a = VectorExtensions.XZVector(component.velocity);
+		}
+		float timeToImpact = this.warningAttack.bowComponent.timeToImpact;
+		Vector3 vector2;
+		Vector3 vector = (vector2 = position + a * timeToImpact) - vector2;
+		float force = 0f;
+		int id = this.warningAttack.id;
+		int id2 = this.mob.id;
+		ServerSend.MobSpawnProjectile(vector2, vector, force, id, id2);
+		ProjectileController.Instance.SpawnMobProjectile(vector2, vector, force, id, id2);
+	}
 
 	public void SpawnProjectilePredictionTrajectory()
 	{
@@ -48,7 +67,6 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		ProjectileController.Instance.SpawnMobProjectile(position2, normalized, force, id, id2);
 	}
 
-
 	public void SpawnProjectilePredictNextPosition()
 	{
 		if (!LocalClient.serverOwner || this.mob.target == null)
@@ -65,17 +83,15 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		float projectileSpeed = this.predictionProjectile.bowComponent.projectileSpeed;
 		Vector3 position2 = this.predictionPos.position;
 		float d = Vector3.Distance(position, position2) / projectileSpeed;
-		Vector3 vector = position + a * d;
-		Debug.DrawLine(position, vector, Color.black, 10f);
+		Vector3 a2 = position + a * d;
 		Vector3 position3 = this.predictionPos.position;
-		Vector3 vector2 = vector - position3;
+		Vector3 vector = a2 - position3;
 		int id = this.predictionProjectile.id;
 		int id2 = this.mob.id;
 		float force = 0f;
-		ServerSend.MobSpawnProjectile(position3, vector2, force, id, id2);
-		ProjectileController.Instance.SpawnMobProjectile(position3, vector2, force, id, id2);
+		ServerSend.MobSpawnProjectile(position3, vector, force, id, id2);
+		ProjectileController.Instance.SpawnMobProjectile(position3, vector, force, id, id2);
 	}
-
 
 	private Vector3 findLaunchVelocity(Vector3 targetPosition, GameObject newProjectile)
 	{
@@ -117,30 +133,23 @@ public class ProjectileAttackNoGravity : MonoBehaviour
 		return vector2;
 	}
 
-
 	public InventoryItem projectile;
-
 
 	public InventoryItem predictionProjectile;
 
+	public InventoryItem warningAttack;
 
 	public Transform spawnPos;
 
-
 	public Transform predictionPos;
-
 
 	public float attackForce = 1000f;
 
-
 	public float launchAngle = 40f;
-
 
 	public bool useLowestLaunchAngle;
 
-
 	public Vector3 angularVel;
-
 
 	private Mob mob;
 }

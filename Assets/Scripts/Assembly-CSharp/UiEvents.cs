@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class UiEvents : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		UiEvents.Instance = this;
 		this.idsToUnlock = new Queue<int>();
 	}
-
 
 	private void Start()
 	{
@@ -21,24 +18,20 @@ public class UiEvents : MonoBehaviour
 		this.stationsUnlocked = new bool[ItemManager.Instance.allItems.Count];
 	}
 
-
 	public bool IsSoftUnlocked(int id)
 	{
 		return this.unlockedSoft != null && this.unlockedSoft[id];
 	}
-
 
 	public bool IsHardUnlocked(int id)
 	{
 		return this.unlockedHard != null && this.unlockedHard[id];
 	}
 
-
 	public bool IsStationUnlocked(int id)
 	{
 		return this.stationsUnlocked != null && this.stationsUnlocked[id];
 	}
-
 
 	public void StationUnlock(int id)
 	{
@@ -47,14 +40,12 @@ public class UiEvents : MonoBehaviour
 		this.CheckNewUnlocks(id);
 	}
 
-
 	public void AddPowerup(Powerup p)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.pickupPrefab, this.pickupParent);
 		gameObject.GetComponent<ItemPickedupUI>().SetPowerup(p);
 		gameObject.transform.SetSiblingIndex(0);
 	}
-
 
 	public void AddPickup(InventoryItem item)
 	{
@@ -71,7 +62,6 @@ public class UiEvents : MonoBehaviour
 		}
 	}
 
-
 	public void PlaceInInventory(InventoryItem item)
 	{
 		if (!this.unlockedHard[item.id])
@@ -80,7 +70,6 @@ public class UiEvents : MonoBehaviour
 			this.CheckNewUnlocks(item.id);
 		}
 	}
-
 
 	private bool CanUnlock(InventoryItem.CraftRequirement[] requirements, bool unlockWithFirstRequirement)
 	{
@@ -102,7 +91,6 @@ public class UiEvents : MonoBehaviour
 		return true;
 	}
 
-
 	public void CheckProcessedItem(int id)
 	{
 		if (!this.unlockedHard[id])
@@ -111,7 +99,6 @@ public class UiEvents : MonoBehaviour
 			this.CheckNewUnlocks(id);
 		}
 	}
-
 
 	public void CheckNewUnlocks(int id)
 	{
@@ -135,7 +122,6 @@ public class UiEvents : MonoBehaviour
 		this.Unlock();
 	}
 
-
 	private void UnlockItemHard(int id)
 	{
 		this.unlockedHard[id] = true;
@@ -143,13 +129,11 @@ public class UiEvents : MonoBehaviour
 		this.idsToUnlock.Enqueue(id);
 	}
 
-
 	private void UnlockItemSoft(int id)
 	{
 		this.unlockedSoft[id] = true;
 		this.idsToUnlock.Enqueue(id);
 	}
-
 
 	private void Unlock()
 	{
@@ -157,7 +141,7 @@ public class UiEvents : MonoBehaviour
 		{
 			return;
 		}
-		if (base.IsInvoking(nameof(Unlock)))
+		if (IsInvoking(nameof(Unlock)))
 		{
 			return;
 		}
@@ -167,37 +151,27 @@ public class UiEvents : MonoBehaviour
 		gameObject.transform.SetSiblingIndex(0);
 		if (this.idsToUnlock.Count > 0)
 		{
-			base.Invoke(nameof(Unlock), 2f);
+			Invoke(nameof(Unlock), 2f);
 		}
 	}
 
-
 	public GameObject pickupPrefab;
-
 
 	public Transform pickupParent;
 
-
 	public GameObject unlockPrefab;
-
 
 	public Transform unlockParent;
 
-
 	private bool[] unlockedHard;
-
 
 	private bool[] unlockedSoft;
 
-
 	private bool[] stationsUnlocked;
-
 
 	public bool[] alertCleared;
 
-
 	public static UiEvents Instance;
-
 
 	private Queue<int> idsToUnlock;
 }

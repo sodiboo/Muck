@@ -2,10 +2,8 @@
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-
 public class PPController : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		if (PPController.Instance)
@@ -21,12 +19,10 @@ public class PPController : MonoBehaviour
 		this.chromaticAberration = this.profile.GetSetting<ChromaticAberration>();
 	}
 
-
 	public void SetMotionBlur(bool b)
 	{
 		this.motionBlur.enabled.value = b;
 	}
-
 
 	public void SetBloom(int i)
 	{
@@ -48,13 +44,11 @@ public class PPController : MonoBehaviour
 		}
 	}
 
-
 	public void SetAO(bool b)
 	{
 		this.ao.enabled.value = b;
 		this.chromaticAberration.fastMode.value = !b;
 	}
-
 
 	public void SetChromaticAberration(float f)
 	{
@@ -70,27 +64,20 @@ public class PPController : MonoBehaviour
 		this.chromaticAberration.intensity.value = f;
 	}
 
-
 	public void Reset()
 	{
 		this.SetChromaticAberration(0f);
 	}
 
-
 	private MotionBlur motionBlur;
-
 
 	private Bloom bloom;
 
-
 	private AmbientOcclusion ao;
-
 
 	private ChromaticAberration chromaticAberration;
 
-
 	private PostProcessProfile profile;
-
 
 	public static PPController Instance;
 }

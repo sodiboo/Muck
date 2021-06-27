@@ -2,21 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad122b1b50870c4694d1e911b72693c, type: 3}
+  m_Script: {fileID: 11500000, guid: 570158f127710c6408bd9f3454175dc5, type: 3}
   m_Name: Bulldozer
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   name: Bulldozer
   description: Chance to knock back enemies
-  id: 10
+  id: 1
   tier: 1
-  mesh: {fileID: 4300000, guid: eb15f1ccce35cc24a884779d0b56ab64, type: 2}
-  material: {fileID: 2100000, guid: 14bfda2cd250a654a8d7b9e35f98196b, type: 2}
-  sprite: {fileID: 21300000, guid: 72293e745b310044c944e8bf67036696, type: 3}
-  x: 0
+  mesh: {fileID: 4300000, guid: df2f55df749067b4bb4cf20c17b31f94, type: 2}
+  material: {fileID: 2100000, guid: d1b08e5ea6e91c146a959d880eccdba1, type: 2}
+  sprite: {fileID: 21300000, guid: a10b4649ae0124a46a944cf6171f70c4, type: 3}

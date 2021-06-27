@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bread
   m_EditorClassIdentifier: 
+  important: 0
   id: 52
   name: Bread
   description: lets get this bread
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: 0ddc0e68148362a4fb0cb8277155c163, type: 3}
-  material: {fileID: 2100000, guid: 6509f3fe8cebed0408b815ddf24c1f2e, type: 2}
-  mesh: {fileID: 4300000, guid: 32083daccedd1674db7a0c30b400b0c0, type: 2}
+  sprite: {fileID: 21300000, guid: 2a976d5d3581fb249915366365598096, type: 3}
+  material: {fileID: 2100000, guid: c733424d31b63b843ab0fa2aa04c1c5d, type: 2}
+  mesh: {fileID: 4300000, guid: ff4813e4e2c8fe0499c2dccb6caa29b5, type: 2}
   rotationOffset: {x: 90, y: 0, z: 0}
   positionOffset: {x: 0, y: -0.15, z: 0}
   scale: 0.7
@@ -34,17 +35,17 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: 31dea128646fcc044a9adc736e46c52f, type: 2}
+  - item: {fileID: 11400000, guid: 841f554ed4596034cafae1402f105fc1, type: 2}
     amount: 1
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: ac5040e198f049b4b91cafaea406e4a7, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 33451b3ddecbab04ea57a768bfdad97b, type: 2}
   buildable: 0
   grid: 0
-  prefab: {fileID: 1996728848672000, guid: 08f9e40726d3727418bed2d67d24dd5b, type: 3}
+  prefab: {fileID: 1805492398279819, guid: bf9712916c738dd42ac23bc9abb15d42, type: 3}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 2
-  processedItem: {fileID: 11400000, guid: a4ef86caf66891045a770c1058972d00, type: 2}
+  processedItem: {fileID: 11400000, guid: 90320ab996194e244aa9f2543c0092ee, type: 2}
   processTime: 5
   heal: 25
   hunger: 25
@@ -57,4 +58,4 @@ MonoBehaviour:
   tag: 2
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

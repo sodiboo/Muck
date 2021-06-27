@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
 
 public class ResourceManagerPooled : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ResourceManagerPooled.Instance = this;
 		this.list = new Dictionary<int, GameObject>();
 	}
-
 
 	public void PopulateTrees(List<GameObject>[] trees)
 	{
@@ -24,7 +22,6 @@ public class ResourceManagerPooled : MonoBehaviour
 			}
 		}
 	}
-
 
 	public void AddObject(int key, GameObject o)
 	{
@@ -40,7 +37,6 @@ public class ResourceManagerPooled : MonoBehaviour
 		}
 	}
 
-
 	public void RemoveItem(int id)
 	{
 		GameObject gameObject = this.list[id];
@@ -53,28 +49,23 @@ public class ResourceManagerPooled : MonoBehaviour
 		Destroy(gameObject);
 	}
 
-
 	public bool RemoveInteractItem(int id)
 	{
 		if (!this.list.ContainsKey(id))
 		{
 			return false;
 		}
-		Object obj = this.list[id];
+		var obj = this.list[id];
 		this.list.Remove(id);
 		Destroy(obj);
 		return true;
 	}
 
-
 	public Dictionary<int, GameObject> list;
-
 
 	public GameObject debug;
 
-
 	public bool attatchDebug;
-
 
 	public static ResourceManagerPooled Instance;
 }

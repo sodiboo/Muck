@@ -1,13 +1,10 @@
 ﻿using System;
 
-
 public class ConsistentRandom : Random
 {
-
 	public ConsistentRandom() : this(Environment.TickCount)
 	{
 	}
-
 
 	public ConsistentRandom(int seed)
 	{
@@ -41,12 +38,10 @@ public class ConsistentRandom : Random
 		this.inextp = 21;
 	}
 
-
 	protected override double Sample()
 	{
 		return (double)this.InternalSample() * 4.656612875245797E-10;
 	}
-
 
 	private int InternalSample()
 	{
@@ -75,12 +70,10 @@ public class ConsistentRandom : Random
 		return num3;
 	}
 
-
 	public override int Next()
 	{
 		return this.InternalSample();
 	}
-
 
 	private double GetSampleForLargeRange()
 	{
@@ -91,7 +84,6 @@ public class ConsistentRandom : Random
 		}
 		return ((double)num + 2147483646.0) / 4294967293.0;
 	}
-
 
 	public override int Next(int minValue, int maxValue)
 	{
@@ -107,7 +99,6 @@ public class ConsistentRandom : Random
 		return (int)((long)(this.GetSampleForLargeRange() * (double)num) + (long)minValue);
 	}
 
-
 	public override void NextBytes(byte[] buffer)
 	{
 		if (buffer == null)
@@ -120,21 +111,15 @@ public class ConsistentRandom : Random
 		}
 	}
 
-
 	private const int MBIG = 2147483647;
-
 
 	private const int MSEED = 161803398;
 
-
 	private const int MZ = 0;
-
 
 	private int inext;
 
-
 	private int inextp;
-
 
 	private int[] SeedArray = new int[56];
 }

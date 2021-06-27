@@ -1,23 +1,19 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public abstract class MobServer : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.mob = base.GetComponent<Mob>();
 	}
 
-
 	protected void StartRoutines()
 	{
-		base.InvokeRepeating(nameof(SyncPosition), Random.Range(0f, this.syncPositionInterval), this.syncPositionInterval);
-		base.Invoke(nameof(SyncFindNextPosition), Random.Range(0f, this.FindPositionInterval) + this.mob.mobType.spawnTime);
-		base.InvokeRepeating(nameof(Behaviour), Random.Range(0f, this.behaviourInterval) + this.mob.mobType.spawnTime, this.behaviourInterval);
+		InvokeRepeating(nameof(SyncPosition), Random.Range(0f, this.syncPositionInterval), this.syncPositionInterval);
+		Invoke(nameof(SyncFindNextPosition), Random.Range(0f, this.FindPositionInterval) + this.findPositionInterval[0]);
+		InvokeRepeating(nameof(Behaviour), Random.Range(0f, this.behaviourInterval) + this.mob.mobType.spawnTime, this.behaviourInterval);
 	}
-
 
 	private void Update()
 	{
@@ -28,12 +24,9 @@ public abstract class MobServer : MonoBehaviour
 		this.Behaviour();
 	}
 
-
 	protected abstract void Behaviour();
 
-
 	public abstract void TookDamage();
-
 
 	private void SyncPosition()
 	{
@@ -49,7 +42,6 @@ public abstract class MobServer : MonoBehaviour
 			}
 		}
 	}
-
 
 	protected void SyncFindNextPosition()
 	{
@@ -71,21 +63,15 @@ public abstract class MobServer : MonoBehaviour
 		ServerSend.MobSetDestination(this.mob.GetId(), vector);
 	}
 
-
 	protected abstract Vector3 FindNextPosition();
-
 
 	protected Mob mob;
 
-
 	private float syncPositionInterval = 2f;
-
 
 	protected float FindPositionInterval = 0.5f;
 
-
 	protected float behaviourInterval = 0.1f;
-
 
 	protected float[] findPositionInterval = new float[]
 	{
@@ -93,7 +79,6 @@ public abstract class MobServer : MonoBehaviour
 		2f,
 		5f
 	};
-
 
 	protected int previousTargetId = -1;
 }

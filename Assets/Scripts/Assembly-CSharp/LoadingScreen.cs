@@ -3,10 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class LoadingScreen : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		LoadingScreen.Instance = this;
@@ -15,16 +13,15 @@ public class LoadingScreen : MonoBehaviour
 		this.players = new bool[10];
 		if (LocalClient.serverOwner)
 		{
-			base.InvokeRepeating(nameof(CheckAllPlayersLoading), 10f, 10f);
+			InvokeRepeating(nameof(CheckAllPlayersLoading), 10f, 10f);
 		}
 	}
-
 
 	private void CheckAllPlayersLoading()
 	{
 		if (GameManager.state == GameManager.GameState.Playing)
 		{
-			base.CancelInvoke(nameof(CheckAllPlayersLoading));
+			base.CancelInvoke("CheckAllPlayersLoading");
 			return;
 		}
 		Debug.LogError("Checking all players");
@@ -42,7 +39,6 @@ public class LoadingScreen : MonoBehaviour
 		}
 	}
 
-
 	private void Start()
 	{
 		if (this.loadingInGame)
@@ -51,14 +47,12 @@ public class LoadingScreen : MonoBehaviour
 		}
 	}
 
-
 	public void SetText(string s, float loadProgress)
 	{
 		this.background.gameObject.SetActive(true);
 		this.text.text = s;
 		this.desiredLoad = loadProgress;
 	}
-
 
 	public void Hide(float fadeTime = 1f)
 	{
@@ -69,15 +63,13 @@ public class LoadingScreen : MonoBehaviour
 		{
 			this.canvasGroup.alpha = 0f;
 		}
-		base.Invoke(nameof(HideStuff), this.totalFadeTime);
+		Invoke(nameof(HideStuff), this.totalFadeTime);
 	}
-
 
 	private void HideStuff()
 	{
 		this.background.gameObject.SetActive(false);
 	}
-
 
 	public void FinishLoading()
 	{
@@ -89,7 +81,6 @@ public class LoadingScreen : MonoBehaviour
 		this.loadingParent.gameObject.SetActive(true);
 	}
 
-
 	public void UpdateStatuses(int id)
 	{
 		this.players[id] = true;
@@ -98,7 +89,6 @@ public class LoadingScreen : MonoBehaviour
 			this.loadingParent.GetChild(id).GetComponent<PlayerLoading>().ChangeStatus("<color=green>Ready");
 		}
 	}
-
 
 	public void Show(float fadeTime = 1f)
 	{
@@ -112,7 +102,6 @@ public class LoadingScreen : MonoBehaviour
 		this.background.gameObject.SetActive(true);
 	}
 
-
 	public void InitLoadingPlayers()
 	{
 		this.loadingParent.gameObject.SetActive(false);
@@ -124,11 +113,7 @@ public class LoadingScreen : MonoBehaviour
 		}
 	}
 
-
-
-
 	public float totalFadeTime { get; set; } = 1f;
-
 
 	private void Update()
 	{
@@ -140,51 +125,35 @@ public class LoadingScreen : MonoBehaviour
 		}
 	}
 
-
 	public TextMeshProUGUI text;
-
 
 	public RawImage loadingBar;
 
-
 	public RawImage background;
-
 
 	private float desiredLoad;
 
-
 	private Graphic[] allGraphics;
-
 
 	public CanvasGroup canvasGroup;
 
-
 	public Transform loadingParent;
-
 
 	public GameObject loadingPlayerPrefab;
 
-
 	public static LoadingScreen Instance;
-
 
 	public bool[] players;
 
-
 	public CanvasGroup loadBar;
-
 
 	public CanvasGroup playerStatuses;
 
-
 	public GameObject[] loadingObject;
-
 
 	public bool loadingInGame;
 
-
 	private float currentFadeTime;
-
 
 	private float desiredAlpha;
 }

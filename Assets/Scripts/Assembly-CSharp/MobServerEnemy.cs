@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 
-
 public class MobServerEnemy : MobServer
 {
-
 	protected void Start()
 	{
 		base.StartRoutines();
 		this.groundMask = 1 << LayerMask.NameToLayer("Ground");
 	}
 
-
 	protected override void Behaviour()
 	{
 		this.TryAttack();
 	}
 
-
 	public override void TookDamage()
 	{
 	}
-
 
 	private void TryAttack()
 	{
@@ -44,7 +39,6 @@ public class MobServerEnemy : MobServer
 		this.AttackBehaviour();
 	}
 
-
 	protected virtual void AttackBehaviour()
 	{
 		if (Vector3.Distance(this.mob.target.position, base.transform.position) <= this.mob.mobType.startAttackDistance)
@@ -57,16 +51,14 @@ public class MobServerEnemy : MobServer
 			this.mob.Attack(this.mob.targetPlayerId, num);
 			ServerSend.MobAttack(this.mob.GetId(), this.mob.targetPlayerId, num);
 			this.serverReadyToAttack = false;
-			base.Invoke(nameof(GetReady), this.mob.attackTimes[num] + Random.Range(0f, this.mob.attackCooldown));
+			Invoke(nameof(GetReady), this.mob.attackTimes[num] + Random.Range(0f, this.mob.attackCooldown));
 		}
 	}
-
 
 	protected void GetReady()
 	{
 		this.serverReadyToAttack = true;
 	}
-
 
 	protected override Vector3 FindNextPosition()
 	{
@@ -77,15 +69,15 @@ public class MobServerEnemy : MobServer
 		}
 		if (num < 10f * this.mob.mobType.followPlayerDistance)
 		{
-			base.Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[0]);
+			Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[0]);
 		}
 		else if (num < 25f * this.mob.mobType.followPlayerDistance)
 		{
-			base.Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[1]);
+			Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[1]);
 		}
 		else
 		{
-			base.Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[2]);
+			Invoke(nameof(SyncFindNextPosition), this.findPositionInterval[2]);
 		}
 		if ((this.mob.IsAttacking() && this.mob.stopOnAttack) || this.mob.knocked || !this.mob.ready)
 		{
@@ -180,9 +172,7 @@ public class MobServerEnemy : MobServer
 		return vector;
 	}
 
-
 	public LayerMask groundMask;
-
 
 	protected bool serverReadyToAttack = true;
 }

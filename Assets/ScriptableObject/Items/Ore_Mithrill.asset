@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Ore_Mithrill
   m_EditorClassIdentifier: 
-  id: 79
+  important: 0
+  id: 81
   name: Mithril Ore
   description: its hard rock
   type: 1
   tier: 0
-  sprite: {fileID: 21300000, guid: 81dd96dda19163a4487b9eb99dd41bc8, type: 3}
-  material: {fileID: 2100000, guid: 6c78ba6078d25a2499a6d383ea2952a7, type: 2}
-  mesh: {fileID: 4300000, guid: 85b0881cf60b64745a45bf12c8b90b4b, type: 2}
+  sprite: {fileID: 21300000, guid: 0bd46cada0c8dc5409050f1d95ca1153, type: 3}
+  material: {fileID: 2100000, guid: 32b23feb982d8b849b1a2ec3a77ac8e2, type: 2}
+  mesh: {fileID: 4300000, guid: 6ae751f0f512ab940a48ba75563e44a1, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -42,7 +43,7 @@ MonoBehaviour:
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 1
   processType: 0
-  processedItem: {fileID: 11400000, guid: ed7d065cfc0a3bf41917ff94e8fc68b2, type: 2}
+  processedItem: {fileID: 11400000, guid: ce3be86d651f563468a1a0a41ee3f9d2, type: 2}
   processTime: 10
   heal: 0
   hunger: 0
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

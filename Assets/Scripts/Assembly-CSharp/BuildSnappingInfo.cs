@@ -1,11 +1,9 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-
 [ExecuteInEditMode]
 public class BuildSnappingInfo : MonoBehaviour
 {
-
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
@@ -14,7 +12,6 @@ public class BuildSnappingInfo : MonoBehaviour
 			Gizmos.DrawCube(base.transform.position + a * 1f, Vector3.one * 0.1f);
 		}
 	}
-
 
 	public Vector3[] position;
 

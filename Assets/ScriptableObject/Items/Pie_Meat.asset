@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Pie_Meat
   m_EditorClassIdentifier: 
+  important: 0
   id: 55
   name: Meat Pie
   description: yummy
   type: 8
   tier: 0
-  sprite: {fileID: 21300000, guid: 9a3787e9219c33b4ab452d97d4c819a6, type: 3}
-  material: {fileID: 2100000, guid: 9a3ea707d6f64a44a81754125365ecdc, type: 2}
-  mesh: {fileID: 4300000, guid: c1d80354944c9c24d954f7115732aa50, type: 2}
+  sprite: {fileID: 21300000, guid: 756a27c8571946940b98ed35bd34c4ce, type: 3}
+  material: {fileID: 2100000, guid: 16af222efb953c94eb8e61216df029d3, type: 2}
+  mesh: {fileID: 4300000, guid: b26ee48a56f1e3d4cadbcf2328ccc540, type: 2}
   rotationOffset: {x: 0, y: -30, z: -10}
   positionOffset: {x: 0, y: 0.1, z: 0}
   scale: 0.6
@@ -34,21 +35,21 @@ MonoBehaviour:
   craftable: 0
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: c451538fb64e8ac49b6c60b771b4e4e5, type: 2}
+  - item: {fileID: 11400000, guid: 8ca213930f8295e499498a322882adfb, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: 09b2bc44342f77340ba084f0ba12529b, type: 2}
+  - item: {fileID: 11400000, guid: 947fb45b053328d4eac2fc76dcc36b33, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: 31dea128646fcc044a9adc736e46c52f, type: 2}
+  - item: {fileID: 11400000, guid: 841f554ed4596034cafae1402f105fc1, type: 2}
     amount: 1
   craftAmount: 1
-  stationRequirement: {fileID: 11400000, guid: ac5040e198f049b4b91cafaea406e4a7, type: 2}
+  stationRequirement: {fileID: 11400000, guid: 33451b3ddecbab04ea57a768bfdad97b, type: 2}
   buildable: 0
   grid: 0
   prefab: {fileID: 0}
   buildRotation: {x: 0, y: 0, z: 0}
   processable: 0
   processType: 1
-  processedItem: {fileID: 11400000, guid: f6f7ca6ef29946a4b915031c1d60888d, type: 2}
+  processedItem: {fileID: 11400000, guid: a90692fc17118f44181723a2c53de5d4, type: 2}
   processTime: 5
   heal: 30
   hunger: 60
@@ -61,4 +62,4 @@ MonoBehaviour:
   tag: 2
   rarity: 0
   attackTypes: 
-  x: 1
+  x: 0

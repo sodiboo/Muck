@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class StructureSpawnerWithChests : StructureSpawner
 {
-
 	public override void Process(GameObject newStructure, RaycastHit hit)
 	{
 		newStructure.transform.rotation = Quaternion.LookRotation(hit.normal);

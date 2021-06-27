@@ -1,34 +1,28 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class MenuCamera : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.desiredPos = this.startPos;
 		Time.timeScale = 1f;
 	}
 
-
 	private void Start()
 	{
 		NetworkController.Instance.loading = false;
 	}
-
 
 	public void Lobby()
 	{
 		this.desiredPos = this.lobbyPos;
 	}
 
-
 	public void Menu()
 	{
 		this.desiredPos = this.startPos;
 	}
-
 
 	private void Update()
 	{
@@ -36,12 +30,9 @@ public class MenuCamera : MonoBehaviour
 		base.transform.rotation = Quaternion.Lerp(base.transform.rotation, this.desiredPos.rotation, Time.deltaTime * 5f);
 	}
 
-
 	public Transform startPos;
 
-
 	public Transform lobbyPos;
-
 
 	private Transform desiredPos;
 }

@@ -1,4 +1,9 @@
-export const prefabs = new Map<string, Map<string, string>>();
+export interface UnityAsset {
+  components: Map<number, string>;
+  scripts: Map<string, string[]>;
+}
+
+export const prefabs = new Map<string, UnityAsset>();
 
 import * as io from "./io.ts";
 import * as parse from "./parse.ts";
@@ -8,17 +13,20 @@ interface MonoBehaviour {
   m_Script: string;
 }
 
-function componentsOf(file: string) {
-  const components = new Map<string, string>();
-  for (const component of parse.split(file)) {
+function componentsOf(file: string): UnityAsset {
+  const components = new Map<number, string>();
+  const scripts = new Map<string, string[]>();
+  for (const [id, component] of parse.split(file)) {
+    components.set(id, component);
     if (component.startsWith("MonoBehaviour")) {
-      components.set(
-        parse.guid<MonoBehaviour>(component, "m_Script")!,
+      const guid = parse.guid<MonoBehaviour>(component, "m_Script")!;
+      if (!scripts.has(guid)) scripts.set(guid, []);
+      scripts.get(guid)!.push(
         component,
       );
     }
   }
-  return components;
+  return { components, scripts };
 }
 
 for (const [guid, file] of await io.directory("Assets/PrefabInstance/")) {
@@ -27,4 +35,8 @@ for (const [guid, file] of await io.directory("Assets/PrefabInstance/")) {
 
 export const GameAfterLobby = componentsOf(
   await Deno.readTextFile("../Assets/Scene/Scenes/GameAfterLobby.unity"),
+);
+
+export const Menu = componentsOf(
+  await Deno.readTextFile("../Assets/Scene/Scenes/Menu.unity"),
 );

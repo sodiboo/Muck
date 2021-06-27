@@ -2,15 +2,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
 public class UpdateArmor : MonoBehaviour, IPointerDownHandler, IEventSystemHandler
 {
-
 	private void Awake()
 	{
 		this.cell = base.GetComponent<InventoryCell>();
 	}
-
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
@@ -26,7 +23,6 @@ public class UpdateArmor : MonoBehaviour, IPointerDownHandler, IEventSystemHandl
 		PlayerStatus.Instance.UpdateArmor(base.transform.GetSiblingIndex(), itemId);
 		UiSfx.Instance.PlayArmor();
 	}
-
 
 	private InventoryCell cell;
 }

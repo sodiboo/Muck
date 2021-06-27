@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class ProjectileAttack : MonoBehaviour
 {
-
 	public void SpawnProjectile()
 	{
 		Vector3 position = base.GetComponent<Mob>().target.position;
@@ -17,7 +15,6 @@ public class ProjectileAttack : MonoBehaviour
 		component.AddForce(mass * (magnitude / fixedDeltaTime) * vector.normalized);
 		component.angularVelocity = this.angularVel;
 	}
-
 
 	private Vector3 findLaunchVelocity(Vector3 targetPosition, GameObject newProjectile)
 	{
@@ -50,21 +47,15 @@ public class ProjectileAttack : MonoBehaviour
 		return newProjectile.transform.TransformDirection(direction);
 	}
 
-
 	public GameObject projectile;
-
 
 	public Transform spawnPos;
 
-
 	public float launchAngle = 40f;
-
 
 	public bool useLowestLaunchAngle;
 
-
 	public Vector3 angularVel;
-
 
 	public float disableColliderTime;
 }

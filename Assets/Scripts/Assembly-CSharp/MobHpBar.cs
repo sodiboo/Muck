@@ -2,10 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class MobHpBar : MonoBehaviour
 {
-
 	public void SetMob(GameObject mob)
 	{
 		this.buffIcon.SetActive(false);
@@ -28,7 +26,6 @@ public class MobHpBar : MonoBehaviour
 		}
 	}
 
-
 	public void RemoveMob()
 	{
 		base.gameObject.SetActive(false);
@@ -36,7 +33,6 @@ public class MobHpBar : MonoBehaviour
 		this.attachedObject = null;
 		this.mob = null;
 	}
-
 
 	private void Update()
 	{
@@ -51,18 +47,13 @@ public class MobHpBar : MonoBehaviour
 		this.hpBar.transform.localScale = Vector3.Lerp(this.hpBar.transform.localScale, b, Time.deltaTime * 10f);
 	}
 
-
 	public GameObject attachedObject;
-
 
 	private HitableMob mob;
 
-
 	private Vector3 offsetPos;
 
-
 	public GameObject buffIcon;
-
 
 	public Image hpBar;
 }

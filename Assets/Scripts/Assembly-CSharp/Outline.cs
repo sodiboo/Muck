@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-
 [DisallowMultipleComponent]
 public class Outline : MonoBehaviour
 {
-
-
-
 	public Outline.Mode OutlineMode
 	{
 		get
@@ -22,9 +18,6 @@ public class Outline : MonoBehaviour
 			this.needsUpdate = true;
 		}
 	}
-
-
-
 
 	public Color OutlineColor
 	{
@@ -39,9 +32,6 @@ public class Outline : MonoBehaviour
 		}
 	}
 
-
-
-
 	public float OutlineWidth
 	{
 		get
@@ -55,7 +45,6 @@ public class Outline : MonoBehaviour
 		}
 	}
 
-
 	private void Awake()
 	{
 		this.renderers = base.GetComponentsInChildren<Renderer>();
@@ -67,7 +56,6 @@ public class Outline : MonoBehaviour
 		this.needsUpdate = true;
 	}
 
-
 	private void OnEnable()
 	{
 		foreach (Renderer renderer in this.renderers)
@@ -78,7 +66,6 @@ public class Outline : MonoBehaviour
 			renderer.materials = list.ToArray();
 		}
 	}
-
 
 	private void OnValidate()
 	{
@@ -94,7 +81,6 @@ public class Outline : MonoBehaviour
 		}
 	}
 
-
 	private void Update()
 	{
 		if (this.needsUpdate)
@@ -103,7 +89,6 @@ public class Outline : MonoBehaviour
 			this.UpdateMaterialProperties();
 		}
 	}
-
 
 	private void OnDisable()
 	{
@@ -116,13 +101,11 @@ public class Outline : MonoBehaviour
 		}
 	}
 
-
 	private void OnDestroy()
 	{
 		Destroy(this.outlineMaskMaterial);
 		Destroy(this.outlineFillMaterial);
 	}
-
 
 	private void Bake()
 	{
@@ -140,7 +123,6 @@ public class Outline : MonoBehaviour
 			}
 		}
 	}
-
 
 	private void LoadSmoothNormals()
 	{
@@ -161,7 +143,6 @@ public class Outline : MonoBehaviour
 			}
 		}
 	}
-
 
 	private List<Vector3> SmoothNormals(Mesh mesh)
 	{
@@ -186,7 +167,6 @@ public class Outline : MonoBehaviour
 		}
 		return list;
 	}
-
 
 	private void UpdateMaterialProperties()
 	{
@@ -223,70 +203,51 @@ public class Outline : MonoBehaviour
 		}
 	}
 
-
 	private static HashSet<Mesh> registeredMeshes = new HashSet<Mesh>();
-
 
 	[SerializeField]
 	private Outline.Mode outlineMode;
 
-
 	[SerializeField]
 	private Color outlineColor = Color.white;
-
 
 	[SerializeField]
 	[Range(0f, 10f)]
 	private float outlineWidth = 2f;
-
 
 	[Header("Optional")]
 	[SerializeField]
 	[Tooltip("Precompute enabled: Per-vertex calculations are performed in the editor and serialized with the object. Precompute disabled: Per-vertex calculations are performed at runtime in Awake(). This may cause a pause for large meshes.")]
 	private bool precomputeOutline;
 
-
 	[SerializeField]
 	[HideInInspector]
 	private List<Mesh> bakeKeys = new List<Mesh>();
-
 
 	[SerializeField]
 	[HideInInspector]
 	private List<Outline.ListVector3> bakeValues = new List<Outline.ListVector3>();
 
-
 	private Renderer[] renderers;
-
 
 	private Material outlineMaskMaterial;
 
-
 	private Material outlineFillMaterial;
-
 
 	private bool needsUpdate;
 
-
 	public enum Mode
 	{
-
 		OutlineAll,
-
 		OutlineVisible,
-
 		OutlineHidden,
-
 		OutlineAndSilhouette,
-
 		SilhouetteOnly
 	}
-
 
 	[Serializable]
 	private class ListVector3
 	{
-
 		public List<Vector3> data;
 	}
 }

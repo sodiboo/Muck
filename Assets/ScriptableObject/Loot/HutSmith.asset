@@ -8,79 +8,79 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb39acb6fcbcc3948a30f798c69db3bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eaa186bbd04cd7419c461d5694fae03, type: 3}
   m_Name: HutSmith
   m_EditorClassIdentifier:
   loot:
-  - item: {fileID: 11400000, guid: d4a74070f357277458b20b1a310e9af5, type: 2}
+  - item: {fileID: 11400000, guid: fd86d4cf96cc7c745b19e2dd1df1258b, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.5
-  - item: {fileID: 11400000, guid: 762e7af6ea15bcc49ab3bbbbdfdf4216, type: 2}
+  - item: {fileID: 11400000, guid: 8adcaadf670ede24cb06facfb39398dd, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.5
-  - item: {fileID: 11400000, guid: ed7d065cfc0a3bf41917ff94e8fc68b2, type: 2}
+  - item: {fileID: 11400000, guid: ce3be86d651f563468a1a0a41ee3f9d2, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: aad3d63980b9648479f96ead3eb90793, type: 2}
+  - item: {fileID: 11400000, guid: a5cd6b9f18978e34c830266c9ae8f55d, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.01
-  - item: {fileID: 11400000, guid: a3a033d4a4bd86747965cf653f71248c, type: 2}
+  - item: {fileID: 11400000, guid: de304ce3980ba4d45be720539678a606, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.5
-  - item: {fileID: 11400000, guid: 0b0f2092d636d3f45b159cc148c6f276, type: 2}
+  - item: {fileID: 11400000, guid: 02f9a0a79561cdc41ade11f39ca5c6f7, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.5
-  - item: {fileID: 11400000, guid: bb0ead6bae3831846a9825b1eaf2026b, type: 2}
+  - item: {fileID: 11400000, guid: 8ec1ac53e4c868149a5552a37cdb2584, type: 2}
     amountMin: 5
     amountMax: 100
     dropChance: 0.3
-  - item: {fileID: 11400000, guid: 563c646360cadaf4eb7be4ea3c31bb13, type: 2}
+  - item: {fileID: 11400000, guid: 61e22762a2a17c848969de60ce0a3d61, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: 91f12208a3f54df4884bf23254185f8e, type: 2}
+  - item: {fileID: 11400000, guid: 3ad9e58f30945e643861318f57a0fa9e, type: 2}
     amountMin: 2
     amountMax: 6
     dropChance: 0.2
-  - item: {fileID: 11400000, guid: a3a033d4a4bd86747965cf653f71248c, type: 2}
+  - item: {fileID: 11400000, guid: de304ce3980ba4d45be720539678a606, type: 2}
     amountMin: 5
     amountMax: 15
     dropChance: 0.5
-  - item: {fileID: 11400000, guid: 044a8ef3349424a4c894c9d499448518, type: 2}
+  - item: {fileID: 11400000, guid: 6e2e4cdc0b8d8914ea104add5765c7de, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: 7c79a24470658d44880a9fa3619062d8, type: 2}
+  - item: {fileID: 11400000, guid: ece6d54cbbd811c47b01471ef5e5b3ad, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.05
-  - item: {fileID: 11400000, guid: e8824e5e9af0eed44b1a9f7bc757440e, type: 2}
+  - item: {fileID: 11400000, guid: 1b8912af3e5a55a439533b0e947e7411, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: 614f2584092e9b140b8608fed3f3a5e8, type: 2}
+  - item: {fileID: 11400000, guid: 346f5b7a540de154da2c656a0596797f, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: 9fec1d3214a25804e9e43083547a44dd, type: 2}
+  - item: {fileID: 11400000, guid: f745f454dfd94df4aac4f0813a7b7429, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: f8eb6faa032cef747b3a8d67a0a58100, type: 2}
+  - item: {fileID: 11400000, guid: 5c0a823d6e052c949ab0ce22b11e5525, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: c895f7e1be87224499a2564da4f2c277, type: 2}
+  - item: {fileID: 11400000, guid: 6aa83eedd23dcec4fb585c2d20571460, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.01
-  - item: {fileID: 11400000, guid: a8c0e5511160e884dbc79f22e1f9069b, type: 2}
+  - item: {fileID: 11400000, guid: 1899b69c3369c694395306d4eeaa9402, type: 2}
     amountMin: 1
     amountMax: 1
     dropChance: 0.05

@@ -1,22 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class TestScroll : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		TestScroll.Instance = this;
-		base.Invoke(nameof(GetReady), 4f);
+		Invoke(nameof(GetReady), 4f);
 	}
-
 
 	private void GetReady()
 	{
 		this.ready = true;
 	}
-
 
 	private void Update()
 	{
@@ -31,15 +27,11 @@ public class TestScroll : MonoBehaviour
 		this.terrain.heightMultiplier += 20f * Time.deltaTime;
 	}
 
-
 	public NoiseData noise;
-
 
 	public TerrainData terrain;
 
-
 	public bool ready;
-
 
 	public static TestScroll Instance;
 }

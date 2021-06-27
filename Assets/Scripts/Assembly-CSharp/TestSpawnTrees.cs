@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class TestSpawnTrees : MonoBehaviour
 {
-
 	private void Start()
 	{
 		GameObject item = this.SpawnTree(base.transform.position);
@@ -16,7 +14,6 @@ public class TestSpawnTrees : MonoBehaviour
 		}
 	}
 
-
 	private GameObject SpawnTree(Vector3 pos)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.resourcePrefab, pos, Quaternion.identity);
@@ -25,9 +22,7 @@ public class TestSpawnTrees : MonoBehaviour
 		return gameObject;
 	}
 
-
 	public GameObject resourcePrefab;
-
 
 	public List<GameObject> resources;
 }

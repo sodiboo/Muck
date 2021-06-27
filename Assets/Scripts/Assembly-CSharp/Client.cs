@@ -4,10 +4,8 @@ using System.Net.Sockets;
 using Steamworks;
 using UnityEngine;
 
-
 public class Client
 {
-
 	public Client(int clientId)
 	{
 		this.id = clientId;
@@ -18,23 +16,19 @@ public class Client
 		}
 	}
 
-
 	public void StartClient(string playerName, Color color)
 	{
 		this.player = new Player(this.id, playerName, color);
 	}
-
 
 	public void StartClientSteam(string playerName, Color color, SteamId steamId)
 	{
 		this.player = new Player(this.id, playerName, color, steamId);
 	}
 
-
 	public void SendIntoGame()
 	{
 	}
-
 
 	public void Disconnect()
 	{
@@ -67,33 +61,24 @@ public class Client
 		}
 	}
 
-
 	public static int dataBufferSize = 4096;
-
 
 	public int id;
 
-
 	public Player player;
-
 
 	public Client.TCP tcp;
 
-
 	public Client.UDP udp;
-
 
 	public bool inLobby;
 
-
 	public class TCP
 	{
-
 		public TCP(int i)
 		{
 			this.id = i;
 		}
-
 
 		public void Connect(TcpClient socket)
 		{
@@ -106,7 +91,6 @@ public class Client
 			this.stream.BeginRead(this.receiveBuffer, 0, Client.dataBufferSize, new AsyncCallback(this.ReceiveCallback), null);
 			ServerSend.Welcome(this.id, "Weclome to the server");
 		}
-
 
 		public void SendData(Packet packet)
 		{
@@ -123,7 +107,6 @@ public class Client
 				throw;
 			}
 		}
-
 
 		private void ReceiveCallback(IAsyncResult _result)
 		{
@@ -148,7 +131,6 @@ public class Client
 				Server.clients[this.id].Disconnect();
 			}
 		}
-
 
 		private bool HandleData(byte[] data)
 		{
@@ -186,7 +168,6 @@ public class Client
 			return num <= 1;
 		}
 
-
 		public void Disconnect()
 		{
 			this.socket.Close();
@@ -196,43 +177,33 @@ public class Client
 			this.socket = null;
 		}
 
-
 		public TcpClient socket;
-
 
 		public readonly int id;
 
-
 		private NetworkStream stream;
 
-
 		private Packet receivedData;
-
 
 		private byte[] receiveBuffer;
 	}
 
-
 	public class UDP
 	{
-
 		public UDP(int id)
 		{
 			this.id = id;
 		}
-
 
 		public void Connect(IPEndPoint endPoint)
 		{
 			this.endPoint = endPoint;
 		}
 
-
 		public void SendData(Packet packet)
 		{
 			Server.SendUDPData(this.endPoint, packet);
 		}
-
 
 		public void HandleData(Packet packetData)
 		{
@@ -248,15 +219,12 @@ public class Client
 			});
 		}
 
-
 		public void Disconnect()
 		{
 			this.endPoint = null;
 		}
 
-
 		public IPEndPoint endPoint;
-
 
 		private int id;
 	}

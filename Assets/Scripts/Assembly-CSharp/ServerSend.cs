@@ -1,12 +1,10 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 using Steamworks;
 using UnityEngine;
 
-
 public class ServerSend
 {
-
     private static void SendTCPData(int toClient, Packet packet)
     {
         Packet packet2 = new Packet();
@@ -20,7 +18,6 @@ public class ServerSend
         SteamPacketManager.SendPacket(Server.clients[toClient].player.steamId.Value, packet2, ServerSend.TCPvariant, SteamPacketManager.NetworkChannel.ToClient);
     }
 
-
     private static void SendUDPData(int toClient, Packet packet)
     {
         Packet packet2 = new Packet();
@@ -33,7 +30,6 @@ public class ServerSend
         }
         SteamPacketManager.SendPacket(Server.clients[toClient].player.steamId.Value, packet2, ServerSend.UDPVariant, SteamPacketManager.NetworkChannel.ToClient);
     }
-
 
     private static void SendTCPDataToAll(Packet packet)
     {
@@ -50,12 +46,10 @@ public class ServerSend
         {
             if (((client != null) ? client.player : null) != null)
             {
-                Debug.Log("Sending packet to id: " + client.id);
                 SteamPacketManager.SendPacket(client.player.steamId.Value, packet, ServerSend.TCPvariant, SteamPacketManager.NetworkChannel.ToClient);
             }
         }
     }
-
 
     private static void SendTCPDataToAll(int exceptClient, Packet packet)
     {
@@ -79,7 +73,6 @@ public class ServerSend
             }
         }
     }
-
 
     private static void SendTCPDataToAll(int[] exceptClients, Packet packet)
     {
@@ -123,7 +116,6 @@ public class ServerSend
         }
     }
 
-
     private static void SendUDPDataToAll(Packet packet)
     {
         packet.WriteLength();
@@ -143,7 +135,6 @@ public class ServerSend
             }
         }
     }
-
 
     private static void SendUDPDataToAll(int exceptClient, Packet packet)
     {
@@ -168,7 +159,6 @@ public class ServerSend
         }
     }
 
-
     public static void Welcome(int toClient, string msg)
     {
         using (Packet packet = new Packet((int)ServerPackets.welcome))
@@ -180,7 +170,6 @@ public class ServerSend
         }
     }
 
-
     public static void StartGame(int playerLobbyId, GameSettings settings)
     {
         using (Packet packet = new Packet((int)ServerPackets.startGame))
@@ -191,6 +180,7 @@ public class ServerSend
             packet.Write((int)settings.friendlyFire);
             packet.Write((int)settings.difficulty);
             packet.Write((int)settings.gameLength);
+			packet.Write((int)settings.multiplayer);
             List<Player> list = new List<Player>();
             for (int i = 0; i < Server.clients.Values.Count; i++)
             {
@@ -210,7 +200,6 @@ public class ServerSend
         }
     }
 
-
     public static void ConnectionSuccessful(int toClient)
     {
         using (Packet packet = new Packet((int)ServerPackets.connectionSuccessful))
@@ -218,7 +207,6 @@ public class ServerSend
             ServerSend.SendTCPData(toClient, packet);
         }
     }
-
 
     public static void PlayerDied(int deadPlayerId, Vector3 deathPos, Vector3 gravePos)
     {
@@ -233,6 +221,10 @@ public class ServerSend
         {
             return;
         }
+		if (GameManager.instance.boatLeft)
+		{
+			return;
+		}
         using (Packet packet2 = new Packet((int)ServerPackets.spawnGrave))
         {
             int nextId = ResourceManager.Instance.GetNextId();
@@ -243,7 +235,6 @@ public class ServerSend
         }
     }
 
-
     public static void RespawnPlayer(int respawnId)
     {
         using (Packet packet = new Packet((int)ServerPackets.respawnPlayer))
@@ -252,7 +243,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
-
 
     public static void RevivePlayer(int fromClient, int revivedId, bool shrine, int objectID)
     {
@@ -266,7 +256,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerReady(int fromClient, bool ready)
     {
         using (Packet packet = new Packet((int)ServerPackets.ready))
@@ -277,7 +266,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerReady(int fromClient, bool ready, int toClient)
     {
         using (Packet packet = new Packet((int)ServerPackets.ready))
@@ -287,7 +275,6 @@ public class ServerSend
             ServerSend.SendTCPData(toClient, packet);
         }
     }
-
 
     public static void DropItem(int fromClient, int itemId, int amount, int objectID)
     {
@@ -301,7 +288,6 @@ public class ServerSend
         }
     }
 
-
     public static void DropItemAtPosition(int itemId, int amount, int objectID, Vector3 pos)
     {
         using (Packet packet = new Packet((int)ServerPackets.dropItemAtPosition))
@@ -314,7 +300,6 @@ public class ServerSend
         }
     }
 
-
     public static void DropPowerupAtPosition(int itemId, int objectID, Vector3 pos)
     {
         using (Packet packet = new Packet((int)ServerPackets.dropPowerupAtPosition))
@@ -325,7 +310,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
         }
     }
-
 
     public static void DropResources(int fromClient, int dropTableId, int droppedItemID)
     {
@@ -338,7 +322,6 @@ public class ServerSend
         }
     }
 
-
     public static void PickupItem(int fromClient, int objectID)
     {
         using (Packet packet = new Packet((int)ServerPackets.pickupItem))
@@ -348,7 +331,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
-
 
     public static void PickupInteract(int fromClient, int objectID)
     {
@@ -360,7 +342,6 @@ public class ServerSend
         }
     }
 
-
     public static void WeaponInHand(int fromClient, int objectID)
     {
         using (Packet packet = new Packet((int)ServerPackets.weaponInHand))
@@ -370,7 +351,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(fromClient, packet);
         }
     }
-
 
     public static void SendBuild(int fromClient, int itemId, int newObjectId, Vector3 pos, Quaternion rot)
     {
@@ -385,7 +365,6 @@ public class ServerSend
         }
     }
 
-
     public static void AnimationUpdate(int fromClient, int animation, bool b)
     {
         using (Packet packet = new Packet((int)ServerPackets.animationUpdate))
@@ -394,16 +373,15 @@ public class ServerSend
             packet.Write(animation);
             packet.Write(b);
             Vector3 pos = Server.clients[fromClient].player.pos;
-            foreach (Client client in Server.clients.Values)
-            {
-                if (((client != null) ? client.player : null) != null && client.id != fromClient && Vector3.Distance(pos, client.player.pos) <= 100f)
-                {
-                    ServerSend.SendUDPData(client.id, packet);
-                }
-            }
+            foreach (PlayerManager playerManager in GameManager.players.Values)
+			{
+				if (!(playerManager == null) && playerManager.id != fromClient && Vector3.Distance(pos, playerManager.transform.position) <= 100f)
+				{
+					ServerSend.SendUDPData(playerManager.id, packet);
+				}
+			}
         }
     }
-
 
     public static void ShootArrow(Vector3 pos, Vector3 rot, float force, int arrowId, int playerId)
     {
@@ -418,7 +396,6 @@ public class ServerSend
         }
     }
 
-
     public static void OpenChest(int fromClient, int chestId, bool use)
     {
         using (Packet packet = new Packet((int)ServerPackets.openChest))
@@ -429,7 +406,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
-
 
     public static void UpdateChest(int fromClient, int chestId, int cellId, int itemId, int amount)
     {
@@ -444,7 +420,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerHitObject(int fromClient, int objectID, int hp, int hitEffect, Vector3 pos)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerHitObject))
@@ -458,7 +433,6 @@ public class ServerSend
         }
     }
 
-
     public static void SpawnEffect(int effectId, Vector3 pos, int fromClient)
     {
         using (Packet packet = new Packet((int)ServerPackets.spawnEffect))
@@ -468,7 +442,6 @@ public class ServerSend
             ServerSend.SendUDPDataToAll(fromClient, packet);
         }
     }
-
 
     public static void HitPlayer(int fromClient, int damage, float hpRatioEstimate, int hurtPlayerId, int hitEffect, Vector3 pos)
     {
@@ -483,7 +456,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
-
 
     public static void SpawnPlayer(int toClient, Player player, Vector3 pos)
     {
@@ -507,7 +479,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerHp(int fromId, float hpRatio)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerHp))
@@ -518,7 +489,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerPosition(Player player, int t)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerPosition))
@@ -528,7 +498,6 @@ public class ServerSend
             ServerSend.SendUDPDataToAll(player.id, packet);
         }
     }
-
 
     public static void PlayerRotation(Player player)
     {
@@ -541,7 +510,6 @@ public class ServerSend
         }
     }
 
-
     public static void PingPlayer(int player, string ms)
     {
         using (Packet packet = new Packet((int)ServerPackets.pingPlayer))
@@ -552,7 +520,6 @@ public class ServerSend
         }
     }
 
-
     public static void DisconnectPlayer(int player)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerDisconnect))
@@ -561,7 +528,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
-
 
     public static void ShrineStart(int[] mobIds, int shrineId)
     {
@@ -578,7 +544,6 @@ public class ServerSend
         }
     }
 
-
     public static void MobMove(int mobId, Vector3 pos)
     {
         using (Packet packet = new Packet((int)ServerPackets.mobMove))
@@ -588,7 +553,6 @@ public class ServerSend
             ServerSend.SendUDPDataToAll(LocalClient.instance.myId, packet);
         }
     }
-
 
     public static void MobSetDestination(int mobId, Vector3 dest)
     {
@@ -600,7 +564,6 @@ public class ServerSend
         }
     }
 
-
     public static void SendMobTarget(int mobId, int targetId)
     {
         using (Packet packet = new Packet((int)ServerPackets.setTarget))
@@ -611,8 +574,7 @@ public class ServerSend
         }
     }
 
-
-    public static void MobSpawn(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier)
+	public static void MobSpawn(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier, int guardianType)
     {
         using (Packet packet = new Packet((int)ServerPackets.mobSpawn))
         {
@@ -621,10 +583,10 @@ public class ServerSend
             packet.Write(mobId);
             packet.Write(multiplier);
             packet.Write(bossMultiplier);
+			packet.Write(guardianType);
             ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
         }
     }
-
 
     public static void MobAttack(int mobId, int targetPlayerId, int attackAnimationIndex)
     {
@@ -636,7 +598,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
         }
     }
-
 
     public static void MobSpawnProjectile(Vector3 pos, Vector3 dir, float force, int itemId, int mobObjectId)
     {
@@ -651,7 +612,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerHitMob(int fromClient, int mobId, int hpLeft, int hitEffect, Vector3 pos)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerDamageMob))
@@ -665,7 +625,6 @@ public class ServerSend
         }
     }
 
-
     public static void KnockbackMob(int mobId, Vector3 dir)
     {
         using (Packet packet = new Packet((int)ServerPackets.knockbackMob))
@@ -676,7 +635,6 @@ public class ServerSend
         }
     }
 
-
     public static void Interact(int interactId, int fromId)
     {
         using (Packet packet = new Packet((int)ServerPackets.interact))
@@ -686,7 +644,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
         }
     }
-
 
     public static void MobZoneSpawn(Vector3 pos, int mobType, int mobId, int mobZoneId)
     {
@@ -700,7 +657,6 @@ public class ServerSend
         }
     }
 
-
     public static void PickupZoneSpawn(Vector3 pos, int entityId, int mobId, int mobZoneId)
     {
         using (Packet packet = new Packet((int)ServerPackets.PickupZoneSpawn))
@@ -713,7 +669,6 @@ public class ServerSend
         }
     }
 
-
     public static void MobZoneToggle(bool show, int objectID)
     {
         using (Packet packet = new Packet((int)ServerPackets.MobZoneToggle))
@@ -723,7 +678,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
-
 
     public static void SendChatMessage(int fromClient, string username, string msg)
     {
@@ -736,7 +690,6 @@ public class ServerSend
         }
     }
 
-
     public static void SendPing(int fromClient, Vector3 pos, string username)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerPing))
@@ -746,7 +699,6 @@ public class ServerSend
             ServerSend.SendUDPDataToAll(fromClient, packet);
         }
     }
-
 
     public static void SendArmor(int fromClient, int armorSlot, int itemId)
     {
@@ -759,7 +711,6 @@ public class ServerSend
         }
     }
 
-
     public static void NewDay(int day)
     {
         using (Packet packet = new Packet((int)ServerPackets.newDay))
@@ -768,7 +719,6 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
         }
     }
-
 
     public static void GameOver(int winnerId = -2)
     {
@@ -779,7 +729,6 @@ public class ServerSend
         }
     }
 
-
     public static void PlayerFinishedLoading(int playerId)
     {
         using (Packet packet = new Packet((int)ServerPackets.playerFinishedLoading))
@@ -788,6 +737,25 @@ public class ServerSend
             ServerSend.SendTCPDataToAll(packet);
         }
     }
+
+	public static void SendShipUpdate(int fromClient, int type, int interactId)
+	{
+		using (Packet packet = new Packet(55))
+		{
+			packet.Write(type);
+			packet.Write(interactId);
+			ServerSend.SendTCPDataToAll(fromClient, packet);
+		}
+	}
+
+	public static void DragonUpdate(int dragonUpdateType)
+	{
+		using (Packet packet = new Packet(56))
+		{
+			packet.Write(dragonUpdateType);
+			ServerSend.SendTCPDataToAll(LocalClient.instance.myId, packet);
+		}
+	}
 
     public static void UpdateCar(int fromClient, int id, Car car)
     {
@@ -847,7 +815,6 @@ public class ServerSend
     }
 
     private static P2PSend TCPvariant = P2PSend.Reliable;
-
 
     private static P2PSend UDPVariant = P2PSend.Unreliable;
 }

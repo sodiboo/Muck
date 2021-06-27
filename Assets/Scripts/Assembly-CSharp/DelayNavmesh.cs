@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-
 public class DelayNavmesh : MonoBehaviour
 {
-
 	private void Awake()
 	{
-		base.Invoke(nameof(ResetObstacle), Random.Range(5f, 15f));
+		Invoke(nameof(ResetObstacle), Random.Range(5f, 15f));
 	}
-
 
 	private void ResetObstacle()
 	{

@@ -4,14 +4,9 @@ using Steamworks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class GameManager : MonoBehaviour
 {
-
-
-
 	public static GameSettings gameSettings { get; set; }
-
 
 	private void Awake()
 	{
@@ -26,7 +21,6 @@ public class GameManager : MonoBehaviour
 		GameManager.players = new Dictionary<int, PlayerManager>();
 		this.currentDay = 0;
 	}
-
 
 	private void Start()
 	{
@@ -60,12 +54,10 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-
 	public static int GetSeed()
 	{
 		return GameManager.gameSettings?.Seed ?? 44430;
 	}
-
 
 	private IEnumerator GenerateWorldRoutine()
 	{
@@ -74,13 +66,16 @@ public class GameManager : MonoBehaviour
 			Instantiate<GameObject>(this.zone, Vector3.zero, Quaternion.identity);
 			if (LocalClient.serverOwner)
 			{
-				base.InvokeRepeating(nameof(SlowUpdate), 0.5f, 0.5f);
+				InvokeRepeating(nameof(SlowUpdate), 0.5f, 0.5f);
 			}
 		}
 		yield return 3f;
 		LoadingScreen.Instance.SetText("Generating World Mesh", 0.25f);
 		this.mapGenerator.GenerateMap(GameManager.GetSeed());
 		Map.Instance.GenerateMap();
+		yield return 30;
+		LoadingScreen.Instance.SetText("Generating resources", 0.5f);
+		this.resourceGen.SetActive(true);
 		yield return 30;
 		LoadingScreen.Instance.SetText("Generating resources", 0.5f);
 		this.resourceGen.SetActive(true);
@@ -94,7 +89,6 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-
 	private void GenerateWorld()
 	{
 		MonoBehaviour.print("generating world");
@@ -105,11 +99,7 @@ public class GameManager : MonoBehaviour
 		this.generateNavmesh.GenerateNavMesh();
 	}
 
-
-
-
 	public int currentDay { get; set; }
-
 
 	public void UpdateDay(int day)
 	{
@@ -121,7 +111,6 @@ public class GameManager : MonoBehaviour
 			ZoneController.Instance.NextDay(this.currentDay);
 		}
 	}
-
 
 	public void SpawnPlayer(int id, string username, Color color, Vector3 position, float orientationY)
 	{
@@ -148,10 +137,9 @@ public class GameManager : MonoBehaviour
 		GameManager.players.Add(id, component);
 		if ((GameManager.gameSettings.gameMode == GameSettings.GameMode.Versus && id == LocalClient.instance.myId) || GameManager.gameSettings.gameMode != GameSettings.GameMode.Versus)
 		{
-			this.extraUi.InitPlayerStatus(id, username);
+			this.extraUi.InitPlayerStatus(id, username, component);
 		}
 	}
-
 
 	public int CalculateDamage(float damage, float armor, float sharpness, float hardness)
 	{
@@ -162,7 +150,6 @@ public class GameManager : MonoBehaviour
 		}
 		return (int)(damage * armor);
 	}
-
 
 	public float MobDamageMultiplier()
 	{
@@ -184,7 +171,6 @@ public class GameManager : MonoBehaviour
 		return num + Mathf.Pow(num2 * (float)this.currentDay, p);
 	}
 
-
 	public float ChestPriceMultiplier()
 	{
 		if (GameManager.gameSettings.difficulty != GameSettings.Difficulty.Gamer)
@@ -197,27 +183,25 @@ public class GameManager : MonoBehaviour
 		return Mathf.Clamp(num * (1f + (float)(this.currentDay - 3) / chestPriceMultiplier), min, 100f);
 	}
 
-
 	public float MobHpMultiplier()
 	{
 		float num = 1.05f;
-		float num2 = 0.23f;
-		float p = 1.54f;
+		float num2 = 0.24f;
+		float p = 1.55f;
 		if (GameManager.gameSettings.difficulty == GameSettings.Difficulty.Easy)
 		{
 			num = 0.9f;
 			num2 = 0.2f;
-			p = 1.3f;
+			p = 1.4f;
 		}
 		else if (GameManager.gameSettings.difficulty == GameSettings.Difficulty.Gamer)
 		{
 			num = 1.3f;
-			num2 = 0.28f;
-			p = 1.65f;
+			num2 = 0.3f;
+			p = 1.8f;
 		}
 		return num + Mathf.Pow(num2 * (float)this.currentDay, p);
 	}
-
 
 	private void SlowUpdate()
 	{
@@ -245,14 +229,13 @@ public class GameManager : MonoBehaviour
 						text
 					}));
 					ServerSend.GameOver(id);
-					this.GameOver(id);
+					this.GameOver(id, 4f);
 					this.winnerSent = true;
 					break;
 				}
 			}
 		}
 	}
-
 
 	public void KillPlayer(int id, Vector3 pos)
 	{
@@ -262,7 +245,6 @@ public class GameManager : MonoBehaviour
 		pos = playerManager.transform.position;
 		Instantiate<GameObject>(this.playerRagdoll, pos, playerManager.transform.rotation).GetComponent<PlayerRagdoll>().SetRagdoll(id, -playerManager.transform.forward);
 	}
-
 
 	public Vector3 GetGravePosition(int playerId)
 	{
@@ -279,13 +261,12 @@ public class GameManager : MonoBehaviour
 				return raycastHit.point;
 			}
 		}
-		catch (System.Exception)
+		catch
 		{
 			return Vector3.zero;
 		}
 		return Vector3.zero;
 	}
-
 
 	public void SpawnGrave(Vector3 gravePos, int playerId, int graveObjectId)
 	{
@@ -302,7 +283,6 @@ public class GameManager : MonoBehaviour
 		componentInChildren.SetTime(num);
 		componentInChildren.transform.root.GetComponentInChildren<GravePing>().SetPing(playerManager.username);
 	}
-
 
 	public void RespawnPlayer(int id, Vector3 zero)
 	{
@@ -326,7 +306,6 @@ public class GameManager : MonoBehaviour
 		GameManager.players[id].gameObject.SetActive(true);
 	}
 
-
 	public void StartGame()
 	{
 		LoadingScreen.Instance.Hide(1f);
@@ -338,7 +317,6 @@ public class GameManager : MonoBehaviour
 		}
 		Hotbar.Instance.UpdateHotbar();
 	}
-
 
 	public void DisconnectPlayer(int id)
 	{
@@ -356,7 +334,6 @@ public class GameManager : MonoBehaviour
 		dictionary.Remove(id);
 	}
 
-
 	public int GetPlayersAlive()
 	{
 		int num = 0;
@@ -371,23 +348,18 @@ public class GameManager : MonoBehaviour
 		return num;
 	}
 
-
 	public int GetPlayersInLobby()
 	{
 		int num = 0;
-		using (Dictionary<int, PlayerManager>.ValueCollection.Enumerator enumerator = GameManager.players.Values.GetEnumerator())
+		foreach (PlayerManager playerManager in GameManager.players.Values)
 		{
-			while (enumerator.MoveNext())
+			if (playerManager && !playerManager.disconnected)
 			{
-				if (enumerator.Current)
-				{
-					num++;
-				}
+				num++;
 			}
 		}
 		return num;
 	}
-
 
 	public void CheckIfGameOver()
 	{
@@ -395,25 +367,22 @@ public class GameManager : MonoBehaviour
 		{
 			return;
 		}
-		this.GameOver(-2);
+		this.GameOver(-2, 4f);
 		ServerSend.GameOver(-2);
 	}
 
-
 	public void GameOver()
 	{
-		MusicController.Instance.StopSong();
-		base.Invoke(nameof(ShowEndScreen), 4f);
+		MusicController.Instance.StopSong(-1f);
+		Invoke(nameof(ShowEndScreen), 4f);
 	}
 
-
-	public void GameOver(int winnerId)
+	public void GameOver(int winnerId, float time = 4f)
 	{
 		this.winnerId = winnerId;
-		base.Invoke(nameof(ShowEndScreen), 4f);
-		MusicController.Instance.StopSong();
+		Invoke(nameof(ShowEndScreen), time);
+		MusicController.Instance.StopSong(-1f);
 	}
-
 
 	public void LeaveGame()
 	{
@@ -432,7 +401,6 @@ public class GameManager : MonoBehaviour
 		LocalClient.serverOwner = false;
 	}
 
-
 	private void HostLeftGame()
 	{
 		foreach (Client client in Server.clients.Values)
@@ -445,7 +413,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-
 	private void ShowEndScreen()
 	{
 		GameManager.state = GameManager.GameState.GameOver;
@@ -454,12 +421,10 @@ public class GameManager : MonoBehaviour
 		Cursor.lockState = CursorLockMode.None;
 	}
 
-
 	public void ReturnToMenu()
 	{
 		SceneManager.LoadScene("TestSteamLobby");
 	}
-
 
 	public List<Vector3> FindSurvivalSpawnPositions(int nPlayers)
 	{
@@ -492,7 +457,6 @@ public class GameManager : MonoBehaviour
 		return list;
 	}
 
-
 	public List<Vector3> FindVersusSpawnPositions(int nPlayers)
 	{
 		List<Vector3> list = new List<Vector3>();
@@ -513,19 +477,16 @@ public class GameManager : MonoBehaviour
 		return list;
 	}
 
-
 	private void OnApplicationQuit()
 	{
 		ClientSend.PlayerDisconnect();
 	}
 
-
 	public void SendPlayersIntoGame(List<Vector3> spawnPositions)
 	{
 		this.spawnPositions = spawnPositions;
-		base.Invoke(nameof(SendPlayersIntoGameNow), 2f);
+		Invoke(nameof(SendPlayersIntoGameNow), 2f);
 	}
-
 
 	private void SendPlayersIntoGameNow()
 	{
@@ -546,89 +507,62 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-
 	public static GameManager instance;
-
 
 	public static bool connected;
 
-
 	public static bool started;
-
 
 	public static Dictionary<int, PlayerManager> players = new Dictionary<int, PlayerManager>();
 
-
 	public GameObject localPlayerPrefab;
-
 
 	public GameObject playerPrefab;
 
-
 	public GameObject playerRagdoll;
-
 
 	public MapGenerator mapGenerator;
 
-
 	public GenerateNavmesh generateNavmesh;
-
 
 	public GameObject resourceGen;
 
-
 	private bool gameOver;
-
 
 	public DayUi dayUi;
 
-
 	public GameObject gameoverUi;
-
 
 	public ExtraUI extraUi;
 
-
 	public static GameManager.GameState state;
 
+	public bool boatLeft;
 
 	public GameObject lobbyCamera;
 
-
 	public GameObject testGame;
-
 
 	public GameObject zone;
 
-
 	private bool winnerSent;
-
 
 	public GameObject gravePrefab;
 
-
 	public int winnerId;
-
 
 	private float mapRadius = 1100f;
 
-
 	public LayerMask whatIsGround;
-
 
 	public LayerMask whatIsGroundAndObject;
 
-
 	private List<Vector3> spawnPositions;
-
 
 	public enum GameState
 	{
-
 		Loading,
-
 		Playing,
-
 		GameOver
 	}
 }

@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace Assets.Scripts.Networking
 {
-
 	public class GameManager
 	{
-
 		public static void StartGame()
 		{
 			if (GameManager.NumPlayersLeftInServer() < 4)
@@ -30,11 +28,9 @@ namespace Assets.Scripts.Networking
 			}
 		}
 
-
 		public void FindSpawnPositions()
 		{
 		}
-
 
 		public static int NumPlayersLeftInGame()
 		{
@@ -49,7 +45,6 @@ namespace Assets.Scripts.Networking
 			return num;
 		}
 
-
 		public static int NumPlayersLeftAlive()
 		{
 			int num = 0;
@@ -62,7 +57,6 @@ namespace Assets.Scripts.Networking
 			}
 			return num;
 		}
-
 
 		public static int NumPlayersLeftInServer()
 		{
@@ -80,7 +74,6 @@ namespace Assets.Scripts.Networking
 			return num;
 		}
 
-
 		public static int NumPlayersReady()
 		{
 			int num = 0;
@@ -93,7 +86,6 @@ namespace Assets.Scripts.Networking
 			}
 			return num;
 		}
-
 
 		public static GameState state;
 	}

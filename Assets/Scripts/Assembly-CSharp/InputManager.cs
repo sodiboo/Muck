@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class InputManager : MonoBehaviour
 {
-
     private void Start()
     {
         this.Init();
     }
-
 
     private void Init()
     {
@@ -29,45 +26,31 @@ public class InputManager : MonoBehaviour
         InputManager.rightClick = SaveManager.Instance.state.rightClick;
     }
 
-
     public static KeyCode forward;
-
 
     public static KeyCode backwards;
 
-
     public static KeyCode left;
-
 
     public static KeyCode right;
 
-
     public static KeyCode jump;
-
 
     public static KeyCode sprint;
 
-
     public static KeyCode crouch;
-
 
     public static KeyCode interact;
 
-
     public static KeyCode rotate;
-
 
     public static KeyCode precisionRotate;
 
-
     public static KeyCode inventory;
-
 
     public static KeyCode map;
 
-
     public static KeyCode leftClick;
-
 
     public static KeyCode rightClick;
 }

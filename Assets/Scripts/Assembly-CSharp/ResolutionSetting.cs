@@ -3,10 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ResolutionSetting : Setting
 {
-
 	public void SetSettings(Resolution[] resolutions, Resolution current)
 	{
 		this.resolutions = resolutions;
@@ -21,13 +19,11 @@ public class ResolutionSetting : Setting
 		this.UpdateSetting();
 	}
 
-
 	public void Scroll(int i)
 	{
 		this.currentSetting += i;
 		this.UpdateSetting();
 	}
-
 
 	private void UpdateSetting()
 	{
@@ -51,12 +47,10 @@ public class ResolutionSetting : Setting
 		}
 	}
 
-
 	private string ResolutionToText(Resolution r)
 	{
 		return r.ToString();
 	}
-
 
 	public void ApplySetting()
 	{
@@ -64,15 +58,11 @@ public class ResolutionSetting : Setting
 		CurrentSettings.Instance.UpdateResolution(resolution.width, resolution.height, resolution.refreshRate);
 	}
 
-
 	public RawImage scrollLeft;
-
 
 	public RawImage scrollRight;
 
-
 	public TextMeshProUGUI settingText;
-
 
 	private Resolution[] resolutions;
 }

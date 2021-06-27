@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Bar_Chunkium
   m_EditorClassIdentifier: 
+  important: 0
   id: 63
   name: Chunkium bar
   description: Looks very expensive (and chunky)
   type: 0
   tier: 0
-  sprite: {fileID: 21300000, guid: f4bc7b0915b19844a8bd895c993322fe, type: 3}
-  material: {fileID: 2100000, guid: 638c1579b164c294899d4dbca9d1ac86, type: 2}
-  mesh: {fileID: 4300000, guid: 66dc5852b806a4e438e564893eabba21, type: 2}
+  sprite: {fileID: 21300000, guid: 64ac84dcd37246947895e154845eb8b1, type: 3}
+  material: {fileID: 2100000, guid: 00742a65edcffde4f85955672223d879, type: 2}
+  mesh: {fileID: 4300000, guid: 4fcbf5e7d71e9974ead74e3fa2d26da2, type: 2}
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scale: 1
@@ -55,4 +56,4 @@ MonoBehaviour:
   tag: 0
   rarity: 2
   attackTypes: 
-  x: 1
+  x: 0

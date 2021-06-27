@@ -3,14 +3,11 @@ using Steamworks;
 using TMPro;
 using UnityEngine;
 
-
 public class ServerSteam : MonoBehaviour
 {
-
 	public void HostServer()
 	{
 	}
-
 
 	public void ConnectToServer()
 	{
@@ -24,15 +21,12 @@ public class ServerSteam : MonoBehaviour
 		this.HideCamera();
 	}
 
-
 	public void HideCamera()
 	{
 		this.lobbyCamera.SetActive(false);
 	}
 
-
 	public TMP_InputField steamIdField;
-
 
 	public GameObject lobbyCamera;
 }

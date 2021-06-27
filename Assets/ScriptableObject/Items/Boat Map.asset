@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
+  m_Name: Boat Map
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 94
+  name: Boat Map
+  description: Something important is marked on this map..
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: 0bb47f0965527c544a5a5c4127a68121, type: 3}
+  material: {fileID: 2100000, guid: 3a39b67b27926674395f64b179ecc1b2, type: 2}
+  mesh: {fileID: 4300000, guid: 1800b2ab3bcaf724d9059e3c1dea56bc, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 1
+  max: 69
+  resourceDamage: 0
+  attackDamage: 0
+  attackSpeed: 1
+  attackRange: {x: 1, y: 1, z: 1}
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements: []
+  craftAmount: 0
+  stationRequirement: {fileID: 0}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1689419264873489, guid: d65f606db8ca53f4691d4f8158f515f9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 
+  x: 0

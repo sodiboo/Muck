@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
 
-
 public class PowerupCalculations : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		PowerupCalculations.Instance = this;
 	}
-
 
 	public PowerupCalculations.DamageResult GetDamageMultiplier(bool falling, float speedWhileShooting = -1f)
 	{
@@ -37,7 +34,6 @@ public class PowerupCalculations : MonoBehaviour
 		return new PowerupCalculations.DamageResult(num, flag, lifestealMultiplier, sniped, lightningMultiplier, num2 > 1f);
 	}
 
-
 	public void HitEffect(AudioClip clip)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.hitFx);
@@ -47,7 +43,6 @@ public class PowerupCalculations : MonoBehaviour
 		component.Play();
 	}
 
-
 	public void SpawnOnHitEffect(int id, bool owner, Vector3 pos, int damage)
 	{
 		GameObject gameObject = Instantiate<GameObject>(this.onHitEffects[id], pos, this.onHitEffects[id].transform.rotation);
@@ -56,7 +51,6 @@ public class PowerupCalculations : MonoBehaviour
 			gameObject.GetComponent<AreaEffect>().SetDamage(damage);
 		}
 	}
-
 
 	public PowerupCalculations.DamageResult GetMaxMultiplier()
 	{
@@ -85,25 +79,18 @@ public class PowerupCalculations : MonoBehaviour
 		return new PowerupCalculations.DamageResult(num, flag2, lifestealMultiplier, sniped, lightningMultiplier, num2 > 1f);
 	}
 
-
 	public GameObject[] onHitEffects;
-
 
 	private static Vector2 randomDamageRange = new Vector2(0.4f, 1.2f);
 
-
 	public GameObject hitFx;
-
 
 	public AudioClip sniperSfx;
 
-
 	public static PowerupCalculations Instance;
-
 
 	public class DamageResult
 	{
-
 		public DamageResult(float damage, bool crit, float life, bool sniped, float hammerMultiplier, bool falling)
 		{
 			this.damageMultiplier = damage;
@@ -114,21 +101,15 @@ public class PowerupCalculations : MonoBehaviour
 			this.falling = falling;
 		}
 
-
 		public float damageMultiplier;
-
 
 		public bool crit;
 
-
 		public float lifesteal;
-
 
 		public bool sniped;
 
-
 		public float hammerMultiplier;
-
 
 		public bool falling;
 	}

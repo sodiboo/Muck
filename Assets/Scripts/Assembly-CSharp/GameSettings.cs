@@ -1,38 +1,18 @@
 ﻿using System;
 
-
 public class GameSettings
 {
-
-
-
 	public GameSettings.GameMode gameMode { get; set; }
-
-
-
 
 	public GameSettings.FriendlyFire friendlyFire { get; set; }
 
-
-
-
 	public GameSettings.Difficulty difficulty { get; set; }
-
-
-
 
 	public GameSettings.Respawn respawn { get; set; }
 
-
-
-
 	public GameSettings.GameLength gameLength { get; set; }
 
-
-
-
 	public GameSettings.Multiplayer multiplayer { get; set; }
-
 
 	public GameSettings(int seed, GameSettings.GameMode gameMode = GameSettings.GameMode.Survival, GameSettings.FriendlyFire friendlyFire = GameSettings.FriendlyFire.Off, GameSettings.Difficulty difficulty = GameSettings.Difficulty.Normal, GameSettings.GameLength gameLength = GameSettings.GameLength.Short, GameSettings.Multiplayer multiplayer = GameSettings.Multiplayer.On)
 	{
@@ -44,7 +24,6 @@ public class GameSettings
 		this.multiplayer = multiplayer;
 	}
 
-
 	public GameSettings(int seed, int gameMode, int friendlyFire, int difficulty, int gameLength, int multiplayer)
 	{
 		this.Seed = seed;
@@ -54,7 +33,6 @@ public class GameSettings
 		this.gameLength = (GameSettings.GameLength)gameLength;
 		this.multiplayer = (GameSettings.Multiplayer)multiplayer;
 	}
-
 
 	public int BossDay()
 	{
@@ -71,7 +49,6 @@ public class GameSettings
 		}
 	}
 
-
 	public float GetChestPriceMultiplier()
 	{
 		switch (this.difficulty)
@@ -86,7 +63,6 @@ public class GameSettings
 			return 5f;
 		}
 	}
-
 
 	public int DayLength()
 	{
@@ -103,66 +79,44 @@ public class GameSettings
 		}
 	}
 
-
 	public int Seed;
-
 
 	public enum GameMode
 	{
-
 		Survival,
-
 		Versus,
-
 		Creative
 	}
 
-
 	public enum FriendlyFire
 	{
-
 		Off,
-
 		On
 	}
 
-
 	public enum Difficulty
 	{
-
 		Easy,
-
 		Normal,
-
 		Gamer
 	}
 
-
 	public enum Respawn
 	{
-
 		OnNewDay,
-
 		Never
 	}
 
-
 	public enum GameLength
 	{
-
 		Short = 3,
-
 		Medium = 8,
-
 		Long = 14
 	}
 
-
 	public enum Multiplayer
 	{
-
 		Off,
-
 		On
 	}
 }

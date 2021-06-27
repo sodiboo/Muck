@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class PlayerRagdoll : MonoBehaviour
 {
-
 	public void SetArmor(int armorSlot, int itemId)
 	{
 		MonoBehaviour.print(string.Concat(new object[]
@@ -24,7 +22,6 @@ public class PlayerRagdoll : MonoBehaviour
 		this.armor[armorSlot].material = inventoryItem.material;
 	}
 
-
 	public void WeaponInHand(int itemId)
 	{
 		if (itemId == -1)
@@ -36,7 +33,6 @@ public class PlayerRagdoll : MonoBehaviour
 		this.filter.mesh = inventoryItem.mesh;
 		this.render.material = inventoryItem.material;
 	}
-
 
 	public void SetRagdoll(int id, Vector3 dir)
 	{
@@ -68,15 +64,11 @@ public class PlayerRagdoll : MonoBehaviour
 		}
 	}
 
-
 	public TestRagdoll ragdoll;
-
 
 	public SkinnedMeshRenderer[] armor;
 
-
 	public MeshFilter filter;
-
 
 	public Renderer render;
 }

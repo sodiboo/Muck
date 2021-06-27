@@ -1,4 +1,6 @@
-﻿public enum ClientPackets
+﻿using System;
+
+public enum ClientPackets
 {
     welcomeReceived = 1,
     joinLobby,
@@ -33,6 +35,7 @@
     reviveRequest,
 	interact,
 	startedLoading,
+	shipUpdate,
 
     _vehicleOffset = 2360,
     moveVehicle,

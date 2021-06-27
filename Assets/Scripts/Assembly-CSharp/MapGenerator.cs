@@ -1,17 +1,14 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class MapGenerator : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		MapGenerator.Instance = this;
 		this.textureData.ApplyToMaterial(this.terrainMaterial);
 		this.textureData.UpdateMeshHeights(this.terrainMaterial, this.terrainData.minHeight, this.terrainData.maxHeight);
 	}
-
 
 	private void OnValuesUpdated()
 	{
@@ -22,12 +19,10 @@ public class MapGenerator : MonoBehaviour
 		}
 	}
 
-
 	private void OnTextureValuesUpdated()
 	{
 		this.textureData.ApplyToMaterial(this.terrainMaterial);
 	}
-
 
 	public void GenerateMap(int seed = 105)
 	{
@@ -55,7 +50,6 @@ public class MapGenerator : MonoBehaviour
 		this.textureData.UpdateMeshHeights(this.terrainMaterial, this.terrainData.minHeight, this.terrainData.maxHeight);
 	}
 
-
 	public float[,] GeneratePerlinNoiseMap(NoiseData noiseData, int seed, bool useFalloffMap)
 	{
 		float[,] array = Noise.GenerateNoiseMap(MapGenerator.mapChunkSize, MapGenerator.mapChunkSize, seed, noiseData.noiseScale, noiseData.octaves, noiseData.persistance, noiseData.lacunarity, noiseData.blend, noiseData.blendStrength, noiseData.offset);
@@ -78,7 +72,6 @@ public class MapGenerator : MonoBehaviour
 		}
 		return array;
 	}
-
 
 	public float[,] GeneratePerlinNoiseMap(int seed)
 	{
@@ -103,7 +96,6 @@ public class MapGenerator : MonoBehaviour
 		return array;
 	}
 
-
 	public void DrawMapInEditor()
 	{
 		float[,] array = this.GeneratePerlinNoiseMap(0);
@@ -124,7 +116,6 @@ public class MapGenerator : MonoBehaviour
 		}
 	}
 
-
 	private void OnValidate()
 	{
 		if (this.terrainData != null)
@@ -144,62 +135,42 @@ public class MapGenerator : MonoBehaviour
 		}
 	}
 
-
 	public MapGenerator.DrawMode drawMode;
-
 
 	public TerrainData terrainData;
 
-
 	public NoiseData noiseData;
-
 
 	public TextureData textureData;
 
-
 	public Material terrainMaterial;
-
 
 	[Range(0f, 6f)]
 	public int levelOfDetail;
 
-
 	private static int seed = 105;
-
 
 	public bool autoUpdate;
 
-
 	private float[,] falloffMap;
-
 
 	private MapDisplay display;
 
-
 	public static int mapChunkSize = 241;
-
 
 	public static int worldScale = 12;
 
-
 	public static MapGenerator Instance;
-
 
 	public static float[,] staticNoiseMap;
 
-
 	public float[,] heightMap;
-
 
 	public enum DrawMode
 	{
-
 		NoiseMap,
-
 		Mesh,
-
 		FalloffMap,
-
 		ColorMap
 	}
 }

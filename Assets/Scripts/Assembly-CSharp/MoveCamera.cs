@@ -2,14 +2,9 @@
 using System.Linq;
 using UnityEngine;
 
-
 public class MoveCamera : MonoBehaviour
 {
-
-
-
     public static MoveCamera Instance { get; private set; }
-
 
     private void Start()
     {
@@ -20,43 +15,38 @@ public class MoveCamera : MonoBehaviour
         Debug.LogError("updating fov: " + CurrentSettings.Instance.fov);
     }
 
-
     private void LateUpdate()
     {
+        if (this.state == MoveCamera.CameraState.Car)
+        {
+            this.CarCamera();
+            return;
+        } else {
+            wasFirstPerson = false;
+        }
         if (this.state == MoveCamera.CameraState.Player)
         {
             this.PlayerCamera();
         }
-        if (this.state == MoveCamera.CameraState.PlayerDeath)
+        else if (this.state == MoveCamera.CameraState.PlayerDeath)
         {
             this.PlayerDeathCamera();
         }
-        if (this.state == MoveCamera.CameraState.Spectate)
+        else if (this.state == MoveCamera.CameraState.Spectate)
         {
             this.SpectateCamera();
         }
-        if (this.state == MoveCamera.CameraState.Car)
-        {
-            this.CarCamera();
-        } else {
-            wasFirstPerson = false;
-        }
     }
 
-
-
-
     public MoveCamera.CameraState state { get; set; }
-
 
     public void PlayerRespawn(Vector3 pos)
     {
         base.transform.position = pos;
         this.state = MoveCamera.CameraState.Player;
         base.transform.parent = null;
-        base.CancelInvoke(nameof(SpectateCamera));
+        CancelInvoke(nameof(SpectateCamera));
     }
-
 
     public void PlayerDied(Transform ragdoll)
     {
@@ -65,10 +55,9 @@ public class MoveCamera : MonoBehaviour
         this.desiredDeathPos = base.transform.position + Vector3.up * 3f;
         if (GameManager.state != GameManager.GameState.GameOver)
         {
-            base.Invoke(nameof(StartSpectating), 4f);
+            Invoke(nameof(StartSpectating), 4f);
         }
     }
-
 
     private void StartSpectating()
     {
@@ -80,7 +69,6 @@ public class MoveCamera : MonoBehaviour
         this.state = MoveCamera.CameraState.Spectate;
         PPController.Instance.Reset();
     }
-
 
     private void SpectateCamera()
     {
@@ -200,13 +188,12 @@ public class MoveCamera : MonoBehaviour
         wasFirstPerson = isFirstPerson;
     }
 
-
     private void SpectateToggle(int dir)
     {
         int num = this.spectatingId;
         for (int i = 0; i < GameManager.players.Count; i++)
         {
-            if (!(GameManager.players[i] == null))
+			if (GameManager.players.ContainsKey(i) && !(GameManager.players[i] == null))
             {
                 PlayerManager playerManager = GameManager.players[i];
                 if (!(playerManager == null) && !playerManager.dead)
@@ -228,7 +215,6 @@ public class MoveCamera : MonoBehaviour
         }
     }
 
-
     private void PlayerDeathCamera()
     {
         if (this.target == null)
@@ -239,7 +225,6 @@ public class MoveCamera : MonoBehaviour
         base.transform.rotation = Quaternion.Lerp(base.transform.rotation, Quaternion.LookRotation(this.target.position - base.transform.position), Time.deltaTime);
     }
 
-
     private void PlayerCamera()
     {
         this.UpdateBob();
@@ -249,7 +234,6 @@ public class MoveCamera : MonoBehaviour
         {
             return;
         }
-
         Vector3 cameraRot = this.playerInput.cameraRot;
         cameraRot.x = Mathf.Clamp(cameraRot.x, -90f, 90f);
         base.transform.rotation = Quaternion.Euler(cameraRot);
@@ -269,7 +253,6 @@ public class MoveCamera : MonoBehaviour
         base.transform.rotation = Quaternion.Euler(eulerAngles);
     }
 
-
     private void MoveGun()
     {
         if (!this.rb)
@@ -282,13 +265,11 @@ public class MoveCamera : MonoBehaviour
         }
     }
 
-
     public void UpdateFov(float f)
     {
         this.mainCam.fieldOfView = f;
         this.gunCamera.fieldOfView = f;
     }
-
 
     public void BobOnce(Vector3 bobDirection)
     {
@@ -296,96 +277,67 @@ public class MoveCamera : MonoBehaviour
         this.desiredBob = a * this.bobMultiplier;
     }
 
-
     private void UpdateBob()
     {
         this.desiredBob = Vector3.Lerp(this.desiredBob, Vector3.zero, Time.deltaTime * this.bobSpeed * 0.5f);
         this.bobOffset = Vector3.Lerp(this.bobOffset, this.desiredBob, Time.deltaTime * this.bobSpeed);
     }
 
-
     private Vector3 ClampVector(Vector3 vec, float min, float max)
     {
         return new Vector3(Mathf.Clamp(vec.x, min, max), Mathf.Clamp(vec.y, min, max), Mathf.Clamp(vec.z, min, max));
     }
 
-
     public Transform player;
-
 
     public Vector3 offset;
 
-
     public Vector3 desyncOffset;
-
 
     public Vector3 vaultOffset;
 
-
     private Camera cam;
-
 
     private Rigidbody rb;
 
-
     public PlayerInput playerInput;
-
 
     public bool cinematic;
 
-
     private float desiredTilt;
-
 
     private float tilt;
 
-
     private Vector3 desiredDeathPos;
-
 
     private Transform target;
 
-
     private Vector3 desiredSpectateRotation;
-
 
     private Transform playerTarget;
 
-
     public LayerMask whatIsGround;
-
 
     private int spectatingId;
 
-
     private Vector3 desiredBob;
-
 
     private Vector3 bobOffset;
 
-
     private float bobSpeed = 15f;
-
 
     private float bobMultiplier = 1f;
 
-
     private readonly float bobConstant = 0.2f;
-
 
     public Camera mainCam;
 
-
     public Camera gunCamera;
-
 
     public enum CameraState
     {
-
         Player,
-
         PlayerDeath,
-
         Spectate,
         Car,
     }

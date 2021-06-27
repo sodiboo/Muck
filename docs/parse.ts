@@ -26,6 +26,9 @@ export function guid<O>(
   return raw(file, key).match(/guid: (?<guid>[a-f0-9]+)[,}]/)?.groups
     ?.guid ?? null;
 }
+export function fileID<O>(file: string, key: Properties<number, O>): number {
+  return +raw(file, key).match(/^{fileID: (?<id>-?[0-9]+)}$/)!.groups!.id;
+}
 
 export function number<O>(
   file: string,
@@ -74,10 +77,18 @@ export function vector3<O>(
   return [+x, +y, +z];
 }
 
-export function split(file: string): string[] {
-  const components = file.split(/^--- !u!\d+ &-?\d+$/gm).map((component) =>
-    component.trim()
+export function split(file: string): [number, string][] {
+  const components = file.split(/^--- !u!\d+ &(?=-?\d+$)/gm).map<
+    [number, string]
+  >(
+    (component) => {
+      const newline = component.indexOf("\n");
+      return [
+        +component.substring(0, newline),
+        component.substring(newline + 1),
+      ];
+    },
   );
-  if (components[0].startsWith("%")) components.shift();
+  if (Number.isNaN(components[0][0])) components.shift();
   return components;
 }

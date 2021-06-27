@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class PingController : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		PingController.Instance = this;
 		this.readyToPing = true;
 	}
-
 
 	private void Update()
 	{
@@ -20,7 +17,6 @@ public class PingController : MonoBehaviour
 		}
 	}
 
-
 	private void LocalPing()
 	{
 		if (!this.readyToPing)
@@ -28,7 +24,7 @@ public class PingController : MonoBehaviour
 			return;
 		}
 		this.readyToPing = false;
-		base.Invoke(nameof(PingCooldown), this.pingCooldown);
+		Invoke(nameof(PingCooldown), this.pingCooldown);
 		Vector3 vector = this.FindPingPos();
 		if (vector == Vector3.zero)
 		{
@@ -37,7 +33,6 @@ public class PingController : MonoBehaviour
 		this.MakePing(vector, GameManager.players[LocalClient.instance.myId].username, "");
 		ClientSend.PlayerPing(vector);
 	}
-
 
 	private Vector3 FindPingPos()
 	{
@@ -55,30 +50,23 @@ public class PingController : MonoBehaviour
 		return Vector3.zero;
 	}
 
-
 	public void MakePing(Vector3 pos, string name, string pingedName)
 	{
 		Instantiate<GameObject>(this.pingPrefab, pos, Quaternion.identity).GetComponent<PlayerPing>().SetPing(name, pingedName);
 	}
-
 
 	private void PingCooldown()
 	{
 		this.readyToPing = true;
 	}
 
-
 	public LayerMask whatIsPingable;
-
 
 	public GameObject pingPrefab;
 
-
 	private float pingCooldown = 1f;
 
-
 	private bool readyToPing;
-
 
 	public static PingController Instance;
 }

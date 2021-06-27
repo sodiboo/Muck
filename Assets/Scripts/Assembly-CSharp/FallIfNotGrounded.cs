@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class FallIfNotGrounded : MonoBehaviour
 {
-
 	private void Start()
 	{
 		this.x = base.transform.position.x;
@@ -27,9 +25,8 @@ public class FallIfNotGrounded : MonoBehaviour
 		{
 			this.bottomOffset = new Vector3(0f, this.c.bounds.extents.y, 0f);
 		}
-		base.InvokeRepeating(nameof(CheckFalling), 1f, 1f);
+		InvokeRepeating(nameof(CheckFalling), 1f, 1f);
 	}
-
 
 	private void CheckFalling()
 	{
@@ -51,7 +48,6 @@ public class FallIfNotGrounded : MonoBehaviour
 		}
 	}
 
-
 	private void StartFalling()
 	{
 		Hitable component = base.GetComponent<Hitable>();
@@ -62,34 +58,25 @@ public class FallIfNotGrounded : MonoBehaviour
 		this.rb.constraints = (RigidbodyConstraints)122;
 	}
 
-
 	private void Land()
 	{
 		Destroy(this.rb);
 		this.falling = false;
 	}
 
-
 	private Rigidbody rb;
-
 
 	public float x;
 
-
 	public float z;
-
 
 	private bool falling;
 
-
 	private Vector3 bottomOffset;
-
 
 	public LayerMask whatIsLandable;
 
-
 	private Mesh mesh;
-
 
 	private Collider c;
 }

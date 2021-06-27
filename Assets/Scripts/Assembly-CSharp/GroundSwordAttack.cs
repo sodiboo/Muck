@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class GroundSwordAttack : MonoBehaviour
 {
-
 	private void Start()
 	{
 		Debug.LogError("Spawned");
@@ -37,14 +35,12 @@ public class GroundSwordAttack : MonoBehaviour
 		}
 	}
 
-
 	private void Update()
 	{
 		this.rb.velocity = base.transform.forward * this.projectile.bowComponent.projectileSpeed;
 		this.KeepRockGrounded();
 		this.SpinRock();
 	}
-
 
 	private void KeepRockGrounded()
 	{
@@ -57,7 +53,6 @@ public class GroundSwordAttack : MonoBehaviour
 		}
 	}
 
-
 	private void SpinRock()
 	{
 		RaycastHit raycastHit;
@@ -69,30 +64,21 @@ public class GroundSwordAttack : MonoBehaviour
 		}
 	}
 
-
 	public Rigidbody rb;
-
 
 	public float speed = 60f;
 
-
 	public LayerMask whatIsGround;
-
 
 	public Transform rollRock;
 
-
 	public GameObject rollPrefab;
-
 
 	public InventoryItem projectile;
 
-
 	private bool child;
 
-
 	private Vector3 rollAxis;
-
 
 	private float rollSpeed = 10f;
 }

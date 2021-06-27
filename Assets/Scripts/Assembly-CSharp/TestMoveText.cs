@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class TestMoveText : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.toSurface = new List<int>();
@@ -18,10 +16,9 @@ public class TestMoveText : MonoBehaviour
 		}
 		float num = 0.08f;
 		float num2 = 2f;
-		base.InvokeRepeating(nameof(SlowUpdate), num2, num);
-		base.InvokeRepeating(nameof(AddMaterial), num * (float)base.transform.childCount + num2 + 2f, 0.05f);
+		InvokeRepeating(nameof(SlowUpdate), num2, num);
+		InvokeRepeating(nameof(AddMaterial), num * (float)base.transform.childCount + num2 + 2f, 0.05f);
 	}
-
 
 	private void AddMaterial()
 	{
@@ -56,7 +53,6 @@ public class TestMoveText : MonoBehaviour
 		}
 	}
 
-
 	private void SlowUpdate()
 	{
 		int index = Random.Range(0, this.notSurfacing.Count);
@@ -65,10 +61,9 @@ public class TestMoveText : MonoBehaviour
 		this.notSurfacing.Remove(item);
 		if (this.notSurfacing.Count <= 0)
 		{
-			base.CancelInvoke(nameof(SlowUpdate));
+			base.CancelInvoke("SlowUpdate");
 		}
 	}
-
 
 	private void Update()
 	{
@@ -81,30 +76,21 @@ public class TestMoveText : MonoBehaviour
 		}
 	}
 
-
 	private List<int> toSurface;
-
 
 	private List<int> notSurfacing;
 
-
 	private Transform[] children;
-
 
 	private Vector3 startHeight;
 
-
 	public Material[] mats;
-
 
 	public GameObject[] trees;
 
-
 	private int a;
 
-
 	public LayerMask whatIsGround;
-
 
 	public Vector3 drawArea;
 }

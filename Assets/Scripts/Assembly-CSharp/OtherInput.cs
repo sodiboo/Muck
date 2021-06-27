@@ -1,20 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
 
 public class OtherInput : MonoBehaviour
 {
-
-
-
     public OtherInput.CraftingState craftingState { get; set; }
-
 
     private void Awake()
     {
         OtherInput.Instance = this;
+		this.chestsOpened = new Dictionary<int, bool>();
     }
-
 
     public void Unpause()
     {
@@ -28,7 +24,6 @@ public class OtherInput : MonoBehaviour
         this.pauseUi.SetActive(false);
     }
 
-
     public void Pause()
     {
         if (GameManager.gameSettings.multiplayer == GameSettings.Multiplayer.Off)
@@ -41,20 +36,19 @@ public class OtherInput : MonoBehaviour
         this.pauseUi.SetActive(true);
     }
 
-
-
-
     public bool paused { get; set; }
-
 
     public bool OtherUiActive()
     {
         return this.pauseUi.activeInHierarchy || this.settingsUi.activeInHierarchy || ChatBox.Instance.typing || Map.Instance.active || RespawnTotemUI.Instance.root.activeInHierarchy || (InventoryUI.Instance.gameObject.activeInHierarchy && this.craftingState != OtherInput.CraftingState.Inventory);
     }
 
-
     private void Update()
     {
+		if (GameManager.state == GameManager.GameState.GameOver)
+		{
+			return;
+		}
         if (this.pauseUi.activeInHierarchy || this.settingsUi.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -79,7 +73,6 @@ public class OtherInput : MonoBehaviour
         }
         if (currentCar != null)
         {
-
             if (Input.GetKeyDown(InputManager.interact)) ClientSend.ExitVehicle();
         }
         else
@@ -115,7 +108,6 @@ public class OtherInput : MonoBehaviour
             this.Pause();
         }
     }
-
 
     public void ToggleInventory(OtherInput.CraftingState state)
     {
@@ -157,7 +149,20 @@ public class OtherInput : MonoBehaviour
         }
         if (state == OtherInput.CraftingState.Chest)
         {
-            ((ChestUI)this.chest).CopyChest(this.currentChest);
+			bool addMap = false;
+			if (Boat.Instance && !this.chestsOpened.ContainsKey(this.currentChest.id) && Boat.Instance.status == Boat.BoatStatus.Hidden)
+			{
+				this.chestsOpened.Add(this.currentChest.id, true);
+				if (this.currentChest.transform.root.GetComponent<BuildInfo>() == null)
+				{
+					addMap = true;
+				}
+				else
+				{
+					Debug.LogError("failed2");
+				}
+			}
+			((ChestUI)this.chest).CopyChest(this.currentChest, addMap);
             return;
         }
         if (state == OtherInput.CraftingState.Furnace)
@@ -171,7 +176,6 @@ public class OtherInput : MonoBehaviour
         }
     }
 
-
     private void CenterInventory()
     {
         if (!this._currentCraftingUiMenu)
@@ -184,12 +188,10 @@ public class OtherInput : MonoBehaviour
         this.craftingOverlay.offsetMax = new Vector2(0f, -num);
     }
 
-
     public bool IsAnyMenuOpen()
     {
         return InventoryUI.Instance.gameObject.activeInHierarchy;
     }
-
 
     private void CheckStationUnlock()
     {
@@ -200,7 +202,6 @@ public class OtherInput : MonoBehaviour
         }
         UiEvents.Instance.StationUnlock(stationId);
     }
-
 
     private int GetStationId()
     {
@@ -220,7 +221,6 @@ public class OtherInput : MonoBehaviour
                 return -1;
         }
     }
-
 
     private void FindCurrentCraftingState()
     {
@@ -259,76 +259,52 @@ public class OtherInput : MonoBehaviour
 
     public Car currentCar;
 
-
     public InventoryExtensions creative;
-
 
     public InventoryExtensions handcrafts;
 
-
     public InventoryExtensions furnace;
-
 
     public InventoryExtensions workbench;
 
-
     public InventoryExtensions anvil;
-
 
     public InventoryExtensions fletch;
 
-
     public InventoryExtensions chest;
-
 
     public InventoryExtensions cauldron;
 
-
     public GameObject hotbar;
-
 
     public GameObject crosshair;
 
-
     public static bool lockCamera;
 
+	private Dictionary<int, bool> chestsOpened;
 
     private InventoryExtensions _currentCraftingUiMenu;
 
-
     public Chest currentChest;
-
 
     public static OtherInput Instance;
 
-
     public GameObject pauseUi;
-
 
     public GameObject settingsUi;
 
-
     public UiSfx UiSfx;
-
 
     public RectTransform craftingOverlay;
 
-
     public enum CraftingState
     {
-
         Inventory,
-
         Workbench,
-
         Anvil,
-
         Cauldron,
-
         Fletch,
-
         Furnace,
-
         Chest,
     }
 }

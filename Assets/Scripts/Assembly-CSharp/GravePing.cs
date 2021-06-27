@@ -2,22 +2,18 @@
 using TMPro;
 using UnityEngine;
 
-
 public class GravePing : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.child = base.transform.GetChild(0).gameObject;
 		this.grave = base.transform.root.GetComponentInChildren<GraveInteract>();
 	}
 
-
 	public void SetPing(string name)
 	{
 		this.pingText.text = string.Format("Revive {0} ({1}", this.grave.username, this.grave.timeLeft);
 	}
-
 
 	private void Update()
 	{
@@ -45,15 +41,11 @@ public class GravePing : MonoBehaviour
 		this.child.SetActive(false);
 	}
 
-
 	public TextMeshProUGUI pingText;
-
 
 	private float defaultScale = 0.4f;
 
-
 	private GraveInteract grave;
-
 
 	private GameObject child;
 }

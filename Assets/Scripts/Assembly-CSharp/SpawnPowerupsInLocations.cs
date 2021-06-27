@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class SpawnPowerupsInLocations : MonoBehaviour
 {
-
 	public void SetChests(ConsistentRandom rand)
 	{
 		int num = rand.Next(0, this.positions.Length) + 1;
@@ -35,7 +33,6 @@ public class SpawnPowerupsInLocations : MonoBehaviour
 		}
 	}
 
-
 	public GameObject FindObjectToSpawn(StructureSpawner.WeightedSpawn[] prefabs, float totalWeight, ConsistentRandom randomGen)
 	{
 		float num = (float)randomGen.NextDouble();
@@ -51,9 +48,7 @@ public class SpawnPowerupsInLocations : MonoBehaviour
 		return prefabs[0].prefab;
 	}
 
-
 	public Transform[] positions;
-
 
 	public StructureSpawner.WeightedSpawn[] powerupChests;
 }

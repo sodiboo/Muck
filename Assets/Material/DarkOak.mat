@@ -3,13 +3,12 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DarkOak
   m_Shader: {fileID: 4800000, guid: aa39e15a9f5d0ed47aa0951572b2dc9e, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6310c8d77695e1e4f9418e54c35aa867, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0b05ef76d7ff678448fcf7c9bcbdc206, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTexture:

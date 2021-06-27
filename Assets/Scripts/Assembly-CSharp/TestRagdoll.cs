@@ -1,25 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class TestRagdoll : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		this.cow = base.transform.GetChild(0);
 	}
 
-
 	private void Update()
 	{
 	}
 
-
 	private void Test()
 	{
 	}
-
 
 	public void MakeRagdoll(Vector3 dir)
 	{
@@ -37,7 +32,6 @@ public class TestRagdoll : MonoBehaviour
 		child.gameObject.layer = LayerMask.NameToLayer("GroundAndObjectOnly");
 	}
 
-
 	private void Ragdoll(Transform part, Vector3 dir)
 	{
 		part.gameObject.layer = LayerMask.NameToLayer("GroundAndObjectOnly");
@@ -51,7 +45,6 @@ public class TestRagdoll : MonoBehaviour
 			}
 		}
 	}
-
 
 	private void AddComponents(Transform p, Rigidbody parent, Vector3 dir)
 	{
@@ -76,9 +69,7 @@ public class TestRagdoll : MonoBehaviour
 		}
 	}
 
-
 	private Transform cow;
-
 
 	public PhysicMaterial mat;
 }

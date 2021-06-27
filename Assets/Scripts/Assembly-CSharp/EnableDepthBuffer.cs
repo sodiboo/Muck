@@ -1,12 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Camera))]
 [ExecuteInEditMode]
 public class EnableDepthBuffer : MonoBehaviour
 {
-
 	private void Update()
 	{
 		if (this.m_camera == null)
@@ -18,7 +16,6 @@ public class EnableDepthBuffer : MonoBehaviour
 			this.m_camera.depthTextureMode = DepthTextureMode.Depth;
 		}
 	}
-
 
 	private Camera m_camera;
 }

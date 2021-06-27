@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class GronkSwordProjectile : MonoBehaviour
 {
-
 	private void Start()
 	{
 		Vector3 forward = base.transform.forward;

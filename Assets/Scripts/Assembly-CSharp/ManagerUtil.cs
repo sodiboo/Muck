@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ManagerUtil : MonoBehaviour
 {
-
 	public static int FindRandomUnusedID(InventoryItem.ItemType item, Dictionary<int, GameObject> list, System.Random random)
 	{
 		Vector2 idRange = ManagerUtil.GetIdRange(item);
@@ -23,7 +21,6 @@ public class ManagerUtil : MonoBehaviour
 		}
 		return num;
 	}
-
 
 	public static Vector2 GetIdRange(InventoryItem.ItemType item)
 	{

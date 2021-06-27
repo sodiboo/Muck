@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ThreadManagerClient : MonoBehaviour
 {
-
 	private void Update()
 	{
 		ThreadManagerClient.UpdateMain();
 	}
-
 
 	public static void ExecuteOnMainThread(Action _action)
 	{
@@ -26,7 +23,6 @@ public class ThreadManagerClient : MonoBehaviour
 			ThreadManagerClient.actionToExecuteOnMainThread = true;
 		}
 	}
-
 
 	public static void UpdateMain()
 	{
@@ -47,12 +43,9 @@ public class ThreadManagerClient : MonoBehaviour
 		}
 	}
 
-
 	private static readonly List<Action> executeOnMainThread = new List<Action>();
 
-
 	private static readonly List<Action> executeCopiedOnMainThread = new List<Action>();
-
 
 	private static bool actionToExecuteOnMainThread = false;
 }

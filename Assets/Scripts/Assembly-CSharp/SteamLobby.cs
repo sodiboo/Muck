@@ -3,10 +3,8 @@ using Steamworks;
 using Steamworks.Data;
 using UnityEngine;
 
-
 public class SteamLobby : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		if (SteamLobby.Instance)
@@ -18,14 +16,12 @@ public class SteamLobby : MonoBehaviour
 		DontDestroyOnLoad(base.gameObject);
 	}
 
-
 	private void InitLobby(Lobby l)
 	{
 		this.currentLobby = l;
 		this.InitLobbyClients();
 		SteamLobby.steamIdToClientId = new Dictionary<ulong, int>();
 	}
-
 
 	public void StartLobby(SteamId hostSteamId, Lobby l)
 	{
@@ -35,14 +31,12 @@ public class SteamLobby : MonoBehaviour
 		this.started = false;
 	}
 
-
 	public void CloseLobby()
 	{
 		SteamLobby.steamIdToClientId = new Dictionary<ulong, int>();
 		this.startButton.SetActive(false);
 		this.started = false;
 	}
-
 
 	public void AddPlayerToLobby(Friend friend)
 	{
@@ -67,7 +61,6 @@ public class SteamLobby : MonoBehaviour
 		MonoBehaviour.print("finished adding player");
 	}
 
-
 	public void RemovePlayerFromLobby(Friend friend)
 	{
 		SteamId steamId = friend.Id.Value;
@@ -80,7 +73,6 @@ public class SteamLobby : MonoBehaviour
 		}
 	}
 
-
 	private void InitLobbyClients()
 	{
 		MonoBehaviour.print("initing lobby");
@@ -90,7 +82,6 @@ public class SteamLobby : MonoBehaviour
 			Server.clients[i] = new Client(i);
 		}
 	}
-
 
 	private int FindAvailableLobbyId()
 	{
@@ -103,7 +94,6 @@ public class SteamLobby : MonoBehaviour
 		}
 		return -1;
 	}
-
 
 	public void StartGame()
 	{
@@ -139,7 +129,6 @@ public class SteamLobby : MonoBehaviour
 		LocalClient.instance.serverHost = SteamManager.Instance.PlayerSteamId;
 	}
 
-
 	private int FindSeed()
 	{
 		string text = LobbySettings.Instance.seed.text;
@@ -160,7 +149,6 @@ public class SteamLobby : MonoBehaviour
 		return result;
 	}
 
-
 	private GameSettings MakeSettings()
 	{
 		GameSettings gameSettings = new GameSettings(this.FindSeed(), GameSettings.GameMode.Survival, GameSettings.FriendlyFire.Off, GameSettings.Difficulty.Normal, GameSettings.GameLength.Short, GameSettings.Multiplayer.On);
@@ -175,21 +163,15 @@ public class SteamLobby : MonoBehaviour
 		return gameSettings;
 	}
 
-
 	private Lobby currentLobby;
-
 
 	public static Dictionary<ulong, int> steamIdToClientId = new Dictionary<ulong, int>();
 
-
 	public GameObject startButton;
-
 
 	public static int lobbySize = 10;
 
-
 	private bool started;
-
 
 	public static SteamLobby Instance;
 }

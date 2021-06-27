@@ -1,15 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-
 public class ProjectileController : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		ProjectileController.Instance = this;
 	}
-
 
 	public void SpawnProjectileFromPlayer(Vector3 spawnPos, Vector3 direction, float force, int arrowId, int fromPlayer)
 	{
@@ -24,7 +21,6 @@ public class ProjectileController : MonoBehaviour
 		gameObject.GetComponent<Arrow>().otherPlayersArrow = true;
 	}
 
-
 	public void SpawnMobProjectile(Vector3 spawnPos, Vector3 direction, float force, int itemId, int mobObjectId)
 	{
 		InventoryItem inventoryItem = ItemManager.Instance.allItems[itemId];
@@ -33,8 +29,11 @@ public class ProjectileController : MonoBehaviour
 		float projectileSpeed = inventoryItem.bowComponent.projectileSpeed;
 		gameObject.transform.rotation = Quaternion.LookRotation(direction);
 		Rigidbody component = gameObject.GetComponent<Rigidbody>();
-		component.AddForce(direction * force * projectileSpeed);
-		component.angularVelocity = inventoryItem.rotationOffset;
+		if (component)
+		{
+			component.AddForce(direction * force * projectileSpeed);
+			component.angularVelocity = inventoryItem.rotationOffset;
+		}
 		MonoBehaviour.print(string.Concat(new object[]
 		{
 			"mob id: ",
@@ -45,19 +44,20 @@ public class ProjectileController : MonoBehaviour
 		if (MobManager.Instance.mobs.ContainsKey(mobObjectId))
 		{
 			Collider component2 = gameObject.GetComponent<Collider>();
-			Collider[] componentsInChildren = MobManager.Instance.mobs[mobObjectId].gameObject.transform.root.GetComponentsInChildren<Collider>();
-			for (int i = 0; i < componentsInChildren.Length; i++)
+			if (component2 != null)
 			{
-				Physics.IgnoreCollision(componentsInChildren[i], component2, true);
+				Collider[] componentsInChildren = MobManager.Instance.mobs[mobObjectId].gameObject.transform.root.GetComponentsInChildren<Collider>();
+				for (int i = 0; i < componentsInChildren.Length; i++)
+				{
+					Physics.IgnoreCollision(componentsInChildren[i], component2, true);
+				}
 			}
-			MonoBehaviour.print("removing collision with mob: " + MobManager.Instance.mobs[mobObjectId]);
 		}
 		float multiplier = MobManager.Instance.mobs[mobObjectId].multiplier;
 		gameObject.GetComponent<EnemyProjectile>().DisableCollider(0.1f);
 		gameObject.GetComponent<EnemyProjectile>().damage = (int)((float)attackDamage * multiplier);
 		MonoBehaviour.print("setting damage to: " + (float)attackDamage * multiplier);
 	}
-
 
 	public static ProjectileController Instance;
 }

@@ -5,10 +5,8 @@ using Steamworks.Data;
 using TMPro;
 using UnityEngine;
 
-
 public class LobbyVisuals : MonoBehaviour
 {
-
 	private void Awake()
 	{
 		LobbyVisuals.Instance = this;
@@ -19,18 +17,15 @@ public class LobbyVisuals : MonoBehaviour
 		}
 	}
 
-
 	private void Start()
 	{
 		MusicController.Instance.PlaySong(MusicController.SongType.Day, false);
 	}
 
-
 	public void CopyLobbyId()
 	{
 		GUIUtility.systemCopyBuffer = string.Concat(this.currentLobby.Id.Value);
 	}
-
 
 	public void CloseLobby()
 	{
@@ -41,7 +36,6 @@ public class LobbyVisuals : MonoBehaviour
 		}
 		this.menuUi.LeaveLobby();
 	}
-
 
 	public void OpenLobby(Lobby lobby)
 	{
@@ -73,7 +67,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.menuUi.JoinLobby();
 	}
 
-
 	public void SpawnLobbyPlayer(Friend friend)
 	{
 		MonoBehaviour.print("spawning lobby player: " + friend.Name);
@@ -85,7 +78,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.playerNames[nextId].text = friend.Name;
 	}
 
-
 	public void DespawnLobbyPlayer(Friend friend)
 	{
 		int num = this.steamToLobbyId[friend.Id.Value];
@@ -94,7 +86,6 @@ public class LobbyVisuals : MonoBehaviour
 		this.steamToLobbyId.Remove(friend.Id.Value);
 		this.playerNames[num].text = "";
 	}
-
 
 	private int GetNextId()
 	{
@@ -108,30 +99,22 @@ public class LobbyVisuals : MonoBehaviour
 		return -1;
 	}
 
-
 	public void ExitGame()
 	{
 		Application.Quit(0);
 	}
 
-
 	private Dictionary<ulong, int> steamToLobbyId = new Dictionary<ulong, int>();
-
 
 	public GameObject[] lobbyPlayers;
 
-
 	public TextMeshProUGUI[] playerNames;
-
 
 	public TextMeshProUGUI lobbyId;
 
-
 	private Lobby currentLobby;
 
-
 	public MenuUI menuUi;
-
 
 	public static LobbyVisuals Instance;
 }

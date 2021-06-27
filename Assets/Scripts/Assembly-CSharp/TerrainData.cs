@@ -1,12 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-
 [CreateAssetMenu]
 public class TerrainData : UpdateableData
 {
-
-
 	public float minHeight
 	{
 		get
@@ -14,8 +11,6 @@ public class TerrainData : UpdateableData
 			return this.uniformScale * this.heightMultiplier * this.heightCurve.Evaluate(0f);
 		}
 	}
-
-
 
 	public float maxHeight
 	{
@@ -25,15 +20,11 @@ public class TerrainData : UpdateableData
 		}
 	}
 
-
 	public float uniformScale = 2.5f;
-
 
 	public bool useFalloff;
 
-
 	public float heightMultiplier;
-
 
 	public AnimationCurve heightCurve;
 }

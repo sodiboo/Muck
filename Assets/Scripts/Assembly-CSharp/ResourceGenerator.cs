@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ResourceGenerator : MonoBehaviour
 {
-
-
-
 	public float worldScale { get; set; } = 12f;
-
 
 	private void Start()
 	{
@@ -25,16 +20,9 @@ public class ResourceGenerator : MonoBehaviour
 		}
 	}
 
-
-
-
 	public float topLeftX { get; private set; }
 
-
-
-
 	public float topLeftZ { get; private set; }
-
 
 	private void GenerateForest()
 	{
@@ -61,33 +49,38 @@ public class ResourceGenerator : MonoBehaviour
 		int num = this.density;
 		int num2 = 0;
 		int num3 = 0;
-		for (int j = 0; j < this.height; j += num)
+		int num4 = 0;
+		while (num3 < this.minSpawnAmount && num4 < 100)
 		{
-			for (int k = 0; k < this.width; k += num)
+			num4++;
+			for (int j = 0; j < this.height; j += num)
 			{
-				if (array[k, j] >= this.minSpawnHeight && array[k, j] <= this.maxSpawnHeight)
+				for (int k = 0; k < this.width; k += num)
 				{
-					float num4 = array2[k, j];
-					if (num4 >= this.spawnThreshold)
+					if (array[k, j] >= this.minSpawnHeight && array[k, j] <= this.maxSpawnHeight)
 					{
-						num4 = (num4 - this.spawnThreshold) / (1f - this.spawnThreshold);
-						float num5 = this.noiseDistribution.Evaluate((float)this.randomGen.NextDouble());
-						num2++;
-						if (num5 > 1f - num4)
+						float num5 = array2[k, j];
+						if (num5 >= this.spawnThreshold)
 						{
-							Vector3 vector = new Vector3(this.topLeftX + (float)k, 100f, this.topLeftZ - (float)j) * this.worldScale;
-							vector += new Vector3((float)this.randomGen.Next(-this.randPos, this.randPos), 0f, (float)this.randomGen.Next(-this.randPos, this.randPos));
-							RaycastHit raycastHit;
-							if (Physics.Raycast(vector, Vector3.down, out raycastHit, 1200f))
+							num5 = (num5 - this.spawnThreshold) / (1f - this.spawnThreshold);
+							float num6 = this.noiseDistribution.Evaluate((float)this.randomGen.NextDouble());
+							num2++;
+							if (num6 > 1f - num5)
 							{
-								vector.y = raycastHit.point.y;
-								num3++;
-								int num6 = this.drawChunks.FindChunk(k, j);
-								if (num6 >= this.drawChunks.nChunks)
+								Vector3 vector = new Vector3(this.topLeftX + (float)k, 100f, this.topLeftZ - (float)j) * this.worldScale;
+								vector += new Vector3((float)this.randomGen.Next(-this.randPos, this.randPos), 0f, (float)this.randomGen.Next(-this.randPos, this.randPos));
+								RaycastHit raycastHit;
+								if (Physics.Raycast(vector, Vector3.down, out raycastHit, 1200f))
 								{
-									num6 = this.drawChunks.nChunks - 1;
+									vector.y = raycastHit.point.y;
+									num3++;
+									int num7 = this.drawChunks.FindChunk(k, j);
+									if (num7 >= this.drawChunks.nChunks)
+									{
+										num7 = this.drawChunks.nChunks - 1;
+									}
+									this.resources[num7].Add(this.SpawnTree(vector));
 								}
-								this.resources[num6].Add(this.SpawnTree(vector));
 							}
 						}
 					}
@@ -98,7 +91,6 @@ public class ResourceGenerator : MonoBehaviour
 		this.drawChunks.InitChunks(this.resources);
 		this.drawChunks.totalTrees = this.totalResources;
 	}
-
 
 	private GameObject SpawnTree(Vector3 pos)
 	{
@@ -118,7 +110,6 @@ public class ResourceGenerator : MonoBehaviour
 		return gameObject;
 	}
 
-
 	public GameObject FindObjectToSpawn(StructureSpawner.WeightedSpawn[] structurePrefabs, float totalWeight)
 	{
 		float num = (float)this.randomGen.NextDouble();
@@ -134,79 +125,56 @@ public class ResourceGenerator : MonoBehaviour
 		return structurePrefabs[0].prefab;
 	}
 
-
 	public DrawChunks drawChunks;
-
 
 	public StructureSpawner.WeightedSpawn[] resourcePrefabs;
 
-
 	private float totalWeight;
-
 
 	public MapGenerator mapGenerator;
 
-
 	private int density = 1;
-
 
 	public float spawnThreshold = 0.45f;
 
-
 	public AnimationCurve noiseDistribution;
-
 
 	public AnimationCurve heightDistribution;
 
-
 	public List<GameObject>[] resources;
-
 
 	private ConsistentRandom randomGen;
 
-
 	public NoiseData noiseData;
-
 
 	[Header("Variety")]
 	public Vector3 randomRotation;
 
-
 	public Vector2 randomScale;
-
 
 	public int randPos = 12;
 
-
 	private int totalResources;
-
 
 	public int forceSeedOffset = -1;
 
-
 	public float minSpawnHeight = 0.4f;
-
 
 	public float maxSpawnHeight = 0.35f;
 
-
 	public int width;
-
 
 	public int height;
 
-
 	public bool useFalloffMap = true;
 
+	public int minSpawnAmount = 10;
 
 	public ResourceGenerator.SpawnType type;
 
-
 	public enum SpawnType
 	{
-
 		Static,
-
 		Pickup
 	}
 }
