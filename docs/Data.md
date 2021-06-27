@@ -3458,7 +3458,7 @@ Every blue pill you have gives you +10 shield. There is no limit to this, other 
 <details>
 <summary> Boring nerd details </summary>
 
-Broccoli gives you passive health regen over time. It does not consume any hunger, though it does not work when you have 0 hunger. It is linear, and every broccoli gives you +0.25 health regen per second. Implementation regenerates health every frame, multiplied by `Time.deltaTime`.
+Broccoli gives you passive health regen over time. It does not consume any hunger, though it does not work when you have 0 hunger. It is linear, and every broccoli gives you +0.05 health regen per second. Implementation regenerates health every frame, multiplied by `Time.deltaTime`.
 
 </details>
 
@@ -4097,7 +4097,7 @@ Dani's Milk adds to your total armor count, which is like wearing armor, but wit
 <details>
 <summary> Boring nerd details </summary>
 
-Every time you get a kill, you get additional hp. Specifically, the amount of Dracula powerups you have is how much hp you gain. Each dracula also caps out at 50 additional hp. Every time you get a Dracula, you need to kill 50 mobs to reach the limit.
+Every time you get a kill, you get additional hp. Specifically, the amount of Dracula powerups you have is how much hp you gain. Each dracula also caps out at 40 additional hp. Every time you get a Dracula, you need to kill 40 mobs to reach the limit.
 
 </details>
 
@@ -4548,7 +4548,7 @@ Here's how likely you are for the first few amounts of powerups you can get:
 
 Each sniper scope you collect gives you a higher chance to deal more damage.
 
-The more sniper scopes you have, the higher chance you have to deal additional damage from it. This caps out at 0.2 (20%) and has a scale speed of 0.15. Here's a graph of the chance to deal additonal damage:
+The more sniper scopes you have, the higher chance you have to deal additional damage from it. This caps out at 0.15 (15%) and has a scale speed of 0.14. Here's a graph of the chance to deal additonal damage:
 [![][Sniper-Scope-chance-image]][Sniper-Scope-chance-link]
 
 If you're lucky and get the additional damage, the actual amount of damage you deal is multiplied by up to 50x its original value. That function has a scale speed of 0.25, and here's the graph for that:
@@ -4560,46 +4560,51 @@ If you're lucky and get the additional damage, the actual amount of damage you d
 And here is a precalculated list of the numbers for the first couple sniper scopes, if you'd rather have the current stats of your character than a graph of all of them:
 
 0. 0% chance to deal 0x damage
-1. 2.8% chance to deal 11.1x damage
-2. 5.2% chance to deal 19.7x damage
-3. 7.2% chance to deal 26.4x damage
-4. 9% chance to deal 31.6x damage
-5. 10.6% chance to deal 35.7x damage
-6. 11.9% chance to deal 38.8x damage
-7. 13% chance to deal 41.3x damage
-8. 14% chance to deal 43.2x damage
-9. 14.8% chance to deal 44.7x damage
-10. 15.5% chance to deal 45.9x damage
-11. 16.2% chance to deal 46.8x damage
-12. 16.7% chance to deal 47.5x damage
-13. 17.2% chance to deal 48.1x damage
-14. 17.6% chance to deal 48.5x damage
-15. 17.9% chance to deal 48.8x damage
-16. 18.2% chance to deal 49.1x damage
-17. 18.4% chance to deal 49.3x damage
-18. 18.7% chance to deal 49.4x damage
-19. 18.8% chance to deal 49.6x damage
-20. 19% chance to deal 49.7x damage
-21. 19.1% chance to deal 49.7x damage
-22. 19.3% chance to deal 49.8x damage
-23. 19.4% chance to deal 49.8x damage
-24. 19.5% chance to deal 49.9x damage
-25. 19.5% chance to deal 49.9x damage
-26. 19.6% chance to deal 49.9x damage
-27. 19.7% chance to deal 49.9x damage
-28. 19.7% chance to deal 50x damage
-29. 19.7% chance to deal 50x damage
-30. 19.8% chance to deal 50x damage
-31. 19.8% chance to deal 50x damage
-32. 19.8% chance to deal 50x damage
-33. 19.9% chance to deal 50x damage
-34. 19.9% chance to deal 50x damage
-35. 19.9% chance to deal 50x damage
-36. 19.9% chance to deal 50x damage
-37. 19.9% chance to deal 50x damage
-38. 19.9% chance to deal 50x damage
-39. 19.9% chance to deal 50x damage
-40. 20% chance to deal 50x damage
+1. 2% chance to deal 11.1x damage
+2. 3.7% chance to deal 19.7x damage
+3. 5.1% chance to deal 26.4x damage
+4. 6.4% chance to deal 31.6x damage
+5. 7.6% chance to deal 35.7x damage
+6. 8.5% chance to deal 38.8x damage
+7. 9.4% chance to deal 41.3x damage
+8. 10.1% chance to deal 43.2x damage
+9. 10.7% chance to deal 44.7x damage
+10. 11.3% chance to deal 45.9x damage
+11. 11.8% chance to deal 46.8x damage
+12. 12.2% chance to deal 47.5x damage
+13. 12.6% chance to deal 48.1x damage
+14. 12.9% chance to deal 48.5x damage
+15. 13.2% chance to deal 48.8x damage
+16. 13.4% chance to deal 49.1x damage
+17. 13.6% chance to deal 49.3x damage
+18. 13.8% chance to deal 49.4x damage
+19. 14% chance to deal 49.6x damage
+20. 14.1% chance to deal 49.7x damage
+21. 14.2% chance to deal 49.7x damage
+22. 14.3% chance to deal 49.8x damage
+23. 14.4% chance to deal 49.8x damage
+24. 14.5% chance to deal 49.9x damage
+25. 14.5% chance to deal 49.9x damage
+26. 14.6% chance to deal 49.9x damage
+27. 14.7% chance to deal 49.9x damage
+28. 14.7% chance to deal 50x damage
+29. 14.7% chance to deal 50x damage
+30. 14.8% chance to deal 50x damage
+31. 14.8% chance to deal 50x damage
+32. 14.8% chance to deal 50x damage
+33. 14.9% chance to deal 50x damage
+34. 14.9% chance to deal 50x damage
+35. 14.9% chance to deal 50x damage
+36. 14.9% chance to deal 50x damage
+37. 14.9% chance to deal 50x damage
+38. 14.9% chance to deal 50x damage
+39. 14.9% chance to deal 50x damage
+40. 14.9% chance to deal 50x damage
+41. 15% chance to deal 50x damage
+42. 15% chance to deal 50x damage
+43. 15% chance to deal 50x damage
+44. 15% chance to deal 50x damage
+45. 15% chance to deal 50x damage
 
 </details>
 
@@ -4864,7 +4869,7 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 [Knuts-Hammer-damage-link]: https://www.desmos.com/calculator/eyrumd2q4k
 [Sniper-Scope]: ../Assets/Texture2D/SniperScope.png
 [Sniper-Scope-chance-image]: PowerupStats/Images/sniper_chance.png
-[Sniper-Scope-chance-link]: https://www.desmos.com/calculator/vivzwiuqzm
+[Sniper-Scope-chance-link]: https://www.desmos.com/calculator/pbw4za9dwc
 [Sniper-Scope-damage-image]: PowerupStats/Images/sniper_damage.png
 [Sniper-Scope-damage-link]: https://www.desmos.com/calculator/akocvnn74b
 [Wings-of-Glory]: ../Assets/Texture2D/Wings.png

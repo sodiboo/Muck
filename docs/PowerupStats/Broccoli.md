@@ -1,1 +1,1 @@
-Broccoli gives you passive health regen over time. It does not consume any hunger, though it does not work when you have 0 hunger. It is linear, and every broccoli gives you +0.25 health regen per second. Implementation regenerates health every frame, multiplied by `Time.deltaTime`.
+Broccoli gives you passive health regen over time. It does not consume any hunger, though it does not work when you have 0 hunger. It is linear, and every broccoli gives you +0.05 health regen per second. Implementation regenerates health every frame, multiplied by `Time.deltaTime`.
