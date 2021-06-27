@@ -432,6 +432,7 @@ function info(item: Item): string {
       `- Resource Damage: ${item.resourceDamage}`,
       `- Attack Damage: ${item.attackDamage}`,
       `- Attack Speed: ${item.attackSpeed}`,
+      `- DPS: ${item.attackDamage * item.attackSpeed}`,
       `- Attack Range: ${item.attackRange[2]}`,
       `- Sharpness: ${item.sharpness}`,
     );

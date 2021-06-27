@@ -314,6 +314,7 @@
 - Resource Damage: 1
 - Attack Damage: 70
 - Attack Speed: 0.3
+- DPS: 21
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Adamantite Arrow
@@ -334,6 +335,7 @@
 - Resource Damage: 50
 - Attack Damage: 40
 - Attack Speed: 1
+- DPS: 40
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Adamantite Axe
@@ -354,6 +356,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Adamantite bar
@@ -386,6 +389,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Boots
@@ -407,6 +411,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Chestplate
@@ -428,6 +433,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Helmet
@@ -447,6 +453,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -468,6 +475,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Pants
@@ -487,6 +495,7 @@
 - Resource Damage: 40
 - Attack Damage: 40
 - Attack Speed: 0.8
+- DPS: 32
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Adamantite Pickaxe
@@ -507,6 +516,7 @@
 - Resource Damage: 1
 - Attack Damage: 50
 - Attack Speed: 1.4
+- DPS: 70
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Sword
@@ -527,6 +537,7 @@
 - Resource Damage: 1
 - Attack Damage: 10
 - Attack Speed: 1
+- DPS: 10
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Anvil
@@ -551,6 +562,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Apple Pie
@@ -573,6 +585,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 0.75
 - Sharpness: 0
 #### Crafting: Gives 5 Bark
@@ -622,6 +635,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
@@ -645,6 +659,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -661,6 +676,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Bowl
@@ -692,6 +708,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Bread
@@ -713,6 +730,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Cauldron
@@ -733,6 +751,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Chest
@@ -755,6 +774,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1.2
+- DPS: 1.2
 - Attack Range: 0.8
 - Sharpness: 0
 #### Ingredient For:
@@ -773,6 +793,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 5 Coin
@@ -796,6 +817,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Cooked Meat
@@ -816,6 +838,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Dough
@@ -857,6 +880,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
@@ -879,6 +903,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -897,6 +922,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Flax Fibers
@@ -921,6 +947,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Fletching Table
@@ -940,6 +967,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1.5
+- DPS: 1.5
 - Attack Range: 0.8
 - Sharpness: 0.7
 #### Ingredient For:
@@ -960,6 +988,7 @@
 - Resource Damage: 1
 - Attack Damage: 25
 - Attack Speed: 1
+- DPS: 25
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Flint Arrow
@@ -980,6 +1009,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Crafting: Gives 1 Furnace
@@ -998,6 +1028,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -1015,6 +1046,7 @@
 - Resource Damage: 22
 - Attack Damage: 15
 - Attack Speed: 1.1
+- DPS: 16.5
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Gold Axe
@@ -1035,6 +1067,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Gold bar
@@ -1067,6 +1100,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Boots
@@ -1088,6 +1122,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Chestplate
@@ -1109,6 +1144,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Helmet
@@ -1128,6 +1164,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1149,6 +1186,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Pants
@@ -1168,6 +1206,7 @@
 - Resource Damage: 22
 - Attack Damage: 24
 - Attack Speed: 0.9
+- DPS: 21.6
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Gold Pickaxe
@@ -1188,6 +1227,7 @@
 - Resource Damage: 1
 - Attack Damage: 15
 - Attack Speed: 1.6
+- DPS: 24
 - Attack Range: 2
 - Sharpness: 0.9
 #### Crafting: Gives 1 Gold Sword
@@ -1225,6 +1265,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1243,6 +1284,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Iron bar
@@ -1274,6 +1316,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1297,6 +1340,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1320,6 +1364,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Meat Pie
@@ -1347,6 +1392,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Meat Soup
@@ -1369,6 +1415,7 @@
 - Resource Damage: 500
 - Attack Damage: 15
 - Attack Speed: 1.5
+- DPS: 22.5
 - Attack Range: 2
 - Sharpness: 1
 
@@ -1386,6 +1433,7 @@
 - Resource Damage: 1
 - Attack Damage: 45
 - Attack Speed: 1
+- DPS: 45
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Mithril Arrow
@@ -1406,6 +1454,7 @@
 - Resource Damage: 35
 - Attack Damage: 25
 - Attack Speed: 0.95
+- DPS: 23.75
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Mithril Axe
@@ -1426,6 +1475,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Mithril bar
@@ -1458,6 +1508,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Boots
@@ -1479,6 +1530,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Chestplate
@@ -1500,6 +1552,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Helmet
@@ -1519,6 +1572,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1540,6 +1594,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Pants
@@ -1559,6 +1614,7 @@
 - Resource Damage: 32
 - Attack Damage: 30
 - Attack Speed: 0.8
+- DPS: 24
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Mithril Pickaxe
@@ -1579,6 +1635,7 @@
 - Resource Damage: 1
 - Attack Damage: 35
 - Attack Speed: 1.4
+- DPS: 49
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Sword
@@ -1617,6 +1674,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
@@ -1645,6 +1703,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Purple Soup
@@ -1671,6 +1730,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1696,6 +1756,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1719,6 +1780,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Red Soup
@@ -1741,6 +1803,7 @@
 - Resource Damage: 15
 - Attack Damage: 15
 - Attack Speed: 0.72
+- DPS: 10.799999999999999
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1792,6 +1855,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1.5
+- DPS: 1.5
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 2 Rope
@@ -1818,6 +1882,7 @@
 - Resource Damage: 1
 - Attack Damage: 25
 - Attack Speed: 1.5
+- DPS: 37.5
 - Attack Range: 2
 - Sharpness: 0.5
 
@@ -1839,6 +1904,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -1871,6 +1937,7 @@
 - Resource Damage: 1
 - Attack Damage: 35
 - Attack Speed: 1
+- DPS: 35
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Steel Arrow
@@ -1891,6 +1958,7 @@
 - Resource Damage: 25
 - Attack Damage: 20
 - Attack Speed: 0.9
+- DPS: 18
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 1 Steel Axe
@@ -1914,6 +1982,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Boots
@@ -1935,6 +2004,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Chestplate
@@ -1956,6 +2026,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Helmet
@@ -1977,6 +2048,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Pants
@@ -1996,6 +2068,7 @@
 - Resource Damage: 25
 - Attack Damage: 27
 - Attack Speed: 0.8
+- DPS: 21.6
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Steel Pickaxe
@@ -2016,6 +2089,7 @@
 - Resource Damage: 1
 - Attack Damage: 25
 - Attack Speed: 1.3
+- DPS: 32.5
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Sword
@@ -2040,6 +2114,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -2059,6 +2134,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 5 Torch
@@ -2083,6 +2159,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Weird Soup
@@ -2104,6 +2181,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -2123,6 +2201,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -2147,6 +2226,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Boots
@@ -2169,6 +2249,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Chestplate
@@ -2191,6 +2272,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Helmet
@@ -2213,6 +2295,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Pants
@@ -2235,6 +2318,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
@@ -2279,6 +2363,7 @@
 - Resource Damage: 20
 - Attack Damage: 15
 - Attack Speed: 0.9
+- DPS: 13.5
 - Attack Range: 1
 - Sharpness: 0.75
 #### Crafting: Gives 1 Wood Axe
@@ -2315,6 +2400,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Doorway
@@ -2334,6 +2420,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Doorway
@@ -2353,6 +2440,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Floor
@@ -2374,6 +2462,7 @@
 - Resource Damage: 18
 - Attack Damage: 20
 - Attack Speed: 0.8
+- DPS: 16
 - Attack Range: 1.2
 - Sharpness: 0.2
 #### Crafting: Gives 1 Wood Pickaxe
@@ -2394,6 +2483,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Pole
@@ -2413,6 +2503,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Pole
@@ -2432,6 +2523,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Roof
@@ -2451,6 +2543,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood stairs
@@ -2470,6 +2563,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood stairs thinn
@@ -2489,6 +2583,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall
@@ -2508,6 +2603,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall Half
@@ -2527,6 +2623,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall Tilted
@@ -2546,6 +2643,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Crafting: Gives 1 Workbench
@@ -2569,6 +2667,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 1
 - Sharpness: 0
 #### Cooking: Gives 1 Yellow Soup
@@ -2593,6 +2692,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 2
+- DPS: 2
 - Attack Range: 2
 - Sharpness: 0
 #### Ingredient For:
@@ -2615,6 +2715,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Obamium bar
@@ -2637,6 +2738,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -2655,6 +2757,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 
@@ -2702,6 +2805,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -2718,6 +2822,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -2736,6 +2841,7 @@
 - Resource Damage: 1
 - Attack Damage: 20
 - Attack Speed: 0.9
+- DPS: 18
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -2755,6 +2861,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -2771,6 +2878,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Smelting: Gives 1 Chunkium bar
@@ -2800,6 +2908,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Boots
@@ -2821,6 +2930,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Chestplate
@@ -2842,6 +2952,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Helmet
@@ -2860,6 +2971,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.7
+- DPS: 0.7
 - Attack Range: 1
 - Sharpness: 0
 #### Ingredient For:
@@ -2881,6 +2993,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 1
+- DPS: 1
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Pants
@@ -2899,6 +3012,7 @@
 - Resource Damage: 1
 - Attack Damage: 120
 - Attack Speed: 0.95
+- DPS: 114
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Chunky Hammer
@@ -2932,6 +3046,7 @@
 - Resource Damage: 1
 - Attack Damage: 100
 - Attack Speed: 0.3
+- DPS: 30
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Fire arrow
@@ -2967,6 +3082,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -2983,6 +3099,7 @@
 - Resource Damage: 1
 - Attack Damage: 110
 - Attack Speed: 1.1
+- DPS: 121.00000000000001
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Gronks Sword
@@ -3016,6 +3133,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -3035,6 +3153,7 @@
 - Resource Damage: 1
 - Attack Damage: 100
 - Attack Speed: 0.3
+- DPS: 30
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Lightning Arrow
@@ -3069,6 +3188,7 @@
 - Resource Damage: 1
 - Attack Damage: 130
 - Attack Speed: 1.15
+- DPS: 149.5
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Night Blade
@@ -3090,6 +3210,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -3107,6 +3228,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
@@ -3123,6 +3245,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -3142,6 +3265,7 @@
 - Resource Damage: 1
 - Attack Damage: 100
 - Attack Speed: 0.3
+- DPS: 30
 - Attack Range: 1
 - Sharpness: 0.8
 #### Crafting: Gives 4 Water Arrow
@@ -3189,6 +3313,7 @@
 - Resource Damage: 1
 - Attack Damage: 20
 - Attack Speed: 1.2
+- DPS: 24
 - Attack Range: 2
 - Sharpness: 1
 
@@ -3205,6 +3330,7 @@
 - Resource Damage: 1
 - Attack Damage: 1
 - Attack Speed: 0.9
+- DPS: 0.9
 - Attack Range: 2
 - Sharpness: 1
 #### Ingredient For:
@@ -3223,6 +3349,7 @@
 - Resource Damage: 1
 - Attack Damage: 60
 - Attack Speed: 1.75
+- DPS: 105
 - Attack Range: 2
 - Sharpness: 1
 #### Crafting: Gives 1 Wyvern Dagger
@@ -3243,6 +3370,7 @@
 - Resource Damage: 0
 - Attack Damage: 0
 - Attack Speed: 1
+- DPS: 0
 - Attack Range: 1
 - Sharpness: 0
 
