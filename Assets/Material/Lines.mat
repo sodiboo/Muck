@@ -3,12 +3,13 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lines
-  m_Shader: {fileID: 4800000, guid: 2c459a60ca833fc42ab603a0574f6fad, type: 3}
-  m_ShaderKeywords:
+  m_Shader: {fileID: 4800000, guid: ff0590c4311ff9f409b24e0c5cee0ac5, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

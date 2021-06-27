@@ -72,10 +72,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6507074673849901045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bb0e52d17d3b54eb626b5fefeb3c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c20889ea144f140be0beef688765fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityName: Trigger First Person
+  entityName:
   canHitMoreThanOnce: 0
   dropTable: {fileID: 11400000, guid: e748b0f27027bef438e79ac8ae2d4a14, type: 2}
   hp: 100
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6507074673849901045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff51b4f6a046bc48b97129d8369526d, type: 3}
+  m_Script: {fileID: 11500000, guid: b85491265c1e0c8468320f985c6a44d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   position:

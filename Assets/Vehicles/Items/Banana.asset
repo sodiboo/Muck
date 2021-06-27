@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
-  id: 137
+  important: 0
+  id: 152
   name: Banana
   description: car go vroom zoom skrrrt
   type: 10
@@ -35,13 +36,13 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: b9a218096c3848d4da8ebde925cfbe89, type: 2}
+  - item: {fileID: 11400000, guid: 7d6b5b0dc6f9390409c4e453605e98d4, type: 2}
     amount: 69
-  - item: {fileID: 11400000, guid: 3f6c9b12fd4931545aceb3225a58c284, type: 2}
+  - item: {fileID: 11400000, guid: fbc80d4c100ae234a822f92a2de9f675, type: 2}
     amount: 69
-  - item: {fileID: 11400000, guid: c0bf032ea16d2ee4db44da6094cd1fc9, type: 2}
+  - item: {fileID: 11400000, guid: 5b76f2e231d417e4382a977b683c266f, type: 2}
     amount: 69
-  - item: {fileID: 11400000, guid: d43e8b7a24e406643815a07918d6698e, type: 2}
+  - item: {fileID: 11400000, guid: e4e94a7dcf087234385a3879f079f826, type: 2}
     amount: 69
   craftAmount: 1
   stationRequirement: {fileID: 0}

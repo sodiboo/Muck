@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f9602a9b666ca4e821945b41e45691, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: FD8
   m_EditorClassIdentifier: 
-  id: 131
+  important: 0
+  id: 146
   name: FD8
   description: car go vroom zoom skrrrt
   type: 10
@@ -35,15 +36,15 @@ MonoBehaviour:
   craftable: 1
   unlockWithFirstRequirementOnly: 0
   requirements:
-  - item: {fileID: 11400000, guid: f204210d6d52e104690dfc917fe07905, type: 2}
+  - item: {fileID: 11400000, guid: f7a910dda8cc85840a078521487cca54, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: d4a74070f357277458b20b1a310e9af5, type: 2}
+  - item: {fileID: 11400000, guid: fd86d4cf96cc7c745b19e2dd1df1258b, type: 2}
     amount: 30
-  - item: {fileID: 11400000, guid: f6f7ca6ef29946a4b915031c1d60888d, type: 2}
+  - item: {fileID: 11400000, guid: a90692fc17118f44181723a2c53de5d4, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: f4ded49973b5db248b6151b4fb88eb8d, type: 2}
+  - item: {fileID: 11400000, guid: 43bccfbd48476094ebe8c0035f4389a5, type: 2}
     amount: 20
-  - item: {fileID: 11400000, guid: 1a23a12e5f60ced48aee48309ab6afe1, type: 2}
+  - item: {fileID: 11400000, guid: 905340509a8be19479e3ec59437c7d4a, type: 2}
     amount: 1
   craftAmount: 1
   stationRequirement: {fileID: 0}

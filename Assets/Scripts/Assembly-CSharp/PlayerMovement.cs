@@ -667,12 +667,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float mouseDeltaY;
 
-    private bool jumping;
-
-    private bool sliding;
-
-    private bool crouching;
-
     private Vector3 normalVector;
 
     public ParticleSystem ps;

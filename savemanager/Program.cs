@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
-
-await Task.Delay(10000);
 
 bool? outputAsBinary = null;
 string outpath = null;
@@ -13,6 +8,7 @@ string inpath = null;
 var simplify = false;
 var input = false;
 var output = false;
+var old = false;
 
 foreach (var flag in args)
 {
@@ -61,6 +57,11 @@ foreach (var flag in args)
                 output = true;
                 break;
             }
+        case "-old":
+            {
+                old = true;
+                break;
+            }
     }
 }
 if (!outputAsBinary.HasValue)
@@ -68,11 +69,13 @@ if (!outputAsBinary.HasValue)
     Console.Error.WriteLine("Invalid arguments: no output encoding specified");
     return;
 }
-if (inpath == null) {
+if (inpath == null)
+{
     Console.Error.WriteLine("Invalid arguments: no input file specified");
     return;
 }
-if (outpath == null) {
+if (outpath == null)
+{
     Console.Error.WriteLine("Invalid arguments: no output file specified");
     return;
 }
@@ -82,7 +85,12 @@ SaveData data;
 try
 {
     using var infile = File.Open(inpath, FileMode.Open);
-    data = new SaveData(infile);
+    data = new SaveData(infile, old);
+}
+catch (SaveData.VersionException)
+{
+    Console.Error.WriteLine("This save file is too new");
+    return;
 }
 catch (Exception ex)
 {

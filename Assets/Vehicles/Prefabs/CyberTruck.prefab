@@ -2813,12 +2813,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: CyberTruck
   canHitMoreThanOnce: 0
-  dropTable: {fileID: 11400000, guid: e748b0f27027bef438e79ac8ae2d4a14, type: 2}
+  dropTable: {fileID: 0}
   hp: 100
   maxHp: 100
-  destroyFx: {fileID: 1522265947390954, guid: 99c053368968acd489702d28a6f9cbbe, type: 3}
-  hitFx: {fileID: 1325647470422892, guid: 30bcb3043765499478a970e88e587811, type: 3}
-  numberFx: {fileID: 1806294109831695, guid: 4f666304e9a85fc4b8a363b2e1551a47, type: 3}
+  destroyFx: {fileID: 1922887442143292, guid: 5c7a1a92ecc01c2499b77faa9c349f6e, type: 3}
+  hitFx: {fileID: 1232322077810288, guid: 8ae4557476771444b84dfcff1767afad, type: 3}
+  numberFx: {fileID: 1454646626941367, guid: b7996cc3a224b6349b170766238e67b7, type: 3}
   compatibleItem: 2
   minTier: 0
   dropItem: {fileID: 11400000, guid: 6292a291c9ef9a14ba911f8db2fb67c8, type: 2}
@@ -11313,7 +11313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609130949198520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a798d372caae04cb010a64b5d6bd50, type: 3}
+  m_Script: {fileID: 11500000, guid: aba195ebb84ceb54ea52eb8995e8a4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:

@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
     public static CultureInfo us = CultureInfo.CreateSpecificCulture("en-US");
     public static SaveData Instance;
+    public const uint CurrentVersion = 1;
+    public uint readVersion;
     public List<SaveEntry> save;
     private void Awake()
     {
@@ -18,6 +21,8 @@ public class SaveData : MonoBehaviour
     public void ToASCII(TextWriter writer)
     {
         writer.Write('a');
+        writer.Write(CurrentVersion);
+        writer.Write(',');
         writer.Write(GameManager.gameSettings.Seed);
         foreach (var entry in save)
         {
@@ -55,6 +60,7 @@ public class SaveData : MonoBehaviour
     public void ToBinary(BinaryWriter writer)
     {
         writer.Write('b');
+        writer.Write(CurrentVersion);
         writer.Write(GameManager.gameSettings.Seed);
         foreach (var entry in save)
         {
@@ -155,7 +161,9 @@ public class SaveData : MonoBehaviour
 
     private bool ReadASCII(TextReader reader)
     {
-        if (GameManager.gameSettings.Seed != int.Parse(reader.ReadLine())) return false;
+        var header = reader.ReadLine().Split(',').ToArray();
+        readVersion = uint.Parse(header[0]);
+        if (GameManager.gameSettings.Seed != int.Parse(header[1])) return false;
 
         string line;
         while ((line = reader.ReadLine()) != null)
@@ -190,7 +198,7 @@ public class SaveData : MonoBehaviour
     private bool ReadOldASCII(TextReader reader)
     {
         if (GameManager.gameSettings.Seed != int.Parse(reader.ReadLine())) return false;
-
+        readVersion = 0;
         string line;
         while ((line = reader.ReadLine()) != null)
         {
@@ -223,7 +231,10 @@ public class SaveData : MonoBehaviour
 
     private bool ReadBinary(BinaryReader reader)
     {
+        var version = reader.ReadUInt32();
+        if (version > CurrentVersion) throw new VersionException { value = version };
         if (GameManager.gameSettings.Seed != reader.ReadInt32()) return false;
+        readVersion = version;
 
         while (reader.BaseStream.Position != reader.BaseStream.Length)
         {
@@ -256,7 +267,7 @@ public class SaveData : MonoBehaviour
     private bool ReadOldBinary(BinaryReader reader)
     {
         if (GameManager.gameSettings.Seed != reader.ReadInt32()) return false;
-
+        readVersion = 0;
         while (reader.BaseStream.Position != reader.BaseStream.Length)
         {
 
@@ -287,10 +298,13 @@ public class SaveData : MonoBehaviour
 
     public static bool isExecuting { get; private set; }
 
-    public int ExecuteSave()
+    public (int mappedObjects, int mappedItems, int ignoredDestructions, int ignoredBuilds) FixSave()
     {
-        isExecuting = true;
         var saveToReal = new Dictionary<int, int>();
+        var mappedItems = 0;
+        var ignoredDestructions = 0;
+        var ignoredBuilds = 0;
+        var remove = new List<SaveEntry>();
         foreach (var entry in save)
         {
             try
@@ -298,17 +312,68 @@ public class SaveData : MonoBehaviour
                 switch (entry)
                 {
                     case AddItem add:
+                        for (var i = readVersion; i < CurrentVersion; i++) {
+                            if (add.itemId >= upgrade[i].Length) {
+                                add.itemId = -1;
+                                break;
+                            }
+                            if (add.itemId < 0) break;
+                            add.itemId = upgrade[i][add.itemId];
+                        }
+                        if (!ItemManager.Instance.allItems.ContainsKey(add.itemId) || !ItemManager.Instance.allItems[add.itemId].buildable)
+                        {
+                            remove.Add(entry);
+                            ignoredBuilds++;
+                            break;
+                        }
                         if (ResourceManager.Instance.list.ContainsKey(add.objectId))
                         {
                             saveToReal[add.objectId] = ResourceManager.Instance.GetNextId();
-                            Debug.Log($"Save object {add.objectId} already exists, mapping to {saveToReal[add.objectId]}");
                             add.objectId = saveToReal[add.objectId];
                         }
+                        else
+                        {
+                            saveToReal[add.objectId] = add.objectId;
+                        }
+                        break;
+                    case DestroyItem destroy:
+                        if (saveToReal.ContainsKey(destroy.objectId)) destroy.objectId = saveToReal[destroy.objectId];
+                        else if (readVersion < CurrentVersion)
+                        {
+                            remove.Add(entry);
+                            break;
+                        }
+                        if (!ResourceManager.Instance.list.ContainsKey(destroy.objectId))
+                        {
+                            remove.Add(entry);
+                            ignoredDestructions++;
+                        }
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError(ex);
+            }
+        }
+        foreach (var entry in remove) save.Remove(entry);
+        return (saveToReal.Where(pair => pair.Key != pair.Value).Count(), mappedItems, ignoredDestructions, ignoredBuilds);
+    }
+
+    public void ExecuteSave()
+    {
+        isExecuting = true;
+        foreach (var entry in save)
+        {
+            try
+            {
+                switch (entry)
+                {
+                    case AddItem add:
                         ResourceManager.globalId = Math.Max(ResourceManager.globalId, add.objectId + 1);
                         BuildManager.Instance.BuildItem(-1, add.itemId, add.objectId, add.position, add.rotation);
                         break;
                     case DestroyItem destroy:
-                        if (saveToReal.ContainsKey(destroy.objectId)) destroy.objectId = saveToReal[destroy.objectId];
                         ResourceManager.Instance.list[destroy.objectId].GetComponent<Hitable>().KillObject(Vector3.zero);
                         break;
                 }
@@ -319,7 +384,6 @@ public class SaveData : MonoBehaviour
             }
         }
         isExecuting = false;
-        return saveToReal.Count;
     }
 
     private Coroutine autosave;
@@ -366,4 +430,154 @@ public class SaveData : MonoBehaviour
         public Vector3 position;
         public Quaternion rotation;
     }
+
+    public class VersionException : Exception
+    {
+        public uint value;
+    }
+
+
+    public int[][] upgrade = new int[][] {new int[] {
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+30,
+30,
+31,
+33,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+69,
+70,
+72,
+72,
+74,
+75,
+76,
+77,
+78,
+79,
+80,
+81,
+83,
+84,
+85,
+86,
+87,
+88,
+89,
+90,
+91,
+92,
+93,
+101,
+102,
+103,
+104,
+105,
+106,
+107,
+108,
+109,
+110,
+111,
+112,
+113,
+114,
+115,
+116,
+117,
+118,
+119,
+120,
+121,
+123,
+124,
+125,
+126,
+127,
+128,
+129,
+130,
+131,
+132,
+133,
+134,
+135,
+136,
+137,
+138,
+139,
+144,
+145,
+146,
+147,
+148,
+149,
+150,
+151,
+152,
+153,
+154,
+    },
+    };
 }

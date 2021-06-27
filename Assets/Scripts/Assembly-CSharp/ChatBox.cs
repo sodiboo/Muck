@@ -248,11 +248,29 @@ public class ChatBox : MonoBehaviour
                             {
                                 SaveData.Instance.save = SaveData.Instance.save.Take(SaveData.Instance.save.Count + offset).ToList();
                             }
-                            var mappedIds = SaveData.Instance.ExecuteSave();
-                            if (mappedIds > 0)
+                            var old = SaveData.Instance.readVersion < SaveData.CurrentVersion;
+                            var (mappedObjects, mappedItems, ignoredDestructions, ignoredBuilds) = SaveData.Instance.FixSave();
+                            if (mappedObjects > 0)
                             {
-                                AppendMessage(-1, $"<color={color}>{mappedIds} object IDs were modified because they corresponded to an object that already existed<color=white>", "");
+                                AppendMessage(-1, $"<color={color}>{mappedObjects} object IDs were modified because they corresponded to an object that already existed<color=white>", "");
                             }
+                            if (mappedItems > 0)
+                            {
+                                AppendMessage(-1, $"<color={color}>{mappedItems} item IDs were modified in a game update and updated in the save automatically<color=white>", "");
+                            }
+                            if (ignoredDestructions > 0)
+                            {
+                                AppendMessage(-1, $"<color={color}>{ignoredDestructions} destruction entries were ignored because they corresponded to an object that didn't exist<color=white>", "");
+                            }
+                            if (old)
+                            {
+                                AppendMessage(-1, $"<color={color}>All destruction entries of items that weren't placed in this save were ignored because they might correspond to different generated objects<color=white>", "");
+                            }
+                            if (ignoredBuilds > 0)
+                            {
+                                AppendMessage(-1, $"<color={color}>{ignoredBuilds} build entries were ignored because they corresponded to an ID that was out of range or an item that isn't buildable<color=white>", "");
+                            }
+                            SaveData.Instance.ExecuteSave();
                             ServerSend.LoadSave();
                         }
                         else
@@ -260,6 +278,10 @@ public class ChatBox : MonoBehaviour
                             AppendMessage(-1, $"<color={color}>The seed of the save file does not match the world seed<color=white>", "");
                             return;
                         }
+                    }
+                    catch (SaveData.VersionException ex)
+                    {
+                        AppendMessage(-1, $"<color={color}>This save file is too new ({ex.value - SaveData.CurrentVersion} versions ahead)<color=white>", "");
                     }
                     catch
                     {
