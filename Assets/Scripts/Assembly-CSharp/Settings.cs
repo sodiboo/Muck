@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
@@ -11,150 +11,263 @@ public class Settings : MonoBehaviour
         this.UpdateSave();
     }
 
+    public GameObject settingsScroll;
+
+    public GameObject boolSetting;
+
+    public GameObject twoBoolSetting;
+
+    public GameObject sliderSetting;
+
+    public GameObject scrollSetting;
+
     public GameObject controlsSetting;
-    public RectTransform controlsParent;
+
+    public GameObject resolutionSetting;
+
+    class SettingsPage : IDisposable
+    {
+        Settings settings;
+
+        RectTransform content;
+
+        float spacing;
+
+        public SettingsPage(GameObject tab, float spacing)
+        {
+            settings = tab.GetComponentInParent<Settings>();
+            var scroll = Instantiate(settings.settingsScroll);
+            content = scroll.GetComponent<ScrollRect>().content;
+            scroll.transform.SetParent(tab.transform, false);
+            this.spacing = spacing;
+        }
+
+        class SettingsItem<T> : IDisposable where T : Setting
+        {
+            public T obj;
+            SettingsPage page;
+            public SettingsItem(SettingsPage page, GameObject gameObject, string name)
+            {
+                obj = Instantiate(gameObject).GetComponent<T>();
+                obj.SetName(name);
+                this.page = page;
+            }
+
+            public void Dispose()
+            {
+                var transform = (RectTransform)obj.transform;
+                transform.SetParent(page.content, false);
+                page.height += transform.sizeDelta.y;
+                page.total++;
+            }
+        }
+
+        float height = 0f;
+
+        int total = 0;
+
+        float maxScrollWidth;
+
+        List<RectTransform> scrollSettings = new List<RectTransform>();
+
+        public void AddControlSetting(string name, KeyCode defaultValue, Action<KeyCode> update)
+        {
+            using (var setting = new SettingsItem<ControlSetting>(this, settings.controlsSetting, name))
+            {
+                setting.obj.SetSetting(defaultValue);
+                setting.obj.onClick.AddListener(() => update(setting.obj.currentKey));
+            }
+        }
+
+        public void AddSliderSetting(string name, int defaultValue, int min, int max, Action<int> update)
+        {
+            using (var setting = new SettingsItem<SliderSetting>(this, settings.sliderSetting, name))
+            {
+                setting.obj.slider.minValue = min;
+                setting.obj.slider.maxValue = max;
+                setting.obj.SetSettings(defaultValue);
+                setting.obj.onClick.AddListener(() => update(setting.obj.currentSetting));
+            }
+        }
+
+        public void AddScrollSetting(string name, string[] values, int defaultIndex, Action<int> update)
+        {
+            using (var setting = new SettingsItem<ScrollSettings>(this, settings.scrollSetting, name))
+            {
+                foreach (var value in values)
+                {
+                    setting.obj.settingText.text = value;
+                    scrollSettings.Add((RectTransform)setting.obj.settingText.transform);
+                    maxScrollWidth = Math.Max(setting.obj.settingText.preferredWidth, maxScrollWidth);
+                }
+                setting.obj.SetSettings(values, defaultIndex);
+                setting.obj.onClick.AddListener(() => update(setting.obj.currentSetting));
+            }
+        }
+
+        public void AddBoolSetting(string name, bool defaultValue, Action<bool> update)
+        {
+            using (var setting = new SettingsItem<MyBoolSetting>(this, settings.boolSetting, name))
+            {
+                setting.obj.SetSetting(defaultValue);
+                setting.obj.onClick.AddListener(() => update(settings.IntToBool(setting.obj.currentSetting)));
+            }
+        }
+
+        public void AddTwoBoolSetting(string name, string label1, string label2, bool defaultValue1, bool defaultValue2, Action<bool, bool> update)
+        {
+            using (var setting = new SettingsItem<TwoBoolSetting>(this, settings.twoBoolSetting, name))
+            {
+                setting.obj.SetSetting(defaultValue1, defaultValue2);
+                setting.obj.SetLabels(label1, label2);
+                setting.obj.onClick.AddListener(() => update(settings.IntToBool(setting.obj.currentSetting & 1), settings.IntToBool(setting.obj.currentSetting & 2)));
+            }
+        }
+
+        public void AddResolutionSetting(string name, Resolution[] resolutions, Resolution current)
+        {
+            using (var setting = new SettingsItem<ResolutionSetting>(this, settings.resolutionSetting, name))
+            {
+                setting.obj.SetSettings(resolutions, current);
+            }
+        }
+
+        public void Dispose()
+        {
+            foreach (var setting in scrollSettings)
+            {
+                setting.sizeDelta = new Vector2(maxScrollWidth, setting.sizeDelta.y);
+            }
+            var group = content.GetComponent<VerticalLayoutGroup>();
+            group.spacing = spacing;
+            content.sizeDelta = new Vector2(content.sizeDelta.x, height + (total - 1) * group.spacing + group.padding.top + group.padding.bottom);
+        }
+    }
 
     private void UpdateSave()
     {
-        this.camShake.SetSetting(SaveManager.Instance.state.cameraShake);
-        this.camShake.onClick.AddListener(new UnityAction(this.UpdateCamShake));
-        this.fov.SetSettings(SaveManager.Instance.state.fov);
-        this.fov.onClick.AddListener(new UnityAction(this.UpdateFov));
-        this.sens.SetSettings(this.FloatToInt(SaveManager.Instance.state.sensMultiplier));
-        this.sens.onClick.AddListener(new UnityAction(this.UpdateSens));
-        
-        invertedCarX.SetSetting(SaveManager.Instance.state.invertedCarX);
-        invertedCarX.onClick.AddListener(UpdateInvertedCar);
-        invertedCarY.SetSetting(SaveManager.Instance.state.invertedCarY);
-        invertedCarY.onClick.AddListener(UpdateInvertedCar);
-
-        invertedMouseX.SetSetting(SaveManager.Instance.state.invertedMouseX);
-        invertedMouseX.onClick.AddListener(UpdateInvertedMouse);
-        invertedMouseY.SetSetting(SaveManager.Instance.state.invertedMouseY);
-        invertedMouseY.onClick.AddListener(UpdateInvertedMouse);
-
-        invertedRotateX.SetSetting(SaveManager.Instance.state.invertedRotateX);
-        invertedRotateX.onClick.AddListener(UpdateInvertedRotate);
-        invertedRotateY.SetSetting(SaveManager.Instance.state.invertedRotateY);
-        invertedRotateY.onClick.AddListener(UpdateInvertedRotate);
-
-        this.grass.SetSetting(SaveManager.Instance.state.grass);
-        this.grass.onClick.AddListener(new UnityAction(this.UpdateGrass));
-        this.tutorial.SetSetting(SaveManager.Instance.state.tutorial);
-        this.tutorial.onClick.AddListener(new UnityAction(this.UpdateTutorial));
-        this.disableBuildFx.SetSetting(SaveManager.Instance.state.disableBuildFx);
-        this.disableBuildFx.onClick.AddListener(new UnityAction(this.UpdateBuildFx));
-
-        var controls = new (KeyCode defaultValue, Action<KeyCode> update, string name)[]
+        var nav = GetComponentInChildren<TopNavigate>();
+        foreach (var menu in nav.settingMenus)
         {
-            (SaveManager.Instance.state.forward, UpdateForwardKey, "Forward"),
-            (SaveManager.Instance.state.backwards, UpdateBackwardKey, "Backward"),
-            (SaveManager.Instance.state.left, UpdateLeftKey, "Left"),
-            (SaveManager.Instance.state.right, UpdateRightKey, "Right"),
-            (SaveManager.Instance.state.jump, UpdateJumpKey, "Jump"),
-            (SaveManager.Instance.state.sprint, UpdateSprintKey, "Sprint"),
-            (SaveManager.Instance.state.crouch, UpdateCrouchKey, "Crouch/Slide"),
-            (SaveManager.Instance.state.interact, UpdateInteractKey, "Interact"),
-            (SaveManager.Instance.state.rotate, UpdateRotateKey, "Rotate Build"),
-            (SaveManager.Instance.state.precisionRotate, UpdatePrecisionRotateKey, "Rotate Build Exactly"),
-            (SaveManager.Instance.state.inventory, UpdateInventoryKey, "Inventory"),
-            (SaveManager.Instance.state.map, UpdateMapKey, "Map"),
-            (SaveManager.Instance.state.leftClick, UpdateLeftClickKey, "Attack/Eat"),
-            (SaveManager.Instance.state.rightClick, UpdateRightClickKey, "Build"),
-        };
-
-        var height = 0f;
-
-        foreach (var control in controls)
-        {
-            var setting = Instantiate(controlsSetting).GetComponent<ControlSetting>();
-            setting.SetSetting(control.defaultValue, control.name);
-            setting.onClick.AddListener(() => control.update(setting.currentKey));
-            var transform = (RectTransform)setting.transform;
-            transform.SetParent(controlsParent, false);
-            height += transform.sizeDelta.y;
+            while (menu.transform.childCount > 0) Destroy(menu.transform.GetChild(0));
         }
-        var group = controlsParent.GetComponent<VerticalLayoutGroup>();
-        controlsParent.sizeDelta = new Vector2(controlsParent.sizeDelta.x, height + (controls.Length - 1) * group.spacing + group.padding.top + group.padding.bottom);
 
-        this.shadowQuality.SetSettings(Enum.GetNames(typeof(Settings.ShadowQuality)), SaveManager.Instance.state.shadowQuality);
-        this.shadowQuality.onClick.AddListener(new UnityAction(this.UpdateShadowQuality));
-        this.shadowResolution.SetSettings(Enum.GetNames(typeof(Settings.ShadowResolution)), SaveManager.Instance.state.shadowResolution);
-        this.shadowResolution.onClick.AddListener(new UnityAction(this.UpdateShadowResolution));
-        this.shadowDistance.SetSettings(Enum.GetNames(typeof(Settings.ShadowDistance)), SaveManager.Instance.state.shadowDistance);
-        this.shadowDistance.onClick.AddListener(new UnityAction(this.UpdateShadowDistance));
-        this.shadowCascades.SetSettings(Enum.GetNames(typeof(Settings.ShadowCascades)), SaveManager.Instance.state.shadowCascade);
-        this.shadowCascades.onClick.AddListener(new UnityAction(this.UpdateShadowCascades));
-        this.textureQuality.SetSettings(Enum.GetNames(typeof(Settings.TextureResolution)), SaveManager.Instance.state.textureQuality);
-        this.textureQuality.onClick.AddListener(new UnityAction(this.UpdateTextureRes));
-        this.antiAliasing.SetSettings(Enum.GetNames(typeof(Settings.AntiAliasing)), SaveManager.Instance.state.antiAliasing);
-        this.antiAliasing.onClick.AddListener(new UnityAction(this.UpdateAntiAliasing));
-        this.softParticles.SetSetting(SaveManager.Instance.state.softParticles);
-        this.softParticles.onClick.AddListener(new UnityAction(this.UpdateSoftParticles));
-        this.bloom.SetSettings(Enum.GetNames(typeof(Settings.Bloom)), SaveManager.Instance.state.bloom);
-        this.bloom.onClick.AddListener(new UnityAction(this.UpdateBloom));
-        this.motionBlur.SetSetting(SaveManager.Instance.state.motionBlur);
-        this.motionBlur.onClick.AddListener(new UnityAction(this.UpdateMotionBlur));
-        this.ao.SetSetting(SaveManager.Instance.state.ambientOcclusion);
-        this.ao.onClick.AddListener(new UnityAction(this.UpdateAO));
-        this.resolution.SetSettings(Screen.resolutions, Screen.currentResolution);
-        this.fullscreen.SetSetting(Screen.fullScreen);
-        this.fullscreen.onClick.AddListener(new UnityAction(this.UpdateFullscreen));
-        this.vSync.SetSettings(Enum.GetNames(typeof(Settings.VSync)), SaveManager.Instance.state.vSync);
-        this.vSync.onClick.AddListener(new UnityAction(this.UpdateVSync));
-        this.fullscreenMode.SetSettings(Enum.GetNames(typeof(FullScreenMode)), SaveManager.Instance.state.fullscreenMode);
-        this.fullscreenMode.onClick.AddListener(new UnityAction(this.UpdateFullscreenMode));
-        this.fpsLimit.SetSettings(SaveManager.Instance.state.fpsLimit);
-        this.fpsLimit.onClick.AddListener(new UnityAction(this.UpdateMaxFps));
-        this.volume.SetSettings(SaveManager.Instance.state.volume);
-        this.volume.onClick.AddListener(new UnityAction(this.UpdateVolume));
-        this.music.SetSettings(SaveManager.Instance.state.music);
-        this.music.onClick.AddListener(new UnityAction(this.UpdateMusic));
+        using (var page = new SettingsPage(nav.settingMenus[0], 15))
+        {
+            page.AddBoolSetting("Camera Shake", SaveManager.Instance.state.cameraShake, UpdateCamShake);
+
+            page.AddSliderSetting("FOV", SaveManager.Instance.state.fov, 50, 120, UpdateFov);
+            page.AddSliderSetting("Sensitivity", FloatToInt(SaveManager.Instance.state.sensMultiplier), 0, 500, UpdateSens);
+
+            page.AddTwoBoolSetting("Inverted Third Person Look", "X", "Y", SaveManager.Instance.state.invertedCarX, SaveManager.Instance.state.invertedCarY, UpdateInvertedCar);
+            page.AddTwoBoolSetting("Inverted First Person Look", "X", "Y", SaveManager.Instance.state.invertedMouseX, SaveManager.Instance.state.invertedMouseY, UpdateInvertedMouse);
+            page.AddTwoBoolSetting("Inverted Build Rotate", "X", "Y", SaveManager.Instance.state.invertedRotateX, SaveManager.Instance.state.invertedRotateY, UpdateInvertedRotate);
+
+            page.AddBoolSetting("Grass", SaveManager.Instance.state.grass, UpdateGrass);
+            page.AddBoolSetting("Tutorial", SaveManager.Instance.state.tutorial, UpdateTutorial);
+            page.AddBoolSetting("Disable Crouching", SaveManager.Instance.state.disableCrouch, UpdateCrouch);
+            page.AddBoolSetting("Disable Build Fx", SaveManager.Instance.state.disableBuildFx, UpdateBuildFx);
+        }
+
+        using (var page = new SettingsPage(nav.settingMenus[1], 15))
+        {
+            page.AddControlSetting("Forward", SaveManager.Instance.state.forward, UpdateForwardKey);
+            page.AddControlSetting("Backward", SaveManager.Instance.state.backwards, UpdateBackwardKey);
+            page.AddControlSetting("Left", SaveManager.Instance.state.left, UpdateLeftKey);
+            page.AddControlSetting("Right", SaveManager.Instance.state.right, UpdateRightKey);
+            page.AddControlSetting("Jump (Fly Up)", SaveManager.Instance.state.jump, UpdateJumpKey);
+            page.AddControlSetting("Sprint", SaveManager.Instance.state.sprint, UpdateSprintKey);
+            page.AddControlSetting("Crouch/Slide (Fly Down)", SaveManager.Instance.state.crouch, UpdateCrouchKey);
+            page.AddControlSetting("Interact", SaveManager.Instance.state.interact, UpdateInteractKey);
+            page.AddControlSetting("Rotate Build", SaveManager.Instance.state.rotate, UpdateRotateKey);
+            page.AddControlSetting("Rotate Build Exactly", SaveManager.Instance.state.precisionRotate, UpdatePrecisionRotateKey);
+            page.AddControlSetting("Inventory", SaveManager.Instance.state.inventory, UpdateInventoryKey);
+            page.AddControlSetting("Map", SaveManager.Instance.state.map, UpdateMapKey);
+            page.AddControlSetting("Attack/Eat", SaveManager.Instance.state.leftClick, UpdateLeftClickKey);
+            page.AddControlSetting("Build", SaveManager.Instance.state.rightClick, UpdateRightClickKey);
+        }
+
+        using (var page = new SettingsPage(nav.settingMenus[2], 15))
+        {
+            page.AddScrollSetting("Shadow Quality", Enum.GetNames(typeof(Settings.ShadowQuality)), SaveManager.Instance.state.shadowQuality, UpdateShadowQuality);
+            page.AddScrollSetting("Shadow Resolution", Enum.GetNames(typeof(Settings.ShadowResolution)), SaveManager.Instance.state.shadowResolution, UpdateShadowResolution);
+            page.AddScrollSetting("Shadow Distance", Enum.GetNames(typeof(Settings.ShadowDistance)), SaveManager.Instance.state.shadowDistance, UpdateShadowDistance);
+            page.AddScrollSetting("Shadow Cascades", Enum.GetNames(typeof(Settings.ShadowCascades)), SaveManager.Instance.state.shadowCascade, UpdateShadowCascades);
+            page.AddScrollSetting("Texture Resolution", Enum.GetNames(typeof(Settings.TextureResolution)), SaveManager.Instance.state.textureQuality, UpdateTextureRes);
+            page.AddScrollSetting("Anti Aliasing", Enum.GetNames(typeof(Settings.AntiAliasing)), SaveManager.Instance.state.antiAliasing, UpdateAntiAliasing);
+
+            page.AddBoolSetting("Soft Particles", SaveManager.Instance.state.softParticles, UpdateSoftParticles);
+            page.AddScrollSetting("Bloom", Enum.GetNames(typeof(Settings.Bloom)), SaveManager.Instance.state.bloom, UpdateBloom);
+
+            page.AddBoolSetting("Motion Blur", SaveManager.Instance.state.motionBlur, UpdateMotionBlur);
+            page.AddBoolSetting("Ambient Occlusion", SaveManager.Instance.state.ambientOcclusion, UpdateAO);
+        }
+
+        using (var page = new SettingsPage(nav.settingMenus[3], 15))
+        {
+            page.AddResolutionSetting("Resolution", Screen.resolutions, Screen.currentResolution);
+            page.AddBoolSetting("Fullscreen", Screen.fullScreen, UpdateFullscreen);
+
+            page.AddScrollSetting("Fullscreen Mode", Enum.GetNames(typeof(FullScreenMode)), SaveManager.Instance.state.fullscreenMode, UpdateFullscreenMode);
+            page.AddScrollSetting("VSync", Enum.GetNames(typeof(Settings.VSync)), SaveManager.Instance.state.vSync, UpdateVSync);
+            page.AddSliderSetting("Max FPS", SaveManager.Instance.state.fpsLimit, 30, 500, UpdateMaxFps);
+        }
+
+        using (var page = new SettingsPage(nav.settingMenus[4], 15))
+        {
+            page.AddSliderSetting("Master volume", SaveManager.Instance.state.volume, 0, 10, UpdateVolume);
+            page.AddSliderSetting("Music volume", SaveManager.Instance.state.music, 0, 10, UpdateMusic);
+        }
     }
 
-    private void UpdateCamShake()
+    private void UpdateCamShake(bool current)
     {
-        CurrentSettings.Instance.UpdateCamShake(this.IntToBool(this.camShake.currentSetting));
+        CurrentSettings.Instance.UpdateCamShake(current);
     }
 
-    private void UpdateInvertedCar()
+    private void UpdateInvertedCar(bool x, bool y)
     {
-        CurrentSettings.Instance.UpdateInvertedCar(IntToBool(invertedCarX.currentSetting), IntToBool(invertedCarY.currentSetting));
+        CurrentSettings.Instance.UpdateInvertedCar(x, y);
     }
 
-    private void UpdateInvertedMouse()
+    private void UpdateInvertedMouse(bool x, bool y)
     {
-        CurrentSettings.Instance.UpdateInvertedMouse(IntToBool(invertedMouseX.currentSetting), IntToBool(invertedMouseY.currentSetting));
+        CurrentSettings.Instance.UpdateInvertedMouse(x, y);
     }
 
-    private void UpdateInvertedRotate()
+    private void UpdateInvertedRotate(bool x, bool y)
     {
-        CurrentSettings.Instance.UpdateInvertedRotate(IntToBool(invertedRotateX.currentSetting), IntToBool(invertedRotateY.currentSetting));
+        CurrentSettings.Instance.UpdateInvertedRotate(x, y);
     }
 
-    private void UpdateGrass()
+    private void UpdateGrass(bool current)
     {
-        CurrentSettings.Instance.UpdateGrass(this.IntToBool(this.grass.currentSetting));
+        CurrentSettings.Instance.UpdateGrass(current);
     }
 
-    private void UpdateTutorial()
+    private void UpdateTutorial(bool current)
     {
-        CurrentSettings.Instance.UpdateTutorial(this.IntToBool(this.tutorial.currentSetting));
+        CurrentSettings.Instance.UpdateTutorial(current);
     }
 
-    private void UpdateBuildFx()
+    private void UpdateCrouch(bool current)
     {
-        CurrentSettings.Instance.UpdateBuildFx(this.IntToBool(this.disableBuildFx.currentSetting));
+        CurrentSettings.Instance.UpdateCrouch(current);
     }
 
-    private void UpdateSens()
+    private void UpdateBuildFx(bool current)
     {
-        CurrentSettings.Instance.UpdateSens(this.IntToFloat(this.sens.currentSetting));
+        CurrentSettings.Instance.UpdateBuildFx(current);
     }
 
-    private void UpdateFov()
+    private void UpdateSens(int current)
     {
-        CurrentSettings.Instance.UpdateFov((float)this.fov.currentSetting);
+        CurrentSettings.Instance.UpdateSens(IntToFloat(current));
+    }
+
+    private void UpdateFov(int current)
+    {
+        CurrentSettings.Instance.UpdateFov(current);
     }
 
     private void UpdateForwardKey(KeyCode current)
@@ -255,84 +368,84 @@ public class Settings : MonoBehaviour
         InputManager.rightClick = current;
     }
 
-    private void UpdateShadowQuality()
+    private void UpdateShadowQuality(int current)
     {
-        CurrentSettings.Instance.UpdateShadowQuality(this.shadowQuality.currentSetting);
+        CurrentSettings.Instance.UpdateShadowQuality(current);
     }
 
-    private void UpdateShadowResolution()
+    private void UpdateShadowResolution(int current)
     {
-        CurrentSettings.Instance.UpdateShadowResolution(this.shadowResolution.currentSetting);
+        CurrentSettings.Instance.UpdateShadowResolution(current);
     }
 
-    private void UpdateShadowDistance()
+    private void UpdateShadowDistance(int current)
     {
-        CurrentSettings.Instance.UpdateShadowDistance(this.shadowDistance.currentSetting);
+        CurrentSettings.Instance.UpdateShadowDistance(current);
     }
 
-    private void UpdateShadowCascades()
+    private void UpdateShadowCascades(int current)
     {
-        CurrentSettings.Instance.UpdateShadowCascades(this.shadowCascades.currentSetting);
+        CurrentSettings.Instance.UpdateShadowCascades(current);
     }
 
-    private void UpdateTextureRes()
+    private void UpdateTextureRes(int current)
     {
-        CurrentSettings.Instance.UpdateTextureQuality(this.textureQuality.currentSetting);
+        CurrentSettings.Instance.UpdateTextureQuality(current);
     }
 
-    private void UpdateAntiAliasing()
+    private void UpdateAntiAliasing(int current)
     {
-        CurrentSettings.Instance.UpdateAntiAliasing(this.antiAliasing.currentSetting);
+        CurrentSettings.Instance.UpdateAntiAliasing(current);
     }
 
-    private void UpdateSoftParticles()
+    private void UpdateBloom(int current)
     {
-        CurrentSettings.Instance.UpdateSoftParticles(this.IntToBool(this.softParticles.currentSetting));
+        CurrentSettings.Instance.UpdateBloom(current);
     }
 
-    private void UpdateBloom()
+    private void UpdateSoftParticles(bool current)
     {
-        CurrentSettings.Instance.UpdateBloom(this.bloom.currentSetting);
+        CurrentSettings.Instance.UpdateSoftParticles(current);
     }
 
-    private void UpdateMotionBlur()
+    private void UpdateMotionBlur(bool current)
     {
-        CurrentSettings.Instance.UpdateMotionBlur(this.IntToBool(this.motionBlur.currentSetting));
+        CurrentSettings.Instance.UpdateMotionBlur(current);
     }
 
-    private void UpdateAO()
+    private void UpdateAO(bool current)
     {
-        CurrentSettings.Instance.UpdateAO(this.IntToBool(this.ao.currentSetting));
+        CurrentSettings.Instance.UpdateAO(current);
     }
 
-    private void UpdateFullscreen()
+    private void UpdateFullscreen(bool current)
     {
-        CurrentSettings.Instance.UpdateFullscreen(this.IntToBool(this.fullscreen.currentSetting));
+        CurrentSettings.Instance.UpdateFullscreen(current);
     }
 
-    private void UpdateFullscreenMode()
+    private void UpdateFullscreenMode(int current)
     {
-        CurrentSettings.Instance.UpdateFullscreenMode(this.fullscreenMode.currentSetting);
+        CurrentSettings.Instance.UpdateFullscreenMode(current);
     }
 
-    private void UpdateVSync()
+    private void UpdateVSync(int current)
     {
-        CurrentSettings.Instance.UpdateVSync(this.vSync.currentSetting);
+        CurrentSettings.Instance.UpdateVSync(current);
     }
 
-    private void UpdateMaxFps()
+    private void UpdateMaxFps(int current)
     {
-        CurrentSettings.Instance.UpdateMaxFps(this.fpsLimit.currentSetting);
+        CurrentSettings.Instance.UpdateMaxFps(current);
     }
 
-    private void UpdateVolume()
+    private void UpdateVolume(int current)
     {
-        CurrentSettings.Instance.UpdateVolume(this.volume.currentSetting);
+        CurrentSettings.Instance.UpdateVolume(current);
     }
 
-    private void UpdateMusic()
+    private void UpdateMusic(int current)
     {
-        CurrentSettings.Instance.UpdateMusic(this.music.currentSetting);
+        CurrentSettings.Instance.UpdateMusic(current);
     }
 
     private float IntToFloat(int i)
@@ -368,71 +481,6 @@ public class Settings : MonoBehaviour
     }
 
     public Button backBtn;
-
-    [Header("Game")]
-    public MyBoolSetting camShake;
-
-    public SliderSetting fov;
-
-	public MyBoolSetting invertedHor;
-
-    public SliderSetting sens;
-
-    public MyBoolSetting invertedCarX;
-
-    public MyBoolSetting invertedCarY;
-
-    public MyBoolSetting invertedMouseX;
-
-    public MyBoolSetting invertedMouseY;
-
-    public MyBoolSetting invertedRotateX;
-
-    public MyBoolSetting invertedRotateY;
-
-    public MyBoolSetting grass;
-
-    public MyBoolSetting tutorial;
-
-    public MyBoolSetting disableBuildFx;
-
-    [Header("Graphics")]
-    public ScrollSettings shadowQuality;
-
-    public ScrollSettings shadowResolution;
-
-    public ScrollSettings shadowDistance;
-
-    public ScrollSettings shadowCascades;
-
-    public ScrollSettings textureQuality;
-
-    public ScrollSettings antiAliasing;
-
-    public MyBoolSetting softParticles;
-
-    public ScrollSettings bloom;
-
-    public MyBoolSetting motionBlur;
-
-    public MyBoolSetting ao;
-
-    [Header("Video")]
-    public ResolutionSetting resolution;
-
-    public MyBoolSetting fullscreen;
-
-    public ScrollSettings fullscreenMode;
-
-    public ScrollSettings vSync;
-
-    public SliderSetting fpsLimit;
-
-    [Header("Audio")]
-    public SliderSetting volume;
-
-    [Header("Audio")]
-    public SliderSetting music;
 
     public enum BoolSetting
     {

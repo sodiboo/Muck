@@ -266,7 +266,9 @@ public class SaveData
                         {
                             add.itemId = -1;
                         }
-                        if (add.itemId >= 0) add.itemId = upgrade[i][add.itemId];
+                        if (add.itemId >= 0) {
+                            add.itemId = upgrade[i][add.itemId];
+                        }
                     }
                     break;
             }
@@ -274,11 +276,11 @@ public class SaveData
     }
 
     public interface SaveEntry { }
-    public struct DestroyItem : SaveEntry
+    public class DestroyItem : SaveEntry
     {
         public int objectId;
     }
-    public struct AddItem : SaveEntry
+    public class AddItem : SaveEntry
     {
         public int itemId;
         public int objectId;
@@ -322,10 +324,10 @@ public class SaveData
 26,
 27,
 28,
-30,
+29,
 30,
 31,
-33,
+32,
 33,
 34,
 35,
@@ -363,7 +365,7 @@ public class SaveData
 67,
 69,
 70,
-72,
+71,
 72,
 74,
 75,

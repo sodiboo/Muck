@@ -86,6 +86,7 @@ try
 {
     using var infile = File.Open(inpath, FileMode.Open);
     data = new SaveData(infile, old);
+    data.FixSave();
 }
 catch (SaveData.VersionException)
 {

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ControlSetting : Setting
 {
-	public void SetSetting(KeyCode k, string actionName)
+	public void SetSetting(KeyCode k)
 	{
 		this.currentKey = k;
 		MonoBehaviour.print("key: " + k);
-		this.actionName = actionName;
-		actionText.text = actionName;
 		this.UpdateSetting();
 	}
 
@@ -27,14 +25,10 @@ public class ControlSetting : Setting
 
 	public void StartListening()
 	{
-		KeyListener.Instance.ListenForKey(this, this.actionName);
+		KeyListener.Instance.ListenForKey(this, this.settingName);
 	}
-
-	public TextMeshProUGUI actionText;
 
 	public TextMeshProUGUI keyText;
 
 	public KeyCode currentKey;
-
-	private string actionName;
 }

@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using Steamworks;
+using System.Runtime;
 
 public class UseInventory : MonoBehaviour
 {
@@ -152,14 +153,20 @@ public class UseInventory : MonoBehaviour
         {
             if (!BuildDestruction.dontDestroy)
             {
-                ChatBox.Instance.AppendMessage(-1, LocalClient.serverOwner ? "<color=red>Cannot use precision delete right now. Please run /dontdestroyneighbors first.<color=white>" : $"<color=red>Cannot use precision delete right now. Please ask the host ({new Friend(LocalClient.instance.serverHost).Name}) to run /dontdestroyneighbors first.<color=white>", "");
+                ChatBox.Instance.AppendMessage(LocalClient.serverOwner ? "<color=red>Cannot use precision delete right now. Please run /dontdestroyneighbors first.<color=white>" : $"<color=red>Cannot use precision delete right now. Please ask the host ({new Friend(LocalClient.instance.serverHost).Name}) to run /dontdestroyneighbors first.<color=white>");
                 return;
             }
-            if (Physics.Raycast(PlayerMovement.Instance.playerCam.position, PlayerMovement.Instance.playerCam.forward, out var hit, float.PositiveInfinity, 1 << LayerMask.NameToLayer("Object"), Input.GetKey(InputManager.precisionRotate) ? QueryTriggerInteraction.Collide : QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(PlayerMovement.Instance.playerCam.position, PlayerMovement.Instance.playerCam.forward, out var hit, float.PositiveInfinity, ~(1 << LayerMask.NameToLayer("Player")), Input.GetKey(InputManager.precisionRotate) ? QueryTriggerInteraction.Collide : QueryTriggerInteraction.Ignore))
             {
                 Hitable target;
-                if (!hit.collider.TryGetComponent<Hitable>(out target) && hit.collider.transform.parent && !hit.collider.transform.parent.TryGetComponent<Hitable>(out target)) return;
-                target.GetComponent<Hitable>().Hit(int.MaxValue, 1, 0, hit.point);
+                var obj = hit.collider.transform;
+                if (obj.TryGetComponent<Hitable>(out target)) goto thing;
+                while ((obj = obj.parent) != null) {
+                    if (obj.TryGetComponent<Hitable>(out target)) goto thing;
+                }
+                return;
+                thing:
+                target.Hit(int.MaxValue, 1, 0, hit.point);
             }
             return;
         }

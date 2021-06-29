@@ -25,6 +25,8 @@ public class PlayerSave
 
     public bool tutorial = true;
 
+    public bool disableCrouch = true;
+
     public bool disableBuildFx = false;
 
     public KeyCode forward = KeyCode.W;

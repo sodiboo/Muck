@@ -19,11 +19,11 @@ public class PlayerInput : MonoBehaviour
         {
             return;
         }
-		if (GameManager.state == GameManager.GameState.GameOver)
-		{
-			this.StopInput();
-			return;
-		}
+        if (GameManager.state == GameManager.GameState.GameOver)
+        {
+            this.StopInput();
+            return;
+        }
         this.MyInput();
         this.Look();
     }
@@ -60,10 +60,10 @@ public class PlayerInput : MonoBehaviour
             this.StopInput();
             return;
         }
-		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.U) && Input.GetKeyDown(KeyCode.I))
-		{
-			UiController.Instance.ToggleHud();
-		}
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.U) && Input.GetKeyDown(KeyCode.I))
+        {
+            UiController.Instance.ToggleHud();
+        }
         this.x = 0f;
         this.y = 0f;
         if (Input.GetKey(InputManager.forward))
@@ -98,28 +98,31 @@ public class PlayerInput : MonoBehaviour
         {
             this.playerMovement.Jump();
         }
-        if (Input.GetKey(InputManager.leftClick))
+        if (!OtherInput.Instance.IsAnyMenuOpen())
         {
-            UseInventory.Instance.Use();
-        }
-        if (Input.GetKeyUp(InputManager.leftClick))
-        {
-            UseInventory.Instance.UseButtonUp();
-        }
-        if (Input.GetKeyDown(InputManager.rightClick))
-        {
-            BuildManager.Instance.RequestBuildItem();
-        }
-        if (Input.GetKeyDown(InputManager.rotate) && !Input.GetKey(InputManager.precisionRotate))
-        {
-            if (BuildManager.Instance.xRot != 0 || BuildManager.Instance.yRot % 45 != 0)
+            if (Input.GetKey(InputManager.leftClick))
             {
-                BuildManager.Instance.xRot = 0;
-                BuildManager.Instance.yRot = 0;
+                UseInventory.Instance.Use();
             }
-            else
+            if (Input.GetKeyUp(InputManager.leftClick))
             {
-                BuildManager.Instance.RotateBuild(1);
+                UseInventory.Instance.UseButtonUp();
+            }
+            if (Input.GetKeyDown(InputManager.rightClick))
+            {
+                BuildManager.Instance.RequestBuildItem();
+            }
+            if (Input.GetKeyDown(InputManager.rotate) && !Input.GetKey(InputManager.precisionRotate))
+            {
+                if (BuildManager.Instance.xRot != 0 || BuildManager.Instance.yRot % 45 != 0)
+                {
+                    BuildManager.Instance.xRot = 0;
+                    BuildManager.Instance.yRot = 0;
+                }
+                else
+                {
+                    BuildManager.Instance.RotateBuild(1);
+                }
             }
         }
         this.playerMovement.SetInput(new Vector2(this.x, this.y), this.crouching, this.jumping, this.sprinting);

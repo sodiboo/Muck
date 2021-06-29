@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: Precision
   m_EditorClassIdentifier: 
-  id: 138
+  important: 0
+  id: 153
   name: Precision Delete
   description: Left click to delete the structure you are looking at
   type: 0
@@ -54,6 +55,6 @@ MonoBehaviour:
   bowComponent: {fileID: 0}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
-  tag: 11
+  tag: 12
   rarity: 0
   attackTypes: 

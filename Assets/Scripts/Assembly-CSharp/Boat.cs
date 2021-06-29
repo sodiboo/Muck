@@ -220,7 +220,7 @@ public class Boat : MonoBehaviour
 				Map.Instance.AddMarker(shrineGuardian.transform, Map.MarkerType.Gem, this.gemTexture, Guardian.TypeToColor(shrineGuardian.type), "?", 1f);
 			}
 		}
-		ChatBox.Instance.AppendMessage(-1, string.Format("<color=orange>Guardians <color=white>have been located  (\"{0}\" to open map)", InputManager.map), "");
+		ChatBox.Instance.AppendMessage(string.Format("<color=orange>Guardians <color=white>have been located  (\"{0}\" to open map)", InputManager.map));
 	}
 
 	private void CheckFound()
@@ -244,7 +244,7 @@ public class Boat : MonoBehaviour
 		this.status = Boat.BoatStatus.Found;
 		Destroy(this.boatPing.gameObject);
 		Map.Instance.AddMarker(base.transform, Map.MarkerType.Other, this.boatTexture, Color.white, "Shipwreck", 1f);
-		ChatBox.Instance.AppendMessage(-1, string.Format("<color=orange>Broken Ship <color=white>has been located (\"{0}\" to open map)", InputManager.map), "");
+		ChatBox.Instance.AppendMessage(string.Format("<color=orange>Broken Ship <color=white>has been located (\"{0}\" to open map)", InputManager.map));
 		Map.Instance.RemoveMarker(this.boatMapMarker);
 	}
 
@@ -252,7 +252,7 @@ public class Boat : MonoBehaviour
 	{
 		this.status = Boat.BoatStatus.Marked;
 		this.boatPing.gameObject.SetActive(true);
-		ChatBox.Instance.AppendMessage(-1, string.Format("Something has been marked on your map...  (\"{0}\" to open map)", InputManager.map), "");
+		ChatBox.Instance.AppendMessage(string.Format("Something has been marked on your map...  (\"{0}\" to open map)", InputManager.map));
 		Map.Instance.AddMarker(base.transform, Map.MarkerType.Other, null, Color.white, "", 1f);
 	}
 

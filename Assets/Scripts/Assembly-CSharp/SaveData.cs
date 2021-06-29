@@ -298,8 +298,9 @@ public class SaveData : MonoBehaviour
 
     public static bool isExecuting { get; private set; }
 
-    public (int mappedObjects, int mappedItems, int ignoredDestructions, int ignoredBuilds) FixSave()
+    public (int mappedObjects, int mappedItems, int ignoredDestructions, int ignoredBuilds) ExecuteServer()
     {
+        isExecuting = true;
         var saveToReal = new Dictionary<int, int>();
         var mappedItems = 0;
         var ignoredDestructions = 0;
@@ -335,6 +336,8 @@ public class SaveData : MonoBehaviour
                         {
                             saveToReal[add.objectId] = add.objectId;
                         }
+                        ResourceManager.globalId = Math.Max(ResourceManager.globalId, add.objectId + 1);
+                        BuildManager.Instance.BuildItem(-1, add.itemId, add.objectId, add.position, add.rotation);
                         break;
                     case DestroyItem destroy:
                         if (saveToReal.ContainsKey(destroy.objectId)) destroy.objectId = saveToReal[destroy.objectId];
@@ -347,7 +350,9 @@ public class SaveData : MonoBehaviour
                         {
                             remove.Add(entry);
                             ignoredDestructions++;
+                            break;
                         }
+                        ResourceManager.Instance.list[destroy.objectId].GetComponent<Hitable>().KillObject(Vector3.zero);
                         break;
                 }
             }
@@ -357,10 +362,11 @@ public class SaveData : MonoBehaviour
             }
         }
         foreach (var entry in remove) save.Remove(entry);
+        isExecuting = false;
         return (saveToReal.Where(pair => pair.Key != pair.Value).Count(), mappedItems, ignoredDestructions, ignoredBuilds);
     }
 
-    public void ExecuteSave()
+    public void ExecuteClient()
     {
         isExecuting = true;
         foreach (var entry in save)
@@ -408,22 +414,22 @@ public class SaveData : MonoBehaviour
                         SaveData.Instance.ToBinary(writer);
                     }
                 }
-                ChatBox.Instance.AppendMessage(-1, $"<color=green>Game has been autosaved<color=white>", "");
+                ChatBox.Instance.AppendMessage($"<color=green>Game has been autosaved<color=white>");
             }
             catch
             {
-                ChatBox.Instance.AppendMessage(-1, $"<color=red>There was an error autosaving the game<color=white>", "");
+                ChatBox.Instance.AppendMessage( $"<color=red>There was an error autosaving the game<color=white>");
             }
             yield return new WaitForSecondsRealtime(seconds);
         }
     }
 
     public interface SaveEntry { }
-    public struct DestroyItem : SaveEntry
+    public class DestroyItem : SaveEntry
     {
         public int objectId;
     }
-    public struct AddItem : SaveEntry
+    public class AddItem : SaveEntry
     {
         public int itemId;
         public int objectId;
@@ -467,10 +473,10 @@ public class SaveData : MonoBehaviour
 26,
 27,
 28,
-30,
+29,
 30,
 31,
-33,
+32,
 33,
 34,
 35,
@@ -508,7 +514,7 @@ public class SaveData : MonoBehaviour
 67,
 69,
 70,
-72,
+71,
 72,
 74,
 75,

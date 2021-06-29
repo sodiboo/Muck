@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
 	public bool crouching { get; set; }
 
+    public bool flyDown { get; set; }
+
     public bool sprinting { get; private set; }
 
     public bool flying { get; private set; }
@@ -51,7 +53,8 @@ public class PlayerMovement : MonoBehaviour
     {
         this.x = dir.x;
         this.y = dir.y;
-        this.crouching = crouching;
+        this.crouching = crouching && !CurrentSettings.Instance.disableCrouch;
+        this.flyDown = crouching;
         this.jumping = jumping;
         this.sprinting = sprinting;
     }
@@ -195,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
         if (flying)
         {
             var v = 0f;
-            if (crouching) v -= 1f;
+            if (flyDown) v -= 1f;
             if (jumping) v += 1f;
             rb.velocity = new Vector3(rb.velocity.x, v * Mathf.Max(vector.magnitude, 20f), rb.velocity.z);
         }
@@ -604,7 +607,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsCrouching()
     {
-        return this.crouching && !flying;
+        return this.crouching;
     }
 
     public bool IsDead()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 
@@ -8,35 +9,17 @@ public class Car : HitableResource
 {
     public const float Scale = 2;
 
-
-
     public Rigidbody rb { get; set; }
-
-
-
 
     public float steering { get; set; }
 
-
-
-
     public float throttle { get; set; }
-
-
-
 
     public bool breaking { get; set; }
 
-
-
-
     public float speed { get; private set; }
 
-
-
-
     public float steerAngle { get; set; }
-
 
     private new void Awake()
     {
@@ -89,7 +72,6 @@ public class Car : HitableResource
         OutOfMap();
     }
 
-
     private void FixedUpdate()
     {
         if (!CounterMovement())
@@ -121,7 +103,6 @@ public class Car : HitableResource
 
     }
 
-
     private void Audio()
     {
         accelerate.volume = Mathf.Lerp(accelerate.volume, Mathf.Abs(throttle) + Mathf.Abs(speed / 80f), Time.deltaTime * 6f);
@@ -134,19 +115,10 @@ public class Car : HitableResource
         deaccelerate.pitch = Mathf.Lerp(deaccelerate.pitch, 0.5f + speed / 40f, Time.deltaTime * 2f);
     }
 
-
-
-
     public Vector3 acceleration { get; private set; }
 
     private bool CounterMovement()
     {
-        // if (inUse)
-        // {
-        //     if (OtherInput.Instance.currentCar != this) return rb.isKinematic = true;
-        // }
-        // else if (!LocalClient.serverOwner) return rb.isKinematic = true;
-
         return rb.isKinematic
     = wheelPositions.All(sus => sus.grounded)
     && throttle == 0f
@@ -237,9 +209,26 @@ public class Car : HitableResource
         lastVelocity = vector2;
     }
 
+    public float underwaterBaseDrag = 0.995f;
+    public float underwaterVerticalNonGroundedDrag = 0.9f;
+    public float underwaterAngularDrag = 0.9f;
 
     private void StandStill()
     {
+        if (World.Instance.water.position.y > centerOfMass.position.y) {
+            rb.drag = 0f;
+            if (wheelPositions.All(sus => sus.grounded)) {
+                rb.velocity *= underwaterBaseDrag;
+            } else {
+                var vel = rb.velocity;
+                vel.x *= underwaterBaseDrag;
+                vel.y *= underwaterVerticalNonGroundedDrag;
+                vel.z *= underwaterBaseDrag;
+                rb.velocity = vel;
+            }
+            rb.angularVelocity *= underwaterAngularDrag;
+            return;
+        }
         if (Mathf.Abs(speed) >= 1f || !grounded || throttle != 0f)
         {
             rb.drag = 0f;
@@ -263,7 +252,6 @@ public class Car : HitableResource
         rb.drag = 0f;
     }
 
-
     private void Steering()
     {
         foreach (var suspension in wheelPositions)
@@ -276,9 +264,7 @@ public class Car : HitableResource
         }
     }
 
-
     private Vector3 XZVector(Vector3 v) => new Vector3(v.x, 0f, v.z);
-
 
     private void InitWheels()
     {
@@ -291,7 +277,6 @@ public class Car : HitableResource
             suspension.wheelObject.localScale = Vector3.one * suspensionLength * 2f;
         }
     }
-
 
     private void MoveWheels()
     {
@@ -306,7 +291,6 @@ public class Car : HitableResource
             suspension.transform.localScale = Vector3.one / base.transform.localScale.x;
         }
     }
-
 
     private void CheckGrounded()
     {
@@ -361,91 +345,71 @@ public class Car : HitableResource
         }
     }
 
-
     [Header("Misc")]
     public Transform centerOfMass;
 
-
     public Suspension[] wheelPositions;
-
 
     public GameObject wheel;
 
-
     public TextMeshProUGUI text;
-    public new GameObject collider;
 
+    public new GameObject collider;
 
     [Header("Suspension Variables")]
     public bool autoValues;
 
-
     public float suspensionLength;
-
 
     public float restHeight;
 
-
     public float suspensionForce;
 
-
     public float suspensionDamping;
-
 
     [Header("Car specs")]
     public float engineForce = 5000f;
 
-
     public float steerForce = 1f;
-
 
     public float antiRoll = 5000f;
 
-
     public float stability;
-
 
     [Header("Drift specs")]
     public float driftMultiplier = 1f;
 
-
     public float driftThreshold = 0.5f;
-
 
     private readonly float C_drag = 3.5f;
 
-
     private readonly float C_rollFriction = 105f;
 
-
     private readonly float C_breaking = 3000f;
-
 
     [Header("Audio Sources")]
     public AudioSource accelerate;
 
-
     public AudioSource deaccelerate;
-
 
     private float dir;
 
-
     public Vector3 lastVelocity;
-
 
     private bool grounded;
 
-
     private readonly float yawGripThreshold = 0.6f;
-
 
     private readonly float yawGripMultiplier = 0.15f;
 
     public float firstPersonDistance;
+
     public float firstPersonHeight;
+
     public int suspensionLayers = (1 << 9) | (1 << 10) | (1 << 12) | (1 << 13);
+
     public bool drifting;
+
 
     [HideInInspector]
     public bool inUse;

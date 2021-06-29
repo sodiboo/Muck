@@ -127,6 +127,13 @@ public class CurrentSettings : MonoBehaviour
         this.tutorial = b;
     }
 
+    public void UpdateCrouch(bool b) {
+        Debug.Log("Setting disable crouch to: " + b.ToString());
+        SaveManager.Instance.state.disableCrouch = b;
+        SaveManager.Instance.Save();
+        this.disableCrouch = b;
+    }
+
     public void UpdateBuildFx(bool b)
     {
         Debug.Log("Setting disable build fx to: " + b.ToString());
@@ -310,6 +317,8 @@ public class CurrentSettings : MonoBehaviour
     public int fov = 85;
 
     public bool tutorial;
+
+    public bool disableCrouch;
 
     public bool disableBuildFx;
 

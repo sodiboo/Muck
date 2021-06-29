@@ -652,7 +652,7 @@ public class ClientHandle : MonoBehaviour
     public static void LoadSave(Packet packet)
     {
         SaveData.Instance.ReadPacket(packet);
-        SaveData.Instance.ExecuteSave();
+        SaveData.Instance.ExecuteClient();
     }
 
     public static void DontDestroy(Packet packet)
@@ -660,11 +660,11 @@ public class ClientHandle : MonoBehaviour
         BuildDestruction.dontDestroy = packet.ReadBool();
         if (BuildDestruction.dontDestroy)
         {
-            ChatBox.Instance.AppendMessage(-1, $"<color=#{ColorUtility.ToHtmlStringRGB(Color.cyan)}>Breaking structures will no longer destroy their neighbors<color=white>", "");
+            ChatBox.Instance.AppendMessage($"<color=#{ColorUtility.ToHtmlStringRGB(Color.cyan)}>Breaking structures will no longer destroy their neighbors<color=white>");
         }
         else
         {
-            ChatBox.Instance.AppendMessage(-1, $"<color=#{ColorUtility.ToHtmlStringRGB(Color.cyan)}>Breaking structures will now destroy their neighbors<color=white>", "");
+            ChatBox.Instance.AppendMessage($"<color=#{ColorUtility.ToHtmlStringRGB(Color.cyan)}>Breaking structures will now destroy their neighbors<color=white>");
         }
     }
 }

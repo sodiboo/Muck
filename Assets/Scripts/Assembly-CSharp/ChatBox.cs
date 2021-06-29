@@ -54,7 +54,7 @@ public class ChatBox : MonoBehaviour
         clipboard += $";{content}";
     }
 
-    public void AppendMessage(int fromUser, string message, string fromUsername)
+    public void AppendMessage(int fromUser, string message, string fromUsername, bool bypassLength = false)
     {
         string str = this.TrimMessage(message);
         string text = "\n";
@@ -99,6 +99,8 @@ public class ChatBox : MonoBehaviour
             base.Invoke(nameof(HideChat), 5f);
         }
     }
+
+    public void AppendMessage(string message) => AppendMessage(-1, message, "", true);
 
     List<string> messageHistory = new List<string>();
     int selectedMessage = -1;
@@ -147,19 +149,19 @@ public class ChatBox : MonoBehaviour
         if (command == "seed")
         {
             int seed = GameManager.gameSettings.Seed;
-            this.AppendMessage(-1, string.Concat(new object[]
+            this.AppendMessage(string.Concat(new object[]
             {
                 "<color=",
                 color,
                 ">Seed: ",
                 seed,
                 " (copied to clipboard)<color=white>"
-            }), "");
+            }));
             Copy(string.Concat(seed));
         }
         else if (command == "ping")
         {
-            this.AppendMessage(-1, "<color=" + color + ">pong<color=white>", "");
+            this.AppendMessage("<color=" + color + ">pong<color=white>");
         }
         else if (command == "debug")
         {
@@ -183,7 +185,7 @@ public class ChatBox : MonoBehaviour
                     SaveData.Instance.ToBinary(writer);
                 }
             }
-            AppendMessage(-1, $"<color=green>Successfully saved the game<color=white>", "");
+            AppendMessage($"<color=green>Successfully saved the game<color=white>");
         }
         else if (command.StartsWith("asciisave "))
         {
@@ -199,19 +201,19 @@ public class ChatBox : MonoBehaviour
                     SaveData.Instance.ToASCII(writer);
                 }
             }
-            AppendMessage(-1, $"<color=green>Successfully saved the game<color=white>", "");
+            AppendMessage($"<color=green>Successfully saved the game<color=white>");
         }
         else if (command.StartsWith("load"))
         {
             if (!LocalClient.serverOwner)
             {
-                AppendMessage(-1, $"<color={color}>Only the server host can load saves<color=white>", "");
+                AppendMessage($"<color={color}>Only the server host can load saves<color=white>");
                 return;
             }
 
             if (SaveData.Instance.save.Count != 0)
             {
-                AppendMessage(-1, $"<color={color}>Cannot load a save after the world has been modified<color=white>", "");
+                AppendMessage($"<color={color}>Cannot load a save after the world has been modified<color=white>");
                 return;
             }
             command = command.Substring(4);
@@ -249,49 +251,48 @@ public class ChatBox : MonoBehaviour
                                 SaveData.Instance.save = SaveData.Instance.save.Take(SaveData.Instance.save.Count + offset).ToList();
                             }
                             var old = SaveData.Instance.readVersion < SaveData.CurrentVersion;
-                            var (mappedObjects, mappedItems, ignoredDestructions, ignoredBuilds) = SaveData.Instance.FixSave();
+                            var (mappedObjects, mappedItems, ignoredDestructions, ignoredBuilds) = SaveData.Instance.ExecuteServer();
                             if (mappedObjects > 0)
                             {
-                                AppendMessage(-1, $"<color={color}>{mappedObjects} object IDs were modified because they corresponded to an object that already existed<color=white>", "");
+                                AppendMessage($"<color={color}>{mappedObjects} object IDs were modified because they corresponded to an object that already existed<color=white>");
                             }
                             if (mappedItems > 0)
                             {
-                                AppendMessage(-1, $"<color={color}>{mappedItems} item IDs were modified in a game update and updated in the save automatically<color=white>", "");
+                                AppendMessage($"<color={color}>{mappedItems} item IDs were modified in a game update and updated in the save automatically<color=white>");
                             }
                             if (ignoredDestructions > 0)
                             {
-                                AppendMessage(-1, $"<color={color}>{ignoredDestructions} destruction entries were ignored because they corresponded to an object that didn't exist<color=white>", "");
+                                AppendMessage($"<color={color}>{ignoredDestructions} destruction entries were ignored because they corresponded to an object that didn't exist<color=white>");
                             }
                             if (old)
                             {
-                                AppendMessage(-1, $"<color={color}>All destruction entries of items that weren't placed in this save were ignored because they might correspond to different generated objects<color=white>", "");
+                                AppendMessage($"<color={color}>All destruction entries of items that weren't placed in this save were ignored because they might correspond to different generated objects<color=white>");
                             }
                             if (ignoredBuilds > 0)
                             {
-                                AppendMessage(-1, $"<color={color}>{ignoredBuilds} build entries were ignored because they corresponded to an ID that was out of range or an item that isn't buildable<color=white>", "");
+                                AppendMessage($"<color={color}>{ignoredBuilds} build entries were ignored because they corresponded to an ID that was out of range or an item that isn't buildable<color=white>");
                             }
-                            SaveData.Instance.ExecuteSave();
                             ServerSend.LoadSave();
                         }
                         else
                         {
-                            AppendMessage(-1, $"<color={color}>The seed of the save file does not match the world seed<color=white>", "");
+                            AppendMessage($"<color={color}>The seed of the save file does not match the world seed<color=white>");
                             return;
                         }
                     }
                     catch (SaveData.VersionException ex)
                     {
-                        AppendMessage(-1, $"<color={color}>This save file is too new ({ex.value - SaveData.CurrentVersion} versions ahead)<color=white>", "");
+                        AppendMessage($"<color={color}>This save file is too new ({ex.value - SaveData.CurrentVersion} versions ahead)<color=white>");
                     }
                     catch
                     {
-                        AppendMessage(-1, $"<color={color}>Bad file format<color=white>", "");
+                        AppendMessage($"<color={color}>Bad file format<color=white>");
                     }
                 }
             }
             catch
             {
-                AppendMessage(-1, $"<color={color}>There was an error reading the file<color=white>", "");
+                AppendMessage($"<color={color}>There was an error reading the file<color=white>");
             }
         }
         else if (command.StartsWith("autosave "))
@@ -337,7 +338,7 @@ public class ChatBox : MonoBehaviour
                 if (amount != 0) commands.Add($"powerup {powerup.id} {amount}");
             }
             Copy($"/bulk {string.Join(";", commands)}");
-            AppendMessage(-1, $"<color={color}>Copied inventory command to clipboard<color=white>", "");
+            AppendMessage($"<color={color}>Copied inventory command to clipboard<color=white>");
         }
         else if (command == "paste")
         {
@@ -407,7 +408,7 @@ public class ChatBox : MonoBehaviour
         {
             if (!LocalClient.serverOwner)
             {
-                AppendMessage(-1, $"<color={color}>Only the server host can enable/disable destroying neighbors<color=white>", "");
+                AppendMessage($"<color={color}>Only the server host can enable/disable destroying neighbors<color=white>");
                 return;
             }
             ServerSend.DontDestroy(!BuildDestruction.dontDestroy);
@@ -416,11 +417,11 @@ public class ChatBox : MonoBehaviour
         {
             if (PlayerMovement.Instance.noclip = !PlayerMovement.Instance.noclip)
             {
-                AppendMessage(-1, $"<color={color}>Enabled noclip<color=white>", "");
+                AppendMessage($"<color={color}>Enabled noclip<color=white>");
             }
             else
             {
-                AppendMessage(-1, $"<color={color}>Disabled noclip<color=white>", "");
+                AppendMessage($"<color={color}>Disabled noclip<color=white>");
             }
         }
         else if (command == "getbuildpos")
@@ -429,14 +430,14 @@ public class ChatBox : MonoBehaviour
 
             var text = $"{pos.x.ToString(SaveData.us)}, {pos.y.ToString(SaveData.us)}, {pos.z.ToString(SaveData.us)}";
             Copy(text);
-            AppendMessage(-1, $"<color={color}>Build Ghost position is {text} (copied to clipboard)<color=white>", "");
+            AppendMessage($"<color={color}>Build Ghost position is {text} (copied to clipboard)<color=white>");
         }
         else if (command == "getbuildrot")
         {
             var text = $"{BuildManager.Instance.xRot.ToString(SaveData.us)}, {BuildManager.Instance.yRot.ToString(SaveData.us)}";
 
             Copy(text);
-            AppendMessage(-1, $"<color={color}>Build Ghost rotation is {text} (copied to clipboard)<color=white>", "");
+            AppendMessage($"<color={color}>Build Ghost rotation is {text} (copied to clipboard)<color=white>");
         }
         else if (command == "getbuildrotq")
         {
@@ -444,7 +445,7 @@ public class ChatBox : MonoBehaviour
             var text = $"{rot.x.ToString(SaveData.us)}, {rot.y.ToString(SaveData.us)}, {rot.z.ToString(SaveData.us)}, {rot.w.ToString(SaveData.us)}";
 
             Copy(text);
-            AppendMessage(-1, $"<color={color}>Build Ghost quaternion is {text} (copied to clipboard)<color=white>", "");
+            AppendMessage($"<color={color}>Build Ghost quaternion is {text} (copied to clipboard)<color=white>");
         }
         else if (command == "getplayerpos")
         {
@@ -452,7 +453,7 @@ public class ChatBox : MonoBehaviour
 
             var text = $"{pos.x.ToString(SaveData.us)}, {pos.y.ToString(SaveData.us)}, {pos.z.ToString(SaveData.us)}";
             Copy(text);
-            AppendMessage(-1, $"<color={color}>Build Ghost position is {text} (copied to clipboard)<color=white>", "");
+            AppendMessage($"<color={color}>Build Ghost position is {text} (copied to clipboard)<color=white>");
         }
         else if (command == "getplayerrot")
         {
@@ -460,7 +461,7 @@ public class ChatBox : MonoBehaviour
             var text = $"{rot.x.ToString(SaveData.us)}, {rot.y.ToString(SaveData.us)}, {rot.z.ToString(SaveData.us)}";
 
             Copy(text);
-            AppendMessage(-1, $"<color={color}>Player View rotation is {text} (copied to clipboard)<color=white>", "");
+            AppendMessage($"<color={color}>Player View rotation is {text} (copied to clipboard)<color=white>");
         }
         else if (command == "getplayerrotq")
         {
@@ -468,7 +469,7 @@ public class ChatBox : MonoBehaviour
             var text = $"{rot.x.ToString(SaveData.us)}, {rot.y.ToString(SaveData.us)}, {rot.z.ToString(SaveData.us)}, {rot.w.ToString(SaveData.us)}";
 
             Copy(text);
-            AppendMessage(-1, $"<color={color}>Player View quaternion is {text} (copied to clipboard)<color=white>", "");
+            AppendMessage($"<color={color}>Player View quaternion is {text} (copied to clipboard)<color=white>");
         }
         else if (command.StartsWith("setbuildrot "))
         {
@@ -486,7 +487,7 @@ public class ChatBox : MonoBehaviour
         else if (command.StartsWith("build "))
         {
             if (!BuildManager.Instance.CanBuild())
-                AppendMessage(-1, $"<color={color}>Cannot build this item<color=white>", "");
+                AppendMessage($"<color={color}>Cannot build this item<color=white>");
             command = command.Substring(6);
             var args = command.Split(' ');
             if (float.TryParse(args[0], NumberStyles.Float, SaveData.us, out var xPos)
@@ -524,7 +525,7 @@ public class ChatBox : MonoBehaviour
             if (float.TryParse(args[0], NumberStyles.Float, SaveData.us, out var angle) && int.TryParse(args[1], out var count) && float.TryParse(args[2], NumberStyles.Float, SaveData.us, out var radius))
             {
                 Smooth(count, Vector3.forward * Mathf.Deg2Rad * angle / count * radius, Quaternion.Euler(-angle / count, 0, 0));
-                AppendMessage(-1, $"<color={color}>Copied smooth command to clipboard<color=white>", "");
+                AppendMessage($"<color={color}>Copied smooth command to clipboard<color=white>");
             }
         }
         else if (command.StartsWith("smoothd "))
@@ -534,7 +535,7 @@ public class ChatBox : MonoBehaviour
             if (int.TryParse(args[0], out var count) && float.TryParse(args[1], NumberStyles.Float, SaveData.us, out var angle) && float.TryParse(args[2], NumberStyles.Float, SaveData.us, out var distance))
             {
                 Smooth(count, Vector3.forward * distance, Quaternion.Euler(-angle, 0, 0));
-                AppendMessage(-1, $"<color={color}>Copied smooth command to clipboard<color=white>", "");
+                AppendMessage($"<color={color}>Copied smooth command to clipboard<color=white>");
             }
         }
         else if (command.StartsWith("smoothraw "))

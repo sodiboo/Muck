@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class CreativeUI : InventoryExtensions
@@ -15,9 +14,6 @@ public class CreativeUI : InventoryExtensions
             cell.UpdateCell();
             cells[i] = cell;
         }
-    }
-    private void Start() {
-        cellsParent.position -= Vector3.up * cellsParent.sizeDelta.y / 2;
     }
     public override void UpdateCraftables() { }
     public GameObject cellPrefab;

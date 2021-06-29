@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ab0886e17bfa94e8bd980de9919f33, type: 3}
   m_Name: TriggerFirstPerson
   m_EditorClassIdentifier: 
-  id: 0
+  important: 0
+  id: 154
   name: Trigger First Person
   description: Puts your car in first-person view when colliding with it
   type: 0
@@ -54,6 +55,6 @@ MonoBehaviour:
   bowComponent: {fileID: 0}
   armorComponent: {fileID: 0}
   fuel: {fileID: 0}
-  tag: 10
+  tag: 11
   rarity: 0
   attackTypes: 

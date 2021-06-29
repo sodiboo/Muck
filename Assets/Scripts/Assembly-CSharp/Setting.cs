@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -25,5 +26,14 @@ public class Setting : MonoBehaviour
 
 	public class ButtonClickedEvent : UnityEvent
 	{
+	}
+
+	protected string settingName;
+
+	public TextMeshProUGUI nameText;
+
+	public void SetName(string name) {
+		settingName = name;
+		nameText.text = name;
 	}
 }

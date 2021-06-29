@@ -16794,6 +16794,9 @@ MonoBehaviour:
   amount: 1
   dontScale: 1
   poolId: 0
+  underwaterBaseDrag: 0.995
+  underwaterVerticalNonGroundedDrag: 0.9
+  underwaterAngularDrag: 0.9
   centerOfMass: {fileID: 4612138273936030}
   wheelPositions:
   - {fileID: 114791667259336607}
