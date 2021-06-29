@@ -86,12 +86,6 @@ try
 {
     using var infile = File.Open(inpath, FileMode.Open);
     data = new SaveData(infile, old);
-    data.FixSave();
-}
-catch (SaveData.VersionException)
-{
-    Console.Error.WriteLine("This save file is too new");
-    return;
 }
 catch (Exception ex)
 {

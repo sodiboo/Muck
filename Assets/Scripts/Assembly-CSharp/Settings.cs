@@ -31,15 +31,12 @@ public class Settings : MonoBehaviour
 
         RectTransform content;
 
-        float spacing;
-
-        public SettingsPage(GameObject tab, float spacing)
+        public SettingsPage(GameObject tab)
         {
             settings = tab.GetComponentInParent<Settings>();
             var scroll = Instantiate(settings.settingsScroll);
             content = scroll.GetComponent<ScrollRect>().content;
             scroll.transform.SetParent(tab.transform, false);
-            this.spacing = spacing;
         }
 
         class SettingsItem<T> : IDisposable where T : Setting
@@ -139,7 +136,6 @@ public class Settings : MonoBehaviour
                 setting.sizeDelta = new Vector2(maxScrollWidth, setting.sizeDelta.y);
             }
             var group = content.GetComponent<VerticalLayoutGroup>();
-            group.spacing = spacing;
             content.sizeDelta = new Vector2(content.sizeDelta.x, height + (total - 1) * group.spacing + group.padding.top + group.padding.bottom);
         }
     }
@@ -152,7 +148,7 @@ public class Settings : MonoBehaviour
             while (menu.transform.childCount > 0) Destroy(menu.transform.GetChild(0));
         }
 
-        using (var page = new SettingsPage(nav.settingMenus[0], 15))
+        using (var page = new SettingsPage(nav.settingMenus[0]))
         {
             page.AddBoolSetting("Camera Shake", SaveManager.Instance.state.cameraShake, UpdateCamShake);
 
@@ -169,7 +165,7 @@ public class Settings : MonoBehaviour
             page.AddBoolSetting("Disable Build Fx", SaveManager.Instance.state.disableBuildFx, UpdateBuildFx);
         }
 
-        using (var page = new SettingsPage(nav.settingMenus[1], 15))
+        using (var page = new SettingsPage(nav.settingMenus[1]))
         {
             page.AddControlSetting("Forward", SaveManager.Instance.state.forward, UpdateForwardKey);
             page.AddControlSetting("Backward", SaveManager.Instance.state.backwards, UpdateBackwardKey);
@@ -187,7 +183,7 @@ public class Settings : MonoBehaviour
             page.AddControlSetting("Build", SaveManager.Instance.state.rightClick, UpdateRightClickKey);
         }
 
-        using (var page = new SettingsPage(nav.settingMenus[2], 15))
+        using (var page = new SettingsPage(nav.settingMenus[2]))
         {
             page.AddScrollSetting("Shadow Quality", Enum.GetNames(typeof(Settings.ShadowQuality)), SaveManager.Instance.state.shadowQuality, UpdateShadowQuality);
             page.AddScrollSetting("Shadow Resolution", Enum.GetNames(typeof(Settings.ShadowResolution)), SaveManager.Instance.state.shadowResolution, UpdateShadowResolution);
@@ -203,7 +199,7 @@ public class Settings : MonoBehaviour
             page.AddBoolSetting("Ambient Occlusion", SaveManager.Instance.state.ambientOcclusion, UpdateAO);
         }
 
-        using (var page = new SettingsPage(nav.settingMenus[3], 15))
+        using (var page = new SettingsPage(nav.settingMenus[3]))
         {
             page.AddResolutionSetting("Resolution", Screen.resolutions, Screen.currentResolution);
             page.AddBoolSetting("Fullscreen", Screen.fullScreen, UpdateFullscreen);
@@ -213,7 +209,7 @@ public class Settings : MonoBehaviour
             page.AddSliderSetting("Max FPS", SaveManager.Instance.state.fpsLimit, 30, 500, UpdateMaxFps);
         }
 
-        using (var page = new SettingsPage(nav.settingMenus[4], 15))
+        using (var page = new SettingsPage(nav.settingMenus[4]))
         {
             page.AddSliderSetting("Master volume", SaveManager.Instance.state.volume, 0, 10, UpdateVolume);
             page.AddSliderSetting("Music volume", SaveManager.Instance.state.music, 0, 10, UpdateMusic);
