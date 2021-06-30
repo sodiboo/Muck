@@ -551,6 +551,7 @@ public class ChatBox : MonoBehaviour
              && float.TryParse(args[6], NumberStyles.Float, SaveData.us, out var zRot))
             {
                 Smooth(count, new Vector3(xPos, yPos, zPos), Quaternion.Euler(xRot, yRot, zRot));
+                AppendMessage($"<color={color}>Copied smooth command to clipboard<color=white>");
             }
         }
     }
