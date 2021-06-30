@@ -136,7 +136,7 @@ public class MoveCamera : MonoBehaviour
             base.transform.localPosition = new Vector3(0f, 0f, -10f);
         }
         var car = OtherInput.Instance.currentCar;
-        var isFirstPerson = car.fpTriggers.Any();
+        var isFirstPerson = car.fpTriggers.Any(x => x);
         if (isFirstPerson)
         {
             if (!wasFirstPerson)

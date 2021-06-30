@@ -135,9 +135,9 @@ public class SaveData : MonoBehaviour
 
     public void ReadPacket(Packet packet)
     {
+        readVersion = CurrentVersion;
         while (packet.UnreadLength() != 0)
         {
-
             switch (packet.ReadInt())
             {
                 case '+':
