@@ -253,7 +253,7 @@ public class Boat : MonoBehaviour
 		this.status = Boat.BoatStatus.Marked;
 		this.boatPing.gameObject.SetActive(true);
 		ChatBox.Instance.AppendMessage(string.Format("Something has been marked on your map...  (\"{0}\" to open map)", InputManager.map));
-		Map.Instance.AddMarker(base.transform, Map.MarkerType.Other, null, Color.white, "", 1f);
+		boatMapMarker = Map.Instance.AddMarker(base.transform, Map.MarkerType.Other, null, Color.white, "", 1f);
 	}
 
 	public Boat.BoatStatus status;

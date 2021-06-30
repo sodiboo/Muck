@@ -10,6 +10,10 @@ public class OtherInput : MonoBehaviour
     {
         OtherInput.Instance = this;
 		this.chestsOpened = new Dictionary<int, bool>();
+        if (GameManager.gameSettings.gameMode != GameSettings.GameMode.Creative) {
+            creativeButton.SetActive(false);
+            return;
+        }
     }
 
     public void Unpause()
@@ -296,6 +300,8 @@ public class OtherInput : MonoBehaviour
     public UiSfx UiSfx;
 
     public RectTransform craftingOverlay;
+    
+    public GameObject creativeButton;
 
     public enum CraftingState
     {

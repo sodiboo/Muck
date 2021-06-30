@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerEnterHandler, IPointerExitHandler
+public class InventoryCell : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IEventSystemHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private void Start()
     {
@@ -175,6 +175,14 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
         if (!this.ready)
         {
             return;
@@ -186,7 +194,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
             InventoryUI.Instance.CraftItem(this.currentItem);
             return;
         }
-        if (Time.time - this.lastClickTime < 0.25f && eventData.button == PointerEventData.InputButton.Left && InventoryUI.Instance.HoldingItem())
+        if (eventData.clickCount == 2 && eventData.button == PointerEventData.InputButton.Left && InventoryUI.Instance.HoldingItem())
         {
             this.DoubleClick();
             return;
@@ -207,10 +215,6 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         else
         {
             InventoryUI.Instance.PickupItem(this.PickupItem(eventData));
-        }
-        if (eventData.button == PointerEventData.InputButton.Left)
-        {
-            this.lastClickTime = Time.time;
         }
     }
 
@@ -296,7 +300,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
             if (!InventoryUI.Instance.CanPickup(this.currentItem)) return false;
             var item = ScriptableObject.CreateInstance<InventoryItem>();
             item.Copy(currentItem, currentItem.stackable ? currentItem.max : 1);
-            InventoryUI.Instance.AddItemToInventory(currentItem);
+            InventoryUI.Instance.AddItemToInventory(item);
             return true;
         }
         return false;
@@ -307,7 +311,7 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
         this.SetColor(this.hover);
         if (this.currentItem)
         {
-			if (this.cellType == InventoryCell.CellType.Inventory || this.cellType == InventoryCell.CellType.Chest)
+            if (this.cellType == InventoryCell.CellType.Inventory || this.cellType == InventoryCell.CellType.Chest || cellType == CellType.Creative)
             {
                 string text = this.currentItem.name + "\n<size=50%><i>" + this.currentItem.description;
                 if (this.currentItem.IsArmour())
@@ -401,8 +405,6 @@ public class InventoryCell : MonoBehaviour, IPointerDownHandler, IEventSystemHan
     public Color hover;
 
     private bool ready = true;
-
-    private float lastClickTime;
 
     private float doubleClickThreshold = 0.15f;
 

@@ -23,7 +23,7 @@ public class NetworkController : MonoBehaviour
 		this.loading = true;
 		this.playerNames = names;
 		LoadingScreen.Instance.Show(1f);
-		Invoke(nameof(StartLoadingScene), LoadingScreen.Instance.totalFadeTime);
+		StartLoadingScene();
 	}
 
 	private void StartLoadingScene()

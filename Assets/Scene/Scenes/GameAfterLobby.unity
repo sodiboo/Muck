@@ -15189,7 +15189,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.9876279, g: 1, b: 0.52147853, a: 0}
+  m_FogColor: {r: 0.8886259, g: 1, b: 0.50462353, a: 0}
   m_FogMode: 3
   m_FogDensity: 0.0035
   m_LinearFogStart: 0
@@ -46092,7 +46092,7 @@ MonoBehaviour:
   skybox: {fileID: 2100000, guid: 0f735383226fdb64a9f67bc47b210c36, type: 2}
   sunLight: {fileID: 1104}
   moonLight: {fileID: 1106}
-  dayFog: {r: 0.9876279, g: 1, b: 0.52147853, a: 0}
+  dayFog: {r: 0.8886259, g: 1, b: 0.50462353, a: 0}
   nightFog: {r: 0.03212886, g: 0.190873, b: 0.3584906, a: 0}
   waterFog: {r: 0, g: 0.08489328, b: 0.4622642, a: 0}
   waterGraph:
@@ -51117,6 +51117,7 @@ MonoBehaviour:
   settingsUi: {fileID: 1848682565}
   UiSfx: {fileID: 3018}
   craftingOverlay: {fileID: 1972}
+  creativeButton: {fileID: 3873843552397393256}
 --- !u!114 &3182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67076,7 +67077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848682567
@@ -67357,6 +67358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db70277afc07b394c8f40168fd661733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryButton: {fileID: 3873843552397393256}
   cellPrefab: {fileID: 3942515242443092963, guid: 9f6123529bced7342b6184f54ee41904,
     type: 3}
   cellsParent: {fileID: 1543645464925179581}

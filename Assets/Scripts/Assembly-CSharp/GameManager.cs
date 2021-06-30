@@ -69,20 +69,20 @@ public class GameManager : MonoBehaviour
 				InvokeRepeating(nameof(SlowUpdate), 0.5f, 0.5f);
 			}
 		}
-		yield return 3f;
+		yield return 0f;
 		LoadingScreen.Instance.SetText("Generating World Mesh", 0.25f);
 		this.mapGenerator.GenerateMap(GameManager.GetSeed());
 		Map.Instance.GenerateMap();
-		yield return 30;
+		yield return 0;
 		LoadingScreen.Instance.SetText("Generating resources", 0.5f);
 		this.resourceGen.SetActive(true);
-		yield return 30;
-		LoadingScreen.Instance.SetText("Generating resources", 0.5f);
-		this.resourceGen.SetActive(true);
-		yield return 30;
+		// yield return 0;
+		// LoadingScreen.Instance.SetText("Generating resources", 0.5f);
+		// this.resourceGen.SetActive(true);
+		yield return 0;
 		LoadingScreen.Instance.SetText("Generating navmesh", 0.75f);
 		this.generateNavmesh.GenerateNavMesh();
-		yield return 60;
+		yield return 0;
 		LoadingScreen.Instance.SetText("Finished loading", 1f);
 		ClientSend.PlayerFinishedLoading();
 		LoadingScreen.Instance.FinishLoading();
@@ -308,7 +308,7 @@ public class GameManager : MonoBehaviour
 
 	public void StartGame()
 	{
-		LoadingScreen.Instance.Hide(1f);
+		LoadingScreen.Instance.Hide(0f);
 		this.lobbyCamera.SetActive(false);
 		GameManager.state = GameManager.GameState.Playing;
 		if (LocalClient.serverOwner)
@@ -485,7 +485,7 @@ public class GameManager : MonoBehaviour
 	public void SendPlayersIntoGame(List<Vector3> spawnPositions)
 	{
 		this.spawnPositions = spawnPositions;
-		Invoke(nameof(SendPlayersIntoGameNow), 2f);
+		SendPlayersIntoGameNow();
 	}
 
 	private void SendPlayersIntoGameNow()
