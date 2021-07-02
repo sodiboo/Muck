@@ -1,65 +1,97 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Numerics;
 
 bool? outputAsBinary = null;
 string outpath = null;
 string inpath = null;
 var simplify = false;
-var input = false;
-var output = false;
+Argument? arg = null;
 var old = false;
+var offset = Vector3.Zero;
 
 foreach (var flag in args)
 {
-    if (input)
+    switch (arg)
     {
-        inpath = flag;
-        input = false;
-        continue;
-    }
-    else if (output)
-    {
-        outpath = flag;
-        output = false;
-        continue;
-    }
-    switch (flag.ToLower())
-    {
-        case "-ascii":
-        case "-a":
+        case Argument.Input:
             {
-                outputAsBinary = false;
+                inpath = flag;
+                arg = null;
                 break;
             }
-        case "-binary":
-        case "-bin":
-        case "-b":
+        case Argument.Output:
             {
-                outputAsBinary = true;
+                outpath = flag;
+                arg = null;
                 break;
             }
-        case "-simplify":
-        case "-s":
+        case Argument.Offset:
             {
-                simplify = true;
+                var axis = flag.Split(",").Select(a => float.Parse(a, SaveData.us)).ToArray();
+                offset += new Vector3(axis[0], axis[1], axis[2]);
+                arg = null;
                 break;
             }
-        case "-input":
-        case "-i":
+        case Argument.Up:
             {
-                input = true;
+                offset += Vector3.UnitY * float.Parse(flag, SaveData.us);
+                arg = null;
                 break;
             }
-        case "-output":
-        case "-o":
+        case null:
             {
-                output = true;
-                break;
-            }
-        case "-old":
-            {
-                old = true;
+                switch (flag.ToLower())
+                {
+                    case "-ascii":
+                    case "-a":
+                        {
+                            outputAsBinary = false;
+                            break;
+                        }
+                    case "-binary":
+                    case "-bin":
+                    case "-b":
+                        {
+                            outputAsBinary = true;
+                            break;
+                        }
+                    case "-simplify":
+                    case "-s":
+                        {
+                            simplify = true;
+                            break;
+                        }
+                    case "-input":
+                    case "-i":
+                        {
+                            arg = Argument.Input;
+                            break;
+                        }
+                    case "-output":
+                    case "-o":
+                        {
+                            arg = Argument.Output;
+                            break;
+                        }
+                    case "-old":
+                        {
+                            old = true;
+                            break;
+                        }
+                    case "-offset":
+                        {
+                            arg = Argument.Offset;
+                            break;
+                        }
+                    case "-up":
+                        {
+                            arg = Argument.Up;
+                            break;
+                        }
+                }
                 break;
             }
     }
@@ -118,6 +150,17 @@ if (simplify)
     }
 }
 
+foreach (var entry in data.save)
+{
+    switch (entry)
+    {
+        case SaveData.AddItem add:
+            add.position += offset;
+            break;
+    }
+}
+
+
 using var outfile = File.Open(outpath, FileMode.OpenOrCreate);
 outfile.SetLength(0);
 
@@ -130,4 +173,12 @@ else
 {
     using var writer = new StreamWriter(outfile);
     data.ToASCII(writer);
+}
+
+enum Argument
+{
+    Input,
+    Output,
+    Offset,
+    Up,
 }

@@ -118,7 +118,7 @@ public class ChatBox : MonoBehaviour
         if (message != "") messageHistory.Insert(0, message);
         if (message[0] == '/')
         {
-            this.ChatCommand(message);
+            this.ChatCommand(message.Remove(0, 1));
             return;
         }
         message = this.TrimMessage(message);
@@ -139,9 +139,8 @@ public class ChatBox : MonoBehaviour
     }
 
 
-    private void ChatCommand(string message)
+    private void ChatCommand(string command)
     {
-        string command = message.Substring(1);
         this.ClearMessage();
         base.CancelInvoke(nameof(HideChat));
         base.Invoke(nameof(HideChat), 5f);
@@ -208,12 +207,6 @@ public class ChatBox : MonoBehaviour
             if (!LocalClient.serverOwner)
             {
                 AppendMessage($"<color={color}>Only the server host can load saves<color=white>");
-                return;
-            }
-
-            if (SaveData.Instance.save.Count != 0)
-            {
-                AppendMessage($"<color={color}>Cannot load a save after the world has been modified<color=white>");
                 return;
             }
             command = command.Substring(4);
@@ -311,7 +304,7 @@ public class ChatBox : MonoBehaviour
             {
                 try
                 {
-                    ChatCommand($"/{cmd}");
+                    ChatCommand(cmd);
                 }
                 catch (Exception ex)
                 {
@@ -518,56 +511,6 @@ public class ChatBox : MonoBehaviour
                 buildQueue.Add((Hotbar.Instance.currentItem.id, pos + rot * new Vector3(xPos, yPos, zPos), rot * new Quaternion(xRot, yRot, zRot, wRot)));
             }
         }
-        else if (command.StartsWith("smooth "))
-        {
-            command = command.Substring(7);
-            var args = command.Split(' ');
-            if (float.TryParse(args[0], NumberStyles.Float, SaveData.us, out var angle) && int.TryParse(args[1], out var count) && float.TryParse(args[2], NumberStyles.Float, SaveData.us, out var radius))
-            {
-                Smooth(count, Vector3.forward * Mathf.Deg2Rad * angle / count * radius, Quaternion.Euler(-angle / count, 0, 0));
-                AppendMessage($"<color={color}>Copied smooth command to clipboard<color=white>");
-            }
-        }
-        else if (command.StartsWith("smoothd "))
-        {
-            command = command.Substring(8);
-            var args = command.Split(' ');
-            if (int.TryParse(args[0], out var count) && float.TryParse(args[1], NumberStyles.Float, SaveData.us, out var angle) && float.TryParse(args[2], NumberStyles.Float, SaveData.us, out var distance))
-            {
-                Smooth(count, Vector3.forward * distance, Quaternion.Euler(-angle, 0, 0));
-                AppendMessage($"<color={color}>Copied smooth command to clipboard<color=white>");
-            }
-        }
-        else if (command.StartsWith("smoothraw "))
-        {
-            command = command.Substring(10);
-            var args = command.Split(' ');
-            if (int.TryParse(args[0], out var count)
-             && float.TryParse(args[1], NumberStyles.Float, SaveData.us, out var xPos)
-             && float.TryParse(args[2], NumberStyles.Float, SaveData.us, out var yPos)
-             && float.TryParse(args[3], NumberStyles.Float, SaveData.us, out var zPos)
-             && float.TryParse(args[4], NumberStyles.Float, SaveData.us, out var xRot)
-             && float.TryParse(args[5], NumberStyles.Float, SaveData.us, out var yRot)
-             && float.TryParse(args[6], NumberStyles.Float, SaveData.us, out var zRot))
-            {
-                Smooth(count, new Vector3(xPos, yPos, zPos), Quaternion.Euler(xRot, yRot, zRot));
-                AppendMessage($"<color={color}>Copied smooth command to clipboard<color=white>");
-            }
-        }
-    }
-
-    private void Smooth(int count, Vector3 posDelta, Quaternion rotDelta)
-    {
-        var commands = new string[count];
-        var pos = Vector3.zero;
-        var rot = Quaternion.identity;
-        for (var i = 0; i < count; i++)
-        {
-            commands[i] = $"buildrel {pos.x.ToString(SaveData.us)} {pos.y.ToString(SaveData.us)} {pos.z.ToString(SaveData.us)} {rot.x.ToString(SaveData.us)} {rot.y.ToString(SaveData.us)} {rot.z.ToString(SaveData.us)} {rot.w.ToString(SaveData.us)}";
-            rot = rotDelta * rot;
-            pos += rot * posDelta;
-        }
-        Copy("/bulk " + string.Join(";", commands));
     }
 
 

@@ -33,6 +33,7 @@ public class CurrentSettings : MonoBehaviour
         UpdateInvertedRotate(SaveManager.Instance.state.invertedRotateX, SaveManager.Instance.state.invertedRotateY);
         this.UpdateGrass(SaveManager.Instance.state.grass);
         this.UpdateTutorial(SaveManager.Instance.state.tutorial);
+        this.UpdateCrouch(SaveManager.Instance.state.disableCrouch);
         this.UpdateBuildFx(SaveManager.Instance.state.disableBuildFx);
         this.UpdateShadowQuality(SaveManager.Instance.state.shadowQuality);
         this.UpdateShadowResolution(SaveManager.Instance.state.shadowResolution);

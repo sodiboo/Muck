@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Numerics;
 
 public class SaveData
@@ -172,7 +171,7 @@ public class SaveData
                         objectId = int.Parse(args[0]),
                         itemId = int.Parse(args[1]),
                         position = new Vector3(float.Parse(args[2], us), float.Parse(args[3], us), float.Parse(args[4], us)),
-                        rotation = Quaternion.CreateFromYawPitchRoll(int.Parse(args[5]), 0, 0), // why y,x,z
+                        rotation = Quaternion.CreateFromYawPitchRoll(MathF.PI / 180 * int.Parse(args[5]), 0, 0), // why RADIANS
                     });
                     break;
                 case '-':
@@ -233,7 +232,7 @@ public class SaveData
                         objectId = reader.ReadInt32(),
                         itemId = reader.ReadInt32(),
                         position = new Vector3(reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle()),
-                        rotation = Quaternion.CreateFromYawPitchRoll(reader.ReadInt32(), 0, 0), // why y,x,z
+                        rotation = Quaternion.CreateFromYawPitchRoll(MathF.PI / 180 * reader.ReadInt32(), 0, 0), // why RADIANS
                     });
                     break;
                 case '-':
