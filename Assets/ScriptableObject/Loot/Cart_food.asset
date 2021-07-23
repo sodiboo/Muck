@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511ad0f149253eb44bee6d4ea79e3041, type: 3}
+  m_Name: Cart_food
+  m_EditorClassIdentifier: 
+  loot:
+  - item: {fileID: 11400000, guid: d127e1ba7dee6194181424990e1c7fa2, type: 2}
+    amountMin: 1
+    amountMax: 5
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 739774c9a83115e42baa0e95a4d177fe, type: 2}
+    amountMin: 1
+    amountMax: 2
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: 19ce960578e6449458cfde5f95fa0a59, type: 2}
+    amountMin: 1
+    amountMax: 2
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: 6a176217d5d5ea74c8e2d1211cff3616, type: 2}
+    amountMin: 1
+    amountMax: 3
+    dropChance: 0.1
+  dropOne: 0

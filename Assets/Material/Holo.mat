@@ -3,11 +3,12 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Holo
-  m_Shader: {fileID: 4800000, guid: 3b5423eca434a6c45a484d4ade7f6df3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 47c7b80a5b9743e4b8385b9c527bb413, type: 3}
   m_ShaderKeywords: _ENABLEDISTORTION_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

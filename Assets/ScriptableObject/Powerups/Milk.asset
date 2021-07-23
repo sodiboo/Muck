@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7cb081f506ad941b252405ccda0aab, type: 3}
+  m_Name: Milk
+  m_EditorClassIdentifier: 
+  name: Danis Milk
+  description: Strong bones
+  id: 8
+  tier: 1
+  mesh: {fileID: 4300000, guid: 1508136073586024d94b1b215a1ef458, type: 2}
+  material: {fileID: 2100000, guid: 0bcf3082b6622e542910a03caf6ab31e, type: 2}
+  sprite: {fileID: 21300000, guid: 3fb359f365ec6eb4e9a37780d1047514, type: 3}

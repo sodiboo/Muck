@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Bow_Birch
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 115
+  name: Birch bow
+  description: bitch boi
+  type: 9
+  tier: 1
+  sprite: {fileID: 21300000, guid: a0fb5821a6e654147a4d5024f9a31f9f, type: 3}
+  material: {fileID: 2100000, guid: 5f409a07875bb9a448a37cb4bdc56df7, type: 2}
+  mesh: {fileID: 4300000, guid: 6907a5485b479124d972b171c5609059, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 180}
+  positionOffset: {x: 0, y: 0.1, z: 0.12}
+  scale: 0.9
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 28fbd97c3c3a52945ae9a8d8963657a8, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: c9b95ddb494d9f54a936839a8d893cdc, type: 2}
+    amount: 1
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 24bf6cf79c10ad94f9e6a0a27867f4c9, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1655190230232047, guid: 425e8ef198095f742b0d6df8419944d0, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 11400000, guid: f3ae417eb6866b845909e5549fbca6eb, type: 2}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 

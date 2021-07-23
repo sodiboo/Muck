@@ -3,16 +3,17 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Outline
-  m_Shader: {fileID: 4800000, guid: 37f7b3d1e0daed241859f942401f41a1, type: 3}
-  m_ShaderKeywords:
+  m_Shader: {fileID: 4800000, guid: 5ae6c0344055906419ea6509dbd1c607, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:

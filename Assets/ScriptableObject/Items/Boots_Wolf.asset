@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Boots_Wolf
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 118
+  name: Wolfskin Boots
+  description: it protecc foot
+  type: 0
+  tier: 1
+  sprite: {fileID: 21300000, guid: bbd1ca78c7d954848b23343a1a1ae20a, type: 3}
+  material: {fileID: 2100000, guid: e29ac05357d945b4480c0156ab9b7c7a, type: 2}
+  mesh: {fileID: 4300000, guid: bafc2361ad808af49a57a03ae91679c4, type: 2}
+  rotationOffset: {x: 0, y: 7, z: 75}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: b17e900230824954393f5db7d3836653, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: f62a5a6f6913f394981723949dda2849, type: 2}
+    amount: 5
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 24bf6cf79c10ad94f9e6a0a27867f4c9, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1892403329516628, guid: e7617998e9e9df848a16b8e7db0694e9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 2
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 11400000, guid: 9e9cf181676d7cc42b88103d3667c77a, type: 2}
+  fuel: {fileID: 0}
+  tag: 7
+  rarity: 0
+  attackTypes: 

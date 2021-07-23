@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Furnace
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 51
+  name: Furnace
+  description: it go melt
+  type: 6
+  tier: 0
+  sprite: {fileID: 21300000, guid: ab5746d6b7bdf8e4184b8363c9e60831, type: 3}
+  material: {fileID: 2100000, guid: 07a205ec546cace43b7175df8a54dadb, type: 2}
+  mesh: {fileID: 4300000, guid: d0ce1778b94595342b6540b8b2499195, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 0.5
+  stackable: 1
+  amount: 3
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 0
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: a285926ce19af6a42a24435f8add0a49, type: 2}
+    amount: 15
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 695c583b261bf3f428282ef7735d598a, type: 2}
+  buildable: 1
+  grid: 0
+  prefab: {fileID: 1931656002641538, guid: edd4a6d5e5d7d7845915fc944f9c155b, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd3124252feb9d4ba6c4644998786a0, type: 3}
+  m_Name: Chef
+  m_EditorClassIdentifier: 
+  trades:
+  - item: {fileID: 11400000, guid: d127e1ba7dee6194181424990e1c7fa2, type: 2}
+    price: 5
+    amount: 2
+  - item: {fileID: 11400000, guid: 1262f900c77fac343b706823035de8c3, type: 2}
+    price: 2
+    amount: 5
+  - item: {fileID: 11400000, guid: 8991d9b95688d62439eaf86339924230, type: 2}
+    price: 2
+    amount: 5
+  - item: {fileID: 11400000, guid: e06502e2f6a7ae0459d96a2c83156d19, type: 2}
+    price: 15
+    amount: 5
+  - item: {fileID: 11400000, guid: 7be381142e9258847ba3e2362dfdc27f, type: 2}
+    price: 10
+    amount: 5
+  - item: {fileID: 11400000, guid: b4cfdbe74bf570c47a0f4633700ce081, type: 2}
+    price: 15
+    amount: 5
+  - item: {fileID: 11400000, guid: 739774c9a83115e42baa0e95a4d177fe, type: 2}
+    price: 25
+    amount: 5
+  - item: {fileID: 11400000, guid: a707a7e08aeeca843a74bc7848c13578, type: 2}
+    price: 25
+    amount: 5
+  - item: {fileID: 11400000, guid: bb50fcb25a1d7714896eb0da8336d00d, type: 2}
+    price: 8
+    amount: 5
+  - item: {fileID: 11400000, guid: 9e63e022996cea5428b958ff21ae2f89, type: 2}
+    price: 10
+    amount: 5
+  - item: {fileID: 11400000, guid: a487f3d35f4efb44fa0db1eadd9a58fb, type: 2}
+    price: 10
+    amount: 5
+  - item: {fileID: 11400000, guid: f7e0d2bfaa2e0444b8e213d7997a2bf1, type: 2}
+    price: 10
+    amount: 5
+  - item: {fileID: 11400000, guid: d8f6cddd8931d6349b7d5a7ca4a1740a, type: 2}
+    price: 15
+    amount: 5

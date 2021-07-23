@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: GemGreen
+  m_EditorClassIdentifier: 
+  important: 1
+  id: 127
+  name: Green Gem
+  description: A shiny green gem
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: bbc42f79d107c674ea850f20b6f16638, type: 3}
+  material: {fileID: 2100000, guid: 8da6afea53872a040b9b561b26d0a384, type: 2}
+  mesh: {fileID: 4300000, guid: b85c015c971f08146b9c2453870d902e, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 1
+  max: 1
+  resourceDamage: 0
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements: []
+  craftAmount: 0
+  stationRequirement: {fileID: 0}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1892403329516628, guid: e7617998e9e9df848a16b8e7db0694e9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 10
+  rarity: 2
+  attackTypes: 

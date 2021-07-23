@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: PlanksWallHalf
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 18
+  name: Wood Wall Half
+  description: its wood
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: 6e349bf654c6ea043b7a5e6e100a503e, type: 3}
+  material: {fileID: 2100000, guid: c66997e1f727a9442a785ab54633e109, type: 2}
+  mesh: {fileID: 4300000, guid: 8b3c7eabbcfcede4f95bb1cdc77f38b7, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 50
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 2
+  attackRange: 0
+  sharpness: 0
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 1262f900c77fac343b706823035de8c3, type: 2}
+    amount: 2
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 695c583b261bf3f428282ef7735d598a, type: 2}
+  buildable: 1
+  grid: 1
+  prefab: {fileID: 1151323062863192, guid: 153b0adeafbd9c744a3a27fae0fbe71d, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 

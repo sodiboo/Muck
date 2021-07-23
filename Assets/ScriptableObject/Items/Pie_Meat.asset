@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Pie_Meat
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 59
+  name: Meat Pie
+  description: yummy
+  type: 8
+  tier: 0
+  sprite: {fileID: 21300000, guid: e3a1542bc8067b24b91bf2b4e3bf92d8, type: 3}
+  material: {fileID: 2100000, guid: 4db4bfde3b485ed43a8504c2e5e0c4ba, type: 2}
+  mesh: {fileID: 4300000, guid: 20dfa0d0521cc1244b0eb8dde27c56b7, type: 2}
+  rotationOffset: {x: 0, y: -30, z: -10}
+  positionOffset: {x: 0, y: 0.1, z: 0}
+  scale: 0.6
+  stackable: 1
+  amount: 60
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 8991d9b95688d62439eaf86339924230, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 44f4ebbd214fb8042bcc1a9c35cc0f62, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 7be381142e9258847ba3e2362dfdc27f, type: 2}
+    amount: 1
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 6a6c9857d790ca44e9f3a5d6efaa25bd, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 0}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 1
+  processedItem: {fileID: 11400000, guid: 9c90a4e133dcc914eb6dc45ea624edf0, type: 2}
+  processTime: 5
+  heal: 30
+  hunger: 60
+  stamina: 20
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 2
+  rarity: 0
+  attackTypes: 

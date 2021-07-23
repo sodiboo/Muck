@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Arrow_Water
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 137
+  name: Water Arrow
+  description: An arrow charged with water
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: 25dd18e10bc01f643810fe1b321f3739, type: 3}
+  material: {fileID: 2100000, guid: 5fa32989425e89e4f8d4eda4497919d3, type: 2}
+  mesh: {fileID: 4300000, guid: 107bb812f2eab3d4980d61427a2f7ac2, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 64
+  max: 999
+  resourceDamage: 1
+  attackDamage: 100
+  attackSpeed: 0.3
+  attackRange: 0
+  sharpness: 0.8
+  craftable: 1
+  unlockWithFirstRequirementOnly: 1
+  requirements:
+  - item: {fileID: 11400000, guid: 53298b4ad454ded4490e6baa2ae6191b, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: d8c689c933db3ab43b21917d1475e136, type: 2}
+    amount: 1
+  craftAmount: 4
+  stationRequirement: {fileID: 11400000, guid: 24bf6cf79c10ad94f9e6a0a27867f4c9, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1655190230232047, guid: 425e8ef198095f742b0d6df8419944d0, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 8
+  rarity: 2
+  attackTypes: 02000000

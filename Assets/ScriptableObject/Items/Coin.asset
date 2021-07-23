@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Coin
+  m_EditorClassIdentifier: 
+  important: 0
+  id: 3
+  name: Coin
+  description: shiny
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: 21bdb897dd4497f488522845f99c6de2, type: 3}
+  material: {fileID: 2100000, guid: e7fd9f81dd83b7245b1c6d2ecc0d62ba, type: 2}
+  mesh: {fileID: 4300000, guid: 8c1a43a240b89a648853ead7b4bada42, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 99999
+  max: 99999
+  resourceDamage: 0
+  attackDamage: 0
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 0
+  craftable: 0
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: b97e058771fe2b646906e92c19f13da1, type: 2}
+    amount: 1
+  craftAmount: 5
+  stationRequirement: {fileID: 11400000, guid: 413a8e0d8aeb2a54ab9807554da96245, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1892403329516628, guid: e7617998e9e9df848a16b8e7db0694e9, type: 3}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes: 

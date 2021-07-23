@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511ad0f149253eb44bee6d4ea79e3041, type: 3}
+  m_Name: Guardian
+  m_EditorClassIdentifier: 
+  loot:
+  - item: {fileID: 11400000, guid: 292a07f0e18ad2047bac6e9434fd46d4, type: 2}
+    amountMin: 50
+    amountMax: 100
+    dropChance: 1
+  - item: {fileID: 11400000, guid: ca9459ed68604814fb06eee3631211a4, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.02
+  - item: {fileID: 11400000, guid: 273eaf27ec9457b46b411b13f8e8680a, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.15
+  - item: {fileID: 11400000, guid: e7dc8e80938245849be9941161e5cce3, type: 2}
+    amountMin: 5
+    amountMax: 10
+    dropChance: 0.05
+  - item: {fileID: 11400000, guid: 62ca928f7142060449a7836c466afb4c, type: 2}
+    amountMin: 5
+    amountMax: 10
+    dropChance: 0.01
+  dropOne: 0
