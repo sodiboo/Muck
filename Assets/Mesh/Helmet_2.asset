@@ -2,10 +2,11 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Helmet
+  m_Name: Helmet_2
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29,12 +30,12 @@ Mesh:
     e02: 0
     e03: 0
     e10: 0
-    e11: 6.123234E-17
+    e11: 6.123234e-17
     e12: 1
     e13: 5.248608
     e20: 0
     e21: -1
-    e22: 6.123234E-17
+    e22: 6.123234e-17
     e23: -0.03089763
     e30: 0
     e31: 0
@@ -45,12 +46,12 @@ Mesh:
     e02: 0
     e03: 0
     e10: 0
-    e11: 6.123234E-17
+    e11: 6.123234e-17
     e12: 1
     e13: 3.985978
     e20: 0
     e21: -1
-    e22: 6.123234E-17
+    e22: 6.123234e-17
     e23: -0.03089763
     e30: 0
     e31: 0
@@ -61,26 +62,26 @@ Mesh:
     e02: 0
     e03: 0
     e10: 0
-    e11: 6.123234E-17
+    e11: 6.123234e-17
     e12: 1
     e13: 1.668656
     e20: 0
     e21: -1
-    e22: 6.123234E-17
+    e22: 6.123234e-17
     e23: -0.03089763
     e30: 0
     e31: 0
     e32: 0
     e33: 1
   - e00: 1
-    e01: 1.573795E-18
-    e02: 1.518976E-18
-    e03: 1.761952E-18
-    e10: -1.573795E-18
+    e01: 1.573795e-18
+    e02: 1.518976e-18
+    e03: 1.761952e-18
+    e10: -1.573795e-18
     e11: 0.03543872
     e12: 0.9993718
     e13: 1.128334
-    e20: 1.518976E-18
+    e20: 1.518976e-18
     e21: -0.9993718
     e22: 0.03543872
     e23: 0.00909479
@@ -89,7 +90,7 @@ Mesh:
     e32: 0
     e33: 1
   - e00: -0.02458297
-    e01: -2.307993E-05
+    e01: -0.00002307993
     e02: 0.9996978
     e03: 1.877032
     e10: -0.9992337
@@ -113,7 +114,7 @@ Mesh:
     e12: -0.00580507
     e13: -2.817033
     e20: -0.005812992
-    e21: -7.083157E-06
+    e21: -0.000007083157
     e22: 0.9999831
     e23: 1.930359
     e30: 0
@@ -121,7 +122,7 @@ Mesh:
     e32: 0
     e33: 1
   - e00: -0.02458297
-    e01: 2.307993E-05
+    e01: 0.00002307993
     e02: -0.9996978
     e03: -1.877032
     e10: 0.9992337
@@ -145,7 +146,7 @@ Mesh:
     e12: -0.00580507
     e13: -2.817033
     e20: 0.005812992
-    e21: -7.083157E-06
+    e21: -0.000007083157
     e22: 0.9999831
     e23: 1.930359
     e30: 0
@@ -153,7 +154,7 @@ Mesh:
     e32: 0
     e33: 1
   - e00: -0.9979184
-    e01: -1.013443E-06
+    e01: -0.000001013443
     e02: 0.06463619
     e03: -0.3038171
     e10: -0.06462055
@@ -177,7 +178,7 @@ Mesh:
     e12: -0.9976466
     e13: -7.969958
     e20: -0.9985754
-    e21: -3.867581E-06
+    e21: -0.000003867581
     e22: 0.05353732
     e23: -0.3924882
     e30: 0
@@ -185,7 +186,7 @@ Mesh:
     e32: 0
     e33: 1
   - e00: -0.9979184
-    e01: 1.013443E-06
+    e01: 0.000001013443
     e02: -0.06463619
     e03: 0.3038171
     e10: 0.06462055
@@ -209,7 +210,7 @@ Mesh:
     e12: -0.9976466
     e13: -7.969958
     e20: 0.9985754
-    e21: -3.867581E-06
+    e21: -0.000003867581
     e22: 0.05353732
     e23: -0.3924882
     e30: 0
@@ -222,17 +223,17 @@ Mesh:
   - m_Min: {x: Infinity, y: Infinity, z: Infinity}
     m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
   - m_Min: {x: -0.506479, y: 2.804711, z: -0.5672005}
-    m_Max: {x: 0.506479, y: 3.001191, z: 0.7017521}
-  - m_Min: {x: -0.6678195, y: 0.4873888, z: -0.933216}
-    m_Max: {x: 0.6678195, y: 1.435959, z: 0.7017521}
-  - m_Min: {x: -0.8600298, y: -0.04184687, z: -0.9577693}
-    m_Max: {x: 0.8600298, y: 2.152059, z: 0.9316522}
-  - m_Min: {x: 0.7085663, y: -0.7620213, z: -0.5906314}
-    m_Max: {x: 0.9522916, y: -0.2580541, z: 0.6839399}
+    m_Max: {x: 0.506479, y: 3.0011904, z: 0.70175207}
+  - m_Min: {x: -0.6678195, y: 0.4873892, z: -0.933216}
+    m_Max: {x: 0.6678195, y: 1.435959, z: 0.70175207}
+  - m_Min: {x: -0.86002976, y: -0.041846633, z: -0.9577693}
+    m_Max: {x: 0.86002976, y: 2.152059, z: 0.9316522}
+  - m_Min: {x: 0.7085663, y: -0.76202124, z: -0.59063137}
+    m_Max: {x: 0.9522916, y: -0.25805402, z: 0.68394}
   - m_Min: {x: Infinity, y: Infinity, z: Infinity}
     m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
-  - m_Min: {x: -0.9522916, y: -0.7137705, z: -0.5793951}
-    m_Max: {x: -0.7085663, y: -0.2580541, z: 0.6839399}
+  - m_Min: {x: -0.9522916, y: -0.71377045, z: -0.57939506}
+    m_Max: {x: -0.7085663, y: -0.25805402, z: 0.68394}
   - m_Min: {x: Infinity, y: Infinity, z: Infinity}
     m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
   - m_Min: {x: Infinity, y: Infinity, z: Infinity}
@@ -244,7 +245,7 @@ Mesh:
   - m_Min: {x: Infinity, y: Infinity, z: Infinity}
     m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
   m_VariableBoneCountWeights:
-    m_Data:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 0
   m_KeepVertices: 0
@@ -318,63 +319,63 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UV:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Normals:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Weights:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_NormalSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_TangentSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_FloatColors:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Triangles:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 0.02055559, z: -0.08275723}
     m_Extent: {x: 0.8600298, y: 0.9494796, z: 1.09851}
   m_MeshUsageFlags: 1
-  m_BakedConvexCollisionMesh:
-  m_BakedTriangleCollisionMesh:
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 56.89477
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: -1
   m_StreamData:
     offset: 0
     size: 0
-    path:
+    path: 

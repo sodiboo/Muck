@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2029922c5e325cc4db743a61ea1dfe82, type: 3}
-  m_Name: Gronk
-  m_EditorClassIdentifier:
+  m_Name: Gronk_0
+  m_EditorClassIdentifier: 
   name: Gronk
-  mobPrefab: {fileID: 1890441886667751, guid: 7b9b1c38299dcf141b99d955b3a052c0, type: 2}
+  mobPrefab: {fileID: 1890441886667751, guid: 7b9b1c38299dcf141b99d955b3a052c0, type: 3}
   behaviour: 2
   ranged: 0
   rangedCooldown: 7
@@ -29,5 +30,5 @@ MonoBehaviour:
   followPlayerDistance: 12
   followPlayerAccuracy: 1
   onlyRangedInRangedPattern: 1
-  weaknesses:
+  weaknesses: 
   boss: 1

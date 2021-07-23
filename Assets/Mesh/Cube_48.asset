@@ -2,10 +2,11 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cube
+  m_Name: Cube_48
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49,76 +50,76 @@ Mesh:
     e02: 0
     e03: -0.0001641838
     e10: 0
-    e11: 6.559638E-17
+    e11: 6.559638e-17
     e12: 1
     e13: 0.93124
     e20: 0
     e21: -1.07127
-    e22: 6.123234E-17
+    e22: 6.123234e-17
     e23: -0.01131892
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  - e00: 1.629207E-07
+  - e00: 0.0000001629207
     e01: -1.07127
-    e02: 6.123235E-17
+    e02: 6.123235e-17
     e03: -0.01131881
-    e10: 1.224647E-16
-    e11: -6.559638E-17
+    e10: 1.224647e-16
+    e11: -6.559638e-17
     e12: -1
     e13: -0.9050483
     e20: 1
-    e21: 1.745321E-07
-    e22: 1.224647E-16
+    e21: 0.0000001745321
+    e22: 1.224647e-16
     e23: 0.6748081
     e30: 0
     e31: 0
     e32: 0
     e33: 1
   - e00: 1
-    e01: -3.40519E-08
-    e02: 1.94636E-24
+    e01: -0.0000000340519
+    e02: 1.94636e-24
     e03: 0.6748081
-    e10: -3.892721E-24
-    e11: -1.967892E-16
+    e10: -3.892721e-24
+    e11: -1.967892e-16
     e12: -1
     e13: -2.52126
-    e20: 3.178647E-08
+    e20: 0.00000003178647
     e21: 1.07127
-    e22: -1.83697E-16
+    e22: -1.83697e-16
     e23: 0.01131894
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  - e00: 1.629207E-07
+  - e00: 0.0000001629207
     e01: 1.07127
-    e02: -6.123235E-17
+    e02: -6.123235e-17
     e03: 0.01131881
-    e10: -1.224647E-16
-    e11: -6.559638E-17
+    e10: -1.224647e-16
+    e11: -6.559638e-17
     e12: -1
     e13: -0.9050483
     e20: -1
-    e21: 1.745321E-07
-    e22: 1.224647E-16
+    e21: 0.0000001745321
+    e22: 1.224647e-16
     e23: 0.6751365
     e30: 0
     e31: 0
     e32: 0
     e33: 1
   - e00: 1
-    e01: 3.40519E-08
-    e02: -1.94636E-24
+    e01: 0.0000000340519
+    e02: -1.94636e-24
     e03: -0.6751366
-    e10: 3.892721E-24
-    e11: -1.967892E-16
+    e10: 3.892721e-24
+    e11: -1.967892e-16
     e12: -1
     e13: -2.52126
-    e20: -3.178647E-08
+    e20: -0.00000003178647
     e21: 1.07127
-    e22: -1.83697E-16
+    e22: -1.83697e-16
     e23: 0.01131894
     e30: 0
     e31: 0
@@ -127,18 +128,18 @@ Mesh:
   m_BoneNameHashes: dcc659bc78fbde964a711f341bc6d16cbaabf1f9
   m_RootBoneNameHash: 3160000220
   m_BonesAABB:
-  - m_Min: {x: -1.000164, y: -1.765134, z: -1.031475}
-    m_Max: {x: 0.9998358, y: 1.93124, z: 1.00924}
-  - m_Min: {x: -0.2558214, y: -0.2564092, z: -0.2563179}
-    m_Max: {x: 0.2583493, y: 1.524863, z: 0.2581583}
-  - m_Min: {x: -0.2281616, y: -0.1777172, z: -0.1996774}
-    m_Max: {x: 0.2004696, y: 1.443575, z: 0.2114803}
-  - m_Min: {x: -0.2583493, y: -0.2564092, z: -0.2559895}
-    m_Max: {x: 0.2558214, y: 1.524863, z: 0.2584867}
-  - m_Min: {x: -0.200798, y: -0.1777172, z: -0.1996774}
-    m_Max: {x: 0.2278332, y: 1.443575, z: 0.2114803}
+  - m_Min: {x: -1.0001642, y: -1.7651343, z: -1.0314746}
+    m_Max: {x: 0.9998358, y: 1.9312401, z: 1.0092396}
+  - m_Min: {x: -0.25582135, y: -0.25640947, z: -0.2563178}
+    m_Max: {x: 0.25834918, y: 1.524862, z: 0.25815833}
+  - m_Min: {x: -0.22816151, y: -0.17771769, z: -0.19967732}
+    m_Max: {x: 0.20046961, y: 1.4435742, z: 0.21148027}
+  - m_Min: {x: -0.25834918, y: -0.25640947, z: -0.25598937}
+    m_Max: {x: 0.25582135, y: 1.524862, z: 0.25848675}
+  - m_Min: {x: -0.20079815, y: -0.17771769, z: -0.19967732}
+    m_Max: {x: 0.22783297, y: 1.4435742, z: 0.21148027}
   m_VariableBoneCountWeights:
-    m_Data:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 0
   m_KeepVertices: 0
@@ -212,63 +213,63 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UV:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Normals:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Weights:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_NormalSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_TangentSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_FloatColors:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Triangles:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: -0.0001880229, z: -1.482417}
     m_Extent: {x: 1, y: 0.9524742, z: 2.482417}
   m_MeshUsageFlags: 1
-  m_BakedConvexCollisionMesh:
-  m_BakedTriangleCollisionMesh:
-  m_MeshMetrics[0]: 1.607316E+07
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 16073160
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: -1
   m_StreamData:
     offset: 0
     size: 0
-    path:
+    path: 

@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2029922c5e325cc4db743a61ea1dfe82, type: 3}
-  m_Name: Wyvern
-  m_EditorClassIdentifier:
+  m_Name: Wyvern_0
+  m_EditorClassIdentifier: 
   name: Wyvern
-  mobPrefab: {fileID: 1439644973057149, guid: 484cb8377d9fd2949b27feb7abafffaa, type: 2}
+  mobPrefab: {fileID: 1439644973057149, guid: 484cb8377d9fd2949b27feb7abafffaa, type: 3}
   behaviour: 1
   ranged: 1
   rangedCooldown: 6

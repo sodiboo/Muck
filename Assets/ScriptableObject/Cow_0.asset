@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2029922c5e325cc4db743a61ea1dfe82, type: 3}
-  m_Name: Cow
-  m_EditorClassIdentifier:
+  m_Name: Cow_0
+  m_EditorClassIdentifier: 
   name: Cow
-  mobPrefab: {fileID: 1010501141533402, guid: 9252c0875fc9c8f4194891ee1f5b5009, type: 2}
+  mobPrefab: {fileID: 1010501141533402, guid: 9252c0875fc9c8f4194891ee1f5b5009, type: 3}
   behaviour: 0
   ranged: 0
   rangedCooldown: 6
@@ -29,5 +30,5 @@ MonoBehaviour:
   followPlayerDistance: 1
   followPlayerAccuracy: 0.15
   onlyRangedInRangedPattern: 0
-  weaknesses:
+  weaknesses: 
   boss: 0
