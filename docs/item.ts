@@ -122,7 +122,7 @@ export interface Item {
   buildable: boolean;
   prefab: string | null;
 
-  attackRange: Vector3;
+  attackRange: number;
   resourceDamage: number;
   attackDamage: number;
   attackSpeed: number;
@@ -205,7 +205,7 @@ for (const [guid, file] of await io.ScriptableObjects("Items")) {
     prefab: parse.guid<Item>(file, "prefab"),
     max: parse.number<Item>(file, "max"),
 
-    attackRange: parse.vector3<Item>(file, "attackRange"),
+    attackRange: parse.number<Item>(file, "attackRange"),
     resourceDamage: parse.number<Item>(file, "resourceDamage"),
     attackDamage: parse.number<Item>(file, "attackDamage"),
     attackSpeed: parse.number<Item>(file, "attackSpeed"),
@@ -288,7 +288,7 @@ const anvil = parseCrafting(parse.fileID<OtherInput>(otherinput, "anvil"));
 const fletch = parseCrafting(parse.fileID<OtherInput>(otherinput, "fletch"));
 const allCrafting = new Set([handcrafts, workbench, anvil, fletch].flat());
 const itemList = parse.array<{ allScriptableItems: string[] }, string>(
-  Menu.scripts.get(scripts.ItemManager)![1], // why is there an empty item manager
+  Menu.scripts.get(scripts.ItemManager)![0], // why is there an empty item manager
   "allScriptableItems",
   (item) => item.match(/guid: (?<guid>[a-f0-9]+)[,}]/)!.groups!.guid,
 );
@@ -435,7 +435,7 @@ function info(item: Item): string {
       `- Attack Damage: ${item.attackDamage}`,
       `- Attack Speed: ${item.attackSpeed}`,
       `- DPS: ${item.attackDamage * item.attackSpeed}`,
-      `- Attack Range: ${item.attackRange[2]}`,
+      `- Attack Range: ${item.attackRange}`,
       `- Sharpness: ${item.sharpness}`,
     );
   }
