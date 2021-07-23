@@ -1,11 +1,17 @@
 using UnityEngine;
 
+[CreateAssetMenu]
 public class BowComponent : ScriptableObject
 {
-	public float projectileSpeed;
-	public int nArrows;
-	public int angleDelta;
-	public float timeToImpact;
-	public float attackSize;
-	public float colliderDisabledTime;
+    public float projectileSpeed;
+
+    public int nArrows;
+
+    public int angleDelta;
+
+    public float timeToImpact = 1.2f;
+
+    public float attackSize = 10f;
+
+    public float colliderDisabledTime = 0.1f;
 }

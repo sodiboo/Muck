@@ -1,8 +1,8 @@
 namespace MilkShake
 {
-	public enum ShakeType
-	{
-		OneShot = 0,
-		Sustained = 1,
-	}
+    public enum ShakeType
+    {
+        OneShot,
+        Sustained
+    }
 }

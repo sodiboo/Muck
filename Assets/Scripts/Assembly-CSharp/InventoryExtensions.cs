@@ -1,5 +1,6 @@
 using UnityEngine;
 
-public class InventoryExtensions : MonoBehaviour
+public abstract class InventoryExtensions : MonoBehaviour
 {
+    public abstract void UpdateCraftables();
 }

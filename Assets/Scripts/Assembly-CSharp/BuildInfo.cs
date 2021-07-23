@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class BuildInfo : MonoBehaviour
 {
-	public int ownerId;
+    public int ownerId = -1;
 }
