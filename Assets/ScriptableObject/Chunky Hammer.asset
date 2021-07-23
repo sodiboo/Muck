@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Chunky Hammer
+  m_EditorClassIdentifier:
+  important: 0
+  id: 97
+  name: Chunky Hammer
+  description: its blunt and chunky
+  type: 3
+  tier: 2
+  sprite: {fileID: 21300000, guid: dabfaa25a7241784c851a22bb9fc5679, type: 3}
+  material: {fileID: 2100000, guid: 15793244bbceefd4493fe43ce1093a26, type: 2}
+  mesh: {fileID: 4300000, guid: 503ee581ef3a0e3478674b8d558f6102, type: 2}
+  rotationOffset: {x: 90, y: 0, z: -15}
+  positionOffset: {x: 0, y: 0, z: 0.15}
+  scale: 0.8
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 120
+  attackSpeed: 0.95
+  attackRange: 0
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 1
+  requirements:
+  - item: {fileID: 11400000, guid: eb753263a82003e428554e47e18122a7, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 77ef8edd91fef6f4aa97b5b0dd0a5760, type: 2}
+    amount: 15
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 413a8e0d8aeb2a54ab9807554da96245, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1892403329516628, guid: e7617998e9e9df848a16b8e7db0694e9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 1
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 2
+  attackTypes:

@@ -3,26 +3,26 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1795052739637086}
+  m_RootGameObject: {fileID: 1183707329263049}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1795052739637086
+--- !u!1 &1183707329263049
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4901164560331102}
-  - component: {fileID: 33174076174642348}
-  - component: {fileID: 23759613741382537}
-  - component: {fileID: 114011612290703487}
-  - component: {fileID: 135767008520848920}
-  - component: {fileID: 208861935359005370}
-  - component: {fileID: 114384003924712979}
+  - component: {fileID: 4242255120380634}
+  - component: {fileID: 33786546477918762}
+  - component: {fileID: 23922009189866296}
+  - component: {fileID: 114816575232223085}
+  - component: {fileID: 135992572779132652}
+  - component: {fileID: 208092329052394627}
+  - component: {fileID: 114408204587378225}
   m_Layer: 10
   m_Name: Iron
   m_TagString: Count
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4901164560331102
+--- !u!4 &4242255120380634
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
+  m_GameObject: {fileID: 1183707329263049}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 67.9055, y: 28.61, z: -376.3882}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
@@ -43,19 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
---- !u!33 &33174076174642348
+--- !u!33 &33786546477918762
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
-  m_Mesh: {fileID: 4300000, guid: 6ae751f0f512ab940a48ba75563e44a1, type: 2}
---- !u!23 &23759613741382537
+  m_GameObject: {fileID: 1183707329263049}
+  m_Mesh: {fileID: 4300000, guid: 449b9b9ddb5e4854b929e6188af5c822, type: 2}
+--- !u!23 &23922009189866296
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
+  m_GameObject: {fileID: 1183707329263049}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 151f3cd322b5cba4a927e8cabfbcc2f8, type: 2}
+  - {fileID: 2100000, guid: 7f7ece9104fc18f40aa0231fb26e87a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,55 +88,55 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114011612290703487
+--- !u!114 &114816575232223085
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
+  m_GameObject: {fileID: 1183707329263049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40118fe65c53d53428013ece2b2d5f7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 59de81246e5d8d5489679cc5b76a5ca3, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   entityName: Iron
   canHitMoreThanOnce: 0
-  dropTable: {fileID: 11400000, guid: 9cb9c70d958bd764186457234027940b, type: 2}
+  dropTable: {fileID: 11400000, guid: 891ad52184c427548a52868fbaafd7ff, type: 2}
   hp: 200
   maxHp: 200
-  destroyFx: {fileID: 1922887442143292, guid: 5c7a1a92ecc01c2499b77faa9c349f6e, type: 2}
-  hitFx: {fileID: 1232322077810288, guid: 8ae4557476771444b84dfcff1767afad, type: 2}
-  numberFx: {fileID: 1454646626941367, guid: b7996cc3a224b6349b170766238e67b7, type: 2}
+  destroyFx: {fileID: 1500216714955904, guid: b8f1123c9ef6abe4a9931ca811a9f02b, type: 2}
+  hitFx: {fileID: 1123462964320252, guid: 03a694be100640341a2516bc68e098d5, type: 2}
+  numberFx: {fileID: 1948582220970282, guid: 46192cac10a38344bb95784026a951a2, type: 2}
   compatibleItem: 2
   minTier: 0
-  dropItem: {fileID: 11400000, guid: 84e7333f1dc18464db420ab677126857, type: 2}
+  dropItem: {fileID: 11400000, guid: b74f54c8062b4f1489ece59418f11b2e, type: 2}
   dropExtra:
-  - {fileID: 11400000, guid: d0b91c4fbe6202745abaa86b4b9f9336, type: 2}
-  - {fileID: 11400000, guid: de304ce3980ba4d45be720539678a606, type: 2}
+  - {fileID: 11400000, guid: 3047714fcc82f954e88e70090a86fe6e, type: 2}
+  - {fileID: 11400000, guid: 7a0e8350c409a5d4cb5270d4efc1a137, type: 2}
   dropChance:
   - 0.5
   - 0.5
   amount: 5
-  dontScale: 0
+  dontScale: 1
   poolId: 0
---- !u!135 &135767008520848920
+--- !u!135 &135992572779132652
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
+  m_GameObject: {fileID: 1183707329263049}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: -0.007239312, y: -0.02652388, z: 0.02334624}
---- !u!208 &208861935359005370
+--- !u!208 &208092329052394627
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
+  m_GameObject: {fileID: 1183707329263049}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
@@ -146,14 +146,14 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.007, y: -0.027, z: 0.023}
   m_TimeToStationary: 0.5
---- !u!114 &114384003924712979
+--- !u!114 &114408204587378225
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795052739637086}
+  m_GameObject: {fileID: 1183707329263049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c07cf9b1f331034cb3ffe06c5f12bbe, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a53627447dfdc46a9101f79a42a160, type: 3}
   m_Name:
   m_EditorClassIdentifier:

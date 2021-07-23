@@ -2,11 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cube_28
+  m_Name: Cube
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25,15 +24,15 @@ Mesh:
     channels: []
     fullWeights: []
   m_BindPose: []
-  m_BoneNameHashes: 
+  m_BoneNameHashes:
   m_RootBoneNameHash: 0
   m_BonesAABB: []
   m_VariableBoneCountWeights:
-    m_Data: 
+    m_Data:
   m_MeshCompression: 0
   m_IsReadable: 0
-  m_KeepVertices: 1
-  m_KeepIndices: 1
+  m_KeepVertices: 0
+  m_KeepIndices: 0
   m_IndexFormat: 0
   m_IndexBuffer: 000001000200030004000500030006000700080009000a000b000c000d000e000f000b000e0010000f001100120013001400150016001700180019001a001b001c001d001e001f0020002100220023002400250026002700280029002a002b002c002d002e002f00300031002f003100320033002f00320033003200340035003600370035003700380039003a003b0039003b003c003d003e003f003d003f0040004100420043004100430044004500460047004700480045004800490045004a004b004c004c004d004a004e004f0050004e0050005100510050005200510052005300540055005600540056005700580059005a0058005a005b005c005d005e005c005e005f0060005f005e00600061005f0062005f006100620063005f00640060005e006000640065006000650066006400670065006400680067005e00690064006900680064006a0069005e0069006b0068006a006c0069006c006b0069006c006d006b006e006f0070006e00700071007200730074007200740075007600770078007600780079007a007b007c007a007c007d007e007f0080007e0081007f00810082007f0081008300820084008500860086008700840086008800870089008a008b0089008b008c008d008e008f008d008f00900091009200930091009300940095009600970095009700980099009a009b0099009c009a009c009d009a009c009e009d009f00a000a1009f00a200a000a300a2009f00a300a400a200a500a600a700a500a700a800a900aa00ab00a900ab00ac00ad00ae00af00ad00af00b000b100b000af00b100b200b000b300b400b500b300b500b600b700b600b500b700b500b800b900b700b800b800b500ba00ba00b900b800b300b600bb00bc00b300bb00bc00bd00b300be00bd00bc00bf00bc00bb00c000bb00b600bf00bb00c000c100c000b600c200bf00c000c100c200c000c300c400c500c300c500c600c700c800c900c700c900ca00c700cb00cc00c700cc00cd00ce00cf00d000ce00d000d100d200d300d400d200d400d500d500d400d600d500d600d700d800d900da00d800da00db00dc00d800db00dc00db00dd00de00df00e000de00e000e100e200e300e400e200e400e500e500e600e200e700e200e600e700e800e200e900ea00eb00e900eb00ec00
   m_VertexData:
@@ -103,63 +102,63 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_UV:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_Normals:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_Weights:
       m_NumItems: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_NormalSigns:
       m_NumItems: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_TangentSigns:
       m_NumItems: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_FloatColors:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_Triangles:
       m_NumItems: 0
-      m_Data: 
+      m_Data:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0.00167194, y: 0.0708753, z: 0.02647338}
     m_Extent: {x: 0.3732356, y: 0.4486613, z: 0.1588419}
   m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
+  m_BakedConvexCollisionMesh:
+  m_BakedTriangleCollisionMesh:
   m_MeshMetrics[0]: 644.903
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: -1
   m_StreamData:
     offset: 0
     size: 0
-    path: 
+    path:

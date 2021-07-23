@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 68650ac3223b55a4cb24eb3dccd72aa0
+timeCreated: 1627067088
+licenseType: Free
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: ChiefSpear
+  externalObjects: {}
+  usedFileIDs: []
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 256
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChiefSpear
+      rect:
+        serializedVersion: 2
+        x: 16.0582
+        y: 10.02675
+        width: 224.9289
+        height: 233.8971
+      alignment: 9
+      pivot: {x: 0.4976764, y: 0.5043809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67.47735, y: -116.9753}
+        - {x: -112.5227, y: 65.02469}
+        - {x: -112.5227, y: 117.0247}
+        - {x: -87.52265, y: 117.0247}
+        - {x: -28.52265, y: 81.02469}
+        - {x: 112.4773, y: -90.97531}
+        - {x: 112.4773, y: -114.9753}
+        - {x: 109.4773, y: -116.9753}
+      physicsShape:
+      - - {x: 81.47735, y: -74.97531}
+        - {x: 48.47734, y: -38.97531}
+        - {x: -4.522652, y: 14.02469}
+        - {x: -45.52265, y: 57.02469}
+        - {x: -46.52265, y: 63.02469}
+        - {x: -31.52265, y: 70.02469}
+        - {x: -35.52265, y: 76.02469}
+        - {x: -55.52265, y: 77.02469}
+        - {x: -68.52265, y: 90.02469}
+        - {x: -74.52265, y: 104.0247}
+        - {x: -77.52265, y: 106.0247}
+        - {x: -97.52265, y: 115.0247}
+        - {x: -105.5226, y: 116.0247}
+        - {x: -111.5227, y: 116.0247}
+        - {x: -111.5227, y: 107.0247}
+        - {x: -106.5226, y: 89.02469}
+        - {x: -101.5227, y: 80.02469}
+        - {x: -87.52265, y: 73.02469}
+        - {x: -75.52265, y: 58.02469}
+        - {x: -74.52265, y: 38.02469}
+        - {x: -69.52265, y: 36.02469}
+        - {x: -56.52265, y: 50.02468}
+        - {x: -19.52265, y: 9.024689}
+        - {x: 31.47735, y: -41.97531}
+        - {x: 73.47735, y: -87.97531}
+        - {x: 82.47735, y: -106.9753}
+        - {x: 92.47735, y: -114.9753}
+        - {x: 107.4773, y: -115.9753}
+        - {x: 110.4773, y: -114.9753}
+        - {x: 110.4773, y: -94.97531}
+        - {x: 94.47735, y: -79.97531}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79a3e55d4ad455490e8b31ff2a99b8f
+      internalID: 21300000
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag:
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

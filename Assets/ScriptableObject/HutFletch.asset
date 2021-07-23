@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511ad0f149253eb44bee6d4ea79e3041, type: 3}
+  m_Name: HutFletch
+  m_EditorClassIdentifier:
+  loot:
+  - item: {fileID: 11400000, guid: 1262f900c77fac343b706823035de8c3, type: 2}
+    amountMin: 2
+    amountMax: 25
+    dropChance: 0.3
+  - item: {fileID: 11400000, guid: d127e1ba7dee6194181424990e1c7fa2, type: 2}
+    amountMin: 2
+    amountMax: 5
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 3047714fcc82f954e88e70090a86fe6e, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 03e1047afcc484046a0dbc742aaa921a, type: 2}
+    amountMin: 3
+    amountMax: 6
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: e6dfb0b35770c9341962fa6922211728, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.01
+  - item: {fileID: 11400000, guid: 1ffc3d252258c4a41b11f2d8ed4f036f, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.3
+  - item: {fileID: 11400000, guid: 29df8002439d3ad4ba74c28275437e81, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: 86235d9338d82c24c98dcb87f3137851, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.01
+  - item: {fileID: 11400000, guid: df3a045b8ab880044b25b66f19b09c4a, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: 215115c66763496479819c7cc24dd8ad, type: 2}
+    amountMin: 5
+    amountMax: 15
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: 987f2267a25db724fb52c22c94aff08d, type: 2}
+    amountMin: 1
+    amountMax: 1
+    dropChance: 0.3
+  - item: {fileID: 11400000, guid: c9b95ddb494d9f54a936839a8d893cdc, type: 2}
+    amountMin: 1
+    amountMax: 3
+    dropChance: 0.3
+  dropOne: 0

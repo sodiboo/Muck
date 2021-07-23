@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: WorkBench
+  m_EditorClassIdentifier:
+  important: 0
+  id: 100
+  name: Workbench
+  description: A crafting table
+  type: 7
+  tier: 0
+  sprite: {fileID: 21300000, guid: a9a36e51fadae40418f4aba371bbec33, type: 3}
+  material: {fileID: 2100000, guid: e953f7888b3f1d84a9a374151539344d, type: 2}
+  mesh: {fileID: 4300000, guid: 84b48fda119495245a739d2c84257b66, type: 2}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 1
+  amount: 1
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 2
+  attackRange: 0
+  sharpness: 0
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 1262f900c77fac343b706823035de8c3, type: 2}
+    amount: 10
+  craftAmount: 1
+  stationRequirement: {fileID: 0}
+  buildable: 1
+  grid: 0
+  prefab: {fileID: 1892403329516628, guid: e7617998e9e9df848a16b8e7db0694e9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes:

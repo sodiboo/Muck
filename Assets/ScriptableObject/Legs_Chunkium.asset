@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: Legs_Chunkium
+  m_EditorClassIdentifier:
+  important: 0
+  id: 106
+  name: Chunkium Pants
+  description: it protecc leg
+  type: 0
+  tier: 1
+  sprite: {fileID: 21300000, guid: 6a999b73320b3da48b92579637a96688, type: 3}
+  material: {fileID: 2100000, guid: 940c738ae864523448d5e2de7fa4f3da, type: 2}
+  mesh: {fileID: 4300000, guid: 25ddb3b336a640e49be20c38fa611255, type: 2}
+  rotationOffset: {x: 0, y: 7, z: 75}
+  positionOffset: {x: 0, y: 0, z: 0}
+  scale: 1
+  stackable: 0
+  amount: 1
+  max: 1
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 1
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 77ef8edd91fef6f4aa97b5b0dd0a5760, type: 2}
+    amount: 15
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 413a8e0d8aeb2a54ab9807554da96245, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1892403329516628, guid: e7617998e9e9df848a16b8e7db0694e9, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 0
+  processedItem: {fileID: 0}
+  processTime: 0
+  heal: 0
+  hunger: 0
+  stamina: 0
+  armor: 11
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 11400000, guid: 329f8181519e09749aa1a00ebbe886d3, type: 2}
+  fuel: {fileID: 0}
+  tag: 6
+  rarity: 2
+  attackTypes:

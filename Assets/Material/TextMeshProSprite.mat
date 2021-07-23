@@ -3,12 +3,11 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TextMeshProSprite
-  m_Shader: {fileID: 4800000, guid: 4ce93d48adc8d1e438a430635e4672ff, type: 3}
+  m_Name: TextMeshPro/Sprite
+  m_Shader: {fileID: 4800000, guid: 16e327ef23a2dd045a790dd60721b412, type: 3}
   m_ShaderKeywords: UNITY_UI_CLIP_RECT
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -20,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 09514e3679e57c74ea1a0d1c6e427bce, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5029173e9668e5642a1cc1ef49afa7ad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

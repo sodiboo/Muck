@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1038980ba92043a5e3e3e64f2512c, type: 3}
+  m_Name: FlaxFibers
+  m_EditorClassIdentifier:
+  important: 0
+  id: 122
+  name: Flax Fibers
+  description: This looks pretty strong
+  type: 0
+  tier: 0
+  sprite: {fileID: 21300000, guid: d121fe0d98ae34442a58caf31a630325, type: 3}
+  material: {fileID: 2100000, guid: 03cccaa12cbd5c445b2c037b6bf2b75d, type: 2}
+  mesh: {fileID: 4300000, guid: cadc008a514c4ef469c4d05cb2602a93, type: 2}
+  rotationOffset: {x: 90, y: 0, z: 0}
+  positionOffset: {x: 0, y: -0.15, z: 0}
+  scale: 0.7
+  stackable: 1
+  amount: 64
+  max: 69
+  resourceDamage: 1
+  attackDamage: 1
+  attackSpeed: 1
+  attackRange: 0
+  sharpness: 0
+  craftable: 1
+  unlockWithFirstRequirementOnly: 0
+  requirements:
+  - item: {fileID: 11400000, guid: 8eef21107c133454fa4044b65497ddba, type: 2}
+    amount: 1
+  craftAmount: 1
+  stationRequirement: {fileID: 11400000, guid: 24bf6cf79c10ad94f9e6a0a27867f4c9, type: 2}
+  buildable: 0
+  grid: 0
+  prefab: {fileID: 1424310712256163, guid: 2a86fdecd24cd6a43aa65feecb2874bf, type: 2}
+  buildRotation: {x: 0, y: 0, z: 0}
+  processable: 0
+  processType: 2
+  processedItem: {fileID: 11400000, guid: b4cfdbe74bf570c47a0f4633700ce081, type: 2}
+  processTime: 1
+  heal: 2
+  hunger: 10
+  stamina: 2
+  armor: 0
+  swingFx: 0
+  bowComponent: {fileID: 0}
+  armorComponent: {fileID: 0}
+  fuel: {fileID: 0}
+  tag: 0
+  rarity: 0
+  attackTypes:

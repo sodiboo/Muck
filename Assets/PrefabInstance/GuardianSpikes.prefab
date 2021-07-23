@@ -3,22 +3,22 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1443323912725194}
+  m_RootGameObject: {fileID: 1719497041247306}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1443323912725194
+--- !u!1 &1719497041247306
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4646263011491795}
-  - component: {fileID: 114184263438739258}
-  - component: {fileID: 114962240625527531}
+  - component: {fileID: 4535826665549993}
+  - component: {fileID: 114495128694744277}
+  - component: {fileID: 114080533356071656}
   m_Layer: 0
   m_Name: GuardianSpikes
   m_TagString: Untagged
@@ -26,12 +26,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4646263011491795
+--- !u!4 &4535826665549993
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443323912725194}
+  m_GameObject: {fileID: 1719497041247306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.93296, y: 30.08907, z: 34.72636}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,30 +39,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114184263438739258
+--- !u!114 &114495128694744277
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443323912725194}
+  m_GameObject: {fileID: 1719497041247306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9dc9f79201bd2745b9d6f59b58638bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ab4fc235561ac14d91fde639b63ec4b, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  warningFx: {fileID: 1155554731753213, guid: 1608b5d79f9ddcd4e8582d5c003097d2, type: 2}
-  spikeAttack: {fileID: 1038981362472367, guid: 5287547512c27384fb6582db7d81a134, type: 2}
-  attack: {fileID: 11400000, guid: fa6bfa08d89a3a148b96fb4839edc036, type: 2}
-  projectile: {fileID: 114962240625527531}
---- !u!114 &114962240625527531
+  warningFx: {fileID: 1050127226464713, guid: a152ed8f2903313428662172cb942e8a, type: 2}
+  spikeAttack: {fileID: 1552833308691696, guid: 56072e0176ab037458c0e3b226130f4d, type: 2}
+  attack: {fileID: 11400000, guid: 0b211d4106d6f354fa2a397c8d31e78e, type: 2}
+  projectile: {fileID: 114080533356071656}
+--- !u!114 &114080533356071656
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443323912725194}
+  m_GameObject: {fileID: 1719497041247306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c504300e06be6d749adcb50460a1f494, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ff1295b83fc207478ab818e459b27a2, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   hitFx: {fileID: 0}

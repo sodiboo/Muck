@@ -3,21 +3,21 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1456774012795946}
+  m_RootGameObject: {fileID: 1234053385757687}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1456774012795946
+--- !u!1 &1234053385757687
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4404904480461455}
-  - component: {fileID: 82023282294768560}
+  - component: {fileID: 4756670492757694}
+  - component: {fileID: 82099844180289941}
   m_Layer: 0
   m_Name: SwordCharge
   m_TagString: Untagged
@@ -25,12 +25,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4404904480461455
+--- !u!4 &4756670492757694
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456774012795946}
+  m_GameObject: {fileID: 1234053385757687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 64.47916, y: 18.84809, z: 62.60992}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,16 +38,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82023282294768560
+--- !u!82 &82099844180289941
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456774012795946}
+  m_GameObject: {fileID: 1234053385757687}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 11259102fa3c7804c914da48943dade2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e3e61ee058a0d3f49afff0c6dcfd54c1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1

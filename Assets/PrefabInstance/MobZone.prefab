@@ -3,21 +3,21 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1963816464263201}
+  m_RootGameObject: {fileID: 1023528141387754}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1963816464263201
+--- !u!1 &1023528141387754
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4713373899915975}
-  - component: {fileID: 114320546529866257}
+  - component: {fileID: 4571278655393507}
+  - component: {fileID: 114431896920721648}
   m_Layer: 0
   m_Name: MobZone
   m_TagString: Untagged
@@ -25,12 +25,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4713373899915975
+--- !u!4 &4571278655393507
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963816464263201}
+  m_GameObject: {fileID: 1023528141387754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.32, y: 12.8, z: -50.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,18 +38,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114320546529866257
+--- !u!114 &114431896920721648
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963816464263201}
+  m_GameObject: {fileID: 1023528141387754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc5e9cea87811444ba4edbe88644a35, type: 3}
+  m_Script: {fileID: 11500000, guid: f055cdcc5be67254c957fbd7a1bf1df2, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   id: 0
+  entities: []
   roamDistance: 25
   renderDistance: 200
   despawn: 1
@@ -59,4 +60,4 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  mobType: {fileID: 11400000, guid: d3e4471458ff47943a673fe8c61fb6b8, type: 2}
+  mobType: {fileID: 11400000, guid: c594ee6b3933b5a40b4b60846693b79d, type: 2}

@@ -3,24 +3,24 @@
 --- !u!1001 &100100000
 PrefabInstance:
   serializedVersion: 2
-  m_RootGameObject: {fileID: 1481379158426638}
+  m_RootGameObject: {fileID: 1794524260721760}
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
---- !u!1 &1481379158426638
+--- !u!1 &1794524260721760
 GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4999079607578088}
-  - component: {fileID: 198831769570221229}
-  - component: {fileID: 199456963984974744}
-  - component: {fileID: 114974887209890978}
-  - component: {fileID: 82721915392320269}
+  - component: {fileID: 4773894633014937}
+  - component: {fileID: 198180317196201308}
+  - component: {fileID: 199203786494517340}
+  - component: {fileID: 114689560994795894}
+  - component: {fileID: 82934198964099378}
   m_Layer: 0
   m_Name: ArrowHitFx
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4999079607578088
+--- !u!4 &4773894633014937
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481379158426638}
+  m_GameObject: {fileID: 1794524260721760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 29.12, y: 25.77, z: 29.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &198831769570221229
+--- !u!198 &198180317196201308
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481379158426638}
+  m_GameObject: {fileID: 1794524260721760}
   serializedVersion: 6
   lengthInSec: 5
   simulationSpeed: 1.4
@@ -2060,13 +2060,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199456963984974744
+--- !u!199 &199203786494517340
 ParticleSystemRenderer:
   serializedVersion: 6
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481379158426638}
+  m_GameObject: {fileID: 1794524260721760}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2078,7 +2078,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c57d08fc8f7110d47ace2c7dca413c01, type: 2}
+  - {fileID: 2100000, guid: 93c4bdf15666e814ca3aebc157afd2b5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2113,33 +2113,33 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 4300000, guid: d477644ecfd67144884f90c34f93cbf7, type: 2}
+  m_Mesh: {fileID: 4300000, guid: e50087b83d04fc44aa6d62e795a2ab67, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &114974887209890978
+--- !u!114 &114689560994795894
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481379158426638}
+  m_GameObject: {fileID: 1794524260721760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba195ebb84ceb54ea52eb8995e8a4d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e12bae33e9425346ab50b9b1329e042, type: 3}
   m_Name:
   m_EditorClassIdentifier:
   sounds:
-  - {fileID: 8300000, guid: d1fe4f3bbc395d04d9cc03bd4c4b097c, type: 3}
+  - {fileID: 8300000, guid: abf7227fded976345a242af0fd08fd83, type: 3}
   maxPitch: 0.8
   minPitch: 1.2
   playOnAwake: 1
---- !u!82 &82721915392320269
+--- !u!82 &82934198964099378
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 100100000}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481379158426638}
+  m_GameObject: {fileID: 1794524260721760}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
