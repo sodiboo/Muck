@@ -1,0 +1,3 @@
+## How does the woodman pick the trades he has?
+
+When a woodman spawns, he only picks between 5 and 10 trades that you can buy from him. These are sold at the base price. He also picks between 5 and 10 (different) trades that you can sell to him, from the same lookup table. He will buy the things you sell for half the price he'd usually sell them himself, floored (not rounded!) to the greatest integer which is less than the desired price. The list below of woodman trades is abstracted away to buy/sell prices, but the buy price is really the base price.

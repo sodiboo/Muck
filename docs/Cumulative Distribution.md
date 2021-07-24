@@ -1,4 +1,5 @@
 ## Cumulative Distribution Information
+
 This isn't a powerup, but an explanation of the math behind how they scale. If you don't care about how exactly it works or wanna just see the pictures of the results, scroll down.
 
 A lot of powerups get stronger over time, but eventually cap out, no matter how many powerups you have. There's a function in math that tells you how likely a random value `n` is to be less than or equal to a specific value `x`. These can be plotted on a graph, giving you a lookup table so that if you look at the `x` axis for a specific value, the `y` axis tells you how likely the random value is to be below that number. `y` never quite reaches 100%, but it approaches that more and more as `x` gets infinitely big.

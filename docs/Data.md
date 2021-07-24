@@ -8,6 +8,7 @@
 - [Powerups by name](#Powerups-by-name)
 - [Powerups](#Powerups)
 - [Mobs](#Mobs)
+- [Woodman Trades](#Woodman-Trades)
 
 # Items by ID
 0. [Bark](#Bark)
@@ -3739,6 +3740,7 @@
 
 # Powerups
 ## Cumulative Distribution Information
+
 This isn't a powerup, but an explanation of the math behind how they scale. If you don't care about how exactly it works or wanna just see the pictures of the results, scroll down.
 
 A lot of powerups get stronger over time, but eventually cap out, no matter how many powerups you have. There's a function in math that tells you how likely a random value `n` is to be less than or equal to a specific value `x`. These can be plotted on a graph, giving you a lookup table so that if you look at the `x` axis for a specific value, the `y` axis tells you how likely the random value is to be below that number. `y` never quite reaches 100%, but it approaches that more and more as `x` gets infinitely big.
@@ -5151,6 +5153,143 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 - 100% chance to drop 15-30 [Coin](#Coin)
 - 5% chance to drop 2-8 [Gold bar](#Gold-bar)
 - 1% chance to drop 1-1 [Wyvern Claws](#Wyvern-Claws)
+
+# Woodman Trades
+
+## How does the woodman pick the trades he has?
+
+When a woodman spawns, he only picks between 5 and 10 trades that you can buy from him. These are sold at the base price. He also picks between 5 and 10 (different) trades that you can sell to him, from the same lookup table. He will buy the things you sell for half the price he'd usually sell them himself, floored (not rounded!) to the greatest integer which is less than the desired price. The list below of woodman trades is abstracted away to buy/sell prices, but the buy price is really the base price.
+
+---
+
+### Archer
+
+- 5x [Flint Arrow](#Flint-Arrow) (buys for 5 coins, sells for 2 coins)
+- 5x [Steel Arrow](#Steel-Arrow) (buys for 10 coins, sells for 5 coins)
+- 5x [Mithril Arrow](#Mithril-Arrow) (buys for 15 coins, sells for 7 coins)
+- 5x [Adamantite Arrow](#Adamantite-Arrow) (buys for 20 coins, sells for 10 coins)
+- 5x [Fire arrow](#Fire-arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Lightning Arrow](#Lightning-Arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Water Arrow](#Water-Arrow) (buys for 30 coins, sells for 15 coins)
+- 1x [Wood Bow](#Wood-Bow) (buys for 10 coins, sells for 5 coins)
+- 1x [Birch bow](#Birch-bow) (buys for 20 coins, sells for 10 coins)
+- 1x [Fir bow](#Fir-bow) (buys for 30 coins, sells for 15 coins)
+- 1x [Fir bow](#Fir-bow) (buys for 40 coins, sells for 20 coins)
+- 1x [Oak Bow](#Oak-Bow) (buys for 50 coins, sells for 25 coins)
+- 5x [Flax](#Flax) (buys for 5 coins, sells for 2 coins)
+- 5x [Wolfskin](#Wolfskin) (buys for 10 coins, sells for 5 coins)
+- 1x [Ancient Bow](#Ancient-Bow) (buys for 250 coins, sells for 125 coins)
+- 5x [Flint](#Flint) (buys for 5 coins, sells for 2 coins)
+
+---
+
+### Chef
+
+- 2x [Red Apple](#Red-Apple) (buys for 5 coins, sells for 2 coins)
+- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Bowl](#Bowl) (buys for 2 coins, sells for 1 coins)
+- 5x [Bread](#Bread) (buys for 15 coins, sells for 7 coins)
+- 5x [Dough](#Dough) (buys for 10 coins, sells for 5 coins)
+- 5x [Cooked Meat](#Cooked-Meat) (buys for 15 coins, sells for 7 coins)
+- 5x [Apple Pie](#Apple-Pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Meat Pie](#Meat-Pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Wheat](#Wheat) (buys for 8 coins, sells for 4 coins)
+- 5x [Red Soup](#Red-Soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Purple Soup](#Purple-Soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Yellow Soup](#Yellow-Soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Weird Soup](#Weird-Soup) (buys for 15 coins, sells for 7 coins)
+
+---
+
+### Smith
+
+- 5x [Rock](#Rock) (buys for 2 coins, sells for 1 coins)
+- 1x [Anvil](#Anvil) (buys for 30 coins, sells for 15 coins)
+- 5x [Iron Ore](#Iron-Ore) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Ore](#Mithril-Ore) (buys for 30 coins, sells for 15 coins)
+- 5x [Adamantite Ore](#Adamantite-Ore) (buys for 50 coins, sells for 25 coins)
+- 5x [Obamium Ore](#Obamium-Ore) (buys for 75 coins, sells for 37 coins)
+- 5x [Ruby](#Ruby) (buys for 80 coins, sells for 40 coins)
+- 1x [Wood Pickaxe](#Wood-Pickaxe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Pickaxe](#Steel-Pickaxe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Pickaxe](#Mithril-Pickaxe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Pickaxe](#Adamantite-Pickaxe) (buys for 75 coins, sells for 37 coins)
+- 5x [Steel Sword](#Steel-Sword) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Sword](#Mithril-Sword) (buys for 50 coins, sells for 25 coins)
+- 1x [Adamantite Sword](#Adamantite-Sword) (buys for 75 coins, sells for 37 coins)
+
+---
+
+### Wildcard
+
+- 5x [Flint Arrow](#Flint-Arrow) (buys for 5 coins, sells for 2 coins)
+- 5x [Steel Arrow](#Steel-Arrow) (buys for 10 coins, sells for 5 coins)
+- 5x [Mithril Arrow](#Mithril-Arrow) (buys for 15 coins, sells for 7 coins)
+- 5x [Adamantite Arrow](#Adamantite-Arrow) (buys for 20 coins, sells for 10 coins)
+- 5x [Fire arrow](#Fire-arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Lightning Arrow](#Lightning-Arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Water Arrow](#Water-Arrow) (buys for 30 coins, sells for 15 coins)
+- 1x [Wood Bow](#Wood-Bow) (buys for 10 coins, sells for 5 coins)
+- 1x [Birch bow](#Birch-bow) (buys for 20 coins, sells for 10 coins)
+- 1x [Fir bow](#Fir-bow) (buys for 30 coins, sells for 15 coins)
+- 1x [Fir bow](#Fir-bow) (buys for 40 coins, sells for 20 coins)
+- 1x [Oak Bow](#Oak-Bow) (buys for 50 coins, sells for 25 coins)
+- 5x [Flax](#Flax) (buys for 5 coins, sells for 2 coins)
+- 5x [Wolfskin](#Wolfskin) (buys for 10 coins, sells for 5 coins)
+- 1x [Ancient Bow](#Ancient-Bow) (buys for 250 coins, sells for 125 coins)
+- 5x [Flint](#Flint) (buys for 5 coins, sells for 2 coins)
+- 2x [Red Apple](#Red-Apple) (buys for 5 coins, sells for 2 coins)
+- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Bowl](#Bowl) (buys for 2 coins, sells for 1 coins)
+- 5x [Bread](#Bread) (buys for 15 coins, sells for 7 coins)
+- 5x [Dough](#Dough) (buys for 10 coins, sells for 5 coins)
+- 5x [Cooked Meat](#Cooked-Meat) (buys for 15 coins, sells for 7 coins)
+- 5x [Apple Pie](#Apple-Pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Meat Pie](#Meat-Pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Wheat](#Wheat) (buys for 8 coins, sells for 4 coins)
+- 5x [Red Soup](#Red-Soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Purple Soup](#Purple-Soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Yellow Soup](#Yellow-Soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Weird Soup](#Weird-Soup) (buys for 15 coins, sells for 7 coins)
+- 5x [Rock](#Rock) (buys for 2 coins, sells for 1 coins)
+- 1x [Anvil](#Anvil) (buys for 30 coins, sells for 15 coins)
+- 5x [Iron Ore](#Iron-Ore) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Ore](#Mithril-Ore) (buys for 30 coins, sells for 15 coins)
+- 5x [Adamantite Ore](#Adamantite-Ore) (buys for 50 coins, sells for 25 coins)
+- 5x [Obamium Ore](#Obamium-Ore) (buys for 75 coins, sells for 37 coins)
+- 5x [Ruby](#Ruby) (buys for 80 coins, sells for 40 coins)
+- 1x [Wood Pickaxe](#Wood-Pickaxe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Pickaxe](#Steel-Pickaxe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Pickaxe](#Mithril-Pickaxe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Pickaxe](#Adamantite-Pickaxe) (buys for 75 coins, sells for 37 coins)
+- 5x [Steel Sword](#Steel-Sword) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Sword](#Mithril-Sword) (buys for 50 coins, sells for 25 coins)
+- 1x [Adamantite Sword](#Adamantite-Sword) (buys for 75 coins, sells for 37 coins)
+- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Birch Wood](#Birch-Wood) (buys for 5 coins, sells for 2 coins)
+- 5x [Fir Wood](#Fir-Wood) (buys for 10 coins, sells for 5 coins)
+- 5x [Oak Wood](#Oak-Wood) (buys for 25 coins, sells for 12 coins)
+- 1x [Wood Axe](#Wood-Axe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Axe](#Steel-Axe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Axe](#Mithril-Axe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Axe](#Adamantite-Axe) (buys for 75 coins, sells for 37 coins)
+- 5x [Coal](#Coal) (buys for 5 coins, sells for 2 coins)
+- 5x [Dark Oak Wood](#Dark-Oak-Wood) (buys for 50 coins, sells for 25 coins)
+
+---
+
+### Woodman
+
+- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Birch Wood](#Birch-Wood) (buys for 5 coins, sells for 2 coins)
+- 5x [Fir Wood](#Fir-Wood) (buys for 10 coins, sells for 5 coins)
+- 5x [Oak Wood](#Oak-Wood) (buys for 25 coins, sells for 12 coins)
+- 1x [Wood Axe](#Wood-Axe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Axe](#Steel-Axe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Axe](#Mithril-Axe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Axe](#Adamantite-Axe) (buys for 75 coins, sells for 37 coins)
+- 5x [Coal](#Coal) (buys for 5 coins, sells for 2 coins)
+- 5x [Dark Oak Wood](#Dark-Oak-Wood) (buys for 50 coins, sells for 25 coins)
 
 [Blue-Pill]: ../Assets/Texture2D/PillBlue.png
 [Broccoli]: ../Assets/Texture2D/Broccolo.png

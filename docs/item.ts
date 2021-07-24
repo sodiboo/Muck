@@ -8,7 +8,6 @@ import {
   prefabs,
   references,
   scripts,
-  Vector3,
 } from "./common.ts";
 
 export enum ItemType {

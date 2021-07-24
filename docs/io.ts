@@ -1,4 +1,6 @@
-export function ScriptableObjects(dir: string): Promise<Map<string, string>> {
+export function ScriptableObjects(
+  dir: string,
+): Promise<[string, string, string][]> {
   return directory(`Assets/ScriptableObject/${dir}/`);
 }
 
@@ -10,16 +12,32 @@ export async function meta(file: string): Promise<string> {
 
 export async function directory(
   dir: string,
+  contents?: true,
+): Promise<[string, string, string][]>;
+export async function directory(
+  dir: string,
+  contents: false,
+): Promise<[string, string][]>;
+export async function directory(
+  dir: string,
   contents = true,
-): Promise<Map<string, string>> {
+): Promise<[string, string, string?][]> {
   dir = `../${dir}`;
-  const result = new Map<string, string>();
+  const result: [string, string, string?][] = [];
   for await (const file of Deno.readDir(dir)) {
     if (!file.name.endsWith(".meta")) {
-      result.set(
-        await meta(dir + file.name),
-        contents ? await Deno.readTextFile(dir + file.name) : file.name,
-      );
+      if (contents) {
+        result.push([
+          await meta(dir + file.name),
+          await Deno.readTextFile(dir + file.name),
+          file.name,
+        ]);
+      } else {
+        result.push([
+          await meta(dir + file.name),
+          file.name,
+        ]);
+      }
     }
   }
   return result;
