@@ -21,7 +21,7 @@ public class MobServerNeutral : MobServer
 
     protected override Vector3 FindNextPosition()
     {
-        Invoke("SyncFindNextPosition", 12f);
+        Invoke(nameof(SyncFindNextPosition), 12f);
         return MobZoneManager.Instance.zones[mobZoneId].FindRandomPos();
     }
 

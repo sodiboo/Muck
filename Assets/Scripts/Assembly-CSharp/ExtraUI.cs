@@ -20,7 +20,7 @@ public class ExtraUI : MonoBehaviour
     private void Awake()
     {
         IdToHpBar = new Dictionary<int, RawImage>();
-        InvokeRepeating("SlowUpdate", 0f, 1f);
+        InvokeRepeating(nameof(SlowUpdate), 0f, 1f);
     }
 
     private void SlowUpdate()

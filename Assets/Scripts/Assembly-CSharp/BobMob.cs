@@ -127,7 +127,7 @@ public class BobMob : Mob
 
     public override void Attack(int targetPlayerId, int attackAnimationIndex)
     {
-        Invoke("FinishAttacking", base.attackTimes[attackAnimationIndex]);
+        Invoke(nameof(FinishAttacking), base.attackTimes[attackAnimationIndex]);
         base.animator.Play(attackAnimations[attackAnimationIndex].name);
         base.targetPlayerId = targetPlayerId;
     }

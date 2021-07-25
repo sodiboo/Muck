@@ -36,7 +36,7 @@ public class TutorialTaskUI : MonoBehaviour
         icon.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
         item.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
         overlay.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
-        Invoke("DestroySelf", fadeTime);
+        Invoke(nameof(DestroySelf), fadeTime);
     }
 
     private void DestroySelf()

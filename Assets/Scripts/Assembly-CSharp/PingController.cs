@@ -31,7 +31,7 @@ public class PingController : MonoBehaviour
         if (readyToPing)
         {
             readyToPing = false;
-            Invoke("PingCooldown", pingCooldown);
+            Invoke(nameof(PingCooldown), pingCooldown);
             Vector3 vector = FindPingPos();
             if (!(vector == Vector3.zero))
             {

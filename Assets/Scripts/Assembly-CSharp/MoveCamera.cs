@@ -99,7 +99,7 @@ public class MoveCamera : MonoBehaviour
         base.transform.position = pos;
         state = CameraState.Player;
         base.transform.parent = null;
-        CancelInvoke("SpectateCamera");
+        CancelInvoke(nameof(SpectateCamera));
     }
 
     public void PlayerDied(Transform ragdoll)
@@ -109,7 +109,7 @@ public class MoveCamera : MonoBehaviour
         desiredDeathPos = base.transform.position + Vector3.up * 3f;
         if (GameManager.state != GameManager.GameState.GameOver)
         {
-            Invoke("StartSpectating", 4f);
+            Invoke(nameof(StartSpectating), 4f);
         }
     }
 

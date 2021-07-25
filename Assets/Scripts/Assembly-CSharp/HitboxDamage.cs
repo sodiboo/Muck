@@ -21,7 +21,7 @@ public class HitboxDamage : MonoBehaviour
     {
         if (!dontStopHitbox)
         {
-            Invoke("DisableHitbox", hitboxTime);
+            Invoke(nameof(DisableHitbox), hitboxTime);
         }
     }
 

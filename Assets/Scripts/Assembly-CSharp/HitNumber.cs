@@ -15,7 +15,7 @@ public class HitNumber : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("StartFade", 1.5f);
+        Invoke(nameof(StartFade), 1.5f);
         defaultScale = base.transform.localScale * 0.5f;
         text = GetComponentInChildren<TextMeshProUGUI>();
         float num = 0.5f;
@@ -39,7 +39,7 @@ public class HitNumber : MonoBehaviour
     private void StartFade()
     {
         text.CrossFadeAlpha(0f, 1f, ignoreTimeScale: true);
-        Invoke("DestroySelf", 1f);
+        Invoke(nameof(DestroySelf), 1f);
     }
 
     private void DestroySelf()

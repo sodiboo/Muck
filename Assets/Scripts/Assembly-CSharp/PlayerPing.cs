@@ -13,7 +13,7 @@ public class PlayerPing : MonoBehaviour
     {
         desiredScale = 1f;
         base.transform.localScale = Vector3.zero;
-        Invoke("HidePing", 5f);
+        Invoke(nameof(HidePing), 5f);
     }
 
     public void SetPing(string username, string item)

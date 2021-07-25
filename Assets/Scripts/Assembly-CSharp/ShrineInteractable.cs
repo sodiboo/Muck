@@ -37,13 +37,13 @@ public class ShrineInteractable : MonoBehaviour, SharedObject, Interactable
         }
         if (num >= 3)
         {
-            CancelInvoke("CheckLights");
+            CancelInvoke(nameof(CheckLights));
             if (LocalClient.serverOwner)
             {
-                Invoke("DropPowerup", 1.33f);
+                Invoke(nameof(DropPowerup), 1.33f);
             }
             Object.Instantiate(destroyShrineFx, base.transform.position, destroyShrineFx.transform.rotation);
-            Invoke("DestroyShrine", 1.33f);
+            Invoke(nameof(DestroyShrine), 1.33f);
         }
     }
 
@@ -81,7 +81,7 @@ public class ShrineInteractable : MonoBehaviour, SharedObject, Interactable
     {
         this.mobIds = mobIds;
         started = true;
-        InvokeRepeating("CheckLights", 0.5f, 0.5f);
+        InvokeRepeating(nameof(CheckLights), 0.5f, 0.5f);
         Object.Destroy(GetComponent<Collider>());
     }
 

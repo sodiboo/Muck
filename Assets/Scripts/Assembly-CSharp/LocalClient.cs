@@ -280,230 +280,64 @@ public class LocalClient : MonoBehaviour
     {
         packetHandlers = new Dictionary<int, PacketHandler>
         {
-            {
-                1,
-                ClientHandle.Welcome
-            },
-            {
-                2,
-                ClientHandle.SpawnPlayer
-            },
-            {
-                3,
-                ClientHandle.PlayerPosition
-            },
-            {
-                4,
-                ClientHandle.PlayerRotation
-            },
-            {
-                8,
-                ClientHandle.ReceivePing
-            },
-            {
-                11,
-                ClientHandle.ReceiveStatus
-            },
-            {
-                14,
-                ClientHandle.Clock
-            },
-            {
-                51,
-                ClientHandle.PlayerFinishedLoading
-            },
-            {
-                9,
-                ClientHandle.ConnectionEstablished
-            },
-            {
-                12,
-                ClientHandle.GameOver
-            },
-            {
-                56,
-                ClientHandle.ShipUpdate
-            },
-            {
-                57,
-                ClientHandle.DragonUpdate
-            },
-            {
-                5,
-                ClientHandle.DisconnectPlayer
-            },
-            {
-                6,
-                ClientHandle.KickPlayer
-            },
-            {
-                7,
-                ClientHandle.PlayerDied
-            },
-            {
-                53,
-                ClientHandle.SpawnGrave
-            },
-            {
-                16,
-                ClientHandle.Ready
-            },
-            {
-                13,
-                ClientHandle.StartGame
-            },
-            {
-                15,
-                ClientHandle.OpenDoor
-            },
-            {
-                18,
-                ClientHandle.DropItem
-            },
-            {
-                22,
-                ClientHandle.DropResources
-            },
-            {
-                19,
-                ClientHandle.PickupItem
-            },
-            {
-                50,
-                ClientHandle.SpawnEffect
-            },
-            {
-                20,
-                ClientHandle.WeaponInHand
-            },
-            {
-                21,
-                ClientHandle.PlayerHitObject
-            },
-            {
-                46,
-                ClientHandle.RemoveResource
-            },
-            {
-                43,
-                ClientHandle.PlayerHp
-            },
-            {
-                44,
-                ClientHandle.RespawnPlayer
-            },
-            {
-                29,
-                ClientHandle.PlayerHit
-            },
-            {
-                23,
-                ClientHandle.AnimationUpdate
-            },
-            {
-                45,
-                ClientHandle.ShootArrowFromPlayer
-            },
-            {
-                24,
-                ClientHandle.FinalizeBuild
-            },
-            {
-                25,
-                ClientHandle.OpenChest
-            },
-            {
-                26,
-                ClientHandle.UpdateChest
-            },
-            {
-                27,
-                ClientHandle.PickupInteract
-            },
-            {
-                28,
-                ClientHandle.DropItemAtPosition
-            },
-            {
-                36,
-                ClientHandle.DropPowerupAtPosition
-            },
-            {
-                30,
-                ClientHandle.MobSpawn
-            },
-            {
-                31,
-                ClientHandle.MobMove
-            },
-            {
-                32,
-                ClientHandle.MobSetDestination
-            },
-            {
-                55,
-                ClientHandle.MobSetTarget
-            },
-            {
-                33,
-                ClientHandle.MobAttack
-            },
-            {
-                47,
-                ClientHandle.MobSpawnProjectile
-            },
-            {
-                34,
-                ClientHandle.PlayerDamageMob
-            },
-            {
-                49,
-                ClientHandle.KnockbackMob
-            },
-            {
-                54,
-                ClientHandle.Interact
-            },
-            {
-                35,
-                ClientHandle.ShrineCombatStart
-            },
-            {
-                52,
-                ClientHandle.RevivePlayer
-            },
-            {
-                38,
-                ClientHandle.MobZoneToggle
-            },
-            {
-                37,
-                ClientHandle.MobZoneSpawn
-            },
-            {
-                39,
-                ClientHandle.PickupSpawnZone
-            },
-            {
-                40,
-                ClientHandle.ReceiveChatMessage
-            },
-            {
-                41,
-                ClientHandle.ReceivePlayerPing
-            },
-            {
-                42,
-                ClientHandle.ReceivePlayerArmor
-            },
-            {
-                48,
-                ClientHandle.NewDay
-            },
-            {
-                58,
-                ClientHandle.ReceiveStats
-            }
+            { (int)ServerPackets.welcome, ClientHandle.Welcome },
+            { (int)ServerPackets.spawnPlayer, ClientHandle.SpawnPlayer },
+            { (int)ServerPackets.playerPosition, ClientHandle.PlayerPosition },
+            { (int)ServerPackets.playerRotation, ClientHandle.PlayerRotation },
+            { (int)ServerPackets.playerDisconnect, ClientHandle.DisconnectPlayer },
+            { (int)ServerPackets.playerKick, ClientHandle.KickPlayer },
+            { (int)ServerPackets.playerDied, ClientHandle.PlayerDied },
+            { (int)ServerPackets.pingPlayer, ClientHandle.ReceivePing },
+            { (int)ServerPackets.connectionSuccessful, ClientHandle.ConnectionEstablished },
+            // sendLevel
+            { (int)ServerPackets.sendStatus, ClientHandle.ReceiveStatus },
+            { (int)ServerPackets.gameOver, ClientHandle.GameOver },
+            { (int)ServerPackets.startGame, ClientHandle.StartGame },
+            { (int)ServerPackets.clock, ClientHandle.Clock },
+            { (int)ServerPackets.openDoor, ClientHandle.OpenDoor },
+            { (int)ServerPackets.ready, ClientHandle.Ready },
+            // taskProgress
+            { (int)ServerPackets.dropItem, ClientHandle.DropItem },
+            { (int)ServerPackets.pickupItem, ClientHandle.PickupItem },
+            { (int)ServerPackets.weaponInHand, ClientHandle.WeaponInHand },
+            { (int)ServerPackets.playerHitObject, ClientHandle.PlayerHitObject },
+            { (int)ServerPackets.dropResources, ClientHandle.DropResources },
+            { (int)ServerPackets.animationUpdate, ClientHandle.AnimationUpdate },
+            { (int)ServerPackets.finalizeBuild, ClientHandle.FinalizeBuild },
+            { (int)ServerPackets.openChest, ClientHandle.OpenChest },
+            { (int)ServerPackets.updateChest, ClientHandle.UpdateChest },
+            { (int)ServerPackets.pickupInteract, ClientHandle.PickupInteract },
+            { (int)ServerPackets.dropItemAtPosition, ClientHandle.DropItemAtPosition },
+            { (int)ServerPackets.playerHit, ClientHandle.PlayerHit },
+            { (int)ServerPackets.mobSpawn, ClientHandle.MobSpawn },
+            { (int)ServerPackets.mobMove, ClientHandle.MobMove },
+            { (int)ServerPackets.mobSetDestination, ClientHandle.MobSetDestination },
+            { (int)ServerPackets.mobAttack, ClientHandle.MobAttack },
+            { (int)ServerPackets.playerDamageMob, ClientHandle.PlayerDamageMob },
+            { (int)ServerPackets.shrineCombatStart, ClientHandle.ShrineCombatStart },
+            { (int)ServerPackets.dropPowerupAtPosition, ClientHandle.DropPowerupAtPosition },
+            { (int)ServerPackets.MobZoneSpawn, ClientHandle.MobZoneSpawn },
+            { (int)ServerPackets.MobZoneToggle, ClientHandle.MobZoneToggle },
+            { (int)ServerPackets.PickupZoneSpawn, ClientHandle.PickupSpawnZone },
+            { (int)ServerPackets.SendMessage, ClientHandle.ReceiveChatMessage },
+            { (int)ServerPackets.playerPing, ClientHandle.ReceivePlayerPing },
+            { (int)ServerPackets.sendArmor, ClientHandle.ReceivePlayerArmor },
+            { (int)ServerPackets.playerHp, ClientHandle.PlayerHp },
+            { (int)ServerPackets.respawnPlayer, ClientHandle.RespawnPlayer },
+            { (int)ServerPackets.shootArrow, ClientHandle.ShootArrowFromPlayer },
+            { (int)ServerPackets.removeResource, ClientHandle.RemoveResource },
+            { (int)ServerPackets.mobProjectile, ClientHandle.MobSpawnProjectile },
+            { (int)ServerPackets.newDay, ClientHandle.NewDay },
+            { (int)ServerPackets.knockbackMob, ClientHandle.KnockbackMob },
+            { (int)ServerPackets.spawnEffect, ClientHandle.SpawnEffect },
+            { (int)ServerPackets.playerFinishedLoading, ClientHandle.PlayerFinishedLoading },
+            { (int)ServerPackets.revivePlayer, ClientHandle.RevivePlayer },
+            { (int)ServerPackets.spawnGrave, ClientHandle.SpawnGrave },
+            { (int)ServerPackets.interact, ClientHandle.Interact },
+            { (int)ServerPackets.setTarget, ClientHandle.MobSetTarget },
+            { (int)ServerPackets.shipUpdate, ClientHandle.ShipUpdate },
+            { (int)ServerPackets.dragonUpdate, ClientHandle.DragonUpdate },
+            { (int)ServerPackets.sendStats, ClientHandle.ReceiveStats },
         };
         Debug.Log("Initializing packets.");
     }

@@ -13,7 +13,7 @@ public class TestScroll : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        Invoke("GetReady", 4f);
+        Invoke(nameof(GetReady), 4f);
     }
 
     private void GetReady()

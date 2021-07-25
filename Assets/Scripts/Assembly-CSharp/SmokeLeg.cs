@@ -13,7 +13,7 @@ public class SmokeLeg : MonoBehaviour
         if (ready && other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             ready = false;
-            Invoke("GetReady", cooldown);
+            Invoke(nameof(GetReady), cooldown);
             Object.Instantiate(smokeFx, base.transform.position, smokeFx.transform.rotation);
         }
     }

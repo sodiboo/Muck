@@ -9,7 +9,7 @@ public class OnlyActivateForHost : MonoBehaviour
 
     public void Kick()
     {
-        using (Packet packet = new Packet(6))
+        using (Packet packet = new Packet((int)ServerPackets.playerKick))
         {
             ServerSend.SendTCPDataToSteamId(steamId, packet);
         }

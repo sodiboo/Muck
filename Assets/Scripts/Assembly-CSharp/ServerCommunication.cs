@@ -42,9 +42,9 @@ public class ServerCommunication : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("QuickUpdate", updateFrequency, updateFrequency);
-        InvokeRepeating("SlowUpdate", slowUpdateFrequency, slowUpdateFrequency);
-        InvokeRepeating("SlowerUpdate", slowerUpdateFrequency, slowerUpdateFrequency);
+        InvokeRepeating(nameof(QuickUpdate), updateFrequency, updateFrequency);
+        InvokeRepeating(nameof(SlowUpdate), slowUpdateFrequency, slowUpdateFrequency);
+        InvokeRepeating(nameof(SlowerUpdate), slowerUpdateFrequency, slowerUpdateFrequency);
     }
 
     private void QuickUpdate()

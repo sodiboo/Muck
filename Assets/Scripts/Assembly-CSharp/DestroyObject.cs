@@ -6,7 +6,7 @@ public class DestroyObject : MonoBehaviour
 
     private void Start()
     {
-        Invoke("DestroySelf", time);
+        Invoke(nameof(DestroySelf), time);
     }
 
     private void DestroySelf()

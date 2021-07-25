@@ -10,7 +10,7 @@ public class NetStatus : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("SlowUpdate", 1f, 1f);
+        InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
     }
 
     private void SlowUpdate()

@@ -179,7 +179,7 @@ public class ServerSend
 
     public static void Welcome(int toClient, string msg)
     {
-        using (Packet packet = new Packet(1))
+        using (Packet packet = new Packet((int)ServerPackets.welcome))
         {
             packet.Write(msg);
             packet.Write(NetworkManager.Clock);
@@ -190,7 +190,7 @@ public class ServerSend
 
     public static void StartGame(int playerLobbyId, GameSettings settings)
     {
-        using (Packet packet = new Packet(13))
+        using (Packet packet = new Packet((int)ServerPackets.startGame))
         {
             packet.Write(playerLobbyId);
             packet.Write(settings.Seed);
@@ -220,7 +220,7 @@ public class ServerSend
 
     public static void ConnectionSuccessful(int toClient)
     {
-        using (Packet packet = new Packet(9))
+        using (Packet packet = new Packet((int)ServerPackets.connectionSuccessful))
         {
             SendTCPData(toClient, packet);
         }
@@ -228,7 +228,7 @@ public class ServerSend
 
     public static void PlayerDied(int deadPlayerId, Vector3 deathPos, Vector3 gravePos, int damageFromPlayer)
     {
-        using (Packet packet = new Packet(7))
+        using (Packet packet = new Packet((int)ServerPackets.playerDied))
         {
             Debug.Log("Player" + deadPlayerId + " has been killed, sending to players");
             packet.Write(deadPlayerId);
@@ -238,7 +238,7 @@ public class ServerSend
         }
         if (GameManager.gameSettings.gameMode != GameSettings.GameMode.Versus && !GameManager.instance.boatLeft)
         {
-            using (Packet packet2 = new Packet(53))
+            using (Packet packet2 = new Packet((int)ServerPackets.spawnGrave))
             {
                 int nextId = ResourceManager.Instance.GetNextId();
                 packet2.Write(deadPlayerId);
@@ -251,7 +251,7 @@ public class ServerSend
 
     public static void RespawnPlayer(int respawnId)
     {
-        using (Packet packet = new Packet(44))
+        using (Packet packet = new Packet((int)ServerPackets.respawnPlayer))
         {
             packet.Write(respawnId);
             SendTCPDataToAll(packet);
@@ -260,7 +260,7 @@ public class ServerSend
 
     public static void RevivePlayer(int fromClient, int revivedId, bool shrine, int objectID)
     {
-        using (Packet packet = new Packet(52))
+        using (Packet packet = new Packet((int)ServerPackets.revivePlayer))
         {
             packet.Write(fromClient);
             packet.Write(revivedId);
@@ -272,7 +272,7 @@ public class ServerSend
 
     public static void PlayerReady(int fromClient, bool ready)
     {
-        using (Packet packet = new Packet(16))
+        using (Packet packet = new Packet((int)ServerPackets.ready))
         {
             packet.Write(fromClient);
             packet.Write(ready);
@@ -282,7 +282,7 @@ public class ServerSend
 
     public static void PlayerReady(int fromClient, bool ready, int toClient)
     {
-        using (Packet packet = new Packet(16))
+        using (Packet packet = new Packet((int)ServerPackets.ready))
         {
             packet.Write(fromClient);
             packet.Write(ready);
@@ -292,7 +292,7 @@ public class ServerSend
 
     public static void DropItem(int fromClient, int itemId, int amount, int objectID)
     {
-        using (Packet packet = new Packet(18))
+        using (Packet packet = new Packet((int)ServerPackets.dropItem))
         {
             packet.Write(fromClient);
             packet.Write(itemId);
@@ -304,7 +304,7 @@ public class ServerSend
 
     public static void DropItemAtPosition(int itemId, int amount, int objectID, Vector3 pos)
     {
-        using (Packet packet = new Packet(28))
+        using (Packet packet = new Packet((int)ServerPackets.dropItemAtPosition))
         {
             packet.Write(itemId);
             packet.Write(amount);
@@ -316,7 +316,7 @@ public class ServerSend
 
     public static void DropPowerupAtPosition(int itemId, int objectID, Vector3 pos)
     {
-        using (Packet packet = new Packet(36))
+        using (Packet packet = new Packet((int)ServerPackets.dropPowerupAtPosition))
         {
             packet.Write(itemId);
             packet.Write(objectID);
@@ -327,7 +327,7 @@ public class ServerSend
 
     public static void DropResources(int fromClient, int dropTableId, int droppedItemID)
     {
-        using (Packet packet = new Packet(22))
+        using (Packet packet = new Packet((int)ServerPackets.dropResources))
         {
             packet.Write(fromClient);
             packet.Write(dropTableId);
@@ -338,7 +338,7 @@ public class ServerSend
 
     public static void PickupItem(int fromClient, int objectID)
     {
-        using (Packet packet = new Packet(19))
+        using (Packet packet = new Packet((int)ServerPackets.pickupItem))
         {
             packet.Write(fromClient);
             packet.Write(objectID);
@@ -348,7 +348,7 @@ public class ServerSend
 
     public static void PickupInteract(int fromClient, int objectID)
     {
-        using (Packet packet = new Packet(27))
+        using (Packet packet = new Packet((int)ServerPackets.pickupInteract))
         {
             packet.Write(fromClient);
             packet.Write(objectID);
@@ -358,7 +358,7 @@ public class ServerSend
 
     public static void WeaponInHand(int fromClient, int objectID)
     {
-        using (Packet packet = new Packet(20))
+        using (Packet packet = new Packet((int)ServerPackets.weaponInHand))
         {
             packet.Write(fromClient);
             packet.Write(objectID);
@@ -368,7 +368,7 @@ public class ServerSend
 
     public static void SendBuild(int fromClient, int itemId, int newObjectId, Vector3 pos, int yRot)
     {
-        using (Packet packet = new Packet(24))
+        using (Packet packet = new Packet((int)ServerPackets.finalizeBuild))
         {
             packet.Write(fromClient);
             packet.Write(itemId);
@@ -381,7 +381,7 @@ public class ServerSend
 
     public static void AnimationUpdate(int fromClient, int animation, bool b)
     {
-        using (Packet packet = new Packet(23))
+        using (Packet packet = new Packet((int)ServerPackets.animationUpdate))
         {
             packet.Write(fromClient);
             packet.Write(animation);
@@ -392,7 +392,7 @@ public class ServerSend
 
     public static void ShootArrow(Vector3 pos, Vector3 rot, float force, int arrowId, int playerId)
     {
-        using (Packet packet = new Packet(45))
+        using (Packet packet = new Packet((int)ServerPackets.shootArrow))
         {
             packet.Write(pos);
             packet.Write(rot);
@@ -405,7 +405,7 @@ public class ServerSend
 
     public static void OpenChest(int fromClient, int chestId, bool use)
     {
-        using (Packet packet = new Packet(25))
+        using (Packet packet = new Packet((int)ServerPackets.openChest))
         {
             packet.Write(fromClient);
             packet.Write(chestId);
@@ -416,7 +416,7 @@ public class ServerSend
 
     public static void UpdateChest(int fromClient, int chestId, int cellId, int itemId, int amount)
     {
-        using (Packet packet = new Packet(26))
+        using (Packet packet = new Packet((int)ServerPackets.updateChest))
         {
             packet.Write(fromClient);
             packet.Write(chestId);
@@ -429,7 +429,7 @@ public class ServerSend
 
     public static void PlayerHitObject(int fromClient, int objectID, int hp, int hitEffect, Vector3 pos, int weaponHitType)
     {
-        using (Packet packet = new Packet(21))
+        using (Packet packet = new Packet((int)ServerPackets.playerHitObject))
         {
             packet.Write(fromClient);
             packet.Write(objectID);
@@ -443,7 +443,7 @@ public class ServerSend
 
     public static void SpawnEffect(int effectId, Vector3 pos, int fromClient)
     {
-        using (Packet packet = new Packet(50))
+        using (Packet packet = new Packet((int)ServerPackets.spawnEffect))
         {
             packet.Write(effectId);
             packet.Write(pos);
@@ -453,7 +453,7 @@ public class ServerSend
 
     public static void HitPlayer(int fromClient, int damage, float hpRatioEstimate, int hurtPlayerId, int hitEffect, Vector3 pos)
     {
-        using (Packet packet = new Packet(29))
+        using (Packet packet = new Packet((int)ServerPackets.playerHit))
         {
             packet.Write(fromClient);
             packet.Write(damage);
@@ -467,7 +467,7 @@ public class ServerSend
 
     public static void SpawnPlayer(int toClient, Player player, Vector3 pos)
     {
-        using (Packet packet = new Packet(2))
+        using (Packet packet = new Packet((int)ServerPackets.spawnPlayer))
         {
             Debug.Log("spawning player, id: " + player.id + ", sending to " + toClient);
             packet.Write(player.id);
@@ -483,7 +483,7 @@ public class ServerSend
 
     public static void PlayerHp(int fromId, float hpRatio)
     {
-        using (Packet packet = new Packet(43))
+        using (Packet packet = new Packet((int)ServerPackets.playerHp))
         {
             packet.Write(fromId);
             packet.Write(hpRatio);
@@ -493,7 +493,7 @@ public class ServerSend
 
     public static void PlayerPosition(Player player, int t)
     {
-        using (Packet packet = new Packet(3))
+        using (Packet packet = new Packet((int)ServerPackets.playerPosition))
         {
             packet.Write(player.id);
             packet.Write(player.pos);
@@ -503,7 +503,7 @@ public class ServerSend
 
     public static void PlayerRotation(Player player)
     {
-        using (Packet packet = new Packet(4))
+        using (Packet packet = new Packet((int)ServerPackets.playerRotation))
         {
             packet.Write(player.id);
             packet.Write(player.yOrientation);
@@ -514,7 +514,7 @@ public class ServerSend
 
     public static void PingPlayer(int player, string ms)
     {
-        using (Packet packet = new Packet(8))
+        using (Packet packet = new Packet((int)ServerPackets.pingPlayer))
         {
             packet.Write(player);
             packet.Write(ms);
@@ -524,7 +524,7 @@ public class ServerSend
 
     public static void DisconnectPlayer(int player)
     {
-        using (Packet packet = new Packet(5))
+        using (Packet packet = new Packet((int)ServerPackets.playerDisconnect))
         {
             packet.Write(player);
             SendTCPDataToAll(packet);
@@ -533,7 +533,7 @@ public class ServerSend
 
     public static void ShrineStart(int[] mobIds, int shrineId)
     {
-        using (Packet packet = new Packet(35))
+        using (Packet packet = new Packet((int)ServerPackets.shrineCombatStart))
         {
             packet.Write(shrineId);
             int num = mobIds.Length;
@@ -548,7 +548,7 @@ public class ServerSend
 
     public static void MobMove(int mobId, Vector3 pos)
     {
-        using (Packet packet = new Packet(31))
+        using (Packet packet = new Packet((int)ServerPackets.mobMove))
         {
             packet.Write(mobId);
             packet.Write(pos);
@@ -558,7 +558,7 @@ public class ServerSend
 
     public static void MobSetDestination(int mobId, Vector3 dest)
     {
-        using (Packet packet = new Packet(32))
+        using (Packet packet = new Packet((int)ServerPackets.mobSetDestination))
         {
             packet.Write(mobId);
             packet.Write(dest);
@@ -568,7 +568,7 @@ public class ServerSend
 
     public static void SendMobTarget(int mobId, int targetId)
     {
-        using (Packet packet = new Packet(55))
+        using (Packet packet = new Packet((int)ServerPackets.setTarget))
         {
             packet.Write(mobId);
             packet.Write(targetId);
@@ -578,7 +578,7 @@ public class ServerSend
 
     public static void MobSpawn(Vector3 pos, int mobType, int mobId, float multiplier, float bossMultiplier, int guardianType)
     {
-        using (Packet packet = new Packet(30))
+        using (Packet packet = new Packet((int)ServerPackets.mobSpawn))
         {
             packet.Write(pos);
             packet.Write(mobType);
@@ -592,7 +592,7 @@ public class ServerSend
 
     public static void MobAttack(int mobId, int targetPlayerId, int attackAnimationIndex)
     {
-        using (Packet packet = new Packet(33))
+        using (Packet packet = new Packet((int)ServerPackets.mobAttack))
         {
             packet.Write(mobId);
             packet.Write(targetPlayerId);
@@ -603,7 +603,7 @@ public class ServerSend
 
     public static void MobSpawnProjectile(Vector3 pos, Vector3 dir, float force, int itemId, int mobObjectId)
     {
-        using (Packet packet = new Packet(47))
+        using (Packet packet = new Packet((int)ServerPackets.mobProjectile))
         {
             packet.Write(pos);
             packet.Write(dir);
@@ -616,7 +616,7 @@ public class ServerSend
 
     public static void PlayerHitMob(int fromClient, int mobId, int hpLeft, int hitEffect, Vector3 pos, int hitWeaponType)
     {
-        using (Packet packet = new Packet(34))
+        using (Packet packet = new Packet((int)ServerPackets.playerDamageMob))
         {
             packet.Write(fromClient);
             packet.Write(mobId);
@@ -630,7 +630,7 @@ public class ServerSend
 
     public static void KnockbackMob(int mobId, Vector3 dir)
     {
-        using (Packet packet = new Packet(49))
+        using (Packet packet = new Packet((int)ServerPackets.knockbackMob))
         {
             packet.Write(mobId);
             packet.Write(dir);
@@ -640,7 +640,7 @@ public class ServerSend
 
     public static void Interact(int interactId, int fromId)
     {
-        using (Packet packet = new Packet(54))
+        using (Packet packet = new Packet((int)ServerPackets.interact))
         {
             packet.Write(interactId);
             packet.Write(fromId);
@@ -650,7 +650,7 @@ public class ServerSend
 
     public static void MobZoneSpawn(Vector3 pos, int mobType, int mobId, int mobZoneId)
     {
-        using (Packet packet = new Packet(37))
+        using (Packet packet = new Packet((int)ServerPackets.MobZoneSpawn))
         {
             packet.Write(pos);
             packet.Write(mobType);
@@ -662,7 +662,7 @@ public class ServerSend
 
     public static void PickupZoneSpawn(Vector3 pos, int entityId, int mobId, int mobZoneId)
     {
-        using (Packet packet = new Packet(39))
+        using (Packet packet = new Packet((int)ServerPackets.PickupZoneSpawn))
         {
             packet.Write(pos);
             packet.Write(entityId);
@@ -674,7 +674,7 @@ public class ServerSend
 
     public static void MobZoneToggle(bool show, int objectID)
     {
-        using (Packet packet = new Packet(38))
+        using (Packet packet = new Packet((int)ServerPackets.MobZoneToggle))
         {
             packet.Write(show);
             packet.Write(objectID);
@@ -684,7 +684,7 @@ public class ServerSend
 
     public static void SendChatMessage(int fromClient, string username, string msg)
     {
-        using (Packet packet = new Packet(40))
+        using (Packet packet = new Packet((int)ServerPackets.SendMessage))
         {
             packet.Write(fromClient);
             packet.Write(username);
@@ -695,7 +695,7 @@ public class ServerSend
 
     public static void SendPing(int fromClient, Vector3 pos, string username)
     {
-        using (Packet packet = new Packet(41))
+        using (Packet packet = new Packet((int)ServerPackets.playerPing))
         {
             packet.Write(pos);
             packet.Write(username);
@@ -705,7 +705,7 @@ public class ServerSend
 
     public static void SendArmor(int fromClient, int armorSlot, int itemId)
     {
-        using (Packet packet = new Packet(42))
+        using (Packet packet = new Packet((int)ServerPackets.sendArmor))
         {
             packet.Write(fromClient);
             packet.Write(armorSlot);
@@ -716,7 +716,7 @@ public class ServerSend
 
     public static void NewDay(int day)
     {
-        using (Packet packet = new Packet(48))
+        using (Packet packet = new Packet((int)ServerPackets.newDay))
         {
             packet.Write(day);
             foreach (Client value in Server.clients.Values)
@@ -732,7 +732,7 @@ public class ServerSend
 
     public static void GameOver(int winnerId = -2)
     {
-        using (Packet packet = new Packet(12))
+        using (Packet packet = new Packet((int)ServerPackets.gameOver))
         {
             packet.Write(winnerId);
             SendTCPDataToAll(LocalClient.instance.myId, packet);
@@ -742,7 +742,7 @@ public class ServerSend
 
     public static void PlayerFinishedLoading(int playerId)
     {
-        using (Packet packet = new Packet(51))
+        using (Packet packet = new Packet((int)ServerPackets.playerFinishedLoading))
         {
             packet.Write(playerId);
             SendTCPDataToAll(packet);
@@ -751,7 +751,7 @@ public class ServerSend
 
     public static void SendShipUpdate(int fromClient, int type, int interactId)
     {
-        using (Packet packet = new Packet(56))
+        using (Packet packet = new Packet((int)ServerPackets.shipUpdate))
         {
             Debug.LogError("server sending ship update");
             packet.Write(type);
@@ -762,7 +762,7 @@ public class ServerSend
 
     public static void DragonUpdate(int dragonUpdateType)
     {
-        using (Packet packet = new Packet(57))
+        using (Packet packet = new Packet((int)ServerPackets.dragonUpdate))
         {
             packet.Write(dragonUpdateType);
             SendTCPDataToAll(LocalClient.instance.myId, packet);
@@ -771,7 +771,7 @@ public class ServerSend
 
     public static void SendStats()
     {
-        using (Packet packet = new Packet(58))
+        using (Packet packet = new Packet((int)ServerPackets.sendStats))
         {
             int num = 0;
             foreach (Client value in Server.clients.Values)

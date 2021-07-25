@@ -8,7 +8,7 @@ public class SpawnObjectTimed : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("SpawnObject", time);
+        Invoke(nameof(SpawnObject), time);
     }
 
     private void SpawnObject()

@@ -93,7 +93,7 @@ public class MusicController : MonoBehaviour
         {
             queuedSong = audioClip;
             StartFade(audio, fadeTime, 0f);
-            Invoke("NextSong", fadeTime);
+            Invoke(nameof(NextSong), fadeTime);
         }
         else
         {
@@ -130,7 +130,7 @@ public class MusicController : MonoBehaviour
         float num = 0.5f;
         queuedSong = bobTheme;
         StartFade(audio, num, 0f);
-        Invoke("BobTheme", num);
+        Invoke(nameof(BobTheme), num);
     }
 
     private void BobTheme()

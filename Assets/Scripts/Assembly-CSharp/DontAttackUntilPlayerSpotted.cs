@@ -19,7 +19,7 @@ public class DontAttackUntilPlayerSpotted : MonoBehaviour
         neutral.mobZoneId = mobZoneId;
         Mesh sharedMesh = GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
         headOffset = Vector3.up * sharedMesh.bounds.extents.y * 1.5f;
-        InvokeRepeating("CheckForPlayers", 0.5f, 0.5f);
+        InvokeRepeating(nameof(CheckForPlayers), 0.5f, 0.5f);
     }
 
     private void CheckForPlayers()

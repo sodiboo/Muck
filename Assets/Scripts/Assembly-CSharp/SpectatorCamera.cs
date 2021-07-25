@@ -15,7 +15,7 @@ public class SpectatorCamera : MonoBehaviour
     private void OnEnable()
     {
         ready = false;
-        Invoke("GetReady", 1f);
+        Invoke(nameof(GetReady), 1f);
     }
 
     private void Awake()

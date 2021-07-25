@@ -43,7 +43,7 @@ public class WoodmanBehaviour : MonoBehaviour
             neutral.mobZoneId = mobZoneId;
         }
         hitable = GetComponent<Hitable>();
-        InvokeRepeating("SlowUpdate", 0.25f, 0.25f);
+        InvokeRepeating(nameof(SlowUpdate), 0.25f, 0.25f);
         AssignRole(new ConsistentRandom(GameManager.GetSeed() + hitable.GetId()));
         mob.agent.speed /= 2f;
     }

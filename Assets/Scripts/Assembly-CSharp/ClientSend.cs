@@ -40,7 +40,7 @@ public class ClientSend : MonoBehaviour
 
     public static void JoinLobby()
     {
-        using (Packet packet = new Packet(2))
+        using (Packet packet = new Packet((int)ClientPackets.joinLobby))
         {
             packet.Write(SteamClient.Name);
             SendTCPData(packet);
@@ -49,7 +49,7 @@ public class ClientSend : MonoBehaviour
 
     public static void StartedLoading()
     {
-        using (Packet packet = new Packet(33))
+        using (Packet packet = new Packet((int)ClientPackets.startedLoading))
         {
             SendTCPData(packet);
         }
@@ -57,7 +57,7 @@ public class ClientSend : MonoBehaviour
 
     public static void PlayerFinishedLoading()
     {
-        using (Packet packet = new Packet(29))
+        using (Packet packet = new Packet((int)ClientPackets.finishedLoading))
         {
             SendTCPData(packet);
         }
@@ -65,7 +65,7 @@ public class ClientSend : MonoBehaviour
 
     public static void WelcomeReceived(int id, string username)
     {
-        using (Packet packet = new Packet(1))
+        using (Packet packet = new Packet((int)ClientPackets.welcomeReceived))
         {
             packet.Write(id);
             packet.Write(username);
@@ -81,7 +81,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(3))
+            using (Packet packet = new Packet((int)ClientPackets.playerPosition))
             {
                 packet.Write(pos);
                 SendUDPData(packet);
@@ -97,7 +97,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(26))
+            using (Packet packet = new Packet((int)ClientPackets.playerHp))
             {
                 packet.Write(hp);
                 packet.Write(maxHp);
@@ -114,7 +114,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(27))
+            using (Packet packet = new Packet((int)ClientPackets.playerDied))
             {
                 packet.Write(damageFromPlayer);
                 SendTCPData(packet);
@@ -130,7 +130,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(31))
+            using (Packet packet = new Packet((int)ClientPackets.reviveRequest))
             {
                 packet.Write(revivePlayerId);
                 packet.Write(grave);
@@ -148,7 +148,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(4))
+            using (Packet packet = new Packet((int)ClientPackets.playerRotation))
             {
                 packet.Write(yOrientation);
                 packet.Write(xOrientation);
@@ -165,7 +165,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(7))
+            using (Packet packet = new Packet((int)ClientPackets.playerKilled))
             {
                 MonoBehaviour.print("sending killed info");
                 packet.Write(position);
@@ -183,7 +183,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(20))
+            using (Packet packet = new Packet((int)ClientPackets.playerHit))
             {
                 packet.Write(damage);
                 packet.Write(hurtPlayer);
@@ -203,7 +203,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(28))
+            using (Packet packet = new Packet((int)ClientPackets.shootArrow))
             {
                 packet.Write(pos);
                 packet.Write(rot);
@@ -222,7 +222,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(10))
+            using (Packet packet = new Packet((int)ClientPackets.dropItem))
             {
                 MonoBehaviour.print("sending drop item requesty");
                 packet.Write(itemID);
@@ -240,7 +240,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(11))
+            using (Packet packet = new Packet((int)ClientPackets.dropItemAtPosition))
             {
                 packet.Write(itemID);
                 packet.Write(amount);
@@ -258,7 +258,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(12))
+            using (Packet packet = new Packet((int)ClientPackets.pickupItem))
             {
                 packet.Write(itemID);
                 SendTCPData(packet);
@@ -275,7 +275,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(19))
+            using (Packet packet = new Packet((int)ClientPackets.pickupInteract))
             {
                 packet.Write(objectId);
                 SendTCPData(packet);
@@ -292,7 +292,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(14))
+            using (Packet packet = new Packet((int)ClientPackets.playerHitObject))
             {
                 packet.Write(damage);
                 packet.Write(objectID);
@@ -312,7 +312,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(30))
+            using (Packet packet = new Packet((int)ClientPackets.spawnEffect))
             {
                 packet.Write(effectId);
                 packet.Write(pos);
@@ -329,7 +329,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(13))
+            using (Packet packet = new Packet((int)ClientPackets.weaponInHand))
             {
                 packet.Write(itemID);
                 SendTCPData(packet);
@@ -345,7 +345,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(25))
+            using (Packet packet = new Packet((int)ClientPackets.sendArmor))
             {
                 packet.Write(armorSlot);
                 packet.Write(itemId);
@@ -362,7 +362,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(15))
+            using (Packet packet = new Packet((int)ClientPackets.animationUpdate))
             {
                 packet.Write((int)animation);
                 packet.Write(b);
@@ -379,7 +379,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(16))
+            using (Packet packet = new Packet((int)ClientPackets.requestBuild))
             {
                 packet.Write(itemId);
                 packet.Write(pos);
@@ -397,7 +397,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(17))
+            using (Packet packet = new Packet((int)ClientPackets.requestChest))
             {
                 packet.Write(chestId);
                 packet.Write(use);
@@ -417,7 +417,7 @@ public class ClientSend : MonoBehaviour
         ChestManager.Instance.chests[chestId].UpdateCraftables();
         try
         {
-            using (Packet packet = new Packet(18))
+            using (Packet packet = new Packet((int)ClientPackets.updateChest))
             {
                 packet.Write(chestId);
                 packet.Write(cellId);
@@ -436,7 +436,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(6))
+            using (Packet packet = new Packet((int)ClientPackets.sendPing))
             {
                 packet.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
                 SendUDPData(packet);
@@ -452,7 +452,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(5))
+            using (Packet packet = new Packet((int)ClientPackets.sendDisconnect))
             {
                 SendTCPData(packet);
             }
@@ -467,7 +467,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(22))
+            using (Packet packet = new Packet((int)ClientPackets.shrineCombatStart))
             {
                 packet.Write(shrineId);
                 SendTCPData(packet);
@@ -483,7 +483,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(32))
+            using (Packet packet = new Packet((int)ClientPackets.interact))
             {
                 packet.Write(objectId);
                 SendTCPData(packet);
@@ -499,7 +499,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(21))
+            using (Packet packet = new Packet((int)ClientPackets.playerDamageMob))
             {
                 packet.Write(mobId);
                 packet.Write(damage);
@@ -520,7 +520,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(23))
+            using (Packet packet = new Packet((int)ClientPackets.sendChatMessage))
             {
                 packet.Write(msg);
                 SendUDPData(packet);
@@ -536,7 +536,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(24))
+            using (Packet packet = new Packet((int)ClientPackets.playerPing))
             {
                 packet.Write(pos);
                 SendUDPData(packet);
@@ -552,7 +552,7 @@ public class ClientSend : MonoBehaviour
     {
         try
         {
-            using (Packet packet = new Packet(34))
+            using (Packet packet = new Packet((int)ClientPackets.shipUpdate))
             {
                 packet.Write((int)boatPacket);
                 packet.Write(interactId);

@@ -119,7 +119,7 @@ public class PlayerStatus : MonoBehaviour
         strength = 1;
         speed = 1;
         armor = new InventoryItem[4];
-        InvokeRepeating("SlowUpdate", 1f, 1f);
+        InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
     }
 
     public void Respawn()
@@ -132,8 +132,8 @@ public class PlayerStatus : MonoBehaviour
         GameManager.players[LocalClient.instance.myId].dead = false;
         MoveCamera.Instance.PlayerRespawn(PlayerMovement.Instance.transform.position);
         invincible = true;
-        CancelInvoke("StopInvincible");
-        Invoke("StopInvincible", 3f);
+        CancelInvoke(nameof(StopInvincible));
+        Invoke(nameof(StopInvincible), 3f);
     }
 
     private void StopInvincible()
@@ -189,13 +189,13 @@ public class PlayerStatus : MonoBehaviour
         {
             adrenalineBoost = true;
             readyToAdrenalineBoost = false;
-            Invoke("StopAdrenaline", 5f);
+            Invoke(nameof(StopAdrenaline), 5f);
         }
         readyToRegenShield = false;
-        CancelInvoke("RegenShield");
+        CancelInvoke(nameof(RegenShield));
         if (!dead)
         {
-            Invoke("RegenShield", regenShieldDelay);
+            Invoke(nameof(RegenShield), regenShieldDelay);
         }
         float shakeRatio = (float)damageTaken / (float)MaxHpAndShield();
         CameraShaker.Instance.DamageShake(shakeRatio);
@@ -217,7 +217,7 @@ public class PlayerStatus : MonoBehaviour
             damageDone = (int)((float)MaxHpAndShield() * oneShotThreshold);
         }
         protectionActive = false;
-        Invoke("ActivateProtection", oneShotProtectionCooldown);
+        Invoke(nameof(ActivateProtection), oneShotProtectionCooldown);
         return damageDone;
     }
 
@@ -229,7 +229,7 @@ public class PlayerStatus : MonoBehaviour
     private void StopAdrenaline()
     {
         adrenalineBoost = false;
-        Invoke("ReadyAdrenaline", 10f);
+        Invoke(nameof(ReadyAdrenaline), 10f);
     }
 
     private void ReadyAdrenaline()

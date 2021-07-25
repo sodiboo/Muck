@@ -17,7 +17,7 @@ public class DistanceTravelled : MonoBehaviour
     private void Start()
     {
         lastPos = rb.position;
-        InvokeRepeating("SlowUpdate", interval, interval);
+        InvokeRepeating(nameof(SlowUpdate), interval, interval);
     }
 
     private void SlowUpdate()

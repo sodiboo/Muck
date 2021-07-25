@@ -35,7 +35,7 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
         if (Application.isPlaying)
         {
             entities = new List<GameObject>();
-            InvokeRepeating("SlowUpdate", Random.Range(0f, updateRate), updateRate);
+            InvokeRepeating(nameof(SlowUpdate), Random.Range(0f, updateRate), updateRate);
         }
     }
 
@@ -50,7 +50,7 @@ public abstract class SpawnZone : MonoBehaviour, SharedObject
         {
             if (respawnTime >= 0f)
             {
-                Invoke("QueueEntity", respawnTime);
+                Invoke(nameof(QueueEntity), respawnTime);
             }
             entityBuffer++;
         }

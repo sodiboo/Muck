@@ -10,15 +10,15 @@ public class DragonFire : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("UpdateHitbox", 0.1f, 0.1f);
-        Invoke("StartHitbox", 1.35f);
+        InvokeRepeating(nameof(UpdateHitbox), 0.1f, 0.1f);
+        Invoke(nameof(StartHitbox), 1.35f);
         c = GetComponent<Collider>();
         c.enabled = false;
     }
 
     private void StartHitbox()
     {
-        Invoke("StopHitbox", 1.5f);
+        Invoke(nameof(StopHitbox), 1.5f);
         c.enabled = true;
     }
 

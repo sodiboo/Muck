@@ -83,7 +83,7 @@ public class GameLoop : MonoBehaviour
         {
             value?.player?.PingPlayer();
         }
-        InvokeRepeating("TimeoutPlayers", 2f, 2f);
+        InvokeRepeating(nameof(TimeoutPlayers), 2f, 2f);
     }
 
     private void NewDay(int day)
@@ -93,7 +93,7 @@ public class GameLoop : MonoBehaviour
             bossNight = false;
             nightStarted = false;
             currentDay = day;
-            CancelInvoke("CheckMobSpawns");
+            CancelInvoke(nameof(CheckMobSpawns));
             ServerSend.NewDay(day);
             GameManager.instance.UpdateDay(day);
             totalWeight = CalculateSpawnWeights(currentDay);
@@ -164,7 +164,7 @@ public class GameLoop : MonoBehaviour
         {
             MusicController.Instance.PlaySong(MusicController.SongType.Night);
         }
-        Invoke("CheckMobSpawns", UnityEngine.Random.Range(checkMobUpdateInterval.x, checkMobUpdateInterval.y));
+        Invoke(nameof(CheckMobSpawns), UnityEngine.Random.Range(checkMobUpdateInterval.x, checkMobUpdateInterval.y));
     }
 
     public void StartBoss(MobType bossMob)
@@ -180,7 +180,7 @@ public class GameLoop : MonoBehaviour
             return;
         }
         float num = (float)GameManager.instance.GetPlayersAlive() / 2f;
-        Invoke("CheckMobSpawns", UnityEngine.Random.Range(checkMobUpdateInterval.x / num, checkMobUpdateInterval.y / num));
+        Invoke(nameof(CheckMobSpawns), UnityEngine.Random.Range(checkMobUpdateInterval.x / num, checkMobUpdateInterval.y / num));
         activeMobs = MobManager.Instance.GetActiveEnemies();
         if (GameManager.state != GameManager.GameState.Playing || DayCycle.time < 0.5f || activeMobs > maxMobCap || activeMobs > currentMobCap)
         {

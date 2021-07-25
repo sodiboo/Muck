@@ -162,7 +162,7 @@ public class Mob : MonoBehaviour, SharedObject
 
     public void Knockback(Vector3 dir)
     {
-        CancelInvoke("StopKnockback");
+        CancelInvoke(nameof(StopKnockback));
         oldAngularSpeed = agent.angularSpeed;
         agent.destination = base.transform.position + dir * 6f;
         animator.SetBool("Knockback", value: true);
@@ -170,7 +170,7 @@ public class Mob : MonoBehaviour, SharedObject
         agent.velocity += dir * 10f;
         agent.angularSpeed = 0f;
         agent.updateRotation = false;
-        Invoke("StopKnockback", 0.75f);
+        Invoke(nameof(StopKnockback), 0.75f);
     }
 
     private void StopKnockback()
@@ -221,7 +221,7 @@ public class Mob : MonoBehaviour, SharedObject
         {
             currentAttackType = AttackType.Melee;
         }
-        Invoke("FinishAttacking", attackTimes[attackAnimationIndex]);
+        Invoke(nameof(FinishAttacking), attackTimes[attackAnimationIndex]);
         animator.Play(attackAnimations[attackAnimationIndex].name);
         this.targetPlayerId = targetPlayerId;
     }

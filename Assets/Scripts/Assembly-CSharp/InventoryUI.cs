@@ -97,7 +97,7 @@ public class InventoryUI : MonoBehaviour
     public void CooldownPickup()
     {
         pickupCooldown = true;
-        Invoke("ResetCooldown", (float)(NetStatus.GetPing() * 2) / 1000f);
+        Invoke(nameof(ResetCooldown), (float)(NetStatus.GetPing() * 2) / 1000f);
     }
 
     private void ResetCooldown()

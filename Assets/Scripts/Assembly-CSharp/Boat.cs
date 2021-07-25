@@ -87,7 +87,7 @@ public class Boat : MonoBehaviour
         guardians = new List<ShrineGuardian>();
         rand = new ConsistentRandom(GameManager.GetSeed());
         Instance = this;
-        InvokeRepeating("CheckFound", 0.5f, 1f);
+        InvokeRepeating(nameof(CheckFound), 0.5f, 1f);
         boatPing = Object.Instantiate(objectivePing, base.transform.position, Quaternion.identity).GetComponent<ObjectivePing>();
         boatPing.SetText("?");
         boatPing.gameObject.SetActive(value: false);
@@ -116,7 +116,7 @@ public class Boat : MonoBehaviour
         }
         if (LocalClient.serverOwner)
         {
-            InvokeRepeating("SlowUpdate", 1f, 1f);
+            InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
         }
         array = repairs;
         for (int j = 0; j < array.Length; j++)
@@ -131,7 +131,7 @@ public class Boat : MonoBehaviour
         if (CheckBoatFullyRepaired())
         {
             SendBoatFinished();
-            CancelInvoke("SlowUpdate");
+            CancelInvoke(nameof(SlowUpdate));
         }
     }
 

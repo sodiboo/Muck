@@ -70,7 +70,7 @@ public class Tutorial : MonoBehaviour
             if ((bool)PlayerMovement.Instance)
             {
                 started = true;
-                Invoke("ContinueTutorial", 5f);
+                Invoke(nameof(ContinueTutorial), 5f);
             }
         }
         else if (currentStep != null)

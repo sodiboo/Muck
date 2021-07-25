@@ -40,7 +40,7 @@ public class FallIfNotGrounded : MonoBehaviour
         {
             bottomOffset = new Vector3(0f, c.bounds.extents.y, 0f);
         }
-        InvokeRepeating("CheckFalling", 1f, 1f);
+        InvokeRepeating(nameof(CheckFalling), 1f, 1f);
     }
 
     private void CheckFalling()

@@ -82,8 +82,8 @@ public class ChatBox : MonoBehaviour
             ShowChat();
             if (!typing)
             {
-                CancelInvoke("HideChat");
-                Invoke("HideChat", 5f);
+                CancelInvoke(nameof(HideChat));
+                Invoke(nameof(HideChat), 5f);
             }
         }
     }
@@ -189,8 +189,8 @@ public class ChatBox : MonoBehaviour
         {
             ClearMessage();
             typing = false;
-            CancelInvoke("HideChat");
-            Invoke("HideChat", 5f);
+            CancelInvoke(nameof(HideChat));
+            Invoke(nameof(HideChat), 5f);
         }
     }
 

@@ -116,7 +116,7 @@ public class DrawGrass : MonoBehaviour
         else
         {
             ClearMesh();
-            InvokeRepeating("SlowUpdate", 0f, updateRate);
+            InvokeRepeating(nameof(SlowUpdate), 0f, updateRate);
             currentPositions = new Dictionary<Vector3, bool>();
         }
     }

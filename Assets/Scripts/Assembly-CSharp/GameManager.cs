@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
             UnityEngine.Object.Instantiate(zone, Vector3.zero, Quaternion.identity);
             if (LocalClient.serverOwner)
             {
-                InvokeRepeating("SlowUpdate", 0.5f, 0.5f);
+                InvokeRepeating(nameof(SlowUpdate), 0.5f, 0.5f);
             }
         }
         yield return 3f;
@@ -418,14 +418,14 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         MusicController.Instance.StopSong();
-        Invoke("ShowEndScreen", 4f);
+        Invoke(nameof(ShowEndScreen), 4f);
     }
 
     public void GameOver(int winnerId, float time = 4f)
     {
         Debug.LogError("game over");
         this.winnerId = winnerId;
-        Invoke("ShowEndScreen", time);
+        Invoke(nameof(ShowEndScreen), time);
         MusicController.Instance.StopSong();
         AchievementManager.Instance.CheckGameOverAchievements(winnerId);
     }
@@ -543,7 +543,7 @@ public class GameManager : MonoBehaviour
     public void SendPlayersIntoGame(List<Vector3> spawnPositions)
     {
         this.spawnPositions = spawnPositions;
-        Invoke("SendPlayersIntoGameNow", 2f);
+        Invoke(nameof(SendPlayersIntoGameNow), 2f);
     }
 
     private void SendPlayersIntoGameNow()

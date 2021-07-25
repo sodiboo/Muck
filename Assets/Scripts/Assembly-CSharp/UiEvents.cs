@@ -168,7 +168,7 @@ public class UiEvents : MonoBehaviour
 
     private void Unlock()
     {
-        if (idsToUnlock.Count >= 1 && !IsInvoking("Unlock"))
+        if (idsToUnlock.Count >= 1 && !IsInvoking(nameof(Unlock)))
         {
             int key = idsToUnlock.Dequeue();
             GameObject obj = Object.Instantiate(unlockPrefab, unlockParent);
@@ -176,7 +176,7 @@ public class UiEvents : MonoBehaviour
             obj.transform.SetSiblingIndex(0);
             if (idsToUnlock.Count > 0)
             {
-                Invoke("Unlock", 2f);
+                Invoke(nameof(Unlock), 2f);
             }
         }
     }

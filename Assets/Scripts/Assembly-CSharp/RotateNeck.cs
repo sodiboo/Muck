@@ -34,7 +34,7 @@ public class RotateNeck : MonoBehaviour
         desiredHeadRot = Quaternion.Euler(-34f, 0f, 0f);
         oldRot = desiredRot;
         oldHeadRot = desiredHeadRot;
-        Invoke("ResetNeck", 3f);
+        Invoke(nameof(ResetNeck), 3f);
         done = false;
         currentBreath = Object.Instantiate(fireBreathPrefab).transform;
     }

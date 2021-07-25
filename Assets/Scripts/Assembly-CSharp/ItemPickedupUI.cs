@@ -24,14 +24,14 @@ public class ItemPickedupUI : MonoBehaviour
         desiredPad = layout.padding.left;
         layout.padding.left = -300;
         padLeft = layout.padding.left;
-        Invoke("StartFade", fadeStart);
+        Invoke(nameof(StartFade), fadeStart);
     }
 
     private void StartFade()
     {
         icon.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
         item.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
-        Invoke("DestroySelf", fadeTime);
+        Invoke(nameof(DestroySelf), fadeTime);
     }
 
     private void DestroySelf()

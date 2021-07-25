@@ -126,138 +126,40 @@ public class Server
     {
         PacketHandlers = new Dictionary<int, PacketHandler>
         {
-            {
-                1,
-                ServerHandle.WelcomeReceived
-            },
-            {
-                2,
-                ServerHandle.JoinRequest
-            },
-            {
-                33,
-                ServerHandle.StartedLoading
-            },
-            {
-                29,
-                ServerHandle.PlayerFinishedLoading
-            },
-            {
-                5,
-                ServerHandle.PlayerDisconnect
-            },
-            {
-                3,
-                ServerHandle.PlayerPosition
-            },
-            {
-                26,
-                ServerHandle.PlayerHp
-            },
-            {
-                27,
-                ServerHandle.PlayerDied
-            },
-            {
-                31,
-                ServerHandle.RevivePlayer
-            },
-            {
-                4,
-                ServerHandle.PlayerRotation
-            },
-            {
-                6,
-                ServerHandle.PingReceived
-            },
-            {
-                9,
-                ServerHandle.PlayerRequestedSpawns
-            },
-            {
-                8,
-                ServerHandle.Ready
-            },
-            {
-                10,
-                ServerHandle.ItemDropped
-            },
-            {
-                11,
-                ServerHandle.ItemDroppedAtPosition
-            },
-            {
-                12,
-                ServerHandle.ItemPickedUp
-            },
-            {
-                13,
-                ServerHandle.WeaponInHand
-            },
-            {
-                15,
-                ServerHandle.AnimationUpdate
-            },
-            {
-                28,
-                ServerHandle.ShootArrow
-            },
-            {
-                14,
-                ServerHandle.PlayerHitObject
-            },
-            {
-                30,
-                ServerHandle.SpawnEffect
-            },
-            {
-                20,
-                ServerHandle.PlayerHit
-            },
-            {
-                16,
-                ServerHandle.RequestBuild
-            },
-            {
-                17,
-                ServerHandle.RequestChest
-            },
-            {
-                18,
-                ServerHandle.UpdateChest
-            },
-            {
-                19,
-                ServerHandle.ItemInteract
-            },
-            {
-                21,
-                ServerHandle.PlayerDamageMob
-            },
-            {
-                22,
-                ServerHandle.ShrineCombatStartRequest
-            },
-            {
-                32,
-                ServerHandle.Interact
-            },
-            {
-                23,
-                ServerHandle.ReceiveChatMessage
-            },
-            {
-                24,
-                ServerHandle.ReceivePing
-            },
-            {
-                25,
-                ServerHandle.ReceiveArmor
-            },
-            {
-                34,
-                ServerHandle.ReceiveShipUpdate
-            }
+            { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
+            { (int)ClientPackets.joinLobby, ServerHandle.JoinRequest },
+            { (int)ClientPackets.playerPosition, ServerHandle.PlayerPosition },
+            { (int)ClientPackets.playerRotation, ServerHandle.PlayerRotation },
+            { (int)ClientPackets.sendDisconnect, ServerHandle.PlayerDisconnect },
+            { (int)ClientPackets.sendPing, ServerHandle.PingReceived },
+            // playerKilled
+            { (int)ClientPackets.ready, ServerHandle.Ready },
+            { (int)ClientPackets.requestSpawns, ServerHandle.PlayerRequestedSpawns },
+            { (int)ClientPackets.dropItem, ServerHandle.ItemDropped },
+            { (int)ClientPackets.dropItemAtPosition, ServerHandle.ItemDroppedAtPosition },
+            { (int)ClientPackets.pickupItem, ServerHandle.ItemPickedUp },
+            { (int)ClientPackets.weaponInHand, ServerHandle.WeaponInHand },
+            { (int)ClientPackets.playerHitObject, ServerHandle.PlayerHitObject },
+            { (int)ClientPackets.animationUpdate, ServerHandle.AnimationUpdate },
+            { (int)ClientPackets.requestBuild, ServerHandle.RequestBuild },
+            { (int)ClientPackets.requestChest, ServerHandle.RequestChest },
+            { (int)ClientPackets.updateChest, ServerHandle.UpdateChest },
+            { (int)ClientPackets.pickupInteract, ServerHandle.ItemInteract },
+            { (int)ClientPackets.playerHit, ServerHandle.PlayerHit },
+            { (int)ClientPackets.playerDamageMob, ServerHandle.PlayerDamageMob },
+            { (int)ClientPackets.shrineCombatStart, ServerHandle.ShrineCombatStartRequest },
+            { (int)ClientPackets.sendChatMessage, ServerHandle.ReceiveChatMessage },
+            { (int)ClientPackets.playerPing, ServerHandle.ReceivePing },
+            { (int)ClientPackets.sendArmor, ServerHandle.ReceiveArmor },
+            { (int)ClientPackets.playerHp, ServerHandle.PlayerHp },
+            { (int)ClientPackets.playerDied, ServerHandle.PlayerDied },
+            { (int)ClientPackets.shootArrow, ServerHandle.ShootArrow },
+            { (int)ClientPackets.finishedLoading, ServerHandle.PlayerFinishedLoading },
+            { (int)ClientPackets.spawnEffect, ServerHandle.SpawnEffect },
+            { (int)ClientPackets.reviveRequest, ServerHandle.RevivePlayer },
+            { (int)ClientPackets.interact, ServerHandle.Interact },
+            { (int)ClientPackets.startedLoading, ServerHandle.StartedLoading },
+            { (int)ClientPackets.shipUpdate, ServerHandle.ReceiveShipUpdate },
         };
     }
 

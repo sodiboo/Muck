@@ -10,7 +10,7 @@ public class MoveCameraTowards : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("SetReady", 1f);
+        Invoke(nameof(SetReady), 1f);
     }
 
     private void SetReady()

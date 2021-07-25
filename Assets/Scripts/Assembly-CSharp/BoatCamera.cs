@@ -10,7 +10,7 @@ public class BoatCamera : MonoBehaviour
     {
         target = Boat.Instance.rbTransform;
         dragonTransform = Dragon.Instance.transform;
-        Invoke("StopCamera", 5f);
+        Invoke(nameof(StopCamera), 5f);
     }
 
     private void StopCamera()

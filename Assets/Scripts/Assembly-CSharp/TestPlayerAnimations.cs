@@ -53,7 +53,7 @@ public class TestPlayerAnimations : MonoBehaviour
     private void Start()
     {
         grounded = true;
-        InvokeRepeating("FindRandomPosition", 1f, 5f);
+        InvokeRepeating(nameof(FindRandomPosition), 1f, 5f);
         filter = weapon.GetComponent<MeshFilter>();
         renderer = weapon.GetComponent<MeshRenderer>();
     }

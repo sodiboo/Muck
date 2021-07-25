@@ -28,7 +28,7 @@ public class Grass : MonoBehaviour
                 grassPool[i, j] = Object.Instantiate(grass);
             }
         }
-        InvokeRepeating("MakeGrass", 0f, updateRate);
+        InvokeRepeating(nameof(MakeGrass), 0f, updateRate);
     }
 
     private void MakeGrass()

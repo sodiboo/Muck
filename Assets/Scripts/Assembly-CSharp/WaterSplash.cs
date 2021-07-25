@@ -10,7 +10,7 @@ public class WaterSplash : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("SlowUpdate", 0.15f, 0.15f);
+        InvokeRepeating(nameof(SlowUpdate), 0.15f, 0.15f);
     }
 
     private void SlowUpdate()

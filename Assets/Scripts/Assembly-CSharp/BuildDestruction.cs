@@ -17,7 +17,7 @@ public class BuildDestruction : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("CheckDirectlyGrounded", 2f);
+        Invoke(nameof(CheckDirectlyGrounded), 2f);
     }
 
     private void Start()

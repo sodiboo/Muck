@@ -27,7 +27,7 @@ public class Hotbar : MonoBehaviour
         cells = GetComponentsInChildren<InventoryCell>();
         cells[currentActive].slot.color = cells[currentActive].hover;
         UpdateHotbar();
-        Invoke("UpdateHotbar", 1f);
+        Invoke(nameof(UpdateHotbar), 1f);
     }
 
     private void Update()
@@ -70,8 +70,8 @@ public class Hotbar : MonoBehaviour
             {
                 UseInventory.Instance.SetWeapon(currentItem);
             }
-            CancelInvoke("SendItemToServer");
-            Invoke("SendItemToServer", sendDelay);
+            CancelInvoke(nameof(SendItemToServer));
+            Invoke(nameof(SendItemToServer), sendDelay);
         }
         for (int i = 0; i < cells.Length; i++)
         {

@@ -18,7 +18,7 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("DestroySelf", 10f);
+        Invoke(nameof(DestroySelf), 10f);
     }
 
     public void DisableCollider(float time)
@@ -26,7 +26,7 @@ public class EnemyProjectile : MonoBehaviour
         if ((bool)GetComponent<Collider>())
         {
             GetComponent<Collider>().enabled = false;
-            Invoke("ActivateCollider", time);
+            Invoke(nameof(ActivateCollider), time);
         }
     }
 

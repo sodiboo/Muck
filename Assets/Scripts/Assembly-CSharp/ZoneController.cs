@@ -33,7 +33,7 @@ public class ZoneController : MonoBehaviour
         Instance = this;
         maxScale = base.transform.localScale.x;
         desiredZoneScale = maxScale;
-        InvokeRepeating("SlowUpdate", updateRate, updateRate);
+        InvokeRepeating(nameof(SlowUpdate), updateRate, updateRate);
     }
 
     private void Start()

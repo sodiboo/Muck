@@ -132,11 +132,11 @@ public class UseInventory : MonoBehaviour
                 num = eatTime / attackSpeed;
                 text = "Eat";
                 eatSfx.Stop();
-                CancelInvoke("FinishEating");
+                CancelInvoke(nameof(FinishEating));
                 eatSfx.PlayDelayed(0.3f / attackSpeed);
                 ClientSend.AnimationUpdate(OnlinePlayer.SharedAnimation.Eat, b: true);
-                Invoke("FinishEating", num * 0.95f);
-                Invoke("StartParticles", num * 0.25f);
+                Invoke(nameof(FinishEating), num * 0.95f);
+                Invoke(nameof(StartParticles), num * 0.25f);
             }
             else if (currentItem.type == InventoryItem.ItemType.Bow)
             {

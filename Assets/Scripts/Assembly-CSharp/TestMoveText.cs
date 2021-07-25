@@ -35,8 +35,8 @@ public class TestMoveText : MonoBehaviour
         }
         float num = 0.08f;
         float num2 = 2f;
-        InvokeRepeating("SlowUpdate", num2, num);
-        InvokeRepeating("AddMaterial", num * (float)base.transform.childCount + num2 + 2f, 0.05f);
+        InvokeRepeating(nameof(SlowUpdate), num2, num);
+        InvokeRepeating(nameof(AddMaterial), num * (float)base.transform.childCount + num2 + 2f, 0.05f);
     }
 
     private void AddMaterial()
@@ -80,7 +80,7 @@ public class TestMoveText : MonoBehaviour
         notSurfacing.Remove(item);
         if (notSurfacing.Count <= 0)
         {
-            CancelInvoke("SlowUpdate");
+            CancelInvoke(nameof(SlowUpdate));
         }
     }
 

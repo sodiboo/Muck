@@ -21,10 +21,10 @@ public class Item : MonoBehaviour
     private void Awake()
     {
         outlineMat = GetComponent<MeshRenderer>().material;
-        Invoke("ReadyToPickup", pickupDelay);
+        Invoke(nameof(ReadyToPickup), pickupDelay);
         if (LocalClient.serverOwner)
         {
-            Invoke("DespawnItem", 300f);
+            Invoke(nameof(DespawnItem), 300f);
         }
     }
 

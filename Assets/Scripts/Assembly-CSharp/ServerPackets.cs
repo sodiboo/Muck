@@ -57,5 +57,5 @@ public enum ServerPackets
     setTarget,
     shipUpdate,
     dragonUpdate,
-    sendStats
+    sendStats,
 }

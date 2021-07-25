@@ -32,7 +32,7 @@ public class MobServerDragon : MobServer
         StartRoutines();
         nodes = new List<Vector3>();
         serverReadyToAttack = false;
-        Invoke("GetReady", 4f);
+        Invoke(nameof(GetReady), 4f);
     }
 
     protected override void Behaviour()
@@ -73,7 +73,7 @@ public class MobServerDragon : MobServer
                 float num2 = (float)mob.hitable.hp / (float)mob.hitable.maxHp;
                 num -= 1f - num2;
                 serverReadyToAttack = false;
-                Invoke("GetReady", num);
+                Invoke(nameof(GetReady), num);
                 ((BobMob)mob).projectileController.SpawnProjectilePredictNextPosition();
             }
         }
@@ -101,7 +101,7 @@ public class MobServerDragon : MobServer
         ((BobMob)mob).GroundedToFlight();
         currentNodes = 0;
         serverReadyToAttack = false;
-        Invoke("GetReady", 4f);
+        Invoke(nameof(GetReady), 4f);
         SyncFindNextPosition();
         ServerSend.DragonUpdate(0);
     }
@@ -135,7 +135,7 @@ public class MobServerDragon : MobServer
         if (previousState != BobMob.DragonState.Grounded)
         {
             serverReadyToAttack = false;
-            Invoke("GetReady", Random.Range(3.5f, 4.5f));
+            Invoke(nameof(GetReady), Random.Range(3.5f, 4.5f));
             currentAttacks = 0;
             return;
         }
@@ -145,7 +145,7 @@ public class MobServerDragon : MobServer
         mob.Attack(mob.targetPlayerId, num);
         ServerSend.MobAttack(mob.GetId(), mob.targetPlayerId, num);
         serverReadyToAttack = false;
-        Invoke("GetReady", mob.attackTimes[num] + Random.Range(0f, mob.attackCooldown));
+        Invoke(nameof(GetReady), mob.attackTimes[num] + Random.Range(0f, mob.attackCooldown));
         currentAttacks++;
     }
 
@@ -184,8 +184,8 @@ public class MobServerDragon : MobServer
 
     protected override Vector3 FindNextPosition()
     {
-        CancelInvoke("SyncFindNextPosition");
-        Invoke("SyncFindNextPosition", findPositionInterval[1]);
+        CancelInvoke(nameof(SyncFindNextPosition));
+        Invoke(nameof(SyncFindNextPosition), findPositionInterval[1]);
         if (nodes.Count < 1)
         {
             FindNodes();

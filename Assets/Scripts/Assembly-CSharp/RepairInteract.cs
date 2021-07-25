@@ -47,7 +47,7 @@ public class RepairInteract : MonoBehaviour, Interactable, SharedObject
             requirements[i].amount = (int)((float)amounts[i] * num);
         }
         render = GetComponent<MeshRenderer>();
-        InvokeRepeating("SlowUpdate", 1f, 1f);
+        InvokeRepeating(nameof(SlowUpdate), 1f, 1f);
     }
 
     private void SlowUpdate()

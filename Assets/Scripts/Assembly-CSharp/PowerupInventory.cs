@@ -393,8 +393,8 @@ public class PowerupInventory : MonoBehaviour
         if (powerups[ItemManager.Instance.stringToPowerupId["Juice"]] >= 1)
         {
             juiceSpeed = GetJuiceMultiplier(null);
-            CancelInvoke("StopJuice");
-            Invoke("StopJuice", 2f);
+            CancelInvoke(nameof(StopJuice));
+            Invoke(nameof(StopJuice), 2f);
         }
     }
 

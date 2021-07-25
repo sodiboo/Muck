@@ -22,9 +22,9 @@ public abstract class MobServer : MonoBehaviour
 
     protected void StartRoutines()
     {
-        InvokeRepeating("SyncPosition", Random.Range(0f, syncPositionInterval), syncPositionInterval);
-        Invoke("SyncFindNextPosition", Random.Range(0f, FindPositionInterval) + findPositionInterval[0]);
-        InvokeRepeating("Behaviour", Random.Range(0f, behaviourInterval) + mob.mobType.spawnTime, behaviourInterval);
+        InvokeRepeating(nameof(SyncPosition), Random.Range(0f, syncPositionInterval), syncPositionInterval);
+        Invoke(nameof(SyncFindNextPosition), Random.Range(0f, FindPositionInterval) + findPositionInterval[0]);
+        InvokeRepeating(nameof(Behaviour), Random.Range(0f, behaviourInterval) + mob.mobType.spawnTime, behaviourInterval);
     }
 
     private void Update()

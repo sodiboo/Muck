@@ -24,7 +24,7 @@ public class DayUi : MonoBehaviour
 
     public void SetDay(int day)
     {
-        Invoke("StartFade", 2f);
+        Invoke(nameof(StartFade), 2f);
         dayText.text = $"-DAY {day}-";
     }
 
@@ -41,8 +41,8 @@ public class DayUi : MonoBehaviour
             dayText.transform.localScale = defaultScale * 3f;
             desiredScale = defaultScale * 1.2f;
             dayText.CrossFadeAlpha(1f, fadeTime, ignoreTimeScale: true);
-            Invoke("FadeAway", 4f);
-            Invoke("Hide", 4f + fadeTime);
+            Invoke(nameof(FadeAway), 4f);
+            Invoke(nameof(Hide), 4f + fadeTime);
             done = false;
             sfx.Play();
         }

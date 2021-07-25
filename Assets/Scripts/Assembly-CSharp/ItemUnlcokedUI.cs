@@ -26,7 +26,7 @@ public class ItemUnlcokedUI : MonoBehaviour
         desiredPad = layout.padding.top;
         layout.padding.top = 400;
         padUp = layout.padding.top;
-        Invoke("StartFade", fadeStart);
+        Invoke(nameof(StartFade), fadeStart);
     }
 
     private void StartFade()
@@ -34,7 +34,7 @@ public class ItemUnlcokedUI : MonoBehaviour
         icon.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
         item.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
         overlay.CrossFadeAlpha(0f, fadeTime, ignoreTimeScale: true);
-        Invoke("DestroySelf", fadeTime);
+        Invoke(nameof(DestroySelf), fadeTime);
     }
 
     private void DestroySelf()

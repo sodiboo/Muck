@@ -362,7 +362,7 @@ public class PlayerMovement : MonoBehaviour
     public void PushPlayer()
     {
         pushed = true;
-        Invoke("ResetPush", 0.3f);
+        Invoke(nameof(ResetPush), 0.3f);
     }
 
     private void ResetPush()
@@ -393,7 +393,7 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
-        CancelInvoke("JumpCooldown");
+        CancelInvoke(nameof(JumpCooldown));
     }
 
     public void Jump()
@@ -410,8 +410,8 @@ public class PlayerMovement : MonoBehaviour
                 jumps--;
             }
             readyToJump = false;
-            CancelInvoke("JumpCooldown");
-            Invoke("JumpCooldown", 0.25f);
+            CancelInvoke(nameof(JumpCooldown));
+            Invoke(nameof(JumpCooldown), 0.25f);
             resetJumpCounter = 0;
             float num = jumpForce * PowerupInventory.Instance.GetJumpMultiplier();
             rb.AddForce(Vector3.up * num * 1.5f, ForceMode.Impulse);

@@ -23,7 +23,7 @@ public class EnemyAttackIndicator : MonoBehaviour
     public void SetWarning(float time, float scale)
     {
         desiredScale = Vector3.one * scale;
-        Invoke("DestroySelf", time);
+        Invoke(nameof(DestroySelf), time);
         if (Physics.Raycast(base.transform.position + Vector3.up * 10f, Vector3.down, out var hitInfo, 50f, whatIsGround))
         {
             base.transform.position = hitInfo.point + offset * base.transform.localScale.x;

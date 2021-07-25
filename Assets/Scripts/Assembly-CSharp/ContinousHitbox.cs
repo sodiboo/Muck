@@ -8,7 +8,7 @@ public class ContinousHitbox : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("ResetHitbox", resetTime, resetTime);
+        InvokeRepeating(nameof(ResetHitbox), resetTime, resetTime);
     }
 
     private void ResetHitbox()

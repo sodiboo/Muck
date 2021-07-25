@@ -47,7 +47,7 @@ public class LoadingScreen : MonoBehaviour
         players = new bool[10];
         if (LocalClient.serverOwner)
         {
-            InvokeRepeating("CheckAllPlayersLoading", 5f, 5f);
+            InvokeRepeating(nameof(CheckAllPlayersLoading), 5f, 5f);
         }
     }
 
@@ -55,7 +55,7 @@ public class LoadingScreen : MonoBehaviour
     {
         if (GameManager.state == GameManager.GameState.Playing)
         {
-            CancelInvoke("CheckAllPlayersLoading");
+            CancelInvoke(nameof(CheckAllPlayersLoading));
             return;
         }
         Debug.LogError("Checking all players");
@@ -93,7 +93,7 @@ public class LoadingScreen : MonoBehaviour
         {
             canvasGroup.alpha = 0f;
         }
-        Invoke("HideStuff", totalFadeTime);
+        Invoke(nameof(HideStuff), totalFadeTime);
     }
 
     private void HideStuff()

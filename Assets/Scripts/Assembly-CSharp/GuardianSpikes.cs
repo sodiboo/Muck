@@ -16,7 +16,7 @@ public class GuardianSpikes : MonoBehaviour
     {
         indicator = Object.Instantiate(warningFx, base.transform.position, warningFx.transform.rotation).GetComponent<EnemyAttackIndicator>();
         indicator.SetWarning(attack.bowComponent.timeToImpact, attack.bowComponent.attackSize);
-        Invoke("SpawnAttack", attack.bowComponent.timeToImpact);
+        Invoke(nameof(SpawnAttack), attack.bowComponent.timeToImpact);
     }
 
     private void SpawnAttack()

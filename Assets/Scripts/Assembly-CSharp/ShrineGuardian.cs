@@ -38,13 +38,13 @@ public class ShrineGuardian : MonoBehaviour, SharedObject, Interactable
     {
         started = true;
         Object.Instantiate(destroyShrineFx, base.transform.position, destroyShrineFx.transform.rotation);
-        Invoke("RemoveFromResources", 1.33f);
+        Invoke(nameof(RemoveFromResources), 1.33f);
     }
 
     public void ServerExecute(int fromClient)
     {
         started = true;
-        Invoke("SpawnBoss", 1.3f);
+        Invoke(nameof(SpawnBoss), 1.3f);
         Object.Instantiate(destroyShrineFx, base.transform.position, destroyShrineFx.transform.rotation);
         ServerSend.SendChatMessage(-1, "", "<color=orange>" + GameManager.players[fromClient].username + " summoned <color=red>" + boss.name);
     }

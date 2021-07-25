@@ -15,7 +15,7 @@ public class DragonRainAttack : MonoBehaviour
     {
         if (LocalClient.serverOwner)
         {
-            Invoke("SpawnFireBall", delay);
+            Invoke(nameof(SpawnFireBall), delay);
         }
     }
 
@@ -38,7 +38,7 @@ public class DragonRainAttack : MonoBehaviour
             }
             else
             {
-                Invoke("SpawnFireBall", delay);
+                Invoke(nameof(SpawnFireBall), delay);
             }
         }
     }

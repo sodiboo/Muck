@@ -51,17 +51,17 @@ public class LaserTest : MonoBehaviour
             base.gameObject.SetActive(value: false);
             return;
         }
-        CancelInvoke("StopLaser");
-        Invoke("StopLaser", 2.1f);
+        CancelInvoke(nameof(StopLaser));
+        Invoke(nameof(StopLaser), 2.1f);
         hitParticles.gameObject.SetActive(value: true);
-        InvokeRepeating("DamageEffect", damageUpdateRate, damageUpdateRate);
+        InvokeRepeating(nameof(DamageEffect), damageUpdateRate, damageUpdateRate);
     }
 
     private void StopLaser()
     {
         target = base.transform;
         hitParticles.gameObject.SetActive(value: false);
-        CancelInvoke("DamageEffect");
+        CancelInvoke(nameof(DamageEffect));
     }
 
     private void LateUpdate()

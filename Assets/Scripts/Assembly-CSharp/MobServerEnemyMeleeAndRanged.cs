@@ -9,7 +9,7 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
     private new void Start()
     {
         base.Start();
-        Invoke("GetReadyForRangedAttack", Random.Range(rangedCooldown * 0.5f, rangedCooldown * 1.5f));
+        Invoke(nameof(GetReadyForRangedAttack), Random.Range(rangedCooldown * 0.5f, rangedCooldown * 1.5f));
     }
 
     protected override void AttackBehaviour()
@@ -34,7 +34,7 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
                 mob.Attack(mob.targetPlayerId, num3);
                 ServerSend.MobAttack(mob.GetId(), mob.targetPlayerId, num3);
                 serverReadyToAttack = false;
-                Invoke("GetReady", mob.attackTimes[num3] + Random.Range(0f, mob.attackCooldown));
+                Invoke(nameof(GetReady), mob.attackTimes[num3] + Random.Range(0f, mob.attackCooldown));
             }
         }
         else if (num <= mob.mobType.maxAttackDistance && readyForRangedAttack)
@@ -44,9 +44,9 @@ public class MobServerEnemyMeleeAndRanged : MobServerEnemy
             mob.Attack(mob.targetPlayerId, num5);
             ServerSend.MobAttack(mob.GetId(), mob.targetPlayerId, num5);
             serverReadyToAttack = false;
-            Invoke("GetReady", mob.attackTimes[num5] + Random.Range(0f, mob.attackCooldown));
+            Invoke(nameof(GetReady), mob.attackTimes[num5] + Random.Range(0f, mob.attackCooldown));
             readyForRangedAttack = false;
-            Invoke("GetReadyForRangedAttack", Random.Range(rangedCooldown * 0.5f, rangedCooldown * 1.5f));
+            Invoke(nameof(GetReadyForRangedAttack), Random.Range(rangedCooldown * 0.5f, rangedCooldown * 1.5f));
         }
     }
 

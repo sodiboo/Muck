@@ -5,7 +5,7 @@ public class DelayNavmesh : MonoBehaviour
 {
     private void Awake()
     {
-        Invoke("ResetObstacle", Random.Range(5f, 15f));
+        Invoke(nameof(ResetObstacle), Random.Range(5f, 15f));
     }
 
     private void ResetObstacle()

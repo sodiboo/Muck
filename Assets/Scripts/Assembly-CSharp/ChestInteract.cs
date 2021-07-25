@@ -21,7 +21,7 @@ public class ChestInteract : MonoBehaviour, Interactable
         if (ready)
         {
             ready = false;
-            Invoke("GetReady", cooldownTime);
+            Invoke(nameof(GetReady), cooldownTime);
             ClientSend.RequestChest(chest.id, use: true);
         }
     }

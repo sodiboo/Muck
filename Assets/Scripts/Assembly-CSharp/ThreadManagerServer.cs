@@ -31,7 +31,7 @@ public class ThreadManagerServer : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        InvokeRepeating("TimeoutUpdate", 1f, 1f);
+        InvokeRepeating(nameof(TimeoutUpdate), 1f, 1f);
     }
 
     public void GameOver()

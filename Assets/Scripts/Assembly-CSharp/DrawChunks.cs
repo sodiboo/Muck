@@ -47,7 +47,7 @@ public class DrawChunks : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("UpdateChunks", 0f, updateRate);
+        InvokeRepeating(nameof(UpdateChunks), 0f, updateRate);
         visibleChunks = new bool[nChunks];
         chunkLOD = new int[nChunks];
         chunkLength = Mathf.FloorToInt(Mathf.Sqrt(nChunks));

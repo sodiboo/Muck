@@ -37,7 +37,7 @@ public class DebugNet : MonoBehaviour
     {
         Instance = this;
         base.gameObject.SetActive(value: false);
-        InvokeRepeating("BandWidth", 1f, 1f);
+        InvokeRepeating(nameof(BandWidth), 1f, 1f);
     }
 
     public void ToggleConsole()
