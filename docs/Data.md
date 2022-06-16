@@ -1,322 +1,324 @@
+links not working? [go to hosted site][hosted-site]
+
 # Table of Contents
-- [Items by ID](#Items-by-ID)
-- [Items by name](#Items-by-name)
-- [Items](#Items)
-- [Recipes](#Recipes)
-- [Armor Sets](#Armor-Sets)
-- [Powerups by ID](#Powerups-by-ID)
-- [Powerups by name](#Powerups-by-name)
-- [Powerups](#Powerups)
-- [Mobs](#Mobs)
-- [Woodman Trades](#Woodman-Trades)
+- [Items by ID](#items-by-id)
+- [Items by name](#items-by-name)
+- [Items](#items)
+- [Recipes](#recipes)
+- [Armor Sets](#armor-sets)
+- [Powerups by ID](#powerups-by-id)
+- [Powerups by name](#powerups-by-name)
+- [Powerups](#powerups)
+- [Mobs](#mobs)
+- [Woodman Trades](#woodman-trades)
 
 # Items by ID
-0. [Bark](#Bark)
-1. [Chest](#Chest)
-2. [Coal](#Coal)
-3. [Coin](#Coin)
-4. [Flint](#Flint)
-5. [Adamantite Boots](#Adamantite-Boots)
-6. [Chunkium Boots](#Chunkium-Boots)
-7. [Gold Boots](#Gold-Boots)
-8. [Mithril Boots](#Mithril-Boots)
-9. [Obamium Boots](#Obamium-Boots)
-10. [Steel Boots](#Steel-Boots)
-11. [Wolfskin Boots](#Wolfskin-Boots)
-12. [Adamantite Helmet](#Adamantite-Helmet)
-13. [Chunkium Helmet](#Chunkium-Helmet)
-14. [Gold Helmet](#Gold-Helmet)
-15. [Mithril Helmet](#Mithril-Helmet)
-16. [Obamium Helmet](#Obamium-Helmet)
-17. [Steel Helmet](#Steel-Helmet)
-18. [Wolfskin Helmet](#Wolfskin-Helmet)
-19. [Adamantite Pants](#Adamantite-Pants)
-20. [Chunkium Pants](#Chunkium-Pants)
-21. [Gold Pants](#Gold-Pants)
-22. [Mithril Pants](#Mithril-Pants)
-23. [Obamium Pants](#Obamium-Pants)
-24. [Steel Pants](#Steel-Pants)
-25. [Wolfskin Pants](#Wolfskin-Pants)
-26. [Adamantite Chestplate](#Adamantite-Chestplate)
-27. [Chunkium Chestplate](#Chunkium-Chestplate)
-28. [Gold Chestplate](#Gold-Chestplate)
-29. [Mithril Chestplate](#Mithril-Chestplate)
-30. [Obamium Chestplate](#Obamium-Chestplate)
-31. [Steel Chestplate](#Steel-Chestplate)
-32. [Wolfskin Chestplate](#Wolfskin-Chestplate)
-33. [Wood Doorway](#Wood-Doorway)
-34. [Wood Doorway](#Wood-Doorway)
-35. [Wood Floor](#Wood-Floor)
-36. [Wood Pole](#Wood-Pole)
-37. [Wood Pole](#Wood-Pole)
-38. [Wood Roof](#Wood-Roof)
-39. [Wood stairs](#Wood-stairs)
-40. [Wood stairs thinn](#Wood-stairs-thinn)
-41. [Wood Wall](#Wood-Wall)
-42. [Wood Wall Half](#Wood-Wall-Half)
-43. [Wood Wall Tilted](#Wood-Wall-Tilted)
-44. [Torch](#Torch)
-45. [Red Apple](#Red-Apple)
-46. [Bowl](#Bowl)
-47. [Dough](#Dough)
-48. [Flax Fibers](#Flax-Fibers)
-49. [Flax](#Flax)
-50. [Raw Meat](#Raw-Meat)
-51. [Gulpon Shroom](#Gulpon-Shroom)
-52. [Ligon Shroom](#Ligon-Shroom)
-53. [Slurbon Shroom](#Slurbon-Shroom)
-54. [Sugon Shroom](#Sugon-Shroom)
-55. [Wheat](#Wheat)
-56. [Bread](#Bread)
-57. [Cooked Meat](#Cooked-Meat)
-58. [Apple Pie](#Apple-Pie)
-59. [Meat Pie](#Meat-Pie)
-60. [Meat Soup](#Meat-Soup)
-61. [Purple Soup](#Purple-Soup)
-62. [Red Soup](#Red-Soup)
-63. [Weird Soup](#Weird-Soup)
-64. [Yellow Soup](#Yellow-Soup)
-65. [AncientCore](#AncientCore)
-66. [Adamantite bar](#Adamantite-bar)
-67. [Chunkium bar](#Chunkium-bar)
-68. [Gold bar](#Gold-bar)
-69. [Iron bar](#Iron-bar)
-70. [Mithril bar](#Mithril-bar)
-71. [Obamium bar](#Obamium-bar)
-72. [Ancient Bone](#Ancient-Bone)
-73. [Dragonball](#Dragonball)
-74. [Fireball](#Fireball)
-75. [Lightningball](#Lightningball)
-76. [Rock Projectile](#Rock-Projectile)
-77. [Rock Projectile](#Rock-Projectile)
-78. [Gronk Projectile](#Gronk-Projectile)
-79. [Spike Attack](#Spike-Attack)
-80. [Gronk Projectile](#Gronk-Projectile)
-81. [Waterball](#Waterball)
-82. [Windball](#Windball)
-83. [Adamantite Ore](#Adamantite-Ore)
-84. [Chunkium Ore](#Chunkium-Ore)
-85. [Gold Ore](#Gold-Ore)
-86. [Iron Ore](#Iron-Ore)
-87. [Mithril Ore](#Mithril-Ore)
-88. [Obamium Ore](#Obamium-Ore)
-89. [Ruby](#Ruby)
-90. [Rock](#Rock)
-91. [Birch Wood](#Birch-Wood)
-92. [Dark Oak Wood](#Dark-Oak-Wood)
-93. [Fir Wood](#Fir-Wood)
-94. [Wood](#Wood)
-95. [Oak Wood](#Oak-Wood)
-96. [Anvil](#Anvil)
-97. [Cauldron](#Cauldron)
-98. [Fletching Table](#Fletching-Table)
-99. [Furnace](#Furnace)
-100. [Workbench](#Workbench)
-101. [Boat Map](#Boat-Map)
-102. [Gem Map](#Gem-Map)
-103. [Blue Gem](#Blue-Gem)
-104. [Green Gem](#Green-Gem)
-105. [Pink Gem](#Pink-Gem)
-106. [Red Gem](#Red-Gem)
-107. [Yellow Gem](#Yellow-Gem)
-108. [Adamantite Axe](#Adamantite-Axe)
-109. [Gold Axe](#Gold-Axe)
-110. [Mithril Axe](#Mithril-Axe)
-111. [Steel Axe](#Steel-Axe)
-112. [Wood Axe](#Wood-Axe)
-113. [Oak Bow](#Oak-Bow)
-114. [Wood Bow](#Wood-Bow)
-115. [Birch bow](#Birch-bow)
-116. [Fir bow](#Fir-bow)
-117. [Ancient Bow](#Ancient-Bow)
-118. [Adamantite Pickaxe](#Adamantite-Pickaxe)
-119. [Gold Pickaxe](#Gold-Pickaxe)
-120. [Mithril Pickaxe](#Mithril-Pickaxe)
-121. [Steel Pickaxe](#Steel-Pickaxe)
-122. [Wood Pickaxe](#Wood-Pickaxe)
-123. [Rope](#Rope)
-124. [Shovel](#Shovel)
-125. [Adamantite Sword](#Adamantite-Sword)
-126. [Gold Sword](#Gold-Sword)
-127. [Mithril Sword](#Mithril-Sword)
-128. [Obamium Sword](#Obamium-Sword)
-129. [Steel Sword](#Steel-Sword)
+0. [Bark](#bark)
+1. [Chest](#chest)
+2. [Coal](#coal)
+3. [Coin](#coin)
+4. [Flint](#flint)
+5. [Adamantite Boots](#adamantite-boots)
+6. [Chunkium Boots](#chunkium-boots)
+7. [Gold Boots](#gold-boots)
+8. [Mithril Boots](#mithril-boots)
+9. [Obamium Boots](#obamium-boots)
+10. [Steel Boots](#steel-boots)
+11. [Wolfskin Boots](#wolfskin-boots)
+12. [Adamantite Helmet](#adamantite-helmet)
+13. [Chunkium Helmet](#chunkium-helmet)
+14. [Gold Helmet](#gold-helmet)
+15. [Mithril Helmet](#mithril-helmet)
+16. [Obamium Helmet](#obamium-helmet)
+17. [Steel Helmet](#steel-helmet)
+18. [Wolfskin Helmet](#wolfskin-helmet)
+19. [Adamantite Pants](#adamantite-pants)
+20. [Chunkium Pants](#chunkium-pants)
+21. [Gold Pants](#gold-pants)
+22. [Mithril Pants](#mithril-pants)
+23. [Obamium Pants](#obamium-pants)
+24. [Steel Pants](#steel-pants)
+25. [Wolfskin Pants](#wolfskin-pants)
+26. [Adamantite Chestplate](#adamantite-chestplate)
+27. [Chunkium Chestplate](#chunkium-chestplate)
+28. [Gold Chestplate](#gold-chestplate)
+29. [Mithril Chestplate](#mithril-chestplate)
+30. [Obamium Chestplate](#obamium-chestplate)
+31. [Steel Chestplate](#steel-chestplate)
+32. [Wolfskin Chestplate](#wolfskin-chestplate)
+33. [Wood Doorway](#wood-doorway)
+34. [Wood Doorway](#wood-doorway)
+35. [Wood Floor](#wood-floor)
+36. [Wood Pole](#wood-pole)
+37. [Wood Pole](#wood-pole)
+38. [Wood Roof](#wood-roof)
+39. [Wood stairs](#wood-stairs)
+40. [Wood stairs thinn](#wood-stairs-thinn)
+41. [Wood Wall](#wood-wall)
+42. [Wood Wall Half](#wood-wall-half)
+43. [Wood Wall Tilted](#wood-wall-tilted)
+44. [Torch](#torch)
+45. [Red Apple](#red-apple)
+46. [Bowl](#bowl)
+47. [Dough](#dough)
+48. [Flax Fibers](#flax-fibers)
+49. [Flax](#flax)
+50. [Raw Meat](#raw-meat)
+51. [Gulpon Shroom](#gulpon-shroom)
+52. [Ligon Shroom](#ligon-shroom)
+53. [Slurbon Shroom](#slurbon-shroom)
+54. [Sugon Shroom](#sugon-shroom)
+55. [Wheat](#wheat)
+56. [Bread](#bread)
+57. [Cooked Meat](#cooked-meat)
+58. [Apple Pie](#apple-pie)
+59. [Meat Pie](#meat-pie)
+60. [Meat Soup](#meat-soup)
+61. [Purple Soup](#purple-soup)
+62. [Red Soup](#red-soup)
+63. [Weird Soup](#weird-soup)
+64. [Yellow Soup](#yellow-soup)
+65. [AncientCore](#ancientcore)
+66. [Adamantite bar](#adamantite-bar)
+67. [Chunkium bar](#chunkium-bar)
+68. [Gold bar](#gold-bar)
+69. [Iron bar](#iron-bar)
+70. [Mithril bar](#mithril-bar)
+71. [Obamium bar](#obamium-bar)
+72. [Ancient Bone](#ancient-bone)
+73. [Dragonball](#dragonball)
+74. [Fireball](#fireball)
+75. [Lightningball](#lightningball)
+76. [Rock Projectile](#rock-projectile)
+77. [Rock Projectile](#rock-projectile)
+78. [Gronk Projectile](#gronk-projectile)
+79. [Spike Attack](#spike-attack)
+80. [Gronk Projectile](#gronk-projectile)
+81. [Waterball](#waterball)
+82. [Windball](#windball)
+83. [Adamantite Ore](#adamantite-ore)
+84. [Chunkium Ore](#chunkium-ore)
+85. [Gold Ore](#gold-ore)
+86. [Iron Ore](#iron-ore)
+87. [Mithril Ore](#mithril-ore)
+88. [Obamium Ore](#obamium-ore)
+89. [Ruby](#ruby)
+90. [Rock](#rock)
+91. [Birch Wood](#birch-wood)
+92. [Dark Oak Wood](#dark-oak-wood)
+93. [Fir Wood](#fir-wood)
+94. [Wood](#wood)
+95. [Oak Wood](#oak-wood)
+96. [Anvil](#anvil)
+97. [Cauldron](#cauldron)
+98. [Fletching Table](#fletching-table)
+99. [Furnace](#furnace)
+100. [Workbench](#workbench)
+101. [Boat Map](#boat-map)
+102. [Gem Map](#gem-map)
+103. [Blue Gem](#blue-gem)
+104. [Green Gem](#green-gem)
+105. [Pink Gem](#pink-gem)
+106. [Red Gem](#red-gem)
+107. [Yellow Gem](#yellow-gem)
+108. [Adamantite Axe](#adamantite-axe)
+109. [Gold Axe](#gold-axe)
+110. [Mithril Axe](#mithril-axe)
+111. [Steel Axe](#steel-axe)
+112. [Wood Axe](#wood-axe)
+113. [Oak Bow](#oak-bow)
+114. [Wood Bow](#wood-bow)
+115. [Birch bow](#birch-bow)
+116. [Fir bow](#fir-bow)
+117. [Ancient Bow](#ancient-bow)
+118. [Adamantite Pickaxe](#adamantite-pickaxe)
+119. [Gold Pickaxe](#gold-pickaxe)
+120. [Mithril Pickaxe](#mithril-pickaxe)
+121. [Steel Pickaxe](#steel-pickaxe)
+122. [Wood Pickaxe](#wood-pickaxe)
+123. [Rope](#rope)
+124. [Shovel](#shovel)
+125. [Adamantite Sword](#adamantite-sword)
+126. [Gold Sword](#gold-sword)
+127. [Mithril Sword](#mithril-sword)
+128. [Obamium Sword](#obamium-sword)
+129. [Steel Sword](#steel-sword)
 130. [milk](#milk)
-131. [Adamantite Arrow](#Adamantite-Arrow)
-132. [Fire arrow](#Fire-arrow)
-133. [Flint Arrow](#Flint-Arrow)
-134. [Lightning Arrow](#Lightning-Arrow)
-135. [Mithril Arrow](#Mithril-Arrow)
-136. [Steel Arrow](#Steel-Arrow)
-137. [Water Arrow](#Water-Arrow)
-138. [Chiefs Spear](#Chiefs-Spear)
-139. [Chunky Hammer](#Chunky-Hammer)
-140. [Gronks Sword](#Gronks-Sword)
-141. [Gronks Sword Projectile](#Gronks-Sword-Projectile)
-142. [Night Blade](#Night-Blade)
-143. [Wyvern Dagger](#Wyvern-Dagger)
-144. [Black Shard](#Black-Shard)
-145. [Blade](#Blade)
-146. [Hammer Shaft](#Hammer-Shaft)
-147. [Spear Tip](#Spear-Tip)
-148. [Sword Hilt](#Sword-Hilt)
-149. [Wolf Claws](#Wolf-Claws)
-150. [Wolfskin](#Wolfskin)
-151. [Wyvern Claws](#Wyvern-Claws)
+131. [Adamantite Arrow](#adamantite-arrow)
+132. [Fire arrow](#fire-arrow)
+133. [Flint Arrow](#flint-arrow)
+134. [Lightning Arrow](#lightning-arrow)
+135. [Mithril Arrow](#mithril-arrow)
+136. [Steel Arrow](#steel-arrow)
+137. [Water Arrow](#water-arrow)
+138. [Chiefs Spear](#chiefs-spear)
+139. [Chunky Hammer](#chunky-hammer)
+140. [Gronks Sword](#gronks-sword)
+141. [Gronks Sword Projectile](#gronks-sword-projectile)
+142. [Night Blade](#night-blade)
+143. [Wyvern Dagger](#wyvern-dagger)
+144. [Black Shard](#black-shard)
+145. [Blade](#blade)
+146. [Hammer Shaft](#hammer-shaft)
+147. [Spear Tip](#spear-tip)
+148. [Sword Hilt](#sword-hilt)
+149. [Wolf Claws](#wolf-claws)
+150. [Wolfskin](#wolfskin)
+151. [Wyvern Claws](#wyvern-claws)
 
 # Items by name
-- [Adamantite Arrow](#Adamantite-Arrow)
-- [Adamantite Axe](#Adamantite-Axe)
-- [Adamantite bar](#Adamantite-bar)
-- [Adamantite Boots](#Adamantite-Boots)
-- [Adamantite Chestplate](#Adamantite-Chestplate)
-- [Adamantite Helmet](#Adamantite-Helmet)
-- [Adamantite Ore](#Adamantite-Ore)
-- [Adamantite Pants](#Adamantite-Pants)
-- [Adamantite Pickaxe](#Adamantite-Pickaxe)
-- [Adamantite Sword](#Adamantite-Sword)
-- [Ancient Bone](#Ancient-Bone)
-- [Ancient Bow](#Ancient-Bow)
-- [AncientCore](#AncientCore)
-- [Anvil](#Anvil)
-- [Apple Pie](#Apple-Pie)
-- [Bark](#Bark)
-- [Birch bow](#Birch-bow)
-- [Birch Wood](#Birch-Wood)
-- [Black Shard](#Black-Shard)
-- [Blade](#Blade)
-- [Blue Gem](#Blue-Gem)
-- [Boat Map](#Boat-Map)
-- [Bowl](#Bowl)
-- [Bread](#Bread)
-- [Cauldron](#Cauldron)
-- [Chest](#Chest)
-- [Chiefs Spear](#Chiefs-Spear)
-- [Chunkium bar](#Chunkium-bar)
-- [Chunkium Boots](#Chunkium-Boots)
-- [Chunkium Chestplate](#Chunkium-Chestplate)
-- [Chunkium Helmet](#Chunkium-Helmet)
-- [Chunkium Ore](#Chunkium-Ore)
-- [Chunkium Pants](#Chunkium-Pants)
-- [Chunky Hammer](#Chunky-Hammer)
-- [Coal](#Coal)
-- [Coin](#Coin)
-- [Cooked Meat](#Cooked-Meat)
-- [Dark Oak Wood](#Dark-Oak-Wood)
-- [Dough](#Dough)
-- [Dragonball](#Dragonball)
-- [Fir bow](#Fir-bow)
-- [Fir Wood](#Fir-Wood)
-- [Fire arrow](#Fire-arrow)
-- [Fireball](#Fireball)
-- [Flax](#Flax)
-- [Flax Fibers](#Flax-Fibers)
-- [Fletching Table](#Fletching-Table)
-- [Flint](#Flint)
-- [Flint Arrow](#Flint-Arrow)
-- [Furnace](#Furnace)
-- [Gem Map](#Gem-Map)
-- [Gold Axe](#Gold-Axe)
-- [Gold bar](#Gold-bar)
-- [Gold Boots](#Gold-Boots)
-- [Gold Chestplate](#Gold-Chestplate)
-- [Gold Helmet](#Gold-Helmet)
-- [Gold Ore](#Gold-Ore)
-- [Gold Pants](#Gold-Pants)
-- [Gold Pickaxe](#Gold-Pickaxe)
-- [Gold Sword](#Gold-Sword)
-- [Green Gem](#Green-Gem)
-- [Gronk Projectile](#Gronk-Projectile)
-- [Gronk Projectile](#Gronk-Projectile)
-- [Gronks Sword](#Gronks-Sword)
-- [Gronks Sword Projectile](#Gronks-Sword-Projectile)
-- [Gulpon Shroom](#Gulpon-Shroom)
-- [Hammer Shaft](#Hammer-Shaft)
-- [Iron bar](#Iron-bar)
-- [Iron Ore](#Iron-Ore)
-- [Lightning Arrow](#Lightning-Arrow)
-- [Lightningball](#Lightningball)
-- [Ligon Shroom](#Ligon-Shroom)
-- [Meat Pie](#Meat-Pie)
-- [Meat Soup](#Meat-Soup)
+- [Adamantite Arrow](#adamantite-arrow)
+- [Adamantite Axe](#adamantite-axe)
+- [Adamantite bar](#adamantite-bar)
+- [Adamantite Boots](#adamantite-boots)
+- [Adamantite Chestplate](#adamantite-chestplate)
+- [Adamantite Helmet](#adamantite-helmet)
+- [Adamantite Ore](#adamantite-ore)
+- [Adamantite Pants](#adamantite-pants)
+- [Adamantite Pickaxe](#adamantite-pickaxe)
+- [Adamantite Sword](#adamantite-sword)
+- [Ancient Bone](#ancient-bone)
+- [Ancient Bow](#ancient-bow)
+- [AncientCore](#ancientcore)
+- [Anvil](#anvil)
+- [Apple Pie](#apple-pie)
+- [Bark](#bark)
+- [Birch bow](#birch-bow)
+- [Birch Wood](#birch-wood)
+- [Black Shard](#black-shard)
+- [Blade](#blade)
+- [Blue Gem](#blue-gem)
+- [Boat Map](#boat-map)
+- [Bowl](#bowl)
+- [Bread](#bread)
+- [Cauldron](#cauldron)
+- [Chest](#chest)
+- [Chiefs Spear](#chiefs-spear)
+- [Chunkium bar](#chunkium-bar)
+- [Chunkium Boots](#chunkium-boots)
+- [Chunkium Chestplate](#chunkium-chestplate)
+- [Chunkium Helmet](#chunkium-helmet)
+- [Chunkium Ore](#chunkium-ore)
+- [Chunkium Pants](#chunkium-pants)
+- [Chunky Hammer](#chunky-hammer)
+- [Coal](#coal)
+- [Coin](#coin)
+- [Cooked Meat](#cooked-meat)
+- [Dark Oak Wood](#dark-oak-wood)
+- [Dough](#dough)
+- [Dragonball](#dragonball)
+- [Fir bow](#fir-bow)
+- [Fir Wood](#fir-wood)
+- [Fire arrow](#fire-arrow)
+- [Fireball](#fireball)
+- [Flax](#flax)
+- [Flax Fibers](#flax-fibers)
+- [Fletching Table](#fletching-table)
+- [Flint](#flint)
+- [Flint Arrow](#flint-arrow)
+- [Furnace](#furnace)
+- [Gem Map](#gem-map)
+- [Gold Axe](#gold-axe)
+- [Gold bar](#gold-bar)
+- [Gold Boots](#gold-boots)
+- [Gold Chestplate](#gold-chestplate)
+- [Gold Helmet](#gold-helmet)
+- [Gold Ore](#gold-ore)
+- [Gold Pants](#gold-pants)
+- [Gold Pickaxe](#gold-pickaxe)
+- [Gold Sword](#gold-sword)
+- [Green Gem](#green-gem)
+- [Gronk Projectile](#gronk-projectile)
+- [Gronk Projectile](#gronk-projectile)
+- [Gronks Sword](#gronks-sword)
+- [Gronks Sword Projectile](#gronks-sword-projectile)
+- [Gulpon Shroom](#gulpon-shroom)
+- [Hammer Shaft](#hammer-shaft)
+- [Iron bar](#iron-bar)
+- [Iron Ore](#iron-ore)
+- [Lightning Arrow](#lightning-arrow)
+- [Lightningball](#lightningball)
+- [Ligon Shroom](#ligon-shroom)
+- [Meat Pie](#meat-pie)
+- [Meat Soup](#meat-soup)
 - [milk](#milk)
-- [Mithril Arrow](#Mithril-Arrow)
-- [Mithril Axe](#Mithril-Axe)
-- [Mithril bar](#Mithril-bar)
-- [Mithril Boots](#Mithril-Boots)
-- [Mithril Chestplate](#Mithril-Chestplate)
-- [Mithril Helmet](#Mithril-Helmet)
-- [Mithril Ore](#Mithril-Ore)
-- [Mithril Pants](#Mithril-Pants)
-- [Mithril Pickaxe](#Mithril-Pickaxe)
-- [Mithril Sword](#Mithril-Sword)
-- [Night Blade](#Night-Blade)
-- [Oak Bow](#Oak-Bow)
-- [Oak Wood](#Oak-Wood)
-- [Obamium bar](#Obamium-bar)
-- [Obamium Boots](#Obamium-Boots)
-- [Obamium Chestplate](#Obamium-Chestplate)
-- [Obamium Helmet](#Obamium-Helmet)
-- [Obamium Ore](#Obamium-Ore)
-- [Obamium Pants](#Obamium-Pants)
-- [Obamium Sword](#Obamium-Sword)
-- [Pink Gem](#Pink-Gem)
-- [Purple Soup](#Purple-Soup)
-- [Raw Meat](#Raw-Meat)
-- [Red Apple](#Red-Apple)
-- [Red Gem](#Red-Gem)
-- [Red Soup](#Red-Soup)
-- [Rock](#Rock)
-- [Rock Projectile](#Rock-Projectile)
-- [Rock Projectile](#Rock-Projectile)
-- [Rope](#Rope)
-- [Ruby](#Ruby)
-- [Shovel](#Shovel)
-- [Slurbon Shroom](#Slurbon-Shroom)
-- [Spear Tip](#Spear-Tip)
-- [Spike Attack](#Spike-Attack)
-- [Steel Arrow](#Steel-Arrow)
-- [Steel Axe](#Steel-Axe)
-- [Steel Boots](#Steel-Boots)
-- [Steel Chestplate](#Steel-Chestplate)
-- [Steel Helmet](#Steel-Helmet)
-- [Steel Pants](#Steel-Pants)
-- [Steel Pickaxe](#Steel-Pickaxe)
-- [Steel Sword](#Steel-Sword)
-- [Sugon Shroom](#Sugon-Shroom)
-- [Sword Hilt](#Sword-Hilt)
-- [Torch](#Torch)
-- [Water Arrow](#Water-Arrow)
-- [Waterball](#Waterball)
-- [Weird Soup](#Weird-Soup)
-- [Wheat](#Wheat)
-- [Windball](#Windball)
-- [Wolf Claws](#Wolf-Claws)
-- [Wolfskin](#Wolfskin)
-- [Wolfskin Boots](#Wolfskin-Boots)
-- [Wolfskin Chestplate](#Wolfskin-Chestplate)
-- [Wolfskin Helmet](#Wolfskin-Helmet)
-- [Wolfskin Pants](#Wolfskin-Pants)
-- [Wood](#Wood)
-- [Wood Axe](#Wood-Axe)
-- [Wood Bow](#Wood-Bow)
-- [Wood Doorway](#Wood-Doorway)
-- [Wood Doorway](#Wood-Doorway)
-- [Wood Floor](#Wood-Floor)
-- [Wood Pickaxe](#Wood-Pickaxe)
-- [Wood Pole](#Wood-Pole)
-- [Wood Pole](#Wood-Pole)
-- [Wood Roof](#Wood-Roof)
-- [Wood stairs](#Wood-stairs)
-- [Wood stairs thinn](#Wood-stairs-thinn)
-- [Wood Wall](#Wood-Wall)
-- [Wood Wall Half](#Wood-Wall-Half)
-- [Wood Wall Tilted](#Wood-Wall-Tilted)
-- [Workbench](#Workbench)
-- [Wyvern Claws](#Wyvern-Claws)
-- [Wyvern Dagger](#Wyvern-Dagger)
-- [Yellow Gem](#Yellow-Gem)
-- [Yellow Soup](#Yellow-Soup)
+- [Mithril Arrow](#mithril-arrow)
+- [Mithril Axe](#mithril-axe)
+- [Mithril bar](#mithril-bar)
+- [Mithril Boots](#mithril-boots)
+- [Mithril Chestplate](#mithril-chestplate)
+- [Mithril Helmet](#mithril-helmet)
+- [Mithril Ore](#mithril-ore)
+- [Mithril Pants](#mithril-pants)
+- [Mithril Pickaxe](#mithril-pickaxe)
+- [Mithril Sword](#mithril-sword)
+- [Night Blade](#night-blade)
+- [Oak Bow](#oak-bow)
+- [Oak Wood](#oak-wood)
+- [Obamium bar](#obamium-bar)
+- [Obamium Boots](#obamium-boots)
+- [Obamium Chestplate](#obamium-chestplate)
+- [Obamium Helmet](#obamium-helmet)
+- [Obamium Ore](#obamium-ore)
+- [Obamium Pants](#obamium-pants)
+- [Obamium Sword](#obamium-sword)
+- [Pink Gem](#pink-gem)
+- [Purple Soup](#purple-soup)
+- [Raw Meat](#raw-meat)
+- [Red Apple](#red-apple)
+- [Red Gem](#red-gem)
+- [Red Soup](#red-soup)
+- [Rock](#rock)
+- [Rock Projectile](#rock-projectile)
+- [Rock Projectile](#rock-projectile)
+- [Rope](#rope)
+- [Ruby](#ruby)
+- [Shovel](#shovel)
+- [Slurbon Shroom](#slurbon-shroom)
+- [Spear Tip](#spear-tip)
+- [Spike Attack](#spike-attack)
+- [Steel Arrow](#steel-arrow)
+- [Steel Axe](#steel-axe)
+- [Steel Boots](#steel-boots)
+- [Steel Chestplate](#steel-chestplate)
+- [Steel Helmet](#steel-helmet)
+- [Steel Pants](#steel-pants)
+- [Steel Pickaxe](#steel-pickaxe)
+- [Steel Sword](#steel-sword)
+- [Sugon Shroom](#sugon-shroom)
+- [Sword Hilt](#sword-hilt)
+- [Torch](#torch)
+- [Water Arrow](#water-arrow)
+- [Waterball](#waterball)
+- [Weird Soup](#weird-soup)
+- [Wheat](#wheat)
+- [Windball](#windball)
+- [Wolf Claws](#wolf-claws)
+- [Wolfskin](#wolfskin)
+- [Wolfskin Boots](#wolfskin-boots)
+- [Wolfskin Chestplate](#wolfskin-chestplate)
+- [Wolfskin Helmet](#wolfskin-helmet)
+- [Wolfskin Pants](#wolfskin-pants)
+- [Wood](#wood)
+- [Wood Axe](#wood-axe)
+- [Wood Bow](#wood-bow)
+- [Wood Doorway](#wood-doorway)
+- [Wood Doorway](#wood-doorway)
+- [Wood Floor](#wood-floor)
+- [Wood Pickaxe](#wood-pickaxe)
+- [Wood Pole](#wood-pole)
+- [Wood Pole](#wood-pole)
+- [Wood Roof](#wood-roof)
+- [Wood stairs](#wood-stairs)
+- [Wood stairs thinn](#wood-stairs-thinn)
+- [Wood Wall](#wood-wall)
+- [Wood Wall Half](#wood-wall-half)
+- [Wood Wall Tilted](#wood-wall-tilted)
+- [Workbench](#workbench)
+- [Wyvern Claws](#wyvern-claws)
+- [Wyvern Dagger](#wyvern-dagger)
+- [Yellow Gem](#yellow-gem)
+- [Yellow Soup](#yellow-soup)
 
 # Items
 ### Adamantite Arrow
@@ -335,8 +337,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Adamantite Arrow
-- 2 [Oak Wood](#Oak-Wood)
-- 1 [Adamantite bar](#Adamantite-bar)
+- 2 [Oak Wood](#oak-wood)
+- 1 [Adamantite bar](#adamantite-bar)
 
 ---
 
@@ -356,9 +358,9 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 1 Adamantite Axe
-- 5 [Adamantite bar](#Adamantite-bar)
-- 5 [Bark](#Bark)
-- 10 [Oak Wood](#Oak-Wood)
+- 5 [Adamantite bar](#adamantite-bar)
+- 5 [Bark](#bark)
+- 10 [Oak Wood](#oak-wood)
 
 ---
 
@@ -379,16 +381,16 @@
 #### Smelting: Gives 1 Adamantite bar
 - Takes 15 seconds
 - Made in Furnace
-- Needs 1 [Adamantite Ore](#Adamantite-Ore)
+- Needs 1 [Adamantite Ore](#adamantite-ore)
 #### Ingredient For:
-- [Adamantite Boots](#Adamantite-Boots)
-- [Adamantite Helmet](#Adamantite-Helmet)
-- [Adamantite Pants](#Adamantite-Pants)
-- [Adamantite Chestplate](#Adamantite-Chestplate)
-- [Adamantite Axe](#Adamantite-Axe)
-- [Adamantite Pickaxe](#Adamantite-Pickaxe)
-- [Adamantite Sword](#Adamantite-Sword)
-- [Adamantite Arrow](#Adamantite-Arrow)
+- [Adamantite Boots](#adamantite-boots)
+- [Adamantite Helmet](#adamantite-helmet)
+- [Adamantite Pants](#adamantite-pants)
+- [Adamantite Chestplate](#adamantite-chestplate)
+- [Adamantite Axe](#adamantite-axe)
+- [Adamantite Pickaxe](#adamantite-pickaxe)
+- [Adamantite Sword](#adamantite-sword)
+- [Adamantite Arrow](#adamantite-arrow)
 
 ---
 
@@ -410,7 +412,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Boots
-- 5 [Adamantite bar](#Adamantite-bar)
+- 5 [Adamantite bar](#adamantite-bar)
 
 ---
 
@@ -432,7 +434,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Chestplate
-- 15 [Adamantite bar](#Adamantite-bar)
+- 15 [Adamantite bar](#adamantite-bar)
 
 ---
 
@@ -454,7 +456,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Helmet
-- 5 [Adamantite bar](#Adamantite-bar)
+- 5 [Adamantite bar](#adamantite-bar)
 
 ---
 
@@ -474,7 +476,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Adamantite bar](#Adamantite-bar)
+- [Adamantite bar](#adamantite-bar)
 
 ---
 
@@ -496,7 +498,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Pants
-- 15 [Adamantite bar](#Adamantite-bar)
+- 15 [Adamantite bar](#adamantite-bar)
 
 ---
 
@@ -516,9 +518,9 @@
 - Attack Range: 0
 - Sharpness: 0.2
 #### Crafting: Gives 1 Adamantite Pickaxe
-- 5 [Adamantite bar](#Adamantite-bar)
-- 5 [Bark](#Bark)
-- 10 [Oak Wood](#Oak-Wood)
+- 5 [Adamantite bar](#adamantite-bar)
+- 5 [Bark](#bark)
+- 10 [Oak Wood](#oak-wood)
 
 ---
 
@@ -537,8 +539,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Adamantite Sword
-- 5 [Adamantite bar](#Adamantite-bar)
-- 5 [Oak Wood](#Oak-Wood)
+- 5 [Adamantite bar](#adamantite-bar)
+- 5 [Oak Wood](#oak-wood)
 
 ---
 
@@ -558,8 +560,8 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Anvil
-- 5 [Iron bar](#Iron-bar)
-- 15 [Rock](#Rock)
+- 5 [Iron bar](#iron-bar)
+- 15 [Rock](#rock)
 
 ---
 
@@ -585,9 +587,9 @@
 #### Cooking: Gives 1 Apple Pie
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Red Apple](#Red-Apple)
-- Needs 1 [Dough](#Dough)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Red Apple](#red-apple)
+- Needs 1 [Dough](#dough)
 
 ---
 
@@ -606,19 +608,19 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 5 Bark
-- 5 [Wood](#Wood)
+- 5 [Wood](#wood)
 #### Ingredient For:
-- [Adamantite Axe](#Adamantite-Axe)
-- [Gold Axe](#Gold-Axe)
-- [Mithril Axe](#Mithril-Axe)
-- [Steel Axe](#Steel-Axe)
-- [Wood Axe](#Wood-Axe)
-- [Adamantite Pickaxe](#Adamantite-Pickaxe)
-- [Gold Pickaxe](#Gold-Pickaxe)
-- [Mithril Pickaxe](#Mithril-Pickaxe)
-- [Steel Pickaxe](#Steel-Pickaxe)
-- [Wood Pickaxe](#Wood-Pickaxe)
-- [Rope](#Rope)
+- [Adamantite Axe](#adamantite-axe)
+- [Gold Axe](#gold-axe)
+- [Mithril Axe](#mithril-axe)
+- [Steel Axe](#steel-axe)
+- [Wood Axe](#wood-axe)
+- [Adamantite Pickaxe](#adamantite-pickaxe)
+- [Gold Pickaxe](#gold-pickaxe)
+- [Mithril Pickaxe](#mithril-pickaxe)
+- [Steel Pickaxe](#steel-pickaxe)
+- [Wood Pickaxe](#wood-pickaxe)
+- [Rope](#rope)
 
 ---
 
@@ -633,8 +635,8 @@
 - Projectile Speed: 20
 - Arrows per shot: 1
 #### Crafting: Gives 1 Birch bow
-- 10 [Birch Wood](#Birch-Wood)
-- 1 [Rope](#Rope)
+- 10 [Birch Wood](#birch-wood)
+- 1 [Rope](#rope)
 
 ---
 
@@ -656,12 +658,12 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Fletching Table](#Fletching-Table)
-- [Steel Axe](#Steel-Axe)
-- [Birch bow](#Birch-bow)
-- [Steel Pickaxe](#Steel-Pickaxe)
-- [Steel Sword](#Steel-Sword)
-- [Steel Arrow](#Steel-Arrow)
+- [Fletching Table](#fletching-table)
+- [Steel Axe](#steel-axe)
+- [Birch bow](#birch-bow)
+- [Steel Pickaxe](#steel-pickaxe)
+- [Steel Sword](#steel-sword)
+- [Steel Arrow](#steel-arrow)
 
 ---
 
@@ -697,15 +699,15 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Bowl
-- 1 [Wood](#Wood)
+- 1 [Wood](#wood)
 #### Ingredient For:
-- [Apple Pie](#Apple-Pie)
-- [Meat Pie](#Meat-Pie)
-- [Meat Soup](#Meat-Soup)
-- [Purple Soup](#Purple-Soup)
-- [Red Soup](#Red-Soup)
-- [Weird Soup](#Weird-Soup)
-- [Yellow Soup](#Yellow-Soup)
+- [Apple Pie](#apple-pie)
+- [Meat Pie](#meat-pie)
+- [Meat Soup](#meat-soup)
+- [Purple Soup](#purple-soup)
+- [Red Soup](#red-soup)
+- [Weird Soup](#weird-soup)
+- [Yellow Soup](#yellow-soup)
 
 ---
 
@@ -731,7 +733,7 @@
 #### Cooking: Gives 1 Bread
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Dough](#Dough)
+- Needs 1 [Dough](#dough)
 
 ---
 
@@ -751,8 +753,8 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Cauldron
-- 10 [Wood](#Wood)
-- 10 [Rock](#Rock)
+- 10 [Wood](#wood)
+- 10 [Rock](#rock)
 
 ---
 
@@ -772,8 +774,8 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Chest
-- 20 [Wood](#Wood)
-- 10 [Rock](#Rock)
+- 20 [Wood](#wood)
+- 10 [Rock](#rock)
 
 ---
 
@@ -795,7 +797,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Torch](#Torch)
+- [Torch](#torch)
 
 ---
 
@@ -814,7 +816,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 5 Coin
-- 1 [Gold bar](#Gold-bar)
+- 1 [Gold bar](#gold-bar)
 
 ---
 
@@ -840,7 +842,7 @@
 #### Cooking: Gives 1 Cooked Meat
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Raw Meat](#Raw-Meat)
+- Needs 1 [Raw Meat](#raw-meat)
 
 ---
 
@@ -859,11 +861,11 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Dough
-- 5 [Wheat](#Wheat)
+- 5 [Wheat](#wheat)
 #### Ingredient For:
-- [Bread](#Bread)
-- [Apple Pie](#Apple-Pie)
-- [Meat Pie](#Meat-Pie)
+- [Bread](#bread)
+- [Apple Pie](#apple-pie)
+- [Meat Pie](#meat-pie)
 
 ---
 
@@ -878,8 +880,8 @@
 - Projectile Speed: 30
 - Arrows per shot: 1
 #### Crafting: Gives 1 Fir bow
-- 10 [Fir Wood](#Fir-Wood)
-- 1 [Rope](#Rope)
+- 10 [Fir Wood](#fir-wood)
+- 1 [Rope](#rope)
 
 ---
 
@@ -901,11 +903,11 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Mithril Axe](#Mithril-Axe)
-- [Fir bow](#Fir-bow)
-- [Mithril Pickaxe](#Mithril-Pickaxe)
-- [Mithril Sword](#Mithril-Sword)
-- [Mithril Arrow](#Mithril-Arrow)
+- [Mithril Axe](#mithril-axe)
+- [Fir bow](#fir-bow)
+- [Mithril Pickaxe](#mithril-pickaxe)
+- [Mithril Sword](#mithril-sword)
+- [Mithril Arrow](#mithril-arrow)
 
 ---
 
@@ -924,7 +926,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Flax Fibers](#Flax-Fibers)
+- [Flax Fibers](#flax-fibers)
 
 ---
 
@@ -943,12 +945,12 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Flax Fibers
-- 1 [Flax](#Flax)
+- 1 [Flax](#flax)
 #### Ingredient For:
-- [Wolfskin Boots](#Wolfskin-Boots)
-- [Wolfskin Helmet](#Wolfskin-Helmet)
-- [Wolfskin Pants](#Wolfskin-Pants)
-- [Wolfskin Chestplate](#Wolfskin-Chestplate)
+- [Wolfskin Boots](#wolfskin-boots)
+- [Wolfskin Helmet](#wolfskin-helmet)
+- [Wolfskin Pants](#wolfskin-pants)
+- [Wolfskin Chestplate](#wolfskin-chestplate)
 
 ---
 
@@ -968,8 +970,8 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Fletching Table
-- 25 [Birch Wood](#Birch-Wood)
-- 10 [Flint](#Flint)
+- 25 [Birch Wood](#birch-wood)
+- 10 [Flint](#flint)
 
 ---
 
@@ -988,8 +990,8 @@
 - Attack Range: 0
 - Sharpness: 0.7
 #### Ingredient For:
-- [Fletching Table](#Fletching-Table)
-- [Flint Arrow](#Flint-Arrow)
+- [Fletching Table](#fletching-table)
+- [Flint Arrow](#flint-arrow)
 
 ---
 
@@ -1009,8 +1011,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Flint Arrow
-- 2 [Wood](#Wood)
-- 1 [Flint](#Flint)
+- 2 [Wood](#wood)
+- 1 [Flint](#flint)
 
 ---
 
@@ -1030,7 +1032,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Furnace
-- 15 [Rock](#Rock)
+- 15 [Rock](#rock)
 
 ---
 
@@ -1067,9 +1069,9 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 1 Gold Axe
-- 5 [Gold bar](#Gold-bar)
-- 5 [Bark](#Bark)
-- 10 [Wood](#Wood)
+- 5 [Gold bar](#gold-bar)
+- 5 [Bark](#bark)
+- 10 [Wood](#wood)
 
 ---
 
@@ -1090,16 +1092,16 @@
 #### Smelting: Gives 1 Gold bar
 - Takes 4 seconds
 - Made in Furnace
-- Needs 1 [Gold Ore](#Gold-Ore)
+- Needs 1 [Gold Ore](#gold-ore)
 #### Ingredient For:
-- [Coin](#Coin)
-- [Gold Boots](#Gold-Boots)
-- [Gold Helmet](#Gold-Helmet)
-- [Gold Pants](#Gold-Pants)
-- [Gold Chestplate](#Gold-Chestplate)
-- [Gold Axe](#Gold-Axe)
-- [Gold Pickaxe](#Gold-Pickaxe)
-- [Gold Sword](#Gold-Sword)
+- [Coin](#coin)
+- [Gold Boots](#gold-boots)
+- [Gold Helmet](#gold-helmet)
+- [Gold Pants](#gold-pants)
+- [Gold Chestplate](#gold-chestplate)
+- [Gold Axe](#gold-axe)
+- [Gold Pickaxe](#gold-pickaxe)
+- [Gold Sword](#gold-sword)
 
 ---
 
@@ -1121,7 +1123,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Boots
-- 5 [Gold bar](#Gold-bar)
+- 5 [Gold bar](#gold-bar)
 
 ---
 
@@ -1143,7 +1145,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Chestplate
-- 15 [Gold bar](#Gold-bar)
+- 15 [Gold bar](#gold-bar)
 
 ---
 
@@ -1165,7 +1167,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Helmet
-- 5 [Gold bar](#Gold-bar)
+- 5 [Gold bar](#gold-bar)
 
 ---
 
@@ -1185,7 +1187,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Gold bar](#Gold-bar)
+- [Gold bar](#gold-bar)
 
 ---
 
@@ -1207,7 +1209,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Gold Pants
-- 15 [Gold bar](#Gold-bar)
+- 15 [Gold bar](#gold-bar)
 
 ---
 
@@ -1227,9 +1229,9 @@
 - Attack Range: 0
 - Sharpness: 0.2
 #### Crafting: Gives 1 Gold Pickaxe
-- 5 [Gold bar](#Gold-bar)
-- 5 [Bark](#Bark)
-- 5 [Wood](#Wood)
+- 5 [Gold bar](#gold-bar)
+- 5 [Bark](#bark)
+- 5 [Wood](#wood)
 
 ---
 
@@ -1248,8 +1250,8 @@
 - Attack Range: 0
 - Sharpness: 0.9
 #### Crafting: Gives 1 Gold Sword
-- 5 [Gold bar](#Gold-bar)
-- 5 [Wood](#Wood)
+- 5 [Gold bar](#gold-bar)
+- 5 [Wood](#wood)
 
 ---
 
@@ -1299,7 +1301,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Red Soup](#Red-Soup)
+- [Red Soup](#red-soup)
 
 ---
 
@@ -1320,17 +1322,17 @@
 #### Smelting: Gives 1 Iron bar
 - Takes 6 seconds
 - Made in Furnace
-- Needs 1 [Iron Ore](#Iron-Ore)
+- Needs 1 [Iron Ore](#iron-ore)
 #### Ingredient For:
-- [Steel Boots](#Steel-Boots)
-- [Steel Helmet](#Steel-Helmet)
-- [Steel Pants](#Steel-Pants)
-- [Steel Chestplate](#Steel-Chestplate)
-- [Anvil](#Anvil)
-- [Steel Axe](#Steel-Axe)
-- [Steel Pickaxe](#Steel-Pickaxe)
-- [Steel Sword](#Steel-Sword)
-- [Steel Arrow](#Steel-Arrow)
+- [Steel Boots](#steel-boots)
+- [Steel Helmet](#steel-helmet)
+- [Steel Pants](#steel-pants)
+- [Steel Chestplate](#steel-chestplate)
+- [Anvil](#anvil)
+- [Steel Axe](#steel-axe)
+- [Steel Pickaxe](#steel-pickaxe)
+- [Steel Sword](#steel-sword)
+- [Steel Arrow](#steel-arrow)
 
 ---
 
@@ -1350,7 +1352,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Iron bar](#Iron-bar)
+- [Iron bar](#iron-bar)
 
 ---
 
@@ -1374,7 +1376,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Yellow Soup](#Yellow-Soup)
+- [Yellow Soup](#yellow-soup)
 
 ---
 
@@ -1400,9 +1402,9 @@
 #### Cooking: Gives 1 Meat Pie
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Raw Meat](#Raw-Meat)
-- Needs 1 [Dough](#Dough)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Raw Meat](#raw-meat)
+- Needs 1 [Dough](#dough)
 
 ---
 
@@ -1428,8 +1430,8 @@
 #### Cooking: Gives 1 Meat Soup
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Raw Meat](#Raw-Meat)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Raw Meat](#raw-meat)
 
 ---
 
@@ -1467,8 +1469,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Mithril Arrow
-- 2 [Fir Wood](#Fir-Wood)
-- 1 [Mithril bar](#Mithril-bar)
+- 2 [Fir Wood](#fir-wood)
+- 1 [Mithril bar](#mithril-bar)
 
 ---
 
@@ -1488,9 +1490,9 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 1 Mithril Axe
-- 5 [Mithril bar](#Mithril-bar)
-- 5 [Bark](#Bark)
-- 10 [Fir Wood](#Fir-Wood)
+- 5 [Mithril bar](#mithril-bar)
+- 5 [Bark](#bark)
+- 10 [Fir Wood](#fir-wood)
 
 ---
 
@@ -1511,16 +1513,16 @@
 #### Smelting: Gives 1 Mithril bar
 - Takes 10 seconds
 - Made in Furnace
-- Needs 1 [Mithril Ore](#Mithril-Ore)
+- Needs 1 [Mithril Ore](#mithril-ore)
 #### Ingredient For:
-- [Mithril Boots](#Mithril-Boots)
-- [Mithril Helmet](#Mithril-Helmet)
-- [Mithril Pants](#Mithril-Pants)
-- [Mithril Chestplate](#Mithril-Chestplate)
-- [Mithril Axe](#Mithril-Axe)
-- [Mithril Pickaxe](#Mithril-Pickaxe)
-- [Mithril Sword](#Mithril-Sword)
-- [Mithril Arrow](#Mithril-Arrow)
+- [Mithril Boots](#mithril-boots)
+- [Mithril Helmet](#mithril-helmet)
+- [Mithril Pants](#mithril-pants)
+- [Mithril Chestplate](#mithril-chestplate)
+- [Mithril Axe](#mithril-axe)
+- [Mithril Pickaxe](#mithril-pickaxe)
+- [Mithril Sword](#mithril-sword)
+- [Mithril Arrow](#mithril-arrow)
 
 ---
 
@@ -1542,7 +1544,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Boots
-- 5 [Mithril bar](#Mithril-bar)
+- 5 [Mithril bar](#mithril-bar)
 
 ---
 
@@ -1564,7 +1566,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Chestplate
-- 20 [Mithril bar](#Mithril-bar)
+- 20 [Mithril bar](#mithril-bar)
 
 ---
 
@@ -1586,7 +1588,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Helmet
-- 5 [Mithril bar](#Mithril-bar)
+- 5 [Mithril bar](#mithril-bar)
 
 ---
 
@@ -1606,7 +1608,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Mithril bar](#Mithril-bar)
+- [Mithril bar](#mithril-bar)
 
 ---
 
@@ -1628,7 +1630,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Pants
-- 15 [Mithril bar](#Mithril-bar)
+- 15 [Mithril bar](#mithril-bar)
 
 ---
 
@@ -1648,9 +1650,9 @@
 - Attack Range: 0
 - Sharpness: 0.2
 #### Crafting: Gives 1 Mithril Pickaxe
-- 5 [Mithril bar](#Mithril-bar)
-- 5 [Bark](#Bark)
-- 10 [Fir Wood](#Fir-Wood)
+- 5 [Mithril bar](#mithril-bar)
+- 5 [Bark](#bark)
+- 10 [Fir Wood](#fir-wood)
 
 ---
 
@@ -1669,8 +1671,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Mithril Sword
-- 5 [Mithril bar](#Mithril-bar)
-- 5 [Fir Wood](#Fir-Wood)
+- 5 [Mithril bar](#mithril-bar)
+- 5 [Fir Wood](#fir-wood)
 
 ---
 
@@ -1685,8 +1687,8 @@
 - Projectile Speed: 50
 - Arrows per shot: 1
 #### Crafting: Gives 1 Oak Bow
-- 5 [Oak Wood](#Oak-Wood)
-- 1 [Rope](#Rope)
+- 5 [Oak Wood](#oak-wood)
+- 1 [Rope](#rope)
 
 ---
 
@@ -1708,12 +1710,12 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Adamantite Axe](#Adamantite-Axe)
-- [Oak Bow](#Oak-Bow)
-- [Adamantite Pickaxe](#Adamantite-Pickaxe)
-- [Adamantite Sword](#Adamantite-Sword)
-- [Adamantite Arrow](#Adamantite-Arrow)
-- [Wyvern Dagger](#Wyvern-Dagger)
+- [Adamantite Axe](#adamantite-axe)
+- [Oak Bow](#oak-bow)
+- [Adamantite Pickaxe](#adamantite-pickaxe)
+- [Adamantite Sword](#adamantite-sword)
+- [Adamantite Arrow](#adamantite-arrow)
+- [Wyvern Dagger](#wyvern-dagger)
 
 ---
 
@@ -1735,7 +1737,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Obamium Boots
-- 5 [Obamium bar](#Obamium-bar)
+- 5 [Obamium bar](#obamium-bar)
 
 ---
 
@@ -1757,7 +1759,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Obamium Chestplate
-- 15 [Obamium bar](#Obamium-bar)
+- 15 [Obamium bar](#obamium-bar)
 
 ---
 
@@ -1779,7 +1781,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Obamium Helmet
-- 5 [Obamium bar](#Obamium-bar)
+- 5 [Obamium bar](#obamium-bar)
 
 ---
 
@@ -1801,7 +1803,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Obamium Pants
-- 15 [Obamium bar](#Obamium-bar)
+- 15 [Obamium bar](#obamium-bar)
 
 ---
 
@@ -1827,8 +1829,8 @@
 #### Cooking: Gives 1 Purple Soup
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Sugon Shroom](#Sugon-Shroom)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Sugon Shroom](#sugon-shroom)
 
 ---
 
@@ -1852,9 +1854,9 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Cooked Meat](#Cooked-Meat)
-- [Meat Pie](#Meat-Pie)
-- [Meat Soup](#Meat-Soup)
+- [Cooked Meat](#cooked-meat)
+- [Meat Pie](#meat-pie)
+- [Meat Soup](#meat-soup)
 
 ---
 
@@ -1878,7 +1880,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Apple Pie](#Apple-Pie)
+- [Apple Pie](#apple-pie)
 
 ---
 
@@ -1904,8 +1906,8 @@
 #### Cooking: Gives 1 Red Soup
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Gulpon Shroom](#Gulpon-Shroom)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Gulpon Shroom](#gulpon-shroom)
 
 ---
 
@@ -1925,10 +1927,10 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Chest](#Chest)
-- [Anvil](#Anvil)
-- [Cauldron](#Cauldron)
-- [Furnace](#Furnace)
+- [Chest](#chest)
+- [Anvil](#anvil)
+- [Cauldron](#cauldron)
+- [Furnace](#furnace)
 
 ---
 
@@ -1977,14 +1979,14 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 2 Rope
-- 10 [Wheat](#Wheat)
-- 10 [Bark](#Bark)
+- 10 [Wheat](#wheat)
+- 10 [Bark](#bark)
 #### Ingredient For:
-- [Oak Bow](#Oak-Bow)
-- [Wood Bow](#Wood-Bow)
-- [Birch bow](#Birch-bow)
-- [Fir bow](#Fir-bow)
-- [Ancient Bow](#Ancient-Bow)
+- [Oak Bow](#oak-bow)
+- [Wood Bow](#wood-bow)
+- [Birch bow](#birch-bow)
+- [Fir bow](#fir-bow)
+- [Ancient Bow](#ancient-bow)
 
 ---
 
@@ -2026,7 +2028,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Weird Soup](#Weird-Soup)
+- [Weird Soup](#weird-soup)
 
 ---
 
@@ -2059,8 +2061,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Steel Arrow
-- 2 [Birch Wood](#Birch-Wood)
-- 1 [Iron bar](#Iron-bar)
+- 2 [Birch Wood](#birch-wood)
+- 1 [Iron bar](#iron-bar)
 
 ---
 
@@ -2080,9 +2082,9 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 1 Steel Axe
-- 5 [Iron bar](#Iron-bar)
-- 5 [Bark](#Bark)
-- 10 [Birch Wood](#Birch-Wood)
+- 5 [Iron bar](#iron-bar)
+- 5 [Bark](#bark)
+- 10 [Birch Wood](#birch-wood)
 
 ---
 
@@ -2104,7 +2106,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Boots
-- 5 [Iron bar](#Iron-bar)
+- 5 [Iron bar](#iron-bar)
 
 ---
 
@@ -2126,7 +2128,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Chestplate
-- 20 [Iron bar](#Iron-bar)
+- 20 [Iron bar](#iron-bar)
 
 ---
 
@@ -2148,7 +2150,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Helmet
-- 5 [Iron bar](#Iron-bar)
+- 5 [Iron bar](#iron-bar)
 
 ---
 
@@ -2170,7 +2172,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Pants
-- 15 [Iron bar](#Iron-bar)
+- 15 [Iron bar](#iron-bar)
 
 ---
 
@@ -2190,9 +2192,9 @@
 - Attack Range: 0
 - Sharpness: 0.2
 #### Crafting: Gives 1 Steel Pickaxe
-- 5 [Iron bar](#Iron-bar)
-- 5 [Bark](#Bark)
-- 10 [Birch Wood](#Birch-Wood)
+- 5 [Iron bar](#iron-bar)
+- 5 [Bark](#bark)
+- 10 [Birch Wood](#birch-wood)
 
 ---
 
@@ -2211,8 +2213,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Steel Sword
-- 7 [Iron bar](#Iron-bar)
-- 5 [Birch Wood](#Birch-Wood)
+- 7 [Iron bar](#iron-bar)
+- 5 [Birch Wood](#birch-wood)
 
 ---
 
@@ -2236,7 +2238,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Purple Soup](#Purple-Soup)
+- [Purple Soup](#purple-soup)
 
 ---
 
@@ -2256,8 +2258,8 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 5 Torch
-- 2 [Wood](#Wood)
-- 1 [Coal](#Coal)
+- 2 [Wood](#wood)
+- 1 [Coal](#coal)
 
 ---
 
@@ -2283,8 +2285,8 @@
 #### Cooking: Gives 1 Weird Soup
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Slurbon Shroom](#Slurbon-Shroom)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Slurbon Shroom](#slurbon-shroom)
 
 ---
 
@@ -2303,8 +2305,8 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Dough](#Dough)
-- [Rope](#Rope)
+- [Dough](#dough)
+- [Rope](#rope)
 
 ---
 
@@ -2323,10 +2325,10 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Wolfskin Boots](#Wolfskin-Boots)
-- [Wolfskin Helmet](#Wolfskin-Helmet)
-- [Wolfskin Pants](#Wolfskin-Pants)
-- [Wolfskin Chestplate](#Wolfskin-Chestplate)
+- [Wolfskin Boots](#wolfskin-boots)
+- [Wolfskin Helmet](#wolfskin-helmet)
+- [Wolfskin Pants](#wolfskin-pants)
+- [Wolfskin Chestplate](#wolfskin-chestplate)
 
 ---
 
@@ -2339,7 +2341,7 @@
 - Rarity: Common
 - Stackable: No
 - +2 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#wolfskin-armor) (<i>Full set gives 50% speed increase</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -2348,8 +2350,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Boots
-- 5 [Wolfskin](#Wolfskin)
-- 5 [Flax Fibers](#Flax-Fibers)
+- 5 [Wolfskin](#wolfskin)
+- 5 [Flax Fibers](#flax-fibers)
 
 ---
 
@@ -2362,7 +2364,7 @@
 - Rarity: Common
 - Stackable: No
 - +8 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#wolfskin-armor) (<i>Full set gives 50% speed increase</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -2371,8 +2373,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Chestplate
-- 20 [Wolfskin](#Wolfskin)
-- 20 [Flax Fibers](#Flax-Fibers)
+- 20 [Wolfskin](#wolfskin)
+- 20 [Flax Fibers](#flax-fibers)
 
 ---
 
@@ -2385,7 +2387,7 @@
 - Rarity: Common
 - Stackable: No
 - +3 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#wolfskin-armor) (<i>Full set gives 50% speed increase</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -2394,8 +2396,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Helmet
-- 5 [Wolfskin](#Wolfskin)
-- 5 [Flax Fibers](#Flax-Fibers)
+- 5 [Wolfskin](#wolfskin)
+- 5 [Flax Fibers](#flax-fibers)
 
 ---
 
@@ -2408,7 +2410,7 @@
 - Rarity: Common
 - Stackable: No
 - +6 armor
-- Armor Set: [Wolfskin Armor](#Wolfskin-Armor) (<i>Full set gives 50% speed increase</i>)
+- Armor Set: [Wolfskin Armor](#wolfskin-armor) (<i>Full set gives 50% speed increase</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -2417,8 +2419,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Wolfskin Pants
-- 15 [Wolfskin](#Wolfskin)
-- 15 [Flax Fibers](#Flax-Fibers)
+- 15 [Wolfskin](#wolfskin)
+- 15 [Flax Fibers](#flax-fibers)
 
 ---
 
@@ -2440,30 +2442,30 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Bark](#Bark)
-- [Chest](#Chest)
-- [Wood Doorway](#Wood-Doorway)
-- [Wood Doorway](#Wood-Doorway)
-- [Wood Floor](#Wood-Floor)
-- [Wood Pole](#Wood-Pole)
-- [Wood Pole](#Wood-Pole)
-- [Wood Roof](#Wood-Roof)
-- [Wood stairs](#Wood-stairs)
-- [Wood stairs thinn](#Wood-stairs-thinn)
-- [Wood Wall](#Wood-Wall)
-- [Wood Wall Half](#Wood-Wall-Half)
-- [Wood Wall Tilted](#Wood-Wall-Tilted)
-- [Torch](#Torch)
-- [Bowl](#Bowl)
-- [Cauldron](#Cauldron)
-- [Workbench](#Workbench)
-- [Gold Axe](#Gold-Axe)
-- [Wood Axe](#Wood-Axe)
-- [Wood Bow](#Wood-Bow)
-- [Gold Pickaxe](#Gold-Pickaxe)
-- [Wood Pickaxe](#Wood-Pickaxe)
-- [Gold Sword](#Gold-Sword)
-- [Flint Arrow](#Flint-Arrow)
+- [Bark](#bark)
+- [Chest](#chest)
+- [Wood Doorway](#wood-doorway)
+- [Wood Doorway](#wood-doorway)
+- [Wood Floor](#wood-floor)
+- [Wood Pole](#wood-pole)
+- [Wood Pole](#wood-pole)
+- [Wood Roof](#wood-roof)
+- [Wood stairs](#wood-stairs)
+- [Wood stairs thinn](#wood-stairs-thinn)
+- [Wood Wall](#wood-wall)
+- [Wood Wall Half](#wood-wall-half)
+- [Wood Wall Tilted](#wood-wall-tilted)
+- [Torch](#torch)
+- [Bowl](#bowl)
+- [Cauldron](#cauldron)
+- [Workbench](#workbench)
+- [Gold Axe](#gold-axe)
+- [Wood Axe](#wood-axe)
+- [Wood Bow](#wood-bow)
+- [Gold Pickaxe](#gold-pickaxe)
+- [Wood Pickaxe](#wood-pickaxe)
+- [Gold Sword](#gold-sword)
+- [Flint Arrow](#flint-arrow)
 
 ---
 
@@ -2485,8 +2487,8 @@
 - Attack Range: 0
 - Sharpness: 0.75
 #### Crafting: Gives 1 Wood Axe
-- 5 [Wood](#Wood)
-- 5 [Bark](#Bark)
+- 5 [Wood](#wood)
+- 5 [Bark](#bark)
 
 ---
 
@@ -2501,8 +2503,8 @@
 - Projectile Speed: 15
 - Arrows per shot: 1
 #### Crafting: Gives 1 Wood Bow
-- 10 [Wood](#Wood)
-- 1 [Rope](#Rope)
+- 10 [Wood](#wood)
+- 1 [Rope](#rope)
 
 ---
 
@@ -2522,7 +2524,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Doorway
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2542,7 +2544,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Doorway
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2562,7 +2564,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Floor
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2584,8 +2586,8 @@
 - Attack Range: 0
 - Sharpness: 0.2
 #### Crafting: Gives 1 Wood Pickaxe
-- 5 [Wood](#Wood)
-- 5 [Bark](#Bark)
+- 5 [Wood](#wood)
+- 5 [Bark](#bark)
 
 ---
 
@@ -2605,7 +2607,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Pole
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2625,7 +2627,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Pole
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2645,7 +2647,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Roof
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2665,7 +2667,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood stairs
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2685,7 +2687,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood stairs thinn
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2705,7 +2707,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2725,7 +2727,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall Half
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2745,7 +2747,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Wood Wall Tilted
-- 2 [Wood](#Wood)
+- 2 [Wood](#wood)
 
 ---
 
@@ -2765,7 +2767,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Crafting: Gives 1 Workbench
-- 10 [Wood](#Wood)
+- 10 [Wood](#wood)
 
 ---
 
@@ -2791,8 +2793,8 @@
 #### Cooking: Gives 1 Yellow Soup
 - Takes 5 seconds
 - Made in Cauldron
-- Needs 1 [Bowl](#Bowl)
-- Needs 1 [Ligon Shroom](#Ligon-Shroom)
+- Needs 1 [Bowl](#bowl)
+- Needs 1 [Ligon Shroom](#ligon-shroom)
 
 ---
 
@@ -2814,13 +2816,13 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Obamium Sword](#Obamium-Sword)
-- [Fire arrow](#Fire-arrow)
-- [Lightning Arrow](#Lightning-Arrow)
-- [Water Arrow](#Water-Arrow)
-- [Chiefs Spear](#Chiefs-Spear)
-- [Gronks Sword](#Gronks-Sword)
-- [Night Blade](#Night-Blade)
+- [Obamium Sword](#obamium-sword)
+- [Fire arrow](#fire-arrow)
+- [Lightning Arrow](#lightning-arrow)
+- [Water Arrow](#water-arrow)
+- [Chiefs Spear](#chiefs-spear)
+- [Gronks Sword](#gronks-sword)
+- [Night Blade](#night-blade)
 
 ---
 
@@ -2841,14 +2843,14 @@
 #### Smelting: Gives 1 Obamium bar
 - Takes 15 seconds
 - Made in Furnace
-- Needs 1 [Obamium Ore](#Obamium-Ore)
+- Needs 1 [Obamium Ore](#obamium-ore)
 #### Ingredient For:
-- [Obamium Boots](#Obamium-Boots)
-- [Obamium Helmet](#Obamium-Helmet)
-- [Obamium Pants](#Obamium-Pants)
-- [Obamium Chestplate](#Obamium-Chestplate)
-- [Obamium Sword](#Obamium-Sword)
-- [Night Blade](#Night-Blade)
+- [Obamium Boots](#obamium-boots)
+- [Obamium Helmet](#obamium-helmet)
+- [Obamium Pants](#obamium-pants)
+- [Obamium Chestplate](#obamium-chestplate)
+- [Obamium Sword](#obamium-sword)
+- [Night Blade](#night-blade)
 
 ---
 
@@ -2867,7 +2869,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Obamium bar](#Obamium-bar)
+- [Obamium bar](#obamium-bar)
 
 ---
 
@@ -2899,7 +2901,7 @@
 - Projectile Speed: 2.75
 - Arrows per shot: 1
 #### Ingredient For:
-- [Ancient Bow](#Ancient-Bow)
+- [Ancient Bow](#ancient-bow)
 
 ---
 
@@ -2914,8 +2916,8 @@
 - Projectile Speed: 50
 - Arrows per shot: 3 (2 degrees apart)
 #### Crafting: Gives 1 Ancient Bow
-- 1 [Ancient Bone](#Ancient-Bone)
-- 1 [Rope](#Rope)
+- 1 [Ancient Bone](#ancient-bone)
+- 1 [Rope](#rope)
 
 ---
 
@@ -2951,7 +2953,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Night Blade](#Night-Blade)
+- [Night Blade](#night-blade)
 
 ---
 
@@ -2970,7 +2972,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Gronks Sword](#Gronks-Sword)
+- [Gronks Sword](#gronks-sword)
 
 ---
 
@@ -3007,8 +3009,8 @@
 - Attack Range: 2.75
 - Sharpness: 1
 #### Crafting: Gives 1 Chiefs Spear
-- 1 [Spear Tip](#Spear-Tip)
-- 15 [Dark Oak Wood](#Dark-Oak-Wood)
+- 1 [Spear Tip](#spear-tip)
+- 15 [Dark Oak Wood](#dark-oak-wood)
 
 ---
 
@@ -3029,13 +3031,13 @@
 #### Smelting: Gives 1 Chunkium bar
 - Takes 23 seconds
 - Made in Furnace
-- Needs 1 [Chunkium Ore](#Chunkium-Ore)
+- Needs 1 [Chunkium Ore](#chunkium-ore)
 #### Ingredient For:
-- [Chunkium Boots](#Chunkium-Boots)
-- [Chunkium Helmet](#Chunkium-Helmet)
-- [Chunkium Pants](#Chunkium-Pants)
-- [Chunkium Chestplate](#Chunkium-Chestplate)
-- [Chunky Hammer](#Chunky-Hammer)
+- [Chunkium Boots](#chunkium-boots)
+- [Chunkium Helmet](#chunkium-helmet)
+- [Chunkium Pants](#chunkium-pants)
+- [Chunkium Chestplate](#chunkium-chestplate)
+- [Chunky Hammer](#chunky-hammer)
 
 ---
 
@@ -3048,7 +3050,7 @@
 - Rarity: Rare
 - Stackable: No
 - +4 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#chunkium-armor) (<i>Full set gives 60% increased attack length</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -3057,7 +3059,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Boots
-- 5 [Chunkium bar](#Chunkium-bar)
+- 5 [Chunkium bar](#chunkium-bar)
 
 ---
 
@@ -3070,7 +3072,7 @@
 - Rarity: Rare
 - Stackable: No
 - +15 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#chunkium-armor) (<i>Full set gives 60% increased attack length</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -3079,7 +3081,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Chestplate
-- 15 [Chunkium bar](#Chunkium-bar)
+- 15 [Chunkium bar](#chunkium-bar)
 
 ---
 
@@ -3092,7 +3094,7 @@
 - Rarity: Rare
 - Stackable: No
 - +6 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#chunkium-armor) (<i>Full set gives 60% increased attack length</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -3101,7 +3103,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Helmet
-- 5 [Chunkium bar](#Chunkium-bar)
+- 5 [Chunkium bar](#chunkium-bar)
 
 ---
 
@@ -3120,7 +3122,7 @@
 - Attack Range: 0
 - Sharpness: 0
 #### Ingredient For:
-- [Chunkium bar](#Chunkium-bar)
+- [Chunkium bar](#chunkium-bar)
 
 ---
 
@@ -3133,7 +3135,7 @@
 - Rarity: Rare
 - Stackable: No
 - +11 armor
-- Armor Set: [Chunkium Armor](#Chunkium-Armor) (<i>Full set gives 60% increased attack length</i>)
+- Armor Set: [Chunkium Armor](#chunkium-armor) (<i>Full set gives 60% increased attack length</i>)
 #### Weapon
 - Resource Damage: 1
 - Attack Damage: 1
@@ -3142,7 +3144,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Chunkium Pants
-- 15 [Chunkium bar](#Chunkium-bar)
+- 15 [Chunkium bar](#chunkium-bar)
 
 ---
 
@@ -3161,8 +3163,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Chunky Hammer
-- 1 [Hammer Shaft](#Hammer-Shaft)
-- 15 [Chunkium bar](#Chunkium-bar)
+- 1 [Hammer Shaft](#hammer-shaft)
+- 15 [Chunkium bar](#chunkium-bar)
 
 ---
 
@@ -3195,8 +3197,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Fire arrow
-- 1 [Fireball](#Fireball)
-- 1 [Dark Oak Wood](#Dark-Oak-Wood)
+- 1 [Fireball](#fireball)
+- 1 [Dark Oak Wood](#dark-oak-wood)
 
 ---
 
@@ -3211,7 +3213,7 @@
 - Projectile Speed: 1
 - Arrows per shot: 1
 #### Ingredient For:
-- [Fire arrow](#Fire-arrow)
+- [Fire arrow](#fire-arrow)
 
 ---
 
@@ -3248,9 +3250,9 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Gronks Sword
-- 1 [Blade](#Blade)
-- 10 [Dark Oak Wood](#Dark-Oak-Wood)
-- 1 [Sword Hilt](#Sword-Hilt)
+- 1 [Blade](#blade)
+- 10 [Dark Oak Wood](#dark-oak-wood)
+- 1 [Sword Hilt](#sword-hilt)
 
 ---
 
@@ -3282,7 +3284,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Chunky Hammer](#Chunky-Hammer)
+- [Chunky Hammer](#chunky-hammer)
 
 ---
 
@@ -3302,8 +3304,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Lightning Arrow
-- 1 [Lightningball](#Lightningball)
-- 1 [Dark Oak Wood](#Dark-Oak-Wood)
+- 1 [Lightningball](#lightningball)
+- 1 [Dark Oak Wood](#dark-oak-wood)
 
 ---
 
@@ -3318,7 +3320,7 @@
 - Projectile Speed: 1
 - Arrows per shot: 1
 #### Ingredient For:
-- [Lightning Arrow](#Lightning-Arrow)
+- [Lightning Arrow](#lightning-arrow)
 
 ---
 
@@ -3337,9 +3339,9 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Night Blade
-- 1 [Black Shard](#Black-Shard)
-- 15 [Dark Oak Wood](#Dark-Oak-Wood)
-- 10 [Obamium bar](#Obamium-bar)
+- 1 [Black Shard](#black-shard)
+- 15 [Dark Oak Wood](#dark-oak-wood)
+- 10 [Obamium bar](#obamium-bar)
 
 ---
 
@@ -3358,8 +3360,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Obamium Sword
-- 5 [Obamium bar](#Obamium-bar)
-- 5 [Dark Oak Wood](#Dark-Oak-Wood)
+- 5 [Obamium bar](#obamium-bar)
+- 5 [Dark Oak Wood](#dark-oak-wood)
 
 ---
 
@@ -3414,7 +3416,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Chiefs Spear](#Chiefs-Spear)
+- [Chiefs Spear](#chiefs-spear)
 
 ---
 
@@ -3433,7 +3435,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Gronks Sword](#Gronks-Sword)
+- [Gronks Sword](#gronks-sword)
 
 ---
 
@@ -3453,8 +3455,8 @@
 - Attack Range: 0
 - Sharpness: 0.8
 #### Crafting: Gives 4 Water Arrow
-- 1 [Waterball](#Waterball)
-- 1 [Dark Oak Wood](#Dark-Oak-Wood)
+- 1 [Waterball](#waterball)
+- 1 [Dark Oak Wood](#dark-oak-wood)
 
 ---
 
@@ -3469,7 +3471,7 @@
 - Projectile Speed: 1
 - Arrows per shot: 1
 #### Ingredient For:
-- [Water Arrow](#Water-Arrow)
+- [Water Arrow](#water-arrow)
 
 ---
 
@@ -3518,7 +3520,7 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Ingredient For:
-- [Wyvern Dagger](#Wyvern-Dagger)
+- [Wyvern Dagger](#wyvern-dagger)
 
 ---
 
@@ -3537,8 +3539,8 @@
 - Attack Range: 0
 - Sharpness: 1
 #### Crafting: Gives 1 Wyvern Dagger
-- 1 [Wyvern Claws](#Wyvern-Claws)
-- 10 [Oak Wood](#Oak-Wood)
+- 1 [Wyvern Claws](#wyvern-claws)
+- 10 [Oak Wood](#oak-wood)
 
 ---
 
@@ -3560,183 +3562,183 @@
 
 # Recipes
 ### Handcrafting Recipes
-- 10 [Wood](#Wood) => 1 [Workbench](#Workbench)
+- 10 [Wood](#wood) => 1 [Workbench](#workbench)
 ---
-### [Workbench](#Workbench) Recipes
-- 5 [Wood](#Wood) => 5 [Bark](#Bark)
-- 20 [Wood](#Wood) + 10 [Rock](#Rock) => 1 [Chest](#Chest)
-- 2 [Wood](#Wood) => 1 [Wood Doorway](#Wood-Doorway)
-- 2 [Wood](#Wood) => 1 [Wood Doorway](#Wood-Doorway)
-- 2 [Wood](#Wood) => 1 [Wood Floor](#Wood-Floor)
-- 2 [Wood](#Wood) => 1 [Wood Pole](#Wood-Pole)
-- 2 [Wood](#Wood) => 1 [Wood Pole](#Wood-Pole)
-- 2 [Wood](#Wood) => 1 [Wood Roof](#Wood-Roof)
-- 2 [Wood](#Wood) => 1 [Wood stairs](#Wood-stairs)
-- 2 [Wood](#Wood) => 1 [Wood stairs thinn](#Wood-stairs-thinn)
-- 2 [Wood](#Wood) => 1 [Wood Wall](#Wood-Wall)
-- 2 [Wood](#Wood) => 1 [Wood Wall Half](#Wood-Wall-Half)
-- 2 [Wood](#Wood) => 1 [Wood Wall Tilted](#Wood-Wall-Tilted)
-- 2 [Wood](#Wood) + 1 [Coal](#Coal) => 5 [Torch](#Torch)
-- 1 [Wood](#Wood) => 1 [Bowl](#Bowl)
-- 5 [Wheat](#Wheat) => 1 [Dough](#Dough)
-- 5 [Iron bar](#Iron-bar) + 15 [Rock](#Rock) => 1 [Anvil](#Anvil)
-- 10 [Wood](#Wood) + 10 [Rock](#Rock) => 1 [Cauldron](#Cauldron)
-- 25 [Birch Wood](#Birch-Wood) + 10 [Flint](#Flint) => 1 [Fletching Table](#Fletching-Table)
-- 15 [Rock](#Rock) => 1 [Furnace](#Furnace)
-- 5 [Wood](#Wood) + 5 [Bark](#Bark) => 1 [Wood Axe](#Wood-Axe)
-- 10 [Wood](#Wood) + 1 [Rope](#Rope) => 1 [Wood Bow](#Wood-Bow)
-- 5 [Wood](#Wood) + 5 [Bark](#Bark) => 1 [Wood Pickaxe](#Wood-Pickaxe)
-- 10 [Wheat](#Wheat) + 10 [Bark](#Bark) => 2 [Rope](#Rope)
-- 2 [Wood](#Wood) + 1 [Flint](#Flint) => 4 [Flint Arrow](#Flint-Arrow)
+### [Workbench](#workbench) Recipes
+- 5 [Wood](#wood) => 5 [Bark](#bark)
+- 20 [Wood](#wood) + 10 [Rock](#rock) => 1 [Chest](#chest)
+- 2 [Wood](#wood) => 1 [Wood Doorway](#wood-doorway)
+- 2 [Wood](#wood) => 1 [Wood Doorway](#wood-doorway)
+- 2 [Wood](#wood) => 1 [Wood Floor](#wood-floor)
+- 2 [Wood](#wood) => 1 [Wood Pole](#wood-pole)
+- 2 [Wood](#wood) => 1 [Wood Pole](#wood-pole)
+- 2 [Wood](#wood) => 1 [Wood Roof](#wood-roof)
+- 2 [Wood](#wood) => 1 [Wood stairs](#wood-stairs)
+- 2 [Wood](#wood) => 1 [Wood stairs thinn](#wood-stairs-thinn)
+- 2 [Wood](#wood) => 1 [Wood Wall](#wood-wall)
+- 2 [Wood](#wood) => 1 [Wood Wall Half](#wood-wall-half)
+- 2 [Wood](#wood) => 1 [Wood Wall Tilted](#wood-wall-tilted)
+- 2 [Wood](#wood) + 1 [Coal](#coal) => 5 [Torch](#torch)
+- 1 [Wood](#wood) => 1 [Bowl](#bowl)
+- 5 [Wheat](#wheat) => 1 [Dough](#dough)
+- 5 [Iron bar](#iron-bar) + 15 [Rock](#rock) => 1 [Anvil](#anvil)
+- 10 [Wood](#wood) + 10 [Rock](#rock) => 1 [Cauldron](#cauldron)
+- 25 [Birch Wood](#birch-wood) + 10 [Flint](#flint) => 1 [Fletching Table](#fletching-table)
+- 15 [Rock](#rock) => 1 [Furnace](#furnace)
+- 5 [Wood](#wood) + 5 [Bark](#bark) => 1 [Wood Axe](#wood-axe)
+- 10 [Wood](#wood) + 1 [Rope](#rope) => 1 [Wood Bow](#wood-bow)
+- 5 [Wood](#wood) + 5 [Bark](#bark) => 1 [Wood Pickaxe](#wood-pickaxe)
+- 10 [Wheat](#wheat) + 10 [Bark](#bark) => 2 [Rope](#rope)
+- 2 [Wood](#wood) + 1 [Flint](#flint) => 4 [Flint Arrow](#flint-arrow)
 ---
-### [Anvil](#Anvil) Recipes
-- 1 [Gold bar](#Gold-bar) => 5 [Coin](#Coin)
-- 5 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Boots](#Adamantite-Boots)
-- 5 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Boots](#Chunkium-Boots)
-- 5 [Gold bar](#Gold-bar) => 1 [Gold Boots](#Gold-Boots)
-- 5 [Mithril bar](#Mithril-bar) => 1 [Mithril Boots](#Mithril-Boots)
-- 5 [Obamium bar](#Obamium-bar) => 1 [Obamium Boots](#Obamium-Boots)
-- 5 [Iron bar](#Iron-bar) => 1 [Steel Boots](#Steel-Boots)
-- 5 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Helmet](#Adamantite-Helmet)
-- 5 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Helmet](#Chunkium-Helmet)
-- 5 [Gold bar](#Gold-bar) => 1 [Gold Helmet](#Gold-Helmet)
-- 5 [Mithril bar](#Mithril-bar) => 1 [Mithril Helmet](#Mithril-Helmet)
-- 5 [Obamium bar](#Obamium-bar) => 1 [Obamium Helmet](#Obamium-Helmet)
-- 5 [Iron bar](#Iron-bar) => 1 [Steel Helmet](#Steel-Helmet)
-- 15 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Pants](#Adamantite-Pants)
-- 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Pants](#Chunkium-Pants)
-- 15 [Gold bar](#Gold-bar) => 1 [Gold Pants](#Gold-Pants)
-- 15 [Mithril bar](#Mithril-bar) => 1 [Mithril Pants](#Mithril-Pants)
-- 15 [Obamium bar](#Obamium-bar) => 1 [Obamium Pants](#Obamium-Pants)
-- 15 [Iron bar](#Iron-bar) => 1 [Steel Pants](#Steel-Pants)
-- 15 [Adamantite bar](#Adamantite-bar) => 1 [Adamantite Chestplate](#Adamantite-Chestplate)
-- 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunkium Chestplate](#Chunkium-Chestplate)
-- 15 [Gold bar](#Gold-bar) => 1 [Gold Chestplate](#Gold-Chestplate)
-- 20 [Mithril bar](#Mithril-bar) => 1 [Mithril Chestplate](#Mithril-Chestplate)
-- 15 [Obamium bar](#Obamium-bar) => 1 [Obamium Chestplate](#Obamium-Chestplate)
-- 20 [Iron bar](#Iron-bar) => 1 [Steel Chestplate](#Steel-Chestplate)
-- 5 [Adamantite bar](#Adamantite-bar) + 5 [Bark](#Bark) + 10 [Oak Wood](#Oak-Wood) => 1 [Adamantite Axe](#Adamantite-Axe)
-- 5 [Gold bar](#Gold-bar) + 5 [Bark](#Bark) + 10 [Wood](#Wood) => 1 [Gold Axe](#Gold-Axe)
-- 5 [Mithril bar](#Mithril-bar) + 5 [Bark](#Bark) + 10 [Fir Wood](#Fir-Wood) => 1 [Mithril Axe](#Mithril-Axe)
-- 5 [Iron bar](#Iron-bar) + 5 [Bark](#Bark) + 10 [Birch Wood](#Birch-Wood) => 1 [Steel Axe](#Steel-Axe)
-- 5 [Adamantite bar](#Adamantite-bar) + 5 [Bark](#Bark) + 10 [Oak Wood](#Oak-Wood) => 1 [Adamantite Pickaxe](#Adamantite-Pickaxe)
-- 5 [Gold bar](#Gold-bar) + 5 [Bark](#Bark) + 5 [Wood](#Wood) => 1 [Gold Pickaxe](#Gold-Pickaxe)
-- 5 [Mithril bar](#Mithril-bar) + 5 [Bark](#Bark) + 10 [Fir Wood](#Fir-Wood) => 1 [Mithril Pickaxe](#Mithril-Pickaxe)
-- 5 [Iron bar](#Iron-bar) + 5 [Bark](#Bark) + 10 [Birch Wood](#Birch-Wood) => 1 [Steel Pickaxe](#Steel-Pickaxe)
-- 5 [Adamantite bar](#Adamantite-bar) + 5 [Oak Wood](#Oak-Wood) => 1 [Adamantite Sword](#Adamantite-Sword)
-- 5 [Gold bar](#Gold-bar) + 5 [Wood](#Wood) => 1 [Gold Sword](#Gold-Sword)
-- 5 [Mithril bar](#Mithril-bar) + 5 [Fir Wood](#Fir-Wood) => 1 [Mithril Sword](#Mithril-Sword)
-- 5 [Obamium bar](#Obamium-bar) + 5 [Dark Oak Wood](#Dark-Oak-Wood) => 1 [Obamium Sword](#Obamium-Sword)
-- 7 [Iron bar](#Iron-bar) + 5 [Birch Wood](#Birch-Wood) => 1 [Steel Sword](#Steel-Sword)
-- 1 [Spear Tip](#Spear-Tip) + 15 [Dark Oak Wood](#Dark-Oak-Wood) => 1 [Chiefs Spear](#Chiefs-Spear)
-- 1 [Hammer Shaft](#Hammer-Shaft) + 15 [Chunkium bar](#Chunkium-bar) => 1 [Chunky Hammer](#Chunky-Hammer)
-- 1 [Blade](#Blade) + 10 [Dark Oak Wood](#Dark-Oak-Wood) + 1 [Sword Hilt](#Sword-Hilt) => 1 [Gronks Sword](#Gronks-Sword)
-- 1 [Black Shard](#Black-Shard) + 15 [Dark Oak Wood](#Dark-Oak-Wood) + 10 [Obamium bar](#Obamium-bar) => 1 [Night Blade](#Night-Blade)
-- 1 [Wyvern Claws](#Wyvern-Claws) + 10 [Oak Wood](#Oak-Wood) => 1 [Wyvern Dagger](#Wyvern-Dagger)
+### [Anvil](#anvil) Recipes
+- 1 [Gold bar](#gold-bar) => 5 [Coin](#coin)
+- 5 [Adamantite bar](#adamantite-bar) => 1 [Adamantite Boots](#adamantite-boots)
+- 5 [Chunkium bar](#chunkium-bar) => 1 [Chunkium Boots](#chunkium-boots)
+- 5 [Gold bar](#gold-bar) => 1 [Gold Boots](#gold-boots)
+- 5 [Mithril bar](#mithril-bar) => 1 [Mithril Boots](#mithril-boots)
+- 5 [Obamium bar](#obamium-bar) => 1 [Obamium Boots](#obamium-boots)
+- 5 [Iron bar](#iron-bar) => 1 [Steel Boots](#steel-boots)
+- 5 [Adamantite bar](#adamantite-bar) => 1 [Adamantite Helmet](#adamantite-helmet)
+- 5 [Chunkium bar](#chunkium-bar) => 1 [Chunkium Helmet](#chunkium-helmet)
+- 5 [Gold bar](#gold-bar) => 1 [Gold Helmet](#gold-helmet)
+- 5 [Mithril bar](#mithril-bar) => 1 [Mithril Helmet](#mithril-helmet)
+- 5 [Obamium bar](#obamium-bar) => 1 [Obamium Helmet](#obamium-helmet)
+- 5 [Iron bar](#iron-bar) => 1 [Steel Helmet](#steel-helmet)
+- 15 [Adamantite bar](#adamantite-bar) => 1 [Adamantite Pants](#adamantite-pants)
+- 15 [Chunkium bar](#chunkium-bar) => 1 [Chunkium Pants](#chunkium-pants)
+- 15 [Gold bar](#gold-bar) => 1 [Gold Pants](#gold-pants)
+- 15 [Mithril bar](#mithril-bar) => 1 [Mithril Pants](#mithril-pants)
+- 15 [Obamium bar](#obamium-bar) => 1 [Obamium Pants](#obamium-pants)
+- 15 [Iron bar](#iron-bar) => 1 [Steel Pants](#steel-pants)
+- 15 [Adamantite bar](#adamantite-bar) => 1 [Adamantite Chestplate](#adamantite-chestplate)
+- 15 [Chunkium bar](#chunkium-bar) => 1 [Chunkium Chestplate](#chunkium-chestplate)
+- 15 [Gold bar](#gold-bar) => 1 [Gold Chestplate](#gold-chestplate)
+- 20 [Mithril bar](#mithril-bar) => 1 [Mithril Chestplate](#mithril-chestplate)
+- 15 [Obamium bar](#obamium-bar) => 1 [Obamium Chestplate](#obamium-chestplate)
+- 20 [Iron bar](#iron-bar) => 1 [Steel Chestplate](#steel-chestplate)
+- 5 [Adamantite bar](#adamantite-bar) + 5 [Bark](#bark) + 10 [Oak Wood](#oak-wood) => 1 [Adamantite Axe](#adamantite-axe)
+- 5 [Gold bar](#gold-bar) + 5 [Bark](#bark) + 10 [Wood](#wood) => 1 [Gold Axe](#gold-axe)
+- 5 [Mithril bar](#mithril-bar) + 5 [Bark](#bark) + 10 [Fir Wood](#fir-wood) => 1 [Mithril Axe](#mithril-axe)
+- 5 [Iron bar](#iron-bar) + 5 [Bark](#bark) + 10 [Birch Wood](#birch-wood) => 1 [Steel Axe](#steel-axe)
+- 5 [Adamantite bar](#adamantite-bar) + 5 [Bark](#bark) + 10 [Oak Wood](#oak-wood) => 1 [Adamantite Pickaxe](#adamantite-pickaxe)
+- 5 [Gold bar](#gold-bar) + 5 [Bark](#bark) + 5 [Wood](#wood) => 1 [Gold Pickaxe](#gold-pickaxe)
+- 5 [Mithril bar](#mithril-bar) + 5 [Bark](#bark) + 10 [Fir Wood](#fir-wood) => 1 [Mithril Pickaxe](#mithril-pickaxe)
+- 5 [Iron bar](#iron-bar) + 5 [Bark](#bark) + 10 [Birch Wood](#birch-wood) => 1 [Steel Pickaxe](#steel-pickaxe)
+- 5 [Adamantite bar](#adamantite-bar) + 5 [Oak Wood](#oak-wood) => 1 [Adamantite Sword](#adamantite-sword)
+- 5 [Gold bar](#gold-bar) + 5 [Wood](#wood) => 1 [Gold Sword](#gold-sword)
+- 5 [Mithril bar](#mithril-bar) + 5 [Fir Wood](#fir-wood) => 1 [Mithril Sword](#mithril-sword)
+- 5 [Obamium bar](#obamium-bar) + 5 [Dark Oak Wood](#dark-oak-wood) => 1 [Obamium Sword](#obamium-sword)
+- 7 [Iron bar](#iron-bar) + 5 [Birch Wood](#birch-wood) => 1 [Steel Sword](#steel-sword)
+- 1 [Spear Tip](#spear-tip) + 15 [Dark Oak Wood](#dark-oak-wood) => 1 [Chiefs Spear](#chiefs-spear)
+- 1 [Hammer Shaft](#hammer-shaft) + 15 [Chunkium bar](#chunkium-bar) => 1 [Chunky Hammer](#chunky-hammer)
+- 1 [Blade](#blade) + 10 [Dark Oak Wood](#dark-oak-wood) + 1 [Sword Hilt](#sword-hilt) => 1 [Gronks Sword](#gronks-sword)
+- 1 [Black Shard](#black-shard) + 15 [Dark Oak Wood](#dark-oak-wood) + 10 [Obamium bar](#obamium-bar) => 1 [Night Blade](#night-blade)
+- 1 [Wyvern Claws](#wyvern-claws) + 10 [Oak Wood](#oak-wood) => 1 [Wyvern Dagger](#wyvern-dagger)
 ---
-### [Fletching Table](#Fletching-Table) Recipes
-- 5 [Wolfskin](#Wolfskin) + 5 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Boots](#Wolfskin-Boots)
-- 5 [Wolfskin](#Wolfskin) + 5 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Helmet](#Wolfskin-Helmet)
-- 15 [Wolfskin](#Wolfskin) + 15 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Pants](#Wolfskin-Pants)
-- 20 [Wolfskin](#Wolfskin) + 20 [Flax Fibers](#Flax-Fibers) => 1 [Wolfskin Chestplate](#Wolfskin-Chestplate)
-- 1 [Flax](#Flax) => 1 [Flax Fibers](#Flax-Fibers)
-- 5 [Oak Wood](#Oak-Wood) + 1 [Rope](#Rope) => 1 [Oak Bow](#Oak-Bow)
-- 10 [Birch Wood](#Birch-Wood) + 1 [Rope](#Rope) => 1 [Birch bow](#Birch-bow)
-- 10 [Fir Wood](#Fir-Wood) + 1 [Rope](#Rope) => 1 [Fir bow](#Fir-bow)
-- 1 [Ancient Bone](#Ancient-Bone) + 1 [Rope](#Rope) => 1 [Ancient Bow](#Ancient-Bow)
-- 2 [Oak Wood](#Oak-Wood) + 1 [Adamantite bar](#Adamantite-bar) => 4 [Adamantite Arrow](#Adamantite-Arrow)
-- 1 [Fireball](#Fireball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Fire arrow](#Fire-arrow)
-- 1 [Lightningball](#Lightningball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Lightning Arrow](#Lightning-Arrow)
-- 2 [Fir Wood](#Fir-Wood) + 1 [Mithril bar](#Mithril-bar) => 4 [Mithril Arrow](#Mithril-Arrow)
-- 2 [Birch Wood](#Birch-Wood) + 1 [Iron bar](#Iron-bar) => 4 [Steel Arrow](#Steel-Arrow)
-- 1 [Waterball](#Waterball) + 1 [Dark Oak Wood](#Dark-Oak-Wood) => 4 [Water Arrow](#Water-Arrow)
+### [Fletching Table](#fletching-table) Recipes
+- 5 [Wolfskin](#wolfskin) + 5 [Flax Fibers](#flax-fibers) => 1 [Wolfskin Boots](#wolfskin-boots)
+- 5 [Wolfskin](#wolfskin) + 5 [Flax Fibers](#flax-fibers) => 1 [Wolfskin Helmet](#wolfskin-helmet)
+- 15 [Wolfskin](#wolfskin) + 15 [Flax Fibers](#flax-fibers) => 1 [Wolfskin Pants](#wolfskin-pants)
+- 20 [Wolfskin](#wolfskin) + 20 [Flax Fibers](#flax-fibers) => 1 [Wolfskin Chestplate](#wolfskin-chestplate)
+- 1 [Flax](#flax) => 1 [Flax Fibers](#flax-fibers)
+- 5 [Oak Wood](#oak-wood) + 1 [Rope](#rope) => 1 [Oak Bow](#oak-bow)
+- 10 [Birch Wood](#birch-wood) + 1 [Rope](#rope) => 1 [Birch bow](#birch-bow)
+- 10 [Fir Wood](#fir-wood) + 1 [Rope](#rope) => 1 [Fir bow](#fir-bow)
+- 1 [Ancient Bone](#ancient-bone) + 1 [Rope](#rope) => 1 [Ancient Bow](#ancient-bow)
+- 2 [Oak Wood](#oak-wood) + 1 [Adamantite bar](#adamantite-bar) => 4 [Adamantite Arrow](#adamantite-arrow)
+- 1 [Fireball](#fireball) + 1 [Dark Oak Wood](#dark-oak-wood) => 4 [Fire arrow](#fire-arrow)
+- 1 [Lightningball](#lightningball) + 1 [Dark Oak Wood](#dark-oak-wood) => 4 [Lightning Arrow](#lightning-arrow)
+- 2 [Fir Wood](#fir-wood) + 1 [Mithril bar](#mithril-bar) => 4 [Mithril Arrow](#mithril-arrow)
+- 2 [Birch Wood](#birch-wood) + 1 [Iron bar](#iron-bar) => 4 [Steel Arrow](#steel-arrow)
+- 1 [Waterball](#waterball) + 1 [Dark Oak Wood](#dark-oak-wood) => 4 [Water Arrow](#water-arrow)
 ---
-### [Cauldron](#Cauldron) Recipes
-- 1 [Dough](#Dough) => [Bread](#Bread) (5s)
-- 1 [Raw Meat](#Raw-Meat) => [Cooked Meat](#Cooked-Meat) (5s)
-- 1 [Bowl](#Bowl) + 1 [Red Apple](#Red-Apple) + 1 [Dough](#Dough) => [Apple Pie](#Apple-Pie) (5s)
-- 1 [Bowl](#Bowl) + 1 [Raw Meat](#Raw-Meat) + 1 [Dough](#Dough) => [Meat Pie](#Meat-Pie) (5s)
-- 1 [Bowl](#Bowl) + 1 [Raw Meat](#Raw-Meat) => [Meat Soup](#Meat-Soup) (5s)
-- 1 [Bowl](#Bowl) + 1 [Sugon Shroom](#Sugon-Shroom) => [Purple Soup](#Purple-Soup) (5s)
-- 1 [Bowl](#Bowl) + 1 [Gulpon Shroom](#Gulpon-Shroom) => [Red Soup](#Red-Soup) (5s)
-- 1 [Bowl](#Bowl) + 1 [Slurbon Shroom](#Slurbon-Shroom) => [Weird Soup](#Weird-Soup) (5s)
-- 1 [Bowl](#Bowl) + 1 [Ligon Shroom](#Ligon-Shroom) => [Yellow Soup](#Yellow-Soup) (5s)
+### [Cauldron](#cauldron) Recipes
+- 1 [Dough](#dough) => [Bread](#bread) (5s)
+- 1 [Raw Meat](#raw-meat) => [Cooked Meat](#cooked-meat) (5s)
+- 1 [Bowl](#bowl) + 1 [Red Apple](#red-apple) + 1 [Dough](#dough) => [Apple Pie](#apple-pie) (5s)
+- 1 [Bowl](#bowl) + 1 [Raw Meat](#raw-meat) + 1 [Dough](#dough) => [Meat Pie](#meat-pie) (5s)
+- 1 [Bowl](#bowl) + 1 [Raw Meat](#raw-meat) => [Meat Soup](#meat-soup) (5s)
+- 1 [Bowl](#bowl) + 1 [Sugon Shroom](#sugon-shroom) => [Purple Soup](#purple-soup) (5s)
+- 1 [Bowl](#bowl) + 1 [Gulpon Shroom](#gulpon-shroom) => [Red Soup](#red-soup) (5s)
+- 1 [Bowl](#bowl) + 1 [Slurbon Shroom](#slurbon-shroom) => [Weird Soup](#weird-soup) (5s)
+- 1 [Bowl](#bowl) + 1 [Ligon Shroom](#ligon-shroom) => [Yellow Soup](#yellow-soup) (5s)
 ---
-### [Furnace](#Furnace) Recipes
-- [Adamantite Ore](#Adamantite-Ore) => [Adamantite bar](#Adamantite-bar) (15s)
-- [Chunkium Ore](#Chunkium-Ore) => [Chunkium bar](#Chunkium-bar) (23s)
-- [Gold Ore](#Gold-Ore) => [Gold bar](#Gold-bar) (4s)
-- [Iron Ore](#Iron-Ore) => [Iron bar](#Iron-bar) (6s)
-- [Mithril Ore](#Mithril-Ore) => [Mithril bar](#Mithril-bar) (10s)
-- [Obamium Ore](#Obamium-Ore) => [Obamium bar](#Obamium-bar) (15s)
+### [Furnace](#furnace) Recipes
+- [Adamantite Ore](#adamantite-ore) => [Adamantite bar](#adamantite-bar) (15s)
+- [Chunkium Ore](#chunkium-ore) => [Chunkium bar](#chunkium-bar) (23s)
+- [Gold Ore](#gold-ore) => [Gold bar](#gold-bar) (4s)
+- [Iron Ore](#iron-ore) => [Iron bar](#iron-bar) (6s)
+- [Mithril Ore](#mithril-ore) => [Mithril bar](#mithril-bar) (10s)
+- [Obamium Ore](#obamium-ore) => [Obamium bar](#obamium-bar) (15s)
 
 # Armor Sets
 ### Chunkium Armor
 *<i>Full set gives 60% increased attack length</i>*
-- [Chunkium Helmet](#Chunkium-Helmet)
-- [Chunkium Chestplate](#Chunkium-Chestplate)
-- [Chunkium Pants](#Chunkium-Pants)
-- [Chunkium Boots](#Chunkium-Boots)
+- [Chunkium Helmet](#chunkium-helmet)
+- [Chunkium Chestplate](#chunkium-chestplate)
+- [Chunkium Pants](#chunkium-pants)
+- [Chunkium Boots](#chunkium-boots)
 ### Wolfskin Armor
 *<i>Full set gives 50% speed increase</i>*
-- [Wolfskin Helmet](#Wolfskin-Helmet)
-- [Wolfskin Chestplate](#Wolfskin-Chestplate)
-- [Wolfskin Pants](#Wolfskin-Pants)
-- [Wolfskin Boots](#Wolfskin-Boots)
+- [Wolfskin Helmet](#wolfskin-helmet)
+- [Wolfskin Chestplate](#wolfskin-chestplate)
+- [Wolfskin Pants](#wolfskin-pants)
+- [Wolfskin Boots](#wolfskin-boots)
 
 # Powerups by ID
-0. [Blue Pill](#Blue-Pill)
-0. [Red Pill](#Red-Pill)
-1. [Bulldozer](#Bulldozer)
-1. [Dracula](#Dracula)
-1. [Horseshoe](#Horseshoe)
-1. [Janniks Frog](#Janniks-Frog)
-1. [Piggybank](#Piggybank)
-1. [Crimson Dagger](#Crimson-Dagger)
-2. [Orange Juice](#Orange-Juice)
-3. [Dumbbell](#Dumbbell)
-3. [Peanut Butter](#Peanut-Butter)
-5. [Adrenaline](#Adrenaline)
-6. [Jetpack](#Jetpack)
-6. [Sneaker](#Sneaker)
-7. [Spooo Bean](#Spooo-Bean)
-7. [Broccoli](#Broccoli)
-7. [Robin Hood Hat](#Robin-Hood-Hat)
-8. [Berserk](#Berserk)
-8. [Checkered Shirt](#Checkered-Shirt)
-8. [Enforcer](#Enforcer)
-8. [Knuts Hammer](#Knuts-Hammer)
-8. [Danis Milk](#Danis-Milk)
-8. [Sniper Scope](#Sniper-Scope)
-8. [Wings of Glory](#Wings-of-Glory)
-17. [Juice](#Juice)
+0. [Blue Pill](#blue-pill)
+0. [Red Pill](#red-pill)
+1. [Bulldozer](#bulldozer)
+1. [Dracula](#dracula)
+1. [Horseshoe](#horseshoe)
+1. [Janniks Frog](#janniks-frog)
+1. [Piggybank](#piggybank)
+1. [Crimson Dagger](#crimson-dagger)
+2. [Orange Juice](#orange-juice)
+3. [Dumbbell](#dumbbell)
+3. [Peanut Butter](#peanut-butter)
+5. [Adrenaline](#adrenaline)
+6. [Jetpack](#jetpack)
+6. [Sneaker](#sneaker)
+7. [Spooo Bean](#spooo-bean)
+7. [Broccoli](#broccoli)
+7. [Robin Hood Hat](#robin-hood-hat)
+8. [Berserk](#berserk)
+8. [Checkered Shirt](#checkered-shirt)
+8. [Enforcer](#enforcer)
+8. [Knuts Hammer](#knuts-hammer)
+8. [Danis Milk](#danis-milk)
+8. [Sniper Scope](#sniper-scope)
+8. [Wings of Glory](#wings-of-glory)
+17. [Juice](#juice)
 
 # Powerups by name
-- [Adrenaline](#Adrenaline)
-- [Berserk](#Berserk)
-- [Blue Pill](#Blue-Pill)
-- [Broccoli](#Broccoli)
-- [Bulldozer](#Bulldozer)
-- [Checkered Shirt](#Checkered-Shirt)
-- [Crimson Dagger](#Crimson-Dagger)
-- [Danis Milk](#Danis-Milk)
-- [Dracula](#Dracula)
-- [Dumbbell](#Dumbbell)
-- [Enforcer](#Enforcer)
-- [Horseshoe](#Horseshoe)
-- [Janniks Frog](#Janniks-Frog)
-- [Jetpack](#Jetpack)
-- [Juice](#Juice)
-- [Knuts Hammer](#Knuts-Hammer)
-- [Orange Juice](#Orange-Juice)
-- [Peanut Butter](#Peanut-Butter)
-- [Piggybank](#Piggybank)
-- [Red Pill](#Red-Pill)
-- [Robin Hood Hat](#Robin-Hood-Hat)
-- [Sneaker](#Sneaker)
-- [Sniper Scope](#Sniper-Scope)
-- [Spooo Bean](#Spooo-Bean)
-- [Wings of Glory](#Wings-of-Glory)
+- [Adrenaline](#adrenaline)
+- [Berserk](#berserk)
+- [Blue Pill](#blue-pill)
+- [Broccoli](#broccoli)
+- [Bulldozer](#bulldozer)
+- [Checkered Shirt](#checkered-shirt)
+- [Crimson Dagger](#crimson-dagger)
+- [Danis Milk](#danis-milk)
+- [Dracula](#dracula)
+- [Dumbbell](#dumbbell)
+- [Enforcer](#enforcer)
+- [Horseshoe](#horseshoe)
+- [Janniks Frog](#janniks-frog)
+- [Jetpack](#jetpack)
+- [Juice](#juice)
+- [Knuts Hammer](#knuts-hammer)
+- [Orange Juice](#orange-juice)
+- [Peanut Butter](#peanut-butter)
+- [Piggybank](#piggybank)
+- [Red Pill](#red-pill)
+- [Robin Hood Hat](#robin-hood-hat)
+- [Sneaker](#sneaker)
+- [Sniper Scope](#sniper-scope)
+- [Spooo Bean](#spooo-bean)
+- [Wings of Glory](#wings-of-glory)
 
 # Powerups
 ## Cumulative Distribution Information
@@ -3759,7 +3761,7 @@ This function can be graphed using a tool like [desmos](https://www.desmos.com/c
 
 ### Blue Pill
 *Increase shield capacity*
-###### ![Blue-Pill]
+###### ![blue-pill]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -3772,7 +3774,7 @@ Every blue pill you have gives you +10 shield. There is no limit to this, other 
 
 ### Broccoli
 *+Health regeneration*
-###### ![Broccoli]
+###### ![broccoli]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -3785,7 +3787,7 @@ Broccoli gives you passive health regen over time. It does not consume any hunge
 
 ### Dumbbell
 *+Base strength*
-###### ![Dumbbell]
+###### ![dumbbell]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -3798,14 +3800,14 @@ The dumbbell effect adds to your strength multiplier. The strength has a base va
 
 ### Jetpack
 *To the moon*
-###### ![Jetpack]
+###### ![jetpack]
 
 <details>
 <summary> Boring nerd details </summary>
 
 This powerup increases the force that is applied to your player when you jump. In other words, it increases your jump height. Specifically, it multiplies the jump force by the result of a cumulative distribution function plus one, with a scale speed of 0.075 and a max value of 2.5. Here's the graph for that:
 
-[![Jetpack-image]][Jetpack-link]
+[![jetpack-image]][jetpack-link]
 
 And if you want the numbers, here's that too:
 
@@ -3872,14 +3874,14 @@ And if you want the numbers, here's that too:
 
 ### Orange Juice
 *+Attack speed*
-###### ![Orange-Juice]
+###### ![orange-juice]
 
 <details>
 <summary> Boring nerd details </summary>
 
 Orange Juice lets you attack faster. The attack speed is multiplied by Orange Juice cumulative distribution function, which has a scale speed of 0.12 and a max value of 1. Here's a graph of that:
 
-[![Orange-Juice-image]][Orange-Juice-link]
+[![orange-juice-image]][orange-juice-link]
 
 And here's the first couple values:
 
@@ -3916,7 +3918,7 @@ And here's the first couple values:
 
 ### Peanut Butter
 *+Stamina*
-###### ![Peanut-Butter]
+###### ![peanut-butter]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -3929,7 +3931,7 @@ The peanut butter effect is a linear multiplier to the stamina drain. With 0 pea
 
 ### Red Pill
 *Increase max hp*
-###### ![Red-Pill]
+###### ![red-pill]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -3942,7 +3944,7 @@ Every red pill you have gives you +10 hp. There is no limit to this, other than 
 
 ### Robin Hood Hat
 *Increased draw speed, arrows speed & damage*
-###### ![Robin-Hood-Hat]
+###### ![robin-hood-hat]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -3953,7 +3955,7 @@ Robin Hood Hat has a cumulative distribution function with a scale speed of 0.06
 - The force that is added to an arrow when you shoot it is always multiplied by the robin value
 - The damage that an arrow will deal when you fire it is always multiplied by the robin value
 
-[![Robin-Hood-Hat-image]][Robin-Hood-Hat-link]
+[![robin-hood-hat-image]][robin-hood-hat-link]
 
 0. 1x bow charge speed, arrow velocity, arrow damage
 1. 1.1x bow charge speed, arrow velocity, arrow damage
@@ -4028,14 +4030,14 @@ Robin Hood Hat has a cumulative distribution function with a scale speed of 0.06
 
 ### Sneaker
 *+Movement speed*
-###### ![Sneaker]
+###### ![sneaker]
 
 <details>
 <summary> Boring nerd details </summary>
 
 The sneaker makes you move faster. It doesn't actually make your acceleration faster or anything, it just multiplies the max speed before you stop accelerating. It also multiplies the counter movement, which is only when you're grounded and will bring you down to your max speed if you're moving above it. The sneaker has a cumulative distribution with a scale speed of 0.08 and a max value of 1.75, which is added to 1 as a base value. Here's the graph for that:
 
-[![Sneaker-image]][Sneaker-link]
+[![sneaker-image]][sneaker-link]
 
 And here are the first couple values:
 
@@ -4122,14 +4124,14 @@ And here are the first couple values:
 
 ### Spooo Bean
 *Hunger drains slower*
-###### ![Spooo-Bean]
+###### ![spooo-bean]
 
 <details>
 <summary> Boring nerd details </summary>
 
 Spooo Bean has a cumulative distribution function with a scale speed of 0.2 and max value of 0.5. The value is inverted to go from 1 instead of 0 (1 - x). This value is a multiplier for how much hunger is drained (so the cap, 0.5, is half hunger drain).
 
-[![Spooo-Bean-image]][Spooo-Bean-link]
+[![spooo-bean-image]][spooo-bean-link]
 
 0. 1x hunger drain
 1. 0.9x hunger drain
@@ -4154,7 +4156,7 @@ Spooo Bean has a cumulative distribution function with a scale speed of 0.2 and 
 
 ### Bulldozer
 *Chance to knock back enemies*
-###### ![Bulldozer]
+###### ![bulldozer]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4163,7 +4165,7 @@ Each mob has a "knockback threshold" which is a fraction, the amount of damage y
 
 The bulldozer powerup is has a cumulative distribution with a scale speed of 0.15 and a max value of 1. It is the chance you have to deal knockback, even if you did not deal the proper amount of damage. Here's a graph showing how that increases as you get more powerups:
 
-[![Bulldozer-image]][Bulldozer-link]
+[![bulldozer-image]][bulldozer-link]
 
 You will deal knockback to a mob if you dealt sufficient damage OR bulldozer got you lucky. At 50 bulldozers, you're practically guaranteed to always deal knockback, including to Big Chunk.
 
@@ -4232,7 +4234,7 @@ Here's the chances in percentages for the first couple values:
 
 ### Crimson Dagger
 *Lifesteal - Dealing damage heals you*
-###### ![Crimson-Dagger]
+###### ![crimson-dagger]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4243,7 +4245,7 @@ Healing only happens in integer numbers, so if the amount you should heal is not
 
 Here's the graph of how much lifesteal you get:
 
-[![Crimson-Dagger-image]][Crimson-Dagger-link]
+[![crimson-dagger-image]][crimson-dagger-link]
 
 And here are the first few numbers for that graph:
 
@@ -4325,14 +4327,14 @@ And here are the first few numbers for that graph:
 
 ### Danis Milk
 *Strong bones*
-###### ![Danis-Milk]
+###### ![danis-milk]
 
 <details>
 <summary> Boring nerd details </summary>
 
 Dani's Milk adds to your total armor count, which is like wearing armor, but without any armor.
 
-[![Danis-Milk-image]][Danis-Milk-link]
+[![danis-milk-image]][danis-milk-link]
 
 0. +0 armor
 1. +3.8 armor
@@ -4411,7 +4413,7 @@ Dani's Milk adds to your total armor count, which is like wearing armor, but wit
 
 ### Dracula
 *Permanently increase max hp on kill*
-###### ![Dracula]
+###### ![dracula]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4424,14 +4426,14 @@ Every time you get a kill, you get additional hp. Specifically, the amount of Dr
 
 ### Horseshoe
 *Increased chance to hit a critical strike*
-###### ![Horseshoe]
+###### ![horseshoe]
 
 <details>
 <summary> Boring nerd details </summary>
 
 This powerup determines how likely you are to perform critical damage. It has a base value of 10% (+0.1), and the additional chance is determined by the cumulative distribution function with a scale speed of 0.08 and max value of 0.9 (combined with the base value, equaling 100%). Here's a graph of that:
 
-[![Horseshoe-image]][Horseshoe-link]
+[![horseshoe-image]][horseshoe-link]
 
 Here's a precalculated list of these first couple values:
 
@@ -4538,14 +4540,14 @@ Here's a precalculated list of these first couple values:
 
 ### Janniks Frog
 *+1 Jump*
-###### ![Janniks-Frog]
+###### ![janniks-frog]
 
 <details>
 <summary> Boring nerd details </summary>
 
 Every time you get one of Jannik's Frogs, you gain 1 additonal jump. However many frogs you have (plus one, because you can jump even without any frogs) is how many times you can jump before hitting the ground. One frog gives you double jump, two frogs gives you triple jump, and there is no cap on the frogs other than the bounds of 32-bit integers.
 
-[![Janniks-Frog-screenshot]](https://discord.com/channels/820032685149782017/820037820243771492/850827222113452083)
+[![janniks-frog-screenshot]](https://discord.com/channels/820032685149782017/820037820243771492/850827222113452083)
 ###### obvious lie (message from [Jelly Drift Speedrunning Discord](https://discord.gg/C6Ae8srfC2))
 
 </details>
@@ -4554,14 +4556,14 @@ Every time you get one of Jannik's Frogs, you gain 1 additonal jump. However man
 
 ### Juice
 *Get juiced up when landing a crit*
-###### ![Juice]
+###### ![juice]
 
 <details>
 <summary> Boring nerd details </summary>
 
 Juice has a cumulative distribution function with a scale speed of 0.3 and a max value of 1. Whenever you hit an enemy with a weakness that matches one of your weapons' attack types, you will get "juiced up" which means multiplying your attack speed by the juice value plus 1. Honestly, this powerup is way worse than i expected. It's blue even! It's like OJ except not active all the time, it only is *slightly* more attack speed for less powerup, but they cap out at the same value!
 
-[![Juice-image]][Juice-link]
+[![juice-image]][juice-link]
 
 0. 1x attack speed when juiced up
 1. 1.3x attack speed when juiced up
@@ -4581,7 +4583,7 @@ Juice has a cumulative distribution function with a scale speed of 0.3 and a max
 
 ### Piggybank
 *I'm feeling lucky, time to <i>hog</i> all the loot*
-###### ![Piggybank]
+###### ![piggybank]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4590,7 +4592,7 @@ The Piggybank has a cumulative distribution function with a scale speed of 0.15 
 
 Here's the graph of that multiplier:
 
-[![Piggybank-image]][Piggybank-link]
+[![piggybank-image]][piggybank-link]
 
 And here are the first couple values:
 
@@ -4636,14 +4638,14 @@ And here are the first couple values:
 39. 2.25x loot multiplier
 40. 2.25x loot multiplier
 
-And also, if you were to slay as many pigs as Technoblade did in Hypixel Skyblock for his Piggybank-sword, but in Muck, the game would calculate you to get exactly 3x loot. WolframAlpha does the same, and gives you `3.` as the result (not `3`), whatever that means. Neither of these answers were satisfactory for me because this function doesn't ever actually hit the max value for any finite number as input, so i took to arbitrary-precision calculation and this is the result:
+And also, if you were to slay as many pigs as Technoblade did in Hypixel Skyblock for his piggybank-sword, but in Muck, the game would calculate you to get exactly 3x loot. WolframAlpha does the same, and gives you `3.` as the result (not `3`), whatever that means. Neither of these answers were satisfactory for me because this function doesn't ever actually hit the max value for any finite number as input, so i took to arbitrary-precision calculation and this is the result:
 
-[![Piggybank-sword]][Piggybank-calculator]
-
-
+[![piggybank-sword]][piggybank-calculator]
 
 
-[Piggybank-link]: https://www.desmos.com/Piggybank-calculator/xfdaugzvdc
+
+
+[piggybank-link]: https://www.desmos.com/piggybank-calculator/xfdaugzvdc
 
 </details>
 
@@ -4651,14 +4653,14 @@ And also, if you were to slay as many pigs as Technoblade did in Hypixel Skybloc
 
 ### Adrenaline
 *Falling below 30% boosts your stats*
-###### ![Adrenaline]
+###### ![adrenaline]
 
 <details>
 <summary> Boring nerd details </summary>
 
 The adrenaline boost is applied when you take damage, and as a result have less than 30% health. It lasts for 5 seconds and then has another 10 seconds cooldown before it can be activated again. When active, it multiplies the final result for your movement speed, stamina multiplier, and attack speed, by the adrenaline bonus. The adrenaline bonus is a cumulative distribution with a scale speed of 1 and a max value of 2, which is then added to 1 to get the final multiplier applied to the 3 aforementioned stats.
 
-[![Adrenaline-image]][Adrenaline-link]
+[![adrenaline-image]][adrenaline-link]
 
 And here's how that looks for the first couple values:
 
@@ -4675,7 +4677,7 @@ And here's how that looks for the first couple values:
 
 ### Berserk
 *The lower hp, the more damage*
-###### ![Berserk]
+###### ![berserk]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4688,7 +4690,7 @@ The berserk effect adds to your strength multiplier. The strength has a base val
 
 ### Checkered Shirt
 *Increase damage dealt to resources*
-###### ![Checkered-Shirt]
+###### ![checkered-shirt]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4697,8 +4699,8 @@ The checkered shirt has a cumulative distribution function with a scale speed of
 
 Here's the chart of how much additional damage you'll deal with checkered shirts (doesn't work with striped ones):
 
-[![Checkered-Shirt-image]][Checkered-Shirt-link]
-###### If you want a graph for versus mode, click the Checkered-Shirt-image and enable the blue line in the sidebar. It's the same curve though, just higher up, so you can also mentally add 1.75 to the Y axis on the graph above.
+[![checkered-shirt-image]][checkered-shirt-link]
+###### If you want a graph for versus mode, click the checkered-shirt-image and enable the blue line in the sidebar. It's the same curve though, just higher up, so you can also mentally add 1.75 to the Y axis on the graph above.
 
 And here are the first couple values if you want those numbers:
 
@@ -4735,18 +4737,18 @@ And here are the first couple values if you want those numbers:
 
 ### Enforcer
 *Deal more damage when moving faster*
-###### ![Enforcer]
+###### ![enforcer]
 
 <details>
 <summary> Boring nerd details </summary>
 
 Enforcer has a cumulative distribution function with a scale speed of 0.4 and a max value of 2. This value is multiplied by your velocity in u/s on all 3 axes (current velocity for melee, or at the time you fired an arrow for bows - for reference, you go about 8 u/s when walking, and 13 u/s when sprinting, without any powerups, and about 20 u/s when sprinting and jumping), and then it's divided by 20. The result is added to a base value of 1, which is the multiplier for how much damage you will deal. The numbers below are simplified to divide the max value 2 by 20 (because  that gives the same result).
 
-[![Enforcer-plain-image]][Enforcer-plain-link]
+[![enforcer-plain-image]][enforcer-plain-link]
 
 That isn't very helpful though. What's a unit? It's not very intuitive. Here's a graph that uses the velocities listed above to get a real multiplier, instead of just an equation:
 
-[![Enforcer-real-image]][Enforcer-real-link]
+[![enforcer-real-image]][enforcer-real-link]
 - Blue is walking
 - Green is running
 - Orange is jumping
@@ -4775,7 +4777,7 @@ That isn't very helpful though. What's a unit? It's not very intuitive. Here's a
 
 ### Knuts Hammer
 *And his hammer was electric*
-###### ![Knuts-Hammer]
+###### ![knuts-hammer]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4784,11 +4786,11 @@ Knut's Hammer has a chance of dealing more damage. The chance is a cumulative di
 
 Here's the graph of how likely you are to spawn such a cloud of lightning:
 
-[![Knuts-Hammer-chance-image]][Knuts-Hammer-chance-link]
+[![knuts-hammer-chance-image]][knuts-hammer-chance-link]
 
 And here's how much additional damage you will deal (multiplier of the original damage, plus the original damage)
 
-[![Knuts-Hammer-damage-image]][Knuts-Hammer-damage-link]
+[![knuts-hammer-damage-image]][knuts-hammer-damage-link]
 
 Here's how likely you are for the first few amounts of powerups you can get:
 
@@ -4860,7 +4862,7 @@ Here's how likely you are for the first few amounts of powerups you can get:
 
 ### Sniper Scope
 *Small chance on hit to deal chunky damage*
-###### ![Sniper-Scope]
+###### ![sniper-scope]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4868,13 +4870,13 @@ Here's how likely you are for the first few amounts of powerups you can get:
 Each sniper scope you collect gives you a higher chance to deal more damage.
 
 The more sniper scopes you have, the higher chance you have to deal additional damage from it. This caps out at 0.15 (15%) and has a scale speed of 0.14. Here's a graph of the chance to deal additonal damage:
-[![][Sniper-Scope-chance-image]][Sniper-Scope-chance-link]
+[![][sniper-scope-chance-image]][sniper-scope-chance-link]
 
 If you're lucky and get the additional damage, the actual amount of damage you deal is multiplied by up to 50x its original value. That function has a scale speed of 0.25, and here's the graph for that:
 
 ###### note that the first chance determines whether your damage is multiplied by this value or not, sometimes the sniper scope will do absolutely nothing for you
 
-[![Sniper-Scope-damage-image]][Sniper-Scope-damage-link]
+[![sniper-scope-damage-image]][sniper-scope-damage-link]
 
 And here is a precalculated list of the numbers for the first couple sniper scopes, if you'd rather have the current stats of your character than a graph of all of them:
 
@@ -4931,7 +4933,7 @@ And here is a precalculated list of the numbers for the first couple sniper scop
 
 ### Wings of Glory
 *Deal bonus damage while falling*
-###### ![Wings-of-Glory]
+###### ![wings-of-glory]
 
 <details>
 <summary> Boring nerd details </summary>
@@ -4940,7 +4942,7 @@ This powerup is only applied if you are falling when you use a melee weapon, or 
 
 This results in a maximum multiplier of 3.5x. Here's a graph showing that visually:
 
-[![Wings-of-Glory-image]][Wings-of-Glory-link]
+[![wings-of-glory-image]][wings-of-glory-link]
 
 And if you want the raw stats for your specific level, here are the first few values:
 
@@ -4981,13 +4983,13 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Blunt
 #### Loot Table
-- 100% chance to drop 25-50 [Rock](#Rock)
-- 80% chance to drop 10-25 [Iron Ore](#Iron-Ore)
-- 30% chance to drop 10-25 [Mithril Ore](#Mithril-Ore)
-- 100% chance to drop 50-100 [Coin](#Coin)
-- 50% chance to drop 5-20 [Chunkium Ore](#Chunkium-Ore)
-- 10% chance to drop 1-1 [Hammer Shaft](#Hammer-Shaft)
-- 33% chance to drop 1-1 [AncientCore](#AncientCore)
+- 100% chance to drop 25-50 [Rock](#rock)
+- 80% chance to drop 10-25 [Iron Ore](#iron-ore)
+- 30% chance to drop 10-25 [Mithril Ore](#mithril-ore)
+- 100% chance to drop 50-100 [Coin](#coin)
+- 50% chance to drop 5-20 [Chunkium Ore](#chunkium-ore)
+- 10% chance to drop 1-1 [Hammer Shaft](#hammer-shaft)
+- 33% chance to drop 1-1 [AncientCore](#ancientcore)
 
 ---
 
@@ -5005,12 +5007,12 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 50-100 [Coin](#Coin)
-- 40% chance to drop 5-15 [Oak Wood](#Oak-Wood)
-- 20% chance to drop 5-15 [Dark Oak Wood](#Dark-Oak-Wood)
-- 2.5% chance to drop 1-1 [Chiefs Spear](#Chiefs-Spear)
-- 33% chance to drop 1-1 [AncientCore](#AncientCore)
-- 10% chance to drop 1-1 [Spear Tip](#Spear-Tip)
+- 100% chance to drop 50-100 [Coin](#coin)
+- 40% chance to drop 5-15 [Oak Wood](#oak-wood)
+- 20% chance to drop 5-15 [Dark Oak Wood](#dark-oak-wood)
+- 2.5% chance to drop 1-1 [Chiefs Spear](#chiefs-spear)
+- 33% chance to drop 1-1 [AncientCore](#ancientcore)
+- 10% chance to drop 1-1 [Spear Tip](#spear-tip)
 
 ---
 
@@ -5019,14 +5021,14 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 50-100 [Coin](#Coin)
-- 40% chance to drop 5-15 [Oak Wood](#Oak-Wood)
-- 20% chance to drop 5-15 [Dark Oak Wood](#Dark-Oak-Wood)
-- 2.5% chance to drop 1-1 [Gronks Sword](#Gronks-Sword)
-- 33% chance to drop 1-1 [AncientCore](#AncientCore)
-- 10% chance to drop 1-1 [Ancient Bone](#Ancient-Bone)
-- 12% chance to drop 1-1 [Blade](#Blade)
-- 12% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
+- 100% chance to drop 50-100 [Coin](#coin)
+- 40% chance to drop 5-15 [Oak Wood](#oak-wood)
+- 20% chance to drop 5-15 [Dark Oak Wood](#dark-oak-wood)
+- 2.5% chance to drop 1-1 [Gronks Sword](#gronks-sword)
+- 33% chance to drop 1-1 [AncientCore](#ancientcore)
+- 10% chance to drop 1-1 [Ancient Bone](#ancient-bone)
+- 12% chance to drop 1-1 [Blade](#blade)
+- 12% chance to drop 1-1 [Sword Hilt](#sword-hilt)
 
 ---
 
@@ -5035,11 +5037,11 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 50-100 [Coin](#Coin)
-- 2% chance to drop 1-1 [Black Shard](#Black-Shard)
-- 15% chance to drop 1-1 [AncientCore](#AncientCore)
-- 5% chance to drop 5-10 [Ruby](#Ruby)
-- 1% chance to drop 5-10 [Obamium Ore](#Obamium-Ore)
+- 100% chance to drop 50-100 [Coin](#coin)
+- 2% chance to drop 1-1 [Black Shard](#black-shard)
+- 15% chance to drop 1-1 [AncientCore](#ancientcore)
+- 5% chance to drop 5-10 [Ruby](#ruby)
+- 1% chance to drop 5-10 [Obamium Ore](#obamium-ore)
 
 ---
 
@@ -5048,9 +5050,9 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Lightning
 #### Loot Table
-- 100% chance to drop 10-20 [Coin](#Coin)
-- 50% chance to drop 1-3 [Sugon Shroom](#Sugon-Shroom)
-- 5% chance to drop 4-8 [Waterball](#Waterball)
+- 100% chance to drop 10-20 [Coin](#coin)
+- 50% chance to drop 1-3 [Sugon Shroom](#sugon-shroom)
+- 5% chance to drop 4-8 [Waterball](#waterball)
 
 ---
 
@@ -5059,7 +5061,7 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 1-2 [Raw Meat](#Raw-Meat)
+- 100% chance to drop 1-2 [Raw Meat](#raw-meat)
 
 ---
 
@@ -5068,9 +5070,9 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Fire
 #### Loot Table
-- 100% chance to drop 10-20 [Coin](#Coin)
-- 50% chance to drop 1-3 [Ligon Shroom](#Ligon-Shroom)
-- 5% chance to drop 4-8 [Lightningball](#Lightningball)
+- 100% chance to drop 10-20 [Coin](#coin)
+- 50% chance to drop 1-3 [Ligon Shroom](#ligon-shroom)
+- 5% chance to drop 4-8 [Lightningball](#lightningball)
 
 ---
 
@@ -5079,9 +5081,9 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Water
 #### Loot Table
-- 100% chance to drop 10-20 [Coin](#Coin)
-- 50% chance to drop 1-3 [Gulpon Shroom](#Gulpon-Shroom)
-- 5% chance to drop 4-8 [Fireball](#Fireball)
+- 100% chance to drop 10-20 [Coin](#coin)
+- 50% chance to drop 1-3 [Gulpon Shroom](#gulpon-shroom)
+- 5% chance to drop 4-8 [Fireball](#fireball)
 
 ---
 
@@ -5090,12 +5092,12 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 6-12 [Coin](#Coin)
-- 25% chance to drop 5-10 [Wood](#Wood)
-- 1% chance to drop 1-1 [Ancient Bone](#Ancient-Bone)
-- 5% chance to drop 5-15 [Gold Ore](#Gold-Ore)
-- 0.1% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
-- 0.1% chance to drop 1-1 [Blade](#Blade)
+- 100% chance to drop 6-12 [Coin](#coin)
+- 25% chance to drop 5-10 [Wood](#wood)
+- 1% chance to drop 1-1 [Ancient Bone](#ancient-bone)
+- 5% chance to drop 5-15 [Gold Ore](#gold-ore)
+- 0.1% chance to drop 1-1 [Sword Hilt](#sword-hilt)
+- 0.1% chance to drop 1-1 [Blade](#blade)
 
 ---
 
@@ -5104,9 +5106,9 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Fire
 #### Loot Table
-- 100% chance to drop 5-15 [Coin](#Coin)
-- 50% chance to drop 2-4 [Wolfskin](#Wolfskin)
-- 0.1% chance to drop 1-1 [Wolf Claws](#Wolf-Claws)
+- 100% chance to drop 5-15 [Coin](#coin)
+- 50% chance to drop 2-4 [Wolfskin](#wolfskin)
+- 0.1% chance to drop 1-1 [Wolf Claws](#wolf-claws)
 
 ---
 
@@ -5115,10 +5117,10 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Blunt
 #### Loot Table
-- 100% chance to drop 2-4 [Rock](#Rock)
-- 10% chance to drop 1-2 [Iron Ore](#Iron-Ore)
-- 50% chance to drop 2-4 [Flint](#Flint)
-- 100% chance to drop 12-16 [Coin](#Coin)
+- 100% chance to drop 2-4 [Rock](#rock)
+- 10% chance to drop 1-2 [Iron Ore](#iron-ore)
+- 50% chance to drop 2-4 [Flint](#flint)
+- 100% chance to drop 12-16 [Coin](#coin)
 
 ---
 
@@ -5127,7 +5129,7 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 3-7 [Coin](#Coin)
+- 100% chance to drop 3-7 [Coin](#coin)
 
 ---
 
@@ -5136,12 +5138,12 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - None
 #### Loot Table
-- 100% chance to drop 6-12 [Coin](#Coin)
-- 25% chance to drop 2-5 [Wood](#Wood)
-- 20% chance to drop 2-5 [Rock](#Rock)
-- 15% chance to drop 1-2 [Iron bar](#Iron-bar)
-- 0.1% chance to drop 1-1 [Sword Hilt](#Sword-Hilt)
-- 0.1% chance to drop 1-1 [Blade](#Blade)
+- 100% chance to drop 6-12 [Coin](#coin)
+- 25% chance to drop 2-5 [Wood](#wood)
+- 20% chance to drop 2-5 [Rock](#rock)
+- 15% chance to drop 1-2 [Iron bar](#iron-bar)
+- 0.1% chance to drop 1-1 [Sword Hilt](#sword-hilt)
+- 0.1% chance to drop 1-1 [Blade](#blade)
 
 ---
 
@@ -5150,9 +5152,9 @@ Mobs have a base health. Depending on how the mob spawns, its real max health wi
 #### Weaknesses
 - Lightning
 #### Loot Table
-- 100% chance to drop 15-30 [Coin](#Coin)
-- 5% chance to drop 2-8 [Gold bar](#Gold-bar)
-- 1% chance to drop 1-1 [Wyvern Claws](#Wyvern-Claws)
+- 100% chance to drop 15-30 [Coin](#coin)
+- 5% chance to drop 2-8 [Gold bar](#gold-bar)
+- 1% chance to drop 1-1 [Wyvern Claws](#wyvern-claws)
 
 # Woodman Trades
 
@@ -5164,350 +5166,351 @@ When a woodman spawns, he only picks between 5 and 10 trades that you can buy fr
 
 ### Archer
 
-- 5x [Flint Arrow](#Flint-Arrow) (buys for 5 coins, sells for 2 coins)
-- 5x [Steel Arrow](#Steel-Arrow) (buys for 10 coins, sells for 5 coins)
-- 5x [Mithril Arrow](#Mithril-Arrow) (buys for 15 coins, sells for 7 coins)
-- 5x [Adamantite Arrow](#Adamantite-Arrow) (buys for 20 coins, sells for 10 coins)
-- 5x [Fire arrow](#Fire-arrow) (buys for 30 coins, sells for 15 coins)
-- 5x [Lightning Arrow](#Lightning-Arrow) (buys for 30 coins, sells for 15 coins)
-- 5x [Water Arrow](#Water-Arrow) (buys for 30 coins, sells for 15 coins)
-- 1x [Wood Bow](#Wood-Bow) (buys for 10 coins, sells for 5 coins)
-- 1x [Birch bow](#Birch-bow) (buys for 20 coins, sells for 10 coins)
-- 1x [Fir bow](#Fir-bow) (buys for 30 coins, sells for 15 coins)
-- 1x [Fir bow](#Fir-bow) (buys for 40 coins, sells for 20 coins)
-- 1x [Oak Bow](#Oak-Bow) (buys for 50 coins, sells for 25 coins)
-- 5x [Flax](#Flax) (buys for 5 coins, sells for 2 coins)
-- 5x [Wolfskin](#Wolfskin) (buys for 10 coins, sells for 5 coins)
-- 1x [Ancient Bow](#Ancient-Bow) (buys for 250 coins, sells for 125 coins)
-- 5x [Flint](#Flint) (buys for 5 coins, sells for 2 coins)
+- 5x [Flint Arrow](#flint-arrow) (buys for 5 coins, sells for 2 coins)
+- 5x [Steel Arrow](#steel-arrow) (buys for 10 coins, sells for 5 coins)
+- 5x [Mithril Arrow](#mithril-arrow) (buys for 15 coins, sells for 7 coins)
+- 5x [Adamantite Arrow](#adamantite-arrow) (buys for 20 coins, sells for 10 coins)
+- 5x [Fire arrow](#fire-arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Lightning Arrow](#lightning-arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Water Arrow](#water-arrow) (buys for 30 coins, sells for 15 coins)
+- 1x [Wood Bow](#wood-bow) (buys for 10 coins, sells for 5 coins)
+- 1x [Birch bow](#birch-bow) (buys for 20 coins, sells for 10 coins)
+- 1x [Fir bow](#fir-bow) (buys for 30 coins, sells for 15 coins)
+- 1x [Fir bow](#fir-bow) (buys for 40 coins, sells for 20 coins)
+- 1x [Oak Bow](#oak-bow) (buys for 50 coins, sells for 25 coins)
+- 5x [Flax](#flax) (buys for 5 coins, sells for 2 coins)
+- 5x [Wolfskin](#wolfskin) (buys for 10 coins, sells for 5 coins)
+- 1x [Ancient Bow](#ancient-bow) (buys for 250 coins, sells for 125 coins)
+- 5x [Flint](#flint) (buys for 5 coins, sells for 2 coins)
 
 ---
 
 ### Chef
 
-- 2x [Red Apple](#Red-Apple) (buys for 5 coins, sells for 2 coins)
-- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
-- 5x [Bowl](#Bowl) (buys for 2 coins, sells for 1 coins)
-- 5x [Bread](#Bread) (buys for 15 coins, sells for 7 coins)
-- 5x [Dough](#Dough) (buys for 10 coins, sells for 5 coins)
-- 5x [Cooked Meat](#Cooked-Meat) (buys for 15 coins, sells for 7 coins)
-- 5x [Apple Pie](#Apple-Pie) (buys for 25 coins, sells for 12 coins)
-- 5x [Meat Pie](#Meat-Pie) (buys for 25 coins, sells for 12 coins)
-- 5x [Wheat](#Wheat) (buys for 8 coins, sells for 4 coins)
-- 5x [Red Soup](#Red-Soup) (buys for 10 coins, sells for 5 coins)
-- 5x [Purple Soup](#Purple-Soup) (buys for 10 coins, sells for 5 coins)
-- 5x [Yellow Soup](#Yellow-Soup) (buys for 10 coins, sells for 5 coins)
-- 5x [Weird Soup](#Weird-Soup) (buys for 15 coins, sells for 7 coins)
+- 2x [Red Apple](#red-apple) (buys for 5 coins, sells for 2 coins)
+- 5x [Wood](#wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Bowl](#bowl) (buys for 2 coins, sells for 1 coins)
+- 5x [Bread](#bread) (buys for 15 coins, sells for 7 coins)
+- 5x [Dough](#dough) (buys for 10 coins, sells for 5 coins)
+- 5x [Cooked Meat](#cooked-meat) (buys for 15 coins, sells for 7 coins)
+- 5x [Apple Pie](#apple-pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Meat Pie](#meat-pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Wheat](#wheat) (buys for 8 coins, sells for 4 coins)
+- 5x [Red Soup](#red-soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Purple Soup](#purple-soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Yellow Soup](#yellow-soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Weird Soup](#weird-soup) (buys for 15 coins, sells for 7 coins)
 
 ---
 
 ### Smith
 
-- 5x [Rock](#Rock) (buys for 2 coins, sells for 1 coins)
-- 1x [Anvil](#Anvil) (buys for 30 coins, sells for 15 coins)
-- 5x [Iron Ore](#Iron-Ore) (buys for 20 coins, sells for 10 coins)
-- 5x [Mithril Ore](#Mithril-Ore) (buys for 30 coins, sells for 15 coins)
-- 5x [Adamantite Ore](#Adamantite-Ore) (buys for 50 coins, sells for 25 coins)
-- 5x [Obamium Ore](#Obamium-Ore) (buys for 75 coins, sells for 37 coins)
-- 5x [Ruby](#Ruby) (buys for 80 coins, sells for 40 coins)
-- 1x [Wood Pickaxe](#Wood-Pickaxe) (buys for 10 coins, sells for 5 coins)
-- 1x [Steel Pickaxe](#Steel-Pickaxe) (buys for 25 coins, sells for 12 coins)
-- 1x [Mithril Pickaxe](#Mithril-Pickaxe) (buys for 40 coins, sells for 20 coins)
-- 1x [Adamantite Pickaxe](#Adamantite-Pickaxe) (buys for 75 coins, sells for 37 coins)
-- 5x [Steel Sword](#Steel-Sword) (buys for 20 coins, sells for 10 coins)
-- 5x [Mithril Sword](#Mithril-Sword) (buys for 50 coins, sells for 25 coins)
-- 1x [Adamantite Sword](#Adamantite-Sword) (buys for 75 coins, sells for 37 coins)
+- 5x [Rock](#rock) (buys for 2 coins, sells for 1 coins)
+- 1x [Anvil](#anvil) (buys for 30 coins, sells for 15 coins)
+- 5x [Iron Ore](#iron-ore) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Ore](#mithril-ore) (buys for 30 coins, sells for 15 coins)
+- 5x [Adamantite Ore](#adamantite-ore) (buys for 50 coins, sells for 25 coins)
+- 5x [Obamium Ore](#obamium-ore) (buys for 75 coins, sells for 37 coins)
+- 5x [Ruby](#ruby) (buys for 80 coins, sells for 40 coins)
+- 1x [Wood Pickaxe](#wood-pickaxe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Pickaxe](#steel-pickaxe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Pickaxe](#mithril-pickaxe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Pickaxe](#adamantite-pickaxe) (buys for 75 coins, sells for 37 coins)
+- 5x [Steel Sword](#steel-sword) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Sword](#mithril-sword) (buys for 50 coins, sells for 25 coins)
+- 1x [Adamantite Sword](#adamantite-sword) (buys for 75 coins, sells for 37 coins)
 
 ---
 
 ### Wildcard
 
-- 5x [Flint Arrow](#Flint-Arrow) (buys for 5 coins, sells for 2 coins)
-- 5x [Steel Arrow](#Steel-Arrow) (buys for 10 coins, sells for 5 coins)
-- 5x [Mithril Arrow](#Mithril-Arrow) (buys for 15 coins, sells for 7 coins)
-- 5x [Adamantite Arrow](#Adamantite-Arrow) (buys for 20 coins, sells for 10 coins)
-- 5x [Fire arrow](#Fire-arrow) (buys for 30 coins, sells for 15 coins)
-- 5x [Lightning Arrow](#Lightning-Arrow) (buys for 30 coins, sells for 15 coins)
-- 5x [Water Arrow](#Water-Arrow) (buys for 30 coins, sells for 15 coins)
-- 1x [Wood Bow](#Wood-Bow) (buys for 10 coins, sells for 5 coins)
-- 1x [Birch bow](#Birch-bow) (buys for 20 coins, sells for 10 coins)
-- 1x [Fir bow](#Fir-bow) (buys for 30 coins, sells for 15 coins)
-- 1x [Fir bow](#Fir-bow) (buys for 40 coins, sells for 20 coins)
-- 1x [Oak Bow](#Oak-Bow) (buys for 50 coins, sells for 25 coins)
-- 5x [Flax](#Flax) (buys for 5 coins, sells for 2 coins)
-- 5x [Wolfskin](#Wolfskin) (buys for 10 coins, sells for 5 coins)
-- 1x [Ancient Bow](#Ancient-Bow) (buys for 250 coins, sells for 125 coins)
-- 5x [Flint](#Flint) (buys for 5 coins, sells for 2 coins)
-- 2x [Red Apple](#Red-Apple) (buys for 5 coins, sells for 2 coins)
-- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
-- 5x [Bowl](#Bowl) (buys for 2 coins, sells for 1 coins)
-- 5x [Bread](#Bread) (buys for 15 coins, sells for 7 coins)
-- 5x [Dough](#Dough) (buys for 10 coins, sells for 5 coins)
-- 5x [Cooked Meat](#Cooked-Meat) (buys for 15 coins, sells for 7 coins)
-- 5x [Apple Pie](#Apple-Pie) (buys for 25 coins, sells for 12 coins)
-- 5x [Meat Pie](#Meat-Pie) (buys for 25 coins, sells for 12 coins)
-- 5x [Wheat](#Wheat) (buys for 8 coins, sells for 4 coins)
-- 5x [Red Soup](#Red-Soup) (buys for 10 coins, sells for 5 coins)
-- 5x [Purple Soup](#Purple-Soup) (buys for 10 coins, sells for 5 coins)
-- 5x [Yellow Soup](#Yellow-Soup) (buys for 10 coins, sells for 5 coins)
-- 5x [Weird Soup](#Weird-Soup) (buys for 15 coins, sells for 7 coins)
-- 5x [Rock](#Rock) (buys for 2 coins, sells for 1 coins)
-- 1x [Anvil](#Anvil) (buys for 30 coins, sells for 15 coins)
-- 5x [Iron Ore](#Iron-Ore) (buys for 20 coins, sells for 10 coins)
-- 5x [Mithril Ore](#Mithril-Ore) (buys for 30 coins, sells for 15 coins)
-- 5x [Adamantite Ore](#Adamantite-Ore) (buys for 50 coins, sells for 25 coins)
-- 5x [Obamium Ore](#Obamium-Ore) (buys for 75 coins, sells for 37 coins)
-- 5x [Ruby](#Ruby) (buys for 80 coins, sells for 40 coins)
-- 1x [Wood Pickaxe](#Wood-Pickaxe) (buys for 10 coins, sells for 5 coins)
-- 1x [Steel Pickaxe](#Steel-Pickaxe) (buys for 25 coins, sells for 12 coins)
-- 1x [Mithril Pickaxe](#Mithril-Pickaxe) (buys for 40 coins, sells for 20 coins)
-- 1x [Adamantite Pickaxe](#Adamantite-Pickaxe) (buys for 75 coins, sells for 37 coins)
-- 5x [Steel Sword](#Steel-Sword) (buys for 20 coins, sells for 10 coins)
-- 5x [Mithril Sword](#Mithril-Sword) (buys for 50 coins, sells for 25 coins)
-- 1x [Adamantite Sword](#Adamantite-Sword) (buys for 75 coins, sells for 37 coins)
-- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
-- 5x [Birch Wood](#Birch-Wood) (buys for 5 coins, sells for 2 coins)
-- 5x [Fir Wood](#Fir-Wood) (buys for 10 coins, sells for 5 coins)
-- 5x [Oak Wood](#Oak-Wood) (buys for 25 coins, sells for 12 coins)
-- 1x [Wood Axe](#Wood-Axe) (buys for 10 coins, sells for 5 coins)
-- 1x [Steel Axe](#Steel-Axe) (buys for 25 coins, sells for 12 coins)
-- 1x [Mithril Axe](#Mithril-Axe) (buys for 40 coins, sells for 20 coins)
-- 1x [Adamantite Axe](#Adamantite-Axe) (buys for 75 coins, sells for 37 coins)
-- 5x [Coal](#Coal) (buys for 5 coins, sells for 2 coins)
-- 5x [Dark Oak Wood](#Dark-Oak-Wood) (buys for 50 coins, sells for 25 coins)
+- 5x [Flint Arrow](#flint-arrow) (buys for 5 coins, sells for 2 coins)
+- 5x [Steel Arrow](#steel-arrow) (buys for 10 coins, sells for 5 coins)
+- 5x [Mithril Arrow](#mithril-arrow) (buys for 15 coins, sells for 7 coins)
+- 5x [Adamantite Arrow](#adamantite-arrow) (buys for 20 coins, sells for 10 coins)
+- 5x [Fire arrow](#fire-arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Lightning Arrow](#lightning-arrow) (buys for 30 coins, sells for 15 coins)
+- 5x [Water Arrow](#water-arrow) (buys for 30 coins, sells for 15 coins)
+- 1x [Wood Bow](#wood-bow) (buys for 10 coins, sells for 5 coins)
+- 1x [Birch bow](#birch-bow) (buys for 20 coins, sells for 10 coins)
+- 1x [Fir bow](#fir-bow) (buys for 30 coins, sells for 15 coins)
+- 1x [Fir bow](#fir-bow) (buys for 40 coins, sells for 20 coins)
+- 1x [Oak Bow](#oak-bow) (buys for 50 coins, sells for 25 coins)
+- 5x [Flax](#flax) (buys for 5 coins, sells for 2 coins)
+- 5x [Wolfskin](#wolfskin) (buys for 10 coins, sells for 5 coins)
+- 1x [Ancient Bow](#ancient-bow) (buys for 250 coins, sells for 125 coins)
+- 5x [Flint](#flint) (buys for 5 coins, sells for 2 coins)
+- 2x [Red Apple](#red-apple) (buys for 5 coins, sells for 2 coins)
+- 5x [Wood](#wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Bowl](#bowl) (buys for 2 coins, sells for 1 coins)
+- 5x [Bread](#bread) (buys for 15 coins, sells for 7 coins)
+- 5x [Dough](#dough) (buys for 10 coins, sells for 5 coins)
+- 5x [Cooked Meat](#cooked-meat) (buys for 15 coins, sells for 7 coins)
+- 5x [Apple Pie](#apple-pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Meat Pie](#meat-pie) (buys for 25 coins, sells for 12 coins)
+- 5x [Wheat](#wheat) (buys for 8 coins, sells for 4 coins)
+- 5x [Red Soup](#red-soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Purple Soup](#purple-soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Yellow Soup](#yellow-soup) (buys for 10 coins, sells for 5 coins)
+- 5x [Weird Soup](#weird-soup) (buys for 15 coins, sells for 7 coins)
+- 5x [Rock](#rock) (buys for 2 coins, sells for 1 coins)
+- 1x [Anvil](#anvil) (buys for 30 coins, sells for 15 coins)
+- 5x [Iron Ore](#iron-ore) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Ore](#mithril-ore) (buys for 30 coins, sells for 15 coins)
+- 5x [Adamantite Ore](#adamantite-ore) (buys for 50 coins, sells for 25 coins)
+- 5x [Obamium Ore](#obamium-ore) (buys for 75 coins, sells for 37 coins)
+- 5x [Ruby](#ruby) (buys for 80 coins, sells for 40 coins)
+- 1x [Wood Pickaxe](#wood-pickaxe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Pickaxe](#steel-pickaxe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Pickaxe](#mithril-pickaxe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Pickaxe](#adamantite-pickaxe) (buys for 75 coins, sells for 37 coins)
+- 5x [Steel Sword](#steel-sword) (buys for 20 coins, sells for 10 coins)
+- 5x [Mithril Sword](#mithril-sword) (buys for 50 coins, sells for 25 coins)
+- 1x [Adamantite Sword](#adamantite-sword) (buys for 75 coins, sells for 37 coins)
+- 5x [Wood](#wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Birch Wood](#birch-wood) (buys for 5 coins, sells for 2 coins)
+- 5x [Fir Wood](#fir-wood) (buys for 10 coins, sells for 5 coins)
+- 5x [Oak Wood](#oak-wood) (buys for 25 coins, sells for 12 coins)
+- 1x [Wood Axe](#wood-axe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Axe](#steel-axe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Axe](#mithril-axe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Axe](#adamantite-axe) (buys for 75 coins, sells for 37 coins)
+- 5x [Coal](#coal) (buys for 5 coins, sells for 2 coins)
+- 5x [Dark Oak Wood](#dark-oak-wood) (buys for 50 coins, sells for 25 coins)
 
 ---
 
 ### Woodman
 
-- 5x [Wood](#Wood) (buys for 2 coins, sells for 1 coins)
-- 5x [Birch Wood](#Birch-Wood) (buys for 5 coins, sells for 2 coins)
-- 5x [Fir Wood](#Fir-Wood) (buys for 10 coins, sells for 5 coins)
-- 5x [Oak Wood](#Oak-Wood) (buys for 25 coins, sells for 12 coins)
-- 1x [Wood Axe](#Wood-Axe) (buys for 10 coins, sells for 5 coins)
-- 1x [Steel Axe](#Steel-Axe) (buys for 25 coins, sells for 12 coins)
-- 1x [Mithril Axe](#Mithril-Axe) (buys for 40 coins, sells for 20 coins)
-- 1x [Adamantite Axe](#Adamantite-Axe) (buys for 75 coins, sells for 37 coins)
-- 5x [Coal](#Coal) (buys for 5 coins, sells for 2 coins)
-- 5x [Dark Oak Wood](#Dark-Oak-Wood) (buys for 50 coins, sells for 25 coins)
+- 5x [Wood](#wood) (buys for 2 coins, sells for 1 coins)
+- 5x [Birch Wood](#birch-wood) (buys for 5 coins, sells for 2 coins)
+- 5x [Fir Wood](#fir-wood) (buys for 10 coins, sells for 5 coins)
+- 5x [Oak Wood](#oak-wood) (buys for 25 coins, sells for 12 coins)
+- 1x [Wood Axe](#wood-axe) (buys for 10 coins, sells for 5 coins)
+- 1x [Steel Axe](#steel-axe) (buys for 25 coins, sells for 12 coins)
+- 1x [Mithril Axe](#mithril-axe) (buys for 40 coins, sells for 20 coins)
+- 1x [Adamantite Axe](#adamantite-axe) (buys for 75 coins, sells for 37 coins)
+- 5x [Coal](#coal) (buys for 5 coins, sells for 2 coins)
+- 5x [Dark Oak Wood](#dark-oak-wood) (buys for 50 coins, sells for 25 coins)
 
-[Blue-Pill]: ../Assets/Texture2D/PillBlue.png
-[Broccoli]: ../Assets/Texture2D/Broccolo.png
-[Dumbbell]: ../Assets/Texture2D/Dumbbell.png
-[Jetpack]: ../Assets/Texture2D/Jetpack.png
-[Jetpack-link]: https://www.desmos.com/calculator/ldrgvtdjsz
-[Jetpack-image]: PowerupStats/Images/jetpack.png
-[Orange-Juice]: ../Assets/Texture2D/OrangeJuice.png
-[Orange-Juice-image]: PowerupStats/Images/orange_juice.png
-[Orange-Juice-link]: https://www.desmos.com/calculator/ep8y9ztu1r
-[Peanut-Butter]: ../Assets/Texture2D/PeanutButter.png
-[Red-Pill]: ../Assets/Texture2D/PillRed.png
-[Robin-Hood-Hat]: ../Assets/Texture2D/robinhood.png
-[Robin-Hood-Hat-image]: PowerupStats/Images/robin.png
-[Robin-Hood-Hat-link]: https://www.desmos.com/calculator/teb2g6bzsh
-[Sneaker]: ../Assets/Texture2D/Sneakers.png
-[Sneaker-image]: PowerupStats/Images/sneakers.png
-[Sneaker-link]: https://www.desmos.com/calculator/mlyvo6jgeu
-[Spooo-Bean]: ../Assets/Texture2D/Bean.png
-[Spooo-Bean-image]: PowerupStats/Images/bean.png
-[Spooo-Bean-link]: https://www.desmos.com/calculator/zcp8a7ad4g
-[Bulldozer]: ../Assets/Texture2D/Bulldozer.png
-[Bulldozer-image]: PowerupStats/Images/bulldozer.png
-[Bulldozer-link]: https://www.desmos.com/calculator/uorfleor84
-[Crimson-Dagger]: ../Assets/Texture2D/Crimson%20Dagger.png
-[Crimson-Dagger-image]: PowerupStats/Images/dagger.png
-[Crimson-Dagger-link]: https://www.desmos.com/calculator/uflefvarjl
-[Danis-Milk]: ../Assets/Texture2D/Milk.png
-[Danis-Milk-image]: PowerupStats/Images/milk.png
-[Danis-Milk-link]: https://www.desmos.com/calculator/ohdtq8e5jm
-[Dracula]: ../Assets/Texture2D/Dracula_0.png
-[Horseshoe]: ../Assets/Texture2D/Horseshoe.png
-[Horseshoe-image]: PowerupStats/Images/horseshoe.png
-[Horseshoe-link]: https://www.desmos.com/calculator/5ms1mobjdi
-[Janniks-Frog]: ../Assets/Texture2D/Frog_0.png
-[Janniks-Frog-screenshot]: PowerupStats/Images/frog.png
-[Juice]: ../Assets/Texture2D/x%20Juice.png
-[Juice-image]: PowerupStats/Images/juice.png
-[Juice-link]: https://www.desmos.com/calculator/9krdghrzob
-[Piggybank]: ../Assets/Texture2D/Piggybank.png
-[Piggybank-sword]: PowerupStats/Images/piggysword.png
-[Piggybank-calculator]: https://apfloat.appspot.com/
-[Piggybank-image]: PowerupStats/Images/piggybank.png
-[Piggybank-link]: https://www.desmos.com/calculator/xfdaugzvdc
-[Adrenaline]: ../Assets/Texture2D/Adrenaline.png
-[Adrenaline-image]: PowerupStats/Images/adrenaline.png
-[Adrenaline-link]: https://www.desmos.com/calculator/vcrcljkc9j
-[Berserk]: ../Assets/Texture2D/Berserk.png
-[Checkered-Shirt]: ../Assets/Texture2D/CheckeredShirt.png
-[Checkered-Shirt-image]: PowerupStats/Images/shirt.png
-[Checkered-Shirt-link]: https://www.desmos.com/calculator/taezb0etbf
-[Enforcer]: ../Assets/Texture2D/Enforcer.png
-[Enforcer-plain-image]: PowerupStats/Images/enforcer.png
-[Enforcer-plain-link]: https://www.desmos.com/calculator/a08cej4p0z
-[Enforcer-real-image]: PowerupStats/Images/enforcer_realworld.png
-[Enforcer-real-link]: https://www.desmos.com/calculator/yuditwyvvj
-[Knuts-Hammer]: ../Assets/Texture2D/Hammer.png
-[Knuts-Hammer-chance-image]: PowerupStats/Images/hammer_chance.png
-[Knuts-Hammer-chance-link]: https://www.desmos.com/calculator/l5hnaufxa9
-[Knuts-Hammer-damage-image]: PowerupStats/Images/hammer_damage.png
-[Knuts-Hammer-damage-link]: https://www.desmos.com/calculator/eyrumd2q4k
-[Sniper-Scope]: ../Assets/Texture2D/SniperScope.png
-[Sniper-Scope-chance-image]: PowerupStats/Images/sniper_chance.png
-[Sniper-Scope-chance-link]: https://www.desmos.com/calculator/pbw4za9dwc
-[Sniper-Scope-damage-image]: PowerupStats/Images/sniper_damage.png
-[Sniper-Scope-damage-link]: https://www.desmos.com/calculator/akocvnn74b
-[Wings-of-Glory]: ../Assets/Texture2D/Wings.png
-[Wings-of-Glory-link]: https://www.desmos.com/calculator/zfypygyxi8
-[Wings-of-Glory-image]: PowerupStats/Images/wings.png
-[item-0]: ../Assets/Texture2D/BarkIcon.png
-[item-1]: ../Assets/Texture2D/ChestIcon.png
-[item-2]: ../Assets/Texture2D/CoalIcon.png
-[item-3]: ../Assets/Texture2D/CoinIcon.png
-[item-4]: ../Assets/Texture2D/FlintIcon.png
-[item-5]: ../Assets/Texture2D/Boots_Adamantite.png
-[item-6]: ../Assets/Texture2D/Boots_Chunky.png
-[item-7]: ../Assets/Texture2D/Boots_gold.png
-[item-8]: ../Assets/Texture2D/Boots_Mithril.png
-[item-9]: ../Assets/Texture2D/Boots_obamium.png
-[item-10]: ../Assets/Texture2D/Boots_steel.png
-[item-11]: ../Assets/Texture2D/Boots_Wolf.png
-[item-12]: ../Assets/Texture2D/Helmet_adamantite.png
-[item-13]: ../Assets/Texture2D/Helmet_Chunk.png
-[item-14]: ../Assets/Texture2D/Helmet_gold.png
-[item-15]: ../Assets/Texture2D/Helmet_mithril.png
-[item-16]: ../Assets/Texture2D/Helmet_obamium.png
-[item-17]: ../Assets/Texture2D/Helmet_steel.png
-[item-18]: ../Assets/Texture2D/Helmet_Wolf.png
-[item-19]: ../Assets/Texture2D/Pants_adamantite.png
-[item-20]: ../Assets/Texture2D/Pants_Chunk.png
-[item-21]: ../Assets/Texture2D/Pants_Gold.png
-[item-22]: ../Assets/Texture2D/Pants_Mithril.png
-[item-23]: ../Assets/Texture2D/Pants_obamium.png
-[item-24]: ../Assets/Texture2D/Pants_Steel.png
-[item-25]: ../Assets/Texture2D/Pants_Wolf.png
-[item-26]: ../Assets/Texture2D/Torso_adamantite.png
-[item-27]: ../Assets/Texture2D/Torso_Chunkium.png
-[item-28]: ../Assets/Texture2D/Torso_Gold.png
-[item-29]: ../Assets/Texture2D/Torso_Mithril.png
-[item-30]: ../Assets/Texture2D/Torso_obamium.png
-[item-31]: ../Assets/Texture2D/Torso_steel.png
-[item-32]: ../Assets/Texture2D/Torso_Wolf.png
-[item-33]: ../Assets/Texture2D/Wood_window.png
-[item-34]: ../Assets/Texture2D/Wood_doorway.png
-[item-35]: ../Assets/Texture2D/Wood_Floor.png
-[item-36]: ../Assets/Texture2D/WoodPole.png
-[item-37]: ../Assets/Texture2D/WoodPoleHalf.png
-[item-38]: ../Assets/Texture2D/WoodRoof.png
-[item-39]: ../Assets/Texture2D/WoodStairs.png
-[item-40]: ../Assets/Texture2D/WoodStairsHalf.png
-[item-41]: ../Assets/Texture2D/Wood_wall.png
-[item-42]: ../Assets/Texture2D/Wood_wall_half.png
-[item-43]: ../Assets/Texture2D/Wood_tilt.png
-[item-44]: ../Assets/Texture2D/Torch.png
-[item-45]: ../Assets/Texture2D/Apple_red.png
-[item-46]: ../Assets/Texture2D/Bowl_0.png
-[item-47]: ../Assets/Texture2D/Dough.png
-[item-48]: ../Assets/Texture2D/FlaxFibers.png
-[item-49]: ../Assets/Texture2D/Flower_Blue.png
-[item-50]: ../Assets/Texture2D/Meat_raw.png
-[item-51]: ../Assets/Texture2D/Shroom_red.png
-[item-52]: ../Assets/Texture2D/Shroom_yellow.png
-[item-53]: ../Assets/Texture2D/Shroom_sus.png
-[item-54]: ../Assets/Texture2D/Shroom_pink.png
-[item-55]: ../Assets/Texture2D/Wheat.png
-[item-56]: ../Assets/Texture2D/Bread_0.png
-[item-57]: ../Assets/Texture2D/Meat_Cooked.png
-[item-58]: ../Assets/Texture2D/Pie_0.png
-[item-59]: ../Assets/Texture2D/Pie_0.png
-[item-60]: ../Assets/Texture2D/Soup.png
-[item-61]: ../Assets/Texture2D/Soup_purple.png
-[item-62]: ../Assets/Texture2D/Soup_red.png
-[item-63]: ../Assets/Texture2D/Soup_sus.png
-[item-64]: ../Assets/Texture2D/Soup_yellow.png
-[item-65]: ../Assets/Texture2D/AncientCore_0.png
-[item-66]: ../Assets/Texture2D/AdamantiteBar.png
-[item-67]: ../Assets/Texture2D/ChunkiumBar.png
-[item-68]: ../Assets/Texture2D/GoldBar.png
-[item-69]: ../Assets/Texture2D/IronBar.png
-[item-70]: ../Assets/Texture2D/MithrilBar.png
-[item-71]: ../Assets/Texture2D/Bar_Obamium.png
-[item-72]: ../Assets/Texture2D/Bone.png
-[item-73]: ../Assets/Texture2D/FireBall.png
-[item-74]: ../Assets/Texture2D/FireBall.png
-[item-75]: ../Assets/Texture2D/LightningBall.png
-[item-76]: ../Assets/Texture2D/RockIcon.png
-[item-77]: ../Assets/Texture2D/RockIcon.png
-[item-78]: ../Assets/Texture2D/BigSword.png
-[item-79]: ../Assets/Texture2D/CircleHollow.png
-[item-80]: ../Assets/Texture2D/BigSword.png
-[item-81]: ../Assets/Texture2D/WaterBall.png
-[item-82]: ../Assets/Texture2D/FireBall.png
-[item-83]: ../Assets/Texture2D/Ore_Adamantite.png
-[item-84]: ../Assets/Texture2D/Ore_Chunkium_0.png
-[item-85]: ../Assets/Texture2D/Ore_Gold.png
-[item-86]: ../Assets/Texture2D/IronIcon.png
-[item-87]: ../Assets/Texture2D/Ore_Mithril.png
-[item-88]: ../Assets/Texture2D/Ore_Obamium.png
-[item-89]: ../Assets/Texture2D/Ruby.png
-[item-90]: ../Assets/Texture2D/RockIcon.png
-[item-91]: ../Assets/Texture2D/Wood_Birch.png
-[item-92]: ../Assets/Texture2D/Wood_DarkOak.png
-[item-93]: ../Assets/Texture2D/Wood_Fir.png
-[item-94]: ../Assets/Texture2D/Wood_Normal.png
-[item-95]: ../Assets/Texture2D/Wood_Oak.png
-[item-96]: ../Assets/Texture2D/AnvilIcon.png
-[item-97]: ../Assets/Texture2D/CookingIcon.png
-[item-98]: ../Assets/Texture2D/FletchingIcon.png
-[item-99]: ../Assets/Texture2D/FurnaceIcon.png
-[item-100]: ../Assets/Texture2D/WorckbenchIcon.png
-[item-101]: ../Assets/Texture2D/MapIcon.png
-[item-102]: ../Assets/Texture2D/MapIcon.png
-[item-103]: ../Assets/Texture2D/GemBlue.png
-[item-104]: ../Assets/Texture2D/GemGreen.png
-[item-105]: ../Assets/Texture2D/GemPurple.png
-[item-106]: ../Assets/Texture2D/GemRed.png
-[item-107]: ../Assets/Texture2D/GemYellow.png
-[item-108]: ../Assets/Texture2D/Axe_adamantite.png
-[item-109]: ../Assets/Texture2D/Axe_Gold.png
-[item-110]: ../Assets/Texture2D/Axe_Mihtril.png
-[item-111]: ../Assets/Texture2D/Axe_Steel.png
-[item-112]: ../Assets/Texture2D/Axe_wood.png
-[item-113]: ../Assets/Texture2D/Bow_icon.png
-[item-114]: ../Assets/Texture2D/Bow_normal.png
-[item-115]: ../Assets/Texture2D/Bow_Birch.png
-[item-116]: ../Assets/Texture2D/Bow_fir.png
-[item-117]: ../Assets/Texture2D/Ancient%20Bow.png
-[item-118]: ../Assets/Texture2D/Pickaxe_Adamantite.png
-[item-119]: ../Assets/Texture2D/Pickaxe_gold.png
-[item-120]: ../Assets/Texture2D/Pickaxe_mithril.png
-[item-121]: ../Assets/Texture2D/Pickaxe_Steel.png
-[item-122]: ../Assets/Texture2D/Pickaxe_wood.png
-[item-123]: ../Assets/Texture2D/Rope.png
-[item-124]: ../Assets/Texture2D/ShovelIcon.png
-[item-125]: ../Assets/Texture2D/Sword_Adamantite.png
-[item-126]: ../Assets/Texture2D/Sword_Gold.png
-[item-127]: ../Assets/Texture2D/Sword_Mithril.png
-[item-128]: ../Assets/Texture2D/Sword_Obamium.png
-[item-129]: ../Assets/Texture2D/Sword_steel.png
-[item-130]: ../Assets/Texture2D/Milk.png
-[item-131]: ../Assets/Texture2D/Arrow_adamantite.png
-[item-132]: ../Assets/Texture2D/Arrow_Fire_0.png
-[item-133]: ../Assets/Texture2D/Arrow_flint.png
-[item-134]: ../Assets/Texture2D/ArrowLightning.png
-[item-135]: ../Assets/Texture2D/Arrow_mithril_0.png
-[item-136]: ../Assets/Texture2D/Arrow_Steel.png
-[item-137]: ../Assets/Texture2D/ArrowWater.png
-[item-138]: ../Assets/Texture2D/ChiefSpear.png
-[item-139]: ../Assets/Texture2D/ChunkyHammer.png
-[item-140]: ../Assets/Texture2D/BigSword.png
-[item-141]: ../Assets/Texture2D/BigSword.png
-[item-142]: ../Assets/Texture2D/NightBlade.png
-[item-143]: ../Assets/Texture2D/WyvernDagger.png
-[item-144]: ../Assets/Texture2D/Black%20Shard.png
-[item-145]: ../Assets/Texture2D/Blade.png
-[item-146]: ../Assets/Texture2D/HammerShaft.png
-[item-147]: ../Assets/Texture2D/SpearTip.png
-[item-148]: ../Assets/Texture2D/SwordHilt.png
-[item-149]: ../Assets/Texture2D/WolfClaws_0.png
-[item-150]: ../Assets/Texture2D/WolfSkin.png
-[item-151]: ../Assets/Texture2D/Claws.png
+[blue-pill]: ../Assets/Texture2D/PillBlue.png
+[broccoli]: ../Assets/Texture2D/Broccolo.png
+[dumbbell]: ../Assets/Texture2D/Dumbbell.png
+[jetpack]: ../Assets/Texture2D/Jetpack.png
+[jetpack-link]: https://www.desmos.com/calculator/ldrgvtdjsz
+[jetpack-image]: PowerupStats/Images/jetpack.png
+[orange-juice]: ../Assets/Texture2D/OrangeJuice.png
+[orange-juice-image]: PowerupStats/Images/orange_juice.png
+[orange-juice-link]: https://www.desmos.com/calculator/ep8y9ztu1r
+[peanut-butter]: ../Assets/Texture2D/PeanutButter.png
+[red-pill]: ../Assets/Texture2D/PillRed.png
+[robin-hood-hat]: ../Assets/Texture2D/robinhood.png
+[robin-hood-hat-image]: PowerupStats/Images/robin.png
+[robin-hood-hat-link]: https://www.desmos.com/calculator/teb2g6bzsh
+[sneaker]: ../Assets/Texture2D/Sneakers.png
+[sneaker-image]: PowerupStats/Images/sneakers.png
+[sneaker-link]: https://www.desmos.com/calculator/mlyvo6jgeu
+[spooo-bean]: ../Assets/Texture2D/Bean.png
+[spooo-bean-image]: PowerupStats/Images/bean.png
+[spooo-bean-link]: https://www.desmos.com/calculator/zcp8a7ad4g
+[bulldozer]: ../Assets/Texture2D/Bulldozer.png
+[bulldozer-image]: PowerupStats/Images/bulldozer.png
+[bulldozer-link]: https://www.desmos.com/calculator/uorfleor84
+[crimson-dagger]: ../Assets/Texture2D/Crimson%20Dagger.png
+[crimson-dagger-image]: PowerupStats/Images/dagger.png
+[crimson-dagger-link]: https://www.desmos.com/calculator/uflefvarjl
+[danis-milk]: ../Assets/Texture2D/Milk.png
+[danis-milk-image]: PowerupStats/Images/milk.png
+[danis-milk-link]: https://www.desmos.com/calculator/ohdtq8e5jm
+[dracula]: ../Assets/Texture2D/Dracula_0.png
+[horseshoe]: ../Assets/Texture2D/Horseshoe.png
+[horseshoe-image]: PowerupStats/Images/horseshoe.png
+[horseshoe-link]: https://www.desmos.com/calculator/5ms1mobjdi
+[janniks-frog]: ../Assets/Texture2D/Frog_0.png
+[janniks-frog-screenshot]: PowerupStats/Images/frog.png
+[juice]: ../Assets/Texture2D/x%20Juice.png
+[juice-image]: PowerupStats/Images/juice.png
+[juice-link]: https://www.desmos.com/calculator/9krdghrzob
+[piggybank]: ../Assets/Texture2D/Piggybank.png
+[piggybank-sword]: PowerupStats/Images/piggysword.png
+[piggybank-calculator]: https://apfloat.appspot.com/
+[piggybank-image]: PowerupStats/Images/piggybank.png
+[piggybank-link]: https://www.desmos.com/calculator/xfdaugzvdc
+[adrenaline]: ../Assets/Texture2D/Adrenaline.png
+[adrenaline-image]: PowerupStats/Images/adrenaline.png
+[adrenaline-link]: https://www.desmos.com/calculator/vcrcljkc9j
+[berserk]: ../Assets/Texture2D/Berserk.png
+[checkered-shirt]: ../Assets/Texture2D/CheckeredShirt.png
+[checkered-shirt-image]: PowerupStats/Images/shirt.png
+[checkered-shirt-link]: https://www.desmos.com/calculator/taezb0etbf
+[enforcer]: ../Assets/Texture2D/Enforcer.png
+[enforcer-plain-image]: PowerupStats/Images/enforcer.png
+[enforcer-plain-link]: https://www.desmos.com/calculator/a08cej4p0z
+[enforcer-real-image]: PowerupStats/Images/enforcer_realworld.png
+[enforcer-real-link]: https://www.desmos.com/calculator/yuditwyvvj
+[knuts-hammer]: ../Assets/Texture2D/Hammer.png
+[knuts-hammer-chance-image]: PowerupStats/Images/hammer_chance.png
+[knuts-hammer-chance-link]: https://www.desmos.com/calculator/l5hnaufxa9
+[knuts-hammer-damage-image]: PowerupStats/Images/hammer_damage.png
+[knuts-hammer-damage-link]: https://www.desmos.com/calculator/eyrumd2q4k
+[sniper-scope]: ../Assets/Texture2D/SniperScope.png
+[sniper-scope-chance-image]: PowerupStats/Images/sniper_chance.png
+[sniper-scope-chance-link]: https://www.desmos.com/calculator/pbw4za9dwc
+[sniper-scope-damage-image]: PowerupStats/Images/sniper_damage.png
+[sniper-scope-damage-link]: https://www.desmos.com/calculator/akocvnn74b
+[wings-of-glory]: ../Assets/Texture2D/Wings.png
+[wings-of-glory-link]: https://www.desmos.com/calculator/zfypygyxi8
+[wings-of-glory-image]: PowerupStats/Images/wings.png
+[item-0]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/BarkIcon.png
+[item-1]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ChestIcon.png
+[item-2]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/CoalIcon.png
+[item-3]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/CoinIcon.png
+[item-4]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FlintIcon.png
+[item-5]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_Adamantite.png
+[item-6]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_Chunky.png
+[item-7]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_gold.png
+[item-8]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_Mithril.png
+[item-9]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_obamium.png
+[item-10]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_steel.png
+[item-11]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Boots_Wolf.png
+[item-12]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_adamantite.png
+[item-13]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_Chunk.png
+[item-14]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_gold.png
+[item-15]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_mithril.png
+[item-16]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_obamium.png
+[item-17]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_steel.png
+[item-18]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Helmet_Wolf.png
+[item-19]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_adamantite.png
+[item-20]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_Chunk.png
+[item-21]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_Gold.png
+[item-22]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_Mithril.png
+[item-23]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_obamium.png
+[item-24]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_Steel.png
+[item-25]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pants_Wolf.png
+[item-26]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_adamantite.png
+[item-27]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_Chunkium.png
+[item-28]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_Gold.png
+[item-29]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_Mithril.png
+[item-30]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_obamium.png
+[item-31]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_steel.png
+[item-32]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torso_Wolf.png
+[item-33]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_window.png
+[item-34]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_doorway.png
+[item-35]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_Floor.png
+[item-36]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WoodPole.png
+[item-37]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WoodPoleHalf.png
+[item-38]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WoodRoof.png
+[item-39]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WoodStairs.png
+[item-40]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WoodStairsHalf.png
+[item-41]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_wall.png
+[item-42]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_wall_half.png
+[item-43]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_tilt.png
+[item-44]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Torch.png
+[item-45]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Apple_red.png
+[item-46]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bowl_0.png
+[item-47]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Dough.png
+[item-48]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FlaxFibers.png
+[item-49]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Flower_Blue.png
+[item-50]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Meat_raw.png
+[item-51]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Shroom_red.png
+[item-52]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Shroom_yellow.png
+[item-53]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Shroom_sus.png
+[item-54]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Shroom_pink.png
+[item-55]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wheat.png
+[item-56]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bread_0.png
+[item-57]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Meat_Cooked.png
+[item-58]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pie_0.png
+[item-59]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pie_0.png
+[item-60]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Soup.png
+[item-61]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Soup_purple.png
+[item-62]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Soup_red.png
+[item-63]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Soup_sus.png
+[item-64]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Soup_yellow.png
+[item-65]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/AncientCore_0.png
+[item-66]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/AdamantiteBar.png
+[item-67]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ChunkiumBar.png
+[item-68]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/GoldBar.png
+[item-69]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/IronBar.png
+[item-70]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/MithrilBar.png
+[item-71]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bar_Obamium.png
+[item-72]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bone.png
+[item-73]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FireBall.png
+[item-74]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FireBall.png
+[item-75]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/LightningBall.png
+[item-76]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/RockIcon.png
+[item-77]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/RockIcon.png
+[item-78]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/BigSword.png
+[item-79]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/CircleHollow.png
+[item-80]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/BigSword.png
+[item-81]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WaterBall.png
+[item-82]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FireBall.png
+[item-83]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ore_Adamantite.png
+[item-84]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ore_Chunkium_0.png
+[item-85]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ore_Gold.png
+[item-86]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/IronIcon.png
+[item-87]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ore_Mithril.png
+[item-88]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ore_Obamium.png
+[item-89]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ruby.png
+[item-90]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/RockIcon.png
+[item-91]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_Birch.png
+[item-92]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_DarkOak.png
+[item-93]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_Fir.png
+[item-94]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_Normal.png
+[item-95]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Wood_Oak.png
+[item-96]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/AnvilIcon.png
+[item-97]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/CookingIcon.png
+[item-98]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FletchingIcon.png
+[item-99]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/FurnaceIcon.png
+[item-100]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WorckbenchIcon.png
+[item-101]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/MapIcon.png
+[item-102]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/MapIcon.png
+[item-103]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/GemBlue.png
+[item-104]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/GemGreen.png
+[item-105]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/GemPurple.png
+[item-106]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/GemRed.png
+[item-107]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/GemYellow.png
+[item-108]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Axe_adamantite.png
+[item-109]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Axe_Gold.png
+[item-110]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Axe_Mihtril.png
+[item-111]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Axe_Steel.png
+[item-112]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Axe_wood.png
+[item-113]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bow_icon.png
+[item-114]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bow_normal.png
+[item-115]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bow_Birch.png
+[item-116]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Bow_fir.png
+[item-117]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Ancient%20Bow.png
+[item-118]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pickaxe_Adamantite.png
+[item-119]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pickaxe_gold.png
+[item-120]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pickaxe_mithril.png
+[item-121]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pickaxe_Steel.png
+[item-122]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Pickaxe_wood.png
+[item-123]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Rope.png
+[item-124]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ShovelIcon.png
+[item-125]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Sword_Adamantite.png
+[item-126]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Sword_Gold.png
+[item-127]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Sword_Mithril.png
+[item-128]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Sword_Obamium.png
+[item-129]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Sword_steel.png
+[item-130]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Milk.png
+[item-131]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Arrow_adamantite.png
+[item-132]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Arrow_Fire_0.png
+[item-133]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Arrow_flint.png
+[item-134]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ArrowLightning.png
+[item-135]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Arrow_mithril_0.png
+[item-136]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Arrow_Steel.png
+[item-137]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ArrowWater.png
+[item-138]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ChiefSpear.png
+[item-139]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/ChunkyHammer.png
+[item-140]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/BigSword.png
+[item-141]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/BigSword.png
+[item-142]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/NightBlade.png
+[item-143]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WyvernDagger.png
+[item-144]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Black%20Shard.png
+[item-145]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Blade.png
+[item-146]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/HammerShaft.png
+[item-147]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/SpearTip.png
+[item-148]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/SwordHilt.png
+[item-149]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WolfClaws_0.png
+[item-150]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/WolfSkin.png
+[item-151]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/Claws.png
+[hosted-site]: https://muck.terrain.pw/Data

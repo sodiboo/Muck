@@ -6,6 +6,8 @@ import { section as armor } from "./armor.ts";
 import { section as mob } from "./mob.ts";
 import { section as trades } from "./trades.ts";
 
+references.push("[hosted-site]: https://muck.terrain.pw/Data")
+
 const sections: [string, string][] = [
   ...item,
   armor(),
@@ -21,6 +23,7 @@ for (const [header] of sections) {
 
 await Deno.writeTextFile(
   "./Data.md",
+  "links not working? [go to hosted site][hosted-site]\n\n" +
   tableOfContents + "\n\n" +
     sections.map(([header, content]) => `# ${header}\n${content}`).join(
       "\n\n",

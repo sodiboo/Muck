@@ -1,7 +1,7 @@
 export type Vector3 = [number, number, number];
 
 export function fragment(name: string): string {
-  return name.replace(/\s/g, "-");
+  return name.replace(/\s/g, "-").toLowerCase();
 }
 
 export function link(name: string): string {
