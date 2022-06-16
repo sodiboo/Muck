@@ -52,7 +52,7 @@ function info(powerup: Powerup): string {
     `###### ![${fragment(powerup.name)}]`,
   );
   references.push(
-    `[${fragment(powerup.name)}]: ../Assets/Texture2D/${
+    `[${fragment(powerup.name)}]: https://raw.githubusercontent.com/Terrain2/Muck/main/Assets/Texture2D/${
       encodeURIComponent(images.get(powerup.sprite)!)
     }`,
   );
