@@ -4592,7 +4592,7 @@ The Piggybank has a cumulative distribution function with a scale speed of 0.15 
 
 Here's the graph of that multiplier:
 
-[![piggybank-image]][piggybank-link]
+[![Images/piggybank.png]][https://www.desmos.com/piggybank-calculator/xfdaugzvdc]
 
 And here are the first couple values:
 
@@ -4640,7 +4640,7 @@ And here are the first couple values:
 
 And also, if you were to slay as many pigs as Technoblade did in Hypixel Skyblock for his piggybank-sword, but in Muck, the game would calculate you to get exactly 3x loot. WolframAlpha does the same, and gives you `3.` as the result (not `3`), whatever that means. Neither of these answers were satisfactory for me because this function doesn't ever actually hit the max value for any finite number as input, so i took to arbitrary-precision calculation and this is the result:
 
-[![piggybank-sword]][piggybank-calculator]
+[![Images/piggypiggybank-sword.png]][https://apfloat.appspot.com/]
 
 
 
