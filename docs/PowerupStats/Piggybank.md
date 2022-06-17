@@ -2,7 +2,7 @@ The Piggybank has a cumulative distribution function with a scale speed of 0.15 
 
 Here's the graph of that multiplier:
 
-[![Images/piggybank.png]][https://www.desmos.com/calculator/xfdaugzvdc]
+[![image]][link]
 
 And here are the first couple values:
 
@@ -10,7 +10,7 @@ cum: `${n(2.25, 1 + calc(0.15, 1.25))}x loot multiplier`
 
 And also, if you were to slay as many pigs as Technoblade did in Hypixel Skyblock for his sword, but in Muck, the game would calculate you to get exactly 3x loot. WolframAlpha does the same, and gives you `3.` as the result (not `3`), whatever that means. Neither of these answers were satisfactory for me because this function doesn't ever actually hit the max value for any finite number as input, so i took to arbitrary-precision calculation and this is the result:
 
-[![Images/piggysword.png]][https://apfloat.appspot.com/]
+[![sword]][calculator]
 
 [sword]: Images/piggysword.png
 [calculator]: https://apfloat.appspot.com/
